@@ -61,15 +61,17 @@ func main() {
 先のchiba-langの文法と矛盾している箇所があるので、そのうち整合性を取っていく。
 
 ```
-new Event "test" -> ch
+"test" -> new Event -> ch  // "test"というイベントを作成し、chに代入する
+// new Event "test" -> ch  と書いてもOK
 
 g <- (str) => do  // 記号が多くて、パッと見で何を定義しているか分かりづらいので変更予定
-  str -> console
+  str -> console  // strを表示
   "printed" -> ch
 end
 
-g "hello, chiba-lang"
-ch
+g "hello, chiba-lang" gメソッドを実行する。
+// "hello, chiba-lang" -> g  と書いてもOK
+ch  // chに何か送られるまで待つ
 ```
 
 
