@@ -41,6 +41,7 @@ end
 
 例えばGo言語で以下のように通信をするプログラムがある。
 コメントは須田が付加したものである。
+出典：[第3回 ハロー、goroutine！](https://www.atmarkit.co.jp/fcoding/articles/go/03/go03a.html)
 
 ```go
 package main
