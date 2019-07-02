@@ -62,7 +62,7 @@ func main() {
 先のchiba-langの文法と矛盾している箇所があるので、そのうち整合性を取っていく。
 
 ```
-"test" -> new Event -> ch  // "test"というイベントを作成し、chに代入する
+"test" -> Event.new -> ch  // "test"というイベントを作成し、chに代入する
 // new Event "test" -> ch  と書いてもOK
 
 g <- (str) => do  // 記号が多くて、パッと見で何を定義しているか分かりづらいので変更予定
@@ -79,7 +79,7 @@ ch  // chに何か送られるまで待つ
 
 ```
 Button.new -> myButton    // ボタンの定義
-"button1" -> new Event -> ch    // イベント伝達のためのチャンネル定義
+"button1" -> Event.new -> ch    // イベント伝達のためのチャンネル定義
 myButton.on "click" do  // clickイベントの記述
   "dummy" -> ch    // chにイベントを送信．"dummy"は送信内容だが，今回は何でも良い．
 end
