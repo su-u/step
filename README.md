@@ -75,4 +75,25 @@ g "hello, chiba-lang" gメソッドを実行する。
 ch  // chに何か送られるまで待つ
 ```
 
+## ボタンをクリックしたら猫を動かすサンプル
+
+```
+Button.new -> myButton    // ボタンの定義
+"button1" -> new Event -> ch    // イベント伝達のためのチャンネル定義
+myButton.on "click" do  // clickイベントの記述
+  "dummy" -> ch    // chにイベントを送信．"dummy"は送信内容だが，今回は何でも良い．
+end
+
+Cat.new -> myNeko  // 猫の定義
+myNeko.on "button1" do  // "button1"というイベントが送られた際の処理を定義
+  myNeko.moveX 3    // 右に3進める
+end
+
+on "button1" do  // "button1"というイベントが送られた際の処理を定義
+  "押されたよ" -> console  // "押されたよ”を表示
+end
+
+// あれ？猫のイベント処理の定義のところって，行頭の「myNeko」不要？
+// イベントの記述が，送信・受信共にイケてないので変えたい
+```
 
