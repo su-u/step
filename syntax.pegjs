@@ -7,12 +7,7 @@ program
 	}
  
 compstmt
-	= head:stmt tail:(_ stmt)*{
-		return {
-			head,
-            tail
-		}
-	}
+	= stmt:stmt*
 
 stmt
 	= _ ExpressionStatement:expr _{
