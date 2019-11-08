@@ -5,19 +5,30 @@ program
 			comp
 		}
 	}
-
+ 
 compstmt
-	= expr: expr{
+	= head:stmt tail:(_ stmt)*{
 		return {
-			"ExpressionStatement" : "test",
-			"type": "ExpressionStatement"
+			head,
+            tail
 		}
 	}
 
+stmt
+	= _ ExpressionStatement:expr _{
+		return {
+			"ExpressionStatement" : "test",
+			"type": "ExpressionStatement",
+            ExpressionStatement
+		} 
+      }
+   
+_ "whitespace"
+	= [ \t\n\r]*
+ 
 expr
-	= from:from "->" to:to{
+	= from:from _"->"_ to:to _{
 		return{
-			"ExpressionStatement": {
 				"type": "AssignmentExpression",
 				"operator": {
 					"left": {
@@ -25,16 +36,25 @@ expr
 						"name": to
 					},
 					"right":  {
-						"type": "literal"
+						"type": "literal",
+                        "value": from
 					}
 				}
 			}
 		}
-	}
-	/ to:to "<-" from:from{
+	/ to:to _"<-"_ from:from _{
 		return{
-			"expression": "AssigmentExpression",
-			"operator":"<-"
+				"type": "AssignmentExpression",
+				"operator": {
+					"left": {
+						"type": "identifier",
+						"name": to
+					},
+					"right":  {
+						"type": "literal",
+                        "value": from
+					}
+				}
 		}
 	}
 
@@ -46,6 +66,13 @@ from
 			"value": value
 		}
 	}
+    / name:iden{
+    	return{
+        	"right":"Identifier",
+            "type":"Identifier",
+            "name":name
+        }
+    }
 
 to
 	= name:iden{
@@ -57,7 +84,9 @@ to
 	}
 
 int
-	= [0-9]*
+    = _"0x"[0-9]+ _{ return parseInt(text(),16); }
+	/ _[0-9]+ _{ return parseInt(text(), 10); }
+
 
 iden
-	= [a-z]*
+	= aiden:[0-9a-zA-Z]* _{ return aiden.join('') }
