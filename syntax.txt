@@ -275,3 +275,24 @@ MemberExpression <: Expression, Pattern {
 	object: Expression,
 	property: Expression,
 	computed: boolean
+}
+
+ConditionalExpression <: Expression {  // 三項演算子
+	type: "ConditionalExpression",
+	test: Expression,
+	alternate: Expression,
+	consequent: Expression
+}
+
+NewExpression <: Expression {
+	type: "NewExpression",
+	callee: Expression,
+	arguments: [ Expression ];
+}
+
+SequenceExpression <: Expression {
+	type: "SequenceExpression",
+	expressions: [ Expression ]
+}
+
+Patterns <: Node {}
