@@ -39,7 +39,7 @@ expr
 	}
 
 from
-	= value:int{
+	= value:number{
 		return{
 			"type": "Literal",
 			"value": value
@@ -60,10 +60,40 @@ to
 		}
 	}
 
-int
-    = _"0x"[0-9]+ _{ return parseInt(text(),16); }
-	/ _[0-9]+ _{ return parseInt(text(), 10); }
-
-
 iden
-	= aiden:[0-9a-zA-Z]* _{ return aiden.join('') }
+	= word:$(word)
+
+word
+	= [a-zA-z][0-9a-zA-Z]*
+
+number
+  = float:$(float) {
+  	return parseFloat(float)
+  }
+  / hexint:$(hexint) {
+    return parseInt(hexint)
+  }
+  / int:$(int) {
+    return parseInt(int)
+  }
+
+float
+  = int frac digits
+
+int
+  = signe? digit19 digits
+  / signe digit
+  / digit
+
+hexint
+  = signe? "0x" hexdigits
+
+digit19 = [1-9]
+digit = [0-9]
+digits = digit+
+hexdigits = [0-9a-f]+
+
+signe
+  = "+"
+  / "-"
+frac = "."
