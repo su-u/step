@@ -1,8 +1,8 @@
 program
-	= comp: compstmt{
+	= body: compstmt{
 		return{
 			"type":  "Program",
-			comp
+			body
 		}
 	}
  
@@ -10,11 +10,10 @@ compstmt
 	= stmt:stmt*
 
 stmt
-	= _ ExpressionStatement:expr _{
+	= _ expression:expr _{
 		return {
-			"ExpressionStatement" : "test",
 			"type": "ExpressionStatement",
-            ExpressionStatement
+            expression
 		} 
       }
    
@@ -22,48 +21,32 @@ _ "whitespace"
 	= [ \t\n\r]*
  
 expr
-	= from:from _"->"_ to:to _{
+	= right:from _"->"_ left:to _{
 		return{
 				"type": "AssignmentExpression",
-				"operator": {
-					"left": {
-						"type": "identifier",
-						"name": to
-					},
-					"right":  {
-						"type": "literal",
-                        "value": from
-					}
-				}
+				"operator": "=",
+                left,
+                right
 			}
 		}
-	/ to:to _"<-"_ from:from _{
+	/ left:to _"<-"_ right:from _{
 		return{
 				"type": "AssignmentExpression",
-				"operator": {
-					"left": {
-						"type": "identifier",
-						"name": to
-					},
-					"right":  {
-						"type": "literal",
-                        "value": from
-					}
-				}
+				"operator": "=",
+                left,
+                right
 		}
 	}
 
 from
 	= value:int{
 		return{
-			"right": "Literal",
 			"type": "Literal",
 			"value": value
 		}
 	}
     / name:iden{
     	return{
-        	"right":"Identifier",
             "type":"Identifier",
             "name":name
         }
@@ -72,7 +55,6 @@ from
 to
 	= name:iden{
 		return{
-			"left": "Identifier",
 			"type": "Identifier",
 			"name": name
 		}
