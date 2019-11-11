@@ -17,6 +17,20 @@ let ast = parser.parse( source );
 
 const global = {};
 
+function binaryExec( left, op, right ) {
+    let val1 = 0, val2 = 0;
+    if( left.type == "Literal" )    val1 = left.value;
+    else if( left.type == "BinaryExpression" )  val1 = binaryExec( left.left, left.operator, left.right );
+    if( right.type == "Literal" )    val2 = right.value;
+    else if( right.type == "BinaryExpression" )  val2 = binaryExec( right.left, right.operator, right.right );
+    console.log( [val1, val2 ]);
+    switch( op ) {
+        case "+":   return val1 + val2; break;
+        case "-":   return val1 - val2; break;
+        case "*":   return val1 * val2; break;
+        case "/":   return val1 / val2; break;
+    }
+}
 switch( ast["type"] ) {
     case "Program":
         for( let line of ast["body"] ){
@@ -32,12 +46,16 @@ switch( ast["type"] ) {
                                 case "Literal":
                                     global[line["expression"]["left"]["name"]] = source["value"];
                                     break;
+                                case "BinaryExpression":
+                                    global[line["expression"]["left"]["name"]] = binaryExec( source.left, source.operator, source.right );
+                                    break;
                             }
                             //global[]
                             break;
+
                     }
             }
-            
+
         }
         break;
 }

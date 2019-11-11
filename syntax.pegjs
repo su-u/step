@@ -1,3 +1,22 @@
+{function sallow( left, right ) {
+	return {
+		"type": "AssignmentExpression",
+		"operator": "=",
+		left,
+		right
+	}
+}
+  function buildBinaryExpression(head, tail) {
+    return tail.reduce(function(result, element) {
+      return {
+        type: "BinaryExpression",
+        operator: element[1],
+        left: result,
+        right: element[3]
+      };
+    }, head);
+  }
+}
 program
 	= body: compstmt{
 		return{
@@ -5,7 +24,7 @@ program
 			body
 		}
 	}
- 
+
 compstmt
 	= stmt:stmt*
 
@@ -14,32 +33,23 @@ stmt
 		return {
 			"type": "ExpressionStatement",
             expression
-		} 
+		}
       }
-   
+
 _ "whitespace"
 	= [ \t\n\r]*
- 
+
 expr
 	= right:from _"->"_ left:to _{
-		return{
-				"type": "AssignmentExpression",
-				"operator": "=",
-                left,
-                right
-			}
-		}
+		return sallow( left, right );
+	}
 	/ left:to _"<-"_ right:from _{
-		return{
-				"type": "AssignmentExpression",
-				"operator": "=",
-                left,
-                right
-		}
+		return sallow( left, right );
 	}
 
 from
-	= value:number{
+	= Expression
+	/ value:number{
 		return{
 			"type": "Literal",
 			"value": value
@@ -68,13 +78,13 @@ word
 
 number
   = float:$(float) {
-  	return parseFloat(float)
+  	return { "type": "Literal", value: parseFloat(float) }
   }
   / hexint:$(hexint) {
-    return parseInt(hexint)
+    return { "type": "Literal", value: parseInt(hexint) }
   }
   / int:$(int) {
-    return parseInt(int)
+    return { "type": "Literal", value: parseInt(int) }
   }
 
 float
@@ -97,3 +107,17 @@ signe
   = "+"
   / "-"
 frac = "."
+
+Expression
+  = head:Term tail:(_ "+"_ Term)* {
+		return buildBinaryExpression(head, tail)
+    }
+
+Term
+  = head:Factor tail:(_"*"_ Factor)* {
+		return buildBinaryExpression(head, tail)
+    }
+
+Factor
+  = "(" _ expr:Expression _ ")" { return expr; }
+  / number
