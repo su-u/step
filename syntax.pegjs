@@ -74,7 +74,7 @@ iden
 	= word:$(word)
 
 word
-	= word:[a-zA-z][0-9a-zA-Z]* {
+	= word:$([a-zA-z][0-9a-zA-Z])* {
 		return { "type": "Identifier", name: word}
 	}
 
