@@ -74,7 +74,9 @@ iden
 	= word:$(word)
 
 word
-	= [a-zA-z][0-9a-zA-Z]*
+	= word:[a-zA-z][0-9a-zA-Z]* {
+		return { "type": "Identifier", name: word}
+	}
 
 number
   = float:$(float) {
@@ -121,3 +123,4 @@ Term
 Factor
   = "(" _ expr:Expression _ ")" { return expr; }
   / number
+  / word

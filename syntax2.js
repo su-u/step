@@ -20,8 +20,10 @@ const global = {};
 function binaryExec( left, op, right ) {
     let val1 = 0, val2 = 0;
     if( left.type == "Literal" )    val1 = left.value;
+    else if( left.type == "Identifier" )    val1 = global[ left.name ];
     else if( left.type == "BinaryExpression" )  val1 = binaryExec( left.left, left.operator, left.right );
     if( right.type == "Literal" )    val2 = right.value;
+    else if( right.type == "Identifier" )    val1 = global[ right.name ];
     else if( right.type == "BinaryExpression" )  val2 = binaryExec( right.left, right.operator, right.right );
     console.log( [val1, val2 ]);
     switch( op ) {
