@@ -74,19 +74,19 @@ iden
 	= word:$(word)
 
 word
-	= word:$([a-zA-z][0-9a-zA-Z])* {
+	= word:[a-zA-z][0-9a-zA-Z]* {
 		return { "type": "Identifier", name: word}
 	}
 
 number
   = float:$(float) {
-  	return { "type": "Literal", value: parseFloat(float) }
+  	return { "type": "Literal", value: parseFloat(float), class: "number" }
   }
   / hexint:$(hexint) {
-    return { "type": "Literal", value: parseInt(hexint) }
+    return { "type": "Literal", value: parseInt(hexint), class: "number" }
   }
   / int:$(int) {
-    return { "type": "Literal", value: parseInt(int) }
+    return { "type": "Literal", value: parseInt(int), class: "number" }
   }
 
 float
@@ -123,4 +123,4 @@ Term
 Factor
   = "(" _ expr:Expression _ ")" { return expr; }
   / number
-  / word
+  / iden
