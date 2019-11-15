@@ -56,18 +56,12 @@ from
 		}
 	}
     / name:iden{
-    	return{
-            "type":"Identifier",
-            "name":name
-        }
+    	return name
     }
 
 to
 	= name:iden{
-		return{
-			"type": "Identifier",
-			"name": name
-		}
+		return name
 	}
 
 iden

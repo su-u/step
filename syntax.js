@@ -11,5 +11,5 @@ if( process.argv.length == 0 ) {
     console.log("source code = " + process.argv[2] );
     const source = fs.readFileSync( process.argv[2], "utf-8" );
     let parser = pegjs.generate( ruleset );
-    console.log( parser.parse( source ));
+    console.log( JSON.stringify( parser.parse( source ) ) );
 }
