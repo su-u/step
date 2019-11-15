@@ -71,12 +71,12 @@ to
 	}
 
 iden
-	= word:$(word)
-
-word
-	= word:[a-zA-z][0-9a-zA-Z]* {
+	= word:$(word) {
 		return { "type": "Identifier", name: word}
 	}
+
+word
+	= word:[a-zA-z][0-9a-zA-Z]*
 
 number
   = float:$(float) {
