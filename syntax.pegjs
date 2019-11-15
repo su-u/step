@@ -105,12 +105,12 @@ signe
 frac = "."
 
 Expression
-  = head:Term tail:(_ "+"_ Term)* {
+  = head:Term tail:(_ [+-] _ Term)* {
 		return buildBinaryExpression(head, tail)
     }
 
 Term
-  = head:Factor tail:(_"*"_ Factor)* {
+  = head:Factor tail:(_ [*/] _ Factor)* {
 		return buildBinaryExpression(head, tail)
     }
 
