@@ -45,7 +45,7 @@ function binaryExec( left, op, right ) {
     else if( right.type == "BinaryExpression" )  val2 = binaryExec( right.left, right.operator, right.right );
     console.log( [val1, val2 ]);
 
-    console.log( 48, val1.class );
+    // メソッドの実行
     if( global[val1.class][ op ] )   return global[val1.class][ op ]( val1, val2 );
     else    console.log( "Methodが見つかりません");
 }
@@ -62,7 +62,7 @@ switch( ast["type"] ) {
                             let source = line["expression"]["right"];
                             switch( source["type"] ){
                                 case "Literal":
-                                    global[line.expression.left.name] = source["value"];
+                                    global[line.expression.left.name] = { value: source.value, class: source.class };
                                     break;
                                 case "BinaryExpression":
                                     global[line.expression.left.name] = binaryExec( source.left, source.operator, source.right );
