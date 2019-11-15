@@ -74,13 +74,13 @@ word
 
 number
   = float:$(float) {
-  	return { "type": "Literal", value: parseFloat(float), class: "number" }
+  	return { "type": "Literal", value: parseFloat(float), class: "Number" }
   }
   / hexint:$(hexint) {
-    return { "type": "Literal", value: parseInt(hexint), class: "number" }
+    return { "type": "Literal", value: parseInt(hexint), class: "Number" }
   }
   / int:$(int) {
-    return { "type": "Literal", value: parseInt(int), class: "number" }
+    return { "type": "Literal", value: parseInt(int), class: "Number" }
   }
 
 float
