@@ -35,9 +35,10 @@ global.Number["/"] = (obj, params) => { return { value: (obj.value / params[0].v
 global["String"] = {};
 global.String["superClass"] = global.Object;
 global.String["+"] = (obj, params) => {
-    if( params[0].class == "string" ) {
+    if( params[0].class == "String" ) {
         return { value: (obj.value + params[0].value), class: "String" };
     } else {
+        console.log( [41, obj, params ]);
         let str = exec( params[0], params[0].class, "to_s" );
         return { value: (obj.value + str), class: "String" };
     }
@@ -53,6 +54,7 @@ global.String["+"] = (obj, params) => {
  * @return {object}
  */
 function exec( obj, className, method, params, options ) {
+    console.log( [56, obj, className, method, params, options]);
     if( global[className][method] ) {
         return global[obj.class][method]( obj, params );
     } else {
@@ -83,9 +85,10 @@ function binaryExec( left, op, right ) {
     else if( right.type == "BinaryExpression" )  val2 = binaryExec( right.left, right.operator, right.right );
     console.log( [val1, val2 ]);
 
+    return exec( val1, val1.class, op, [val2] );
     // メソッドの実行
-    if( global[val1.class][ op ] )   return global[val1.class][ op ]( val1, [val2] );
-    else    console.log( "Methodが見つかりません");
+    //if( global[val1.class][ op ] )   return global[val1.class][ op ]( val1, [val2] );
+    //else    console.log( "Methodが見つかりません");
 }
 switch( ast["type"] ) {
     case "Program":

@@ -118,3 +118,14 @@ Factor
   = "(" _ expr:Expression _ ")" { return expr; }
   / number
   / iden
+  / String
+
+String
+  = '"' chars:DoubleQuoteCharacter* '"' {
+    return { type: "Literal", value: chars.join(""), class: "String" };
+  }
+
+DoubleQuoteCharacter
+  = !'"' SourceCharacter { return text(); }
+
+SourceCharacter = .
