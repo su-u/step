@@ -21,19 +21,57 @@ const global = {};
 // Objectクラス
 global["Object"] = {};
 global.Object["to_s"] = (obj) => String(obj);
+global.Object["suerClass"] = null;
 
 // Numberクラス
 global["Number"] = {};
 global.Number["superClass"] = global.Object;
-global.Number["+"] = (obj, param) => { return { value: (obj.value + param.value), class: "Number" } };
-global.Number["-"] = (obj, param) => { return { value: (obj.value + param.value), class: "Number" } };
-global.Number["*"] = (obj, param) => { return { value: (obj.value + param.value), class: "Number" } };
-global.Number["/"] = (obj, param) => { return { value: (obj.value + param.value), class: "Number" } };
+global.Number["+"] = (obj, params) => { return { value: (obj.value + params[0].value), class: "Number" } };
+global.Number["-"] = (obj, params) => { return { value: (obj.value - params[0].value), class: "Number" } };
+global.Number["*"] = (obj, params) => { return { value: (obj.value * params[0].value), class: "Number" } };
+global.Number["/"] = (obj, params) => { return { value: (obj.value / params[0].value), class: "Number" } };
 
 // Stringクラス
 global["String"] = {};
 global.String["superClass"] = global.Object;
+global.String["+"] = (obj, params) => {
+    if( params[0].class == "string" ) {
+        return { value: (obj.value + params[0].value), class: "String" };
+    } else {
+        let str = exec( params[0], params[0].class, "to_s" );
+        return { value: (obj.value + str), class: "String" };
+    }
+};
 
+/**
+ * メソッドの実行（メソッドが存在しない場合は親クラスを探しに行く）
+ * @param {object}  obj         レシーバ
+ * @param {string}  className   レシーバのクラス名
+ * @param {string}  method      メソッド名
+ * @param {object}  [params]      パラメータの配列
+ * @param {object}  [options]     キーワードパラメータのハッシュ
+ * @return {object}
+ */
+function exec( obj, className, method, params, options ) {
+    if( global[className][method] ) {
+        return global[obj.class][method]( obj, params );
+    } else {
+        if( global[className].superClass != null ) {
+            return exec( obj, global[className].superClass, method, params, options );
+        } else {
+            throw new Error("メソッドが見つかりません");
+        }
+    }
+}
+
+
+/**
+ * 2項演算子の展開および実行
+ * @param {object}  left    2項演算子の左側
+ * @param {string}  op      メソッド名
+ * @param {object}  right   2項演算子の右側
+ * @returns {object}
+ */
 function binaryExec( left, op, right ) {
     console.log( [ left, op, right] );
     let val1 = {}, val2 = {};
@@ -46,7 +84,7 @@ function binaryExec( left, op, right ) {
     console.log( [val1, val2 ]);
 
     // メソッドの実行
-    if( global[val1.class][ op ] )   return global[val1.class][ op ]( val1, val2 );
+    if( global[val1.class][ op ] )   return global[val1.class][ op ]( val1, [val2] );
     else    console.log( "Methodが見つかりません");
 }
 switch( ast["type"] ) {
