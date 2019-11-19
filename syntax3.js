@@ -20,16 +20,19 @@ const global = {};
 
 // Objectクラス
 global["Object"] = {};
+//global.Object.className = "Object";
 global.Object["to_s"] = (obj) => String(obj);
-global.Object["suerClass"] = null;
+global.Object["superClass"] = null;
 
 // Numberクラス
 global["Number"] = {};
+//global.Number.className = "Number";
 global.Number["superClass"] = global.Object;
 global.Number["+"] = (obj, params) => { return { value: (obj.value + params[0].value), class: "Number" } };
 global.Number["-"] = (obj, params) => { return { value: (obj.value - params[0].value), class: "Number" } };
 global.Number["*"] = (obj, params) => { return { value: (obj.value * params[0].value), class: "Number" } };
 global.Number["/"] = (obj, params) => { return { value: (obj.value / params[0].value), class: "Number" } };
+global.Number["to_s"] = (obj, params) => { return String(obj.value) };
 
 // Stringクラス
 global["String"] = {};
@@ -39,7 +42,7 @@ global.String["+"] = (obj, params) => {
         return { value: (obj.value + params[0].value), class: "String" };
     } else {
         console.log( [41, obj, params ]);
-        let str = exec( params[0], params[0].class, "to_s" );
+        let str = exec( params[0], global[params[0].class], "to_s" );
         return { value: (obj.value + str), class: "String" };
     }
 };
@@ -53,13 +56,15 @@ global.String["+"] = (obj, params) => {
  * @param {object}  [options]     キーワードパラメータのハッシュ
  * @return {object}
  */
-function exec( obj, className, method, params, options ) {
-    console.log( [56, obj, className, method, params, options]);
-    if( global[className][method] ) {
-        return global[obj.class][method]( obj, params );
+function exec( obj, classN, method, params, options ) {
+    console.log( [57, obj, classN, method, params, options]);
+    if( classN[method] ) {
+        console.log("59");
+        return classN[method]( obj, params );
     } else {
-        if( global[className].superClass != null ) {
-            return exec( obj, global[className].superClass, method, params, options );
+        console.log("62");
+        if( classN.superClass != null ) {
+            return exec( obj, classN.superClass, method, params, options );
         } else {
             throw new Error("メソッドが見つかりません");
         }
@@ -85,7 +90,7 @@ function binaryExec( left, op, right ) {
     else if( right.type == "BinaryExpression" )  val2 = binaryExec( right.left, right.operator, right.right );
     console.log( [val1, val2 ]);
 
-    return exec( val1, val1.class, op, [val2] );
+    return exec( val1, global[val1.class], op, [val2] );
     // メソッドの実行
     //if( global[val1.class][ op ] )   return global[val1.class][ op ]( val1, [val2] );
     //else    console.log( "Methodが見つかりません");
