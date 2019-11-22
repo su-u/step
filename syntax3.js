@@ -23,6 +23,7 @@ global["Object"] = {};
 //global.Object.className = "Object";
 global.Object["to_s"] = (obj) => String(obj);
 global.Object["superClass"] = null;
+global.Object["="] = (obj, params) => { return { value: ( obj.value == params[0].value), class: "Boolean" } };
 
 // Numberクラス
 global["Number"] = {};
@@ -32,7 +33,6 @@ global.Number["+"] = (obj, params) => { return { value: (obj.value + params[0].v
 global.Number["-"] = (obj, params) => { return { value: (obj.value - params[0].value), class: "Number" } };
 global.Number["*"] = (obj, params) => { return { value: (obj.value * params[0].value), class: "Number" } };
 global.Number["/"] = (obj, params) => { return { value: (obj.value / params[0].value), class: "Number" } };
-global.Number["="] = (obj, params) => { return { value: (obj.value == params[0].value), class: "Boolean" } };
 global.Number["<"] = (obj, params) => { return { value: (obj.value < params[0].value), class: "Boolean" } };
 global.Number["<="] = (obj, params) => { return { value: (obj.value <= params[0].value), class: "Boolean" } };
 global.Number[">"] = (obj, params) => { return { value: (obj.value > params[0].value), class: "Boolean" } };
@@ -51,6 +51,7 @@ global.String["+"] = (obj, params) => {
         return { value: (obj.value + str), class: "String" };
     }
 };
+
 
 /**
  * メソッドの実行（メソッドが存在しない場合は親クラスを探しに行く）

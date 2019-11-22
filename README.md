@@ -32,7 +32,7 @@ syntax3.js | Objectクラスがあるものとして実行
 example1.chb | サンプルファイル1：代入
 example2.chb | 演算のテスト
 example3.chb | 文字列のテスト
-example4.chb | 数値の比較のテスト
+example4.chb | オブジェクトの比較のテスト
 
 ## syntax.jsを動かすための準備
 
