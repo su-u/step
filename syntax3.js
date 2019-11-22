@@ -32,6 +32,11 @@ global.Number["+"] = (obj, params) => { return { value: (obj.value + params[0].v
 global.Number["-"] = (obj, params) => { return { value: (obj.value - params[0].value), class: "Number" } };
 global.Number["*"] = (obj, params) => { return { value: (obj.value * params[0].value), class: "Number" } };
 global.Number["/"] = (obj, params) => { return { value: (obj.value / params[0].value), class: "Number" } };
+global.Number["="] = (obj, params) => { return { value: (obj.value == params[0].value), class: "Boolean" } };
+global.Number["<"] = (obj, params) => { return { value: (obj.value < params[0].value), class: "Boolean" } };
+global.Number["<="] = (obj, params) => { return { value: (obj.value <= params[0].value), class: "Boolean" } };
+global.Number[">"] = (obj, params) => { return { value: (obj.value > params[0].value), class: "Boolean" } };
+global.Number[">="] = (obj, params) => { return { value: (obj.value >= params[0].value), class: "Boolean" } };
 global.Number["to_s"] = (obj, params) => { return String(obj.value) };
 
 // Stringクラス

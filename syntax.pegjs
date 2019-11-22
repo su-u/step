@@ -48,7 +48,7 @@ expr
 	}
 
 from
-	= Expression
+	= RelationExpression
 	/ value:number{
 		return{
 			"type": "Literal",
@@ -104,6 +104,11 @@ signe
   / "-"
 frac = "."
 
+RelationExpression
+  = head:Expression tail:(_ RelationalOperator _ Expression)*　{
+      　　return buildBinaryExpression( head, tail);
+     }
+
 Expression
   = head:Term tail:(_ [+-] _ Term)* {
 		return buildBinaryExpression(head, tail)
@@ -115,10 +120,11 @@ Term
     }
 
 Factor
-  = "(" _ expr:Expression _ ")" { return expr; }
+  = "(" _ expr:RelationExpression _ ")" { return expr; }
   / number
   / iden
   / String
+
 
 String
   = '"' chars:DoubleQuoteCharacter* '"' {
@@ -129,3 +135,10 @@ DoubleQuoteCharacter
   = !'"' SourceCharacter { return text(); }
 
 SourceCharacter = .
+
+RelationalOperator
+  = "<="
+  / ">="
+  / "<"
+  / ">"
+  / "="
