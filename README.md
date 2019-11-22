@@ -30,6 +30,9 @@ syntax.js | 言語定義ファイルと，コマンドラインで与えられ�
 syntax2.js | 変数への代入，代入した数値の取り出しなどが実行可能
 syntax3.js | Objectクラスがあるものとして実行
 example1.chb | サンプルファイル1：代入
+example2.chb | 演算のテスト
+example3.chb | 文字列のテスト
+example4.chb | 数値の比較のテスト
 
 ## syntax.jsを動かすための準備
 
