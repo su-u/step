@@ -598,8 +598,7 @@ NewExpression
     }
 
 CallExpression
-  = head:(
-      callee:MemberExpression __ args:Arguments {
+  =  head: ( callee:MemberExpression args:Arguments {
         return { type: "CallExpression", callee: callee, arguments: args };
       }
     )
@@ -631,7 +630,7 @@ CallExpression
     }
 
 Arguments
-  = "(" __ args:(ArgumentList __)? ")" {
+  = ":" __ args:(ArgumentList __)? {
       return optionalList(extractOptional(args, 0));
     }
 
