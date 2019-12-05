@@ -849,6 +849,28 @@ ConditionalExpressionNoIn
 
 AssignmentExpression
   = left:LeftHandSideExpression __
+    "<-" __
+        right:AssignmentExpression
+    {
+      return {
+        type: "AssignmentExpression",
+        operator: "=",
+        left: left,
+        right: right
+      };
+    }
+  / right:LeftHandSideExpression __
+    "->" __
+        left:AssignmentExpression
+    {
+      return {
+        type: "AssignmentExpression",
+        operator: "=",
+        left: left,
+        right: right
+      };
+    }
+  / left:LeftHandSideExpression __
     "=" !"=" __
     right:AssignmentExpression
     {
