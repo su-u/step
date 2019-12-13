@@ -597,8 +597,13 @@ NewExpression
       return { type: "NewExpression", callee: callee, arguments: [] };
     }
 
+Word = MemberExpression
+Param = NumericLiteral / Identifier
 CallExpression
-  =  head: ( callee:MemberExpression args:Arguments {
+  =  head:Word ":" _ middle:Param tail:( _ "," _ Param)* _ opt:( Word ":" _ Param)*
+  / head:Word ":" _ middle:Param tail:( _ "," _ Param)*
+  / head:Word _ opt:( Word ":" _ Param)*
+  / head: ( callee:MemberExpression args:Arguments {
         return { type: "CallExpression", callee: callee, arguments: args };
       }
     )
@@ -1315,4 +1320,3 @@ SourceElements
 SourceElement
   = Statement
   / FunctionDeclaration
-
