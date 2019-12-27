@@ -1,3 +1,34 @@
+// JavaScript Grammar
+// ==================
+//
+// Based on grammar from ECMA-262, 5.1 Edition [1]. Generated parser builds a
+// syntax tree compatible with the ESTree spec [2].
+//
+// Limitations:
+//
+//   * Non-BMP characters are completely ignored to avoid surrogate pair
+//     handling.
+//
+//   * One can create identifiers containing illegal characters using Unicode
+//     escape sequences. For example, "abcd\u0020efgh" is not a valid
+//     identifier, but it is accepted by the parser.
+//
+//   * Strict mode is not recognized. This means that within strict mode code,
+//     "implements", "interface", "let", "package", "private", "protected",
+//     "public", "static" and "yield" can be used as names. Many other
+//     restrictions and exceptions from Annex C are also not applied.
+//
+// All the limitations could be resolved, but the costs would likely outweigh
+// the benefits.
+//
+// Many thanks to inimino [3] for his grammar [4] which helped me to solve some
+// problems (such as automatic semicolon insertion) and also served to double
+// check that I converted the original grammar correctly.
+//
+// [1] http://www.ecma-international.org/publications/standards/Ecma-262.htm
+// [2] https://github.com/estree/estree
+// [3] http://inimino.org/~inimino/blog/
+// [4] http://boshi.inimino.org/3box/asof/1270029991384/PEG/ECMAScript_unified.peg
 
 {
   var TYPES_TO_PROPERTY_NAMES = {
@@ -597,13 +628,9 @@ NewExpression
       return { type: "NewExpression", callee: callee, arguments: [] };
     }
 
-Word = MemberExpression
-Param = NumericLiteral / Identifier
 CallExpression
-  =  head:Word ":" _ middle:Param tail:( _ "," _ Param)* _ opt:( Word ":" _ Param)*
-  / head:Word ":" _ middle:Param tail:( _ "," _ Param)*
-  / head:Word _ opt:( Word ":" _ Param)*
-  / head: ( callee:MemberExpression args:Arguments {
+  = head:(
+      callee:MemberExpression __ args:Arguments {
         return { type: "CallExpression", callee: callee, arguments: args };
       }
     )
@@ -635,7 +662,7 @@ CallExpression
     }
 
 Arguments
-  = ":" __ args:(ArgumentList __)? {
+  = "(" __ args:(ArgumentList __)? ")" {
       return optionalList(extractOptional(args, 0));
     }
 
@@ -853,9 +880,9 @@ ConditionalExpressionNoIn
   / LogicalORExpressionNoIn
 
 AssignmentExpression
-  = left:LeftHandSideExpression __
+    = left:LeftHandSideExpression __
     "<-" __
-        right:AssignmentExpression
+    right:AssignmentExpression
     {
       return {
         type: "AssignmentExpression",
@@ -866,16 +893,16 @@ AssignmentExpression
     }
   / right:LeftHandSideExpression __
     "->" __
-        left:AssignmentExpression
+    left:AssignmentExpression
     {
       return {
         type: "AssignmentExpression",
         operator: "=",
-        left: left,
-        right: right
+        left: right,
+        right: left
       };
     }
-  / left:LeftHandSideExpression __
+    / left:LeftHandSideExpression __
     "=" !"=" __
     right:AssignmentExpression
     {
@@ -1320,3 +1347,15 @@ SourceElements
 SourceElement
   = Statement
   / FunctionDeclaration
+
+// ----- A.6 Universal Resource Identifier Character Classes -----
+
+// Irrelevant.
+
+// ----- A.7 Regular Expressions -----
+
+// Irrelevant.
+
+// ----- A.8 JSON -----
+
+// Irrelevant.

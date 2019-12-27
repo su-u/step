@@ -39,6 +39,8 @@ stmt
 _ "whitespace"
 	= [ \t\n\r]*
 
+__ = _
+
 expr
 	= right:from _"->"_ left:to _{
 		return sallow( left, right );
@@ -49,7 +51,8 @@ expr
 
 from
 	= RelationExpression
-	/ value:number{
+  / MemberExpression
+	/ value:NumericLiteral{
 		return{
 			"type": "Literal",
 			"value": value
@@ -72,7 +75,7 @@ iden
 word
 	= word:[a-zA-z][0-9a-zA-Z]*
 
-number
+NumericLiteral
   = float:$(float) {
   	return { "type": "Literal", value: parseFloat(float), class: "Number" }
   }
@@ -104,6 +107,12 @@ signe
   / "-"
 frac = "."
 
+// Token
+FalseToken      = "false"      !IdentifierPart
+NullToken       = "null"       !IdentifierPart
+ThisToken       = "self"       !IdentifierPart
+TrueToken       = "true"       !IdentifierPart
+
 RelationExpression
   = head:Expression tail:(_ RelationalOperator _ Expression)*　{
       　　return buildBinaryExpression( head, tail);
@@ -114,6 +123,27 @@ Expression
 		return buildBinaryExpression(head, tail)
     }
 
+MemberExpression
+  = head:(
+        PrimaryExpression
+    )
+    tail:(
+        __ "[" __ property:Expression __ "]" {
+          return { property: property, computed: true };
+        }
+      / __ "." __ property:IdentifierName {
+          return { property: property, computed: false };
+        }
+    )*
+
+PrimaryExpression
+  = ThisToken { return { type: "ThisExpression" }; }
+  / Identifier
+  / Literal
+  // ArrayLiteral
+  // ObjectLiteral
+  / "(" __ expression:Expression __ ")" { return expression; }
+
 Term
   = head:Factor tail:(_ [*/] _ Factor)* {
 		return buildBinaryExpression(head, tail)
@@ -121,12 +151,12 @@ Term
 
 Factor
   = "(" _ expr:RelationExpression _ ")" { return expr; }
-  / number
+  / NumericLiteral
   / iden
-  / String
+  / StringLiteral
 
 
-String
+StringLiteral
   = '"' chars:DoubleQuoteCharacter* '"' {
     return { type: "Literal", value: chars.join(""), class: "String" };
   }
@@ -142,3 +172,44 @@ RelationalOperator
   / "<"
   / ">"
   / "="
+
+Identifier
+  = !ReservedWord name:IdentifierName { return name; }
+
+IdentifierName "identifier"
+  = head:IdentifierStart tail:IdentifierPart* {
+      return {
+        type: "Identifier",
+        name: head + tail.join("")
+      };
+    }
+
+IdentifierStart
+  = iden
+  / "$"
+  / "_"
+  // "\\" sequence:UnicodeEscapeSequence { return sequence; }
+
+IdentifierPart
+  = IdentifierStart
+
+
+
+
+ReservedWord
+  = NullLiteral
+  / BooleanLiteral
+
+Literal
+  = NullLiteral
+  / BooleanLiteral
+  / NumericLiteral
+  / StringLiteral
+  // RegularExpressionLiteral
+
+NullLiteral
+  = NullToken { return { type: "Literal", value: null }; }
+
+BooleanLiteral
+  = TrueToken  { return { type: "Literal", value: true  }; }
+  / FalseToken { return { type: "Literal", value: false }; }
