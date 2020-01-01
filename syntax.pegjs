@@ -16,6 +16,16 @@
       };
     }, head);
   }
+  function buildPipelineExpression(head, tail) {
+    return tail.reduce(function(result, element) {
+      return {
+        type: "PipelineExpression",
+        operator: element[1],
+        left: result,
+        right: element[3]
+      };
+    }, head);
+  }
 }
 program
 	= body: compstmt{
@@ -42,18 +52,23 @@ _ "whitespace"
 __ = _
 
 expr
-	= right:from _"->"_ left:to _{
+	= right:pipe _"->"_ left:to _{
 		return sallow( left, right );
 	}
 	/ left:to _"<-"_ right:from _{
 		return sallow( left, right );
 	}
 
+pipe
+  = left:from right: (_ ">>" _ from)* {
+    return buildPipelineExpression( left, right);
+  }
+     
 from
-	= RelationExpression
+  = RelationExpression
   / MemberExpression
-	/ value:NumericLiteral{
-		return{
+  / value:NumericLiteral{
+    return{
 			"type": "Literal",
 			"value": value
 		}
@@ -208,8 +223,8 @@ Literal
   // RegularExpressionLiteral
 
 NullLiteral
-  = NullToken { return { type: "Literal", value: null }; }
+  = NullToken { return { type: "Literal", value: null, class: "Null" }; }
 
 BooleanLiteral
-  = TrueToken  { return { type: "Literal", value: true  }; }
-  / FalseToken { return { type: "Literal", value: false }; }
+  = TrueToken  { return { type: "Literal", value: true,  class: "True"  }; }
+  / FalseToken { return { type: "Literal", value: false, class: "False" }; }
