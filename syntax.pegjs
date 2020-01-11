@@ -58,6 +58,7 @@ expr
 	/ left:to _"<-"_ right:from _{
 		return sallow( left, right );
 	}
+    / pipe
 
 pipe
   = left:from right: (_ ">>" _ from)* {

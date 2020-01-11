@@ -127,6 +127,8 @@ switch( ast["type"] ) {
                                 case "BinaryExpression":
                                     global[line.expression.left.name] = binaryExec( source.left, source.operator, source.right );
                                     break;
+                                default:
+                                    console.log( source["type"]);
                             }
                             //global[]
                             break;
