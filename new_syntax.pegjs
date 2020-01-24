@@ -31,6 +31,12 @@
       };
     }, head);
   }
+  function extractList(list, index) {
+    return list.map(function(element) { return element[index]; });
+  }
+  function buildList(head, foo, index) {
+    return [head].concat(extractList(foo, index));
+  }
 }
 
 start = program
@@ -42,7 +48,10 @@ program
       body
     }
   }
-mtst =  _ head:assign (_body:assign)* _
+mtst
+  =  _ head:assign tail:(_ assign)* _ {
+    return buildList(head, tail, 1);
+  }
 stmt 
   = block
   / memberExpression
@@ -51,11 +60,23 @@ stmt
   / lambda
   / arrayLiteral
   / hashLiteral
+  / identifier
 
 // expression = head: assign tail: assign*
-memberExpression = identifier "." member
-member = array / (word ":" params)  / word
-params = _ identifier (_ "," _ identifier)* (_ identifier ":" _ identifier)*
+memberExpression = left:identifier "." right:member {
+  return {
+    type: "MemberExpression",
+    object: left,
+    property: right
+  }
+}
+member
+  = array
+  / (word ":" params)
+  / word
+params 
+  = _ identifier (_ "," _ identifier)* (_ identifier ":" _ identifier)*
+  / block
 array = word "[" parameter "]"
 parameter = identifier
 pipe
@@ -69,7 +90,7 @@ assign
   }
 assignTo = array / word / memberExpression
 callExpression = left:memberExpression
-block = "{" _ mtst _ "}"
+block = "{" _ mtst _ "}" 
 lambda = "(" params ")" _ "=>" _ block
 arrayLiteral = "[" _ params _ "]"
 keyValue = identifier ":" _ identifier
@@ -80,4 +101,17 @@ _ "whitespace"
 word = $(char)
 char = [a-zA-Z][0-9a-zA-Z]*
 number = $([0-9]*)
-identifier = array / word / number
+identifier
+  = array
+  / word: word {
+    return {
+      type: "Identifier",
+      name: word
+    }
+  }
+  / value: number {
+    return{
+      type: "NumericalLiteral",
+      value: value
+    }
+  }

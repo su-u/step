@@ -2,7 +2,7 @@ const pegjs = require('pegjs');
 const fs = require('fs');
 const util = require('util');
 
-const ruleset = fs.readFileSync("syntax.pegjs", "utf-8");
+const ruleset = fs.readFileSync("new_syntax.pegjs", "utf-8");
 
 if( process.argv.length == 0 ) {
     console.log("Chiboのソースコードを指定してください");
