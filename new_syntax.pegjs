@@ -32,10 +32,16 @@
     }, head);
   }
   function extractList(list, index) {
+  console.log( 45,list );
+  console.log( 46,index );
     return list.map(function(element) { return element[index]; });
   }
-  function buildList(head, foo, index) {
-    return [head].concat(extractList(foo, index));
+  function buildList(head, params, index) {
+  console.log(40,head);
+    return [head].concat(extractList(params, index));
+  }
+  function buildListkw(head, params, kwparams, index) {
+    return [head].concat(extractList(params, index));
   }
 }
 
@@ -72,10 +78,29 @@ memberExpression = left:identifier "." right:member {
 }
 member
   = array
-  / (word ":" params)
+  / name:identifier ":" _ args:params {
+    return {
+      "type": "Identifier",
+      "name": name,
+      "arguments":args
+    };
+  }
+    / left:identifier _ args:kwparams {
+    return {
+      "type": "Identifier",
+      "name": name,
+      "arguments":args
+    };
+  }
   / word
 params 
-  = _ identifier (_ "," _ identifier)* (_ identifier ":" _ identifier)*
+  = _ left:identifier right:(_ "," _ identifier)* keyword:(_ identifier ":" _ identifier)* {
+    return buildList( left, right, 3 );
+  }
+kwparams
+  = _ left:identifier _ keyword:(_ identifier ":" _ identifier)* {
+  return buildListkw( left, keyword, 3 );
+  }
   / block
 array = word "[" parameter "]"
 parameter = identifier
@@ -88,9 +113,9 @@ assign
     return sallow( dest, source )
     //return source
   }
-assignTo = array / word / memberExpression
+assignTo = array / identifier / memberExpression
 callExpression = left:memberExpression
-block = "{" _ mtst _ "}" 
+block = "{" _ mtst _ "}"
 lambda = "(" params ")" _ "=>" _ block
 arrayLiteral = "[" _ params _ "]"
 keyValue = identifier ":" _ identifier
