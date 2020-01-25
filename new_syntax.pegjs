@@ -31,17 +31,22 @@
       };
     }, head);
   }
+  function buildList(head, params, index) {
+    return [head].concat(extractList(params, index));
+  }
   function extractList(list, index) {
-  console.log( 45,list );
-  console.log( 46,index );
     return list.map(function(element) { return element[index]; });
   }
-  function buildList(head, params, index) {
-  console.log(40,head);
+  function buildParamsOnlyList(head, params, index) {
     return [head].concat(extractList(params, index));
   }
-  function buildListkw(head, params, kwparams, index) {
-    return [head].concat(extractList(params, index));
+  function extractKwList(list, index) {
+    return list.map(function(element) {
+      return {key: element[1], value: element[index]} ;
+    });
+  }
+  function buildKwList(head, kwparams, index) {
+    return [head].concat(extractKwList(kwparams, index));
   }
 }
 
@@ -78,32 +83,46 @@ memberExpression = left:identifier "." right:member {
 }
 member
   = array
-  / name:identifier ":" _ args:params {
+  / name:identifier ":" _ args:paramsonly {
     return {
       "type": "Identifier",
       "name": name,
       "arguments":args
     };
   }
-    / left:identifier _ args:kwparams {
+  / left:identifier _ args:kwparam+ {
     return {
-      "type": "Identifier",
-      "name": name,
-      "arguments":args
+      left,
+      "arguments": args
     };
+  }
+  / left:identifier {
+    return {
+      "type": "identifier",
+      "name": left,
+      arguments: []
+    }
   }
   / word
-params 
-  = _ left:identifier right:(_ "," _ identifier)* keyword:(_ identifier ":" _ identifier)* {
-    return buildList( left, right, 3 );
-  }
-kwparams
-  = _ left:identifier _ keyword:(_ identifier ":" _ identifier)* {
-  return buildListkw( left, keyword, 3 );
-  }
   / block
+paramsonly
+  = _ left:identifier right:(_ "," _ identifier)*  {
+    return buildParamsOnlyList( left, right, 3 );
+  }
+paramswkw
+  = _ left:identifier right:(_ "," _ identifier)* keyword:(_ identifier ":" _ identifier)+ {
+    return buildParamsWKwList( left, right, 3 );
+  }
+
 array = word "[" parameter "]"
 parameter = identifier
+kwparam
+  = _ key: identifier ":" _ value: identifier {
+    return {
+      "key": key,
+      "value": value
+     }
+  }
 pipe
   = _ left:stmt right:( _  "|>" _ stmt )* _ {
     return buildPipelineExpression( left, right );
@@ -116,8 +135,8 @@ assign
 assignTo = array / identifier / memberExpression
 callExpression = left:memberExpression
 block = "{" _ mtst _ "}"
-lambda = "(" params ")" _ "=>" _ block
-arrayLiteral = "[" _ params _ "]"
+lambda = "(" paramswkw ")" _ "=>" _ block
+arrayLiteral = "[" _ paramsonly _ "]"
 keyValue = identifier ":" _ identifier
 hashLiteral = "{" _ keyValue ( _"," _ keyValue)* _ "}"
 
