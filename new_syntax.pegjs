@@ -67,8 +67,8 @@ stmt
   = block
   / memberExpression
   / array
-  / word
   / lambda
+  / callExpression
   / arrayLiteral
   / hashLiteral
   / identifier
@@ -84,6 +84,7 @@ memberExpression = left:identifier "." right:member {
 member
   = array
   / name:identifier ":" _ args:paramsonly {
+  console.log(87,name);
     return {
       "type": "Identifier",
       "name": name,
@@ -93,7 +94,7 @@ member
   / left:identifier _ args:kwparam+ {
     return {
       left,
-      "arguments": args
+      "KWarguments": args
     };
   }
   / left:identifier {
@@ -114,6 +115,13 @@ paramswkw
     return buildParamsWKwList( left, right, 3 );
   }
 
+callExpression
+  = call:member {
+  return {
+    type: "CallExpression",
+    property: call
+  }
+}
 array = word "[" parameter "]"
 parameter = identifier
 kwparam
@@ -133,9 +141,20 @@ assign
     //return source
   }
 assignTo = array / identifier / memberExpression
-callExpression = left:memberExpression
-block = "{" _ mtst _ "}"
-lambda = "(" paramswkw ")" _ "=>" _ block
+block
+  = "{" _ mtst:mtst _ "}" {
+    return {
+      "type": "BlockStatement",
+      "body":mtst
+    }
+  }
+lambda
+  = "(" param:paramsonly ")" _ "=>" _ block:block {
+    return {
+      "type": "LambdaExpression",
+      block
+    };
+  }
 arrayLiteral = "[" _ paramsonly _ "]"
 keyValue = identifier ":" _ identifier
 hashLiteral = "{" _ keyValue ( _"," _ keyValue)* _ "}"
