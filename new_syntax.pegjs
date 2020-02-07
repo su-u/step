@@ -63,13 +63,13 @@ mtst
   =  _ head:assign tail:(_ assign)* _ {
     return buildList(head, tail, 1);
   }
-stmt 
+stmt
   = block
   / memberExpression
   / array
   / lambda
-  / callExpression
   / arrayLiteral
+  / callExpression
   / hashLiteral
   / identifier
 
@@ -155,7 +155,8 @@ lambda
       block
     };
   }
-arrayLiteral = "[" _ paramsonly _ "]"
+arrayLiteral
+  = "[" _ paramsonly _ "]"
 keyValue = identifier ":" _ identifier
 hashLiteral = "{" _ keyValue ( _"," _ keyValue)* _ "}"
 
