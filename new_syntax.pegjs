@@ -60,18 +60,21 @@ program
     }
   }
 mtst
-  =  _ head:assign tail:(_ assign)* _ {
+  = comment
+  / _ head:assign tail:(_ assign)* _ {
     return buildList(head, tail, 1);
   }
+
+
 stmt
   = block
   / memberExpression
   / array
   / lambda
   / arrayLiteral
-  / callExpression
-  / hashLiteral
   / identifier
+//  / callExpression
+  / hashLiteral
 
 // expression = head: assign tail: assign*
 memberExpression = left:identifier "." right:member {
@@ -97,13 +100,13 @@ member
       "KWarguments": args
     };
   }
-  / left:identifier {
-    return {
-      "type": "identifier",
-      "name": left,
-      arguments: []
-    }
-  }
+//  / left:identifier {
+//    return {
+//      "type": "identifier",
+//      "name": left,
+//      arguments: []
+//    }
+//  }
   / word
   / block
 paramsonly
@@ -179,3 +182,12 @@ identifier
       value: value
     }
   }
+
+comment
+  = "#" (!LineTerminator SourceCharacter)*
+  
+  LineTerminator
+  = [\n\r\u2028\u2029]
+  
+  SourceCharacter
+  = .
