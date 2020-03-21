@@ -60,8 +60,8 @@ program
     }
   }
 mtst
-  = comment
-  / _ head:assign tail:(_ assign)* _ {
+//  = comment
+  = _ head:assign tail:(_ assign)* _ {
     return buildList(head, tail, 1);
   }
 
@@ -69,7 +69,8 @@ mtst
 stmt
   = block
   / memberExpression
-  / array
+//  / array
+//  / member
   / lambda
   / arrayLiteral
   / identifier
@@ -77,13 +78,20 @@ stmt
   / hashLiteral
 
 // expression = head: assign tail: assign*
-memberExpression = left:identifier "." right:member {
-  return {
-    type: "MemberExpression",
-    object: left,
-    property: right
+memberExpression
+  = left:identifier "." right:member {
+    return {
+      type: "MemberExpression",
+      object: left,
+      property: right
+    }
   }
-}
+  / member:member {
+    return {
+      type: "CallExpression",
+      member
+    }
+  }
 member
   = array
   / name:identifier ":" _ args:paramsonly {
@@ -111,6 +119,10 @@ member
   / block
 paramsonly
   = _ left:identifier right:(_ "," _ identifier)*  {
+    return buildParamsOnlyList( left, right, 3 );
+  }
+params2
+  = "(" _ left:identifier right:(_ "," _ identifier)*  _ ")" {
     return buildParamsOnlyList( left, right, 3 );
   }
 paramswkw
@@ -152,7 +164,8 @@ block
     }
   }
 lambda
-  = "(" param:paramsonly ")" _ "=>" _ block:block {
+//  = "(" param:paramsonly ")" _ "=>" _ block:block {
+  = param:params2 _ "=>" _ block:block {
     return {
       "type": "LambdaExpression",
       block
