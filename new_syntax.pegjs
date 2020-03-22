@@ -1,7 +1,7 @@
 {
   function sallow( left, right ) {
     //return right;
-    console.log( right );
+    //console.log( right );
     return  left.reduce( function(result, element) {
     return {
       "type": "AssignmentExpression",
@@ -95,7 +95,6 @@ memberExpression
 member
   = array
   / name:identifier ":" _ args:paramsonly {
-  console.log(87,name);
     return {
       "type": "Identifier",
       "name": name,
@@ -137,7 +136,14 @@ callExpression
     property: call
   }
 }
-array = word "[" parameter "]"
+array
+  = variable:word "[" param:parameter "]" {
+    return {
+      type: "ArrayLiteral",
+      object: variable,
+      param: param
+    }
+  }
 parameter = identifier
 kwparam
   = _ key: identifier ":" _ value: identifier {
@@ -152,10 +158,20 @@ pipe
   }
 assign
   = source:pipe dest:(_ "->" _ assignTo)* _ ";" {
-    return sallow( dest, source )
+    let dummy = sallow( dest, source );
+    return dummy;
     //return source
   }
-assignTo = array / identifier / memberExpression
+assignTo
+  = array:array {
+    return array;
+  }
+  / identifier:identifier {
+    return identifier;
+  }
+  / member:memberExpression {
+    return member;
+  }
 block
   = "{" _ mtst:mtst _ "}" {
     return {
@@ -164,7 +180,6 @@ block
     }
   }
 lambda
-//  = "(" param:paramsonly ")" _ "=>" _ block:block {
   = param:params2 _ "=>" _ block:block {
     return {
       "type": "LambdaExpression",
@@ -180,7 +195,9 @@ _ "whitespace"
   = [ \t\n\r]*
 word = $(char)
 char = [a-zA-Z][0-9a-zA-Z]*
+
 number = $([0-9]*)
+
 identifier
   = array
   / word: word {
@@ -189,12 +206,44 @@ identifier
       name: word
     }
   }
-  / value: number {
+  / value: NumericLiteral {
     return{
       type: "NumericalLiteral",
       value: value
     }
   }
+
+NumericLiteral
+  = float:$(float) {
+  	return { "type": "Literal", value: parseFloat(float), class: "Number" }
+  }
+  / hexint:$(hexint) {
+    return { "type": "Literal", value: parseInt(hexint), class: "Number" }
+  }
+  / int:$(int) {
+    return { "type": "Literal", value: parseInt(int), class: "Number" }
+  }
+
+float
+  = int frac digits
+
+int
+  = signe? digit19 digits
+  / signe digit
+  / digit
+
+hexint
+  = signe? "0x" hexdigits
+
+digit19 = [1-9]
+digit = [0-9]
+digits = digit+
+hexdigits = [0-9a-f]+
+
+signe
+  = "+"
+  / "-"
+frac = "."
 
 comment
   = "#" (!LineTerminator SourceCharacter)*
