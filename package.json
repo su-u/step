@@ -2,9 +2,15 @@
   "name": "chiba-lang",
   "version": "1.0.0",
   "description": "Chiba-langはプログラミング言語である．",
-  "main": "index.js",
+  "main": "build/src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tsc": "ttsc",
+    "tsc-watch": "yarn run ttsc -w",
+    "devwatch": "nodemon build/index.js",
+    "prettier:fix": "prettier --write ./{src,__tests__}/**/*.{ts,js}",
+    "test": "jest",
+    "test-c": "jest --coverage",
+    "test-u": "jest --updateSnapshot"
   },
   "repository": {
     "type": "git",
@@ -17,6 +23,30 @@
   },
   "homepage": "https://github.com/sudalab/chiba-lang#readme",
   "dependencies": {
-    "pegjs": "^0.10.0"
+    "fs-extra": "^8.1.0",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^8.0.1",
+    "@types/jest": "^25.1.4",
+    "@types/lodash": "^4.14.149",
+    "@types/log4js": "^2.3.5",
+    "@types/node": "^13.7.0",
+    "@types/pegjs": "^0.10.1",
+    "@zerollup/ts-transform-paths": "^1.7.17",
+    "jest": "^25.2.2",
+    "lodash": "^4.17.15",
+    "log4js": "^6.1.1",
+    "log4js-extend": "^0.2.1",
+    "nodemon": "^2.0.2",
+    "pegjs": "^0.10.0",
+    "prettier": "^2.0.2",
+    "ts-jest": "^25.2.1",
+    "ts-loader": "^6.2.1",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "ttypescript": "^1.5.10"
+  },
+  "_moduleAliases": {
+    "@": "src"
   }
 }

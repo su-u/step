@@ -1,0 +1,9 @@
+{
+  "restartable": "rs",
+  "watch": [
+    "build"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  }
+}
