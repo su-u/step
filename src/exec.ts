@@ -14,21 +14,21 @@ import { MethodType, ClassObjectType } from '@/types';
 
 export const exec = (
   obj: ExecObjectType,
-  classN: ClassObjectType,
+  className: ClassObjectType,
   method: MethodType,
   params?: ParamsType<any>,
   options?: any,
 ): ExecObjectType | BinaryExpressionType | string => {
   // console.log([57, obj, classN, method, params, options]);
   // @ts-ignore
-  if (classN[method]) {
+  if (className[method]) {
     // console.log('59');
     // @ts-ignore
-    return classN[method](obj, params);
+    return className[method](obj, params);
   } else {
     // console.log('62');
-    if (classN.superClass != null) {
-      return exec(obj, classN.superClass, method, params, options);
+    if (className.superClass != null) {
+      return exec(obj, className.superClass, method, params, options);
     } else {
       // console.log(classN.superClass);
       throw new Error('メソッドが見つかりません');
