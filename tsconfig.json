@@ -6,6 +6,8 @@
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
+    "removeComments": true,
+    "incremental": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
@@ -15,7 +17,13 @@
       {
         "transform": "@zerollup/ts-transform-paths"
       }
-    ]
+    ],
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "strictFunctionTypes": false,
+    "strictBindCallApply": false,
+    "strictPropertyInitialization": false,
+    "noImplicitThis": false
   },
   "include": [
     "./src/*.ts",
