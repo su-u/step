@@ -1,0 +1,298 @@
+Program {
+	sourceType: "script" | "module",
+	body: [ Statement | ModuleDeclaration ];
+}
+
+Statements {
+	"ForOfStatement"
+}
+
+Declarations {
+	"VariableDeclaration"
+}
+
+Expressions {
+	AllowFunctionExpression, YieldExpression, 
+}
+
+Literals {
+	TemplateLiteral, TaggedTemplateExpression, TempleteElement
+}
+
+Patterns {
+	ObjectPattern, ArrayPattern, RestElement, AssignmentPattern, Classes, ClassBody, MethodDefinition, ClassDeclaration, ClassExpression, MetaProperty
+}
+
+Modules {
+	ModuleDeclaration, ModuleSpecifier, Imports, Exports
+}
+
+NodeObject: ？
+Node {
+	type: string,
+	loc: SourceLocation | null
+}
+
+SourceLocation {  // ソースコード上の位置
+	source: string | null,
+	start: Position,
+	end: Position
+}
+
+Position {	// ソースコード上の位置
+	line: number,	// 行
+	column: number	// 文字
+}
+
+Identifier <: Expression, Pattern {
+	type: "Identifier",
+	name: string
+}
+
+Literal <: Expression {
+	type: "Literal",
+	value: string | boolean | null | number | RegExp
+}
+
+Program <: Node {
+	type: "Program",
+	body: [ Directive | Statement ]
+}
+
+Function <: Node {
+	id: Identifier | null,
+	params: [ Pattern ],
+	doby: FunctionBody
+}
+
+Statement <: Node {}
+
+ExpressionStatement <: Statement {
+	type: "ExpressionStatement",
+	expression: Expression
+}
+
+Directive <: Node { // 意味
+	type: "ExpressionStatement",
+	expression: Literal,
+	directive: string
+}
+
+BlockStatement <: Statement {
+	type: "BlockStatement",
+	body: [ statement ]
+}
+
+FunctionBody <: BlockStatement {
+	body: [ Directive | Statement ]
+}
+
+EmptyStatement <: Statement {
+	type: "EmptyStatement"
+}
+
+Contol Flow: 制御構造
+
+returnStatement <: Statement {
+	type: "ReturnStatement",
+	argument: Expression | null
+}
+
+BreakStatement <: Statement {
+	type: "BreakStatement",
+	label: "Identifier" | null
+}
+
+ContinueStatement <: Statement {
+	type: "ContinueStatement",
+	label: "Identifier | null
+}
+
+Chice: 選択
+
+IfStatement <: Statement {
+	type: "IfStatement",
+	test: Expression,
+	consequent: Statement,
+	altenate: Statement | null
+}
+
+SwitchStaetement <: Statement {
+	type: "SwitchStatement",
+	discriminant: Expression,
+	cases: [ SwitchCase ]
+}
+
+SwitchCase <: Node {
+	type: "SwitchCase",
+	test: Expression | null,
+	conseqent: [ Statemnet ]
+}
+
+Exceptinos: 例外
+省略
+
+Loops: 繰り返し
+WhileStatement {
+	type: "WhileStatement",
+	test: Expression",
+	body: Statement
+}
+
+DoWhileStatemetn {
+	type: "DooFhileStatement,
+	body: Statement,
+	test: Expression
+}
+
+ForStatement <: Statement {
+	type: "ForStatement",
+	init: VariableDecralation | Expression | null,
+	test: Expression | null,
+	update: Expresssion | null,
+	body: Statement
+}
+
+
+Declarations: 定義
+FunctionDelraration <: Function, Declaration {
+	temp: "FunctonDeclaration",
+	id: Identifer
+}
+
+VariableDeclaration <: Declaration{
+	type: "VariableDeclaration",
+	declarations: [ VariableDeclarator ],
+	kind: "var"
+}
+
+VariableDeclaration <: Declaration {
+	type: "VariableDeclaration",
+	declarations: [ VariableDeclarator ],
+	kind: "var"
+}
+
+VaridateDeclarator <: Node {
+	type: "VaribleDeclarator",
+	id: Pattern,
+	init: Expression | null
+}
+
+Expressions: 式
+ThisExpression <: Expression {
+	type: "ThisExpression"
+}
+
+ArrayExpression <: Expressiom {
+	type: "ArrayExpression",
+	elements: [ Expression | null ]
+}
+
+ObjectExpression <: Expression {
+	type: "ObjectExpression",
+	properties: [ Property ]
+}
+
+Property <: Node {
+	type: "Property",
+	key: Literal | Identifier,
+	value: Expression,
+	kind: "init" | "get" | "set"
+}
+
+FunctionExpression <: Function, Expression {
+	type: "FunctionExpression"
+}
+
+UnaryOperator: 単項演算子
+
+UnaryExpression <: Expression {
+	type: "UnaryExpression",
+	operator: UnaryOperator,
+	prefix: boolean,
+	argument: Expression
+}
+
+UnaryOperator {
+    "-" | "+" | "!" | "~" | "typeof" | "void" | "delete"
+}
+
+UpdateExpression <: Expressoin {
+	type: "UpdateExpression",
+	operator: UpdateOperator,
+	argument: Expression,
+	prefix: boolean
+}
+
+UpdateOperator {
+	"++" | "--"	
+}
+
+Binary operations: 論理演算
+
+BinaryExpression <: Expression {
+	type: "BinaryExpression",
+	operator: BinaryOperator,
+	left: Expression,
+	right: Expression
+}
+
+BinaryOperator {
+	"==" | "!=" | "===" | "!=="
+	 | "<" | "<=" | ">" | ">="
+	| "<<" | ">>" | ">>>"
+	| "+" | "-" | "*" | "/" | "%"
+	| "|" | "^" | "&" | "in"
+	| "instanceof"
+}
+
+AssignmentExpression <: Expression { 
+	type: "AssignmentExpression",
+	oprator: AssignmentOperator,
+	left: Pattern | Expression,
+	right: Expression
+}
+
+AssignmentOperator {
+	 "=" | "+=" | "-=" | "*=" | "/=" | "%="
+	 | "<<=" | ">>=" | ">>>="
+	 | "|=" | "^=" | "&="
+}
+
+LogicalExpression <: Expression {
+	type: "LogicalExpression",
+	operator: LogicalOperator,
+	left: Expression,
+	right: Expression
+}
+
+LogicalOperator {
+	"||" | "&&"
+}
+
+MemberExpression <: Expression, Pattern {
+	type: "MemberExpression",
+	object: Expression,
+	property: Expression,
+	computed: boolean
+}
+
+ConditionalExpression <: Expression {  // 三項演算子
+	type: "ConditionalExpression",
+	test: Expression,
+	alternate: Expression,
+	consequent: Expression
+}
+
+NewExpression <: Expression {
+	type: "NewExpression",
+	callee: Expression,
+	arguments: [ Expression ];
+}
+
+SequenceExpression <: Expression {
+	type: "SequenceExpression",
+	expressions: [ Expression ]
+}
+
+Patterns <: Node {}

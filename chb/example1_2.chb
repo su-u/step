@@ -1,0 +1,2 @@
+val <- "Switch"
+aaa <- val + "aaa"
