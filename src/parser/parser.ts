@@ -13,6 +13,15 @@ const WhiteSpace = createToken({
   pattern: /\s+/,
   group: Lexer.SKIPPED,
 });
+const BoolLiteral = createToken({
+  name: 'BoolLiteral',
+  pattern: /true|false/,
+});
+const CalculationOperator = createToken({ name: 'RelationalOperator', pattern: Lexer.NA });
+const Plus = createToken({ name: 'Plus', pattern: /\+/, categories: CalculationOperator });
+const Minus = createToken({ name: 'Minus', pattern: /-/, categories: CalculationOperator });
+const Multi = createToken({ name: 'Multi', pattern: /\*/, categories: CalculationOperator });
+const Div = createToken({ name: 'Div', pattern: /\//, categories: CalculationOperator });
 
 const allTokens = [WhiteSpace, NumberLiteral, StringLiteral];
 

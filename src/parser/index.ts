@@ -1,6 +1,6 @@
 import { ChiboParser, JsonLexer } from './parser';
 import * as fs from 'fs-extra';
-import { writeAstToJson } from "../util/file";
+import { writeAstToJson } from '../util/file';
 
 // ONLY ONCE
 const parser = new ChiboParser();
