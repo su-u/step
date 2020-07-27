@@ -13,6 +13,7 @@ function parseInput(text) {
   const ast = parser.Program();
 
   if (parser.errors.length > 0) {
+    console.log(parser.errors)
     throw new Error('sad sad panda, Parsing errors detected');
   }
 
