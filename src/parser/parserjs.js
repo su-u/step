@@ -36,7 +36,7 @@
 
   const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare];
 
-// const SubstitutionOperator = createToken({ name: 'SubstitutionOperator', pattern: Lexer.NA });
+  // const SubstitutionOperator = createToken({ name: 'SubstitutionOperator', pattern: Lexer.NA });
   const ToRight = createToken({
     name: 'ToRight',
     pattern: /(?!<)->/,
@@ -48,7 +48,11 @@
 
   const AdditionOperator = createToken({ name: 'AdditionOperator', pattern: Lexer.NA });
   const Plus = createToken({ name: 'Plus', pattern: /\+/, categories: AdditionOperator });
-  const Minus = createToken({ name: 'Minus', pattern: /(?!<)-(?!>)/, categories: AdditionOperator });
+  const Minus = createToken({
+    name: 'Minus',
+    pattern: /(?!<)-(?!>)/,
+    categories: AdditionOperator,
+  });
 
   const MultiplicationOperator = createToken({ name: 'MultiplicationOperator', pattern: Lexer.NA });
   const Multi = createToken({ name: 'Multi', pattern: /\*/, categories: MultiplicationOperator });
@@ -76,8 +80,16 @@
     pattern: />=/,
     categories: RelationalOperator,
   });
-  const OverThan = createToken({ name: 'OverTha', pattern: /<(?!-)/, categories: RelationalOperator });
-  const LessThan = createToken({ name: 'LessThan', pattern: /(?!-)>/, categories: RelationalOperator });
+  const OverThan = createToken({
+    name: 'OverTha',
+    pattern: /<(?!-)/,
+    categories: RelationalOperator,
+  });
+  const LessThan = createToken({
+    name: 'LessThan',
+    pattern: /(?!-)>/,
+    categories: RelationalOperator,
+  });
   const Equal = createToken({ name: 'Equal', pattern: /(?!<>)=/, categories: RelationalOperator });
   const Pipe = createToken({ name: 'Pipe', pattern: /(?!-)>>/ });
 
@@ -103,18 +115,16 @@
       this.Program = this.RULE('Program', () => {
         this.MANY(() => {
           this.OR([
-            { ALT: () => {
-                this.SUBRULE(this.To, { LABEL: 'right' });
-                this.CONSUME(ToLeft);
-                this.SUBRULE2(this.RelationExpression, { LABEL: 'left' });
-              } },
-            { ALT: () => {
-                this.SUBRULE(this.Pipe, { LABEL: 'left' });
-                this.MANY(() => {
-                  this.CONSUME(ToRight);
-                  this.SUBRULE2(this.To, {LABEL: 'right'});
-                });
-              } },
+            {
+              ALT: () => {
+                this.SUBRULE(this.Main2);
+              },
+            },
+            {
+              ALT: () => {
+                this.SUBRULE2(this.Main);
+              },
+            },
           ]);
         });
       });
@@ -123,7 +133,7 @@
         this.SUBRULE(this.Pipe, { LABEL: 'left' });
         this.MANY(() => {
           this.CONSUME(ToRight);
-          this.SUBRULE2(this.To, {LABEL: 'right'});
+          this.SUBRULE2(this.To, { LABEL: 'right' });
         });
       });
 
@@ -142,10 +152,10 @@
       });
 
       this.Expression = this.RULE('Expression', () => {
-        this.SUBRULE(this.Term)
+        this.SUBRULE(this.Term);
         this.MANY(() => {
           this.CONSUME(AdditionOperator);
-          this.SUBRULE2(this.Term)
+          this.SUBRULE2(this.Term);
         });
       });
 
@@ -157,7 +167,7 @@
         });
       });
 
-      this.parenthesisExpression = this.RULE("parenthesisExpression", () => {
+      this.parenthesisExpression = this.RULE('parenthesisExpression', () => {
         this.CONSUME(LBracket);
         this.SUBRULE(this.RelationExpression);
         this.CONSUME(RBracket);
@@ -167,7 +177,7 @@
         this.OR([
           { ALT: () => this.CONSUME(Identifier) },
           { ALT: () => this.CONSUME(NumberLiteral) },
-          {ALT: () => this.SUBRULE(this.parenthesisExpression)},
+          { ALT: () => this.SUBRULE(this.parenthesisExpression) },
           { ALT: () => this.CONSUME(StringLiteral) },
         ]);
       });
@@ -194,11 +204,10 @@
     }
   }
 
-
   // for the playground to work the returned object must contain these fields
   return {
     lexer: ChiboLexer,
     parser: ChiboParser,
-    defaultRule: "Program"
+    defaultRule: 'Program',
   };
-}())
+})();
