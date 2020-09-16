@@ -1,4 +1,4 @@
-import { ChiboParser, JsonLexer } from './parser';
+import { ChiboParser, ChiboLexer } from './parser';
 import * as fs from 'fs-extra';
 import { writeAstToJson } from '../util/file';
 
@@ -6,7 +6,7 @@ import { writeAstToJson } from '../util/file';
 const parser = new ChiboParser();
 
 function parseInput(text) {
-  const lexResult = JsonLexer.tokenize(text);
+  const lexResult = ChiboLexer.tokenize(text);
   // setting a new input will RESET the parser instance's state.
   parser.input = lexResult.tokens;
   // any top level rule may be used as an entry point
