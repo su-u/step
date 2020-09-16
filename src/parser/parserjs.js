@@ -102,7 +102,20 @@
 
       this.Program = this.RULE('Program', () => {
         this.MANY(() => {
-          this.SUBRULE(this.Main);
+          this.OR([
+            { ALT: () => {
+                this.SUBRULE(this.To, { LABEL: 'right' });
+                this.CONSUME(ToLeft);
+                this.SUBRULE2(this.RelationExpression, { LABEL: 'left' });
+              } },
+            { ALT: () => {
+                this.SUBRULE(this.Pipe, { LABEL: 'left' });
+                this.MANY(() => {
+                  this.CONSUME(ToRight);
+                  this.SUBRULE2(this.To, {LABEL: 'right'});
+                });
+              } },
+          ]);
         });
       });
 
@@ -112,20 +125,12 @@
           this.CONSUME(ToRight);
           this.SUBRULE2(this.To, {LABEL: 'right'});
         });
-        // this.MANY(() => {
-        //   this.OR([
-        //     { ALT: () => {
-        //         this.SUBRULE(this.Pipe, { LABEL: 'left' });
-        //         this.CONSUME(ToRight);
-        //         this.SUBRULE2(this.To, {LABEL: 'right'});
-        //       } },
-        //     { ALT: () => {
-        //         this.SUBRULE(this.To, { LABEL: 'right' });
-        //         this.CONSUME(ToLeft);
-        //         this.SUBRULE2(this.RelationExpression, { LABEL: 'left' });
-        //       } },
-        //   ]);
-        // });
+      });
+
+      this.Main2 = this.RULE('Main2', () => {
+        this.SUBRULE(this.To, { LABEL: 'right' });
+        this.CONSUME(ToLeft);
+        this.SUBRULE2(this.RelationExpression, { LABEL: 'left' });
       });
 
       this.Pipe = this.RULE('Pipe', () => {
@@ -160,10 +165,10 @@
 
       this.RULE('Factor', () => {
         this.OR([
+          { ALT: () => this.CONSUME(Identifier) },
           { ALT: () => this.CONSUME(NumberLiteral) },
           {ALT: () => this.SUBRULE(this.parenthesisExpression)},
           { ALT: () => this.CONSUME(StringLiteral) },
-          { ALT: () => this.CONSUME(Identifier) },
         ]);
       });
 
@@ -175,10 +180,10 @@
         this.SUBRULE(this.Expression);
         this.MANY(() => {
           this.OR([
-            //{ ALT: () => this.CONSUME(AmountMore) },
-            //{ ALT: () => this.CONSUME(AmountLess) },
-            //{ ALT: () => this.CONSUME(OverThan) },
-            //{ ALT: () => this.CONSUME(LessThan) },
+            { ALT: () => this.CONSUME(AmountMore) },
+            { ALT: () => this.CONSUME(AmountLess) },
+            { ALT: () => this.CONSUME(OverThan) },
+            { ALT: () => this.CONSUME(LessThan) },
             { ALT: () => this.CONSUME(Equal) },
           ]);
           this.SUBRULE2(this.Expression);
