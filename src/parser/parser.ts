@@ -76,8 +76,16 @@ const AmountLess = createToken({
   pattern: />=/,
   categories: RelationalOperator,
 });
-const OverThan = createToken({ name: 'OverTha', pattern: /<(?!-)/, categories: RelationalOperator });
-const LessThan = createToken({ name: 'LessThan', pattern: /(?!-)>/, categories: RelationalOperator });
+const OverThan = createToken({
+  name: 'OverTha',
+  pattern: /<(?!-)/,
+  categories: RelationalOperator,
+});
+const LessThan = createToken({
+  name: 'LessThan',
+  pattern: /(?!-)>/,
+  categories: RelationalOperator,
+});
 const Equal = createToken({ name: 'Equal', pattern: /(?!<>)=/, categories: RelationalOperator });
 const Pipe = createToken({ name: 'Pipe', pattern: /(?!-)>>/ });
 
@@ -106,16 +114,20 @@ export class ChiboParser extends CstParser {
   public Program = this.RULE('Program', () => {
     this.MANY(() => {
       this.OR([
-        { ALT: () => {
+        {
+          ALT: () => {
             this.SUBRULE(this.Pipe, { LABEL: 'left' });
             this.CONSUME(ToRight);
-            this.SUBRULE2(this.To, {LABEL: 'right'});
-          } },
-        { ALT: () => {
+            this.SUBRULE2(this.To, { LABEL: 'right' });
+          },
+        },
+        {
+          ALT: () => {
             this.SUBRULE(this.To, { LABEL: 'right' });
             this.CONSUME(ToLeft);
             this.SUBRULE2(this.RelationExpression, { LABEL: 'left' });
-          } },
+          },
+        },
       ]);
     });
   });
@@ -170,10 +182,10 @@ export class ChiboParser extends CstParser {
   });
 
   private Expression = this.RULE('Expression', () => {
-    this.SUBRULE(this.Term)
+    this.SUBRULE(this.Term);
     this.MANY(() => {
       this.CONSUME(AdditionOperator);
-      this.SUBRULE2(this.Term)
+      this.SUBRULE2(this.Term);
     });
   });
 }
