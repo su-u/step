@@ -101,7 +101,9 @@
       super(allTokens);
 
       this.Program = this.RULE('Program', () => {
-        this.SUBRULE(this.Main)
+        this.MANY(() => {
+          this.SUBRULE(this.Main);
+        });
       });
 
       this.Main = this.RULE('Main', () => {
