@@ -91,12 +91,12 @@
   ];
 
   const allTokens = [...Tokens, ...BracketTokens, ...OperatorTokens, ...RelationalOperatorTokens];
-  const JsonLexer = new Lexer(allTokens);
+  const ChiboLexer = new Lexer(allTokens);
 
   // ----------------- parser -----------------
   const CstParser = chevrotain.CstParser;
 
-  class JsonParser extends CstParser {
+  class ChiboParser extends CstParser {
     constructor() {
       super(allTokens);
 
@@ -157,13 +157,13 @@
         });
       });
 
-      this.RULE("parenthesisExpression", () => {
+      this.parenthesisExpression = this.RULE("parenthesisExpression", () => {
         this.CONSUME(LBracket);
         this.SUBRULE(this.RelationExpression);
         this.CONSUME(RBracket);
       });
 
-      this.RULE('Factor', () => {
+      this.Factor = this.RULE('Factor', () => {
         this.OR([
           { ALT: () => this.CONSUME(Identifier) },
           { ALT: () => this.CONSUME(NumberLiteral) },
@@ -197,8 +197,8 @@
 
   // for the playground to work the returned object must contain these fields
   return {
-    lexer: JsonLexer,
-    parser: JsonParser,
+    lexer: ChiboLexer,
+    parser: ChiboParser,
     defaultRule: "Program"
   };
 }())
