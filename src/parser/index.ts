@@ -3,9 +3,9 @@ import * as fs from 'fs-extra';
 import { writeAstToJson } from '../util/file';
 
 // ONLY ONCE
-const parser = new ChiboParser();
 
-function parseInput(text) {
+export const  parseInput = (text: string) =>  {
+  const parser = new ChiboParser();
   const lexResult = ChiboLexer.tokenize(text);
   // setting a new input will RESET the parser instance's state.
   parser.input = lexResult.tokens;
@@ -20,7 +20,7 @@ function parseInput(text) {
   return ast;
 }
 
-const inputText = fs.readFileSync(process.argv[2], 'utf-8');
-const ast = parseInput(inputText);
-console.log(JSON.stringify(ast, undefined, 2));
-writeAstToJson(ast as any);
+// const inputText = fs.readFileSync(process.argv[2], 'utf-8');
+// const ast = parseInput(inputText);
+// console.log(JSON.stringify(ast, undefined, 2));
+// writeAstToJson(ast as any);
