@@ -8,17 +8,17 @@ const astToJson = (fileName: string, ruleset: string): string => {
   return JSON.stringify(ast, undefined, 2);
 };
 
-  describe('ruleset', (): void => {
-    let ruleset: string;
-    beforeAll(() => {
-      ruleset = fs.readFileSync('./syntax.pegjs', 'utf-8');
-    });
+describe('ruleset', (): void => {
+  let ruleset: string;
+  beforeAll(() => {
+    ruleset = fs.readFileSync('./syntax.pegjs', 'utf-8');
+  });
 
-    test('example11', (): void => {
-      const astJson = astToJson('./chb/example1.chb', ruleset);
-      expect(astJson).toMatchSnapshot();
-    });
-    test('example1_2', (): void => {
+  test('example11', (): void => {
+    const astJson = astToJson('./chb/example1.chb', ruleset);
+    expect(astJson).toMatchSnapshot();
+  });
+  test('example1_2', (): void => {
     const astJson = astToJson('./chb/example1_2.chb', ruleset);
     expect(astJson).toMatchSnapshot();
   });

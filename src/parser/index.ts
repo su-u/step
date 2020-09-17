@@ -4,7 +4,7 @@ import { writeAstToJson } from '../util/file';
 
 // ONLY ONCE
 
-export const  parseInput = (text: string) =>  {
+export const parseInput = (text: string) => {
   const parser = new ChiboParser();
   const lexResult = ChiboLexer.tokenize(text);
   // setting a new input will RESET the parser instance's state.
@@ -18,7 +18,7 @@ export const  parseInput = (text: string) =>  {
   }
 
   return ast;
-}
+};
 
 // const inputText = fs.readFileSync(process.argv[2], 'utf-8');
 // const ast = parseInput(inputText);
