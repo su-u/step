@@ -7,8 +7,14 @@ const parse = (sourceName: string) => {
 }
 
 describe('chevrotain', (): void => {
-  test('example1', (): void => {
-    const astJson = parse('./chb/example1.chb');
-    expect(astJson).toMatchSnapshot();
+  const chbList: ReadonlyArray<string> = [
+    './chb/example1.chb',
+    './chb/example2.chb'
+  ];
+  chbList.forEach((chb) => {
+    test(chb, (): void => {
+      const astJson = parse(chb);
+      expect(astJson).toMatchSnapshot();
+    });
   });
 });
