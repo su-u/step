@@ -43,3 +43,22 @@ ASTを出力するためには，node.jsとnpmコマンドのインストール�
 $ npm install
 $ node syntax.js example1.chb
 ```
+
+
+# chevrotain版
+
+## ビルド方法
+必要
+
+- nodejs
+- yarn
+
+```
+yarn install
+yarn run tsc
+```
+
+## ASTの確認方法
+- `chb/main.chb`のファイルを作成する
+- `yarn run parser-watch`
+- `chb/main.chb`にソースを記述する
