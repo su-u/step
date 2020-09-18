@@ -445,6 +445,433 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
 }"
 `;
 
+exports[`chevrotain ./chb/example1_2.chb 1`] = `
+"{
+  \\"name\\": \\"Program\\",
+  \\"children\\": {
+    \\"Main2\\": [
+      {
+        \\"name\\": \\"Main2\\",
+        \\"children\\": {
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"val\\",
+                    \\"startOffset\\": 0,
+                    \\"endOffset\\": 2,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 1,
+                    \\"endColumn\\": 3,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToLeft\\": [
+            {
+              \\"image\\": \\"<-\\",
+              \\"startOffset\\": 4,
+              \\"endOffset\\": 5,
+              \\"startLine\\": 1,
+              \\"endLine\\": 1,
+              \\"startColumn\\": 5,
+              \\"endColumn\\": 6,
+              \\"tokenTypeIdx\\": 15,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToLeft\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 15,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"left\\": [
+            {
+              \\"name\\": \\"RelationExpression\\",
+              \\"children\\": {
+                \\"Expression\\": [
+                  {
+                    \\"name\\": \\"Expression\\",
+                    \\"children\\": {
+                      \\"Term\\": [
+                        {
+                          \\"name\\": \\"Term\\",
+                          \\"children\\": {
+                            \\"Factor\\": [
+                              {
+                                \\"name\\": \\"Factor\\",
+                                \\"children\\": {
+                                  \\"StringLiteral\\": [
+                                    {
+                                      \\"image\\": \\"\\\\\\"Switch\\\\\\"\\",
+                                      \\"startOffset\\": 7,
+                                      \\"endOffset\\": 14,
+                                      \\"startLine\\": 1,
+                                      \\"endLine\\": 1,
+                                      \\"startColumn\\": 8,
+                                      \\"endColumn\\": 15,
+                                      \\"tokenTypeIdx\\": 3,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"StringLiteral\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 3,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"Main2\\",
+        \\"children\\": {
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"aaa\\",
+                    \\"startOffset\\": 16,
+                    \\"endOffset\\": 18,
+                    \\"startLine\\": 2,
+                    \\"endLine\\": 2,
+                    \\"startColumn\\": 1,
+                    \\"endColumn\\": 3,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToLeft\\": [
+            {
+              \\"image\\": \\"<-\\",
+              \\"startOffset\\": 20,
+              \\"endOffset\\": 21,
+              \\"startLine\\": 2,
+              \\"endLine\\": 2,
+              \\"startColumn\\": 5,
+              \\"endColumn\\": 6,
+              \\"tokenTypeIdx\\": 15,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToLeft\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 15,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"left\\": [
+            {
+              \\"name\\": \\"RelationExpression\\",
+              \\"children\\": {
+                \\"Expression\\": [
+                  {
+                    \\"name\\": \\"Expression\\",
+                    \\"children\\": {
+                      \\"Term\\": [
+                        {
+                          \\"name\\": \\"Term\\",
+                          \\"children\\": {
+                            \\"Factor\\": [
+                              {
+                                \\"name\\": \\"Factor\\",
+                                \\"children\\": {
+                                  \\"Identifier\\": [
+                                    {
+                                      \\"image\\": \\"val\\",
+                                      \\"startOffset\\": 23,
+                                      \\"endOffset\\": 25,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 8,
+                                      \\"endColumn\\": 10,
+                                      \\"tokenTypeIdx\\": 7,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"Identifier\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 7,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          \\"name\\": \\"Term\\",
+                          \\"children\\": {
+                            \\"Factor\\": [
+                              {
+                                \\"name\\": \\"Factor\\",
+                                \\"children\\": {
+                                  \\"StringLiteral\\": [
+                                    {
+                                      \\"image\\": \\"\\\\\\"aaa\\\\\\"\\",
+                                      \\"startOffset\\": 29,
+                                      \\"endOffset\\": 33,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 14,
+                                      \\"endColumn\\": 18,
+                                      \\"tokenTypeIdx\\": 3,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"StringLiteral\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 3,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      \\"AdditionOperator\\": [
+                        {
+                          \\"image\\": \\"+\\",
+                          \\"startOffset\\": 27,
+                          \\"endOffset\\": 27,
+                          \\"startLine\\": 2,
+                          \\"endLine\\": 2,
+                          \\"startColumn\\": 12,
+                          \\"endColumn\\": 12,
+                          \\"tokenTypeIdx\\": 17,
+                          \\"tokenType\\": {
+                            \\"name\\": \\"Plus\\",
+                            \\"PATTERN\\": {},
+                            \\"CATEGORIES\\": [
+                              {
+                                \\"name\\": \\"AdditionOperator\\",
+                                \\"PATTERN\\": {},
+                                \\"tokenTypeIdx\\": 16,
+                                \\"CATEGORIES\\": [],
+                                \\"categoryMatches\\": [
+                                  17,
+                                  18
+                                ],
+                                \\"categoryMatchesMap\\": {
+                                  \\"17\\": true,
+                                  \\"18\\": true
+                                },
+                                \\"isParent\\": true
+                              }
+                            ],
+                            \\"tokenTypeIdx\\": 17,
+                            \\"categoryMatches\\": [],
+                            \\"categoryMatchesMap\\": {},
+                            \\"isParent\\": false
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}"
+`;
+
+exports[`chevrotain ./chb/example1_3.chb 1`] = `
+"{
+  \\"name\\": \\"Program\\",
+  \\"children\\": {
+    \\"Main\\": [
+      {
+        \\"name\\": \\"Main\\",
+        \\"children\\": {
+          \\"left\\": [
+            {
+              \\"name\\": \\"Pipe\\",
+              \\"children\\": {
+                \\"RelationExpression\\": [
+                  {
+                    \\"name\\": \\"RelationExpression\\",
+                    \\"children\\": {
+                      \\"Expression\\": [
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"10\\",
+                                            \\"startOffset\\": 0,
+                                            \\"endOffset\\": 1,
+                                            \\"startLine\\": 1,
+                                            \\"endLine\\": 1,
+                                            \\"startColumn\\": 1,
+                                            \\"endColumn\\": 2,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"1\\",
+                                            \\"startOffset\\": 5,
+                                            \\"endOffset\\": 5,
+                                            \\"startLine\\": 1,
+                                            \\"endLine\\": 1,
+                                            \\"startColumn\\": 6,
+                                            \\"endColumn\\": 6,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ],
+                            \\"AdditionOperator\\": [
+                              {
+                                \\"image\\": \\"+\\",
+                                \\"startOffset\\": 3,
+                                \\"endOffset\\": 3,
+                                \\"startLine\\": 1,
+                                \\"endLine\\": 1,
+                                \\"startColumn\\": 4,
+                                \\"endColumn\\": 4,
+                                \\"tokenTypeIdx\\": 17,
+                                \\"tokenType\\": {
+                                  \\"name\\": \\"Plus\\",
+                                  \\"PATTERN\\": {},
+                                  \\"CATEGORIES\\": [
+                                    {
+                                      \\"name\\": \\"AdditionOperator\\",
+                                      \\"PATTERN\\": {},
+                                      \\"tokenTypeIdx\\": 16,
+                                      \\"CATEGORIES\\": [],
+                                      \\"categoryMatches\\": [
+                                        17,
+                                        18
+                                      ],
+                                      \\"categoryMatchesMap\\": {
+                                        \\"17\\": true,
+                                        \\"18\\": true
+                                      },
+                                      \\"isParent\\": true
+                                    }
+                                  ],
+                                  \\"tokenTypeIdx\\": 17,
+                                  \\"categoryMatches\\": [],
+                                  \\"categoryMatchesMap\\": {},
+                                  \\"isParent\\": false
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}"
+`;
+
 exports[`chevrotain ./chb/example2.chb 1`] = `
 "{
   \\"name\\": \\"Program\\",
@@ -1410,6 +1837,3164 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                     \\"endLine\\": 5,
                     \\"startColumn\\": 10,
                     \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}"
+`;
+
+exports[`chevrotain ./chb/example3.chb 1`] = `
+"{
+  \\"name\\": \\"Program\\",
+  \\"children\\": {
+    \\"Main2\\": [
+      {
+        \\"name\\": \\"Main2\\",
+        \\"children\\": {
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"a\\",
+                    \\"startOffset\\": 0,
+                    \\"endOffset\\": 0,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 1,
+                    \\"endColumn\\": 1,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToLeft\\": [
+            {
+              \\"image\\": \\"<-\\",
+              \\"startOffset\\": 2,
+              \\"endOffset\\": 3,
+              \\"startLine\\": 1,
+              \\"endLine\\": 1,
+              \\"startColumn\\": 3,
+              \\"endColumn\\": 4,
+              \\"tokenTypeIdx\\": 15,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToLeft\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 15,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"left\\": [
+            {
+              \\"name\\": \\"RelationExpression\\",
+              \\"children\\": {
+                \\"Expression\\": [
+                  {
+                    \\"name\\": \\"Expression\\",
+                    \\"children\\": {
+                      \\"Term\\": [
+                        {
+                          \\"name\\": \\"Term\\",
+                          \\"children\\": {
+                            \\"Factor\\": [
+                              {
+                                \\"name\\": \\"Factor\\",
+                                \\"children\\": {
+                                  \\"StringLiteral\\": [
+                                    {
+                                      \\"image\\": \\"\\\\\\"foo\\\\\\"\\",
+                                      \\"startOffset\\": 5,
+                                      \\"endOffset\\": 9,
+                                      \\"startLine\\": 1,
+                                      \\"endLine\\": 1,
+                                      \\"startColumn\\": 6,
+                                      \\"endColumn\\": 10,
+                                      \\"tokenTypeIdx\\": 3,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"StringLiteral\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 3,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"Main2\\",
+        \\"children\\": {
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"c\\",
+                    \\"startOffset\\": 22,
+                    \\"endOffset\\": 22,
+                    \\"startLine\\": 3,
+                    \\"endLine\\": 3,
+                    \\"startColumn\\": 1,
+                    \\"endColumn\\": 1,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToLeft\\": [
+            {
+              \\"image\\": \\"<-\\",
+              \\"startOffset\\": 24,
+              \\"endOffset\\": 25,
+              \\"startLine\\": 3,
+              \\"endLine\\": 3,
+              \\"startColumn\\": 3,
+              \\"endColumn\\": 4,
+              \\"tokenTypeIdx\\": 15,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToLeft\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 15,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"left\\": [
+            {
+              \\"name\\": \\"RelationExpression\\",
+              \\"children\\": {
+                \\"Expression\\": [
+                  {
+                    \\"name\\": \\"Expression\\",
+                    \\"children\\": {
+                      \\"Term\\": [
+                        {
+                          \\"name\\": \\"Term\\",
+                          \\"children\\": {
+                            \\"Factor\\": [
+                              {
+                                \\"name\\": \\"Factor\\",
+                                \\"children\\": {
+                                  \\"Identifier\\": [
+                                    {
+                                      \\"image\\": \\"a\\",
+                                      \\"startOffset\\": 27,
+                                      \\"endOffset\\": 27,
+                                      \\"startLine\\": 3,
+                                      \\"endLine\\": 3,
+                                      \\"startColumn\\": 6,
+                                      \\"endColumn\\": 6,
+                                      \\"tokenTypeIdx\\": 7,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"Identifier\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 7,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          \\"name\\": \\"Term\\",
+                          \\"children\\": {
+                            \\"Factor\\": [
+                              {
+                                \\"name\\": \\"Factor\\",
+                                \\"children\\": {
+                                  \\"Identifier\\": [
+                                    {
+                                      \\"image\\": \\"b\\",
+                                      \\"startOffset\\": 31,
+                                      \\"endOffset\\": 31,
+                                      \\"startLine\\": 3,
+                                      \\"endLine\\": 3,
+                                      \\"startColumn\\": 10,
+                                      \\"endColumn\\": 10,
+                                      \\"tokenTypeIdx\\": 7,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"Identifier\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 7,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      \\"AdditionOperator\\": [
+                        {
+                          \\"image\\": \\"+\\",
+                          \\"startOffset\\": 29,
+                          \\"endOffset\\": 29,
+                          \\"startLine\\": 3,
+                          \\"endLine\\": 3,
+                          \\"startColumn\\": 8,
+                          \\"endColumn\\": 8,
+                          \\"tokenTypeIdx\\": 17,
+                          \\"tokenType\\": {
+                            \\"name\\": \\"Plus\\",
+                            \\"PATTERN\\": {},
+                            \\"CATEGORIES\\": [
+                              {
+                                \\"name\\": \\"AdditionOperator\\",
+                                \\"PATTERN\\": {},
+                                \\"tokenTypeIdx\\": 16,
+                                \\"CATEGORIES\\": [],
+                                \\"categoryMatches\\": [
+                                  17,
+                                  18
+                                ],
+                                \\"categoryMatchesMap\\": {
+                                  \\"17\\": true,
+                                  \\"18\\": true
+                                },
+                                \\"isParent\\": true
+                              }
+                            ],
+                            \\"tokenTypeIdx\\": 17,
+                            \\"categoryMatches\\": [],
+                            \\"categoryMatchesMap\\": {},
+                            \\"isParent\\": false
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    \\"Main\\": [
+      {
+        \\"name\\": \\"Main\\",
+        \\"children\\": {
+          \\"left\\": [
+            {
+              \\"name\\": \\"Pipe\\",
+              \\"children\\": {
+                \\"RelationExpression\\": [
+                  {
+                    \\"name\\": \\"RelationExpression\\",
+                    \\"children\\": {
+                      \\"Expression\\": [
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"StringLiteral\\": [
+                                          {
+                                            \\"image\\": \\"\\\\\\"bar\\\\\\"\\",
+                                            \\"startOffset\\": 11,
+                                            \\"endOffset\\": 15,
+                                            \\"startLine\\": 2,
+                                            \\"endLine\\": 2,
+                                            \\"startColumn\\": 1,
+                                            \\"endColumn\\": 5,
+                                            \\"tokenTypeIdx\\": 3,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"StringLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 3,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToRight\\": [
+            {
+              \\"image\\": \\"->\\",
+              \\"startOffset\\": 17,
+              \\"endOffset\\": 18,
+              \\"startLine\\": 2,
+              \\"endLine\\": 2,
+              \\"startColumn\\": 7,
+              \\"endColumn\\": 8,
+              \\"tokenTypeIdx\\": 14,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToRight\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 14,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"b\\",
+                    \\"startOffset\\": 20,
+                    \\"endOffset\\": 20,
+                    \\"startLine\\": 2,
+                    \\"endLine\\": 2,
+                    \\"startColumn\\": 10,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"Main\\",
+        \\"children\\": {
+          \\"left\\": [
+            {
+              \\"name\\": \\"Pipe\\",
+              \\"children\\": {
+                \\"RelationExpression\\": [
+                  {
+                    \\"name\\": \\"RelationExpression\\",
+                    \\"children\\": {
+                      \\"Expression\\": [
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"1\\",
+                                            \\"startOffset\\": 33,
+                                            \\"endOffset\\": 33,
+                                            \\"startLine\\": 4,
+                                            \\"endLine\\": 4,
+                                            \\"startColumn\\": 1,
+                                            \\"endColumn\\": 1,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"5\\",
+                                            \\"startOffset\\": 37,
+                                            \\"endOffset\\": 37,
+                                            \\"startLine\\": 4,
+                                            \\"endLine\\": 4,
+                                            \\"startColumn\\": 5,
+                                            \\"endColumn\\": 5,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ],
+                            \\"AdditionOperator\\": [
+                              {
+                                \\"image\\": \\"+\\",
+                                \\"startOffset\\": 35,
+                                \\"endOffset\\": 35,
+                                \\"startLine\\": 4,
+                                \\"endLine\\": 4,
+                                \\"startColumn\\": 3,
+                                \\"endColumn\\": 3,
+                                \\"tokenTypeIdx\\": 17,
+                                \\"tokenType\\": {
+                                  \\"name\\": \\"Plus\\",
+                                  \\"PATTERN\\": {},
+                                  \\"CATEGORIES\\": [
+                                    {
+                                      \\"name\\": \\"AdditionOperator\\",
+                                      \\"PATTERN\\": {},
+                                      \\"tokenTypeIdx\\": 16,
+                                      \\"CATEGORIES\\": [],
+                                      \\"categoryMatches\\": [
+                                        17,
+                                        18
+                                      ],
+                                      \\"categoryMatchesMap\\": {
+                                        \\"17\\": true,
+                                        \\"18\\": true
+                                      },
+                                      \\"isParent\\": true
+                                    }
+                                  ],
+                                  \\"tokenTypeIdx\\": 17,
+                                  \\"categoryMatches\\": [],
+                                  \\"categoryMatchesMap\\": {},
+                                  \\"isParent\\": false
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToRight\\": [
+            {
+              \\"image\\": \\"->\\",
+              \\"startOffset\\": 39,
+              \\"endOffset\\": 40,
+              \\"startLine\\": 4,
+              \\"endLine\\": 4,
+              \\"startColumn\\": 7,
+              \\"endColumn\\": 8,
+              \\"tokenTypeIdx\\": 14,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToRight\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 14,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"d\\",
+                    \\"startOffset\\": 42,
+                    \\"endOffset\\": 42,
+                    \\"startLine\\": 4,
+                    \\"endLine\\": 4,
+                    \\"startColumn\\": 10,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"Main\\",
+        \\"children\\": {
+          \\"left\\": [
+            {
+              \\"name\\": \\"Pipe\\",
+              \\"children\\": {
+                \\"RelationExpression\\": [
+                  {
+                    \\"name\\": \\"RelationExpression\\",
+                    \\"children\\": {
+                      \\"Expression\\": [
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"Identifier\\": [
+                                          {
+                                            \\"image\\": \\"c\\",
+                                            \\"startOffset\\": 44,
+                                            \\"endOffset\\": 44,
+                                            \\"startLine\\": 5,
+                                            \\"endLine\\": 5,
+                                            \\"startColumn\\": 1,
+                                            \\"endColumn\\": 1,
+                                            \\"tokenTypeIdx\\": 7,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"Identifier\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 7,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"Identifier\\": [
+                                          {
+                                            \\"image\\": \\"d\\",
+                                            \\"startOffset\\": 48,
+                                            \\"endOffset\\": 48,
+                                            \\"startLine\\": 5,
+                                            \\"endLine\\": 5,
+                                            \\"startColumn\\": 5,
+                                            \\"endColumn\\": 5,
+                                            \\"tokenTypeIdx\\": 7,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"Identifier\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 7,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ],
+                            \\"AdditionOperator\\": [
+                              {
+                                \\"image\\": \\"+\\",
+                                \\"startOffset\\": 46,
+                                \\"endOffset\\": 46,
+                                \\"startLine\\": 5,
+                                \\"endLine\\": 5,
+                                \\"startColumn\\": 3,
+                                \\"endColumn\\": 3,
+                                \\"tokenTypeIdx\\": 17,
+                                \\"tokenType\\": {
+                                  \\"name\\": \\"Plus\\",
+                                  \\"PATTERN\\": {},
+                                  \\"CATEGORIES\\": [
+                                    {
+                                      \\"name\\": \\"AdditionOperator\\",
+                                      \\"PATTERN\\": {},
+                                      \\"tokenTypeIdx\\": 16,
+                                      \\"CATEGORIES\\": [],
+                                      \\"categoryMatches\\": [
+                                        17,
+                                        18
+                                      ],
+                                      \\"categoryMatchesMap\\": {
+                                        \\"17\\": true,
+                                        \\"18\\": true
+                                      },
+                                      \\"isParent\\": true
+                                    }
+                                  ],
+                                  \\"tokenTypeIdx\\": 17,
+                                  \\"categoryMatches\\": [],
+                                  \\"categoryMatchesMap\\": {},
+                                  \\"isParent\\": false
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToRight\\": [
+            {
+              \\"image\\": \\"->\\",
+              \\"startOffset\\": 50,
+              \\"endOffset\\": 51,
+              \\"startLine\\": 5,
+              \\"endLine\\": 5,
+              \\"startColumn\\": 7,
+              \\"endColumn\\": 8,
+              \\"tokenTypeIdx\\": 14,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToRight\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 14,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"e\\",
+                    \\"startOffset\\": 53,
+                    \\"endOffset\\": 53,
+                    \\"startLine\\": 5,
+                    \\"endLine\\": 5,
+                    \\"startColumn\\": 10,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}"
+`;
+
+exports[`chevrotain ./chb/example4.chb 1`] = `
+"{
+  \\"name\\": \\"Program\\",
+  \\"children\\": {
+    \\"Main2\\": [
+      {
+        \\"name\\": \\"Main2\\",
+        \\"children\\": {
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"a\\",
+                    \\"startOffset\\": 0,
+                    \\"endOffset\\": 0,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 1,
+                    \\"endColumn\\": 1,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToLeft\\": [
+            {
+              \\"image\\": \\"<-\\",
+              \\"startOffset\\": 2,
+              \\"endOffset\\": 3,
+              \\"startLine\\": 1,
+              \\"endLine\\": 1,
+              \\"startColumn\\": 3,
+              \\"endColumn\\": 4,
+              \\"tokenTypeIdx\\": 15,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToLeft\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 15,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"left\\": [
+            {
+              \\"name\\": \\"RelationExpression\\",
+              \\"children\\": {
+                \\"Expression\\": [
+                  {
+                    \\"name\\": \\"Expression\\",
+                    \\"children\\": {
+                      \\"Term\\": [
+                        {
+                          \\"name\\": \\"Term\\",
+                          \\"children\\": {
+                            \\"Factor\\": [
+                              {
+                                \\"name\\": \\"Factor\\",
+                                \\"children\\": {
+                                  \\"StringLiteral\\": [
+                                    {
+                                      \\"image\\": \\"\\\\\\"foo\\\\\\"\\",
+                                      \\"startOffset\\": 5,
+                                      \\"endOffset\\": 9,
+                                      \\"startLine\\": 1,
+                                      \\"endLine\\": 1,
+                                      \\"startColumn\\": 6,
+                                      \\"endColumn\\": 10,
+                                      \\"tokenTypeIdx\\": 3,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"StringLiteral\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 3,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"Main2\\",
+        \\"children\\": {
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"c\\",
+                    \\"startOffset\\": 22,
+                    \\"endOffset\\": 22,
+                    \\"startLine\\": 3,
+                    \\"endLine\\": 3,
+                    \\"startColumn\\": 1,
+                    \\"endColumn\\": 1,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToLeft\\": [
+            {
+              \\"image\\": \\"<-\\",
+              \\"startOffset\\": 24,
+              \\"endOffset\\": 25,
+              \\"startLine\\": 3,
+              \\"endLine\\": 3,
+              \\"startColumn\\": 3,
+              \\"endColumn\\": 4,
+              \\"tokenTypeIdx\\": 15,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToLeft\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 15,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"left\\": [
+            {
+              \\"name\\": \\"RelationExpression\\",
+              \\"children\\": {
+                \\"Expression\\": [
+                  {
+                    \\"name\\": \\"Expression\\",
+                    \\"children\\": {
+                      \\"Term\\": [
+                        {
+                          \\"name\\": \\"Term\\",
+                          \\"children\\": {
+                            \\"Factor\\": [
+                              {
+                                \\"name\\": \\"Factor\\",
+                                \\"children\\": {
+                                  \\"Identifier\\": [
+                                    {
+                                      \\"image\\": \\"a\\",
+                                      \\"startOffset\\": 27,
+                                      \\"endOffset\\": 27,
+                                      \\"startLine\\": 3,
+                                      \\"endLine\\": 3,
+                                      \\"startColumn\\": 6,
+                                      \\"endColumn\\": 6,
+                                      \\"tokenTypeIdx\\": 7,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"Identifier\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 7,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          \\"name\\": \\"Term\\",
+                          \\"children\\": {
+                            \\"Factor\\": [
+                              {
+                                \\"name\\": \\"Factor\\",
+                                \\"children\\": {
+                                  \\"Identifier\\": [
+                                    {
+                                      \\"image\\": \\"b\\",
+                                      \\"startOffset\\": 31,
+                                      \\"endOffset\\": 31,
+                                      \\"startLine\\": 3,
+                                      \\"endLine\\": 3,
+                                      \\"startColumn\\": 10,
+                                      \\"endColumn\\": 10,
+                                      \\"tokenTypeIdx\\": 7,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"Identifier\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 7,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      \\"AdditionOperator\\": [
+                        {
+                          \\"image\\": \\"+\\",
+                          \\"startOffset\\": 29,
+                          \\"endOffset\\": 29,
+                          \\"startLine\\": 3,
+                          \\"endLine\\": 3,
+                          \\"startColumn\\": 8,
+                          \\"endColumn\\": 8,
+                          \\"tokenTypeIdx\\": 17,
+                          \\"tokenType\\": {
+                            \\"name\\": \\"Plus\\",
+                            \\"PATTERN\\": {},
+                            \\"CATEGORIES\\": [
+                              {
+                                \\"name\\": \\"AdditionOperator\\",
+                                \\"PATTERN\\": {},
+                                \\"tokenTypeIdx\\": 16,
+                                \\"CATEGORIES\\": [],
+                                \\"categoryMatches\\": [
+                                  17,
+                                  18
+                                ],
+                                \\"categoryMatchesMap\\": {
+                                  \\"17\\": true,
+                                  \\"18\\": true
+                                },
+                                \\"isParent\\": true
+                              }
+                            ],
+                            \\"tokenTypeIdx\\": 17,
+                            \\"categoryMatches\\": [],
+                            \\"categoryMatchesMap\\": {},
+                            \\"isParent\\": false
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    \\"Main\\": [
+      {
+        \\"name\\": \\"Main\\",
+        \\"children\\": {
+          \\"left\\": [
+            {
+              \\"name\\": \\"Pipe\\",
+              \\"children\\": {
+                \\"RelationExpression\\": [
+                  {
+                    \\"name\\": \\"RelationExpression\\",
+                    \\"children\\": {
+                      \\"Expression\\": [
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"StringLiteral\\": [
+                                          {
+                                            \\"image\\": \\"\\\\\\"bar\\\\\\"\\",
+                                            \\"startOffset\\": 11,
+                                            \\"endOffset\\": 15,
+                                            \\"startLine\\": 2,
+                                            \\"endLine\\": 2,
+                                            \\"startColumn\\": 1,
+                                            \\"endColumn\\": 5,
+                                            \\"tokenTypeIdx\\": 3,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"StringLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 3,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToRight\\": [
+            {
+              \\"image\\": \\"->\\",
+              \\"startOffset\\": 17,
+              \\"endOffset\\": 18,
+              \\"startLine\\": 2,
+              \\"endLine\\": 2,
+              \\"startColumn\\": 7,
+              \\"endColumn\\": 8,
+              \\"tokenTypeIdx\\": 14,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToRight\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 14,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"b\\",
+                    \\"startOffset\\": 20,
+                    \\"endOffset\\": 20,
+                    \\"startLine\\": 2,
+                    \\"endLine\\": 2,
+                    \\"startColumn\\": 10,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"Main\\",
+        \\"children\\": {
+          \\"left\\": [
+            {
+              \\"name\\": \\"Pipe\\",
+              \\"children\\": {
+                \\"RelationExpression\\": [
+                  {
+                    \\"name\\": \\"RelationExpression\\",
+                    \\"children\\": {
+                      \\"Expression\\": [
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"1\\",
+                                            \\"startOffset\\": 33,
+                                            \\"endOffset\\": 33,
+                                            \\"startLine\\": 4,
+                                            \\"endLine\\": 4,
+                                            \\"startColumn\\": 1,
+                                            \\"endColumn\\": 1,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"5\\",
+                                            \\"startOffset\\": 37,
+                                            \\"endOffset\\": 37,
+                                            \\"startLine\\": 4,
+                                            \\"endLine\\": 4,
+                                            \\"startColumn\\": 5,
+                                            \\"endColumn\\": 5,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ],
+                            \\"AdditionOperator\\": [
+                              {
+                                \\"image\\": \\"+\\",
+                                \\"startOffset\\": 35,
+                                \\"endOffset\\": 35,
+                                \\"startLine\\": 4,
+                                \\"endLine\\": 4,
+                                \\"startColumn\\": 3,
+                                \\"endColumn\\": 3,
+                                \\"tokenTypeIdx\\": 17,
+                                \\"tokenType\\": {
+                                  \\"name\\": \\"Plus\\",
+                                  \\"PATTERN\\": {},
+                                  \\"CATEGORIES\\": [
+                                    {
+                                      \\"name\\": \\"AdditionOperator\\",
+                                      \\"PATTERN\\": {},
+                                      \\"tokenTypeIdx\\": 16,
+                                      \\"CATEGORIES\\": [],
+                                      \\"categoryMatches\\": [
+                                        17,
+                                        18
+                                      ],
+                                      \\"categoryMatchesMap\\": {
+                                        \\"17\\": true,
+                                        \\"18\\": true
+                                      },
+                                      \\"isParent\\": true
+                                    }
+                                  ],
+                                  \\"tokenTypeIdx\\": 17,
+                                  \\"categoryMatches\\": [],
+                                  \\"categoryMatchesMap\\": {},
+                                  \\"isParent\\": false
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToRight\\": [
+            {
+              \\"image\\": \\"->\\",
+              \\"startOffset\\": 39,
+              \\"endOffset\\": 40,
+              \\"startLine\\": 4,
+              \\"endLine\\": 4,
+              \\"startColumn\\": 7,
+              \\"endColumn\\": 8,
+              \\"tokenTypeIdx\\": 14,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToRight\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 14,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"d\\",
+                    \\"startOffset\\": 42,
+                    \\"endOffset\\": 42,
+                    \\"startLine\\": 4,
+                    \\"endLine\\": 4,
+                    \\"startColumn\\": 10,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"Main\\",
+        \\"children\\": {
+          \\"left\\": [
+            {
+              \\"name\\": \\"Pipe\\",
+              \\"children\\": {
+                \\"RelationExpression\\": [
+                  {
+                    \\"name\\": \\"RelationExpression\\",
+                    \\"children\\": {
+                      \\"Expression\\": [
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"Identifier\\": [
+                                          {
+                                            \\"image\\": \\"c\\",
+                                            \\"startOffset\\": 44,
+                                            \\"endOffset\\": 44,
+                                            \\"startLine\\": 5,
+                                            \\"endLine\\": 5,
+                                            \\"startColumn\\": 1,
+                                            \\"endColumn\\": 1,
+                                            \\"tokenTypeIdx\\": 7,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"Identifier\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 7,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"Identifier\\": [
+                                          {
+                                            \\"image\\": \\"d\\",
+                                            \\"startOffset\\": 48,
+                                            \\"endOffset\\": 48,
+                                            \\"startLine\\": 5,
+                                            \\"endLine\\": 5,
+                                            \\"startColumn\\": 5,
+                                            \\"endColumn\\": 5,
+                                            \\"tokenTypeIdx\\": 7,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"Identifier\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 7,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ],
+                            \\"AdditionOperator\\": [
+                              {
+                                \\"image\\": \\"+\\",
+                                \\"startOffset\\": 46,
+                                \\"endOffset\\": 46,
+                                \\"startLine\\": 5,
+                                \\"endLine\\": 5,
+                                \\"startColumn\\": 3,
+                                \\"endColumn\\": 3,
+                                \\"tokenTypeIdx\\": 17,
+                                \\"tokenType\\": {
+                                  \\"name\\": \\"Plus\\",
+                                  \\"PATTERN\\": {},
+                                  \\"CATEGORIES\\": [
+                                    {
+                                      \\"name\\": \\"AdditionOperator\\",
+                                      \\"PATTERN\\": {},
+                                      \\"tokenTypeIdx\\": 16,
+                                      \\"CATEGORIES\\": [],
+                                      \\"categoryMatches\\": [
+                                        17,
+                                        18
+                                      ],
+                                      \\"categoryMatchesMap\\": {
+                                        \\"17\\": true,
+                                        \\"18\\": true
+                                      },
+                                      \\"isParent\\": true
+                                    }
+                                  ],
+                                  \\"tokenTypeIdx\\": 17,
+                                  \\"categoryMatches\\": [],
+                                  \\"categoryMatchesMap\\": {},
+                                  \\"isParent\\": false
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToRight\\": [
+            {
+              \\"image\\": \\"->\\",
+              \\"startOffset\\": 50,
+              \\"endOffset\\": 51,
+              \\"startLine\\": 5,
+              \\"endLine\\": 5,
+              \\"startColumn\\": 7,
+              \\"endColumn\\": 8,
+              \\"tokenTypeIdx\\": 14,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToRight\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 14,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"e\\",
+                    \\"startOffset\\": 53,
+                    \\"endOffset\\": 53,
+                    \\"startLine\\": 5,
+                    \\"endLine\\": 5,
+                    \\"startColumn\\": 10,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"Main\\",
+        \\"children\\": {
+          \\"left\\": [
+            {
+              \\"name\\": \\"Pipe\\",
+              \\"children\\": {
+                \\"RelationExpression\\": [
+                  {
+                    \\"name\\": \\"RelationExpression\\",
+                    \\"children\\": {
+                      \\"Expression\\": [
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"3\\",
+                                            \\"startOffset\\": 55,
+                                            \\"endOffset\\": 55,
+                                            \\"startLine\\": 6,
+                                            \\"endLine\\": 6,
+                                            \\"startColumn\\": 1,
+                                            \\"endColumn\\": 1,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"4\\",
+                                            \\"startOffset\\": 59,
+                                            \\"endOffset\\": 59,
+                                            \\"startLine\\": 6,
+                                            \\"endLine\\": 6,
+                                            \\"startColumn\\": 5,
+                                            \\"endColumn\\": 5,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      \\"LessThan\\": [
+                        {
+                          \\"image\\": \\">\\",
+                          \\"startOffset\\": 57,
+                          \\"endOffset\\": 57,
+                          \\"startLine\\": 6,
+                          \\"endLine\\": 6,
+                          \\"startColumn\\": 3,
+                          \\"endColumn\\": 3,
+                          \\"tokenTypeIdx\\": 26,
+                          \\"tokenType\\": {
+                            \\"name\\": \\"LessThan\\",
+                            \\"PATTERN\\": {},
+                            \\"CATEGORIES\\": [
+                              {
+                                \\"name\\": \\"RelationalOperator\\",
+                                \\"PATTERN\\": {},
+                                \\"tokenTypeIdx\\": 22,
+                                \\"CATEGORIES\\": [],
+                                \\"categoryMatches\\": [
+                                  23,
+                                  24,
+                                  25,
+                                  26,
+                                  27
+                                ],
+                                \\"categoryMatchesMap\\": {
+                                  \\"23\\": true,
+                                  \\"24\\": true,
+                                  \\"25\\": true,
+                                  \\"26\\": true,
+                                  \\"27\\": true
+                                },
+                                \\"isParent\\": true
+                              }
+                            ],
+                            \\"tokenTypeIdx\\": 26,
+                            \\"categoryMatches\\": [],
+                            \\"categoryMatchesMap\\": {},
+                            \\"isParent\\": false
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToRight\\": [
+            {
+              \\"image\\": \\"->\\",
+              \\"startOffset\\": 61,
+              \\"endOffset\\": 62,
+              \\"startLine\\": 6,
+              \\"endLine\\": 6,
+              \\"startColumn\\": 7,
+              \\"endColumn\\": 8,
+              \\"tokenTypeIdx\\": 14,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToRight\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 14,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"f\\",
+                    \\"startOffset\\": 64,
+                    \\"endOffset\\": 64,
+                    \\"startLine\\": 6,
+                    \\"endLine\\": 6,
+                    \\"startColumn\\": 10,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"Main\\",
+        \\"children\\": {
+          \\"left\\": [
+            {
+              \\"name\\": \\"Pipe\\",
+              \\"children\\": {
+                \\"RelationExpression\\": [
+                  {
+                    \\"name\\": \\"RelationExpression\\",
+                    \\"children\\": {
+                      \\"Expression\\": [
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"3\\",
+                                            \\"startOffset\\": 66,
+                                            \\"endOffset\\": 66,
+                                            \\"startLine\\": 7,
+                                            \\"endLine\\": 7,
+                                            \\"startColumn\\": 1,
+                                            \\"endColumn\\": 1,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"4\\",
+                                            \\"startOffset\\": 70,
+                                            \\"endOffset\\": 70,
+                                            \\"startLine\\": 7,
+                                            \\"endLine\\": 7,
+                                            \\"startColumn\\": 5,
+                                            \\"endColumn\\": 5,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      \\"OverTha\\": [
+                        {
+                          \\"image\\": \\"<\\",
+                          \\"startOffset\\": 68,
+                          \\"endOffset\\": 68,
+                          \\"startLine\\": 7,
+                          \\"endLine\\": 7,
+                          \\"startColumn\\": 3,
+                          \\"endColumn\\": 3,
+                          \\"tokenTypeIdx\\": 25,
+                          \\"tokenType\\": {
+                            \\"name\\": \\"OverTha\\",
+                            \\"PATTERN\\": {},
+                            \\"CATEGORIES\\": [
+                              {
+                                \\"name\\": \\"RelationalOperator\\",
+                                \\"PATTERN\\": {},
+                                \\"tokenTypeIdx\\": 22,
+                                \\"CATEGORIES\\": [],
+                                \\"categoryMatches\\": [
+                                  23,
+                                  24,
+                                  25,
+                                  26,
+                                  27
+                                ],
+                                \\"categoryMatchesMap\\": {
+                                  \\"23\\": true,
+                                  \\"24\\": true,
+                                  \\"25\\": true,
+                                  \\"26\\": true,
+                                  \\"27\\": true
+                                },
+                                \\"isParent\\": true
+                              }
+                            ],
+                            \\"tokenTypeIdx\\": 25,
+                            \\"categoryMatches\\": [],
+                            \\"categoryMatchesMap\\": {},
+                            \\"isParent\\": false
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToRight\\": [
+            {
+              \\"image\\": \\"->\\",
+              \\"startOffset\\": 72,
+              \\"endOffset\\": 73,
+              \\"startLine\\": 7,
+              \\"endLine\\": 7,
+              \\"startColumn\\": 7,
+              \\"endColumn\\": 8,
+              \\"tokenTypeIdx\\": 14,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToRight\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 14,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"g\\",
+                    \\"startOffset\\": 75,
+                    \\"endOffset\\": 75,
+                    \\"startLine\\": 7,
+                    \\"endLine\\": 7,
+                    \\"startColumn\\": 10,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"Main\\",
+        \\"children\\": {
+          \\"left\\": [
+            {
+              \\"name\\": \\"Pipe\\",
+              \\"children\\": {
+                \\"RelationExpression\\": [
+                  {
+                    \\"name\\": \\"RelationExpression\\",
+                    \\"children\\": {
+                      \\"Expression\\": [
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"1\\",
+                                            \\"startOffset\\": 77,
+                                            \\"endOffset\\": 77,
+                                            \\"startLine\\": 8,
+                                            \\"endLine\\": 8,
+                                            \\"startColumn\\": 1,
+                                            \\"endColumn\\": 1,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"2\\",
+                                            \\"startOffset\\": 81,
+                                            \\"endOffset\\": 81,
+                                            \\"startLine\\": 8,
+                                            \\"endLine\\": 8,
+                                            \\"startColumn\\": 5,
+                                            \\"endColumn\\": 5,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"3\\",
+                                            \\"startOffset\\": 85,
+                                            \\"endOffset\\": 85,
+                                            \\"startLine\\": 8,
+                                            \\"endLine\\": 8,
+                                            \\"startColumn\\": 9,
+                                            \\"endColumn\\": 9,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  \\"MultiplicationOperator\\": [
+                                    {
+                                      \\"image\\": \\"*\\",
+                                      \\"startOffset\\": 83,
+                                      \\"endOffset\\": 83,
+                                      \\"startLine\\": 8,
+                                      \\"endLine\\": 8,
+                                      \\"startColumn\\": 7,
+                                      \\"endColumn\\": 7,
+                                      \\"tokenTypeIdx\\": 20,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"Multi\\",
+                                        \\"PATTERN\\": {},
+                                        \\"CATEGORIES\\": [
+                                          {
+                                            \\"name\\": \\"MultiplicationOperator\\",
+                                            \\"PATTERN\\": {},
+                                            \\"tokenTypeIdx\\": 19,
+                                            \\"CATEGORIES\\": [],
+                                            \\"categoryMatches\\": [
+                                              20,
+                                              21
+                                            ],
+                                            \\"categoryMatchesMap\\": {
+                                              \\"20\\": true,
+                                              \\"21\\": true
+                                            },
+                                            \\"isParent\\": true
+                                          }
+                                        ],
+                                        \\"tokenTypeIdx\\": 20,
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ],
+                            \\"AdditionOperator\\": [
+                              {
+                                \\"image\\": \\"+\\",
+                                \\"startOffset\\": 79,
+                                \\"endOffset\\": 79,
+                                \\"startLine\\": 8,
+                                \\"endLine\\": 8,
+                                \\"startColumn\\": 3,
+                                \\"endColumn\\": 3,
+                                \\"tokenTypeIdx\\": 17,
+                                \\"tokenType\\": {
+                                  \\"name\\": \\"Plus\\",
+                                  \\"PATTERN\\": {},
+                                  \\"CATEGORIES\\": [
+                                    {
+                                      \\"name\\": \\"AdditionOperator\\",
+                                      \\"PATTERN\\": {},
+                                      \\"tokenTypeIdx\\": 16,
+                                      \\"CATEGORIES\\": [],
+                                      \\"categoryMatches\\": [
+                                        17,
+                                        18
+                                      ],
+                                      \\"categoryMatchesMap\\": {
+                                        \\"17\\": true,
+                                        \\"18\\": true
+                                      },
+                                      \\"isParent\\": true
+                                    }
+                                  ],
+                                  \\"tokenTypeIdx\\": 17,
+                                  \\"categoryMatches\\": [],
+                                  \\"categoryMatchesMap\\": {},
+                                  \\"isParent\\": false
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"5\\",
+                                            \\"startOffset\\": 90,
+                                            \\"endOffset\\": 90,
+                                            \\"startLine\\": 8,
+                                            \\"endLine\\": 8,
+                                            \\"startColumn\\": 14,
+                                            \\"endColumn\\": 14,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      \\"AmountMore\\": [
+                        {
+                          \\"image\\": \\"<=\\",
+                          \\"startOffset\\": 87,
+                          \\"endOffset\\": 88,
+                          \\"startLine\\": 8,
+                          \\"endLine\\": 8,
+                          \\"startColumn\\": 11,
+                          \\"endColumn\\": 12,
+                          \\"tokenTypeIdx\\": 23,
+                          \\"tokenType\\": {
+                            \\"name\\": \\"AmountMore\\",
+                            \\"PATTERN\\": {},
+                            \\"CATEGORIES\\": [
+                              {
+                                \\"name\\": \\"RelationalOperator\\",
+                                \\"PATTERN\\": {},
+                                \\"tokenTypeIdx\\": 22,
+                                \\"CATEGORIES\\": [],
+                                \\"categoryMatches\\": [
+                                  23,
+                                  24,
+                                  25,
+                                  26,
+                                  27
+                                ],
+                                \\"categoryMatchesMap\\": {
+                                  \\"23\\": true,
+                                  \\"24\\": true,
+                                  \\"25\\": true,
+                                  \\"26\\": true,
+                                  \\"27\\": true
+                                },
+                                \\"isParent\\": true
+                              }
+                            ],
+                            \\"tokenTypeIdx\\": 23,
+                            \\"categoryMatches\\": [],
+                            \\"categoryMatchesMap\\": {},
+                            \\"isParent\\": false
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToRight\\": [
+            {
+              \\"image\\": \\"->\\",
+              \\"startOffset\\": 92,
+              \\"endOffset\\": 93,
+              \\"startLine\\": 8,
+              \\"endLine\\": 8,
+              \\"startColumn\\": 16,
+              \\"endColumn\\": 17,
+              \\"tokenTypeIdx\\": 14,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToRight\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 14,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"h\\",
+                    \\"startOffset\\": 95,
+                    \\"endOffset\\": 95,
+                    \\"startLine\\": 8,
+                    \\"endLine\\": 8,
+                    \\"startColumn\\": 19,
+                    \\"endColumn\\": 19,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"Main\\",
+        \\"children\\": {
+          \\"left\\": [
+            {
+              \\"name\\": \\"Pipe\\",
+              \\"children\\": {
+                \\"RelationExpression\\": [
+                  {
+                    \\"name\\": \\"RelationExpression\\",
+                    \\"children\\": {
+                      \\"Expression\\": [
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"8\\",
+                                            \\"startOffset\\": 97,
+                                            \\"endOffset\\": 97,
+                                            \\"startLine\\": 9,
+                                            \\"endLine\\": 9,
+                                            \\"startColumn\\": 1,
+                                            \\"endColumn\\": 1,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"4\\",
+                                            \\"startOffset\\": 101,
+                                            \\"endOffset\\": 101,
+                                            \\"startLine\\": 9,
+                                            \\"endLine\\": 9,
+                                            \\"startColumn\\": 5,
+                                            \\"endColumn\\": 5,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  \\"MultiplicationOperator\\": [
+                                    {
+                                      \\"image\\": \\"/\\",
+                                      \\"startOffset\\": 99,
+                                      \\"endOffset\\": 99,
+                                      \\"startLine\\": 9,
+                                      \\"endLine\\": 9,
+                                      \\"startColumn\\": 3,
+                                      \\"endColumn\\": 3,
+                                      \\"tokenTypeIdx\\": 21,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"Div\\",
+                                        \\"PATTERN\\": {},
+                                        \\"CATEGORIES\\": [
+                                          {
+                                            \\"name\\": \\"MultiplicationOperator\\",
+                                            \\"PATTERN\\": {},
+                                            \\"tokenTypeIdx\\": 19,
+                                            \\"CATEGORIES\\": [],
+                                            \\"categoryMatches\\": [
+                                              20,
+                                              21
+                                            ],
+                                            \\"categoryMatchesMap\\": {
+                                              \\"20\\": true,
+                                              \\"21\\": true
+                                            },
+                                            \\"isParent\\": true
+                                          }
+                                        ],
+                                        \\"tokenTypeIdx\\": 21,
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"18\\",
+                                            \\"startOffset\\": 105,
+                                            \\"endOffset\\": 106,
+                                            \\"startLine\\": 9,
+                                            \\"endLine\\": 9,
+                                            \\"startColumn\\": 9,
+                                            \\"endColumn\\": 10,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"NumberLiteral\\": [
+                                          {
+                                            \\"image\\": \\"9\\",
+                                            \\"startOffset\\": 110,
+                                            \\"endOffset\\": 110,
+                                            \\"startLine\\": 9,
+                                            \\"endLine\\": 9,
+                                            \\"startColumn\\": 14,
+                                            \\"endColumn\\": 14,
+                                            \\"tokenTypeIdx\\": 4,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"NumberLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 4,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  \\"MultiplicationOperator\\": [
+                                    {
+                                      \\"image\\": \\"/\\",
+                                      \\"startOffset\\": 108,
+                                      \\"endOffset\\": 108,
+                                      \\"startLine\\": 9,
+                                      \\"endLine\\": 9,
+                                      \\"startColumn\\": 12,
+                                      \\"endColumn\\": 12,
+                                      \\"tokenTypeIdx\\": 21,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"Div\\",
+                                        \\"PATTERN\\": {},
+                                        \\"CATEGORIES\\": [
+                                          {
+                                            \\"name\\": \\"MultiplicationOperator\\",
+                                            \\"PATTERN\\": {},
+                                            \\"tokenTypeIdx\\": 19,
+                                            \\"CATEGORIES\\": [],
+                                            \\"categoryMatches\\": [
+                                              20,
+                                              21
+                                            ],
+                                            \\"categoryMatchesMap\\": {
+                                              \\"20\\": true,
+                                              \\"21\\": true
+                                            },
+                                            \\"isParent\\": true
+                                          }
+                                        ],
+                                        \\"tokenTypeIdx\\": 21,
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      \\"Equal\\": [
+                        {
+                          \\"image\\": \\"=\\",
+                          \\"startOffset\\": 103,
+                          \\"endOffset\\": 103,
+                          \\"startLine\\": 9,
+                          \\"endLine\\": 9,
+                          \\"startColumn\\": 7,
+                          \\"endColumn\\": 7,
+                          \\"tokenTypeIdx\\": 27,
+                          \\"tokenType\\": {
+                            \\"name\\": \\"Equal\\",
+                            \\"PATTERN\\": {},
+                            \\"CATEGORIES\\": [
+                              {
+                                \\"name\\": \\"RelationalOperator\\",
+                                \\"PATTERN\\": {},
+                                \\"tokenTypeIdx\\": 22,
+                                \\"CATEGORIES\\": [],
+                                \\"categoryMatches\\": [
+                                  23,
+                                  24,
+                                  25,
+                                  26,
+                                  27
+                                ],
+                                \\"categoryMatchesMap\\": {
+                                  \\"23\\": true,
+                                  \\"24\\": true,
+                                  \\"25\\": true,
+                                  \\"26\\": true,
+                                  \\"27\\": true
+                                },
+                                \\"isParent\\": true
+                              }
+                            ],
+                            \\"tokenTypeIdx\\": 27,
+                            \\"categoryMatches\\": [],
+                            \\"categoryMatchesMap\\": {},
+                            \\"isParent\\": false
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToRight\\": [
+            {
+              \\"image\\": \\"->\\",
+              \\"startOffset\\": 112,
+              \\"endOffset\\": 113,
+              \\"startLine\\": 9,
+              \\"endLine\\": 9,
+              \\"startColumn\\": 16,
+              \\"endColumn\\": 17,
+              \\"tokenTypeIdx\\": 14,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToRight\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 14,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"i\\",
+                    \\"startOffset\\": 115,
+                    \\"endOffset\\": 115,
+                    \\"startLine\\": 9,
+                    \\"endLine\\": 9,
+                    \\"startColumn\\": 19,
+                    \\"endColumn\\": 19,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"Main\\",
+        \\"children\\": {
+          \\"left\\": [
+            {
+              \\"name\\": \\"Pipe\\",
+              \\"children\\": {
+                \\"RelationExpression\\": [
+                  {
+                    \\"name\\": \\"RelationExpression\\",
+                    \\"children\\": {
+                      \\"Expression\\": [
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"StringLiteral\\": [
+                                          {
+                                            \\"image\\": \\"\\\\\\"6\\\\\\"\\",
+                                            \\"startOffset\\": 117,
+                                            \\"endOffset\\": 119,
+                                            \\"startLine\\": 10,
+                                            \\"endLine\\": 10,
+                                            \\"startColumn\\": 1,
+                                            \\"endColumn\\": 3,
+                                            \\"tokenTypeIdx\\": 3,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"StringLiteral\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 3,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"Identifier\\": [
+                                          {
+                                            \\"image\\": \\"d\\",
+                                            \\"startOffset\\": 123,
+                                            \\"endOffset\\": 123,
+                                            \\"startLine\\": 10,
+                                            \\"endLine\\": 10,
+                                            \\"startColumn\\": 7,
+                                            \\"endColumn\\": 7,
+                                            \\"tokenTypeIdx\\": 7,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"Identifier\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 7,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      \\"Equal\\": [
+                        {
+                          \\"image\\": \\"=\\",
+                          \\"startOffset\\": 121,
+                          \\"endOffset\\": 121,
+                          \\"startLine\\": 10,
+                          \\"endLine\\": 10,
+                          \\"startColumn\\": 5,
+                          \\"endColumn\\": 5,
+                          \\"tokenTypeIdx\\": 27,
+                          \\"tokenType\\": {
+                            \\"name\\": \\"Equal\\",
+                            \\"PATTERN\\": {},
+                            \\"CATEGORIES\\": [
+                              {
+                                \\"name\\": \\"RelationalOperator\\",
+                                \\"PATTERN\\": {},
+                                \\"tokenTypeIdx\\": 22,
+                                \\"CATEGORIES\\": [],
+                                \\"categoryMatches\\": [
+                                  23,
+                                  24,
+                                  25,
+                                  26,
+                                  27
+                                ],
+                                \\"categoryMatchesMap\\": {
+                                  \\"23\\": true,
+                                  \\"24\\": true,
+                                  \\"25\\": true,
+                                  \\"26\\": true,
+                                  \\"27\\": true
+                                },
+                                \\"isParent\\": true
+                              }
+                            ],
+                            \\"tokenTypeIdx\\": 27,
+                            \\"categoryMatches\\": [],
+                            \\"categoryMatchesMap\\": {},
+                            \\"isParent\\": false
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToRight\\": [
+            {
+              \\"image\\": \\"->\\",
+              \\"startOffset\\": 125,
+              \\"endOffset\\": 126,
+              \\"startLine\\": 10,
+              \\"endLine\\": 10,
+              \\"startColumn\\": 9,
+              \\"endColumn\\": 10,
+              \\"tokenTypeIdx\\": 14,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToRight\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 14,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"j\\",
+                    \\"startOffset\\": 128,
+                    \\"endOffset\\": 128,
+                    \\"startLine\\": 10,
+                    \\"endLine\\": 10,
+                    \\"startColumn\\": 12,
+                    \\"endColumn\\": 12,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}"
+`;
+
+exports[`chevrotain ./chb/example5_1.chb 1`] = `
+"{
+  \\"name\\": \\"Program\\",
+  \\"children\\": {
+    \\"Main\\": [
+      {
+        \\"name\\": \\"Main\\",
+        \\"children\\": {
+          \\"left\\": [
+            {
+              \\"name\\": \\"Pipe\\",
+              \\"children\\": {
+                \\"RelationExpression\\": [
+                  {
+                    \\"name\\": \\"RelationExpression\\",
+                    \\"children\\": {
+                      \\"Expression\\": [
+                        {
+                          \\"name\\": \\"Expression\\",
+                          \\"children\\": {
+                            \\"Term\\": [
+                              {
+                                \\"name\\": \\"Term\\",
+                                \\"children\\": {
+                                  \\"Factor\\": [
+                                    {
+                                      \\"name\\": \\"Factor\\",
+                                      \\"children\\": {
+                                        \\"parenthesisExpression\\": [
+                                          {
+                                            \\"name\\": \\"parenthesisExpression\\",
+                                            \\"children\\": {
+                                              \\"LBrackets\\": [
+                                                {
+                                                  \\"image\\": \\"(\\",
+                                                  \\"startOffset\\": 0,
+                                                  \\"endOffset\\": 0,
+                                                  \\"startLine\\": 1,
+                                                  \\"endLine\\": 1,
+                                                  \\"startColumn\\": 1,
+                                                  \\"endColumn\\": 1,
+                                                  \\"tokenTypeIdx\\": 8,
+                                                  \\"tokenType\\": {
+                                                    \\"name\\": \\"LBrackets\\",
+                                                    \\"PATTERN\\": {},
+                                                    \\"tokenTypeIdx\\": 8,
+                                                    \\"CATEGORIES\\": [],
+                                                    \\"categoryMatches\\": [],
+                                                    \\"categoryMatchesMap\\": {},
+                                                    \\"isParent\\": false,
+                                                    \\"LABEL\\": \\"(\\"
+                                                  }
+                                                }
+                                              ],
+                                              \\"RelationExpression\\": [
+                                                {
+                                                  \\"name\\": \\"RelationExpression\\",
+                                                  \\"children\\": {
+                                                    \\"Expression\\": [
+                                                      {
+                                                        \\"name\\": \\"Expression\\",
+                                                        \\"children\\": {
+                                                          \\"Term\\": [
+                                                            {
+                                                              \\"name\\": \\"Term\\",
+                                                              \\"children\\": {
+                                                                \\"Factor\\": [
+                                                                  {
+                                                                    \\"name\\": \\"Factor\\",
+                                                                    \\"children\\": {
+                                                                      \\"Identifier\\": [
+                                                                        {
+                                                                          \\"image\\": \\"x\\",
+                                                                          \\"startOffset\\": 2,
+                                                                          \\"endOffset\\": 2,
+                                                                          \\"startLine\\": 1,
+                                                                          \\"endLine\\": 1,
+                                                                          \\"startColumn\\": 3,
+                                                                          \\"endColumn\\": 3,
+                                                                          \\"tokenTypeIdx\\": 7,
+                                                                          \\"tokenType\\": {
+                                                                            \\"name\\": \\"Identifier\\",
+                                                                            \\"PATTERN\\": {},
+                                                                            \\"tokenTypeIdx\\": 7,
+                                                                            \\"CATEGORIES\\": [],
+                                                                            \\"categoryMatches\\": [],
+                                                                            \\"categoryMatchesMap\\": {},
+                                                                            \\"isParent\\": false
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ],
+                                              \\"RBrackets\\": [
+                                                {
+                                                  \\"image\\": \\")\\",
+                                                  \\"startOffset\\": 4,
+                                                  \\"endOffset\\": 4,
+                                                  \\"startLine\\": 1,
+                                                  \\"endLine\\": 1,
+                                                  \\"startColumn\\": 5,
+                                                  \\"endColumn\\": 5,
+                                                  \\"tokenTypeIdx\\": 9,
+                                                  \\"tokenType\\": {
+                                                    \\"name\\": \\"RBrackets\\",
+                                                    \\"PATTERN\\": {},
+                                                    \\"tokenTypeIdx\\": 9,
+                                                    \\"CATEGORIES\\": [],
+                                                    \\"categoryMatches\\": [],
+                                                    \\"categoryMatchesMap\\": {},
+                                                    \\"isParent\\": false,
+                                                    \\"LABEL\\": \\")\\"
+                                                  }
+                                                }
+                                              ],
+                                              \\"Function\\": [
+                                                {
+                                                  \\"name\\": \\"Function\\",
+                                                  \\"children\\": {
+                                                    \\"Arrow\\": [
+                                                      {
+                                                        \\"image\\": \\"=>\\",
+                                                        \\"startOffset\\": 6,
+                                                        \\"endOffset\\": 7,
+                                                        \\"startLine\\": 1,
+                                                        \\"endLine\\": 1,
+                                                        \\"startColumn\\": 7,
+                                                        \\"endColumn\\": 8,
+                                                        \\"tokenTypeIdx\\": 29,
+                                                        \\"tokenType\\": {
+                                                          \\"name\\": \\"Arrow\\",
+                                                          \\"PATTERN\\": {},
+                                                          \\"tokenTypeIdx\\": 29,
+                                                          \\"CATEGORIES\\": [],
+                                                          \\"categoryMatches\\": [],
+                                                          \\"categoryMatchesMap\\": {},
+                                                          \\"isParent\\": false
+                                                        }
+                                                      }
+                                                    ],
+                                                    \\"FunctionImplementation\\": [
+                                                      {
+                                                        \\"name\\": \\"FunctionImplementation\\",
+                                                        \\"children\\": {
+                                                          \\"LCurly\\": [
+                                                            {
+                                                              \\"image\\": \\"{\\",
+                                                              \\"startOffset\\": 9,
+                                                              \\"endOffset\\": 9,
+                                                              \\"startLine\\": 1,
+                                                              \\"endLine\\": 1,
+                                                              \\"startColumn\\": 10,
+                                                              \\"endColumn\\": 10,
+                                                              \\"tokenTypeIdx\\": 10,
+                                                              \\"tokenType\\": {
+                                                                \\"name\\": \\"LCurly\\",
+                                                                \\"PATTERN\\": {},
+                                                                \\"tokenTypeIdx\\": 10,
+                                                                \\"CATEGORIES\\": [],
+                                                                \\"categoryMatches\\": [],
+                                                                \\"categoryMatchesMap\\": {},
+                                                                \\"isParent\\": false,
+                                                                \\"LABEL\\": \\"{\\"
+                                                              }
+                                                            }
+                                                          ],
+                                                          \\"Program\\": [
+                                                            {
+                                                              \\"name\\": \\"Program\\",
+                                                              \\"children\\": {
+                                                                \\"Main\\": [
+                                                                  {
+                                                                    \\"name\\": \\"Main\\",
+                                                                    \\"children\\": {
+                                                                      \\"left\\": [
+                                                                        {
+                                                                          \\"name\\": \\"Pipe\\",
+                                                                          \\"children\\": {
+                                                                            \\"RelationExpression\\": [
+                                                                              {
+                                                                                \\"name\\": \\"RelationExpression\\",
+                                                                                \\"children\\": {
+                                                                                  \\"Expression\\": [
+                                                                                    {
+                                                                                      \\"name\\": \\"Expression\\",
+                                                                                      \\"children\\": {
+                                                                                        \\"Term\\": [
+                                                                                          {
+                                                                                            \\"name\\": \\"Term\\",
+                                                                                            \\"children\\": {
+                                                                                              \\"Factor\\": [
+                                                                                                {
+                                                                                                  \\"name\\": \\"Factor\\",
+                                                                                                  \\"children\\": {
+                                                                                                    \\"Identifier\\": [
+                                                                                                      {
+                                                                                                        \\"image\\": \\"x\\",
+                                                                                                        \\"startOffset\\": 11,
+                                                                                                        \\"endOffset\\": 11,
+                                                                                                        \\"startLine\\": 1,
+                                                                                                        \\"endLine\\": 1,
+                                                                                                        \\"startColumn\\": 12,
+                                                                                                        \\"endColumn\\": 12,
+                                                                                                        \\"tokenTypeIdx\\": 7,
+                                                                                                        \\"tokenType\\": {
+                                                                                                          \\"name\\": \\"Identifier\\",
+                                                                                                          \\"PATTERN\\": {},
+                                                                                                          \\"tokenTypeIdx\\": 7,
+                                                                                                          \\"CATEGORIES\\": [],
+                                                                                                          \\"categoryMatches\\": [],
+                                                                                                          \\"categoryMatchesMap\\": {},
+                                                                                                          \\"isParent\\": false
+                                                                                                        }
+                                                                                                      }
+                                                                                                    ]
+                                                                                                  }
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          },
+                                                                                          {
+                                                                                            \\"name\\": \\"Term\\",
+                                                                                            \\"children\\": {
+                                                                                              \\"Factor\\": [
+                                                                                                {
+                                                                                                  \\"name\\": \\"Factor\\",
+                                                                                                  \\"children\\": {
+                                                                                                    \\"Identifier\\": [
+                                                                                                      {
+                                                                                                        \\"image\\": \\"x\\",
+                                                                                                        \\"startOffset\\": 15,
+                                                                                                        \\"endOffset\\": 15,
+                                                                                                        \\"startLine\\": 1,
+                                                                                                        \\"endLine\\": 1,
+                                                                                                        \\"startColumn\\": 16,
+                                                                                                        \\"endColumn\\": 16,
+                                                                                                        \\"tokenTypeIdx\\": 7,
+                                                                                                        \\"tokenType\\": {
+                                                                                                          \\"name\\": \\"Identifier\\",
+                                                                                                          \\"PATTERN\\": {},
+                                                                                                          \\"tokenTypeIdx\\": 7,
+                                                                                                          \\"CATEGORIES\\": [],
+                                                                                                          \\"categoryMatches\\": [],
+                                                                                                          \\"categoryMatchesMap\\": {},
+                                                                                                          \\"isParent\\": false
+                                                                                                        }
+                                                                                                      }
+                                                                                                    ]
+                                                                                                  }
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          }
+                                                                                        ],
+                                                                                        \\"AdditionOperator\\": [
+                                                                                          {
+                                                                                            \\"image\\": \\"+\\",
+                                                                                            \\"startOffset\\": 13,
+                                                                                            \\"endOffset\\": 13,
+                                                                                            \\"startLine\\": 1,
+                                                                                            \\"endLine\\": 1,
+                                                                                            \\"startColumn\\": 14,
+                                                                                            \\"endColumn\\": 14,
+                                                                                            \\"tokenTypeIdx\\": 17,
+                                                                                            \\"tokenType\\": {
+                                                                                              \\"name\\": \\"Plus\\",
+                                                                                              \\"PATTERN\\": {},
+                                                                                              \\"CATEGORIES\\": [
+                                                                                                {
+                                                                                                  \\"name\\": \\"AdditionOperator\\",
+                                                                                                  \\"PATTERN\\": {},
+                                                                                                  \\"tokenTypeIdx\\": 16,
+                                                                                                  \\"CATEGORIES\\": [],
+                                                                                                  \\"categoryMatches\\": [
+                                                                                                    17,
+                                                                                                    18
+                                                                                                  ],
+                                                                                                  \\"categoryMatchesMap\\": {
+                                                                                                    \\"17\\": true,
+                                                                                                    \\"18\\": true
+                                                                                                  },
+                                                                                                  \\"isParent\\": true
+                                                                                                }
+                                                                                              ],
+                                                                                              \\"tokenTypeIdx\\": 17,
+                                                                                              \\"categoryMatches\\": [],
+                                                                                              \\"categoryMatchesMap\\": {},
+                                                                                              \\"isParent\\": false
+                                                                                            }
+                                                                                          }
+                                                                                        ]
+                                                                                      }
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              }
+                                                                            ]
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ],
+                                                          \\"RCurly\\": [
+                                                            {
+                                                              \\"image\\": \\"}\\",
+                                                              \\"startOffset\\": 17,
+                                                              \\"endOffset\\": 17,
+                                                              \\"startLine\\": 1,
+                                                              \\"endLine\\": 1,
+                                                              \\"startColumn\\": 18,
+                                                              \\"endColumn\\": 18,
+                                                              \\"tokenTypeIdx\\": 11,
+                                                              \\"tokenType\\": {
+                                                                \\"name\\": \\"RCurly\\",
+                                                                \\"PATTERN\\": {},
+                                                                \\"tokenTypeIdx\\": 11,
+                                                                \\"CATEGORIES\\": [],
+                                                                \\"categoryMatches\\": [],
+                                                                \\"categoryMatchesMap\\": {},
+                                                                \\"isParent\\": false,
+                                                                \\"LABEL\\": \\"}\\"
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          \\"ToRight\\": [
+            {
+              \\"image\\": \\"->\\",
+              \\"startOffset\\": 19,
+              \\"endOffset\\": 20,
+              \\"startLine\\": 1,
+              \\"endLine\\": 1,
+              \\"startColumn\\": 20,
+              \\"endColumn\\": 21,
+              \\"tokenTypeIdx\\": 14,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToRight\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 14,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"k\\",
+                    \\"startOffset\\": 22,
+                    \\"endOffset\\": 22,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 23,
+                    \\"endColumn\\": 23,
                     \\"tokenTypeIdx\\": 7,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",

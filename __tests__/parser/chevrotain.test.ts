@@ -7,7 +7,15 @@ const parse = (sourceName: string) => {
 };
 
 describe('chevrotain', (): void => {
-  const chbList: ReadonlyArray<string> = ['./chb/example1.chb', './chb/example2.chb'];
+  const chbList: ReadonlyArray<string> = [
+    './chb/example1_2.chb',
+    './chb/example1_3.chb',
+    './chb/example1.chb',
+    './chb/example2.chb',
+    './chb/example3.chb',
+    './chb/example4.chb',
+    './chb/example5_1.chb',
+  ];
   chbList.forEach((chb) => {
     test(chb, (): void => {
       const astJson = parse(chb);
