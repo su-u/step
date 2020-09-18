@@ -87,8 +87,9 @@ const LessThan = createToken({
   pattern: /(?!-)>/,
   categories: RelationalOperator,
 });
-const Equal = createToken({ name: 'Equal', pattern: /(?!<>)=/, categories: RelationalOperator });
+const Equal = createToken({ name: 'Equal', pattern: /(?!<>)=(?!>)/, categories: RelationalOperator });
 const Pipe = createToken({ name: 'Pipe', pattern: /(?!-)>>/ });
+const Arrow = createToken({ name: 'Arrow', pattern: /(?!>)=>/ });
 
 const RelationalOperatorTokens = [
   RelationalOperator,
@@ -97,6 +98,7 @@ const RelationalOperatorTokens = [
   OverThan,
   LessThan,
   Equal,
+  Arrow,
 ];
 
 const allTokens = [...Tokens, ...BracketTokens, ...OperatorTokens, ...RelationalOperatorTokens];
@@ -132,14 +134,14 @@ export class ChiboParser extends CstParser {
     this.SUBRULE(this.Pipe, { LABEL: 'left' });
     this.MANY(() => {
       this.CONSUME(ToRight);
-      this.SUBRULE2(this.To, { LABEL: 'right' });
+      this.SUBRULE(this.To, { LABEL: 'right' });
     });
   });
 
   private Main2 = this.RULE('Main2', () => {
     this.SUBRULE(this.To, { LABEL: 'right' });
     this.CONSUME(ToLeft);
-    this.SUBRULE2(this.RelationExpression, { LABEL: 'left' });
+    this.SUBRULE(this.RelationExpression, { LABEL: 'left' });
   });
 
   private Pipe = this.RULE('Pipe', () => {
@@ -170,6 +172,9 @@ export class ChiboParser extends CstParser {
     this.CONSUME(LBracket);
     this.SUBRULE(this.RelationExpression);
     this.CONSUME(RBracket);
+    this.OPTION(() => {
+      this.SUBRULE(this.Function);
+    })
   });
 
   private Factor = this.RULE('Factor', () => {
@@ -179,6 +184,17 @@ export class ChiboParser extends CstParser {
       { ALT: () => this.SUBRULE(this.parenthesisExpression) },
       { ALT: () => this.CONSUME(StringLiteral) },
     ]);
+  });
+
+  private Function = this.RULE('Function', () => {
+    this.CONSUME(Arrow);
+    this.SUBRULE(this.FunctionImplementation)
+  });
+
+  private FunctionImplementation = this.RULE('FunctionImplementation', () => {
+    this.CONSUME(LCurly);
+    this.SUBRULE(this.Program);
+    this.CONSUME(RCurly);
   });
 
   private To = this.RULE('To', () => {

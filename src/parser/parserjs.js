@@ -135,14 +135,14 @@
         this.SUBRULE(this.Pipe, { LABEL: 'left' });
         this.MANY(() => {
           this.CONSUME(ToRight);
-          this.SUBRULE3(this.To, { LABEL: 'right' });
+          this.SUBRULE(this.To, { LABEL: 'right' });
         });
       });
 
       this.Main2 = this.RULE('Main2', () => {
         this.SUBRULE(this.To, { LABEL: 'right' });
         this.CONSUME(ToLeft);
-        this.SUBRULE2(this.RelationExpression, { LABEL: 'left' });
+        this.SUBRULE(this.RelationExpression, { LABEL: 'left' });
       });
 
       this.Pipe = this.RULE('Pipe', () => {
@@ -151,18 +151,6 @@
           this.CONSUME(Pipe);
           this.SUBRULE2(this.RelationExpression);
         });
-        /*
-        this.OR([
-          { ALT: () => {
-          	this.SUBRULE(this.RelationExpression);
-            this.MANY(() => {
-              this.CONSUME(Pipe);
-              this.SUBRULE2(this.RelationExpression);
-            });
-          } },
-          { ALT: () => this.SUBRULE2(this.Function) },
-        ]);
-        */
       });
 
       this.Expression = this.RULE('Expression', () => {
@@ -192,10 +180,9 @@
 
       this.Factor = this.RULE('Factor', () => {
         this.OR([
-          //{ ALT: () => this.SUBRULE(this.Function) },
           { ALT: () => this.CONSUME(Identifier) },
           { ALT: () => this.CONSUME(NumberLiteral) },
-          { ALT: () => this.SUBRULE2(this.parenthesisExpression) },
+          { ALT: () => this.SUBRULE(this.parenthesisExpression) },
           { ALT: () => this.CONSUME(StringLiteral) },
         ]);
       });
@@ -207,7 +194,7 @@
 
       this.FunctionImplementation = this.RULE('FunctionImplementation', () => {
         this.CONSUME(LCurly);
-        this.CONSUME(Identifier);
+        this.SUBRULE(this.Program);
         this.CONSUME(RCurly);
       });
 
