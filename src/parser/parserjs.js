@@ -90,8 +90,9 @@
     pattern: /(?!-)>/,
     categories: RelationalOperator,
   });
-  const Equal = createToken({ name: 'Equal', pattern: /(?!<>)=/, categories: RelationalOperator });
+  const Equal = createToken({ name: 'Equal', pattern: /(?!<>)=(?!>)/, categories: RelationalOperator });
   const Pipe = createToken({ name: 'Pipe', pattern: /(?!-)>>/ });
+  const Arrow = createToken({ name: 'Arrow', pattern: /(?!>)=>/ });
 
   const RelationalOperatorTokens = [
     RelationalOperator,
@@ -100,6 +101,7 @@
     OverThan,
     LessThan,
     Equal,
+    Arrow,
   ];
 
   const allTokens = [...Tokens, ...BracketTokens, ...OperatorTokens, ...RelationalOperatorTokens];
@@ -133,7 +135,7 @@
         this.SUBRULE(this.Pipe, { LABEL: 'left' });
         this.MANY(() => {
           this.CONSUME(ToRight);
-          this.SUBRULE2(this.To, { LABEL: 'right' });
+          this.SUBRULE3(this.To, { LABEL: 'right' });
         });
       });
 
@@ -149,6 +151,18 @@
           this.CONSUME(Pipe);
           this.SUBRULE2(this.RelationExpression);
         });
+        /*
+        this.OR([
+          { ALT: () => {
+          	this.SUBRULE(this.RelationExpression);
+            this.MANY(() => {
+              this.CONSUME(Pipe);
+              this.SUBRULE2(this.RelationExpression);
+            });
+          } },
+          { ALT: () => this.SUBRULE2(this.Function) },
+        ]);
+        */
       });
 
       this.Expression = this.RULE('Expression', () => {
@@ -171,15 +185,30 @@
         this.CONSUME(LBracket);
         this.SUBRULE(this.RelationExpression);
         this.CONSUME(RBracket);
+        this.OPTION(() => {
+          this.SUBRULE(this.Function);
+        })
       });
 
       this.Factor = this.RULE('Factor', () => {
         this.OR([
+          //{ ALT: () => this.SUBRULE(this.Function) },
           { ALT: () => this.CONSUME(Identifier) },
           { ALT: () => this.CONSUME(NumberLiteral) },
-          { ALT: () => this.SUBRULE(this.parenthesisExpression) },
+          { ALT: () => this.SUBRULE2(this.parenthesisExpression) },
           { ALT: () => this.CONSUME(StringLiteral) },
         ]);
+      });
+
+      this.Function = this.RULE('Function', () => {
+        this.CONSUME(Arrow);
+        this.SUBRULE(this.FunctionImplementation)
+      });
+
+      this.FunctionImplementation = this.RULE('FunctionImplementation', () => {
+        this.CONSUME(LCurly);
+        this.CONSUME(Identifier);
+        this.CONSUME(RCurly);
       });
 
       this.To = this.RULE('To', () => {
