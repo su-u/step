@@ -1,7 +1,8 @@
 {
   "restartable": "rs",
   "watch": [
-    "build"
+    "build",
+    "chb/main.chb"
   ],
   "env": {
     "NODE_ENV": "development"
