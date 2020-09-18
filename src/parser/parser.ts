@@ -87,7 +87,11 @@ const LessThan = createToken({
   pattern: /(?!-)>/,
   categories: RelationalOperator,
 });
-const Equal = createToken({ name: 'Equal', pattern: /(?!<>)=(?!>)/, categories: RelationalOperator });
+const Equal = createToken({
+  name: 'Equal',
+  pattern: /(?!<>)=(?!>)/,
+  categories: RelationalOperator,
+});
 const Pipe = createToken({ name: 'Pipe', pattern: /(?!-)>>/ });
 const Arrow = createToken({ name: 'Arrow', pattern: /(?!>)=>/ });
 
@@ -174,7 +178,7 @@ export class ChiboParser extends CstParser {
     this.CONSUME(RBracket);
     this.OPTION(() => {
       this.SUBRULE(this.Function);
-    })
+    });
   });
 
   private Factor = this.RULE('Factor', () => {
@@ -188,7 +192,7 @@ export class ChiboParser extends CstParser {
 
   private Function = this.RULE('Function', () => {
     this.CONSUME(Arrow);
-    this.SUBRULE(this.FunctionImplementation)
+    this.SUBRULE(this.FunctionImplementation);
   });
 
   private FunctionImplementation = this.RULE('FunctionImplementation', () => {

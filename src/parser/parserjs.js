@@ -90,7 +90,11 @@
     pattern: /(?!-)>/,
     categories: RelationalOperator,
   });
-  const Equal = createToken({ name: 'Equal', pattern: /(?!<>)=(?!>)/, categories: RelationalOperator });
+  const Equal = createToken({
+    name: 'Equal',
+    pattern: /(?!<>)=(?!>)/,
+    categories: RelationalOperator,
+  });
   const Pipe = createToken({ name: 'Pipe', pattern: /(?!-)>>/ });
   const Arrow = createToken({ name: 'Arrow', pattern: /(?!>)=>/ });
 
@@ -175,7 +179,7 @@
         this.CONSUME(RBracket);
         this.OPTION(() => {
           this.SUBRULE(this.Function);
-        })
+        });
       });
 
       this.Factor = this.RULE('Factor', () => {
@@ -189,7 +193,7 @@
 
       this.Function = this.RULE('Function', () => {
         this.CONSUME(Arrow);
-        this.SUBRULE(this.FunctionImplementation)
+        this.SUBRULE(this.FunctionImplementation);
       });
 
       this.FunctionImplementation = this.RULE('FunctionImplementation', () => {
