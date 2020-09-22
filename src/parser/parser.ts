@@ -92,7 +92,7 @@ const Equal = createToken({
   pattern: /(?!<>)=(?!>)/,
   categories: RelationalOperator,
 });
-const Pipe = createToken({ name: 'Pipe', pattern: /(?!-)>>/ });
+const PipeToken = createToken({ name: 'PipeToken', pattern: /(?!-)\|>/ });
 const Arrow = createToken({ name: 'Arrow', pattern: /(?!>)=>/ });
 
 const RelationalOperatorTokens = [
@@ -103,6 +103,7 @@ const RelationalOperatorTokens = [
   LessThan,
   Equal,
   Arrow,
+  PipeToken,
 ];
 
 const allTokens = [...Tokens, ...BracketTokens, ...OperatorTokens, ...RelationalOperatorTokens];
@@ -151,8 +152,8 @@ export class ChiboParser extends CstParser {
   private Pipe = this.RULE('Pipe', () => {
     this.SUBRULE(this.RelationExpression);
     this.MANY(() => {
-      this.CONSUME(Pipe);
-      this.SUBRULE2(this.RelationExpression);
+      this.CONSUME(PipeToken);
+      this.CONSUME(Identifier);
     });
   });
 
