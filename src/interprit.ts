@@ -1,27 +1,67 @@
-export const interprit = (ast) => {
-  switch (ast['type']) {
-    case 'Program':
-      for (let line of ast['body']) {
-        interprit(line);
-      }
+import { Rules } from './types/rules';
+import logger from "./logger";
+
+export const interprit = (ast: any) => {
+  logger.info(ast.name);
+  switch (ast.name) {
+    case Rules.Program:
+      Object.keys(ast.children).forEach((rule) => {
+        for (let line of ast.children[rule]) {
+          interprit(line);
+        }
+      });
       break;
-    case 'ExpressionStatement':
+    case Rules.Main:
+      interprit(ast.children.left[0]);
+      const op = ast.children.ToRight[0];
+      interprit(ast.children.right[0]);
       break;
-    case 'AssignmentExpression':
+    case Rules.Main2:
+      Object.keys(ast.children).forEach((rule) => {
+        logger.info(rule);
+        interprit(rule);
+      });
       break;
-    case 'LambdaExpresson':
+    case Rules.Pipe:
+      Object.keys(ast.children).forEach((rule) => {
+        for (let line of ast.children[rule]) {
+          interprit(line);
+        }
+      });
       break;
-    case 'BlockStatement':
+    case Rules.RelationExpression:
+      Object.keys(ast.children).forEach((rule) => {
+        for (let line of ast.children[rule]) {
+          interprit(line);
+        }
+      });
       break;
-    case 'CallExp@ression':
+    case Rules.Expression:
+      Object.keys(ast.children).forEach((rule) => {
+        for (let line of ast.children[rule]) {
+          if (line.image === undefined) {
+            interprit(line);
+          } else {
+          }
+        }
+      });
       break;
-    case 'PipelineExpression':
+    case Rules.Term:
+      Object.keys(ast.children).forEach((rule) => {
+        for (let line of ast.children[rule]) {
+          interprit(line);
+        }
+      });
       break;
-    case 'MemberExpression':
+    case Rules.Factor:
+      Object.keys(ast.children).forEach((rule) => {
+        for (let line of ast.children[rule]) {
+          logger.info(line.image);
+        }
+      });
       break;
-    case 'NumericalLiteral':
-      break;
-    case 'identifier':
+    case Rules.To:
+      logger.info(ast.children.Identifier[0].image);
       break;
   }
 };
