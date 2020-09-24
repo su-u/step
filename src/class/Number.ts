@@ -1,5 +1,9 @@
-import { ObjectClassObject } from '@/class/Object';
-import { ObjectEnum as TYPE } from '@/old/objectEnum';
+import { ObjectClassObject } from './Object';
+import { ObjectEnum as TYPE } from '../old/objectEnum';
+
+type LiteralType<T> = any;
+type ParamsType<T> = any;
+type ClassBaseObjectType = any;
 
 export type NumberObjectMethodType = {
   '+': <T extends number>(obj: LiteralType<T>, params: ParamsType<any>) => LiteralType<number>;

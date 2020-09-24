@@ -47,6 +47,6 @@ export const interpreter = (ast: any) => {
       return factor({ ast });
     case Rules.To:
       logger.info(ast.children.Identifier[0].image);
-      break;
+      return ast.children.Identifier[0].image;
   }
 };

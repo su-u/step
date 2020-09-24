@@ -11,5 +11,8 @@ export const expression = ({ ast }: IInterpreterRules) => {
       return ast.children[rule][0].image;
     }
   });
+  console.log(result);
+  const c = result[0][0] + result[0][1];
+  console.log(c);
   return result;
 };

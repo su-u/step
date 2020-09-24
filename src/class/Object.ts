@@ -1,4 +1,8 @@
-import { ObjectEnum as TYPE } from '@/old/objectEnum';
+import { ObjectEnum as TYPE } from '../old/objectEnum';
+
+type ClassBaseObjectType = any;
+type LiteralType<T> = any;
+type ParamsType<T> = any;
 
 export type ObjectMethodType = {
   to_s: (obj: any) => string;

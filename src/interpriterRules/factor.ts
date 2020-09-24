@@ -1,7 +1,7 @@
 import { IInterpreterRules } from './types';
 
 export const factor = ({ ast }: IInterpreterRules) => {
-  Object.keys(ast.children).forEach((rule) => {
-    return ast.children[rule][0].image;
-  });
+  if (ast.children.NumberLiteral !== undefined) {
+    return parseInt(ast.children.NumberLiteral[0].image);
+  }
 };
