@@ -3,6 +3,8 @@ import logger from './logger';
 import { term } from './interpriterRules/term';
 import { factor } from './interpriterRules/factor';
 import { expression } from './interpriterRules/expression';
+import { relationExpression } from './interpriterRules/relationExpression';
+import { pipe } from './interpriterRules/pipe';
 
 export const interpreter = (ast: any) => {
   logger.info(ast.name);
@@ -26,19 +28,9 @@ export const interpreter = (ast: any) => {
       });
       break;
     case Rules.Pipe:
-      Object.keys(ast.children).forEach((rule) => {
-        for (let line of ast.children[rule]) {
-          interpreter(line);
-        }
-      });
-      break;
+      return pipe({ ast });
     case Rules.RelationExpression:
-      Object.keys(ast.children).forEach((rule) => {
-        for (let line of ast.children[rule]) {
-          interpreter(line);
-        }
-      });
-      break;
+      return relationExpression({ ast });
     case Rules.Expression:
       return expression({ ast });
     case Rules.Term:
