@@ -1,4 +1,4 @@
-import { ObjectEnum as TYPE } from '@/objectEnum';
+import { ObjectEnum as TYPE } from '@/old/objectEnum';
 
 export type ObjectMethodType = {
   to_s: (obj: any) => string;

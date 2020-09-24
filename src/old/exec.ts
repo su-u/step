@@ -1,6 +1,6 @@
-import { ObjectEnum } from '@/objectEnum';
-import { globalObject } from '@/global';
-import { MethodType, ClassObjectType } from '@/types';
+import { ObjectEnum } from '@/old/objectEnum';
+import { globalObject } from '@/old/global';
+import { MethodType, ClassObjectType } from '@/old/types';
 
 /**
  * メソッドの実行（メソッドが存在しない場合は親クラスを探しに行く）

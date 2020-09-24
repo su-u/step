@@ -864,6 +864,55 @@ exports[`chevrotain ./chb/example1_3.chb 1`] = `
                 ]
               }
             }
+          ],
+          \\"ToRight\\": [
+            {
+              \\"image\\": \\"->\\",
+              \\"startOffset\\": 7,
+              \\"endOffset\\": 8,
+              \\"startLine\\": 1,
+              \\"endLine\\": 1,
+              \\"startColumn\\": 8,
+              \\"endColumn\\": 9,
+              \\"tokenTypeIdx\\": 14,
+              \\"tokenType\\": {
+                \\"name\\": \\"ToRight\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 14,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false
+              }
+            }
+          ],
+          \\"right\\": [
+            {
+              \\"name\\": \\"To\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"value\\",
+                    \\"startOffset\\": 10,
+                    \\"endOffset\\": 14,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 11,
+                    \\"endColumn\\": 15,
+                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 7,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
           ]
         }
       }

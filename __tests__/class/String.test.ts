@@ -1,6 +1,6 @@
 import { StringClassObject } from '@/class/String';
 import { ObjectClassObject } from '@/class/Object';
-import { ClassEnum, ObjectEnum } from '@/objectEnum';
+import { ClassEnum, ObjectEnum } from '@/old/objectEnum';
 
 describe('String Class', (): void => {
   test("クラス名が'String'かどうか", (): void => {

@@ -1,8 +1,8 @@
 import logger from '@/logger';
 logger.level = 'debug';
-import { readAst } from '@/ast';
+import { readAst } from '@/old/ast';
 import { writeAstToJson } from '@/util/file';
-import { syntax } from '@/syntax';
+import { syntax } from '@/old/syntax';
 
 if (process.argv.length == 0) {
   logger.info('Chiboのソースコードを指定してください');

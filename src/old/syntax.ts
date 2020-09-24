@@ -1,6 +1,6 @@
-import { globalObject } from '@/global';
-import { ObjectEnum } from '@/objectEnum';
-import { binaryExec } from '@/exec';
+import { globalObject } from '@/old/global';
+import { ObjectEnum } from '@/old/objectEnum';
+import { binaryExec } from '@/old/exec';
 
 export const syntax = (ast: AstType): void => {
   switch (ast.type) {

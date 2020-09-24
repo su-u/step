@@ -1,6 +1,6 @@
 import { NumberClassObject } from '@/class/Number';
-import { exec } from '@/exec';
-import { ClassEnum, ObjectEnum } from '@/objectEnum';
+import { exec } from '@/old/exec';
+import { ClassEnum, ObjectEnum } from '@/old/objectEnum';
 import { StringClassObject } from '@/class/String';
 
 describe('exec test', (): void => {

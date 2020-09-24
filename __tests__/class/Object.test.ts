@@ -1,5 +1,5 @@
 import { ObjectClassObject } from '@/class/Object';
-import { ObjectEnum, ClassEnum } from '@/objectEnum';
+import { ObjectEnum, ClassEnum } from '@/old/objectEnum';
 
 describe('Object Class', (): void => {
   test("クラス名が'Object'かどうか", (): void => {

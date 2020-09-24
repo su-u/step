@@ -2,7 +2,7 @@ import { Rules } from './types/rules';
 import logger from './logger';
 import { term } from './interpriterRules/term';
 import { factor } from './interpriterRules/factor';
-import { expression } from "./interpriterRules/expression";
+import { expression } from './interpriterRules/expression';
 
 export const interpreter = (ast: any) => {
   logger.info(ast.name);

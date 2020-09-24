@@ -1,6 +1,6 @@
-import { ClassEnum, ObjectEnum } from '@/objectEnum';
-import { binaryExec } from '@/exec';
-import { globalObject, globalObjectInit } from '@/global';
+import { ClassEnum, ObjectEnum } from '@/old/objectEnum';
+import { binaryExec } from '@/old/exec';
+import { globalObject, globalObjectInit } from '@/old/global';
 
 describe('binaryExec test', (): void => {
   beforeEach(() => {

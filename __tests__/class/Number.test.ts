@@ -1,6 +1,6 @@
 import { NumberClassObject } from '@/class/Number';
 import { ObjectClassObject } from '@/class/Object';
-import { ObjectEnum, ClassEnum } from '@/objectEnum';
+import { ObjectEnum, ClassEnum } from '@/old/objectEnum';
 
 const toNumberLiteralType = (value: number): LiteralType<number> => {
   return {
