@@ -153,7 +153,7 @@
         this.SUBRULE(this.RelationExpression, { LABEL: 'left' });
       });
 
-      this.Main3 = this.RULE('Main3', () => {
+      this.Function = this.RULE('Function', () => {
         this.CONSUME(LBracket);
         this.MANY_SEP({
           SEP: Comma, DEF: () => {
@@ -204,11 +204,6 @@
         ]);
       });
 
-      this.Function = this.RULE('Function', () => {
-        this.CONSUME(Arrow);
-        this.SUBRULE(this.FunctionImplementation);
-      });
-
       this.FunctionImplementation = this.RULE('FunctionImplementation', () => {
         this.CONSUME(LCurly);
         this.SUBRULE(this.Program);
@@ -222,7 +217,7 @@
       this.Substitutable = this.RULE('Substitutable', () => {
         this.OR([
           { ALT: () => this.SUBRULE(this.RelationExpression) },
-          { ALT: () => this.SUBRULE1(this.Main3) },
+          { ALT: () => this.SUBRULE1(this.Function) },
         ]);
       });
 
