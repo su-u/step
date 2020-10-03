@@ -33,8 +33,9 @@
   const RCurly = createToken({ name: 'RCurly', pattern: /}/, label: '}' });
   const LSquare = createToken({ name: 'LSquare', pattern: /\[/, label: '[' });
   const RSquare = createToken({ name: 'RSquare', pattern: /]/, label: ']' });
+  const Comma = createToken({name: "Comma", pattern: /,/});
 
-  const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare];
+  const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma];
 
   // const SubstitutionOperator = createToken({ name: 'SubstitutionOperator', pattern: Lexer.NA });
   const ToRight = createToken({
@@ -109,6 +110,8 @@
     PipeToken,
   ];
 
+  //const Func = createToken({name: 'Func', pattern: /{{ident}}\\(')/);
+
   const allTokens = [...Tokens, ...BracketTokens, ...OperatorTokens, ...RelationalOperatorTokens];
   const ChiboLexer = new Lexer(allTokens);
 
@@ -150,8 +153,20 @@
         this.SUBRULE(this.RelationExpression, { LABEL: 'left' });
       });
 
+      this.Main3 = this.RULE('Main3', () => {
+        this.CONSUME(LBracket);
+        this.MANY_SEP({
+          SEP: Comma, DEF: () => {
+            this.CONSUME(Identifier);
+          },
+        });
+        this.CONSUME(RBracket);
+        this.CONSUME(Arrow);
+        this.SUBRULE(this.FunctionImplementation);
+      });
+
       this.Pipe = this.RULE('Pipe', () => {
-        this.SUBRULE(this.RelationExpression);
+        this.SUBRULE(this.Substitutable);
         this.MANY(() => {
           this.CONSUME(PipeToken);
           this.CONSUME(Identifier);
@@ -178,17 +193,14 @@
         this.CONSUME(LBracket);
         this.SUBRULE(this.RelationExpression);
         this.CONSUME(RBracket);
-        this.OPTION(() => {
-          this.SUBRULE(this.Function);
-        });
       });
 
       this.Factor = this.RULE('Factor', () => {
         this.OR([
-          { ALT: () => this.CONSUME(Identifier) },
+          //{ ALT: () => this.CONSUME(Identifier) },
           { ALT: () => this.CONSUME(NumberLiteral) },
-          { ALT: () => this.SUBRULE(this.parenthesisExpression) },
           { ALT: () => this.CONSUME(StringLiteral) },
+          { ALT: () => this.SUBRULE(this.parenthesisExpression) },
         ]);
       });
 
@@ -205,6 +217,13 @@
 
       this.To = this.RULE('To', () => {
         this.CONSUME(Identifier);
+      });
+
+      this.Substitutable = this.RULE('Substitutable', () => {
+        this.OR([
+          { ALT: () => this.SUBRULE(this.RelationExpression) },
+          { ALT: () => this.SUBRULE1(this.Main3) },
+        ]);
       });
 
       this.RelationExpression = this.RULE('RelationExpression', () => {
