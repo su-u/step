@@ -172,7 +172,9 @@
         });
         this.CONSUME(RBracket);
         this.CONSUME(Arrow);
-        this.SUBRULE(this.FunctionImplementation);
+        this.CONSUME(LCurly);
+        this.SUBRULE(this.Program);
+        this.CONSUME(RCurly);
       });
 
       this.Pipe = this.RULE('Pipe', () => {
@@ -213,12 +215,6 @@
           { ALT: () => this.CONSUME(StringLiteral) },
           { ALT: () => this.SUBRULE(this.parenthesisExpression) },
         ]);
-      });
-
-      this.FunctionImplementation = this.RULE('FunctionImplementation', () => {
-        this.CONSUME(LCurly);
-        this.SUBRULE(this.Program);
-        this.CONSUME(RCurly);
       });
 
       this.To = this.RULE('To', () => {
