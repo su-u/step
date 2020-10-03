@@ -33,7 +33,7 @@
   const RCurly = createToken({ name: 'RCurly', pattern: /}/, label: '}' });
   const LSquare = createToken({ name: 'LSquare', pattern: /\[/, label: '[' });
   const RSquare = createToken({ name: 'RSquare', pattern: /]/, label: ']' });
-  const Comma = createToken({name: "Comma", pattern: /,/});
+  const Comma = createToken({ name: 'Comma', pattern: /,/ });
 
   const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma];
 
@@ -110,6 +110,8 @@
     PipeToken,
   ];
 
+  const eachToken = createToken({ name: 'Each', pattern: /each/ });
+
   //const Func = createToken({name: 'Func', pattern: /{{ident}}\\(')/);
 
   const allTokens = [...Tokens, ...BracketTokens, ...OperatorTokens, ...RelationalOperatorTokens];
@@ -156,7 +158,8 @@
       this.Function = this.RULE('Function', () => {
         this.CONSUME(LBracket);
         this.MANY_SEP({
-          SEP: Comma, DEF: () => {
+          SEP: Comma,
+          DEF: () => {
             this.CONSUME(Identifier);
           },
         });
