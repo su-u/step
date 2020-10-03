@@ -227,15 +227,6 @@
 
       this.Substitutable = this.RULE('Substitutable', () => {
         this.OR([
-          {
-            ALT: () => {
-              this.CONSUME(NumberLiteral);
-              // this.SUBRULE(this.Expression);
-              this.CONSUME(tildeToken);
-              // this.SUBRULE2(this.Expression);
-              this.CONSUME2(NumberLiteral);
-            },
-          },
           { ALT: () => this.SUBRULE(this.RelationExpression) },
           { ALT: () => this.SUBRULE1(this.Function) },
         ]);
@@ -250,6 +241,7 @@
             { ALT: () => this.CONSUME(OverThan) },
             { ALT: () => this.CONSUME(LessThan) },
             { ALT: () => this.CONSUME(Equal) },
+            { ALT: () => this.CONSUME(tildeToken) },
           ]);
           this.SUBRULE2(this.Expression);
         });
