@@ -178,8 +178,9 @@
       this.Pipe = this.RULE('Pipe', () => {
         this.SUBRULE(this.Substitutable);
         this.MANY(() => {
+          //this.SUBRULE(this.Substitutable);
           this.CONSUME(PipeToken);
-          this.CONSUME(Identifier);
+          this.OPTION(() => this.CONSUME(Identifier));
         });
       });
 
@@ -229,7 +230,9 @@
           {
             ALT: () => {
               this.CONSUME(NumberLiteral);
+              // this.SUBRULE(this.Expression);
               this.CONSUME(tildeToken);
+              // this.SUBRULE2(this.Expression);
               this.CONSUME2(NumberLiteral);
             },
           },
