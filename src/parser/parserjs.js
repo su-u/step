@@ -111,10 +111,17 @@
   ];
 
   const eachToken = createToken({ name: 'Each', pattern: /each/ });
+  const tildeToken = createToken({ name: 'Tilde', pattern: /~/ });
 
-  const BuildInTokens = [eachToken];
+  const BuildInTokens = [eachToken, tildeToken];
 
-  const allTokens = [...Tokens, ...BracketTokens, ...OperatorTokens, ...RelationalOperatorTokens, ...BuildInTokens];
+  const allTokens = [
+    ...BuildInTokens,
+    ...Tokens,
+    ...BracketTokens,
+    ...OperatorTokens,
+    ...RelationalOperatorTokens,
+  ];
   const ChiboLexer = new Lexer(allTokens);
 
   // ----------------- parser -----------------
@@ -219,6 +226,13 @@
 
       this.Substitutable = this.RULE('Substitutable', () => {
         this.OR([
+          {
+            ALT: () => {
+              this.CONSUME(NumberLiteral);
+              this.CONSUME(tildeToken);
+              this.CONSUME2(NumberLiteral);
+            },
+          },
           { ALT: () => this.SUBRULE(this.RelationExpression) },
           { ALT: () => this.SUBRULE1(this.Function) },
         ]);
