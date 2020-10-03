@@ -112,9 +112,9 @@
 
   const eachToken = createToken({ name: 'Each', pattern: /each/ });
 
-  //const Func = createToken({name: 'Func', pattern: /{{ident}}\\(')/);
+  const BuildInTokens = [eachToken];
 
-  const allTokens = [...Tokens, ...BracketTokens, ...OperatorTokens, ...RelationalOperatorTokens];
+  const allTokens = [...Tokens, ...BracketTokens, ...OperatorTokens, ...RelationalOperatorTokens, ...BuildInTokens];
   const ChiboLexer = new Lexer(allTokens);
 
   // ----------------- parser -----------------
