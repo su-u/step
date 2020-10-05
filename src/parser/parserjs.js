@@ -159,7 +159,7 @@
       this.Main2 = this.RULE('Main2', () => {
         this.SUBRULE(this.To, { LABEL: 'right' });
         this.CONSUME(ToLeft);
-        this.SUBRULE(this.RelationExpression, { LABEL: 'left' });
+        this.SUBRULE(this.Pipe, { LABEL: 'left' });
       });
 
       this.Function = this.RULE('Function', () => {
