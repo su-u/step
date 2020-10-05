@@ -111,9 +111,11 @@
   ];
 
   const eachToken = createToken({ name: 'Each', pattern: /each/ });
+  const functionToken = createToken({ name: 'Function', pattern: /function/ });
+  const functionNameToken = createToken({ name: 'FunctionName', pattern: /[a-zA-z][0-9a-zA-Z]*\(/ });
   const tildeToken = createToken({ name: 'Tilde', pattern: /~/ });
 
-  const BuildInTokens = [eachToken, tildeToken];
+  const BuildInTokens = [functionToken, functionNameToken, eachToken, tildeToken];
 
   const allTokens = [
     ...BuildInTokens,
@@ -134,6 +136,11 @@
       this.Program = this.RULE('Program', () => {
         this.MANY(() => {
           this.OR([
+            {
+              ALT: () => {
+                this.SUBRULE3(this.Function);
+              },
+            },
             {
               ALT: () => {
                 this.SUBRULE(this.Main2);
@@ -163,7 +170,8 @@
       });
 
       this.Function = this.RULE('Function', () => {
-        this.CONSUME(LBracket);
+        this.CONSUME(functionToken);
+        this.CONSUME(functionNameToken);
         this.MANY_SEP({
           SEP: Comma,
           DEF: () => {
@@ -171,7 +179,6 @@
           },
         });
         this.CONSUME(RBracket);
-        this.CONSUME(Arrow);
         this.CONSUME(LCurly);
         this.SUBRULE(this.Program);
         this.CONSUME(RCurly);
@@ -224,7 +231,7 @@
       this.Substitutable = this.RULE('Substitutable', () => {
         this.OR([
           { ALT: () => this.SUBRULE(this.RelationExpression) },
-          { ALT: () => this.SUBRULE1(this.Function) },
+          //{ ALT: () => this.SUBRULE1(this.Function) },
         ]);
       });
 
