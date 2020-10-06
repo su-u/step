@@ -87,7 +87,7 @@
     Equal,
   ];
 
-  const eachToken = createToken({ name: 'EachToken', pattern: /each/ });
+  const eachToken = createToken({ name: 'EachToken', pattern: /each\(/ });
   const ifToken = createToken({ name: 'IfToken', pattern: /if/ });
   const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
   const functionNameToken = createToken({
@@ -108,8 +108,8 @@
 
   const BuildInTokens = [
     functionToken,
-    functionNameToken,
     eachToken,
+    functionNameToken,
     tildeToken,
     ifToken,
     ArrowToken,
@@ -152,18 +152,13 @@
         });
       });
 
-      this.ToRight = this.RULE('ToRight', () => {
-        this.SUBRULE(this.Pipe, { LABEL: 'left' });
-        this.MANY(() => {
-          this.CONSUME(ToRightToken);
-          this.CONSUME(Identifier, { LABEL: 'right' });
-        });
-      });
-
-      this.ToLeft = this.RULE('ToLeft', () => {
-        this.CONSUME(Identifier, { LABEL: 'right' });
-        this.CONSUME(ToLeftToken);
-        this.SUBRULE(this.Pipe, { LABEL: 'left' });
+      this.Each = this.RULE('Each', () => {
+        this.CONSUME(eachToken);
+        this.CONSUME(Identifier);
+        this.CONSUME(RBracket);
+        this.CONSUME(LCurly);
+        this.SUBRULE(this.Program);
+        this.CONSUME(RCurly);
       });
 
       this.Function = this.RULE('Function', () => {
@@ -181,12 +176,29 @@
         this.CONSUME(RCurly);
       });
 
+      this.ToRight = this.RULE('ToRight', () => {
+        this.SUBRULE(this.Pipe, { LABEL: 'left' });
+        this.MANY(() => {
+          this.CONSUME(ToRightToken);
+          this.CONSUME(Identifier, { LABEL: 'right' });
+        });
+      });
+
+      this.ToLeft = this.RULE('ToLeft', () => {
+        this.CONSUME(Identifier, { LABEL: 'right' });
+        this.CONSUME(ToLeftToken);
+        this.SUBRULE(this.Pipe, { LABEL: 'left' });
+      });
+
       this.Pipe = this.RULE('Pipe', () => {
         this.SUBRULE(this.RelationExpression);
         this.MANY(() => {
           this.CONSUME(PipeToken);
-          this.OPTION(() => this.CONSUME(Identifier));
-        });
+          this.OR([
+            { ALT: () => this.SUBRULE(this.Each) },
+            { ALT: () => this.CONSUME(Identifier) },
+          ]);
+        }, { LABEL: 'to' });
       });
 
       this.RelationExpression = this.RULE('RelationExpression', () => {
