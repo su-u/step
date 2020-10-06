@@ -138,7 +138,7 @@
           this.OR([
             {
               ALT: () => {
-                this.SUBRULE3(this.Function);
+                this.SUBRULE(this.Function);
               },
             },
             {
@@ -148,7 +148,7 @@
             },
             {
               ALT: () => {
-                this.SUBRULE2(this.Main);
+                this.SUBRULE(this.Main);
               },
             },
           ]);
