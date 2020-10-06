@@ -240,7 +240,6 @@
     }
   }
 
-  // for the playground to work the returned object must contain these fields
   return {
     lexer: ChiboLexer,
     parser: ChiboParser,
