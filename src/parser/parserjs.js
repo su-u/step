@@ -50,14 +50,7 @@
   const Multi = createToken({ name: 'Multi', pattern: /\*/, categories: MultiplicationOperator });
   const Div = createToken({ name: 'Div', pattern: /\//, categories: MultiplicationOperator });
 
-  const OperatorTokens = [
-    AdditionOperator,
-    Plus,
-    Minus,
-    MultiplicationOperator,
-    Multi,
-    Div,
-  ];
+  const OperatorTokens = [AdditionOperator, Plus, Minus, MultiplicationOperator, Multi, Div];
 
   const RelationalOperator = createToken({ name: 'RelationalOperator', pattern: Lexer.NA });
   const AmountMore = createToken({
@@ -104,16 +97,15 @@
   });
   const tildeToken = createToken({ name: 'TildeToken', pattern: /~/ });
   const PipeToken = createToken({ name: 'PipeToken', pattern: /(?!-)\|>/ });
-  const Arrow = createToken({ name: 'Arrow', pattern: /(?!>)=>/ });
-  const ToRight = createToken({
-    name: 'ToRight',
+  const ArrowToken = createToken({ name: 'Arrow', pattern: /(?!>)=>/ });
+  const ToRightToken = createToken({
+    name: 'ToRightToken',
     pattern: /(?!<)->/,
   });
-  const ToLeft = createToken({
-    name: 'ToLeft',
+  const ToLeftToken = createToken({
+    name: 'ToLeftToken',
     pattern: /<-(?!>)/,
   });
-
 
   const BuildInTokens = [
     functionToken,
@@ -121,10 +113,10 @@
     eachToken,
     tildeToken,
     ifToken,
-    Arrow,
+    ArrowToken,
     PipeToken,
-    ToRight,
-    ToLeft,
+    ToRightToken,
+    ToLeftToken,
   ];
 
   const allTokens = [
@@ -146,36 +138,32 @@
       this.Program = this.RULE('Program', () => {
         this.MANY(() => {
           this.OR([
-            {
-              ALT: () => {
-                this.SUBRULE(this.Function);
-              },
-            },
-            {
-              ALT: () => {
-                this.SUBRULE(this.Main2);
-              },
-            },
-            {
-              ALT: () => {
-                this.SUBRULE(this.Main);
-              },
-            },
+            { ALT: () => this.SUBRULE(this.Function) },
+            { ALT: () => this.SUBRULE(this.Assignment) },
           ]);
         });
       });
 
-      this.Main = this.RULE('Main', () => {
-        this.SUBRULE(this.Pipe, { LABEL: 'left' });
+      this.Assignment = this.RULE('Assignment', () => {
         this.MANY(() => {
-          this.CONSUME(ToRight);
-          this.SUBRULE(this.To, { LABEL: 'right' });
+          this.OR([
+            { ALT: () => this.SUBRULE(this.ToLeft) },
+            { ALT: () => this.SUBRULE(this.ToRight) },
+          ]);
         });
       });
 
-      this.Main2 = this.RULE('Main2', () => {
-        this.SUBRULE(this.To, { LABEL: 'right' });
-        this.CONSUME(ToLeft);
+      this.ToRight = this.RULE('ToRight', () => {
+        this.SUBRULE(this.Pipe, { LABEL: 'left' });
+        this.MANY(() => {
+          this.CONSUME(ToRightToken);
+          this.CONSUME(Identifier, { LABEL: 'right' });
+        });
+      });
+
+      this.ToLeft = this.RULE('ToLeft', () => {
+        this.CONSUME(Identifier, { LABEL: 'right' });
+        this.CONSUME(ToLeftToken);
         this.SUBRULE(this.Pipe, { LABEL: 'left' });
       });
 
@@ -195,11 +183,25 @@
       });
 
       this.Pipe = this.RULE('Pipe', () => {
-        this.SUBRULE(this.Substitutable);
+        this.SUBRULE(this.RelationExpression);
         this.MANY(() => {
-          //this.SUBRULE(this.Substitutable);
           this.CONSUME(PipeToken);
           this.OPTION(() => this.CONSUME(Identifier));
+        });
+      });
+
+      this.RelationExpression = this.RULE('RelationExpression', () => {
+        this.SUBRULE(this.Expression);
+        this.MANY(() => {
+          this.OR([
+            { ALT: () => this.CONSUME(AmountMore) },
+            { ALT: () => this.CONSUME(AmountLess) },
+            { ALT: () => this.CONSUME(OverThan) },
+            { ALT: () => this.CONSUME(LessThan) },
+            { ALT: () => this.CONSUME(Equal) },
+            { ALT: () => this.CONSUME(tildeToken) },
+          ]);
+          this.SUBRULE2(this.Expression);
         });
       });
 
@@ -219,12 +221,6 @@
         });
       });
 
-      this.parenthesisExpression = this.RULE('parenthesisExpression', () => {
-        this.CONSUME(LBracket);
-        this.SUBRULE(this.RelationExpression);
-        this.CONSUME(RBracket);
-      });
-
       this.Factor = this.RULE('Factor', () => {
         this.OR([
           { ALT: () => this.CONSUME(Identifier) },
@@ -234,30 +230,10 @@
         ]);
       });
 
-      this.To = this.RULE('To', () => {
-        this.CONSUME(Identifier);
-      });
-
-      this.Substitutable = this.RULE('Substitutable', () => {
-        this.OR([
-          { ALT: () => this.SUBRULE(this.RelationExpression) },
-          //{ ALT: () => this.SUBRULE1(this.Function) },
-        ]);
-      });
-
-      this.RelationExpression = this.RULE('RelationExpression', () => {
-        this.SUBRULE(this.Expression);
-        this.MANY(() => {
-          this.OR([
-            { ALT: () => this.CONSUME(AmountMore) },
-            { ALT: () => this.CONSUME(AmountLess) },
-            { ALT: () => this.CONSUME(OverThan) },
-            { ALT: () => this.CONSUME(LessThan) },
-            { ALT: () => this.CONSUME(Equal) },
-            { ALT: () => this.CONSUME(tildeToken) },
-          ]);
-          this.SUBRULE2(this.Expression);
-        });
+      this.parenthesisExpression = this.RULE('parenthesisExpression', () => {
+        this.CONSUME(LBracket);
+        this.SUBRULE(this.RelationExpression);
+        this.CONSUME(RBracket);
       });
 
       this.performSelfAnalysis();
