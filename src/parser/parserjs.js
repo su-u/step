@@ -37,7 +37,6 @@
 
   const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma];
 
-  // const SubstitutionOperator = createToken({ name: 'SubstitutionOperator', pattern: Lexer.NA });
   const AdditionOperator = createToken({ name: 'AdditionOperator', pattern: Lexer.NA });
   const Plus = createToken({ name: 'Plus', pattern: /\+/, categories: AdditionOperator });
   const Minus = createToken({
