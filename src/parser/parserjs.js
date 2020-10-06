@@ -105,10 +105,15 @@
     name: 'ToLeftToken',
     pattern: /<-(?!>)/,
   });
+  const ReturnToken = createToken({
+    name: 'ReturnToken',
+    pattern: /return/,
+  });
 
   const BuildInTokens = [
     functionToken,
     eachToken,
+    ReturnToken,
     functionNameToken,
     tildeToken,
     ifToken,
@@ -139,17 +144,16 @@
           this.OR([
             { ALT: () => this.SUBRULE(this.Function) },
             { ALT: () => this.SUBRULE(this.Assignment) },
+            { ALT: () => this.SUBRULE(this.ReturnStatement) },
           ]);
         });
       });
 
       this.Assignment = this.RULE('Assignment', () => {
-        this.MANY(() => {
-          this.OR([
-            { ALT: () => this.SUBRULE(this.ToLeft) },
-            { ALT: () => this.SUBRULE(this.ToRight) },
-          ]);
-        });
+        this.OR([
+          { ALT: () => this.SUBRULE(this.ToLeft) },
+          { ALT: () => this.SUBRULE(this.ToRight) },
+        ]);
       });
 
       this.Each = this.RULE('Each', () => {
@@ -245,6 +249,11 @@
         this.CONSUME(LBracket);
         this.SUBRULE(this.RelationExpression);
         this.CONSUME(RBracket);
+      });
+
+      this.ReturnStatement = this.RULE('returnStatement', () => {
+        this.CONSUME(ReturnToken);
+        this.SUBRULE(this.RelationExpression);
       });
 
       this.performSelfAnalysis();
