@@ -87,7 +87,7 @@
     Equal,
   ];
 
-  const eachToken = createToken({ name: 'EachToken', pattern: /each\(/ });
+  const eachToken = createToken({ name: 'EachToken', pattern: /each/ });
   const ifToken = createToken({ name: 'IfToken', pattern: /if/ });
   const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
   const functionNameToken = createToken({
@@ -109,18 +109,22 @@
     name: 'ReturnToken',
     pattern: /return/,
   });
+  const BreakToken = createToken({
+    name: 'BreakToken',
+    pattern: /break/,
+  });
 
   const BuildInTokens = [
     functionToken,
     eachToken,
     ReturnToken,
-    functionNameToken,
     tildeToken,
     ifToken,
     ArrowToken,
     PipeToken,
     ToRightToken,
     ToLeftToken,
+    functionNameToken,
   ];
 
   const allTokens = [
@@ -143,6 +147,7 @@
         this.MANY(() => {
           this.OR([
             { ALT: () => this.SUBRULE(this.Function) },
+            { ALT: () => this.SUBRULE(this.IfStatement) },
             { ALT: () => this.SUBRULE(this.Assignment) },
             { ALT: () => this.SUBRULE(this.ReturnStatement) },
           ]);
@@ -158,10 +163,28 @@
 
       this.Each = this.RULE('Each', () => {
         this.CONSUME(eachToken);
+        this.CONSUME(LBracket);
         this.CONSUME(Identifier);
         this.CONSUME(RBracket);
         this.CONSUME(LCurly);
         this.SUBRULE(this.Program);
+        this.CONSUME(RCurly);
+      });
+
+      this.IfStatement = this.RULE('IfStatement', () => {
+        this.CONSUME(ifToken);
+        this.CONSUME(LBracket);
+        this.SUBRULE(this.RelationExpression);
+        this.CONSUME(RBracket);
+        this.CONSUME(LCurly);
+        this.MANY(() => {
+          this.OR([
+            { ALT: () => this.SUBRULE(this.Function) },
+            { ALT: () => this.SUBRULE(this.IfStatement) },
+            { ALT: () => this.SUBRULE(this.Assignment) },
+            { ALT: () => this.CONSUME(BreakToken) },
+          ]);
+        });
         this.CONSUME(RCurly);
       });
 
@@ -241,6 +264,7 @@
           { ALT: () => this.CONSUME(Identifier) },
           { ALT: () => this.CONSUME(NumberLiteral) },
           { ALT: () => this.CONSUME(StringLiteral) },
+          { ALT: () => this.CONSUME(BoolLiteral) },
           { ALT: () => this.SUBRULE(this.parenthesisExpression) },
         ]);
       });
