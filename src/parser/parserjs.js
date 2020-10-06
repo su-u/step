@@ -111,11 +111,12 @@
   ];
 
   const eachToken = createToken({ name: 'EachToken', pattern: /each/ });
+  const ifToken = createToken({ name: 'IfToken', pattern: /if/ });
   const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
   const functionNameToken = createToken({ name: 'FunctionNameToken', pattern: /[a-zA-z][0-9a-zA-Z]*\(/ });
   const tildeToken = createToken({ name: 'TildeToken', pattern: /~/ });
 
-  const BuildInTokens = [functionToken, functionNameToken, eachToken, tildeToken];
+  const BuildInTokens = [functionToken, functionNameToken, eachToken, tildeToken, ifToken];
 
   const allTokens = [
     ...BuildInTokens,
