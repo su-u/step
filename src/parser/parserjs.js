@@ -25,7 +25,7 @@
     pattern: /[a-zA-z][0-9a-zA-Z]*/,
   });
 
-  const Tokens = [StringLiteral, NumberLiteral, WhiteSpace, BoolLiteral, Identifier];
+  const LiteralTokens = [StringLiteral, NumberLiteral, WhiteSpace, BoolLiteral, Identifier];
 
   const LBracket = createToken({ name: 'LBrackets', pattern: /\(/, label: '(' });
   const RBracket = createToken({ name: 'RBrackets', pattern: /\)/, label: ')' });
@@ -38,15 +38,6 @@
   const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma];
 
   // const SubstitutionOperator = createToken({ name: 'SubstitutionOperator', pattern: Lexer.NA });
-  const ToRight = createToken({
-    name: 'ToRight',
-    pattern: /(?!<)->/,
-  });
-  const ToLeft = createToken({
-    name: 'ToLeft',
-    pattern: /<-(?!>)/,
-  });
-
   const AdditionOperator = createToken({ name: 'AdditionOperator', pattern: Lexer.NA });
   const Plus = createToken({ name: 'Plus', pattern: /\+/, categories: AdditionOperator });
   const Minus = createToken({
@@ -60,8 +51,6 @@
   const Div = createToken({ name: 'Div', pattern: /\//, categories: MultiplicationOperator });
 
   const OperatorTokens = [
-    ToRight,
-    ToLeft,
     AdditionOperator,
     Plus,
     Minus,
@@ -96,8 +85,6 @@
     pattern: /(?!<>)=(?!>)/,
     categories: RelationalOperator,
   });
-  const PipeToken = createToken({ name: 'PipeToken', pattern: /(?!-)\|>/ });
-  const Arrow = createToken({ name: 'Arrow', pattern: /(?!>)=>/ });
 
   const RelationalOperatorTokens = [
     RelationalOperator,
@@ -106,21 +93,43 @@
     OverThan,
     LessThan,
     Equal,
-    Arrow,
-    PipeToken,
   ];
 
   const eachToken = createToken({ name: 'EachToken', pattern: /each/ });
   const ifToken = createToken({ name: 'IfToken', pattern: /if/ });
   const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
-  const functionNameToken = createToken({ name: 'FunctionNameToken', pattern: /[a-zA-z][0-9a-zA-Z]*\(/ });
+  const functionNameToken = createToken({
+    name: 'FunctionNameToken',
+    pattern: /[a-zA-z][0-9a-zA-Z]*\(/,
+  });
   const tildeToken = createToken({ name: 'TildeToken', pattern: /~/ });
+  const PipeToken = createToken({ name: 'PipeToken', pattern: /(?!-)\|>/ });
+  const Arrow = createToken({ name: 'Arrow', pattern: /(?!>)=>/ });
+  const ToRight = createToken({
+    name: 'ToRight',
+    pattern: /(?!<)->/,
+  });
+  const ToLeft = createToken({
+    name: 'ToLeft',
+    pattern: /<-(?!>)/,
+  });
 
-  const BuildInTokens = [functionToken, functionNameToken, eachToken, tildeToken, ifToken];
+
+  const BuildInTokens = [
+    functionToken,
+    functionNameToken,
+    eachToken,
+    tildeToken,
+    ifToken,
+    Arrow,
+    PipeToken,
+    ToRight,
+    ToLeft,
+  ];
 
   const allTokens = [
     ...BuildInTokens,
-    ...Tokens,
+    ...LiteralTokens,
     ...BracketTokens,
     ...OperatorTokens,
     ...RelationalOperatorTokens,
