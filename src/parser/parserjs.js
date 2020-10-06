@@ -110,10 +110,10 @@
     PipeToken,
   ];
 
-  const eachToken = createToken({ name: 'Each', pattern: /each/ });
-  const functionToken = createToken({ name: 'Function', pattern: /function/ });
-  const functionNameToken = createToken({ name: 'FunctionName', pattern: /[a-zA-z][0-9a-zA-Z]*\(/ });
-  const tildeToken = createToken({ name: 'Tilde', pattern: /~/ });
+  const eachToken = createToken({ name: 'EachToken', pattern: /each/ });
+  const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
+  const functionNameToken = createToken({ name: 'FunctionNameToken', pattern: /[a-zA-z][0-9a-zA-Z]*\(/ });
+  const tildeToken = createToken({ name: 'TildeToken', pattern: /~/ });
 
   const BuildInTokens = [functionToken, functionNameToken, eachToken, tildeToken];
 
@@ -217,7 +217,7 @@
 
       this.Factor = this.RULE('Factor', () => {
         this.OR([
-          //{ ALT: () => this.CONSUME(Identifier) },
+          { ALT: () => this.CONSUME(Identifier) },
           { ALT: () => this.CONSUME(NumberLiteral) },
           { ALT: () => this.CONSUME(StringLiteral) },
           { ALT: () => this.SUBRULE(this.parenthesisExpression) },
