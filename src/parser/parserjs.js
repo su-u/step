@@ -219,13 +219,16 @@
 
       this.Pipe = this.RULE('Pipe', () => {
         this.SUBRULE(this.RelationExpression);
-        this.MANY(() => {
-          this.CONSUME(PipeToken);
-          this.OR([
-            { ALT: () => this.SUBRULE(this.Each) },
-            { ALT: () => this.CONSUME(Identifier) },
-          ]);
-        }, { LABEL: 'to' });
+        this.MANY(
+          () => {
+            this.CONSUME(PipeToken);
+            this.OR([
+              { ALT: () => this.SUBRULE(this.Each) },
+              { ALT: () => this.CONSUME(Identifier) },
+            ]);
+          },
+          { LABEL: 'to' },
+        );
       });
 
       this.RelationExpression = this.RULE('RelationExpression', () => {
