@@ -27,13 +27,18 @@ describe('代入', () => {
     test('文字列代入', () => {
       const source = `
       val <- "Switch"
-      aaa <- val + "aaa"
       `;
       expect(sourceParse(source)).toMatchSnapshot();
     });
-    test('左辺に文字列代入', () => {
+    test('数値代入', () => {
       const source = `
-      val <- "Switch"
+      aaa <- 1
+      `;
+      expect(sourceParse(source)).toMatchSnapshot();
+    });
+    test('文字列演算代入', () => {
+      const source = `
+      val <- "str"
       aaa <- val + "aaa"
       `;
       expect(sourceParse(source)).toMatchSnapshot();

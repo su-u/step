@@ -8,6 +8,7 @@ const parse = (sourceName: string) => {
 
 describe('chevrotain', (): void => {
   const chbList: ReadonlyArray<string> = [
+    './chb/example1_2.chb',
     './chb/example1_3.chb',
     './chb/example1.chb',
     './chb/example2.chb',
