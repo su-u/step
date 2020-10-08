@@ -87,13 +87,10 @@
     Equal,
   ];
 
+  const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
   const eachToken = createToken({ name: 'EachToken', pattern: /each/ });
   const ifToken = createToken({ name: 'IfToken', pattern: /if/ });
-  const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
-  const functionNameToken = createToken({
-    name: 'FunctionNameToken',
-    pattern: /[a-zA-z][0-9a-zA-Z]*\(/,
-  });
+  const elseToken = createToken({ name: 'ElseToken', pattern: /else/ });
   const tildeToken = createToken({ name: 'TildeToken', pattern: /~/ });
   const PipeToken = createToken({ name: 'PipeToken', pattern: /(?!-)\|>/ });
   const ArrowToken = createToken({ name: 'Arrow', pattern: /(?!>)=>/ });
@@ -113,17 +110,23 @@
     name: 'BreakToken',
     pattern: /break/,
   });
+  const functionNameToken = createToken({
+    name: 'FunctionNameToken',
+    pattern: /[a-zA-z][0-9a-zA-Z]*\(/,
+  });
 
   const BuildInTokens = [
     functionToken,
     eachToken,
-    ReturnToken,
-    tildeToken,
     ifToken,
-    ArrowToken,
+    elseToken,
+    tildeToken,
     PipeToken,
+    ArrowToken,
     ToRightToken,
     ToLeftToken,
+    ReturnToken,
+    BreakToken,
     functionNameToken,
   ];
 
@@ -163,9 +166,11 @@
 
       this.Each = this.RULE('Each', () => {
         this.CONSUME(eachToken);
-        this.CONSUME(LBracket);
-        this.CONSUME(Identifier);
-        this.CONSUME(RBracket);
+        this.OPTION(() => {
+          this.CONSUME(LBracket);
+          this.CONSUME(Identifier);
+          this.CONSUME(RBracket);
+        });
         this.CONSUME(LCurly);
         this.SUBRULE(this.Program);
         this.CONSUME(RCurly);
@@ -177,15 +182,14 @@
         this.SUBRULE(this.RelationExpression);
         this.CONSUME(RBracket);
         this.CONSUME(LCurly);
-        this.MANY(() => {
-          this.OR([
-            { ALT: () => this.SUBRULE(this.Function) },
-            { ALT: () => this.SUBRULE(this.IfStatement) },
-            { ALT: () => this.SUBRULE(this.Assignment) },
-            { ALT: () => this.CONSUME(BreakToken) },
-          ]);
-        });
+        this.SUBRULE(this.BrockStatement);
         this.CONSUME(RCurly);
+        this.OPTION(() => {
+          this.CONSUME(elseToken);
+          this.CONSUME2(LCurly);
+          this.SUBRULE2(this.BrockStatement);
+          this.CONSUME2(RCurly);
+        });
       });
 
       this.Function = this.RULE('Function', () => {
@@ -202,6 +206,17 @@
         this.SUBRULE(this.Program);
         this.CONSUME(RCurly);
       });
+
+      this.BrockStatement = this.RULE('BrockStatement', () => {
+        this.MANY(() => {
+          this.OR([
+            { ALT: () => this.SUBRULE(this.Function) },
+            { ALT: () => this.SUBRULE(this.IfStatement) },
+            { ALT: () => this.SUBRULE(this.Assignment) },
+            { ALT: () => this.CONSUME(BreakToken) },
+          ]);
+        });
+      })
 
       this.ToRight = this.RULE('ToRight', () => {
         this.SUBRULE(this.Pipe, { LABEL: 'left' });
