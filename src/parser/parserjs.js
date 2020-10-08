@@ -238,11 +238,10 @@
           () => {
             this.CONSUME(PipeToken);
             this.OR([
-              { ALT: () => this.SUBRULE(this.Each) },
-              { ALT: () => this.CONSUME(Identifier) },
+              { ALT: () => this.SUBRULE(this.Each, { LABEL: 'to' },) },
+              { ALT: () => this.CONSUME(Identifier, { LABEL: 'to' },) },
             ]);
-          },
-          { LABEL: 'to' },
+          }
         );
       });
 

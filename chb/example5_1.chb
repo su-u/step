@@ -1,1 +1,1 @@
-( x ) => { x + x } -> k
+function func( x ) { return x + x }
