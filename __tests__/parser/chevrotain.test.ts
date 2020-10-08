@@ -6,10 +6,6 @@ const parse = (sourceName: string) => {
   return JSON.stringify(parseInput(inputText), undefined, 2);
 };
 
-const sourceParse = (source: string) => {
-  return JSON.stringify(parseInput(source), undefined, 2);
-}
-
 describe('chevrotain', (): void => {
   const chbList: ReadonlyArray<string> = [
     './chb/example1_3.chb',
@@ -25,21 +21,4 @@ describe('chevrotain', (): void => {
       expect(astJson).toMatchSnapshot();
     });
   });
-});
-
-describe('代入', () => {
-  test('case 1', () => {
-    const source = `
-    1 + 1 -> value
-    `
-    expect(sourceParse(source)).toMatchSnapshot();
-  });
-
-  test('case 2', () => {
-    const source = `
-    val <- "Switch"
-    aaa <- val + "aaa"
-    `
-    expect(sourceParse(source)).toMatchSnapshot();
-  })
 });

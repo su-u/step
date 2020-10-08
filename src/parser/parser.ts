@@ -157,10 +157,7 @@ export class ChiboParser extends CstParser {
   });
 
   private Assignment = this.RULE('Assignment', () => {
-    this.OR([
-      { ALT: () => this.SUBRULE(this.ToLeft) },
-      { ALT: () => this.SUBRULE(this.ToRight) },
-    ]);
+    this.OR([{ ALT: () => this.SUBRULE(this.ToLeft) }, { ALT: () => this.SUBRULE(this.ToRight) }]);
   });
 
   private Each = this.RULE('Each', () => {
@@ -215,7 +212,7 @@ export class ChiboParser extends CstParser {
         { ALT: () => this.CONSUME(BreakToken) },
       ]);
     });
-  })
+  });
 
   private ToRight = this.RULE('ToRight', () => {
     this.SUBRULE(this.Pipe, { LABEL: 'left' });
@@ -233,15 +230,13 @@ export class ChiboParser extends CstParser {
 
   private Pipe = this.RULE('Pipe', () => {
     this.SUBRULE(this.RelationExpression);
-    this.MANY(
-      () => {
-        this.CONSUME(PipeToken);
-        this.OR([
-          { ALT: () => this.SUBRULE(this.Each, { LABEL: 'to' },) },
-          { ALT: () => this.CONSUME(Identifier, { LABEL: 'to' },) },
-        ]);
-      }
-    );
+    this.MANY(() => {
+      this.CONSUME(PipeToken);
+      this.OR([
+        { ALT: () => this.SUBRULE(this.Each, { LABEL: 'to' }) },
+        { ALT: () => this.CONSUME(Identifier, { LABEL: 'to' }) },
+      ]);
+    });
   });
 
   private RelationExpression = this.RULE('RelationExpression', () => {

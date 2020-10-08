@@ -216,7 +216,7 @@
             { ALT: () => this.CONSUME(BreakToken) },
           ]);
         });
-      })
+      });
 
       this.ToRight = this.RULE('ToRight', () => {
         this.SUBRULE(this.Pipe, { LABEL: 'left' });
@@ -234,15 +234,13 @@
 
       this.Pipe = this.RULE('Pipe', () => {
         this.SUBRULE(this.RelationExpression);
-        this.MANY(
-          () => {
-            this.CONSUME(PipeToken);
-            this.OR([
-              { ALT: () => this.SUBRULE(this.Each, { LABEL: 'to' },) },
-              { ALT: () => this.CONSUME(Identifier, { LABEL: 'to' },) },
-            ]);
-          }
-        );
+        this.MANY(() => {
+          this.CONSUME(PipeToken);
+          this.OR([
+            { ALT: () => this.SUBRULE(this.Each, { LABEL: 'to' }) },
+            { ALT: () => this.CONSUME(Identifier, { LABEL: 'to' }) },
+          ]);
+        });
       });
 
       this.RelationExpression = this.RULE('RelationExpression', () => {
