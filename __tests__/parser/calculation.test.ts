@@ -50,5 +50,12 @@ describe('演算', () => {
       `;
       expect(sourceParse(source)).toMatchSnapshot();
     });
+
+    test('4', () => {
+      const source = `
+      (1 + 1) / (1100 * (10 - 11))
+      `;
+      expect(sourceParse(source)).toMatchSnapshot();
+    });
   });
 });

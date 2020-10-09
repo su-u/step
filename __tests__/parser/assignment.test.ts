@@ -22,6 +22,13 @@ describe('代入', () => {
       `;
       expect(sourceParse(source)).toMatchSnapshot();
     });
+
+    test('演算子代入', () => {
+      const source = `
+      1 ~ 10 -> value
+      `;
+      expect(sourceParse(source)).toMatchSnapshot();
+    });
   });
   describe('左辺', () => {
     test('文字列代入', () => {
@@ -30,16 +37,25 @@ describe('代入', () => {
       `;
       expect(sourceParse(source)).toMatchSnapshot();
     });
+
     test('数値代入', () => {
       const source = `
       aaa <- 1
       `;
       expect(sourceParse(source)).toMatchSnapshot();
     });
+
     test('文字列演算代入', () => {
       const source = `
       val <- "str"
       aaa <- val + "aaa"
+      `;
+      expect(sourceParse(source)).toMatchSnapshot();
+    });
+
+    test('演算子代入', () => {
+      const source = `
+      v <- 1 ~ 10
       `;
       expect(sourceParse(source)).toMatchSnapshot();
     });

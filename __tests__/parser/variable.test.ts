@@ -18,4 +18,16 @@ describe('変数', () => {
       expect(sourceParse(source)).toMatchSnapshot();
     });
   });
+
+  describe('式', () => {
+    test('if', () => {
+      const source = `
+      value <- 1 + 1
+      if (value) {
+      } else {
+      }
+      `;
+      expect(sourceParse(source)).toMatchSnapshot();
+    });
+  });
 });
