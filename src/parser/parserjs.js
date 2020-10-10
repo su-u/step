@@ -179,7 +179,7 @@
       this.IfStatement = this.RULE('IfStatement', () => {
         this.CONSUME(ifToken);
         this.CONSUME(LBracket);
-        this.SUBRULE(this.RelationExpression);
+        this.SUBRULE(this.RelationExpression, { LABEL: 'conditionalExpression' });
         this.CONSUME(RBracket);
         this.CONSUME(LCurly);
         this.SUBRULE(this.BrockStatement);
@@ -210,26 +210,26 @@
       this.BrockStatement = this.RULE('BrockStatement', () => {
         this.MANY(() => {
           this.OR([
-            { ALT: () => this.SUBRULE(this.Function) },
-            { ALT: () => this.SUBRULE(this.IfStatement) },
-            { ALT: () => this.SUBRULE(this.Assignment) },
-            { ALT: () => this.CONSUME(BreakToken) },
+            { ALT: () => this.SUBRULE(this.Function, { LABEL: 'statement' }) },
+            { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'statement' }) },
+            { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'statement' }) },
+            { ALT: () => this.CONSUME(BreakToken, { LABEL: 'statement' }) },
           ]);
         });
       });
 
       this.ToRight = this.RULE('ToRight', () => {
-        this.SUBRULE(this.Pipe, { LABEL: 'left' });
+        this.SUBRULE(this.Pipe, { LABEL: 'from' });
         this.MANY(() => {
           this.CONSUME(ToRightToken);
-          this.CONSUME(Identifier, { LABEL: 'right' });
+          this.CONSUME(Identifier, { LABEL: 'to' });
         });
       });
 
       this.ToLeft = this.RULE('ToLeft', () => {
-        this.CONSUME(Identifier, { LABEL: 'right' });
+        this.CONSUME(Identifier, { LABEL: 'to' });
         this.CONSUME(ToLeftToken);
-        this.SUBRULE(this.Pipe, { LABEL: 'left' });
+        this.SUBRULE(this.Pipe, { LABEL: 'from' });
       });
 
       this.Pipe = this.RULE('Pipe', () => {
@@ -292,7 +292,7 @@
 
       this.ReturnStatement = this.RULE('returnStatement', () => {
         this.CONSUME(ReturnToken);
-        this.SUBRULE(this.RelationExpression);
+        this.SUBRULE(this.RelationExpression, { LABEL: 'return' });
       });
 
       this.performSelfAnalysis();
