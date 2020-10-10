@@ -5,6 +5,7 @@ import { factor } from './interpriterRules/factor';
 import { expression } from './interpriterRules/expression';
 import { relationExpression } from './interpriterRules/relationExpression';
 import { pipe } from './interpriterRules/pipe';
+import { assignment } from "@/interpriterRules/assignment";
 
 export const interpreter = (ast: any) => {
   logger.info(ast.name);
@@ -16,17 +17,8 @@ export const interpreter = (ast: any) => {
         }
       });
       break;
-    case Rules.Main:
-      interpreter(ast.children.left[0]);
-      const op = ast.children.ToRight[0];
-      interpreter(ast.children.right[0]);
-      break;
-    case Rules.Main2:
-      Object.keys(ast.children).forEach((rule) => {
-        logger.info(rule);
-        interpreter(rule);
-      });
-      break;
+    case Rules.Assignment:
+      return assignment({ ast });
     case Rules.Pipe:
       return pipe({ ast });
     case Rules.RelationExpression:

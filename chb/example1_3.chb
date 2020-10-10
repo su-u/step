@@ -1,3 +1,1 @@
 12 + 3 -> value
-value |> console
-"text" |> console

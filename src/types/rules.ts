@@ -3,6 +3,7 @@ export const Rules = {
   Assignment: 'Assignment',
   Each: 'Each',
   IfStatement: 'IfStatement',
+  Pipe: 'Pipe',
   RelationExpression: 'RelationExpression',
   Expression: 'Expression',
   Term: 'Term',
