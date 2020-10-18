@@ -12,7 +12,7 @@ exports[`変数 式 if 1`] = `
             {
               \\"name\\": \\"ToLeft\\",
               \\"children\\": {
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"value\\",
                     \\"startOffset\\": 7,
@@ -54,7 +54,7 @@ exports[`変数 式 if 1`] = `
                     }
                   }
                 ],
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -233,7 +233,7 @@ exports[`変数 式 if 1`] = `
               }
             }
           ],
-          \\"RelationExpression\\": [
+          \\"conditionalExpression\\": [
             {
               \\"name\\": \\"RelationExpression\\",
               \\"children\\": {
@@ -438,7 +438,7 @@ exports[`変数 演算 数値 1`] = `
             {
               \\"name\\": \\"ToLeft\\",
               \\"children\\": {
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"value\\",
                     \\"startOffset\\": 7,
@@ -480,7 +480,7 @@ exports[`変数 演算 数値 1`] = `
                     }
                   }
                 ],
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -618,7 +618,7 @@ exports[`変数 演算 数値 1`] = `
             {
               \\"name\\": \\"ToLeft\\",
               \\"children\\": {
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"value\\",
                     \\"startOffset\\": 28,
@@ -660,7 +660,7 @@ exports[`変数 演算 数値 1`] = `
                     }
                   }
                 ],
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -808,7 +808,7 @@ exports[`変数 演算 文字列 1`] = `
             {
               \\"name\\": \\"ToLeft\\",
               \\"children\\": {
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"value\\",
                     \\"startOffset\\": 7,
@@ -850,7 +850,7 @@ exports[`変数 演算 文字列 1`] = `
                     }
                   }
                 ],
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -918,7 +918,7 @@ exports[`変数 演算 文字列 1`] = `
             {
               \\"name\\": \\"ToLeft\\",
               \\"children\\": {
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"value\\",
                     \\"startOffset\\": 29,
@@ -960,7 +960,7 @@ exports[`変数 演算 文字列 1`] = `
                     }
                   }
                 ],
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {

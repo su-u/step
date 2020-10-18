@@ -12,7 +12,7 @@ exports[`each 1 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -145,7 +145,7 @@ exports[`each 1 1`] = `
                                           {
                                             \\"name\\": \\"ToRight\\",
                                             \\"children\\": {
-                                              \\"left\\": [
+                                              \\"from\\": [
                                                 {
                                                   \\"name\\": \\"Pipe\\",
                                                   \\"children\\": {
@@ -302,7 +302,7 @@ exports[`each 2 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -561,7 +561,7 @@ exports[`each 2 1`] = `
                                           {
                                             \\"name\\": \\"ToRight\\",
                                             \\"children\\": {
-                                              \\"left\\": [
+                                              \\"from\\": [
                                                 {
                                                   \\"name\\": \\"Pipe\\",
                                                   \\"children\\": {

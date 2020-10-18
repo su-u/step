@@ -12,7 +12,7 @@ exports[`パイプ 1 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -132,7 +132,7 @@ exports[`パイプ 2 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -322,7 +322,7 @@ exports[`パイプ 3 1`] = `
             {
               \\"name\\": \\"ToLeft\\",
               \\"children\\": {
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"value\\",
                     \\"startOffset\\": 5,
@@ -364,7 +364,7 @@ exports[`パイプ 3 1`] = `
                     }
                   }
                 ],
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -432,7 +432,7 @@ exports[`パイプ 3 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -552,7 +552,7 @@ exports[`パイプ 4 1`] = `
             {
               \\"name\\": \\"ToLeft\\",
               \\"children\\": {
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"value\\",
                     \\"startOffset\\": 5,
@@ -594,7 +594,7 @@ exports[`パイプ 4 1`] = `
                     }
                   }
                 ],
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -662,7 +662,7 @@ exports[`パイプ 4 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {

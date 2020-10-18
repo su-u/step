@@ -106,7 +106,7 @@ exports[`関数 1 1`] = `
                         {
                           \\"name\\": \\"ToRight\\",
                           \\"children\\": {
-                            \\"left\\": [
+                            \\"from\\": [
                               {
                                 \\"name\\": \\"Pipe\\",
                                 \\"children\\": {
@@ -454,7 +454,7 @@ exports[`関数 2 1`] = `
                           }
                         }
                       ],
-                      \\"RelationExpression\\": [
+                      \\"return\\": [
                         {
                           \\"name\\": \\"RelationExpression\\",
                           \\"children\\": {
@@ -775,7 +775,7 @@ exports[`関数 3 1`] = `
                         {
                           \\"name\\": \\"ToLeft\\",
                           \\"children\\": {
-                            \\"right\\": [
+                            \\"to\\": [
                               {
                                 \\"image\\": \\"value\\",
                                 \\"startOffset\\": 33,
@@ -817,7 +817,7 @@ exports[`関数 3 1`] = `
                                 }
                               }
                             ],
-                            \\"left\\": [
+                            \\"from\\": [
                               {
                                 \\"name\\": \\"Pipe\\",
                                 \\"children\\": {
@@ -1042,7 +1042,7 @@ exports[`関数 3 1`] = `
                           }
                         }
                       ],
-                      \\"RelationExpression\\": [
+                      \\"return\\": [
                         {
                           \\"name\\": \\"RelationExpression\\",
                           \\"children\\": {
@@ -1253,7 +1253,7 @@ exports[`関数 4 pipe 1`] = `
                         {
                           \\"name\\": \\"ToRight\\",
                           \\"children\\": {
-                            \\"left\\": [
+                            \\"from\\": [
                               {
                                 \\"name\\": \\"Pipe\\",
                                 \\"children\\": {

@@ -12,7 +12,7 @@ exports[`演算 乗算 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -153,7 +153,7 @@ exports[`演算 加算 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -301,7 +301,7 @@ exports[`演算 減算 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -449,7 +449,7 @@ exports[`演算 複雑 1 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -733,7 +733,7 @@ exports[`演算 複雑 2 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -1023,7 +1023,7 @@ exports[`演算 複雑 3 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -1455,7 +1455,7 @@ exports[`演算 複雑 4 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -2036,7 +2036,7 @@ exports[`演算 除算 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {

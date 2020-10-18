@@ -12,7 +12,7 @@ exports[`代入 右辺 数値代入 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -89,7 +89,7 @@ exports[`代入 右辺 数値代入 1`] = `
                     }
                   }
                 ],
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"value\\",
                     \\"startOffset\\": 12,
@@ -132,7 +132,7 @@ exports[`代入 右辺 数値演算、代入 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -279,7 +279,7 @@ exports[`代入 右辺 数値演算、代入 1`] = `
                     }
                   }
                 ],
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"value\\",
                     \\"startOffset\\": 16,
@@ -322,7 +322,7 @@ exports[`代入 右辺 文字列代入 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -399,7 +399,7 @@ exports[`代入 右辺 文字列代入 1`] = `
                     }
                   }
                 ],
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"value\\",
                     \\"startOffset\\": 19,
@@ -442,7 +442,7 @@ exports[`代入 右辺 演算子代入 1`] = `
             {
               \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -580,7 +580,7 @@ exports[`代入 右辺 演算子代入 1`] = `
                     }
                   }
                 ],
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"value\\",
                     \\"startOffset\\": 17,
@@ -623,7 +623,7 @@ exports[`代入 左辺 数値代入 1`] = `
             {
               \\"name\\": \\"ToLeft\\",
               \\"children\\": {
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"aaa\\",
                     \\"startOffset\\": 7,
@@ -665,7 +665,7 @@ exports[`代入 左辺 数値代入 1`] = `
                     }
                   }
                 ],
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -743,7 +743,7 @@ exports[`代入 左辺 文字列代入 1`] = `
             {
               \\"name\\": \\"ToLeft\\",
               \\"children\\": {
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"val\\",
                     \\"startOffset\\": 7,
@@ -785,7 +785,7 @@ exports[`代入 左辺 文字列代入 1`] = `
                     }
                   }
                 ],
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -863,7 +863,7 @@ exports[`代入 左辺 文字列演算代入 1`] = `
             {
               \\"name\\": \\"ToLeft\\",
               \\"children\\": {
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"val\\",
                     \\"startOffset\\": 7,
@@ -905,7 +905,7 @@ exports[`代入 左辺 文字列演算代入 1`] = `
                     }
                   }
                 ],
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -973,7 +973,7 @@ exports[`代入 左辺 文字列演算代入 1`] = `
             {
               \\"name\\": \\"ToLeft\\",
               \\"children\\": {
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"aaa\\",
                     \\"startOffset\\": 26,
@@ -1015,7 +1015,7 @@ exports[`代入 左辺 文字列演算代入 1`] = `
                     }
                   }
                 ],
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
@@ -1163,7 +1163,7 @@ exports[`代入 左辺 演算子代入 1`] = `
             {
               \\"name\\": \\"ToLeft\\",
               \\"children\\": {
-                \\"right\\": [
+                \\"to\\": [
                   {
                     \\"image\\": \\"v\\",
                     \\"startOffset\\": 7,
@@ -1205,7 +1205,7 @@ exports[`代入 左辺 演算子代入 1`] = `
                     }
                   }
                 ],
-                \\"left\\": [
+                \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
                     \\"children\\": {
