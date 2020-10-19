@@ -2,8 +2,11 @@ class FunctionManager {
   private functions = new Map();
   constructor() {}
 
-  public assignment(name: any, programAst: any) {
-    this.functions.set(name, programAst);
+  public assignment(name: any, functionArguments: any[], programAst: any) {
+    this.functions.set(name, {
+      arguments: functionArguments,
+      program: programAst,
+    });
   }
 
   public reference(name: string) {

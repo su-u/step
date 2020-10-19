@@ -199,7 +199,7 @@ export class ChiboParser extends CstParser {
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
-        this.CONSUME(Identifier);
+        this.CONSUME(Identifier, { LABEL: 'arguments' });
       },
     });
     this.CONSUME(RBracket);
@@ -302,7 +302,7 @@ export class ChiboParser extends CstParser {
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
-        this.SUBRULE(this.Factor);
+        this.SUBRULE(this.Factor, { LABEL: 'arguments' });
       },
     });
     this.CONSUME(RBracket);

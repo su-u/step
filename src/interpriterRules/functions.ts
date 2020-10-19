@@ -1,10 +1,8 @@
 import { IInterpreterRules } from './types';
 import { interpreter } from '../interpreter';
+import { functionManager } from '../manager';
 
 export const functionStatement = ({ ast }: IInterpreterRules) => {
-  Object.keys(ast.children).forEach((rule) => {
-    for (let line of ast.children[rule]) {
-      interpreter(line);
-    }
-  });
+  const functionName = ast.children.FunctionNameToken[0].image;
+  functionManager.assignment(functionName, [], {});
 };

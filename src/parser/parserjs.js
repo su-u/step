@@ -210,7 +210,7 @@
         this.MANY_SEP({
           SEP: Comma,
           DEF: () => {
-            this.CONSUME(Identifier);
+            this.CONSUME(Identifier, { LABEL: 'arguments' });
           },
         });
         this.CONSUME(RBracket);
@@ -313,7 +313,7 @@
         this.MANY_SEP({
           SEP: Comma,
           DEF: () => {
-            this.SUBRULE(this.Factor);
+            this.SUBRULE(this.Factor, { LABEL: 'arguments' });
           },
         });
         this.CONSUME(RBracket);

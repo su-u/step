@@ -4745,15 +4745,15 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
               }
             }
           ],
-          \\"Identifier\\": [
+          \\"arguments\\": [
             {
               \\"image\\": \\"x\\",
-              \\"startOffset\\": 15,
-              \\"endOffset\\": 15,
+              \\"startOffset\\": 14,
+              \\"endOffset\\": 14,
               \\"startLine\\": 1,
               \\"endLine\\": 1,
-              \\"startColumn\\": 16,
-              \\"endColumn\\": 16,
+              \\"startColumn\\": 15,
+              \\"endColumn\\": 15,
               \\"tokenTypeIdx\\": 8,
               \\"tokenType\\": {
                 \\"name\\": \\"Identifier\\",
@@ -4769,12 +4769,12 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
           \\"RBrackets\\": [
             {
               \\"image\\": \\")\\",
-              \\"startOffset\\": 17,
-              \\"endOffset\\": 17,
+              \\"startOffset\\": 15,
+              \\"endOffset\\": 15,
               \\"startLine\\": 1,
               \\"endLine\\": 1,
-              \\"startColumn\\": 18,
-              \\"endColumn\\": 18,
+              \\"startColumn\\": 16,
+              \\"endColumn\\": 16,
               \\"tokenTypeIdx\\": 10,
               \\"tokenType\\": {
                 \\"name\\": \\"RBrackets\\",
@@ -4791,12 +4791,12 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
           \\"LCurly\\": [
             {
               \\"image\\": \\"{\\",
-              \\"startOffset\\": 19,
-              \\"endOffset\\": 19,
+              \\"startOffset\\": 17,
+              \\"endOffset\\": 17,
               \\"startLine\\": 1,
               \\"endLine\\": 1,
-              \\"startColumn\\": 20,
-              \\"endColumn\\": 20,
+              \\"startColumn\\": 18,
+              \\"endColumn\\": 18,
               \\"tokenTypeIdx\\": 11,
               \\"tokenType\\": {
                 \\"name\\": \\"LCurly\\",
@@ -4823,10 +4823,10 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                           \\"image\\": \\"return\\",
                           \\"startOffset\\": 21,
                           \\"endOffset\\": 26,
-                          \\"startLine\\": 1,
-                          \\"endLine\\": 1,
-                          \\"startColumn\\": 22,
-                          \\"endColumn\\": 27,
+                          \\"startLine\\": 2,
+                          \\"endLine\\": 2,
+                          \\"startColumn\\": 3,
+                          \\"endColumn\\": 8,
                           \\"tokenTypeIdx\\": 37,
                           \\"tokenType\\": {
                             \\"name\\": \\"ReturnToken\\",
@@ -4860,10 +4860,10 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                                                   \\"image\\": \\"x\\",
                                                   \\"startOffset\\": 28,
                                                   \\"endOffset\\": 28,
-                                                  \\"startLine\\": 1,
-                                                  \\"endLine\\": 1,
-                                                  \\"startColumn\\": 29,
-                                                  \\"endColumn\\": 29,
+                                                  \\"startLine\\": 2,
+                                                  \\"endLine\\": 2,
+                                                  \\"startColumn\\": 10,
+                                                  \\"endColumn\\": 10,
                                                   \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
@@ -4893,10 +4893,10 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                                                   \\"image\\": \\"x\\",
                                                   \\"startOffset\\": 32,
                                                   \\"endOffset\\": 32,
-                                                  \\"startLine\\": 1,
-                                                  \\"endLine\\": 1,
-                                                  \\"startColumn\\": 33,
-                                                  \\"endColumn\\": 33,
+                                                  \\"startLine\\": 2,
+                                                  \\"endLine\\": 2,
+                                                  \\"startColumn\\": 14,
+                                                  \\"endColumn\\": 14,
                                                   \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
@@ -4920,10 +4920,10 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                                       \\"image\\": \\"+\\",
                                       \\"startOffset\\": 30,
                                       \\"endOffset\\": 30,
-                                      \\"startLine\\": 1,
-                                      \\"endLine\\": 1,
-                                      \\"startColumn\\": 31,
-                                      \\"endColumn\\": 31,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 12,
+                                      \\"endColumn\\": 12,
                                       \\"tokenTypeIdx\\": 17,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"Plus\\",
@@ -4969,10 +4969,10 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
               \\"image\\": \\"}\\",
               \\"startOffset\\": 34,
               \\"endOffset\\": 34,
-              \\"startLine\\": 1,
-              \\"endLine\\": 1,
-              \\"startColumn\\": 35,
-              \\"endColumn\\": 35,
+              \\"startLine\\": 3,
+              \\"endLine\\": 3,
+              \\"startColumn\\": 1,
+              \\"endColumn\\": 1,
               \\"tokenTypeIdx\\": 12,
               \\"tokenType\\": {
                 \\"name\\": \\"RCurly\\",
@@ -4983,6 +4983,175 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                 \\"categoryMatchesMap\\": {},
                 \\"isParent\\": false,
                 \\"LABEL\\": \\"}\\"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    \\"Assignment\\": [
+      {
+        \\"name\\": \\"Assignment\\",
+        \\"children\\": {
+          \\"ToRight\\": [
+            {
+              \\"name\\": \\"ToRight\\",
+              \\"children\\": {
+                \\"from\\": [
+                  {
+                    \\"name\\": \\"Pipe\\",
+                    \\"children\\": {
+                      \\"RelationExpression\\": [
+                        {
+                          \\"name\\": \\"RelationExpression\\",
+                          \\"children\\": {
+                            \\"Expression\\": [
+                              {
+                                \\"name\\": \\"Expression\\",
+                                \\"children\\": {
+                                  \\"Term\\": [
+                                    {
+                                      \\"name\\": \\"Term\\",
+                                      \\"children\\": {
+                                        \\"Factor\\": [
+                                          {
+                                            \\"name\\": \\"Factor\\",
+                                            \\"children\\": {
+                                              \\"CallFunction\\": [
+                                                {
+                                                  \\"name\\": \\"CallFunction\\",
+                                                  \\"children\\": {
+                                                    \\"FunctionNameToken\\": [
+                                                      {
+                                                        \\"image\\": \\"func(\\",
+                                                        \\"startOffset\\": 36,
+                                                        \\"endOffset\\": 40,
+                                                        \\"startLine\\": 4,
+                                                        \\"endLine\\": 4,
+                                                        \\"startColumn\\": 1,
+                                                        \\"endColumn\\": 5,
+                                                        \\"tokenTypeIdx\\": 39,
+                                                        \\"tokenType\\": {
+                                                          \\"name\\": \\"FunctionNameToken\\",
+                                                          \\"PATTERN\\": {},
+                                                          \\"tokenTypeIdx\\": 39,
+                                                          \\"CATEGORIES\\": [],
+                                                          \\"categoryMatches\\": [],
+                                                          \\"categoryMatchesMap\\": {},
+                                                          \\"isParent\\": false
+                                                        }
+                                                      }
+                                                    ],
+                                                    \\"arguments\\": [
+                                                      {
+                                                        \\"name\\": \\"Factor\\",
+                                                        \\"children\\": {
+                                                          \\"NumberLiteral\\": [
+                                                            {
+                                                              \\"image\\": \\"1\\",
+                                                              \\"startOffset\\": 41,
+                                                              \\"endOffset\\": 41,
+                                                              \\"startLine\\": 4,
+                                                              \\"endLine\\": 4,
+                                                              \\"startColumn\\": 6,
+                                                              \\"endColumn\\": 6,
+                                                              \\"tokenTypeIdx\\": 4,
+                                                              \\"tokenType\\": {
+                                                                \\"name\\": \\"NumberLiteral\\",
+                                                                \\"PATTERN\\": {},
+                                                                \\"tokenTypeIdx\\": 4,
+                                                                \\"CATEGORIES\\": [],
+                                                                \\"categoryMatches\\": [],
+                                                                \\"categoryMatchesMap\\": {},
+                                                                \\"isParent\\": false
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ],
+                                                    \\"RBrackets\\": [
+                                                      {
+                                                        \\"image\\": \\")\\",
+                                                        \\"startOffset\\": 42,
+                                                        \\"endOffset\\": 42,
+                                                        \\"startLine\\": 4,
+                                                        \\"endLine\\": 4,
+                                                        \\"startColumn\\": 7,
+                                                        \\"endColumn\\": 7,
+                                                        \\"tokenTypeIdx\\": 10,
+                                                        \\"tokenType\\": {
+                                                          \\"name\\": \\"RBrackets\\",
+                                                          \\"PATTERN\\": {},
+                                                          \\"tokenTypeIdx\\": 10,
+                                                          \\"CATEGORIES\\": [],
+                                                          \\"categoryMatches\\": [],
+                                                          \\"categoryMatchesMap\\": {},
+                                                          \\"isParent\\": false,
+                                                          \\"LABEL\\": \\")\\"
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                \\"ToRightToken\\": [
+                  {
+                    \\"image\\": \\"->\\",
+                    \\"startOffset\\": 44,
+                    \\"endOffset\\": 45,
+                    \\"startLine\\": 4,
+                    \\"endLine\\": 4,
+                    \\"startColumn\\": 9,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 35,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"ToRightToken\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 35,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ],
+                \\"to\\": [
+                  {
+                    \\"image\\": \\"result\\",
+                    \\"startOffset\\": 47,
+                    \\"endOffset\\": 52,
+                    \\"startLine\\": 4,
+                    \\"endLine\\": 4,
+                    \\"startColumn\\": 12,
+                    \\"endColumn\\": 17,
+                    \\"tokenTypeIdx\\": 8,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 8,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
               }
             }
           ]
