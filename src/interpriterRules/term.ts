@@ -1,5 +1,6 @@
 import { IInterpreterRules } from './types';
 import { interpreter } from '../interpreter';
+import { Classes } from "../class";
 
 export const term = ({ ast }: IInterpreterRules) => {
   const result = Object.keys(ast.children).map((rule) => {
@@ -13,8 +14,8 @@ export const term = ({ ast }: IInterpreterRules) => {
   });
   // console.log('t', result);
 
-  const afterCalculation = result[0].reduce((a, c, i) => {
-    return result[1][i - 1] === '*' ? a * c : a / c;
-  });
-  return afterCalculation;
+  return result[0].reduce((a, c, i) => {
+    const name = c.name;
+    return Classes[name][result[1][i - 1]](c, a);
+  })
 };

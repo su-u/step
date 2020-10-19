@@ -16,7 +16,7 @@ export const NumberClass: NumberObjectMethodType = {
   '+': (obj, param) => {
     return {
       name: TYPE,
-      image: obj.image + param,
+      image: obj.image + param.image,
     };
   },
   '-': (obj, param) => {
