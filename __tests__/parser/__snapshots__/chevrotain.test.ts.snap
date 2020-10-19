@@ -21,11 +21,11 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                     \\"endLine\\": 1,
                     \\"startColumn\\": 1,
                     \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -42,11 +42,11 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                     \\"endLine\\": 1,
                     \\"startColumn\\": 3,
                     \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 35,
+                    \\"tokenTypeIdx\\": 36,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 35,
+                      \\"tokenTypeIdx\\": 36,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -187,11 +187,11 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 5,
                     \\"endColumn\\": 6,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -208,11 +208,11 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 8,
                     \\"endColumn\\": 11,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -297,11 +297,11 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                     \\"endLine\\": 3,
                     \\"startColumn\\": 5,
                     \\"endColumn\\": 6,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -318,11 +318,11 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                     \\"endLine\\": 3,
                     \\"startColumn\\": 8,
                     \\"endColumn\\": 11,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -407,11 +407,11 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                     \\"endLine\\": 4,
                     \\"startColumn\\": 5,
                     \\"endColumn\\": 6,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -428,11 +428,11 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                     \\"endLine\\": 4,
                     \\"startColumn\\": 8,
                     \\"endColumn\\": 11,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -471,11 +471,11 @@ exports[`chevrotain ./chb/example1_2.chb 1`] = `
                     \\"endLine\\": 1,
                     \\"startColumn\\": 1,
                     \\"endColumn\\": 3,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -492,11 +492,11 @@ exports[`chevrotain ./chb/example1_2.chb 1`] = `
                     \\"endLine\\": 1,
                     \\"startColumn\\": 5,
                     \\"endColumn\\": 6,
-                    \\"tokenTypeIdx\\": 35,
+                    \\"tokenTypeIdx\\": 36,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 35,
+                      \\"tokenTypeIdx\\": 36,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -581,11 +581,11 @@ exports[`chevrotain ./chb/example1_2.chb 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 1,
                     \\"endColumn\\": 3,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -602,11 +602,11 @@ exports[`chevrotain ./chb/example1_2.chb 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 5,
                     \\"endColumn\\": 6,
-                    \\"tokenTypeIdx\\": 35,
+                    \\"tokenTypeIdx\\": 36,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 35,
+                      \\"tokenTypeIdx\\": 36,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -643,11 +643,11 @@ exports[`chevrotain ./chb/example1_2.chb 1`] = `
                                                   \\"endLine\\": 2,
                                                   \\"startColumn\\": 8,
                                                   \\"endColumn\\": 10,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -703,7 +703,7 @@ exports[`chevrotain ./chb/example1_2.chb 1`] = `
                                       \\"endLine\\": 2,
                                       \\"startColumn\\": 12,
                                       \\"endColumn\\": 12,
-                                      \\"tokenTypeIdx\\": 16,
+                                      \\"tokenTypeIdx\\": 17,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"Plus\\",
                                         \\"PATTERN\\": {},
@@ -711,20 +711,20 @@ exports[`chevrotain ./chb/example1_2.chb 1`] = `
                                           {
                                             \\"name\\": \\"AdditionOperator\\",
                                             \\"PATTERN\\": {},
-                                            \\"tokenTypeIdx\\": 15,
+                                            \\"tokenTypeIdx\\": 16,
                                             \\"CATEGORIES\\": [],
                                             \\"categoryMatches\\": [
-                                              16,
-                                              17
+                                              17,
+                                              18
                                             ],
                                             \\"categoryMatchesMap\\": {
-                                              \\"16\\": true,
-                                              \\"17\\": true
+                                              \\"17\\": true,
+                                              \\"18\\": true
                                             },
                                             \\"isParent\\": true
                                           }
                                         ],
-                                        \\"tokenTypeIdx\\": 16,
+                                        \\"tokenTypeIdx\\": 17,
                                         \\"categoryMatches\\": [],
                                         \\"categoryMatchesMap\\": {},
                                         \\"isParent\\": false
@@ -851,7 +851,7 @@ exports[`chevrotain ./chb/example1_3.chb 1`] = `
                                       \\"endLine\\": 1,
                                       \\"startColumn\\": 4,
                                       \\"endColumn\\": 4,
-                                      \\"tokenTypeIdx\\": 16,
+                                      \\"tokenTypeIdx\\": 17,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"Plus\\",
                                         \\"PATTERN\\": {},
@@ -859,20 +859,20 @@ exports[`chevrotain ./chb/example1_3.chb 1`] = `
                                           {
                                             \\"name\\": \\"AdditionOperator\\",
                                             \\"PATTERN\\": {},
-                                            \\"tokenTypeIdx\\": 15,
+                                            \\"tokenTypeIdx\\": 16,
                                             \\"CATEGORIES\\": [],
                                             \\"categoryMatches\\": [
-                                              16,
-                                              17
+                                              17,
+                                              18
                                             ],
                                             \\"categoryMatchesMap\\": {
-                                              \\"16\\": true,
-                                              \\"17\\": true
+                                              \\"17\\": true,
+                                              \\"18\\": true
                                             },
                                             \\"isParent\\": true
                                           }
                                         ],
-                                        \\"tokenTypeIdx\\": 16,
+                                        \\"tokenTypeIdx\\": 17,
                                         \\"categoryMatches\\": [],
                                         \\"categoryMatchesMap\\": {},
                                         \\"isParent\\": false
@@ -897,11 +897,11 @@ exports[`chevrotain ./chb/example1_3.chb 1`] = `
                     \\"endLine\\": 1,
                     \\"startColumn\\": 8,
                     \\"endColumn\\": 9,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -918,11 +918,11 @@ exports[`chevrotain ./chb/example1_3.chb 1`] = `
                     \\"endLine\\": 1,
                     \\"startColumn\\": 11,
                     \\"endColumn\\": 15,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -961,11 +961,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                     \\"endLine\\": 1,
                     \\"startColumn\\": 1,
                     \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -982,11 +982,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                     \\"endLine\\": 1,
                     \\"startColumn\\": 3,
                     \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 35,
+                    \\"tokenTypeIdx\\": 36,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 35,
+                      \\"tokenTypeIdx\\": 36,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -1151,7 +1151,7 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                       \\"endLine\\": 2,
                                       \\"startColumn\\": 4,
                                       \\"endColumn\\": 4,
-                                      \\"tokenTypeIdx\\": 17,
+                                      \\"tokenTypeIdx\\": 18,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"Minus\\",
                                         \\"PATTERN\\": {},
@@ -1159,20 +1159,20 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                           {
                                             \\"name\\": \\"AdditionOperator\\",
                                             \\"PATTERN\\": {},
-                                            \\"tokenTypeIdx\\": 15,
+                                            \\"tokenTypeIdx\\": 16,
                                             \\"CATEGORIES\\": [],
                                             \\"categoryMatches\\": [
-                                              16,
-                                              17
+                                              17,
+                                              18
                                             ],
                                             \\"categoryMatchesMap\\": {
-                                              \\"16\\": true,
-                                              \\"17\\": true
+                                              \\"17\\": true,
+                                              \\"18\\": true
                                             },
                                             \\"isParent\\": true
                                           }
                                         ],
-                                        \\"tokenTypeIdx\\": 17,
+                                        \\"tokenTypeIdx\\": 18,
                                         \\"categoryMatches\\": [],
                                         \\"categoryMatchesMap\\": {},
                                         \\"isParent\\": false
@@ -1197,11 +1197,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 8,
                     \\"endColumn\\": 9,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -1218,11 +1218,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 11,
                     \\"endColumn\\": 11,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -1251,11 +1251,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                     \\"endLine\\": 3,
                     \\"startColumn\\": 1,
                     \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -1272,11 +1272,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                     \\"endLine\\": 3,
                     \\"startColumn\\": 3,
                     \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 35,
+                    \\"tokenTypeIdx\\": 36,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 35,
+                      \\"tokenTypeIdx\\": 36,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -1313,11 +1313,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                                   \\"endLine\\": 3,
                                                   \\"startColumn\\": 6,
                                                   \\"endColumn\\": 6,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -1363,7 +1363,7 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                             \\"endLine\\": 3,
                                             \\"startColumn\\": 8,
                                             \\"endColumn\\": 8,
-                                            \\"tokenTypeIdx\\": 19,
+                                            \\"tokenTypeIdx\\": 20,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Multi\\",
                                               \\"PATTERN\\": {},
@@ -1371,20 +1371,20 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                                 {
                                                   \\"name\\": \\"MultiplicationOperator\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 18,
+                                                  \\"tokenTypeIdx\\": 19,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    19,
-                                                    20
+                                                    20,
+                                                    21
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"19\\": true,
-                                                    \\"20\\": true
+                                                    \\"20\\": true,
+                                                    \\"21\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 19,
+                                              \\"tokenTypeIdx\\": 20,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -1444,11 +1444,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                                   \\"endLine\\": 4,
                                                   \\"startColumn\\": 1,
                                                   \\"endColumn\\": 1,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -1494,7 +1494,7 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                             \\"endLine\\": 4,
                                             \\"startColumn\\": 3,
                                             \\"endColumn\\": 3,
-                                            \\"tokenTypeIdx\\": 20,
+                                            \\"tokenTypeIdx\\": 21,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Div\\",
                                               \\"PATTERN\\": {},
@@ -1502,20 +1502,20 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                                 {
                                                   \\"name\\": \\"MultiplicationOperator\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 18,
+                                                  \\"tokenTypeIdx\\": 19,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    19,
-                                                    20
+                                                    20,
+                                                    21
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"19\\": true,
-                                                    \\"20\\": true
+                                                    \\"20\\": true,
+                                                    \\"21\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 20,
+                                              \\"tokenTypeIdx\\": 21,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -1543,11 +1543,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                     \\"endLine\\": 4,
                     \\"startColumn\\": 7,
                     \\"endColumn\\": 8,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -1564,11 +1564,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                     \\"endLine\\": 4,
                     \\"startColumn\\": 10,
                     \\"endColumn\\": 10,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -1617,11 +1617,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                                   \\"endLine\\": 5,
                                                   \\"startColumn\\": 1,
                                                   \\"endColumn\\": 1,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -1650,11 +1650,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                                   \\"endLine\\": 5,
                                                   \\"startColumn\\": 5,
                                                   \\"endColumn\\": 5,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -1677,7 +1677,7 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                       \\"endLine\\": 5,
                                       \\"startColumn\\": 3,
                                       \\"endColumn\\": 3,
-                                      \\"tokenTypeIdx\\": 16,
+                                      \\"tokenTypeIdx\\": 17,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"Plus\\",
                                         \\"PATTERN\\": {},
@@ -1685,20 +1685,20 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                           {
                                             \\"name\\": \\"AdditionOperator\\",
                                             \\"PATTERN\\": {},
-                                            \\"tokenTypeIdx\\": 15,
+                                            \\"tokenTypeIdx\\": 16,
                                             \\"CATEGORIES\\": [],
                                             \\"categoryMatches\\": [
-                                              16,
-                                              17
+                                              17,
+                                              18
                                             ],
                                             \\"categoryMatchesMap\\": {
-                                              \\"16\\": true,
-                                              \\"17\\": true
+                                              \\"17\\": true,
+                                              \\"18\\": true
                                             },
                                             \\"isParent\\": true
                                           }
                                         ],
-                                        \\"tokenTypeIdx\\": 16,
+                                        \\"tokenTypeIdx\\": 17,
                                         \\"categoryMatches\\": [],
                                         \\"categoryMatchesMap\\": {},
                                         \\"isParent\\": false
@@ -1723,11 +1723,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                     \\"endLine\\": 5,
                     \\"startColumn\\": 7,
                     \\"endColumn\\": 8,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -1744,11 +1744,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                     \\"endLine\\": 5,
                     \\"startColumn\\": 10,
                     \\"endColumn\\": 10,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -1777,11 +1777,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                     \\"endLine\\": 6,
                     \\"startColumn\\": 1,
                     \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -1798,11 +1798,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                     \\"endLine\\": 6,
                     \\"startColumn\\": 3,
                     \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 35,
+                    \\"tokenTypeIdx\\": 36,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 35,
+                      \\"tokenTypeIdx\\": 36,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -1839,11 +1839,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                                   \\"endLine\\": 6,
                                                   \\"startColumn\\": 6,
                                                   \\"endColumn\\": 6,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -1872,11 +1872,11 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                                   \\"endLine\\": 6,
                                                   \\"startColumn\\": 10,
                                                   \\"endColumn\\": 10,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -1899,7 +1899,7 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                       \\"endLine\\": 6,
                                       \\"startColumn\\": 8,
                                       \\"endColumn\\": 8,
-                                      \\"tokenTypeIdx\\": 17,
+                                      \\"tokenTypeIdx\\": 18,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"Minus\\",
                                         \\"PATTERN\\": {},
@@ -1907,20 +1907,20 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                           {
                                             \\"name\\": \\"AdditionOperator\\",
                                             \\"PATTERN\\": {},
-                                            \\"tokenTypeIdx\\": 15,
+                                            \\"tokenTypeIdx\\": 16,
                                             \\"CATEGORIES\\": [],
                                             \\"categoryMatches\\": [
-                                              16,
-                                              17
+                                              17,
+                                              18
                                             ],
                                             \\"categoryMatchesMap\\": {
-                                              \\"16\\": true,
-                                              \\"17\\": true
+                                              \\"17\\": true,
+                                              \\"18\\": true
                                             },
                                             \\"isParent\\": true
                                           }
                                         ],
-                                        \\"tokenTypeIdx\\": 17,
+                                        \\"tokenTypeIdx\\": 18,
                                         \\"categoryMatches\\": [],
                                         \\"categoryMatchesMap\\": {},
                                         \\"isParent\\": false
@@ -1967,11 +1967,11 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                     \\"endLine\\": 1,
                     \\"startColumn\\": 1,
                     \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -1988,11 +1988,11 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                     \\"endLine\\": 1,
                     \\"startColumn\\": 3,
                     \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 35,
+                    \\"tokenTypeIdx\\": 36,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 35,
+                      \\"tokenTypeIdx\\": 36,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -2133,11 +2133,11 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 7,
                     \\"endColumn\\": 8,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -2154,11 +2154,11 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 10,
                     \\"endColumn\\": 10,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -2187,11 +2187,11 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                     \\"endLine\\": 3,
                     \\"startColumn\\": 1,
                     \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -2208,11 +2208,11 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                     \\"endLine\\": 3,
                     \\"startColumn\\": 3,
                     \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 35,
+                    \\"tokenTypeIdx\\": 36,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 35,
+                      \\"tokenTypeIdx\\": 36,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -2249,11 +2249,11 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                                                   \\"endLine\\": 3,
                                                   \\"startColumn\\": 6,
                                                   \\"endColumn\\": 6,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -2282,11 +2282,11 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                                                   \\"endLine\\": 3,
                                                   \\"startColumn\\": 10,
                                                   \\"endColumn\\": 10,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -2309,7 +2309,7 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                                       \\"endLine\\": 3,
                                       \\"startColumn\\": 8,
                                       \\"endColumn\\": 8,
-                                      \\"tokenTypeIdx\\": 16,
+                                      \\"tokenTypeIdx\\": 17,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"Plus\\",
                                         \\"PATTERN\\": {},
@@ -2317,20 +2317,20 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                                           {
                                             \\"name\\": \\"AdditionOperator\\",
                                             \\"PATTERN\\": {},
-                                            \\"tokenTypeIdx\\": 15,
+                                            \\"tokenTypeIdx\\": 16,
                                             \\"CATEGORIES\\": [],
                                             \\"categoryMatches\\": [
-                                              16,
-                                              17
+                                              17,
+                                              18
                                             ],
                                             \\"categoryMatchesMap\\": {
-                                              \\"16\\": true,
-                                              \\"17\\": true
+                                              \\"17\\": true,
+                                              \\"18\\": true
                                             },
                                             \\"isParent\\": true
                                           }
                                         ],
-                                        \\"tokenTypeIdx\\": 16,
+                                        \\"tokenTypeIdx\\": 17,
                                         \\"categoryMatches\\": [],
                                         \\"categoryMatchesMap\\": {},
                                         \\"isParent\\": false
@@ -2447,7 +2447,7 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                                       \\"endLine\\": 4,
                                       \\"startColumn\\": 3,
                                       \\"endColumn\\": 3,
-                                      \\"tokenTypeIdx\\": 16,
+                                      \\"tokenTypeIdx\\": 17,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"Plus\\",
                                         \\"PATTERN\\": {},
@@ -2455,20 +2455,20 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                                           {
                                             \\"name\\": \\"AdditionOperator\\",
                                             \\"PATTERN\\": {},
-                                            \\"tokenTypeIdx\\": 15,
+                                            \\"tokenTypeIdx\\": 16,
                                             \\"CATEGORIES\\": [],
                                             \\"categoryMatches\\": [
-                                              16,
-                                              17
+                                              17,
+                                              18
                                             ],
                                             \\"categoryMatchesMap\\": {
-                                              \\"16\\": true,
-                                              \\"17\\": true
+                                              \\"17\\": true,
+                                              \\"18\\": true
                                             },
                                             \\"isParent\\": true
                                           }
                                         ],
-                                        \\"tokenTypeIdx\\": 16,
+                                        \\"tokenTypeIdx\\": 17,
                                         \\"categoryMatches\\": [],
                                         \\"categoryMatchesMap\\": {},
                                         \\"isParent\\": false
@@ -2493,11 +2493,11 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                     \\"endLine\\": 4,
                     \\"startColumn\\": 7,
                     \\"endColumn\\": 8,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -2514,11 +2514,11 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                     \\"endLine\\": 4,
                     \\"startColumn\\": 10,
                     \\"endColumn\\": 10,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -2567,11 +2567,11 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                                                   \\"endLine\\": 5,
                                                   \\"startColumn\\": 1,
                                                   \\"endColumn\\": 1,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -2600,11 +2600,11 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                                                   \\"endLine\\": 5,
                                                   \\"startColumn\\": 5,
                                                   \\"endColumn\\": 5,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -2627,7 +2627,7 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                                       \\"endLine\\": 5,
                                       \\"startColumn\\": 3,
                                       \\"endColumn\\": 3,
-                                      \\"tokenTypeIdx\\": 16,
+                                      \\"tokenTypeIdx\\": 17,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"Plus\\",
                                         \\"PATTERN\\": {},
@@ -2635,20 +2635,20 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                                           {
                                             \\"name\\": \\"AdditionOperator\\",
                                             \\"PATTERN\\": {},
-                                            \\"tokenTypeIdx\\": 15,
+                                            \\"tokenTypeIdx\\": 16,
                                             \\"CATEGORIES\\": [],
                                             \\"categoryMatches\\": [
-                                              16,
-                                              17
+                                              17,
+                                              18
                                             ],
                                             \\"categoryMatchesMap\\": {
-                                              \\"16\\": true,
-                                              \\"17\\": true
+                                              \\"17\\": true,
+                                              \\"18\\": true
                                             },
                                             \\"isParent\\": true
                                           }
                                         ],
-                                        \\"tokenTypeIdx\\": 16,
+                                        \\"tokenTypeIdx\\": 17,
                                         \\"categoryMatches\\": [],
                                         \\"categoryMatchesMap\\": {},
                                         \\"isParent\\": false
@@ -2673,11 +2673,11 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                     \\"endLine\\": 5,
                     \\"startColumn\\": 7,
                     \\"endColumn\\": 8,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -2694,11 +2694,11 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                     \\"endLine\\": 5,
                     \\"startColumn\\": 10,
                     \\"endColumn\\": 10,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -2737,11 +2737,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 1,
                     \\"startColumn\\": 1,
                     \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -2758,11 +2758,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 1,
                     \\"startColumn\\": 3,
                     \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 35,
+                    \\"tokenTypeIdx\\": 36,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 35,
+                      \\"tokenTypeIdx\\": 36,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -2903,11 +2903,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 7,
                     \\"endColumn\\": 8,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -2924,11 +2924,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 10,
                     \\"endColumn\\": 10,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -2957,11 +2957,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 3,
                     \\"startColumn\\": 1,
                     \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -2978,11 +2978,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 3,
                     \\"startColumn\\": 3,
                     \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 35,
+                    \\"tokenTypeIdx\\": 36,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 35,
+                      \\"tokenTypeIdx\\": 36,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -3019,11 +3019,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                                   \\"endLine\\": 3,
                                                   \\"startColumn\\": 6,
                                                   \\"endColumn\\": 6,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -3052,11 +3052,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                                   \\"endLine\\": 3,
                                                   \\"startColumn\\": 10,
                                                   \\"endColumn\\": 10,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -3079,7 +3079,7 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                       \\"endLine\\": 3,
                                       \\"startColumn\\": 8,
                                       \\"endColumn\\": 8,
-                                      \\"tokenTypeIdx\\": 16,
+                                      \\"tokenTypeIdx\\": 17,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"Plus\\",
                                         \\"PATTERN\\": {},
@@ -3087,20 +3087,20 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                           {
                                             \\"name\\": \\"AdditionOperator\\",
                                             \\"PATTERN\\": {},
-                                            \\"tokenTypeIdx\\": 15,
+                                            \\"tokenTypeIdx\\": 16,
                                             \\"CATEGORIES\\": [],
                                             \\"categoryMatches\\": [
-                                              16,
-                                              17
+                                              17,
+                                              18
                                             ],
                                             \\"categoryMatchesMap\\": {
-                                              \\"16\\": true,
-                                              \\"17\\": true
+                                              \\"17\\": true,
+                                              \\"18\\": true
                                             },
                                             \\"isParent\\": true
                                           }
                                         ],
-                                        \\"tokenTypeIdx\\": 16,
+                                        \\"tokenTypeIdx\\": 17,
                                         \\"categoryMatches\\": [],
                                         \\"categoryMatchesMap\\": {},
                                         \\"isParent\\": false
@@ -3217,7 +3217,7 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                       \\"endLine\\": 4,
                                       \\"startColumn\\": 3,
                                       \\"endColumn\\": 3,
-                                      \\"tokenTypeIdx\\": 16,
+                                      \\"tokenTypeIdx\\": 17,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"Plus\\",
                                         \\"PATTERN\\": {},
@@ -3225,20 +3225,20 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                           {
                                             \\"name\\": \\"AdditionOperator\\",
                                             \\"PATTERN\\": {},
-                                            \\"tokenTypeIdx\\": 15,
+                                            \\"tokenTypeIdx\\": 16,
                                             \\"CATEGORIES\\": [],
                                             \\"categoryMatches\\": [
-                                              16,
-                                              17
+                                              17,
+                                              18
                                             ],
                                             \\"categoryMatchesMap\\": {
-                                              \\"16\\": true,
-                                              \\"17\\": true
+                                              \\"17\\": true,
+                                              \\"18\\": true
                                             },
                                             \\"isParent\\": true
                                           }
                                         ],
-                                        \\"tokenTypeIdx\\": 16,
+                                        \\"tokenTypeIdx\\": 17,
                                         \\"categoryMatches\\": [],
                                         \\"categoryMatchesMap\\": {},
                                         \\"isParent\\": false
@@ -3263,11 +3263,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 4,
                     \\"startColumn\\": 7,
                     \\"endColumn\\": 8,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -3284,11 +3284,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 4,
                     \\"startColumn\\": 10,
                     \\"endColumn\\": 10,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -3337,11 +3337,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                                   \\"endLine\\": 5,
                                                   \\"startColumn\\": 1,
                                                   \\"endColumn\\": 1,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -3370,11 +3370,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                                   \\"endLine\\": 5,
                                                   \\"startColumn\\": 5,
                                                   \\"endColumn\\": 5,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -3397,7 +3397,7 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                       \\"endLine\\": 5,
                                       \\"startColumn\\": 3,
                                       \\"endColumn\\": 3,
-                                      \\"tokenTypeIdx\\": 16,
+                                      \\"tokenTypeIdx\\": 17,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"Plus\\",
                                         \\"PATTERN\\": {},
@@ -3405,20 +3405,20 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                           {
                                             \\"name\\": \\"AdditionOperator\\",
                                             \\"PATTERN\\": {},
-                                            \\"tokenTypeIdx\\": 15,
+                                            \\"tokenTypeIdx\\": 16,
                                             \\"CATEGORIES\\": [],
                                             \\"categoryMatches\\": [
-                                              16,
-                                              17
+                                              17,
+                                              18
                                             ],
                                             \\"categoryMatchesMap\\": {
-                                              \\"16\\": true,
-                                              \\"17\\": true
+                                              \\"17\\": true,
+                                              \\"18\\": true
                                             },
                                             \\"isParent\\": true
                                           }
                                         ],
-                                        \\"tokenTypeIdx\\": 16,
+                                        \\"tokenTypeIdx\\": 17,
                                         \\"categoryMatches\\": [],
                                         \\"categoryMatchesMap\\": {},
                                         \\"isParent\\": false
@@ -3443,11 +3443,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 5,
                     \\"startColumn\\": 7,
                     \\"endColumn\\": 8,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -3464,11 +3464,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 5,
                     \\"startColumn\\": 10,
                     \\"endColumn\\": 10,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -3621,11 +3621,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 6,
                     \\"startColumn\\": 6,
                     \\"endColumn\\": 7,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -3642,11 +3642,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 6,
                     \\"startColumn\\": 9,
                     \\"endColumn\\": 9,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -3765,7 +3765,7 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                 \\"endLine\\": 7,
                                 \\"startColumn\\": 3,
                                 \\"endColumn\\": 3,
-                                \\"tokenTypeIdx\\": 24,
+                                \\"tokenTypeIdx\\": 25,
                                 \\"tokenType\\": {
                                   \\"name\\": \\"OverTha\\",
                                   \\"PATTERN\\": {},
@@ -3773,26 +3773,26 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                     {
                                       \\"name\\": \\"RelationalOperator\\",
                                       \\"PATTERN\\": {},
-                                      \\"tokenTypeIdx\\": 21,
+                                      \\"tokenTypeIdx\\": 22,
                                       \\"CATEGORIES\\": [],
                                       \\"categoryMatches\\": [
-                                        22,
                                         23,
                                         24,
                                         25,
-                                        26
+                                        26,
+                                        27
                                       ],
                                       \\"categoryMatchesMap\\": {
-                                        \\"22\\": true,
                                         \\"23\\": true,
                                         \\"24\\": true,
                                         \\"25\\": true,
-                                        \\"26\\": true
+                                        \\"26\\": true,
+                                        \\"27\\": true
                                       },
                                       \\"isParent\\": true
                                     }
                                   ],
-                                  \\"tokenTypeIdx\\": 24,
+                                  \\"tokenTypeIdx\\": 25,
                                   \\"categoryMatches\\": [],
                                   \\"categoryMatchesMap\\": {},
                                   \\"isParent\\": false
@@ -3814,11 +3814,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 7,
                     \\"startColumn\\": 7,
                     \\"endColumn\\": 8,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -3835,11 +3835,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 7,
                     \\"startColumn\\": 10,
                     \\"endColumn\\": 10,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -3971,7 +3971,7 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                             \\"endLine\\": 8,
                                             \\"startColumn\\": 7,
                                             \\"endColumn\\": 7,
-                                            \\"tokenTypeIdx\\": 19,
+                                            \\"tokenTypeIdx\\": 20,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Multi\\",
                                               \\"PATTERN\\": {},
@@ -3979,20 +3979,20 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                                 {
                                                   \\"name\\": \\"MultiplicationOperator\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 18,
+                                                  \\"tokenTypeIdx\\": 19,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    19,
-                                                    20
+                                                    20,
+                                                    21
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"19\\": true,
-                                                    \\"20\\": true
+                                                    \\"20\\": true,
+                                                    \\"21\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 19,
+                                              \\"tokenTypeIdx\\": 20,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -4011,7 +4011,7 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                       \\"endLine\\": 8,
                                       \\"startColumn\\": 3,
                                       \\"endColumn\\": 3,
-                                      \\"tokenTypeIdx\\": 16,
+                                      \\"tokenTypeIdx\\": 17,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"Plus\\",
                                         \\"PATTERN\\": {},
@@ -4019,20 +4019,20 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                           {
                                             \\"name\\": \\"AdditionOperator\\",
                                             \\"PATTERN\\": {},
-                                            \\"tokenTypeIdx\\": 15,
+                                            \\"tokenTypeIdx\\": 16,
                                             \\"CATEGORIES\\": [],
                                             \\"categoryMatches\\": [
-                                              16,
-                                              17
+                                              17,
+                                              18
                                             ],
                                             \\"categoryMatchesMap\\": {
-                                              \\"16\\": true,
-                                              \\"17\\": true
+                                              \\"17\\": true,
+                                              \\"18\\": true
                                             },
                                             \\"isParent\\": true
                                           }
                                         ],
-                                        \\"tokenTypeIdx\\": 16,
+                                        \\"tokenTypeIdx\\": 17,
                                         \\"categoryMatches\\": [],
                                         \\"categoryMatchesMap\\": {},
                                         \\"isParent\\": false
@@ -4091,7 +4091,7 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                 \\"endLine\\": 8,
                                 \\"startColumn\\": 11,
                                 \\"endColumn\\": 12,
-                                \\"tokenTypeIdx\\": 22,
+                                \\"tokenTypeIdx\\": 23,
                                 \\"tokenType\\": {
                                   \\"name\\": \\"AmountMore\\",
                                   \\"PATTERN\\": {},
@@ -4099,26 +4099,26 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                     {
                                       \\"name\\": \\"RelationalOperator\\",
                                       \\"PATTERN\\": {},
-                                      \\"tokenTypeIdx\\": 21,
+                                      \\"tokenTypeIdx\\": 22,
                                       \\"CATEGORIES\\": [],
                                       \\"categoryMatches\\": [
-                                        22,
                                         23,
                                         24,
                                         25,
-                                        26
+                                        26,
+                                        27
                                       ],
                                       \\"categoryMatchesMap\\": {
-                                        \\"22\\": true,
                                         \\"23\\": true,
                                         \\"24\\": true,
                                         \\"25\\": true,
-                                        \\"26\\": true
+                                        \\"26\\": true,
+                                        \\"27\\": true
                                       },
                                       \\"isParent\\": true
                                     }
                                   ],
-                                  \\"tokenTypeIdx\\": 22,
+                                  \\"tokenTypeIdx\\": 23,
                                   \\"categoryMatches\\": [],
                                   \\"categoryMatchesMap\\": {},
                                   \\"isParent\\": false
@@ -4140,11 +4140,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 8,
                     \\"startColumn\\": 16,
                     \\"endColumn\\": 17,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -4161,11 +4161,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 8,
                     \\"startColumn\\": 19,
                     \\"endColumn\\": 19,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -4264,7 +4264,7 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                             \\"endLine\\": 9,
                                             \\"startColumn\\": 3,
                                             \\"endColumn\\": 3,
-                                            \\"tokenTypeIdx\\": 20,
+                                            \\"tokenTypeIdx\\": 21,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Div\\",
                                               \\"PATTERN\\": {},
@@ -4272,20 +4272,20 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                                 {
                                                   \\"name\\": \\"MultiplicationOperator\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 18,
+                                                  \\"tokenTypeIdx\\": 19,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    19,
-                                                    20
+                                                    20,
+                                                    21
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"19\\": true,
-                                                    \\"20\\": true
+                                                    \\"20\\": true,
+                                                    \\"21\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 20,
+                                              \\"tokenTypeIdx\\": 21,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -4367,7 +4367,7 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                             \\"endLine\\": 9,
                                             \\"startColumn\\": 12,
                                             \\"endColumn\\": 12,
-                                            \\"tokenTypeIdx\\": 20,
+                                            \\"tokenTypeIdx\\": 21,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Div\\",
                                               \\"PATTERN\\": {},
@@ -4375,20 +4375,20 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                                 {
                                                   \\"name\\": \\"MultiplicationOperator\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 18,
+                                                  \\"tokenTypeIdx\\": 19,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    19,
-                                                    20
+                                                    20,
+                                                    21
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"19\\": true,
-                                                    \\"20\\": true
+                                                    \\"20\\": true,
+                                                    \\"21\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 20,
+                                              \\"tokenTypeIdx\\": 21,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -4410,7 +4410,7 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                 \\"endLine\\": 9,
                                 \\"startColumn\\": 7,
                                 \\"endColumn\\": 7,
-                                \\"tokenTypeIdx\\": 26,
+                                \\"tokenTypeIdx\\": 27,
                                 \\"tokenType\\": {
                                   \\"name\\": \\"Equal\\",
                                   \\"PATTERN\\": {},
@@ -4418,26 +4418,26 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                     {
                                       \\"name\\": \\"RelationalOperator\\",
                                       \\"PATTERN\\": {},
-                                      \\"tokenTypeIdx\\": 21,
+                                      \\"tokenTypeIdx\\": 22,
                                       \\"CATEGORIES\\": [],
                                       \\"categoryMatches\\": [
-                                        22,
                                         23,
                                         24,
                                         25,
-                                        26
+                                        26,
+                                        27
                                       ],
                                       \\"categoryMatchesMap\\": {
-                                        \\"22\\": true,
                                         \\"23\\": true,
                                         \\"24\\": true,
                                         \\"25\\": true,
-                                        \\"26\\": true
+                                        \\"26\\": true,
+                                        \\"27\\": true
                                       },
                                       \\"isParent\\": true
                                     }
                                   ],
-                                  \\"tokenTypeIdx\\": 26,
+                                  \\"tokenTypeIdx\\": 27,
                                   \\"categoryMatches\\": [],
                                   \\"categoryMatchesMap\\": {},
                                   \\"isParent\\": false
@@ -4459,11 +4459,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 9,
                     \\"startColumn\\": 16,
                     \\"endColumn\\": 17,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -4480,11 +4480,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 9,
                     \\"startColumn\\": 19,
                     \\"endColumn\\": 19,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -4573,11 +4573,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                                   \\"endLine\\": 10,
                                                   \\"startColumn\\": 7,
                                                   \\"endColumn\\": 7,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -4603,7 +4603,7 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                 \\"endLine\\": 10,
                                 \\"startColumn\\": 5,
                                 \\"endColumn\\": 5,
-                                \\"tokenTypeIdx\\": 26,
+                                \\"tokenTypeIdx\\": 27,
                                 \\"tokenType\\": {
                                   \\"name\\": \\"Equal\\",
                                   \\"PATTERN\\": {},
@@ -4611,26 +4611,26 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                     {
                                       \\"name\\": \\"RelationalOperator\\",
                                       \\"PATTERN\\": {},
-                                      \\"tokenTypeIdx\\": 21,
+                                      \\"tokenTypeIdx\\": 22,
                                       \\"CATEGORIES\\": [],
                                       \\"categoryMatches\\": [
-                                        22,
                                         23,
                                         24,
                                         25,
-                                        26
+                                        26,
+                                        27
                                       ],
                                       \\"categoryMatchesMap\\": {
-                                        \\"22\\": true,
                                         \\"23\\": true,
                                         \\"24\\": true,
                                         \\"25\\": true,
-                                        \\"26\\": true
+                                        \\"26\\": true,
+                                        \\"27\\": true
                                       },
                                       \\"isParent\\": true
                                     }
                                   ],
-                                  \\"tokenTypeIdx\\": 26,
+                                  \\"tokenTypeIdx\\": 27,
                                   \\"categoryMatches\\": [],
                                   \\"categoryMatchesMap\\": {},
                                   \\"isParent\\": false
@@ -4652,11 +4652,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 10,
                     \\"startColumn\\": 9,
                     \\"endColumn\\": 10,
-                    \\"tokenTypeIdx\\": 34,
+                    \\"tokenTypeIdx\\": 35,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToRightToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 34,
+                      \\"tokenTypeIdx\\": 35,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -4673,11 +4673,11 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                     \\"endLine\\": 10,
                     \\"startColumn\\": 12,
                     \\"endColumn\\": 12,
-                    \\"tokenTypeIdx\\": 7,
+                    \\"tokenTypeIdx\\": 8,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 7,
+                      \\"tokenTypeIdx\\": 8,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -4712,11 +4712,11 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
               \\"endLine\\": 1,
               \\"startColumn\\": 1,
               \\"endColumn\\": 8,
-              \\"tokenTypeIdx\\": 27,
+              \\"tokenTypeIdx\\": 28,
               \\"tokenType\\": {
                 \\"name\\": \\"FunctionToken\\",
                 \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 27,
+                \\"tokenTypeIdx\\": 28,
                 \\"CATEGORIES\\": [],
                 \\"categoryMatches\\": [],
                 \\"categoryMatchesMap\\": {},
@@ -4733,11 +4733,11 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
               \\"endLine\\": 1,
               \\"startColumn\\": 10,
               \\"endColumn\\": 14,
-              \\"tokenTypeIdx\\": 38,
+              \\"tokenTypeIdx\\": 39,
               \\"tokenType\\": {
                 \\"name\\": \\"FunctionNameToken\\",
                 \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 38,
+                \\"tokenTypeIdx\\": 39,
                 \\"CATEGORIES\\": [],
                 \\"categoryMatches\\": [],
                 \\"categoryMatchesMap\\": {},
@@ -4754,11 +4754,11 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
               \\"endLine\\": 1,
               \\"startColumn\\": 16,
               \\"endColumn\\": 16,
-              \\"tokenTypeIdx\\": 7,
+              \\"tokenTypeIdx\\": 8,
               \\"tokenType\\": {
                 \\"name\\": \\"Identifier\\",
                 \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 7,
+                \\"tokenTypeIdx\\": 8,
                 \\"CATEGORIES\\": [],
                 \\"categoryMatches\\": [],
                 \\"categoryMatchesMap\\": {},
@@ -4775,11 +4775,11 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
               \\"endLine\\": 1,
               \\"startColumn\\": 18,
               \\"endColumn\\": 18,
-              \\"tokenTypeIdx\\": 9,
+              \\"tokenTypeIdx\\": 10,
               \\"tokenType\\": {
                 \\"name\\": \\"RBrackets\\",
                 \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 9,
+                \\"tokenTypeIdx\\": 10,
                 \\"CATEGORIES\\": [],
                 \\"categoryMatches\\": [],
                 \\"categoryMatchesMap\\": {},
@@ -4797,11 +4797,11 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
               \\"endLine\\": 1,
               \\"startColumn\\": 20,
               \\"endColumn\\": 20,
-              \\"tokenTypeIdx\\": 10,
+              \\"tokenTypeIdx\\": 11,
               \\"tokenType\\": {
                 \\"name\\": \\"LCurly\\",
                 \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 10,
+                \\"tokenTypeIdx\\": 11,
                 \\"CATEGORIES\\": [],
                 \\"categoryMatches\\": [],
                 \\"categoryMatchesMap\\": {},
@@ -4827,11 +4827,11 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                           \\"endLine\\": 1,
                           \\"startColumn\\": 22,
                           \\"endColumn\\": 27,
-                          \\"tokenTypeIdx\\": 36,
+                          \\"tokenTypeIdx\\": 37,
                           \\"tokenType\\": {
                             \\"name\\": \\"ReturnToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 36,
+                            \\"tokenTypeIdx\\": 37,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -4864,11 +4864,11 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                                                   \\"endLine\\": 1,
                                                   \\"startColumn\\": 29,
                                                   \\"endColumn\\": 29,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -4897,11 +4897,11 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                                                   \\"endLine\\": 1,
                                                   \\"startColumn\\": 33,
                                                   \\"endColumn\\": 33,
-                                                  \\"tokenTypeIdx\\": 7,
+                                                  \\"tokenTypeIdx\\": 8,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 7,
+                                                    \\"tokenTypeIdx\\": 8,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -4924,7 +4924,7 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                                       \\"endLine\\": 1,
                                       \\"startColumn\\": 31,
                                       \\"endColumn\\": 31,
-                                      \\"tokenTypeIdx\\": 16,
+                                      \\"tokenTypeIdx\\": 17,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"Plus\\",
                                         \\"PATTERN\\": {},
@@ -4932,20 +4932,20 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                                           {
                                             \\"name\\": \\"AdditionOperator\\",
                                             \\"PATTERN\\": {},
-                                            \\"tokenTypeIdx\\": 15,
+                                            \\"tokenTypeIdx\\": 16,
                                             \\"CATEGORIES\\": [],
                                             \\"categoryMatches\\": [
-                                              16,
-                                              17
+                                              17,
+                                              18
                                             ],
                                             \\"categoryMatchesMap\\": {
-                                              \\"16\\": true,
-                                              \\"17\\": true
+                                              \\"17\\": true,
+                                              \\"18\\": true
                                             },
                                             \\"isParent\\": true
                                           }
                                         ],
-                                        \\"tokenTypeIdx\\": 16,
+                                        \\"tokenTypeIdx\\": 17,
                                         \\"categoryMatches\\": [],
                                         \\"categoryMatchesMap\\": {},
                                         \\"isParent\\": false
@@ -4973,11 +4973,11 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
               \\"endLine\\": 1,
               \\"startColumn\\": 35,
               \\"endColumn\\": 35,
-              \\"tokenTypeIdx\\": 11,
+              \\"tokenTypeIdx\\": 12,
               \\"tokenType\\": {
                 \\"name\\": \\"RCurly\\",
                 \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 11,
+                \\"tokenTypeIdx\\": 12,
                 \\"CATEGORIES\\": [],
                 \\"categoryMatches\\": [],
                 \\"categoryMatchesMap\\": {},
