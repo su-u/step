@@ -4,18 +4,18 @@ import { interpreter } from '../interpreter';
 export const expression = ({ ast }: IInterpreterRules) => {
   const result = Object.keys(ast.children).map((rule) => {
     if (ast.children[rule][0].image === undefined) {
-      const a = interpreter(ast.children[rule][0]);
-      const b = interpreter(ast.children[rule][1]);
-      return [...a, ...b];
+      return ast.children[rule].map((x) => {
+        return interpreter(x)[0];
+      })
     } else {
-      return ast.children[rule][0].image;
+      return ast.children[rule].map((x) => x.image);
     }
   });
-  console.log(result);
-  const c = result[0][0] + result[0][1];
-  console.log(c);
+  const afterCalculation = result[0].reduce((a, c, i) => {
+    return result[1][i - 1] === '+' ? a + c : a - c;
+  })
   return {
     name: 'NumberLiteral',
-    image: c,
+    image: afterCalculation,
   };
 };
