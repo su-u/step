@@ -1,15 +1,17 @@
 const TYPE = 'NumberLiteral';
 
+type NumberLiteralType = LiteralType<number>;
+
 export type NumberObjectMethodType = {
-  '+': <T extends number>(obj: any, param: any) => any;
-  '*': <T extends number>(obj: any, param: any) => any;
-  '-': <T extends number>(obj: any, param: any) => any;
-  '/': <T extends number>(obj: any, param: any) => any;
-  '<': <T extends number>(obj: any, param: any) => any;
-  '<=': <T extends number>(obj: any, param: any) => any;
-  '>': <T extends number>(obj: any, param: any) => any;
-  '>=': <T extends number>(obj: any, param: any) => any;
-  to_s: <T extends number>(obj: any, param: any) => string;
+  '+': <T extends number>(obj: NumberLiteralType, param: any) => any;
+  '*': <T extends number>(obj:NumberLiteralType, param: any) => any;
+  '-': <T extends number>(obj: NumberLiteralType, param: any) => any;
+  '/': <T extends number>(obj: NumberLiteralType, param: any) => any;
+  '<': <T extends number>(obj: NumberLiteralType, param: any) => any;
+  '<=': <T extends number>(obj: NumberLiteralType, param: any) => any;
+  '>': <T extends number>(obj: NumberLiteralType, param: any) => any;
+  '>=': <T extends number>(obj: NumberLiteralType, param: any) => any;
+  to_s: <T extends number>(obj: NumberLiteralType, param: any) => string;
 };
 
 export const NumberClass: NumberObjectMethodType = {
