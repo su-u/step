@@ -5,7 +5,7 @@ import { factor } from './interpriterRules/factor';
 import { expression } from './interpriterRules/expression';
 import { relationExpression } from './interpriterRules/relationExpression';
 import { pipe } from './interpriterRules/pipe';
-import { assignment } from "@/interpriterRules/assignment";
+import { assignment } from '@/interpriterRules/assignment';
 
 export const interpreter = (ast: any) => {
   logger.info(ast.name);
