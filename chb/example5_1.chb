@@ -1,3 +1,4 @@
 function func(x) {
   return x + x
 }
+func(1) -> result
