@@ -1,4 +1,4 @@
-import { ObjectClassObject } from '@/class/Object';
+import { ObjectClassObject } from '../class/Object';
 
 export type ConsoleObjectMethodType = {
   default: (obj: any, params: any, options: any) => any;

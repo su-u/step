@@ -1,8 +1,8 @@
-import { ObjectClassObject } from '@/class/Object';
-import { ObjectEnum as TYPE } from '@/old/objectEnum';
-import { exec } from '@/old/exec';
-import { globalObject } from '@/old/global';
-import { ClassObjectType } from '@/old/types';
+import { ObjectClassObject } from './Object';
+import { ObjectEnum as TYPE } from '../objectEnum';
+import { exec } from '../exec';
+import { globalObject } from '../global';
+import { ClassObjectType } from '../types';
 
 export type StringObjectMethodType = {
   '+': <T>(obj: LiteralType<T>, params: ParamsType<any>) => LiteralType<string>;

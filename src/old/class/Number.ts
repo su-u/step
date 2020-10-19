@@ -1,5 +1,5 @@
 import { ObjectClassObject } from './Object';
-import { ObjectEnum as TYPE } from '../old/objectEnum';
+import { ObjectEnum as TYPE } from '../objectEnum';
 
 type LiteralType<T> = any;
 type ParamsType<T> = any;

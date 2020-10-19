@@ -1,4 +1,4 @@
-import { ObjectEnum as TYPE } from '../old/objectEnum';
+import { ObjectEnum as TYPE } from '../objectEnum';
 
 type ClassBaseObjectType = any;
 type LiteralType<T> = any;
