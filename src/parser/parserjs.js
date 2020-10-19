@@ -207,7 +207,7 @@
         this.CONSUME(RCurly);
       });
 
-      this.BrockStatement = this.RULE('BrockStatement', () => {
+      this.BrockStatement = this.RULE('BlockStatement', () => {
         this.MANY(() => {
           this.OR([
             { ALT: () => this.SUBRULE(this.Function, { LABEL: 'statement' }) },
@@ -281,17 +281,17 @@
           { ALT: () => this.CONSUME(StringLiteral) },
           { ALT: () => this.CONSUME(BoolLiteral) },
           { ALT: () => this.SUBRULE(this.CallFunction) },
-          { ALT: () => this.SUBRULE(this.parenthesisExpression) },
+          { ALT: () => this.SUBRULE(this.ParenthesisExpression) },
         ]);
       });
 
-      this.parenthesisExpression = this.RULE('ParenthesisExpression', () => {
+      this.ParenthesisExpression = this.RULE('ParenthesisExpression', () => {
         this.CONSUME(LBracket);
         this.SUBRULE(this.RelationExpression);
         this.CONSUME(RBracket);
       });
 
-      this.ReturnStatement = this.RULE('returnStatement', () => {
+      this.ReturnStatement = this.RULE('ReturnStatement', () => {
         this.CONSUME(ReturnToken);
         this.SUBRULE(this.RelationExpression, { LABEL: 'return' });
       });
