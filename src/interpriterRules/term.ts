@@ -1,10 +1,11 @@
 import { IInterpreterRules } from './types';
 import { interpreter } from '../interpreter';
 import { Classes } from "../class";
+import { Operators } from "../types/operators";
 
 export const term = ({ ast }: IInterpreterRules) => {
   const [literals, operators ] = Object.keys(ast.children).map((rule) => {
-    if (rule !== 'MultiplicationOperator') {
+    if (rule !== Operators.MultiplicationOperator) {
       return ast.children[rule].map((x) => {
         return interpreter(x);
       });
