@@ -8,7 +8,7 @@ export const expression = ({ ast }: IInterpreterRules) => {
         return interpreter(x)[0];
       })
     } else {
-      return ast.children[rule].map((x) => x.image);
+      return ast.children[rule].map((x) => x.image)[0];
     }
   });
   const afterCalculation = result[0].reduce((a, c, i) => {
