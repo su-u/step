@@ -6,7 +6,7 @@ export const assignment = ({ ast }: IInterpreterRules) => {
   const key = Object.keys(ast.children)[0];
   if (key === 'ToRight') {
     const from = interpreter(ast.children.ToRight[0].children.from[0]);
-    console.log('f', from);
+    // console.log('f', from);
     const toObject = ast.children.ToRight[0].children.to[0];
     variableManager.assignment(toObject, from);
   } else {
