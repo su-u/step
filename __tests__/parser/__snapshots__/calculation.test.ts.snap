@@ -753,9 +753,9 @@ exports[`演算 複雑 2 1`] = `
                                           {
                                             \\"name\\": \\"Factor\\",
                                             \\"children\\": {
-                                              \\"parenthesisExpression\\": [
+                                              \\"ParenthesisExpression\\": [
                                                 {
-                                                  \\"name\\": \\"parenthesisExpression\\",
+                                                  \\"name\\": \\"ParenthesisExpression\\",
                                                   \\"children\\": {
                                                     \\"LBrackets\\": [
                                                       {
@@ -1043,9 +1043,9 @@ exports[`演算 複雑 3 1`] = `
                                           {
                                             \\"name\\": \\"Factor\\",
                                             \\"children\\": {
-                                              \\"parenthesisExpression\\": [
+                                              \\"ParenthesisExpression\\": [
                                                 {
-                                                  \\"name\\": \\"parenthesisExpression\\",
+                                                  \\"name\\": \\"ParenthesisExpression\\",
                                                   \\"children\\": {
                                                     \\"LBrackets\\": [
                                                       {
@@ -1218,9 +1218,9 @@ exports[`演算 複雑 3 1`] = `
                                           {
                                             \\"name\\": \\"Factor\\",
                                             \\"children\\": {
-                                              \\"parenthesisExpression\\": [
+                                              \\"ParenthesisExpression\\": [
                                                 {
-                                                  \\"name\\": \\"parenthesisExpression\\",
+                                                  \\"name\\": \\"ParenthesisExpression\\",
                                                   \\"children\\": {
                                                     \\"LBrackets\\": [
                                                       {
@@ -1475,9 +1475,9 @@ exports[`演算 複雑 4 1`] = `
                                           {
                                             \\"name\\": \\"Factor\\",
                                             \\"children\\": {
-                                              \\"parenthesisExpression\\": [
+                                              \\"ParenthesisExpression\\": [
                                                 {
-                                                  \\"name\\": \\"parenthesisExpression\\",
+                                                  \\"name\\": \\"ParenthesisExpression\\",
                                                   \\"children\\": {
                                                     \\"LBrackets\\": [
                                                       {
@@ -1650,9 +1650,9 @@ exports[`演算 複雑 4 1`] = `
                                           {
                                             \\"name\\": \\"Factor\\",
                                             \\"children\\": {
-                                              \\"parenthesisExpression\\": [
+                                              \\"ParenthesisExpression\\": [
                                                 {
-                                                  \\"name\\": \\"parenthesisExpression\\",
+                                                  \\"name\\": \\"ParenthesisExpression\\",
                                                   \\"children\\": {
                                                     \\"LBrackets\\": [
                                                       {
@@ -1718,9 +1718,9 @@ exports[`演算 複雑 4 1`] = `
                                                                         {
                                                                           \\"name\\": \\"Factor\\",
                                                                           \\"children\\": {
-                                                                            \\"parenthesisExpression\\": [
+                                                                            \\"ParenthesisExpression\\": [
                                                                               {
-                                                                                \\"name\\": \\"parenthesisExpression\\",
+                                                                                \\"name\\": \\"ParenthesisExpression\\",
                                                                                 \\"children\\": {
                                                                                   \\"LBrackets\\": [
                                                                                     {

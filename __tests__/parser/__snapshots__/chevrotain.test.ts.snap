@@ -4814,9 +4814,9 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
             {
               \\"name\\": \\"Program\\",
               \\"children\\": {
-                \\"returnStatement\\": [
+                \\"ReturnStatement\\": [
                   {
-                    \\"name\\": \\"returnStatement\\",
+                    \\"name\\": \\"ReturnStatement\\",
                     \\"children\\": {
                       \\"ReturnToken\\": [
                         {
