@@ -48,8 +48,5 @@
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typescript": "^3.8.3",
     "ttypescript": "^1.5.10"
-  },
-  "_moduleAliases": {
-    "@": "src"
   }
 }
