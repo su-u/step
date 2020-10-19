@@ -15,8 +15,8 @@ export const expression = ({ ast }: IInterpreterRules) => {
   const afterCalculation = result[0].reduce((a, c, i) => {
     return result[1][i - 1] === '+' ? a + c : a - c;
   });
-})
-return {
-  name: 'NumberLiteral',
-  image: afterCalculation,
+  return {
+    name: 'NumberLiteral',
+    image: afterCalculation,
+  };
 };
