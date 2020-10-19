@@ -1,4 +1,5 @@
 import { IInterpreterRules } from './types';
+import { interpreter } from '../interpreter';
 
 export const parenthesisExpression = ({ ast }: IInterpreterRules) => {
   Object.keys(ast.children).forEach((rule) => {
