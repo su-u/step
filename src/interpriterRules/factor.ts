@@ -9,6 +9,6 @@ export const factor = ({ ast }: IInterpreterRules) => {
       image,
     };
   } else if (ast.children.Identifier !== undefined) {
-    return variableManager.reference(ast.children.Identifier[0].image).image;
+    return variableManager.reference(ast.children.Identifier[0].image);
   }
 };
