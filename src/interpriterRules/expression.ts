@@ -6,7 +6,7 @@ export const expression = ({ ast }: IInterpreterRules) => {
     if (rule !== 'AdditionOperator') {
       return ast.children[rule].map((x) => {
         return interpreter(x);
-      })
+      });
     } else {
       return ast.children[rule].map((x) => x.image);
     }

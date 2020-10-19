@@ -30,7 +30,14 @@
     pattern: /[a-zA-z][0-9a-zA-Z]*/,
   });
 
-  const LiteralTokens = [Separate, StringLiteral, NumberLiteral, WhiteSpace, BoolLiteral, Identifier];
+  const LiteralTokens = [
+    Separate,
+    StringLiteral,
+    NumberLiteral,
+    WhiteSpace,
+    BoolLiteral,
+    Identifier,
+  ];
 
   const LBracket = createToken({ name: 'LBrackets', pattern: /\(/, label: '(' });
   const RBracket = createToken({ name: 'RBrackets', pattern: /\)/, label: ')' });
@@ -310,7 +317,7 @@
           },
         });
         this.CONSUME(RBracket);
-      })
+      });
 
       this.performSelfAnalysis();
     }

@@ -1,6 +1,6 @@
 import { IInterpreterRules } from './types';
 import { interpreter } from '../interpreter';
-import { variableManager } from "../manager";
+import { variableManager } from '../manager';
 
 export const assignment = ({ ast }: IInterpreterRules) => {
   const key = Object.keys(ast.children)[0];

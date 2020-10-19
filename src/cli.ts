@@ -1,7 +1,7 @@
 import { parseInput } from './parser';
 import * as fs from 'fs-extra';
 import { interpreter } from './interpreter';
-import { variableManager } from "./manager";
+import { variableManager } from './manager';
 import logger from './logger';
 logger.level = 'debug';
 

@@ -1,5 +1,3 @@
-import { variableManager } from "./variable";
+import { variableManager } from './variable';
 
-export {
-  variableManager
-}
+export { variableManager };

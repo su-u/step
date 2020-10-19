@@ -1,12 +1,10 @@
 class VariableManager {
   private variables = new Map();
-  constructor() {
-
-  }
+  constructor() {}
 
   public assignment(toObject: any, value: any) {
     const name = toObject.image;
-    this.variables.set(name, value)
+    this.variables.set(name, value);
   }
 
   public reference(name: string) {
