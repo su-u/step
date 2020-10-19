@@ -16,6 +16,11 @@
     pattern: /\s+/,
     group: Lexer.SKIPPED,
   });
+  const Separate = createToken({
+    name: 'Separate',
+    pattern: /;/,
+    group: Lexer.SKIPPED,
+  });
   const BoolLiteral = createToken({
     name: 'BoolLiteral',
     pattern: /true|false/,
@@ -25,7 +30,7 @@
     pattern: /[a-zA-z][0-9a-zA-Z]*/,
   });
 
-  const LiteralTokens = [StringLiteral, NumberLiteral, WhiteSpace, BoolLiteral, Identifier];
+  const LiteralTokens = [Separate, StringLiteral, NumberLiteral, WhiteSpace, BoolLiteral, Identifier];
 
   const LBracket = createToken({ name: 'LBrackets', pattern: /\(/, label: '(' });
   const RBracket = createToken({ name: 'RBrackets', pattern: /\)/, label: ')' });
@@ -187,7 +192,7 @@
         this.OPTION(() => {
           this.CONSUME(elseToken);
           this.CONSUME2(LCurly);
-          this.SUBRULE2(this.BlockStatement);
+          this.SUBRULE2(this.BrockStatement);
           this.CONSUME2(RCurly);
         });
       });
@@ -207,7 +212,7 @@
         this.CONSUME(RCurly);
       });
 
-      this.BlockStatement = this.RULE('BlockStatement', () => {
+      this.BrockStatement = this.RULE('BlockStatement', () => {
         this.MANY(() => {
           this.OR([
             { ALT: () => this.SUBRULE(this.Function, { LABEL: 'statement' }) },
@@ -305,7 +310,7 @@
           },
         });
         this.CONSUME(RBracket);
-      });
+      })
 
       this.performSelfAnalysis();
     }

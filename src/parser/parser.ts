@@ -13,6 +13,11 @@ const WhiteSpace = createToken({
   pattern: /\s+/,
   group: Lexer.SKIPPED,
 });
+const Separate = createToken({
+  name: 'Separate',
+  pattern: /;/,
+  group: Lexer.SKIPPED,
+});
 const BoolLiteral = createToken({
   name: 'BoolLiteral',
   pattern: /true|false/,
@@ -22,7 +27,7 @@ const Identifier = createToken({
   pattern: /[a-zA-z][0-9a-zA-Z]*/,
 });
 
-const LiteralTokens = [StringLiteral, NumberLiteral, WhiteSpace, BoolLiteral, Identifier];
+const LiteralTokens = [Separate, StringLiteral, NumberLiteral, WhiteSpace, BoolLiteral, Identifier];
 
 const LBracket = createToken({ name: 'LBrackets', pattern: /\(/, label: '(' });
 const RBracket = createToken({ name: 'RBrackets', pattern: /\)/, label: ')' });
@@ -178,12 +183,12 @@ export class ChiboParser extends CstParser {
     this.SUBRULE(this.RelationExpression, { LABEL: 'conditionalExpression' });
     this.CONSUME(RBracket);
     this.CONSUME(LCurly);
-    this.SUBRULE(this.BrockStatement);
+    this.SUBRULE(this.BlockStatement);
     this.CONSUME(RCurly);
     this.OPTION(() => {
       this.CONSUME(elseToken);
       this.CONSUME2(LCurly);
-      this.SUBRULE2(this.BrockStatement);
+      this.SUBRULE2(this.BlockStatement);
       this.CONSUME2(RCurly);
     });
   });
@@ -203,7 +208,7 @@ export class ChiboParser extends CstParser {
     this.CONSUME(RCurly);
   });
 
-  private BrockStatement = this.RULE('BrockStatement', () => {
+  private BlockStatement = this.RULE('BlockStatement', () => {
     this.MANY(() => {
       this.OR([
         { ALT: () => this.SUBRULE(this.Function, { LABEL: 'statement' }) },
