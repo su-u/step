@@ -4747,22 +4747,29 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
           ],
           \\"arguments\\": [
             {
-              \\"image\\": \\"x\\",
-              \\"startOffset\\": 14,
-              \\"endOffset\\": 14,
-              \\"startLine\\": 1,
-              \\"endLine\\": 1,
-              \\"startColumn\\": 15,
-              \\"endColumn\\": 15,
-              \\"tokenTypeIdx\\": 8,
-              \\"tokenType\\": {
-                \\"name\\": \\"Identifier\\",
-                \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 8,
-                \\"CATEGORIES\\": [],
-                \\"categoryMatches\\": [],
-                \\"categoryMatchesMap\\": {},
-                \\"isParent\\": false
+              \\"name\\": \\"FunctionAugments\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"x\\",
+                    \\"startOffset\\": 14,
+                    \\"endOffset\\": 14,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 15,
+                    \\"endColumn\\": 15,
+                    \\"tokenTypeIdx\\": 8,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 8,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
               }
             }
           ],
@@ -5044,26 +5051,33 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                                                     ],
                                                     \\"arguments\\": [
                                                       {
-                                                        \\"name\\": \\"Factor\\",
+                                                        \\"name\\": \\"CallFunctionAugments\\",
                                                         \\"children\\": {
-                                                          \\"NumberLiteral\\": [
+                                                          \\"Factor\\": [
                                                             {
-                                                              \\"image\\": \\"1\\",
-                                                              \\"startOffset\\": 41,
-                                                              \\"endOffset\\": 41,
-                                                              \\"startLine\\": 4,
-                                                              \\"endLine\\": 4,
-                                                              \\"startColumn\\": 6,
-                                                              \\"endColumn\\": 6,
-                                                              \\"tokenTypeIdx\\": 4,
-                                                              \\"tokenType\\": {
-                                                                \\"name\\": \\"NumberLiteral\\",
-                                                                \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 4,
-                                                                \\"CATEGORIES\\": [],
-                                                                \\"categoryMatches\\": [],
-                                                                \\"categoryMatchesMap\\": {},
-                                                                \\"isParent\\": false
+                                                              \\"name\\": \\"Factor\\",
+                                                              \\"children\\": {
+                                                                \\"NumberLiteral\\": [
+                                                                  {
+                                                                    \\"image\\": \\"1\\",
+                                                                    \\"startOffset\\": 41,
+                                                                    \\"endOffset\\": 41,
+                                                                    \\"startLine\\": 4,
+                                                                    \\"endLine\\": 4,
+                                                                    \\"startColumn\\": 6,
+                                                                    \\"endColumn\\": 6,
+                                                                    \\"tokenTypeIdx\\": 4,
+                                                                    \\"tokenType\\": {
+                                                                      \\"name\\": \\"NumberLiteral\\",
+                                                                      \\"PATTERN\\": {},
+                                                                      \\"tokenTypeIdx\\": 4,
+                                                                      \\"CATEGORIES\\": [],
+                                                                      \\"categoryMatches\\": [],
+                                                                      \\"categoryMatchesMap\\": {},
+                                                                      \\"isParent\\": false
+                                                                    }
+                                                                  }
+                                                                ]
                                                               }
                                                             }
                                                           ]

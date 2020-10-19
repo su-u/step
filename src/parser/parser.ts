@@ -196,16 +196,20 @@ export class ChiboParser extends CstParser {
   private Function = this.RULE('Function', () => {
     this.CONSUME(functionToken);
     this.CONSUME(functionNameToken);
-    this.MANY_SEP({
-      SEP: Comma,
-      DEF: () => {
-        this.CONSUME(Identifier, { LABEL: 'arguments' });
-      },
-    });
+    this.SUBRULE(this.FunctionAugments, { LABEL: 'arguments' });
     this.CONSUME(RBracket);
     this.CONSUME(LCurly);
     this.SUBRULE(this.Program);
     this.CONSUME(RCurly);
+  });
+
+  private FunctionAugments = this.RULE('FunctionAugments', () => {
+    this.MANY_SEP({
+      SEP: Comma,
+      DEF: () => {
+        this.CONSUME(Identifier);
+      },
+    });
   });
 
   private BlockStatement = this.RULE('BlockStatement', () => {
@@ -299,12 +303,16 @@ export class ChiboParser extends CstParser {
 
   private CallFunction = this.RULE('CallFunction', () => {
     this.CONSUME(functionNameToken);
+    this.SUBRULE(this.CallFunctionAugments, { LABEL: 'arguments' });
+    this.CONSUME(RBracket);
+  });
+
+  private CallFunctionAugments = this.RULE('CallFunctionAugments', () => {
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
-        this.SUBRULE(this.Factor, { LABEL: 'arguments' });
+        this.SUBRULE(this.Factor);
       },
     });
-    this.CONSUME(RBracket);
   });
 }

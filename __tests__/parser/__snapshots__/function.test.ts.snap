@@ -50,6 +50,12 @@ exports[`関数 1 1`] = `
               }
             }
           ],
+          \\"arguments\\": [
+            {
+              \\"name\\": \\"FunctionAugments\\",
+              \\"children\\": {}
+            }
+          ],
           \\"RBrackets\\": [
             {
               \\"image\\": \\")\\",
@@ -322,62 +328,69 @@ exports[`関数 2 1`] = `
           ],
           \\"arguments\\": [
             {
-              \\"image\\": \\"x\\",
-              \\"startOffset\\": 18,
-              \\"endOffset\\": 18,
-              \\"startLine\\": 2,
-              \\"endLine\\": 2,
-              \\"startColumn\\": 18,
-              \\"endColumn\\": 18,
-              \\"tokenTypeIdx\\": 8,
-              \\"tokenType\\": {
-                \\"name\\": \\"Identifier\\",
-                \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 8,
-                \\"CATEGORIES\\": [],
-                \\"categoryMatches\\": [],
-                \\"categoryMatchesMap\\": {},
-                \\"isParent\\": false
-              }
-            },
-            {
-              \\"image\\": \\"y\\",
-              \\"startOffset\\": 21,
-              \\"endOffset\\": 21,
-              \\"startLine\\": 2,
-              \\"endLine\\": 2,
-              \\"startColumn\\": 21,
-              \\"endColumn\\": 21,
-              \\"tokenTypeIdx\\": 8,
-              \\"tokenType\\": {
-                \\"name\\": \\"Identifier\\",
-                \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 8,
-                \\"CATEGORIES\\": [],
-                \\"categoryMatches\\": [],
-                \\"categoryMatchesMap\\": {},
-                \\"isParent\\": false
-              }
-            }
-          ],
-          \\"Comma\\": [
-            {
-              \\"image\\": \\",\\",
-              \\"startOffset\\": 19,
-              \\"endOffset\\": 19,
-              \\"startLine\\": 2,
-              \\"endLine\\": 2,
-              \\"startColumn\\": 19,
-              \\"endColumn\\": 19,
-              \\"tokenTypeIdx\\": 15,
-              \\"tokenType\\": {
-                \\"name\\": \\"Comma\\",
-                \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 15,
-                \\"CATEGORIES\\": [],
-                \\"categoryMatches\\": [],
-                \\"categoryMatchesMap\\": {},
-                \\"isParent\\": false
+              \\"name\\": \\"FunctionAugments\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"x\\",
+                    \\"startOffset\\": 18,
+                    \\"endOffset\\": 18,
+                    \\"startLine\\": 2,
+                    \\"endLine\\": 2,
+                    \\"startColumn\\": 18,
+                    \\"endColumn\\": 18,
+                    \\"tokenTypeIdx\\": 8,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 8,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  },
+                  {
+                    \\"image\\": \\"y\\",
+                    \\"startOffset\\": 21,
+                    \\"endOffset\\": 21,
+                    \\"startLine\\": 2,
+                    \\"endLine\\": 2,
+                    \\"startColumn\\": 21,
+                    \\"endColumn\\": 21,
+                    \\"tokenTypeIdx\\": 8,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 8,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ],
+                \\"Comma\\": [
+                  {
+                    \\"image\\": \\",\\",
+                    \\"startOffset\\": 19,
+                    \\"endOffset\\": 19,
+                    \\"startLine\\": 2,
+                    \\"endLine\\": 2,
+                    \\"startColumn\\": 19,
+                    \\"endColumn\\": 19,
+                    \\"tokenTypeIdx\\": 15,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Comma\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 15,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
               }
             }
           ],
@@ -660,62 +673,69 @@ exports[`関数 3 1`] = `
           ],
           \\"arguments\\": [
             {
-              \\"image\\": \\"x\\",
-              \\"startOffset\\": 19,
-              \\"endOffset\\": 19,
-              \\"startLine\\": 2,
-              \\"endLine\\": 2,
-              \\"startColumn\\": 19,
-              \\"endColumn\\": 19,
-              \\"tokenTypeIdx\\": 8,
-              \\"tokenType\\": {
-                \\"name\\": \\"Identifier\\",
-                \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 8,
-                \\"CATEGORIES\\": [],
-                \\"categoryMatches\\": [],
-                \\"categoryMatchesMap\\": {},
-                \\"isParent\\": false
-              }
-            },
-            {
-              \\"image\\": \\"y\\",
-              \\"startOffset\\": 22,
-              \\"endOffset\\": 22,
-              \\"startLine\\": 2,
-              \\"endLine\\": 2,
-              \\"startColumn\\": 22,
-              \\"endColumn\\": 22,
-              \\"tokenTypeIdx\\": 8,
-              \\"tokenType\\": {
-                \\"name\\": \\"Identifier\\",
-                \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 8,
-                \\"CATEGORIES\\": [],
-                \\"categoryMatches\\": [],
-                \\"categoryMatchesMap\\": {},
-                \\"isParent\\": false
-              }
-            }
-          ],
-          \\"Comma\\": [
-            {
-              \\"image\\": \\",\\",
-              \\"startOffset\\": 20,
-              \\"endOffset\\": 20,
-              \\"startLine\\": 2,
-              \\"endLine\\": 2,
-              \\"startColumn\\": 20,
-              \\"endColumn\\": 20,
-              \\"tokenTypeIdx\\": 15,
-              \\"tokenType\\": {
-                \\"name\\": \\"Comma\\",
-                \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 15,
-                \\"CATEGORIES\\": [],
-                \\"categoryMatches\\": [],
-                \\"categoryMatchesMap\\": {},
-                \\"isParent\\": false
+              \\"name\\": \\"FunctionAugments\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"x\\",
+                    \\"startOffset\\": 19,
+                    \\"endOffset\\": 19,
+                    \\"startLine\\": 2,
+                    \\"endLine\\": 2,
+                    \\"startColumn\\": 19,
+                    \\"endColumn\\": 19,
+                    \\"tokenTypeIdx\\": 8,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 8,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  },
+                  {
+                    \\"image\\": \\"y\\",
+                    \\"startOffset\\": 22,
+                    \\"endOffset\\": 22,
+                    \\"startLine\\": 2,
+                    \\"endLine\\": 2,
+                    \\"startColumn\\": 22,
+                    \\"endColumn\\": 22,
+                    \\"tokenTypeIdx\\": 8,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 8,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ],
+                \\"Comma\\": [
+                  {
+                    \\"image\\": \\",\\",
+                    \\"startOffset\\": 20,
+                    \\"endOffset\\": 20,
+                    \\"startLine\\": 2,
+                    \\"endLine\\": 2,
+                    \\"startColumn\\": 20,
+                    \\"endColumn\\": 20,
+                    \\"tokenTypeIdx\\": 15,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Comma\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 15,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
               }
             }
           ],
@@ -1178,22 +1198,29 @@ exports[`関数 4 pipe 1`] = `
           ],
           \\"arguments\\": [
             {
-              \\"image\\": \\"str\\",
-              \\"startOffset\\": 18,
-              \\"endOffset\\": 20,
-              \\"startLine\\": 2,
-              \\"endLine\\": 2,
-              \\"startColumn\\": 18,
-              \\"endColumn\\": 20,
-              \\"tokenTypeIdx\\": 8,
-              \\"tokenType\\": {
-                \\"name\\": \\"Identifier\\",
-                \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 8,
-                \\"CATEGORIES\\": [],
-                \\"categoryMatches\\": [],
-                \\"categoryMatchesMap\\": {},
-                \\"isParent\\": false
+              \\"name\\": \\"FunctionAugments\\",
+              \\"children\\": {
+                \\"Identifier\\": [
+                  {
+                    \\"image\\": \\"str\\",
+                    \\"startOffset\\": 18,
+                    \\"endOffset\\": 20,
+                    \\"startLine\\": 2,
+                    \\"endLine\\": 2,
+                    \\"startColumn\\": 18,
+                    \\"endColumn\\": 20,
+                    \\"tokenTypeIdx\\": 8,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 8,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
               }
             }
           ],

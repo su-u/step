@@ -207,16 +207,20 @@
       this.Function = this.RULE('Function', () => {
         this.CONSUME(functionToken);
         this.CONSUME(functionNameToken);
-        this.MANY_SEP({
-          SEP: Comma,
-          DEF: () => {
-            this.CONSUME(Identifier, { LABEL: 'arguments' });
-          },
-        });
+        this.SUBRULE(this.FunctionAugments, { LABEL: 'arguments' });
         this.CONSUME(RBracket);
         this.CONSUME(LCurly);
         this.SUBRULE(this.Program);
         this.CONSUME(RCurly);
+      });
+
+      this.FunctionAugments = this.RULE('FunctionAugments', () => {
+        this.MANY_SEP({
+          SEP: Comma,
+          DEF: () => {
+            this.CONSUME(Identifier);
+          },
+        });
       });
 
       this.BrockStatement = this.RULE('BlockStatement', () => {
@@ -310,13 +314,17 @@
 
       this.CallFunction = this.RULE('CallFunction', () => {
         this.CONSUME(functionNameToken);
+        this.SUBRULE(this.CallFunctionAugments, { LABEL: 'arguments' });
+        this.CONSUME(RBracket);
+      });
+
+      this.CallFunctionAugments = this.RULE('CallFunctionAugments', () => {
         this.MANY_SEP({
           SEP: Comma,
           DEF: () => {
-            this.SUBRULE(this.Factor, { LABEL: 'arguments' });
+            this.SUBRULE(this.Factor);
           },
         });
-        this.CONSUME(RBracket);
       });
 
       this.performSelfAnalysis();
