@@ -305,7 +305,7 @@
           },
         });
         this.CONSUME(RBracket);
-      })
+      });
 
       this.performSelfAnalysis();
     }
