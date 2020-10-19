@@ -276,18 +276,30 @@ export class ChiboParser extends CstParser {
       { ALT: () => this.CONSUME(NumberLiteral) },
       { ALT: () => this.CONSUME(StringLiteral) },
       { ALT: () => this.CONSUME(BoolLiteral) },
-      { ALT: () => this.SUBRULE(this.parenthesisExpression) },
+      { ALT: () => this.SUBRULE(this.CallFunction) },
+      { ALT: () => this.SUBRULE(this.ParenthesisExpression) },
     ]);
   });
 
-  private parenthesisExpression = this.RULE('parenthesisExpression', () => {
+  private ParenthesisExpression = this.RULE('ParenthesisExpression', () => {
     this.CONSUME(LBracket);
     this.SUBRULE(this.RelationExpression);
     this.CONSUME(RBracket);
   });
 
-  private ReturnStatement = this.RULE('returnStatement', () => {
+  private ReturnStatement = this.RULE('ReturnStatement', () => {
     this.CONSUME(ReturnToken);
     this.SUBRULE(this.RelationExpression, { LABEL: 'return' });
+  });
+
+  private CallFunction = this.RULE('CallFunction', () => {
+    this.CONSUME(functionNameToken);
+    this.MANY_SEP({
+      SEP: Comma,
+      DEF: () => {
+        this.CONSUME(Identifier);
+      },
+    });
+    this.CONSUME(RBracket);
   });
 }

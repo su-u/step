@@ -10,9 +10,9 @@ export const Rules = {
   Factor: 'Factor',
   To: 'To',
   Function: 'Function',
-  BrockStatement: 'BrockStatement',
+  BlockStatement: 'BlockStatement',
   ToRight: 'ToRight',
   ToLeft: 'ToLeft',
-  parenthesisExpression: 'parenthesisExpression',
+  ParenthesisExpression: 'ParenthesisExpression',
   ReturnStatement: 'ReturnStatement',
 };

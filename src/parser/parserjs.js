@@ -187,7 +187,7 @@
         this.OPTION(() => {
           this.CONSUME(elseToken);
           this.CONSUME2(LCurly);
-          this.SUBRULE2(this.BrockStatement);
+          this.SUBRULE2(this.BlockStatement);
           this.CONSUME2(RCurly);
         });
       });
@@ -207,7 +207,7 @@
         this.CONSUME(RCurly);
       });
 
-      this.BrockStatement = this.RULE('BlockStatement', () => {
+      this.BlockStatement = this.RULE('BlockStatement', () => {
         this.MANY(() => {
           this.OR([
             { ALT: () => this.SUBRULE(this.Function, { LABEL: 'statement' }) },
