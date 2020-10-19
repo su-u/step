@@ -19,6 +19,8 @@ export const interpreter = (ast: any) => {
       break;
     case Rules.Assignment:
       return assignment({ ast });
+    case Rules.Each:
+      return {};
     case Rules.Pipe:
       return pipe({ ast });
     case Rules.RelationExpression:
@@ -32,5 +34,13 @@ export const interpreter = (ast: any) => {
     case Rules.To:
       logger.info(ast.children.Identifier[0].image);
       return ast.children.Identifier[0].image;
+    case Rules.Function:
+      return {};
+    case Rules.BlockStatement:
+      return {};
+    case Rules.ParenthesisExpression:
+      return {};
+    case Rules.ReturnStatement:
+      return {};
   }
 };
