@@ -6,7 +6,7 @@ type NumberLiteralType = LiteralType<number>;
 
 export type NumberObjectMethodType = {
   '+': <T extends number>(obj: NumberLiteralType, param: any) => any;
-  '*': <T extends number>(obj:NumberLiteralType, param: any) => any;
+  '*': <T extends number>(obj: NumberLiteralType, param: any) => any;
   '-': <T extends number>(obj: NumberLiteralType, param: any) => any;
   '/': <T extends number>(obj: NumberLiteralType, param: any) => any;
   '<': <T extends number>(obj: NumberLiteralType, param: any) => any;
