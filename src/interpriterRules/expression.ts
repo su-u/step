@@ -14,5 +14,8 @@ export const expression = ({ ast }: IInterpreterRules) => {
   console.log(result);
   const c = result[0][0] + result[0][1];
   console.log(c);
-  return result;
+  return {
+    name: 'NumberLiteral',
+    image: c,
+  };
 };

@@ -5,12 +5,10 @@ import { variableManager } from "../manager";
 export const assignment = ({ ast }: IInterpreterRules) => {
   const key = Object.keys(ast.children)[0];
   if (key === 'ToRight') {
-    console.log(ast.children);
     const from = interpreter(ast.children.ToRight[0].children.from[0]);
     console.log('f', from);
     const toObject = ast.children.ToRight[0].children.to[0];
-    console.log('to', toObject);
-    console.log(variableManager.test);
+    variableManager.assignment(toObject, from);
   } else {
     // const from = interpreter(ast.children.from[0]);
     // const op = ast.children.ToLeftToken[0];

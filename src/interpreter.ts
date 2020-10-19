@@ -32,9 +32,6 @@ export const interpreter = (ast: any) => {
       return term({ ast });
     case Rules.Factor:
       return factor({ ast });
-    case Rules.To:
-      logger.info(ast.children.Identifier[0].image);
-      return ast.children.Identifier[0].image;
     case Rules.Function:
       return functionStatement({ ast });
     case Rules.BlockStatement:
