@@ -280,11 +280,12 @@
           { ALT: () => this.CONSUME(NumberLiteral) },
           { ALT: () => this.CONSUME(StringLiteral) },
           { ALT: () => this.CONSUME(BoolLiteral) },
+          { ALT: () => this.SUBRULE(this.CallFunction) },
           { ALT: () => this.SUBRULE(this.parenthesisExpression) },
         ]);
       });
 
-      this.parenthesisExpression = this.RULE('parenthesisExpression', () => {
+      this.parenthesisExpression = this.RULE('ParenthesisExpression', () => {
         this.CONSUME(LBracket);
         this.SUBRULE(this.RelationExpression);
         this.CONSUME(RBracket);
@@ -294,6 +295,17 @@
         this.CONSUME(ReturnToken);
         this.SUBRULE(this.RelationExpression, { LABEL: 'return' });
       });
+
+      this.CallFunction = this.RULE('CallFunction', () => {
+        this.CONSUME(functionNameToken);
+        this.MANY_SEP({
+          SEP: Comma,
+          DEF: () => {
+            this.CONSUME(Identifier);
+          },
+        });
+        this.CONSUME(RBracket);
+      })
 
       this.performSelfAnalysis();
     }
