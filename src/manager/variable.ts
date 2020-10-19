@@ -9,11 +9,13 @@ class VariableManager {
     this.variables.set(name, value)
   }
 
+  public reference(name: string) {
+    return this.variables.get(name);
+  }
+
   public debug() {
     console.group('variables');
-    this.variables.forEach((x) => {
-      console.log(x);
-    });
+    console.log(this.variables);
     console.groupEnd();
   }
 }
