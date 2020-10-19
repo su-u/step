@@ -7,12 +7,16 @@ export const assignment = ({ ast }: IInterpreterRules) => {
   if (key === 'ToRight') {
     const obj = ast.children.ToRight[0];
     const from = interpreter(obj.children.from[0]);
-    const toObject = obj.children.to[0];
-    variableManager.assignment(toObject, from);
+    if (obj.children.to !== undefined) {
+      const toObject = obj.children.to[0];
+      variableManager.assignment(toObject, from);
+    }
   } else {
     const obj = ast.children.ToLeft[0];
     const from = interpreter(obj.children.from[0]);
-    const toObject = obj.children.to[0];
-    variableManager.assignment(toObject, from);
+    if (obj.children.to !== undefined) {
+      const toObject = obj.children.to[0];
+      variableManager.assignment(toObject, from);
+    }
   }
 };

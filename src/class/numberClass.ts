@@ -1,3 +1,5 @@
+import { LiteralType } from '../types/literal';
+
 const TYPE = 'NumberLiteral';
 
 type NumberLiteralType = LiteralType<number>;

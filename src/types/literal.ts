@@ -1,12 +1,12 @@
-declare type BaseLiteralType = {
+export declare type BaseLiteralType = {
   readonly name: 'NumberLiteral' | 'Identifier';
 };
 
-declare type LiteralType<T> = {
+export declare type LiteralType<T> = {
   readonly image: T;
 } & BaseLiteralType;
 
-declare type AllLiteralType =
+export declare type AllLiteralType =
   | LiteralType<string>
   | LiteralType<number>
   | LiteralType<boolean>
