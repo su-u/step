@@ -242,8 +242,8 @@ export class ChiboParser extends CstParser {
     this.MANY(() => {
       this.CONSUME(PipeToken);
       this.OR([
-        { ALT: () => this.SUBRULE(this.Each, { LABEL: 'to' }) },
-        { ALT: () => this.CONSUME(Identifier, { LABEL: 'to' }) },
+        { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
+        { ALT: () => this.CONSUME(Identifier, { LABEL: 'toIdentifier' }) },
       ]);
     });
   });
