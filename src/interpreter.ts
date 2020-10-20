@@ -24,7 +24,7 @@ export const interpreter = (ast: any, scope: any = null) => {
       value = assignment({ ast, scope });
       break;
     case Rules.Each:
-      value = each({ ast });
+      value = each({ ast, scope });
       break;
     case Rules.Pipe:
       value = pipe({ ast, scope });
@@ -42,10 +42,10 @@ export const interpreter = (ast: any, scope: any = null) => {
       value = factor({ ast, scope });
       break;
     case Rules.Function:
-      value = functionStatement({ ast });
+      value = functionStatement({ ast, scope });
       break;
     case Rules.BlockStatement:
-      value = blockStatement({ ast });
+      value = blockStatement({ ast, scope });
       break;
     case Rules.ParenthesisExpression:
       value = parenthesisExpression({ ast, scope });

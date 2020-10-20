@@ -12,7 +12,7 @@ export const pipe = ({ ast, scope }: IInterpreterRules) => {
       const eachObj = ast.children.toEach[0];
       const range = Array.from(Array(value.end - value.start + 1).keys(), (x) => x + value.start);
       range.forEach((i) => {
-        const inScopeManger = new ScopeManager(scope ? scope : variableManager);
+        const inScopeManger = new ScopeManager(scope);
         if (eachObj.children.Identifier !== undefined) {
           inScopeManger.assignment(eachObj.children.Identifier[0].image, {
             name: 'NumberLiteral',

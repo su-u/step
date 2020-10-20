@@ -3,11 +3,12 @@ import * as fs from 'fs-extra';
 import { interpreter } from './interpreter';
 import { variableManager, functionManager } from './manager';
 import logger from './logger';
+import { ScopeManager } from "./manager";
 logger.level = 'debug';
 
 const inputText = fs.readFileSync(process.argv[2], 'utf-8');
 const ast = parseInput(inputText);
-interpreter(ast);
-// console.log(JSON.stringify(ast, undefined, 2));
-variableManager.debug();
+const scope = new ScopeManager(variableManager);
+interpreter(ast, scope);
+scope.debug();
 functionManager.debug();
