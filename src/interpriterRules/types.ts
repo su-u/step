@@ -1,6 +1,6 @@
-import { StatusManager } from "@/manager";
+import { StatusManager } from '@/manager';
 
 export type IInterpreterRules = {
   ast: any;
-  status?: StatusManager
+  status?: StatusManager;
 };

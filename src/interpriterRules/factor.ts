@@ -1,6 +1,6 @@
 import { IInterpreterRules } from './types';
 import { functionManager, StatusManager, variableManager } from '../manager';
-import { interpreter } from "../interpreter";
+import { interpreter } from '../interpreter';
 
 export const factor = ({ ast }: IInterpreterRules) => {
   if (ast.children.NumberLiteral !== undefined) {
@@ -19,6 +19,6 @@ export const factor = ({ ast }: IInterpreterRules) => {
       variableManager.assignment(x, interpreter(obj.children.arguments[0].children.Factor[i]));
     });
     const statusManger = new StatusManager();
-    return interpreter(functionData.program, statusManger)
+    return interpreter(functionData.program, statusManger);
   }
 };
