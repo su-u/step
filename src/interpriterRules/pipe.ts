@@ -7,6 +7,7 @@ export const pipe = ({ ast, scope }: IInterpreterRules) => {
   const value = interpreter(childrenAst, scope);
   if (ast.children.PipeToken !== undefined) {
     if (ast.children.toEach !== undefined) {
+      console.log(value);
       return interpreter(ast.children.toEach[0], scope);
     } else if (ast.children.toIdentifier !== undefined) {
       const objName = ast.children.toIdentifier[0].image;

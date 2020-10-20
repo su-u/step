@@ -9,8 +9,9 @@ export const assignment = ({ ast, scope }: IInterpreterRules) => {
     const from = interpreter(obj.children.from[0], scope);
     if (obj.children.to !== undefined) {
       const toObject = obj.children.to[0];
-      scope ? scope.assignment(toObject.image, from) :
-      variableManager.assignment(toObject.image, from);
+      scope
+        ? scope.assignment(toObject.image, from)
+        : variableManager.assignment(toObject.image, from);
       return toObject;
     }
     return;
@@ -19,8 +20,9 @@ export const assignment = ({ ast, scope }: IInterpreterRules) => {
     const from = interpreter(obj.children.from[0]);
     if (obj.children.to !== undefined) {
       const toObject = obj.children.to[0];
-      scope ? scope.assignment(toObject.image, from) :
-        variableManager.assignment(toObject.image, from);
+      scope
+        ? scope.assignment(toObject.image, from)
+        : variableManager.assignment(toObject.image, from);
       return toObject;
     }
     return;

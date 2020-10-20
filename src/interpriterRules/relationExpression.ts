@@ -1,7 +1,7 @@
 import { IInterpreterRules } from './types';
 import { interpreter } from '../interpreter';
-import { Operators } from "../types/operators";
-import { Classes } from "../class";
+import { Operators } from '../types/operators';
+import { Classes } from '../class';
 
 export const relationExpression = ({ ast, scope }: IInterpreterRules) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
