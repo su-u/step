@@ -2,8 +2,7 @@ class VariableManager {
   private variables = new Map();
   constructor() {}
 
-  public assignment(toObject: any, value: any) {
-    const name = toObject.image;
+  public assignment(name: any, value: any) {
     this.variables.set(name, value);
   }
 

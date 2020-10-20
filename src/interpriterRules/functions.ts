@@ -7,6 +7,6 @@ export const functionStatement = ({ ast }: IInterpreterRules) => {
   const funcArguments = Object.values(ast.children.arguments[0].children).map((x: any) => {
     return x[0].image;
   });
-  console.log('a', funcArguments);
   functionManager.assignment(functionName, funcArguments, ast.children.Program[0]);
+  return;
 };

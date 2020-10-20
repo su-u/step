@@ -9,14 +9,18 @@ export const assignment = ({ ast }: IInterpreterRules) => {
     const from = interpreter(obj.children.from[0]);
     if (obj.children.to !== undefined) {
       const toObject = obj.children.to[0];
-      variableManager.assignment(toObject, from);
+      variableManager.assignment(toObject.image, from);
+      return toObject;
     }
+    return;
   } else {
     const obj = ast.children.ToLeft[0];
     const from = interpreter(obj.children.from[0]);
     if (obj.children.to !== undefined) {
       const toObject = obj.children.to[0];
-      variableManager.assignment(toObject, from);
+      variableManager.assignment(toObject.image, from);
+      return toObject;
     }
+    return;
   }
 };

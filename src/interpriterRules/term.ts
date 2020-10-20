@@ -13,7 +13,7 @@ export const term = ({ ast }: IInterpreterRules) => {
       return ast.children[rule].map((x) => x.image);
     }
   });
-  // console.log('t', result);
+  // console.log('t',  [literals, operators]);
   return literals.reduce((a, c, i) => {
     const name = c.name;
     return Classes[name][operators[i - 1]](c, a);

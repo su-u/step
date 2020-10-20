@@ -13,32 +13,50 @@ import { parenthesisExpression } from './interpriterRules/parenthesisExpression'
 import { returnStatement } from './interpriterRules/returnStatement';
 import { functionStatement } from './interpriterRules/functions';
 
-export const interpreter = (ast: any) => {
+export const interpreter = (ast: any, status: any = null) => {
   logger.info(ast.name);
+  let value = null;
   switch (ast.name) {
     case Rules.Program:
-      return program({ ast });
+      value =  program({ ast, status });
+      break;
     case Rules.Assignment:
-      return assignment({ ast });
+      value =  assignment({ ast });
+      break;
     case Rules.Each:
-      return each({ ast });
+      value =  each({ ast });
+      break;
     case Rules.Pipe:
-      return pipe({ ast });
+      value =  pipe({ ast });
+      break;
     case Rules.RelationExpression:
-      return relationExpression({ ast });
+      value =  relationExpression({ ast });
+      break;
     case Rules.Expression:
-      return expression({ ast });
+     value =  expression({ ast });
+      break;
     case Rules.Term:
-      return term({ ast });
+      value =  term({ ast });
+      break;
     case Rules.Factor:
-      return factor({ ast });
+     value =  factor({ ast });
+      break;
     case Rules.Function:
-      return functionStatement({ ast });
+      value =  functionStatement({ ast });
+      break;
     case Rules.BlockStatement:
-      return blockStatement({ ast });
+      value =  blockStatement({ ast });
+      break;
     case Rules.ParenthesisExpression:
-      return parenthesisExpression({ ast });
+     value =  parenthesisExpression({ ast });
+      break;
     case Rules.ReturnStatement:
-      return returnStatement({ ast });
+      value =  returnStatement({ ast, status });
+      break;
+  }
+  if (status !== null && status.returnExist) {
+    return status.returnValue;
+  } else {
+    return value;
   }
 };
