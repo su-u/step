@@ -86,7 +86,7 @@ exports[`each 1 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"toEach\\": [
                         {
                           \\"name\\": \\"Each\\",
                           \\"children\\": {
@@ -219,7 +219,7 @@ exports[`each 1 1`] = `
                                                         }
                                                       }
                                                     ],
-                                                    \\"to\\": [
+                                                    \\"toIdentifier\\": [
                                                       {
                                                         \\"image\\": \\"console\\",
                                                         \\"startOffset\\": 28,
@@ -437,7 +437,7 @@ exports[`each 2 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"toEach\\": [
                         {
                           \\"name\\": \\"Each\\",
                           \\"children\\": {
@@ -635,7 +635,7 @@ exports[`each 2 1`] = `
                                                         }
                                                       }
                                                     ],
-                                                    \\"to\\": [
+                                                    \\"toIdentifier\\": [
                                                       {
                                                         \\"image\\": \\"console\\",
                                                         \\"startOffset\\": 35,

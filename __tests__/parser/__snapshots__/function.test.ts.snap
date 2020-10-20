@@ -1354,7 +1354,7 @@ exports[`関数 4 pipe 1`] = `
                                       }
                                     }
                                   ],
-                                  \\"to\\": [
+                                  \\"toIdentifier\\": [
                                     {
                                       \\"image\\": \\"console\\",
                                       \\"startOffset\\": 38,
