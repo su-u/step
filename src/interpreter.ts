@@ -7,7 +7,6 @@ import { relationExpression } from './interpriterRules/relationExpression';
 import { pipe } from './interpriterRules/pipe';
 import { assignment } from './interpriterRules/assignment';
 import { program } from './interpriterRules/program';
-import { each } from './interpriterRules/each';
 import { blockStatement } from './interpriterRules/blockStatement';
 import { parenthesisExpression } from './interpriterRules/parenthesisExpression';
 import { returnStatement } from './interpriterRules/returnStatement';
@@ -22,9 +21,6 @@ export const interpreter = (ast: any, scope: any = null) => {
       break;
     case Rules.Assignment:
       value = assignment({ ast, scope });
-      break;
-    case Rules.Each:
-      value = each({ ast, scope });
       break;
     case Rules.Pipe:
       value = pipe({ ast, scope });
