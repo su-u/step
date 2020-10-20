@@ -71,7 +71,7 @@ const OverThan = createToken({
 });
 const LessThan = createToken({
   name: 'LessThan',
-  pattern: /(?!-|)>/,
+  pattern: /(?![-=])>/,
   categories: RelationalOperator,
 });
 const Equal = createToken({
