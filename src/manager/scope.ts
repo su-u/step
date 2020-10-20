@@ -1,9 +1,20 @@
 import { VariableManager } from './variable';
 
-export class ScopeManager extends VariableManager {
+export class ScopeManager {
   private _returnValue = undefined;
-  constructor() {
-    super();
+  private _parent;
+  private variables = new Map();
+
+  constructor(parent: any) {
+    this._parent = parent;
+  }
+
+  public assignment(name: any, value: any) {
+    this.variables.set(name, value);
+  }
+
+  public reference(name: string) {
+    return this.variables.get(name) || this._parent.reference(name);
   }
 
   public set returnValue(value: any) {
@@ -16,5 +27,11 @@ export class ScopeManager extends VariableManager {
 
   public get returnExist() {
     return this._returnValue !== undefined;
+  }
+
+  public debug() {
+    console.group('variables');
+    console.log(this.variables);
+    console.groupEnd();
   }
 }

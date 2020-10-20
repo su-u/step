@@ -2,6 +2,7 @@ import { IInterpreterRules } from './types';
 import { interpreter } from '../interpreter';
 import { Classes } from '../class';
 import { ScopeManager } from '../manager';
+import { variableManager } from "../manager";
 
 export const pipe = ({ ast, scope }: IInterpreterRules) => {
   const childrenAst = ast.children.RelationExpression[0];
@@ -11,7 +12,7 @@ export const pipe = ({ ast, scope }: IInterpreterRules) => {
       const eachObj = ast.children.toEach[0];
       const range = Array.from(Array(value.end - value.start + 1).keys(), (x) => x + value.start);
       range.forEach((i) => {
-        const inScopeManger = new ScopeManager();
+        const inScopeManger = new ScopeManager(scope ? scope : variableManager);
         if (eachObj.children.Identifier !== undefined) {
           inScopeManger.assignment(eachObj.children.Identifier[0].image, {
             name: 'NumberLiteral',

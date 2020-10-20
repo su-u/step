@@ -18,7 +18,7 @@ export const factor = ({ ast, scope }: IInterpreterRules) => {
     const obj = ast.children.CallFunction[0];
     const name = obj.children.FunctionNameToken[0].image;
     const functionData = functionManager.reference(name);
-    const scopeManger = new ScopeManager();
+    const scopeManger = new ScopeManager(scope ? scope : variableManager);
     functionData.arguments.forEach((x: any, i: number) => {
       scopeManger.assignment(x, interpreter(obj.children.arguments[0].children.Factor[i]));
     });

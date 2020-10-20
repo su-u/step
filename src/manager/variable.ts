@@ -10,6 +10,10 @@ export class VariableManager {
     return this.variables.get(name);
   }
 
+  public get parent() {
+    return this;
+  }
+
   public debug() {
     console.group('variables');
     console.log(this.variables);
