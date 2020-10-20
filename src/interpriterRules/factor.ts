@@ -1,5 +1,5 @@
 import { IInterpreterRules } from './types';
-import { functionManager, ScopeManager, variableManager } from '../manager';
+import { functionManager, ScopeManager } from '../manager';
 import { interpreter } from '../interpreter';
 
 export const factor = ({ ast, scope }: IInterpreterRules) => {
@@ -10,10 +10,7 @@ export const factor = ({ ast, scope }: IInterpreterRules) => {
       image,
     };
   } else if (ast.children.Identifier !== undefined) {
-    const v = scope
-      ? scope.reference(ast.children.Identifier[0].image)
-      : variableManager.reference(ast.children.Identifier[0].image);
-    return v;
+    return scope.reference(ast.children.Identifier[0].image);
   } else if (ast.children.CallFunction !== undefined) {
     const obj = ast.children.CallFunction[0];
     const name = obj.children.FunctionNameToken[0].image;
