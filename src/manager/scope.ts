@@ -1,6 +1,10 @@
-export class StatusManager {
+import { VariableManager } from './variable';
+
+export class ScopeManager extends VariableManager {
   private _returnValue = undefined;
-  constructor() {}
+  constructor() {
+    super();
+  }
 
   public set returnValue(value: any) {
     this._returnValue = value;

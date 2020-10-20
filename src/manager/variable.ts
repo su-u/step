@@ -1,4 +1,4 @@
-class VariableManager {
+export class VariableManager {
   private variables = new Map();
   constructor() {}
 

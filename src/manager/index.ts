@@ -1,5 +1,5 @@
 import { variableManager } from './variable';
 import { functionManager } from './function';
-import { StatusManager } from './status';
+import { ScopeManager } from './scope';
 
-export { variableManager, functionManager, StatusManager };
+export { variableManager, functionManager, ScopeManager };

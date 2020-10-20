@@ -3,11 +3,11 @@ import { interpreter } from '../interpreter';
 import { Classes } from '../class';
 import { Operators } from '../types/operators';
 
-export const term = ({ ast }: IInterpreterRules) => {
+export const term = ({ ast, scope }: IInterpreterRules) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
     if (rule !== Operators.MultiplicationOperator) {
       return ast.children[rule].map((x) => {
-        return interpreter(x);
+        return interpreter(x, scope);
       });
     } else {
       return ast.children[rule].map((x) => x.image);
