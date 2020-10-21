@@ -1,8 +1,7 @@
 import { IInterpreterRules } from './types';
-import { interpreter } from '../interpreter';
 
-export const returnStatement = ({ ast, scope }: IInterpreterRules) => {
-  const result = interpreter(ast.children.return[0], scope);
+export const returnStatement = ({ ast, scope, interpreter}: IInterpreterRules) => {
+  const result = interpreter(ast.children.return[0], scope, interpreter);
   scope.returnValue = result;
   return result;
 };

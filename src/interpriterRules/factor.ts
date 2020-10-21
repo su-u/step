@@ -1,8 +1,7 @@
 import { IInterpreterRules } from './types';
 import { functionManager, ScopeManager } from '../manager';
-import { interpreter } from '../interpreter';
 
-export const factor = ({ ast, scope }: IInterpreterRules) => {
+export const factor = ({ ast, scope, interpreter }: IInterpreterRules) => {
   if (ast.children.NumberLiteral !== undefined) {
     const image = parseInt(ast.children.NumberLiteral[0].image);
     return {
@@ -17,8 +16,8 @@ export const factor = ({ ast, scope }: IInterpreterRules) => {
     const functionData = functionManager.reference(name);
     const scopeManger = new ScopeManager(scope);
     functionData.arguments.forEach((x: any, i: number) => {
-      scopeManger.assignment(x, interpreter(obj.children.arguments[0].children.Factor[i]));
+      scopeManger.assignment(x, interpreter(obj.children.arguments[0].children.Factor[i], scope, interpreter));
     });
-    return interpreter(functionData.program, scopeManger);
+    return interpreter(functionData.program, scopeManger, interpreter);
   }
 };

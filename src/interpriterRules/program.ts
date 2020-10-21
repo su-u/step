@@ -1,11 +1,10 @@
 import { IInterpreterRules } from './types';
-import { interpreter } from '../interpreter';
 
-export const program = ({ ast, scope }: IInterpreterRules) => {
+export const program = ({ ast, scope, interpreter}: IInterpreterRules) => {
   let last = undefined;
   Object.keys(ast.children).forEach((rule) => {
     for (let line of ast.children[rule]) {
-      last = interpreter(line, scope);
+      last = interpreter(line, scope, interpreter);
     }
   });
   return last;

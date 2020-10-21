@@ -1,12 +1,11 @@
 import { IInterpreterRules } from './types';
-import { interpreter } from '../interpreter';
 import { Classes } from '../class';
 import { ScopeManager } from '../manager';
 import { variableManager } from "../manager";
 
-export const pipe = ({ ast, scope }: IInterpreterRules) => {
+export const pipe = ({ ast, scope, interpreter }: IInterpreterRules) => {
   const childrenAst = ast.children.RelationExpression[0];
-  const value = interpreter(childrenAst, scope);
+  const value = interpreter(childrenAst, scope, interpreter);
   if (ast.children.PipeToken !== undefined) {
     if (ast.children.toEach !== undefined) {
       const eachObj = ast.children.toEach[0];
@@ -19,7 +18,7 @@ export const pipe = ({ ast, scope }: IInterpreterRules) => {
             image: i,
           });
         }
-        interpreter(eachObj.children.Program[0], inScopeManger);
+        interpreter(eachObj.children.Program[0], inScopeManger, interpreter);
       });
       return;
     } else if (ast.children.toIdentifier !== undefined) {

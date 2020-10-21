@@ -1,13 +1,12 @@
 import { IInterpreterRules } from './types';
 import { Operators } from '../types/operators';
-import { interpreter } from '../interpreter';
 import { Classes } from '../class';
 
-export const expression = ({ ast, scope }: IInterpreterRules) => {
+export const expression = ({ ast, scope, interpreter }: IInterpreterRules) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
     if (rule !== Operators.AdditionOperator) {
       return ast.children[rule].map((x) => {
-        return interpreter(x, scope);
+        return interpreter(x, scope, interpreter);
       });
     } else {
       return ast.children[rule].map((x) => x.image);

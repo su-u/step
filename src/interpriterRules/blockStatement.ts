@@ -1,10 +1,9 @@
 import { IInterpreterRules } from './types';
-import { interpreter } from '../interpreter';
 
-export const blockStatement = ({ ast }: IInterpreterRules) => {
+export const blockStatement = ({ ast, scope, interpreter }: IInterpreterRules) => {
   Object.keys(ast.children).forEach((rule) => {
     for (let line of ast.children[rule]) {
-      interpreter(line);
+      interpreter(line, scope, interpreter);
     }
   });
 };

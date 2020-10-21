@@ -1,13 +1,12 @@
 import { IInterpreterRules } from './types';
-import { interpreter } from '../interpreter';
 import { Operators } from '../types/operators';
 import { Classes } from '../class';
 
-export const relationExpression = ({ ast, scope }: IInterpreterRules) => {
+export const relationExpression = ({ ast, scope, interpreter }: IInterpreterRules) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
     if (rule !== Operators.TildeToken) {
       return ast.children[rule].map((x) => {
-        return interpreter(x, scope);
+        return interpreter(x, scope, interpreter);
       });
     } else {
       return ast.children[rule].map((x) => x.image);

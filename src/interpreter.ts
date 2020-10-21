@@ -17,37 +17,37 @@ export const interpreter = (ast: any, scope: any = null) => {
   let value = null;
   switch (ast.name) {
     case Rules.Program:
-      value = program({ ast, scope });
+      value = program({ ast, scope, interpreter });
       break;
     case Rules.Assignment:
-      value = assignment({ ast, scope });
+      value = assignment({ ast, scope, interpreter });
       break;
     case Rules.Pipe:
-      value = pipe({ ast, scope });
+      value = pipe({ ast, scope, interpreter });
       break;
     case Rules.RelationExpression:
-      value = relationExpression({ ast, scope });
+      value = relationExpression({ ast, scope, interpreter });
       break;
     case Rules.Expression:
-      value = expression({ ast, scope });
+      value = expression({ ast, scope, interpreter });
       break;
     case Rules.Term:
-      value = term({ ast, scope });
+      value = term({ ast, scope, interpreter });
       break;
     case Rules.Factor:
-      value = factor({ ast, scope });
+      value = factor({ ast, scope, interpreter });
       break;
     case Rules.Function:
-      value = functionStatement({ ast, scope });
+      value = functionStatement({ ast, scope, interpreter });
       break;
     case Rules.BlockStatement:
-      value = blockStatement({ ast, scope });
+      value = blockStatement({ ast, scope, interpreter });
       break;
     case Rules.ParenthesisExpression:
-      value = parenthesisExpression({ ast, scope });
+      value = parenthesisExpression({ ast, scope, interpreter });
       break;
     case Rules.ReturnStatement:
-      value = returnStatement({ ast, scope });
+      value = returnStatement({ ast, scope, interpreter });
       break;
   }
   if (scope !== null && scope.returnExist) {

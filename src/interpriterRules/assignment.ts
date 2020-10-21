@@ -1,12 +1,11 @@
 import { IInterpreterRules } from './types';
-import { interpreter } from '../interpreter';
 import { variableManager } from '../manager';
 
-export const assignment = ({ ast, scope }: IInterpreterRules) => {
+export const assignment = ({ ast, scope, interpreter }: IInterpreterRules) => {
   const key = Object.keys(ast.children)[0];
   if (key === 'ToRight') {
     const obj = ast.children.ToRight[0];
-    const from = interpreter(obj.children.from[0], scope);
+    const from = interpreter(obj.children.from[0], scope, interpreter);
     if (obj.children.to !== undefined) {
       const toObject = obj.children.to[0];
       scope
@@ -17,7 +16,7 @@ export const assignment = ({ ast, scope }: IInterpreterRules) => {
     return;
   } else {
     const obj = ast.children.ToLeft[0];
-    const from = interpreter(obj.children.from[0]);
+    const from = interpreter(obj.children.from[0], scope, interpreter);
     if (obj.children.to !== undefined) {
       const toObject = obj.children.to[0];
       scope
