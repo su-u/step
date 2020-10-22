@@ -1,11 +1,12 @@
 import { IInterpreterRules } from './types';
 import { functionManager, ScopeManager } from '../manager';
+import { LiteralTokens } from "../tokens";
 
 export const factor = ({ ast, scope, interpreter }: IInterpreterRules) => {
   if (ast.children.NumberLiteral !== undefined) {
     const image = parseInt(ast.children.NumberLiteral[0].image);
     return {
-      name: 'NumberLiteral',
+      name: LiteralTokens.NumberLiteral,
       image,
     };
   } else if (ast.children.Identifier !== undefined) {
@@ -25,13 +26,13 @@ export const factor = ({ ast, scope, interpreter }: IInterpreterRules) => {
   } else if (ast.children.BoolLiteral !== undefined) {
     const image = ast.children.BoolLiteral[0].image;
     return {
-      name: 'BooleanLiteral',
+      name: LiteralTokens.BooleanLiteral,
       image,
     };
   } else if (ast.children.StringLiteral !== undefined) {
     const image = ast.children.StringLiteral[0].image;
     return {
-      name: 'StringLiteralLiteral',
+      name: LiteralTokens.StringLiteral,
       image,
     };
   }
