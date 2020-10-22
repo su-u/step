@@ -19,5 +19,11 @@ export const factor = ({ ast, scope, interpreter }: IInterpreterRules) => {
       scopeManger.assignment(x, interpreter(obj.children.arguments[0].children.Factor[i], scope, interpreter));
     });
     return interpreter(functionData.program, scopeManger, interpreter);
+  } else if (ast.children.BoolLiteral !== undefined) {
+    const image = ast.children.BoolLiteral[0].image;
+    return {
+      name: 'BooleanLiteral',
+      image,
+    };
   }
 };

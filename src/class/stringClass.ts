@@ -6,15 +6,11 @@ type StringLiteralType = LiteralType<string>;
 
 export type StringObjectMethodType = {
   '+': <T extends number>(obj: StringLiteralType, param: any) => any;
-  '*': <T extends number>(obj: StringLiteralType, param: any) => any;
-  '-': <T extends number>(obj: StringLiteralType, param: any) => any;
-  '/': <T extends number>(obj: StringLiteralType, param: any) => any;
   '<': <T extends number>(obj: StringLiteralType, param: any) => any;
   '<=': <T extends number>(obj: StringLiteralType, param: any) => any;
   '>': <T extends number>(obj: StringLiteralType, param: any) => any;
   '>=': <T extends number>(obj: StringLiteralType, param: any) => any;
   '~': <T extends number>(obj: StringLiteralType, param: any) => any;
-  to_s: <T extends number>(obj: StringLiteralType, param: any) => string;
 };
 
 export const StringClass: StringObjectMethodType = {
@@ -54,8 +50,5 @@ export const StringClass: StringObjectMethodType = {
       start: param.image,
       end: obj.image,
     };
-  },
-  to_s: (obj, param) => {
-    return String(obj.image);
   },
 };
