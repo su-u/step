@@ -19,7 +19,7 @@ export const factor = ({ ast, scope, interpreter }: IInterpreterRules) => {
     functionData.arguments.forEach((x: any, i: number) => {
       scopeManger.assignment(
         x,
-        interpreter(obj.children.arguments[0].children.Factor[i], scope, interpreter),
+        interpreter(obj.children.arguments[0].children.Factor[i], scopeManger, interpreter),
       );
     });
     return interpreter(functionData.program, scopeManger, interpreter);

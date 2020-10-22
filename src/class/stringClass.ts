@@ -17,7 +17,7 @@ export const StringClass: StringObjectMethodType = {
   '+': (obj, param) => {
     return {
       name: TYPE,
-      image: obj.image + param.image,
+      image: param.image + obj.image,
     };
   },
   '<': (obj, param) => {

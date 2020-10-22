@@ -10,9 +10,13 @@ logger.level = 'debug';
 const inputText = fs.readFileSync(process.argv[2], 'utf-8');
 const ast = parseInput(inputText);
 // AST確認用
-writeAstToJson(ast as any);
 
-const scope = new ScopeManager(variableManager);
-interpreter(ast, scope, interpreter);
-scope.debug();
-functionManager.debug();
+try {
+  const scope = new ScopeManager(variableManager);
+  interpreter(ast, scope, interpreter);
+  scope.debug();
+  functionManager.debug();
+  writeAstToJson(ast as any);
+} catch(err) {
+  console.error(err);
+}
