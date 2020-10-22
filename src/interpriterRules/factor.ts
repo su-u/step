@@ -16,13 +16,22 @@ export const factor = ({ ast, scope, interpreter }: IInterpreterRules) => {
     const functionData = functionManager.reference(name);
     const scopeManger = new ScopeManager(scope);
     functionData.arguments.forEach((x: any, i: number) => {
-      scopeManger.assignment(x, interpreter(obj.children.arguments[0].children.Factor[i], scope, interpreter));
+      scopeManger.assignment(
+        x,
+        interpreter(obj.children.arguments[0].children.Factor[i], scope, interpreter),
+      );
     });
     return interpreter(functionData.program, scopeManger, interpreter);
   } else if (ast.children.BoolLiteral !== undefined) {
     const image = ast.children.BoolLiteral[0].image;
     return {
       name: 'BooleanLiteral',
+      image,
+    };
+  } else if (ast.children.StringLiteral !== undefined) {
+    const image = ast.children.StringLiteral[0].image;
+    return {
+      name: 'StringLiteralLiteral',
       image,
     };
   }

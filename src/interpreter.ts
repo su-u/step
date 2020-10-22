@@ -11,8 +11,9 @@ import { blockStatement } from './interpriterRules/blockStatement';
 import { parenthesisExpression } from './interpriterRules/parenthesisExpression';
 import { returnStatement } from './interpriterRules/returnStatement';
 import { functionStatement } from './interpriterRules/functions';
+import { ifStatement } from './interpriterRules/ifStatement';
 
-export const interpreter = (ast: any, scope: any = null) => {
+export const interpreter = (ast: any, scope: any = null, interpreter) => {
   logger.info(ast.name);
   let value = null;
   switch (ast.name) {
@@ -21,6 +22,9 @@ export const interpreter = (ast: any, scope: any = null) => {
       break;
     case Rules.Assignment:
       value = assignment({ ast, scope, interpreter });
+      break;
+    case Rules.IfStatement:
+      value = ifStatement({ ast, scope, interpreter });
       break;
     case Rules.Pipe:
       value = pipe({ ast, scope, interpreter });
