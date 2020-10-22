@@ -1,6 +1,6 @@
 import { IInterpreterRules } from './types';
 import { Classes } from '../class';
-import { Operators } from '../types/operators';
+import { Operators } from '../operators';
 
 export const term = ({ ast, scope, interpreter }: IInterpreterRules) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {

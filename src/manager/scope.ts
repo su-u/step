@@ -1,5 +1,3 @@
-import { VariableManager } from './variable';
-
 export class ScopeManager {
   private _returnValue = undefined;
   private _parent;

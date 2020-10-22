@@ -1,4 +1,4 @@
-import { Rules } from './types/rules';
+import { Rules } from './rules';
 import logger from './logger';
 import { term } from './interpriterRules/term';
 import { factor } from './interpriterRules/factor';

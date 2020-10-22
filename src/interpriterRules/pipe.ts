@@ -1,7 +1,6 @@
 import { IInterpreterRules } from './types';
 import { Classes } from '../class';
 import { ScopeManager } from '../manager';
-import { variableManager } from "../manager";
 
 export const pipe = ({ ast, scope, interpreter }: IInterpreterRules) => {
   const childrenAst = ast.children.RelationExpression[0];
