@@ -30,7 +30,7 @@ export const factor = ({ ast, scope, interpreter }: IInterpreterRules) => {
       image,
     };
   } else if (ast.children.StringLiteral !== undefined) {
-    const image = ast.children.StringLiteral[0].image;
+    const image = ast.children.StringLiteral[0].image.slice(1).slice(0, -1);
     return {
       name: LiteralTokens.StringLiteral,
       image,
