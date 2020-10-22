@@ -1,0 +1,6 @@
+value <- false
+if (value) {
+  "test" |> console
+} else {
+  "test2" |> console
+}
