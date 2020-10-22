@@ -17,6 +17,6 @@ try {
   scope.debug();
   functionManager.debug();
   writeAstToJson(ast as any);
-} catch(err) {
+} catch (err) {
   console.error(err);
 }
