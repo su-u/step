@@ -1,5 +1,5 @@
 export declare type BaseLiteralType = {
-  readonly name: 'NumberLiteral' | 'StringLiteral' | 'Identifier';
+  readonly name: 'NumberLiteral' | 'StringLiteral' | 'BooleanLiteral' | 'Identifier';
 };
 
 export declare type LiteralType<T> = {

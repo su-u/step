@@ -1,6 +1,6 @@
 import { IInterpreterRules } from './types';
 import { functionManager, ScopeManager } from '../manager';
-import { LiteralTokens } from "../tokens";
+import { LiteralTokens } from '../tokens';
 
 export const factor = ({ ast, scope, interpreter }: IInterpreterRules) => {
   if (ast.children.NumberLiteral !== undefined) {
