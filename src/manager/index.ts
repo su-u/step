@@ -1,9 +1,9 @@
 import { VariableManager } from './variable';
-import { functionManager, FunctionManager } from './function';
+import { FunctionManager } from './function';
 
 export type Manager = {
   variable: VariableManager;
   function: FunctionManager;
 };
 
-export { functionManager, VariableManager };
+export { FunctionManager, VariableManager };

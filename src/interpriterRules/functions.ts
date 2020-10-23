@@ -1,11 +1,10 @@
 import { IInterpreterRules } from './types';
-import { functionManager } from '../manager';
 
-export const functionStatement = ({ ast }: IInterpreterRules) => {
+export const functionStatement = ({ ast, manager }: IInterpreterRules) => {
   const functionName = ast.children.FunctionNameToken[0].image;
   const funcArguments = ast.children.arguments[0].children.Identifier.map((x: any) => {
     return x.image;
   });
-  functionManager.assignment(functionName, funcArguments, ast.children.Program[0]);
+  manager.function.assignment(functionName, funcArguments, ast.children.Program[0]);
   return;
 };

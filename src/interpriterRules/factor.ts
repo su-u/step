@@ -1,5 +1,5 @@
 import { IInterpreterRules } from './types';
-import { functionManager, VariableManager } from '../manager';
+import { VariableManager } from '../manager';
 import { LiteralTokens } from '../tokens';
 
 export const factor = ({ ast, manager, execObject }: IInterpreterRules) => {
@@ -14,7 +14,7 @@ export const factor = ({ ast, manager, execObject }: IInterpreterRules) => {
   } else if (ast.children.CallFunction !== undefined) {
     const obj = ast.children.CallFunction[0];
     const name = obj.children.FunctionNameToken[0].image;
-    const functionData = functionManager.reference(name);
+    const functionData = manager.function.reference(name);
     const scopeManger = new VariableManager(manager.variable);
     functionData.arguments.forEach((x: any, i: number) => {
       scopeManger.assignment(

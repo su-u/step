@@ -19,6 +19,3 @@ export class FunctionManager {
     console.groupEnd();
   }
 }
-
-const functionManager: FunctionManager = new FunctionManager();
-export { functionManager };
