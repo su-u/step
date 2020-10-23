@@ -1,7 +1,7 @@
 import { IInterpreterRules } from './types';
 
-export const returnStatement = ({ ast, scope, interpreter }: IInterpreterRules) => {
-  const result = interpreter(ast.children.return[0], scope, interpreter);
-  scope.returnValue = result;
+export const returnStatement = ({ ast, manager, execObject }: IInterpreterRules) => {
+  const result = execObject.interpreter({ ast: ast.children.return[0], manager, execObject });
+  manager.variable.returnValue = result;
   return result;
 };

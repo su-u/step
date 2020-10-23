@@ -1,5 +1,9 @@
-import { variableManager } from './variable';
-import { functionManager } from './function';
-import { ScopeManager } from './scope';
+import { VariableManager } from './variable';
+import { functionManager, FunctionManager } from './function';
 
-export { variableManager, functionManager, ScopeManager };
+export type Manager = {
+  variable: VariableManager;
+  function: FunctionManager;
+};
+
+export { functionManager, VariableManager };

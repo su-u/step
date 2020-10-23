@@ -1,7 +1,9 @@
-import { ScopeManager } from '../manager';
+import { Manager } from '../manager';
 
 export type IInterpreterRules = {
   ast: any;
-  scope: ScopeManager;
-  interpreter: (ast: any, scope: any, interpreter: any) => any;
+  manager: Manager;
+  execObject: {
+    interpreter: ({ ast, manager, execObject: { interpreter } }) => any;
+  };
 };

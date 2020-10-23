@@ -1,4 +1,4 @@
-class FunctionManager {
+export class FunctionManager {
   private functions = new Map();
   constructor() {}
 

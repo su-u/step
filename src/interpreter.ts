@@ -12,50 +12,52 @@ import { parenthesisExpression } from './interpriterRules/parenthesisExpression'
 import { returnStatement } from './interpriterRules/returnStatement';
 import { functionStatement } from './interpriterRules/functions';
 import { ifStatement } from './interpriterRules/ifStatement';
+import { IInterpreterRules } from './interpriterRules/types';
 
-export const interpreter = (ast: any, scope: any = null, interpreter) => {
+export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => {
   logger.info(ast.name);
   let value = null;
   switch (ast.name) {
     case Rules.Program:
-      value = program({ ast, scope, interpreter });
+      value = program({ ast, manager, execObject });
       break;
     case Rules.Assignment:
-      value = assignment({ ast, scope, interpreter });
+      value = assignment({ ast, manager, execObject });
       break;
     case Rules.IfStatement:
-      value = ifStatement({ ast, scope, interpreter });
+      value = ifStatement({ ast, manager, execObject });
       break;
     case Rules.Pipe:
-      value = pipe({ ast, scope, interpreter });
+      value = pipe({ ast, manager, execObject });
       break;
     case Rules.RelationExpression:
-      value = relationExpression({ ast, scope, interpreter });
+      value = relationExpression({ ast, manager, execObject });
       break;
     case Rules.Expression:
-      value = expression({ ast, scope, interpreter });
+      value = expression({ ast, manager, execObject });
       break;
     case Rules.Term:
-      value = term({ ast, scope, interpreter });
+      value = term({ ast, manager, execObject });
       break;
     case Rules.Factor:
-      value = factor({ ast, scope, interpreter });
+      value = factor({ ast, manager, execObject });
       break;
     case Rules.Function:
-      value = functionStatement({ ast, scope, interpreter });
+      value = functionStatement({ ast, manager, execObject });
       break;
     case Rules.BlockStatement:
-      value = blockStatement({ ast, scope, interpreter });
+      value = blockStatement({ ast, manager, execObject });
       break;
     case Rules.ParenthesisExpression:
-      value = parenthesisExpression({ ast, scope, interpreter });
+      value = parenthesisExpression({ ast, manager, execObject });
       break;
     case Rules.ReturnStatement:
-      value = returnStatement({ ast, scope, interpreter });
+      value = returnStatement({ ast, manager, execObject });
       break;
   }
-  if (scope !== null && scope.returnExist) {
-    return scope.returnValue;
+
+  if (manager.variable.returnExist) {
+    return manager.variable.returnValue;
   } else {
     return value;
   }

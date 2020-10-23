@@ -1,9 +1,8 @@
 import { parseInput } from './parser';
 import * as fs from 'fs-extra';
 import { interpreter } from './interpreter';
-import { variableManager, functionManager } from './manager';
+import { VariableManager, functionManager, Manager } from './manager';
 import logger from './logger';
-import { ScopeManager } from './manager';
 import { writeAstToJson } from './util/file';
 logger.level = 'debug';
 
@@ -12,9 +11,12 @@ const ast = parseInput(inputText);
 // AST確認用
 
 try {
-  const scope = new ScopeManager(variableManager);
-  interpreter(ast, scope, interpreter);
-  scope.debug();
+  const manager: Manager = {
+    variable: new VariableManager(null),
+    function: null,
+  };
+  interpreter({ ast, manager, execObject: { interpreter } });
+  manager.variable.debug();
   functionManager.debug();
   writeAstToJson(ast as any);
 } catch (err) {

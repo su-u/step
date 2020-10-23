@@ -1,24 +1,23 @@
 import { IInterpreterRules } from './types';
-import { variableManager } from '../manager';
 
-export const assignment = ({ ast, scope, interpreter }: IInterpreterRules) => {
+export const assignment = ({ ast, manager, execObject }: IInterpreterRules) => {
   const key = Object.keys(ast.children)[0];
   if (key === 'ToRight') {
     const obj = ast.children.ToRight[0];
-    const from = interpreter(obj.children.from[0], scope, interpreter);
+    const from = execObject.interpreter({ ast: obj.children.from[0], manager, execObject });
     if (obj.children.to !== undefined) {
       const toObject = obj.children.to[0];
-      scope.assignment(toObject.image, from);
+      manager.variable.assignment(toObject.image, from);
 
       return toObject;
     }
     return;
   } else {
     const obj = ast.children.ToLeft[0];
-    const from = interpreter(obj.children.from[0], scope, interpreter);
+    const from = execObject.interpreter({ ast: obj.children.from[0], manager, execObject });
     if (obj.children.to !== undefined) {
       const toObject = obj.children.to[0];
-      scope.assignment(toObject.image, from);
+      manager.variable.assignment(toObject.image, from);
 
       return toObject;
     }

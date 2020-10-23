@@ -2,12 +2,16 @@ import { IInterpreterRules } from './types';
 import { LiteralTokens, BooleanLiteralTokens } from '../tokens';
 import { AllLiteralType } from '../types/literal';
 
-export const ifStatement = ({ ast, scope, interpreter }: IInterpreterRules) => {
-  const condition = interpreter(ast.children.conditionalExpression[0], scope, interpreter);
+export const ifStatement = ({ ast, manager, execObject }: IInterpreterRules) => {
+  const condition = execObject.interpreter({
+    ast: ast.children.conditionalExpression[0],
+    manager,
+    execObject,
+  });
   if (isTrue(condition)) {
-    return interpreter(ast.children.BlockStatement[0], scope, interpreter);
+    return execObject.interpreter({ ast: ast.children.BlockStatement[0], manager, execObject });
   } else {
-    return interpreter(ast.children.BlockStatement[1], scope, interpreter);
+    return execObject.interpreter({ ast: ast.children.BlockStatement[1], manager, execObject });
   }
 };
 
