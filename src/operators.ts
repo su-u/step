@@ -16,4 +16,4 @@ export const RelationalOperatorTokens: ReadonlyArray<any> = [
   Operators.AmountMore,
   Operators.AmountLess,
   Operators.OverThan,
-]
+];

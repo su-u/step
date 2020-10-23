@@ -1,5 +1,5 @@
 import { LiteralType } from '../types/literal';
-import { LiteralTokens } from "../tokens";
+import { LiteralTokens } from '../tokens';
 
 type NumberLiteralType = LiteralType<number>;
 

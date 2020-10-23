@@ -1,5 +1,5 @@
 import { IInterpreterRules } from './types';
-import { Operators, RelationalOperatorTokens } from '../operators';
+import { RelationalOperatorTokens } from '../operators';
 import { Classes } from '../class';
 
 export const relationExpression = ({ ast, manager, execObject }: IInterpreterRules) => {
