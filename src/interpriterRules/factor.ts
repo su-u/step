@@ -36,4 +36,8 @@ export const factor = ({ ast, scope, interpreter }: IInterpreterRules) => {
       image,
     };
   }
+  return {
+    name: LiteralTokens.DebugLiteral,
+    image: null,
+  }
 };
