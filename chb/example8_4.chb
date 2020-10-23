@@ -1,1 +1,2 @@
-1 = 1
+int(1.5) |> console
+1.5 |> console

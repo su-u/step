@@ -3,12 +3,12 @@ import { interpreter } from './interpreter';
 import { VariableManager, FunctionManager, Manager } from './manager';
 import logger from './logger';
 import { writeAstToJson } from './util/file';
-logger.level = 'debug';
-
+// logger.level = 'debug';
+logger.level = 'fatal';
 
 export const entry = (text: string) => {
   const ast = parseInput(text);
-// AST確認用
+  // AST確認用
 
   try {
     const manager: Manager = {
@@ -22,4 +22,4 @@ export const entry = (text: string) => {
   } catch (err) {
     console.error(err);
   }
-}
+};

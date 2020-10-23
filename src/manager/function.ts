@@ -1,21 +1,36 @@
+import { BuildInFunctions } from '../buildInFunctions';
+
 export class FunctionManager {
-  private functions = new Map();
-  constructor() {}
+  private userFunctions = new Map();
+  private readonly buildFunctions: any;
+  constructor() {
+    this.buildFunctions = BuildInFunctions;
+  }
 
   public assignment(name: any, functionArguments: any[], programAst: any) {
-    this.functions.set(name.slice(0, -1), {
+    this.userFunctions.set(name, {
       arguments: functionArguments,
-      program: programAst,
+      function: programAst,
     });
   }
 
   public reference(name: string) {
-    return this.functions.get(name.slice(0, -1));
+    if (this.buildFunctions[name] !== undefined) {
+      return {
+        ...this.buildFunctions[name],
+        type: 'build',
+      };
+    } else {
+      return {
+        ...this.userFunctions.get(name.slice(0, -1)),
+        type: 'user',
+      };
+    }
   }
 
   public debug() {
     console.group('functions');
-    console.log(this.functions);
+    console.log(this.userFunctions);
     console.groupEnd();
   }
 }
