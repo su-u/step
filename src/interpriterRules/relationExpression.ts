@@ -1,10 +1,10 @@
 import { IInterpreterRules } from './types';
-import { Operators } from '../operators';
+import { Operators, RelationalOperatorTokens } from '../operators';
 import { Classes } from '../class';
 
 export const relationExpression = ({ ast, manager, execObject }: IInterpreterRules) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
-    if (![Operators.TildeToken, Operators.LessThan].includes(rule)) {
+    if (!RelationalOperatorTokens.includes(rule)) {
       return ast.children[rule].map((x) => {
         return execObject.interpreter({ ast: x, manager, execObject });
       });

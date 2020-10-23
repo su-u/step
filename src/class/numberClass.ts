@@ -1,6 +1,5 @@
 import { LiteralType } from '../types/literal';
-
-const TYPE = 'NumberLiteral';
+import { LiteralTokens } from "../tokens";
 
 type NumberLiteralType = LiteralType<number>;
 
@@ -14,55 +13,56 @@ export type NumberObjectMethodType = {
   '>': <T extends number>(obj: NumberLiteralType, param: any) => any;
   '>=': <T extends number>(obj: NumberLiteralType, param: any) => any;
   '~': <T extends number>(obj: NumberLiteralType, param: any) => any;
-  to_s: <T extends number>(obj: NumberLiteralType, param: any) => string;
+  '=': <T extends number>(obj: NumberLiteralType, param: any) => any;
+  to_s: <T extends number>(obj: NumberLiteralType, param: any) => any;
 };
 
 export const NumberClass: NumberObjectMethodType = {
   '+': (obj, param) => {
     return {
-      name: TYPE,
+      name: LiteralTokens.NumberLiteral,
       image: obj.image + param.image,
     };
   },
   '-': (obj, param) => {
     return {
-      name: TYPE,
+      name: LiteralTokens.NumberLiteral,
       image: obj.image - param.image,
     };
   },
   '*': (obj, param) => {
     return {
-      name: TYPE,
+      name: LiteralTokens.NumberLiteral,
       image: obj.image * param.image,
     };
   },
   '/': (obj, param) => {
     return {
-      name: TYPE,
+      name: LiteralTokens.NumberLiteral,
       image: obj.image / param.image,
     };
   },
   '<': (obj, param) => {
     return {
-      name: TYPE,
+      name: LiteralTokens.BooleanLiteral,
       image: obj.image < param.image,
     };
   },
   '<=': (obj, param) => {
     return {
-      name: TYPE,
+      name: LiteralTokens.BooleanLiteral,
       image: obj.image <= param.image,
     };
   },
   '>': (obj, param) => {
     return {
-      name: TYPE,
+      name: LiteralTokens.BooleanLiteral,
       image: obj.image > param.image,
     };
   },
   '>=': (obj, param) => {
     return {
-      name: TYPE,
+      name: LiteralTokens.BooleanLiteral,
       image: obj.image >= param.image,
     };
   },
@@ -73,7 +73,16 @@ export const NumberClass: NumberObjectMethodType = {
       end: obj.image,
     };
   },
+  '=': (obj, param) => {
+    return {
+      name: LiteralTokens.BooleanLiteral,
+      image: obj.image == param.image,
+    };
+  },
   to_s: (obj, param) => {
-    return String(obj.image);
+    return {
+      name: LiteralTokens.StringLiteral,
+      image: String(obj.image),
+    };
   },
 };
