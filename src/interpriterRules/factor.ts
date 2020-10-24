@@ -1,6 +1,5 @@
 import { IInterpreterRules } from './types';
 import { LiteralTokens } from '../tokens';
-import { callFunction } from './factor/callFunction';
 import { identifier } from './factor/identifier';
 import { booleanLiteral } from './factor/boolLiteral';
 

@@ -1,8 +1,6 @@
 import { IInterpreterRules } from './types';
 import { LiteralTokens, BooleanLiteralTokens } from '../tokens';
 import { AllLiteralType } from '../types/literal';
-import { VariableManager } from "../manager";
-
 
 export const ifStatement = ({ ast, manager, execObject }: IInterpreterRules) => {
   const condition = execObject.interpreter({

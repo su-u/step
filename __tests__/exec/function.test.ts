@@ -294,6 +294,31 @@ function func4: a {
     });
   });
 
+  test('12', () => {
+    const source = `
+{ 1 } |> abs -> value1
+{ -1 } |> abs -> value2
+55 |> abs -> value3
+0 |> abs -> value4
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('value1')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 1,
+    });
+    expect(resultManager.reference('value2')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 1,
+    });
+    expect(resultManager.reference('value3')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 55,
+    });
+    expect(resultManager.reference('value4')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 0,
+    });
+  });
 
 
 
