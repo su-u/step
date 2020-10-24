@@ -19,10 +19,17 @@ export type NumberObjectMethodType = {
 
 export const NumberClass: NumberObjectMethodType = {
   '+': (obj, param) => {
-    return {
-      name: LiteralTokens.NumberLiteral,
-      image: param.image + obj.image,
-    };
+    if (obj.name === LiteralTokens.NumberLiteral && param.name === LiteralTokens.NumberLiteral) {
+      return {
+        name: LiteralTokens.NumberLiteral,
+        image: param.image + obj.image,
+      };
+    } else if (obj.name === LiteralTokens.StringLiteral || param.name === LiteralTokens.StringLiteral) {
+      return {
+        name: LiteralTokens.StringLiteral,
+        image: param.image + obj.image,
+      };
+    }
   },
   '-': (obj, param) => {
     return {
