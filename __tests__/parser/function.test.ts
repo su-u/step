@@ -37,4 +37,24 @@ describe('関数', () => {
     `;
     expect(sourceParse(source)).toMatchSnapshot();
   });
+
+  test('5 pipe', () => {
+    const source = `
+    function out: str {
+      str |> console
+    }
+    "str" |> out
+    `;
+    expect(sourceParse(source)).toMatchSnapshot();
+  });
+
+  test('6 pipe', () => {
+    const source = `
+    function out: str {
+      str |> console
+    }
+    { "str" } |> out
+    `;
+    expect(sourceParse(source)).toMatchSnapshot();
+  });
 });
