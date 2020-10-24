@@ -39,12 +39,12 @@ exports[`演算 乗算 1`] = `
                                                     \\"NumberLiteral\\": [
                                                       {
                                                         \\"image\\": \\"1\\",
-                                                        \\"startOffset\\": 5,
-                                                        \\"endOffset\\": 5,
+                                                        \\"startOffset\\": 3,
+                                                        \\"endOffset\\": 3,
                                                         \\"startLine\\": 2,
                                                         \\"endLine\\": 2,
-                                                        \\"startColumn\\": 5,
-                                                        \\"endColumn\\": 5,
+                                                        \\"startColumn\\": 3,
+                                                        \\"endColumn\\": 3,
                                                         \\"tokenTypeIdx\\": 4,
                                                         \\"tokenType\\": {
                                                           \\"name\\": \\"NumberLiteral\\",
@@ -65,12 +65,12 @@ exports[`演算 乗算 1`] = `
                                                     \\"NumberLiteral\\": [
                                                       {
                                                         \\"image\\": \\"1\\",
-                                                        \\"startOffset\\": 9,
-                                                        \\"endOffset\\": 9,
+                                                        \\"startOffset\\": 7,
+                                                        \\"endOffset\\": 7,
                                                         \\"startLine\\": 2,
                                                         \\"endLine\\": 2,
-                                                        \\"startColumn\\": 9,
-                                                        \\"endColumn\\": 9,
+                                                        \\"startColumn\\": 7,
+                                                        \\"endColumn\\": 7,
                                                         \\"tokenTypeIdx\\": 4,
                                                         \\"tokenType\\": {
                                                           \\"name\\": \\"NumberLiteral\\",
@@ -89,12 +89,12 @@ exports[`演算 乗算 1`] = `
                                               \\"MultiplicationOperator\\": [
                                                 {
                                                   \\"image\\": \\"*\\",
-                                                  \\"startOffset\\": 7,
-                                                  \\"endOffset\\": 7,
+                                                  \\"startOffset\\": 5,
+                                                  \\"endOffset\\": 5,
                                                   \\"startLine\\": 2,
                                                   \\"endLine\\": 2,
-                                                  \\"startColumn\\": 7,
-                                                  \\"endColumn\\": 7,
+                                                  \\"startColumn\\": 5,
+                                                  \\"endColumn\\": 5,
                                                   \\"tokenTypeIdx\\": 21,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Multi\\",
@@ -354,12 +354,12 @@ exports[`演算 減算 1`] = `
                                                     \\"NumberLiteral\\": [
                                                       {
                                                         \\"image\\": \\"1\\",
-                                                        \\"startOffset\\": 5,
-                                                        \\"endOffset\\": 5,
+                                                        \\"startOffset\\": 3,
+                                                        \\"endOffset\\": 3,
                                                         \\"startLine\\": 2,
                                                         \\"endLine\\": 2,
-                                                        \\"startColumn\\": 5,
-                                                        \\"endColumn\\": 5,
+                                                        \\"startColumn\\": 3,
+                                                        \\"endColumn\\": 3,
                                                         \\"tokenTypeIdx\\": 4,
                                                         \\"tokenType\\": {
                                                           \\"name\\": \\"NumberLiteral\\",
@@ -387,12 +387,12 @@ exports[`演算 減算 1`] = `
                                                     \\"NumberLiteral\\": [
                                                       {
                                                         \\"image\\": \\"1\\",
-                                                        \\"startOffset\\": 9,
-                                                        \\"endOffset\\": 9,
+                                                        \\"startOffset\\": 7,
+                                                        \\"endOffset\\": 7,
                                                         \\"startLine\\": 2,
                                                         \\"endLine\\": 2,
-                                                        \\"startColumn\\": 9,
-                                                        \\"endColumn\\": 9,
+                                                        \\"startColumn\\": 7,
+                                                        \\"endColumn\\": 7,
                                                         \\"tokenTypeIdx\\": 4,
                                                         \\"tokenType\\": {
                                                           \\"name\\": \\"NumberLiteral\\",
@@ -414,12 +414,12 @@ exports[`演算 減算 1`] = `
                                         \\"AdditionOperator\\": [
                                           {
                                             \\"image\\": \\"-\\",
-                                            \\"startOffset\\": 7,
-                                            \\"endOffset\\": 7,
+                                            \\"startOffset\\": 5,
+                                            \\"endOffset\\": 5,
                                             \\"startLine\\": 2,
                                             \\"endLine\\": 2,
-                                            \\"startColumn\\": 7,
-                                            \\"endColumn\\": 7,
+                                            \\"startColumn\\": 5,
+                                            \\"endColumn\\": 5,
                                             \\"tokenTypeIdx\\": 19,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Minus\\",
