@@ -279,6 +279,20 @@ function add: a, b {
     exec(source, manager);
   });
 
+  test('11', () => {
+    const source = `
+function func4: a {
+  return a + 100
+}
+
+{ 1 } |> func4 |> func4 -> value2
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('value2')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 201,
+    });
+  });
 
 
 

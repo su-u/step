@@ -12,6 +12,7 @@ export const relationExpression = ({ ast, manager, execObject }: IInterpreterRul
       return ast.children[rule].map((x) => x.image);
     }
   });
+  // console.log('r', [literals, operators]);
   return literals.reduce((a, c, i) => {
     const name = c.name;
     return Classes[name][operators[i - 1]](c, a);

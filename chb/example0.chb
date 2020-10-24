@@ -1,5 +1,10 @@
-value <- 0
-1 ~ 10 |> each (i) {
-  value <- value + 1
+function func3: a, b {
+  return a + b
 }
-value2 <- value
+
+function func4: a {
+  return a + 100
+}
+
+{ 1, 10 } |> func3 -> value1
+{ 1, 10 } |> func3 |> func4 -> value2
