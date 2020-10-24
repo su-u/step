@@ -13,8 +13,8 @@ import { returnStatement } from './interpriterRules/returnStatement';
 import { functionStatement } from './interpriterRules/functions';
 import { ifStatement } from './interpriterRules/ifStatement';
 import { IInterpreterRules } from './interpriterRules/types';
-import { pipeFrom } from "./interpriterRules/pipeFrom";
-import { pipeArguments } from "./interpriterRules/pipeArguments";
+import { pipeFrom } from './interpriterRules/pipeFrom';
+import { pipeArguments } from './interpriterRules/pipeArguments';
 
 export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => {
   logger.info(ast.name);

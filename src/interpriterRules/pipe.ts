@@ -26,7 +26,7 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
       return;
     } else if (ast.children.toIdentifier !== undefined) {
       const objName = ast.children.toIdentifier[0].image;
-      // console.log('p', objName, value);
+      console.log('p', objName, value);
       return Classes[objName]['default'](value[0]);
     }
   }

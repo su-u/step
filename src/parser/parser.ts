@@ -163,10 +163,7 @@ export class ChiboParser extends CstParser {
   });
 
   private Assignment = this.RULE('Assignment', () => {
-    this.OR([
-      { ALT: () => this.SUBRULE(this.ToLeft) },
-      { ALT: () => this.SUBRULE(this.ToRight) },
-    ]);
+    this.OR([{ ALT: () => this.SUBRULE(this.ToLeft) }, { ALT: () => this.SUBRULE(this.ToRight) }]);
   });
 
   private Each = this.RULE('Each', () => {
@@ -241,7 +238,7 @@ export class ChiboParser extends CstParser {
   });
 
   private Pipe = this.RULE('Pipe', () => {
-    this.SUBRULE(this.PipeFrom, { LABEL: 'from'});
+    this.SUBRULE(this.PipeFrom, { LABEL: 'from' });
     this.MANY(() => {
       this.CONSUME(PipeToken);
       this.OR([
@@ -253,11 +250,13 @@ export class ChiboParser extends CstParser {
 
   private PipeFrom = this.RULE('PipeFrom', () => {
     this.OR([
-      { ALT: () => {
+      {
+        ALT: () => {
           this.CONSUME(LCurly);
           this.SUBRULE(this.PipeArguments, { LABEL: 'arguments' });
           this.CONSUME(RCurly);
-        }},
+        },
+      },
       { ALT: () => this.SUBRULE(this.RelationExpression) },
     ]);
   });

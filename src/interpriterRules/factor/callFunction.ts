@@ -1,6 +1,5 @@
-import { IInterpreterRules } from "../types";
-import { VariableManager } from "../../manager";
-
+import { IInterpreterRules } from '../types';
+import { VariableManager } from '../../manager';
 
 export const callFunction = ({ ast, manager, execObject }: IInterpreterRules) => {
   const obj = ast.children.CallFunction[0];
@@ -39,4 +38,4 @@ export const callFunction = ({ ast, manager, execObject }: IInterpreterRules) =>
     });
     return functionData.function(arg);
   }
-}
+};

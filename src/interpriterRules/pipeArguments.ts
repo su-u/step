@@ -7,5 +7,5 @@ export const pipeArguments = ({ ast, manager, execObject }: IInterpreterRules) =
     });
   });
   // console.log('Pa', args);
-  return args
+  return args;
 };
