@@ -3,7 +3,7 @@ import { sourceParse } from '@/util/test';
 describe('関数', () => {
   test('1', () => {
     const source = `
-    function myFunc() {
+    function myFunc: {
       1 + 1
     }
     `;
@@ -12,7 +12,7 @@ describe('関数', () => {
 
   test('2', () => {
     const source = `
-    function add(x, y) {
+    function add: x, y {
       return x + y
     }
     `;
@@ -21,7 +21,7 @@ describe('関数', () => {
 
   test('3', () => {
     const source = `
-    function func(x, y) {
+    function func: x, y {
       value <- x - y + 1
       return value
     }
@@ -31,7 +31,7 @@ describe('関数', () => {
 
   test('4 pipe', () => {
     const source = `
-    function out(str) {
+    function out: str {
       str |> console
     }
     `;
