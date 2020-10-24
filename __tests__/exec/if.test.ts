@@ -13,35 +13,37 @@ describe('関数', () => {
   });
   test('1', () => {
     const source = `
-      x <- 1
-      if (x) {
-        x + x
-      }
+x <- 1
+if (x) {
+  x + x
+}
     `;
     exec(source, manager);
   });
 
   test('2', () => {
     const source = `
-      x <- 1
-      if (x) {
-        x + x
-      } else {
-        x - x
-      }
+x <- 1
+if (x) {
+  x + x
+} else {
+  x - x
+}
     `;
     exec(source, manager);
   });
 
   test('3', () => {
     const source = `
-      x <- 1
-      if (x) {
-        1 ~ 10 |> each (i) {
-        }
-      } else {
-        x - x
-      }
+value <- 0
+x <- 1
+if (x) {
+  1 ~ 10 |> each (i) {
+  value <- 10
+  }
+} else {
+  x - x
+}
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('value')).toStrictEqual({
@@ -52,10 +54,10 @@ describe('関数', () => {
 
   test('4', () => {
     const source = `
-      function out: str {
-        return str
-      }
-      "testword" |> out -> re
+function out: str {
+  return str
+}
+"testword" |> out -> re
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('re')).toStrictEqual({
