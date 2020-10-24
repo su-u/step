@@ -13,7 +13,7 @@ describe('変数', () => {
   });
   test('1', () => {
     const source = `
-        "string" -> value
+"string" -> value
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('value')).toStrictEqual({
@@ -24,7 +24,7 @@ describe('変数', () => {
 
   test('2', () => {
     const source = `
-        1 -> value
+1 -> value
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('value')).toStrictEqual({
@@ -35,7 +35,7 @@ describe('変数', () => {
 
   test('3', () => {
     const source = `
-        1 + 1 -> value
+1 + 1 -> value
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('value')).toStrictEqual({
@@ -46,7 +46,7 @@ describe('変数', () => {
 
   test('4', () => {
     const source = `
-        val <- "Switch"
+val <- "Switch"
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('val')).toStrictEqual({
@@ -57,7 +57,7 @@ describe('変数', () => {
 
   test('5', () => {
     const source = `
-        aaa <- 1
+aaa <- 1
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('aaa')).toStrictEqual({
@@ -68,8 +68,8 @@ describe('変数', () => {
 
   test('6', () => {
     const source = `
-        val <- "str"
-        aaa <- val + "aaa"
+val <- "str"
+aaa <- val + "aaa"
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('val')).toStrictEqual({
@@ -84,7 +84,7 @@ describe('変数', () => {
 
   test('7', () => {
     const source = `
-        v <- 1 ~ 10
+v <- 1 ~ 10
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('v')).toStrictEqual({
