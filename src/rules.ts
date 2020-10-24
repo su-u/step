@@ -15,5 +15,6 @@ export const Rules = {
   ToLeft: 'ToLeft',
   ParenthesisExpression: 'ParenthesisExpression',
   ReturnStatement: 'ReturnStatement',
-  PipeArgument: 'PipeArgument',
+  PipeFrom: 'PipeFrom',
+  PipeArguments: 'PipeArguments',
 };

@@ -2,7 +2,7 @@ import { IInterpreterRules } from './types';
 import { Classes } from '../class';
 import { VariableManager } from '../manager';
 
-export const pipeArgument = ({ ast, manager, execObject }: IInterpreterRules) => {
+export const pipeFrom = ({ ast, manager, execObject }: IInterpreterRules) => {
   if (ast.children.LCurly !== undefined) {
 
   } else {

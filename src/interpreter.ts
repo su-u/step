@@ -13,7 +13,7 @@ import { returnStatement } from './interpriterRules/returnStatement';
 import { functionStatement } from './interpriterRules/functions';
 import { ifStatement } from './interpriterRules/ifStatement';
 import { IInterpreterRules } from './interpriterRules/types';
-import { pipeArgument } from "./interpriterRules/pipeArgument";
+import { pipeFrom } from "./interpriterRules/pipeFrom";
 
 export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => {
   logger.info(ast.name);
@@ -31,8 +31,8 @@ export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => 
     case Rules.Pipe:
       value = pipe({ ast, manager, execObject });
       break;
-    case Rules.PipeArgument:
-      value = pipeArgument({ ast, manager, execObject });
+    case Rules.PipeFrom:
+      value = pipeFrom({ ast, manager, execObject });
       break;
     case Rules.RelationExpression:
       value = relationExpression({ ast, manager, execObject });
