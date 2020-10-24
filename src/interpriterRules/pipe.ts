@@ -46,8 +46,43 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
             execObject,
           });
         } else {
-
+          const arg = functionData.arguments
+            .map((_: any, i: number) => {
+              return literals[i];
+            })
+            .filter((x: any) => x !== undefined);
+          return functionData.function(arg);
         }
+      } else {
+        let last = value;
+        Object.values(tail.children.toIdentifier).forEach((x: any, i: number) => {
+          const objName = x.image;
+          // console.log('p', objName, value);
+          const functionData = manager.function.reference(objName);
+          const literals = Array.isArray(last) ? last[0] : [last];
+          // console.log('m', manager.variable);
+          if (functionData.type === 'user') {
+            const scopeManger = new VariableManager(manager.variable);
+            functionData.arguments.forEach((x: any, i: number) => {
+              scopeManger.assignment(x, last);
+            });
+            last = execObject.interpreter({
+              ast: functionData.function,
+              manager: {
+                variable: scopeManger,
+                function: manager.function,
+              },
+              execObject,
+            });
+          } else {
+            const arg = functionData.arguments
+              .map((_: any, i: number) => {
+                return literals[i];
+              })
+              .filter((x: any) => x !== undefined);
+            last = functionData.function(arg);
+          }
+        });
       }
     }
   }

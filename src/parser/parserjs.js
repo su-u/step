@@ -249,7 +249,7 @@
       });
 
       this.Pipe = this.RULE('Pipe', () => {
-        this.SUBRULE(this.PipeFrom, { LABEL: 'from'});
+        this.SUBRULE(this.PipeFrom, { LABEL: 'from' });
         this.SUBRULE(this.PipeTail, { LABEL: 'tail' });
       });
 
@@ -265,11 +265,13 @@
 
       this.PipeFrom = this.RULE('PipeFrom', () => {
         this.OR([
-          { ALT: () => {
+          {
+            ALT: () => {
               this.CONSUME(LCurly);
               this.SUBRULE(this.PipeArguments, { LABEL: 'arguments' });
               this.CONSUME(RCurly);
-            }},
+            },
+          },
           { ALT: () => this.SUBRULE(this.RelationExpression) },
         ]);
       });

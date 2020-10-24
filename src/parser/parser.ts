@@ -238,7 +238,7 @@ export class ChiboParser extends CstParser {
   });
 
   private Pipe = this.RULE('Pipe', () => {
-    this.SUBRULE(this.PipeFrom, { LABEL: 'from'});
+    this.SUBRULE(this.PipeFrom, { LABEL: 'from' });
     this.SUBRULE(this.PipeTail, { LABEL: 'tail' });
   });
 
