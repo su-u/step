@@ -51,7 +51,7 @@ export const NumberClass: NumberObjectMethodType = {
   '<=': (obj, param) => {
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: param.image <= obj.image ,
+      image: param.image <= obj.image,
     };
   },
   '>': (obj, param) => {

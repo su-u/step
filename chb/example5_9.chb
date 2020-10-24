@@ -6,4 +6,4 @@ function func2: str {
   return str + "2"
 }
 
-"1" |> func1 |> func2 -> value
+"1" |> func1 |> func2 -> value1
