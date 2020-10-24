@@ -125,7 +125,7 @@
   });
   const functionNameToken = createToken({
     name: 'FunctionNameToken',
-    pattern: /[a-zA-z][0-9a-zA-Z]*\:/,
+    pattern: /[a-zA-z][0-9a-zA-Z]*:/,
   });
 
   const BuildInTokens = [
@@ -249,7 +249,11 @@
       });
 
       this.Pipe = this.RULE('Pipe', () => {
-        this.SUBRULE(this.PipeFrom, { LABEL: 'from' });
+        this.SUBRULE(this.PipeFrom, { LABEL: 'from'});
+        this.SUBRULE(this.PipeTail, { LABEL: 'tail' });
+      });
+
+      this.PipeTail = this.RULE('PipeTail', () => {
         this.MANY(() => {
           this.CONSUME(PipeToken);
           this.OR([
@@ -261,13 +265,11 @@
 
       this.PipeFrom = this.RULE('PipeFrom', () => {
         this.OR([
-          {
-            ALT: () => {
+          { ALT: () => {
               this.CONSUME(LCurly);
               this.SUBRULE(this.PipeArguments, { LABEL: 'arguments' });
               this.CONSUME(RCurly);
-            },
-          },
+            }},
           { ALT: () => this.SUBRULE(this.RelationExpression) },
         ]);
       });
@@ -276,7 +278,7 @@
         this.MANY_SEP({
           SEP: Comma,
           DEF: () => {
-            this.SUBRULE(this.Factor);
+            this.SUBRULE(this.Pipe);
           },
         });
       });
@@ -324,7 +326,7 @@
 
       this.ParenthesisExpression = this.RULE('ParenthesisExpression', () => {
         this.CONSUME(LBracket);
-        this.SUBRULE(this.RelationExpression, { LABEL: 'expression' });
+        this.SUBRULE(this.RelationExpression);
         this.CONSUME(RBracket);
       });
 

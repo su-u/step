@@ -238,7 +238,11 @@ export class ChiboParser extends CstParser {
   });
 
   private Pipe = this.RULE('Pipe', () => {
-    this.SUBRULE(this.PipeFrom, { LABEL: 'from' });
+    this.SUBRULE(this.PipeFrom, { LABEL: 'from'});
+    this.SUBRULE(this.PipeTail, { LABEL: 'tail' });
+  });
+
+  private PipeTail = this.RULE('PipeTail', () => {
     this.MANY(() => {
       this.CONSUME(PipeToken);
       this.OR([
@@ -247,7 +251,6 @@ export class ChiboParser extends CstParser {
       ]);
     });
   });
-
   private PipeFrom = this.RULE('PipeFrom', () => {
     this.OR([
       {
@@ -265,7 +268,7 @@ export class ChiboParser extends CstParser {
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
-        this.SUBRULE(this.Factor);
+        this.SUBRULE(this.Pipe);
       },
     });
   });

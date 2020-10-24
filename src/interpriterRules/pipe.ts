@@ -4,10 +4,11 @@ import { LiteralTokens } from '../tokens';
 
 export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
   const childrenAst = ast.children.from[0];
+  const tail = ast.children.tail[0];
   const value = execObject.interpreter({ ast: childrenAst, manager, execObject });
-  if (ast.children.PipeToken !== undefined) {
-    if (ast.children.toEach !== undefined) {
-      const eachObj = ast.children.toEach[0];
+  if (tail.children.PipeToken !== undefined) {
+    if (tail.toEach !== undefined) {
+      const eachObj = tail.toEach[0];
       const range = Array.from(Array(value.end - value.start + 1).keys(), (x) => x + value.start);
       range.forEach((i) => {
         const inScopeManger = new VariableManager(manager);
@@ -24,8 +25,8 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
         });
       });
       return;
-    } else if (ast.children.toIdentifier !== undefined) {
-      const objName = ast.children.toIdentifier[0].image;
+    } else if (tail.children.toIdentifier !== undefined) {
+      const objName = tail.children.toIdentifier[0].image;
       // console.log('p', objName, value);
       const functionData = manager.function.reference(objName);
       const literals = Array.isArray(value) ? value[0] : [value];

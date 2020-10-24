@@ -1,6 +1,4 @@
 import { IInterpreterRules } from './types';
-import { Classes } from '../class';
-import { VariableManager } from '../manager';
 
 export const pipeFrom = ({ ast, manager, execObject }: IInterpreterRules) => {
   if (ast.children.arguments !== undefined) {
