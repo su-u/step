@@ -22,7 +22,7 @@ export class FunctionManager {
       };
     } else {
       return {
-        ...this.userFunctions.get(name.slice(0, -1)),
+        ...this.userFunctions.get(name),
         type: 'user',
       };
     }

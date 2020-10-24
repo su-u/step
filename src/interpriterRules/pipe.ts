@@ -26,8 +26,32 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
       return;
     } else if (ast.children.toIdentifier !== undefined) {
       const objName = ast.children.toIdentifier[0].image;
-      console.log('p', objName, value);
-      return Classes[objName]['default'](value[0]);
+      // console.log('p', objName, value);
+      const functionData = manager.function.reference(objName);
+      // console.log(functionData);
+      if (functionData.type === 'user') {
+        const scopeManger = new VariableManager(manager.variable);
+        functionData.arguments.forEach((x: any, i: number) => {
+          scopeManger.assignment(
+            x,
+            value[0][i]
+          );
+        });
+        return execObject.interpreter({
+          ast: functionData.function,
+          manager: {
+            variable: scopeManger,
+            function: manager.function,
+          },
+          execObject,
+        });
+      } else {
+        const arg = functionData.arguments.map((_: any, i: number) => {
+          return value[0][i]
+        }).filter((x: any) => x !== undefined);
+        // console.log('a', arg);
+        return functionData.function(arg);
+        }
     }
   }
   return value;
