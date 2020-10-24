@@ -36,6 +36,7 @@ const RCurly = createToken({ name: 'RCurly', pattern: /}/, label: '}' });
 const LSquare = createToken({ name: 'LSquare', pattern: /\[/, label: '[' });
 const RSquare = createToken({ name: 'RSquare', pattern: /]/, label: ']' });
 const Comma = createToken({ name: 'Comma', pattern: /,/ });
+const Colon = createToken({ name: 'Colon', pattern: /:/ });
 
 const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma];
 
@@ -114,7 +115,7 @@ const BreakToken = createToken({
 });
 const functionNameToken = createToken({
   name: 'FunctionNameToken',
-  pattern: /[a-zA-z][0-9a-zA-Z]*\(/,
+  pattern: /[a-zA-z][0-9a-zA-Z]*:/,
 });
 
 const BuildInTokens = [
