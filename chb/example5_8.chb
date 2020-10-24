@@ -12,5 +12,5 @@ function func2: str {
   return str + "x"
 }
 
-{ 0, "number1" } |> func |> func2 -> value1
-{ 1, "number2" } |> func |> func2 -> value2
+{ 0, "number1" } |> func -> value1
+{ 1, "number2" } |> func -> value2
