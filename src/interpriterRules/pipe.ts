@@ -28,10 +28,8 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
     } else if (tail.children.toIdentifier !== undefined) {
       if (tail.children.toIdentifier.length === 1) {
         const objName = tail.children.toIdentifier[0].image;
-        // console.log('p', objName, value);
         const functionData = manager.function.reference(objName);
         const literals = Array.isArray(value) ? value[0] : [value];
-        // console.log('m', manager.variable);
         if (functionData.type === 'user') {
           const scopeManger = new VariableManager(manager.variable);
           functionData.arguments.forEach((x: any, i: number) => {
@@ -57,10 +55,8 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
         let last = value;
         Object.values(tail.children.toIdentifier).forEach((x: any, i: number) => {
           const objName = x.image;
-          // console.log('p', objName, value);
           const functionData = manager.function.reference(objName);
           const literals = Array.isArray(last) ? last[0] : [last];
-          // console.log('m', manager.variable);
           if (functionData.type === 'user') {
             const scopeManger = new VariableManager(manager.variable);
             functionData.arguments.forEach((x: any, i: number) => {
@@ -83,6 +79,7 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
             last = functionData.function(arg);
           }
         });
+        return last;
       }
     }
   }
