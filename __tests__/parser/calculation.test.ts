@@ -10,14 +10,14 @@ describe('演算', () => {
 
   test('減算', () => {
     const source = `
-    1 - 1
+  1 - 1
     `;
     expect(sourceParseJson(source)).toMatchSnapshot();
   });
 
   test('乗算', () => {
     const source = `
-    1 * 1
+  1 * 1
     `;
     expect(sourceParseJson(source)).toMatchSnapshot();
   });
