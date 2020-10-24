@@ -185,6 +185,103 @@ function out: {
     });
   });
 
+  test('11', () => {
+    const source = `
+function func3: a, b {
+  return a + b
+}
+
+function func4: a {
+  return a + 100
+}
+
+{ 1, 10 } |> func3 |> func4 -> value2
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('value2')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 111,
+    });
+  });
+
+  test('12', () => {
+    const source = `
+function func1: str {
+  return str + "1"
+}
+
+function func2: str {
+  return str + "2"
+}
+
+"1" |> func1 |> func2 -> value1
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('value1')).toStrictEqual({
+      name: LiteralTokens.StringLiteral,
+      image: '112',
+    });
+  });
+
+  test('13', () => {
+    const source = `
+function func: x {
+  return x + 1
+}
+
+1 |> func |> func -> value
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('value')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 3,
+    });
+  });
+
+  test('13', () => {
+    const source = `
+function add: a, b {
+  return a + b
+}
+
+{ { 1, 2 } |> add, { 3, 4 } |> add } |> add -> result1
+
+{ "result: ", { 1, 2 } |> add, (1 + 1) } |> add -> result2
+number <- 1.5
+number |> int -> result3
+2.5 |> int -> result4
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('result1')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 10,
+    });
+    expect(resultManager.reference('result2')).toStrictEqual({
+      name: LiteralTokens.StringLiteral,
+      image: 'result: 3',
+    });
+    expect(resultManager.reference('result3')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 1,
+    });
+    expect(resultManager.reference('result4')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 2,
+    });
+  });
+
+  test('14', () => {
+    const source = `
+function add: a, b {
+  return a + b + 1
+}
+    `;
+    exec(source, manager);
+  });
+
+
+
+
 
 
 
