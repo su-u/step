@@ -1,6 +1,6 @@
 import { StringBuildInFunctions } from './stringFunctions';
 import { NumberBuildInFunctions } from './numberFunctions';
-import { ConsoleBuildInFunctions } from "./consoleFunctions";
+import { ConsoleBuildInFunctions } from './consoleFunctions';
 
 export const BuildInFunctions = {
   ...StringBuildInFunctions,

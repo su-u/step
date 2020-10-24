@@ -1,6 +1,6 @@
 import { IInterpreterRules } from './types';
 import { VariableManager } from '../manager';
-import { LiteralTokens } from "../tokens";
+import { LiteralTokens } from '../tokens';
 
 export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
   const childrenAst = ast.children.from[0];
@@ -33,10 +33,7 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
       if (functionData.type === 'user') {
         const scopeManger = new VariableManager(manager.variable);
         functionData.arguments.forEach((x: any, i: number) => {
-          scopeManger.assignment(
-            x,
-            literals[i]
-          );
+          scopeManger.assignment(x, literals[i]);
         });
         return execObject.interpreter({
           ast: functionData.function,
@@ -47,11 +44,13 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
           execObject,
         });
       } else {
-        const arg = functionData.arguments.map((_: any, i: number) => {
-          return literals[i]
-        }).filter((x: any) => x !== undefined);
+        const arg = functionData.arguments
+          .map((_: any, i: number) => {
+            return literals[i];
+          })
+          .filter((x: any) => x !== undefined);
         return functionData.function(arg);
-        }
+      }
     }
   }
   return value;

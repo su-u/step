@@ -12,7 +12,8 @@ export class VariableManager {
   }
 
   public reference(name: string) {
-    const value = this.variables.get(name) || (this._parent !== null && this._parent.reference(name)) || null;
+    const value =
+      this.variables.get(name) || (this._parent !== null && this._parent.reference(name)) || null;
     if (value === null) {
       throw new Error('変数が参照できませんでした。');
     }
