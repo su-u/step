@@ -68,7 +68,7 @@ export const NumberClass: NumberObjectMethodType = {
   },
   '~': (obj, param) => {
     return {
-      name: 'NumberLiteralRange',
+      name: LiteralTokens.NumberLiteralRange,
       start: param.image,
       end: obj.image,
     };
