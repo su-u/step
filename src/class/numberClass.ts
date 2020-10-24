@@ -21,49 +21,49 @@ export const NumberClass: NumberObjectMethodType = {
   '+': (obj, param) => {
     return {
       name: LiteralTokens.NumberLiteral,
-      image: obj.image + param.image,
+      image: param.image + obj.image,
     };
   },
   '-': (obj, param) => {
     return {
       name: LiteralTokens.NumberLiteral,
-      image: obj.image - param.image,
+      image: param.image - obj.image,
     };
   },
   '*': (obj, param) => {
     return {
       name: LiteralTokens.NumberLiteral,
-      image: obj.image * param.image,
+      image: param.image * obj.image,
     };
   },
   '/': (obj, param) => {
     return {
       name: LiteralTokens.NumberLiteral,
-      image: obj.image / param.image,
+      image: param.image / obj.image,
     };
   },
   '<': (obj, param) => {
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: obj.image < param.image,
+      image: param.image < obj.image,
     };
   },
   '<=': (obj, param) => {
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: obj.image <= param.image,
+      image: param.image <= obj.image ,
     };
   },
   '>': (obj, param) => {
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: obj.image > param.image,
+      image: param.image > obj.image,
     };
   },
   '>=': (obj, param) => {
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: obj.image >= param.image,
+      image: param.image >= obj.image,
     };
   },
   '~': (obj, param) => {
