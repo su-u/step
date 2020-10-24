@@ -46,6 +46,7 @@
   const LSquare = createToken({ name: 'LSquare', pattern: /\[/, label: '[' });
   const RSquare = createToken({ name: 'RSquare', pattern: /]/, label: ']' });
   const Comma = createToken({ name: 'Comma', pattern: /,/ });
+  const Colon = createToken({ name: 'Colon', pattern: /:/ });
 
   const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma];
 
@@ -124,7 +125,7 @@
   });
   const functionNameToken = createToken({
     name: 'FunctionNameToken',
-    pattern: /[a-zA-z][0-9a-zA-Z]*\(/,
+    pattern: /[a-zA-z][0-9a-zA-Z]*\:/,
   });
 
   const BuildInTokens = [
@@ -208,7 +209,6 @@
         this.CONSUME(functionToken);
         this.CONSUME(functionNameToken);
         this.SUBRULE(this.FunctionAugments, { LABEL: 'arguments' });
-        this.CONSUME(RBracket);
         this.CONSUME(LCurly);
         this.SUBRULE(this.Program);
         this.CONSUME(RCurly);
@@ -249,7 +249,7 @@
       });
 
       this.Pipe = this.RULE('Pipe', () => {
-        this.SUBRULE(this.RelationExpression);
+        this.SUBRULE(this.PipeArgument, { LABEL: 'from'});
         this.MANY(() => {
           this.CONSUME(PipeToken);
           this.OR([
@@ -258,6 +258,22 @@
           ]);
         });
       });
+
+      this.PipeArgument = this.RULE('PipeArgument', () => {
+        this.OR([
+          { ALT: () => {
+              this.CONSUME(LCurly);
+              this.MANY_SEP({
+                SEP: Comma,
+                DEF: () => {
+                  this.SUBRULE(this.Factor);
+                },
+              });
+              this.CONSUME(RCurly);
+            }},
+          { ALT: () => this.SUBRULE(this.RelationExpression) },
+        ]);
+      })
 
       this.RelationExpression = this.RULE('RelationExpression', () => {
         this.SUBRULE(this.Expression);
@@ -292,12 +308,11 @@
 
       this.Factor = this.RULE('Factor', () => {
         this.OR([
-          { ALT: () => this.CONSUME(Identifier) },
           { ALT: () => this.CONSUME(NumberLiteral) },
           { ALT: () => this.CONSUME(StringLiteral) },
           { ALT: () => this.CONSUME(BoolLiteral) },
-          { ALT: () => this.SUBRULE(this.CallFunction) },
           { ALT: () => this.SUBRULE(this.ParenthesisExpression) },
+          { ALT: () => this.CONSUME(Identifier) },
         ]);
       });
 
@@ -310,21 +325,6 @@
       this.ReturnStatement = this.RULE('ReturnStatement', () => {
         this.CONSUME(ReturnToken);
         this.SUBRULE(this.RelationExpression, { LABEL: 'return' });
-      });
-
-      this.CallFunction = this.RULE('CallFunction', () => {
-        this.CONSUME(functionNameToken);
-        this.SUBRULE(this.CallFunctionAugments, { LABEL: 'arguments' });
-        this.CONSUME(RBracket);
-      });
-
-      this.CallFunctionAugments = this.RULE('CallFunctionAugments', () => {
-        this.MANY_SEP({
-          SEP: Comma,
-          DEF: () => {
-            this.SUBRULE(this.Factor);
-          },
-        });
       });
 
       this.performSelfAnalysis();

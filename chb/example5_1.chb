@@ -1,4 +1,2 @@
-function func(x) {
-  return x + x
-}
-func(1) -> result
+value <- 1
+value |> console
