@@ -26,31 +26,28 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
       });
       return;
     } else if (tail.children.toIdentifier !== undefined) {
-      const objName = tail.children.toIdentifier[0].image;
-      // console.log('p', objName, value);
-      const functionData = manager.function.reference(objName);
-      const literals = Array.isArray(value) ? value[0] : [value];
-      // console.log('m', manager.variable);
-      if (functionData.type === 'user') {
-        const scopeManger = new VariableManager(manager.variable);
-        functionData.arguments.forEach((x: any, i: number) => {
-          scopeManger.assignment(x, literals[i]);
-        });
-        return execObject.interpreter({
-          ast: functionData.function,
-          manager: {
-            variable: scopeManger,
-            function: manager.function,
-          },
-          execObject,
-        });
-      } else {
-        const arg = functionData.arguments
-          .map((_: any, i: number) => {
-            return literals[i];
-          })
-          .filter((x: any) => x !== undefined);
-        return functionData.function(arg);
+      if (tail.children.toIdentifier.length === 1) {
+        const objName = tail.children.toIdentifier[0].image;
+        // console.log('p', objName, value);
+        const functionData = manager.function.reference(objName);
+        const literals = Array.isArray(value) ? value[0] : [value];
+        // console.log('m', manager.variable);
+        if (functionData.type === 'user') {
+          const scopeManger = new VariableManager(manager.variable);
+          functionData.arguments.forEach((x: any, i: number) => {
+            scopeManger.assignment(x, literals[i]);
+          });
+          return execObject.interpreter({
+            ast: functionData.function,
+            manager: {
+              variable: scopeManger,
+              function: manager.function,
+            },
+            execObject,
+          });
+        } else {
+
+        }
       }
     }
   }
