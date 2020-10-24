@@ -17,31 +17,31 @@ export const StringClass: StringObjectMethodType = {
   '+': (obj, param) => {
     return {
       name: TYPE,
-      image: param.image + obj.image,
+      image: String(param.image + obj.image),
     };
   },
   '<': (obj, param) => {
     return {
       name: TYPE,
-      image: obj.image < param.image,
+      image: String(obj.image < param.image),
     };
   },
   '<=': (obj, param) => {
     return {
       name: TYPE,
-      image: obj.image <= param.image,
+      image: String(obj.image <= param.image),
     };
   },
   '>': (obj, param) => {
     return {
       name: TYPE,
-      image: obj.image > param.image,
+      image: String(obj.image > param.image),
     };
   },
   '>=': (obj, param) => {
     return {
       name: TYPE,
-      image: obj.image >= param.image,
+      image: String(obj.image >= param.image),
     };
   },
   '~': (obj, param) => {

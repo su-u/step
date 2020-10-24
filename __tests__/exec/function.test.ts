@@ -238,7 +238,7 @@ function func: x {
     });
   });
 
-  test('13', () => {
+  test('14', () => {
     const source = `
 function add: a, b {
   return a + b
@@ -270,7 +270,7 @@ number |> int -> result3
     });
   });
 
-  test('14', () => {
+  test('15', () => {
     const source = `
 function add: a, b {
   return a + b + 1

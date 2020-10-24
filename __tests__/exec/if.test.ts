@@ -3,7 +3,7 @@ import { VariableManager } from '@/manager';
 import { FunctionManager } from '@/manager';
 import { LiteralTokens } from '@/tokens';
 
-describe('関数', () => {
+describe('if', () => {
   let manager = null;
   beforeEach(() => {
     manager = {

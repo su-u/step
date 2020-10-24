@@ -7,8 +7,25 @@ export class VariableManager {
     this._parent = parent;
   }
 
+  private parentSetValue(name: string, value: any) {
+    if (this.variables.has(name)) {
+      this.variables.set(name, value);
+      return true;
+    } else if (this._parent !== null) {
+      return this._parent.parentSetValue(name, value);
+    }
+    return false;
+  }
+
   public assignment(name: any, value: any) {
-    this.variables.set(name, value);
+    if (this._parent !== null) {
+      const result = this._parent.parentSetValue(name, value);
+      if (!result) {
+        this.variables.set(name, value);
+      }
+    } else {
+      this.variables.set(name, value);
+    }
   }
 
   public reference(name: string) {

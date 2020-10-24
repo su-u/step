@@ -18,7 +18,7 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
             image: i,
           });
         }
-        execObject.interpreter({
+        return execObject.interpreter({
           ast: eachObj.children.Program[0],
           manager: inScopeManger,
           execObject,

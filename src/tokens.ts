@@ -7,6 +7,6 @@ export const LiteralTokens = {
 };
 
 export const BooleanLiteralTokens = {
-  true: true,
-  false: false,
+  true: 'true',
+  false: 'false',
 };
