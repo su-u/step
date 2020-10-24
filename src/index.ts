@@ -3,8 +3,8 @@ import { interpreter } from './interpreter';
 import { VariableManager, FunctionManager, Manager } from './manager';
 import logger from './logger';
 import { writeAstToJson } from './util/file';
-logger.level = 'debug';
-// logger.level = 'fatal';
+// logger.level = 'debug';
+logger.level = 'fatal';
 
 export const entry = (text: string) => {
   const ast = parseInput(text);

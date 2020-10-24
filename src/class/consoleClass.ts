@@ -3,8 +3,8 @@ export type ConsoleObjectMethodType = {
 };
 
 export const ConsoleClass: ConsoleObjectMethodType = {
-  default: (obj, params, options) => {
-    console.log(obj.image);
+  default: (obj: any[], params, options) => {
+    console.log(...obj.map((x) => x.image));
     return obj;
   },
 };
