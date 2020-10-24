@@ -1,4 +1,4 @@
-import { sourceParse } from '@/util/test';
+import { sourceParseJson } from '@/util/test';
 
 describe('関数', () => {
   test('1', () => {
@@ -7,7 +7,7 @@ describe('関数', () => {
       1 + 1
     }
     `;
-    expect(sourceParse(source)).toMatchSnapshot();
+    expect(sourceParseJson(source)).toMatchSnapshot();
   });
 
   test('2', () => {
@@ -16,7 +16,7 @@ describe('関数', () => {
       return x + y
     }
     `;
-    expect(sourceParse(source)).toMatchSnapshot();
+    expect(sourceParseJson(source)).toMatchSnapshot();
   });
 
   test('3', () => {
@@ -26,7 +26,7 @@ describe('関数', () => {
       return value
     }
     `;
-    expect(sourceParse(source)).toMatchSnapshot();
+    expect(sourceParseJson(source)).toMatchSnapshot();
   });
 
   test('4 pipe', () => {
@@ -35,7 +35,7 @@ describe('関数', () => {
       str |> console
     }
     `;
-    expect(sourceParse(source)).toMatchSnapshot();
+    expect(sourceParseJson(source)).toMatchSnapshot();
   });
 
   test('5 pipe', () => {
@@ -45,7 +45,7 @@ describe('関数', () => {
     }
     "str" |> out
     `;
-    expect(sourceParse(source)).toMatchSnapshot();
+    expect(sourceParseJson(source)).toMatchSnapshot();
   });
 
   test('6 pipe', () => {
@@ -55,6 +55,6 @@ describe('関数', () => {
     }
     { "str" } |> out
     `;
-    expect(sourceParse(source)).toMatchSnapshot();
+    expect(sourceParseJson(source)).toMatchSnapshot();
   });
 });

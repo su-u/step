@@ -1,4 +1,4 @@
-import { sourceParse } from '@/util/test';
+import { sourceParseJson } from '@/util/test';
 
 describe('if', () => {
   test('1', () => {
@@ -7,7 +7,7 @@ describe('if', () => {
       x + x
     }
     `;
-    expect(sourceParse(source)).toMatchSnapshot();
+    expect(sourceParseJson(source)).toMatchSnapshot();
   });
   test('2', () => {
     const source = `
@@ -17,7 +17,7 @@ describe('if', () => {
       x - x
     }
     `;
-    expect(sourceParse(source)).toMatchSnapshot();
+    expect(sourceParseJson(source)).toMatchSnapshot();
   });
   test('3', () => {
     const source = `
@@ -29,6 +29,6 @@ describe('if', () => {
       x - x
     }
     `;
-    expect(sourceParse(source)).toMatchSnapshot();
+    expect(sourceParseJson(source)).toMatchSnapshot();
   });
 });

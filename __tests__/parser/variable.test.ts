@@ -1,4 +1,4 @@
-import { sourceParse } from '@/util/test';
+import { sourceParseJson } from '@/util/test';
 
 describe('変数', () => {
   describe('演算', () => {
@@ -7,7 +7,7 @@ describe('変数', () => {
       value <- 1 + 1
       value <- value + 1
       `;
-      expect(sourceParse(source)).toMatchSnapshot();
+      expect(sourceParseJson(source)).toMatchSnapshot();
     });
 
     test('文字列', () => {
@@ -15,7 +15,7 @@ describe('変数', () => {
       value <- "test"
       value <- value + "test"
       `;
-      expect(sourceParse(source)).toMatchSnapshot();
+      expect(sourceParseJson(source)).toMatchSnapshot();
     });
   });
 
@@ -27,7 +27,7 @@ describe('変数', () => {
       } else {
       }
       `;
-      expect(sourceParse(source)).toMatchSnapshot();
+      expect(sourceParseJson(source)).toMatchSnapshot();
     });
   });
 });
