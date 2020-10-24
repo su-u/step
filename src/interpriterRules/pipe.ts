@@ -7,23 +7,27 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
   const tail = ast.children.tail[0];
   const value = execObject.interpreter({ ast: childrenAst, manager, execObject });
   if (tail.children.PipeToken !== undefined) {
-    if (tail.toEach !== undefined) {
-      const eachObj = tail.toEach[0];
+    if (tail.children.toEach !== undefined) {
+      const eachObj = tail.children.toEach[0];
       const range = Array.from(Array(value.end - value.start + 1).keys(), (x) => x + value.start);
       range.forEach((i) => {
-        const inScopeManger = new VariableManager(manager);
+        const inManger = {
+          variable: new VariableManager(manager.variable),
+          function: manager.function,
+        };
         if (eachObj.children.Identifier !== undefined) {
-          inScopeManger.assignment(eachObj.children.Identifier[0].image, {
+          inManger.variable.assignment(eachObj.children.Identifier[0].image, {
             name: LiteralTokens.NumberLiteral,
             image: i,
           });
         }
         return execObject.interpreter({
           ast: eachObj.children.Program[0],
-          manager: inScopeManger,
+          manager: inManger,
           execObject,
         });
       });
+      manager.variable.debug();
       return;
     } else if (tail.children.toIdentifier !== undefined) {
       if (tail.children.toIdentifier.length === 1) {
