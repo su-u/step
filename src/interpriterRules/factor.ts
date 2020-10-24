@@ -13,8 +13,6 @@ export const factor = ({ ast, manager, execObject }: IInterpreterRules) => {
     };
   } else if (ast.children.Identifier !== undefined) {
     return identifier({ ast, manager, execObject })
-  } else if (ast.children.CallFunction !== undefined) {
-    return callFunction({ ast, manager, execObject });
   } else if (ast.children.BoolLiteral !== undefined) {
     return booleanLiteral({ ast, manager, execObject })
   } else if (ast.children.StringLiteral !== undefined) {
