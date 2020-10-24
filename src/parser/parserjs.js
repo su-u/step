@@ -208,13 +208,13 @@
       this.Function = this.RULE('Function', () => {
         this.CONSUME(functionToken);
         this.CONSUME(functionNameToken);
-        this.SUBRULE(this.FunctionAugments, { LABEL: 'arguments' });
+        this.SUBRULE(this.FunctionArgments, { LABEL: 'arguments' });
         this.CONSUME(LCurly);
         this.SUBRULE(this.Program);
         this.CONSUME(RCurly);
       });
 
-      this.FunctionAugments = this.RULE('FunctionAugments', () => {
+      this.FunctionArgments = this.RULE('FunctionArgments', () => {
         this.MANY_SEP({
           SEP: Comma,
           DEF: () => {
@@ -249,7 +249,7 @@
       });
 
       this.Pipe = this.RULE('Pipe', () => {
-        this.SUBRULE(this.PipeArgument, { LABEL: 'from'});
+        this.SUBRULE(this.PipeFrom, { LABEL: 'from'});
         this.MANY(() => {
           this.CONSUME(PipeToken);
           this.OR([
@@ -259,21 +259,25 @@
         });
       });
 
-      this.PipeArgument = this.RULE('PipeArgument', () => {
+      this.PipeFrom = this.RULE('PipeFrom', () => {
         this.OR([
           { ALT: () => {
               this.CONSUME(LCurly);
-              this.MANY_SEP({
-                SEP: Comma,
-                DEF: () => {
-                  this.SUBRULE(this.Factor);
-                },
-              });
+              this.SUBRULE(this.PipeArguments, { LABEL: 'arguments' });
               this.CONSUME(RCurly);
             }},
           { ALT: () => this.SUBRULE(this.RelationExpression) },
         ]);
-      })
+      });
+
+      this.PipeArguments = this.RULE('PipeArguments', () => {
+        this.MANY_SEP({
+          SEP: Comma,
+          DEF: () => {
+            this.SUBRULE(this.Factor);
+          },
+        });
+      });
 
       this.RelationExpression = this.RULE('RelationExpression', () => {
         this.SUBRULE(this.Expression);
