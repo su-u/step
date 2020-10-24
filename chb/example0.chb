@@ -3,8 +3,7 @@ function func3: a, b {
 }
 
 function func4: a {
-  return a + 100
+  return 100 + a
 }
 
-{ 1, 10 } |> func3 -> value1
 { 1, 10 } |> func3 |> func4 -> value2
