@@ -23,6 +23,8 @@ export const factor = ({ ast, manager, execObject }: IInterpreterRules) => {
       name: LiteralTokens.StringLiteral,
       image,
     };
+  } else if (ast.children.ParenthesisExpression !== undefined) {
+    return execObject.interpreter({ ast: ast.children.ParenthesisExpression[0].children.expression[0], manager, execObject })
   }
   return {
     name: LiteralTokens.DebugLiteral,

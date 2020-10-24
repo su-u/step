@@ -322,7 +322,7 @@
 
       this.ParenthesisExpression = this.RULE('ParenthesisExpression', () => {
         this.CONSUME(LBracket);
-        this.SUBRULE(this.RelationExpression);
+        this.SUBRULE(this.RelationExpression, { LABEL: 'expression' });
         this.CONSUME(RBracket);
       });
 
