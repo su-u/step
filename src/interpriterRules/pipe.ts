@@ -3,7 +3,7 @@ import { Classes } from '../class';
 import { VariableManager } from '../manager';
 
 export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
-  const childrenAst = ast.children.RelationExpression[0];
+  const childrenAst = ast.children.from[0];
   const value = execObject.interpreter({ ast: childrenAst, manager, execObject });
   if (ast.children.PipeToken !== undefined) {
     if (ast.children.toEach !== undefined) {
