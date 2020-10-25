@@ -8,7 +8,6 @@ import { pipe } from './interpriterRules/pipe';
 import { assignment } from './interpriterRules/assignment';
 import { program } from './interpriterRules/program';
 import { blockStatement } from './interpriterRules/blockStatement';
-import { parenthesisExpression } from './interpriterRules/parenthesisExpression';
 import { returnStatement } from './interpriterRules/returnStatement';
 import { functionStatement } from './interpriterRules/functions';
 import { ifStatement } from './interpriterRules/ifStatement';
@@ -55,9 +54,6 @@ export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => 
       break;
     case Rules.BlockStatement:
       value = blockStatement({ ast, manager, execObject });
-      break;
-    case Rules.ParenthesisExpression:
-      value = parenthesisExpression({ ast, manager, execObject });
       break;
     case Rules.ReturnStatement:
       value = returnStatement({ ast, manager, execObject });
