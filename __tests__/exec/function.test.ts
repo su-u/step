@@ -353,4 +353,23 @@ function func1: num {
       image: 20,
     });
   });
+
+  test('15', () => {
+    const source = `
+function add: a, b {
+  return a + b
+}
+
+function func1: num {
+  return { num, 10 } |> add
+}
+
+{{ 10, 10 } |> add |> func1, 10 } |> add -> result
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('result')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 40,
+    });
+  });
 });
