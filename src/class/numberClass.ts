@@ -23,7 +23,10 @@ export const NumberClass: NumberObjectMethodType = {
         name: LiteralTokens.NumberLiteral,
         image: param.image + obj.image,
       };
-    } else if (obj.name === LiteralTokens.StringLiteral || param.name === LiteralTokens.StringLiteral) {
+    } else if (
+      obj.name === LiteralTokens.StringLiteral ||
+      param.name === LiteralTokens.StringLiteral
+    ) {
       return {
         name: LiteralTokens.StringLiteral,
         image: param.image + obj.image,

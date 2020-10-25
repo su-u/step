@@ -12,9 +12,9 @@ describe('condition number', () => {
     };
   });
 
-  test('1 LessThan', () => {
+  test('1 Equal', () => {
     const source = `
-x <- 1 > 0
+x <- "test" = "test"
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -23,9 +23,9 @@ x <- 1 > 0
     });
   });
 
-  test('2 OverThan', () => {
+  test('2 Equal', () => {
     const source = `
-x <- 1 < 0
+x <- "test1" = "test"
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -34,9 +34,22 @@ x <- 1 < 0
     });
   });
 
-  test('3 AmountMore', () => {
+  test('3 Equal', () => {
     const source = `
-x <- 1 <= 0
+str <- "test"
+x <- "test" = str
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('x')).toStrictEqual({
+      name: LiteralTokens.BooleanLiteral,
+      image: 'true',
+    });
+  });
+
+  test('4 Equal', () => {
+    const source = `
+str <- "test1"
+x <- "test" = str
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -45,58 +58,4 @@ x <- 1 <= 0
     });
   });
 
-  test('4 AmountLess', () => {
-    const source = `
-x <- 1 >= 0
-    `;
-    const resultManager = exec(source, manager).variable;
-    expect(resultManager.reference('x')).toStrictEqual({
-      name: LiteralTokens.BooleanLiteral,
-      image: 'true',
-    });
-  });
-
-  test('5 Equal', () => {
-    const source = `
-x <- 1 = 0
-    `;
-    const resultManager = exec(source, manager).variable;
-    expect(resultManager.reference('x')).toStrictEqual({
-      name: LiteralTokens.BooleanLiteral,
-      image: 'false',
-    });
-  });
-
-  test('6 Equal', () => {
-    const source = `
-x <- 1 = 1
-    `;
-    const resultManager = exec(source, manager).variable;
-    expect(resultManager.reference('x')).toStrictEqual({
-      name: LiteralTokens.BooleanLiteral,
-      image: 'true',
-    });
-  });
-
-  test('7 Equal', () => {
-    const source = `
-x <- 1.8 = 1.8
-    `;
-    const resultManager = exec(source, manager).variable;
-    expect(resultManager.reference('x')).toStrictEqual({
-      name: LiteralTokens.BooleanLiteral,
-      image: 'true',
-    });
-  });
-
-  test('8 Equal', () => {
-    const source = `
-x <- 1.8 = 1.8
-    `;
-    const resultManager = exec(source, manager).variable;
-    expect(resultManager.reference('x')).toStrictEqual({
-      name: LiteralTokens.BooleanLiteral,
-      image: 'true',
-    });
-  });
 });
