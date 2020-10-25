@@ -1,6 +1,5 @@
-"hello,world" |> console
-0 -> total
-1 ~ 10 |> each (i) {
-  total + i -> total
+function add: a, b, c {
+  return a + b
 }
-total |> console
+
+{ 1, 2, 3 } |> add -> value
