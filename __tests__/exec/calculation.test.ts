@@ -170,4 +170,26 @@ v <- (10 * 10 * 10) / (2 * (11 - 1))
       image: 50,
     });
   });
+
+  test('15', () => {
+    const source = `
+"100" + 1 -> v
+      `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('v')).toStrictEqual({
+      name: LiteralTokens.StringLiteral,
+      image: '1001',
+    });
+  });
+
+  test('16', () => {
+    const source = `
+1 + "100" -> v
+      `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('v')).toStrictEqual({
+      name: LiteralTokens.StringLiteral,
+      image: '1100',
+    });
+  });
 });
