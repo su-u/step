@@ -7,6 +7,7 @@ export const Operators = {
   AmountMore: 'AmountMore',
   AmountLess: 'AmountLess',
   OverThan: 'OverThan',
+  LogicalOperator: 'LogicalOperator',
 };
 
 export const RelationalOperatorTokens: ReadonlyArray<any> = [
@@ -16,4 +17,5 @@ export const RelationalOperatorTokens: ReadonlyArray<any> = [
   Operators.AmountMore,
   Operators.AmountLess,
   Operators.OverThan,
+  Operators.LogicalOperator,
 ];
