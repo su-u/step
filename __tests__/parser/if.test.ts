@@ -9,6 +9,7 @@ describe('if', () => {
     `;
     expect(sourceParseJson(source)).toMatchSnapshot();
   });
+
   test('2', () => {
     const source = `
     if:x {
@@ -19,9 +20,23 @@ describe('if', () => {
     `;
     expect(sourceParseJson(source)).toMatchSnapshot();
   });
+
   test('3', () => {
     const source = `
     if:x {
+      1 ~ 10 |> each: i {
+        i |> console
+      }
+    } else {
+      x - x
+    }
+    `;
+    expect(sourceParseJson(source)).toMatchSnapshot();
+  });
+
+  test('4', () => {
+    const source = `
+    if: x and y {
       1 ~ 10 |> each: i {
         i |> console
       }

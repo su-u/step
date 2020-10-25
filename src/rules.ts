@@ -17,4 +17,5 @@ export const Rules = {
   ReturnStatement: 'ReturnStatement',
   PipeFrom: 'PipeFrom',
   PipeArguments: 'PipeArguments',
+  LogicExpression: 'LogicExpression',
 };

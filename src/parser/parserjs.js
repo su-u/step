@@ -105,6 +105,13 @@
     Equal,
   ];
 
+  const LogicalJoinOperator = createToken({
+    name: 'LogicalJoinOperator',
+    pattern: /and|or/,
+  });
+
+  const LogicalOperatorTokens = [LogicalJoinOperator];
+
   const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
   const eachToken = createToken({ name: 'EachToken', pattern: /each:/ });
   const ifToken = createToken({ name: 'IfToken', pattern: /if:/ });
@@ -151,9 +158,10 @@
   const allTokens = [
     ...BuildInTokens,
     ...BracketTokens,
+    ...LogicalOperatorTokens,
+    ...RelationalOperatorTokens,
     ...LiteralTokens,
     ...OperatorTokens,
-    ...RelationalOperatorTokens,
   ];
   const ChiboLexer = new Lexer(allTokens);
 
@@ -273,7 +281,7 @@
               this.CONSUME(RCurly);
             },
           },
-          { ALT: () => this.SUBRULE(this.RelationExpression) },
+          { ALT: () => this.SUBRULE(this.LogicExpression) },
         ]);
       });
 
@@ -283,6 +291,14 @@
           DEF: () => {
             this.SUBRULE(this.Pipe);
           },
+        });
+      });
+
+      this.LogicExpression = this.RULE('LogicExpression', () => {
+        this.SUBRULE(this.RelationExpression);
+        this.MANY(() => {
+          this.OR([{ ALT: () => this.CONSUME(LogicalJoinOperator) }]);
+          this.SUBRULE2(this.RelationExpression);
         });
       });
 
@@ -356,7 +372,7 @@
 
       this.ParenthesisExpression = this.RULE('ParenthesisExpression', () => {
         this.CONSUME(LBracket);
-        this.SUBRULE(this.RelationExpression);
+        this.SUBRULE(this.LogicExpression, { LABEL: 'expression' });
         this.CONSUME(RBracket);
       });
 

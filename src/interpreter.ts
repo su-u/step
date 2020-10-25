@@ -14,6 +14,7 @@ import { ifStatement } from './interpriterRules/ifStatement';
 import { IInterpreterRules } from './interpriterRules/types';
 import { pipeFrom } from './interpriterRules/pipeFrom';
 import { pipeArguments } from './interpriterRules/pipeArguments';
+import { logicExpression } from './interpriterRules/logicExpression';
 
 export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => {
   logger.info(ast.name);
@@ -36,6 +37,9 @@ export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => 
       break;
     case Rules.PipeArguments:
       value = pipeArguments({ ast, manager, execObject });
+      break;
+    case Rules.LogicExpression:
+      value = logicExpression({ ast, manager, execObject });
       break;
     case Rules.RelationExpression:
       value = relationExpression({ ast, manager, execObject });
