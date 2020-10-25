@@ -61,10 +61,9 @@ if: true {
 }
     `;
     const resultManager = exec(source, manager).variable;
-    expect(resultManager.reference('value2')).toStrictEqual({
-      name: LiteralTokens.NumberLiteral,
-      image: 1,
-    });
+    expect(() => {
+      resultManager.reference('value2');
+    }).toThrowError();
   });
 
   test('5', () => {
