@@ -159,4 +159,15 @@ v2 <- 1 * 2 * 3 * 4 + 6
       image: 30,
     });
   });
+
+  test('14', () => {
+    const source = `
+v <- (10 * 10 * 10) / (2 * (11 - 1))
+      `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('v')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 50,
+    });
+  });
 });
