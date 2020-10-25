@@ -1,0 +1,5 @@
+value <- 1
+(1 + 1) -> value2
+ { value, (1 + 1) } |> console
+{ (value), (1 + 1) } |> console
+{ value, value2 } |> console

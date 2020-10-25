@@ -1,2 +1,2 @@
-1 + 1 -> tmp
-tmp |> console
+value <- 1
+ { value } |> console

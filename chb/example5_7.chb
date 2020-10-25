@@ -1,0 +1,5 @@
+function func: x {
+  return x + 1
+}
+
+1 |> func |> func |> console

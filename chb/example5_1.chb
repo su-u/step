@@ -1,1 +1,2 @@
-( x ) => { x + x } -> k
+value <- 1
+value |> console

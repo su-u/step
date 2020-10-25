@@ -1,0 +1,2 @@
+int(1.5) |> console
+1.5 |> console

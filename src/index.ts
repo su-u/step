@@ -1,19 +1,27 @@
-import logger from '@/logger';
-logger.level = 'debug';
-import { readAst } from '@/ast';
-import { writeAstToJson } from '@/util/file';
-import { syntax } from '@/syntax';
+import { parseInput } from './parser';
+import { interpreter } from './interpreter';
+import { VariableManager, FunctionManager, Manager } from './manager';
+import logger from './logger';
+import { writeAstToJson } from './util/file';
+import { removeObjectByKey, UnnecessaryKeys } from './util/json';
+// logger.level = 'debug';
+logger.level = 'fatal';
 
-if (process.argv.length == 0) {
-  logger.info('Chiboのソースコードを指定してください');
-  process.exit(1);
-}
+export const entry = (text: string) => {
+  const ast = parseInput(text);
+  // AST確認用
 
-logger.info('Ruleset = syntax.pegjs');
-logger.info('source code = ' + process.argv[2]);
-
-const ast: AstType = readAst('syntax.pegjs', process.argv[2]);
-
-writeAstToJson(ast);
-
-syntax(ast);
+  try {
+    const manager: Manager = {
+      variable: new VariableManager(null),
+      function: new FunctionManager(),
+    };
+    interpreter({ ast, manager, execObject: { interpreter } });
+    manager.variable.debug();
+    manager.function.debug();
+    const rAst = removeObjectByKey(ast, UnnecessaryKeys);
+    writeAstToJson(rAst as any);
+  } catch (err) {
+    console.error(err);
+  }
+};
