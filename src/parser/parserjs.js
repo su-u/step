@@ -189,7 +189,7 @@
 
       this.IfStatement = this.RULE('IfStatement', () => {
         this.CONSUME(ifToken);
-        this.SUBRULE(this.RelationExpression, { LABEL: 'conditionalExpression' });
+        this.SUBRULE(this.Pipe, { LABEL: 'conditionalExpression' });
         this.CONSUME(LCurly);
         this.SUBRULE(this.BrockStatement);
         this.CONSUME(RCurly);

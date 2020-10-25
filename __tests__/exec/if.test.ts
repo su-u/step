@@ -66,4 +66,24 @@ if: true {
       image: 1,
     });
   });
+
+  test('5', () => {
+    const source = `
+function judge: x, y {
+  return x = y
+}
+
+0 -> value1
+if: { 1, 1 } |> judge  {
+  1 -> value1
+} else {
+  2 -> value1
+}
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('value1')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 1,
+    });
+  });
 });
