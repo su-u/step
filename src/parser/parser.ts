@@ -313,13 +313,17 @@ export class ChiboParser extends CstParser {
 
   private ArrayStatement = this.RULE('ArrayStatement', () => {
     this.CONSUME(LSquare);
+    this.SUBRULE(this.ArrayElement, { LABEL: 'arrayElement' })
+    this.CONSUME(RSquare);
+  });
+
+  private ArrayElement = this.RULE('ArrayElement', () => {
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
         this.SUBRULE(this.Factor);
       },
     });
-    this.CONSUME(RSquare);
   });
 
   private ParenthesisExpression = this.RULE('ParenthesisExpression', () => {
