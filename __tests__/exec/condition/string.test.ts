@@ -57,5 +57,4 @@ x <- "test" = str
       image: 'false',
     });
   });
-
 });
