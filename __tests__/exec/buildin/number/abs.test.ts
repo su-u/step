@@ -66,4 +66,13 @@ describe('condition number abs', () => {
       image: 1400,
     });
   });
+
+  test('5', () => {
+    const source = `
+"test" |> abs -> num
+    `;
+    expect(() => {
+      exec(source, manager).variable
+    }).toThrowError();
+  });
 });
