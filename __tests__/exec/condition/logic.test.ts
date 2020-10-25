@@ -88,4 +88,18 @@ x <- ("test" = "test" or 1 = 12 or 1 > 2 or 12 < 50) and 8 > 1
       image: 'true',
     });
   });
+
+  test('8', () => {
+    const source = `
+x <- 1 and 1
+    `;
+    expect(() => exec(source, manager).variable).toThrowError();
+  });
+
+  test('9', () => {
+    const source = `
+x <- "test" = "test" and 1
+    `;
+    expect(() => exec(source, manager).variable).toThrowError();
+  });
 });
