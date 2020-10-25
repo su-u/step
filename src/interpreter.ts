@@ -14,7 +14,7 @@ import { ifStatement } from './interpriterRules/ifStatement';
 import { IInterpreterRules } from './interpriterRules/types';
 import { pipeFrom } from './interpriterRules/pipeFrom';
 import { pipeArguments } from './interpriterRules/pipeArguments';
-import { logicExpression } from "./interpriterRules/logicExpression";
+import { logicExpression } from './interpriterRules/logicExpression';
 
 export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => {
   logger.info(ast.name);

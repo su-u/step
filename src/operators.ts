@@ -19,6 +19,4 @@ export const RelationalOperatorTokens: ReadonlyArray<any> = [
   Operators.OverThan,
 ];
 
-export const LogicalOperatorTokens: ReadonlyArray<any> = [
-  Operators.LogicalJoinOperator,
-]
+export const LogicalOperatorTokens: ReadonlyArray<any> = [Operators.LogicalJoinOperator];

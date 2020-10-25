@@ -107,9 +107,7 @@ const LogicalJoinOperator = createToken({
   pattern: /and|or/,
 });
 
-const LogicalOperatorTokens = [
-  LogicalJoinOperator,
-]
+const LogicalOperatorTokens = [LogicalJoinOperator];
 
 const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
 const eachToken = createToken({ name: 'EachToken', pattern: /each:/ });
@@ -292,12 +290,10 @@ export class ChiboParser extends CstParser {
   });
 
   private LogicExpression = this.RULE('LogicExpression', () => {
-    this.SUBRULE(this.RelationExpression)
+    this.SUBRULE(this.RelationExpression);
     this.MANY(() => {
-      this.OR([
-        { ALT: () => this.CONSUME(LogicalJoinOperator) },
-      ]);
-      this.SUBRULE2(this.RelationExpression)
+      this.OR([{ ALT: () => this.CONSUME(LogicalJoinOperator) }]);
+      this.SUBRULE2(this.RelationExpression);
     });
   });
 
