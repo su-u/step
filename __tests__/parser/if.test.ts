@@ -3,7 +3,7 @@ import { sourceParseJson } from '@/util/test';
 describe('if', () => {
   test('1', () => {
     const source = `
-    if (x) {
+    if:x {
       x + x
     }
     `;
@@ -11,7 +11,7 @@ describe('if', () => {
   });
   test('2', () => {
     const source = `
-    if (x) {
+    if:x {
       x + x
     } else {
       x - x
@@ -21,7 +21,7 @@ describe('if', () => {
   });
   test('3', () => {
     const source = `
-    if (x) {
+    if:x {
       1 ~ 10 |> each (i) {
         i |> console
       }

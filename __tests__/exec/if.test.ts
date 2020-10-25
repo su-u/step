@@ -14,7 +14,7 @@ describe('if', () => {
   test('1', () => {
     const source = `
 x <- 1
-if (x) {
+if:x {
   x + x
 }
     `;
@@ -24,7 +24,7 @@ if (x) {
   test('2', () => {
     const source = `
 x <- 1
-if (x) {
+if:x {
   x + x
 } else {
   x - x
@@ -37,9 +37,9 @@ if (x) {
     const source = `
 value <- 0
 x <- 1
-if (x) {
+if: x {
   1 ~ 10 |> each (i) {
-  value <- 10
+    value <- 10
   }
 } else {
   x - x
@@ -54,22 +54,8 @@ if (x) {
 
   test('4', () => {
     const source = `
-function out: str {
-  return str
-}
-"testword" |> out -> re
-    `;
-    const resultManager = exec(source, manager).variable;
-    expect(resultManager.reference('re')).toStrictEqual({
-      name: LiteralTokens.StringLiteral,
-      image: 'testword',
-    });
-  });
-
-  test('5', () => {
-    const source = `
 value1 <- 1
-if (true) {
+if: true {
   value1 <- 2
   value2 <- 1
 }

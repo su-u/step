@@ -205,13 +205,13 @@ exports[`変数 式 if 1`] = `
         \\"children\\": {
           \\"IfToken\\": [
             {
-              \\"image\\": \\"if\\",
+              \\"image\\": \\"if:\\",
               \\"startOffset\\": 28,
-              \\"endOffset\\": 29,
+              \\"endOffset\\": 30,
               \\"startLine\\": 3,
               \\"endLine\\": 3,
               \\"startColumn\\": 7,
-              \\"endColumn\\": 8,
+              \\"endColumn\\": 9,
               \\"tokenTypeIdx\\": 31,
               \\"tokenType\\": {
                 \\"name\\": \\"IfToken\\",
@@ -221,28 +221,6 @@ exports[`変数 式 if 1`] = `
                 \\"categoryMatches\\": [],
                 \\"categoryMatchesMap\\": {},
                 \\"isParent\\": false
-              }
-            }
-          ],
-          \\"LBrackets\\": [
-            {
-              \\"image\\": \\"(\\",
-              \\"startOffset\\": 31,
-              \\"endOffset\\": 31,
-              \\"startLine\\": 3,
-              \\"endLine\\": 3,
-              \\"startColumn\\": 10,
-              \\"endColumn\\": 10,
-              \\"tokenTypeIdx\\": 9,
-              \\"tokenType\\": {
-                \\"name\\": \\"LBrackets\\",
-                \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 9,
-                \\"CATEGORIES\\": [],
-                \\"categoryMatches\\": [],
-                \\"categoryMatchesMap\\": {},
-                \\"isParent\\": false,
-                \\"LABEL\\": \\"(\\"
               }
             }
           ],
@@ -295,37 +273,15 @@ exports[`変数 式 if 1`] = `
               }
             }
           ],
-          \\"RBrackets\\": [
-            {
-              \\"image\\": \\")\\",
-              \\"startOffset\\": 37,
-              \\"endOffset\\": 37,
-              \\"startLine\\": 3,
-              \\"endLine\\": 3,
-              \\"startColumn\\": 16,
-              \\"endColumn\\": 16,
-              \\"tokenTypeIdx\\": 10,
-              \\"tokenType\\": {
-                \\"name\\": \\"RBrackets\\",
-                \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 10,
-                \\"CATEGORIES\\": [],
-                \\"categoryMatches\\": [],
-                \\"categoryMatchesMap\\": {},
-                \\"isParent\\": false,
-                \\"LABEL\\": \\")\\"
-              }
-            }
-          ],
           \\"LCurly\\": [
             {
               \\"image\\": \\"{\\",
-              \\"startOffset\\": 39,
-              \\"endOffset\\": 39,
+              \\"startOffset\\": 38,
+              \\"endOffset\\": 38,
               \\"startLine\\": 3,
               \\"endLine\\": 3,
-              \\"startColumn\\": 18,
-              \\"endColumn\\": 18,
+              \\"startColumn\\": 17,
+              \\"endColumn\\": 17,
               \\"tokenTypeIdx\\": 11,
               \\"tokenType\\": {
                 \\"name\\": \\"LCurly\\",
@@ -340,8 +296,8 @@ exports[`変数 式 if 1`] = `
             },
             {
               \\"image\\": \\"{\\",
-              \\"startOffset\\": 54,
-              \\"endOffset\\": 54,
+              \\"startOffset\\": 53,
+              \\"endOffset\\": 53,
               \\"startLine\\": 4,
               \\"endLine\\": 4,
               \\"startColumn\\": 14,
@@ -372,8 +328,8 @@ exports[`変数 式 if 1`] = `
           \\"RCurly\\": [
             {
               \\"image\\": \\"}\\",
-              \\"startOffset\\": 47,
-              \\"endOffset\\": 47,
+              \\"startOffset\\": 46,
+              \\"endOffset\\": 46,
               \\"startLine\\": 4,
               \\"endLine\\": 4,
               \\"startColumn\\": 7,
@@ -392,8 +348,8 @@ exports[`変数 式 if 1`] = `
             },
             {
               \\"image\\": \\"}\\",
-              \\"startOffset\\": 62,
-              \\"endOffset\\": 62,
+              \\"startOffset\\": 61,
+              \\"endOffset\\": 61,
               \\"startLine\\": 5,
               \\"endLine\\": 5,
               \\"startColumn\\": 7,
@@ -414,8 +370,8 @@ exports[`変数 式 if 1`] = `
           \\"ElseToken\\": [
             {
               \\"image\\": \\"else\\",
-              \\"startOffset\\": 49,
-              \\"endOffset\\": 52,
+              \\"startOffset\\": 48,
+              \\"endOffset\\": 51,
               \\"startLine\\": 4,
               \\"endLine\\": 4,
               \\"startColumn\\": 9,

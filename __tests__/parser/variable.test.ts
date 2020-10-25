@@ -23,7 +23,7 @@ describe('変数', () => {
     test('if', () => {
       const source = `
       value <- 1 + 1
-      if (value) {
+      if: value {
       } else {
       }
       `;

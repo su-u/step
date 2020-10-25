@@ -90,7 +90,7 @@ function out: str {
     const source = `
 function out: arg {
   result <- 100
-  if (arg = 0) {
+  if: arg = 0 {
     arg -> result
   } else {
     10 -> result
@@ -115,7 +115,7 @@ function out: arg {
     const source = `
 function out: arg {
   result <- 100
-  if (arg = 0) {
+  if: arg = 0 {
     arg + 1000 -> result
   } else {
     arg * 100 -> result
@@ -145,7 +145,7 @@ function out: arg {
     const source = `
 function func: j, str {
   v <- ""
-  if (j > 0) {
+  if: j > 0 {
     v <- str + "true"
   } else {
     v <- str + "false"

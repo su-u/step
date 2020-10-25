@@ -102,7 +102,7 @@
 
   const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
   const eachToken = createToken({ name: 'EachToken', pattern: /each/ });
-  const ifToken = createToken({ name: 'IfToken', pattern: /if/ });
+  const ifToken = createToken({ name: 'IfToken', pattern: /if:/ });
   const elseToken = createToken({ name: 'ElseToken', pattern: /else/ });
   const tildeToken = createToken({ name: 'TildeToken', pattern: /~/ });
   const PipeToken = createToken({ name: 'PipeToken', pattern: /(?!-)\|>/ });
@@ -191,9 +191,7 @@
 
       this.IfStatement = this.RULE('IfStatement', () => {
         this.CONSUME(ifToken);
-        this.CONSUME(LBracket);
         this.SUBRULE(this.RelationExpression, { LABEL: 'conditionalExpression' });
-        this.CONSUME(RBracket);
         this.CONSUME(LCurly);
         this.SUBRULE(this.BrockStatement);
         this.CONSUME(RCurly);
