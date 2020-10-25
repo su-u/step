@@ -86,5 +86,4 @@ value2 <- value
       image: 10,
     });
   });
-
 });
