@@ -131,16 +131,10 @@ describe('factor', () => {
 
   test('7', () => {
     const interpreterMock = jest.fn();
-    const correct = [
-      {
-        name: LiteralTokens.NumberLiteral,
-        image: 1,
-      },
-      {
-        name: LiteralTokens.NumberLiteral,
-        image: 2,
-      },
-    ];
+    const correct = {
+      name: LiteralTokens.NumberLiteral,
+      image: 2,
+    };
 
     interpreterMock.mockReturnValue(correct);
 
@@ -214,9 +208,61 @@ describe('factor', () => {
         ],
       },
     };
+
+    const argASt = {
+      name: 'RelationExpression',
+      children: {
+        Expression: [
+          {
+            name: 'Expression',
+            children: {
+              Term: [
+                {
+                  name: 'Term',
+                  children: {
+                    Factor: [
+                      {
+                        name: 'Factor',
+                        children: {
+                          NumberLiteral: [
+                            {
+                              image: '1',
+                            },
+                          ],
+                        },
+                      },
+                      {
+                        name: 'Factor',
+                        children: {
+                          NumberLiteral: [
+                            {
+                              image: '2',
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                    MultiplicationOperator: [
+                      {
+                        image: '*',
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    };
+
     const result = factor({ ast, manager, execObject: { interpreter: interpreterMock } });
     expect(interpreterMock).toBeCalled();
-
+    expect(interpreterMock).toHaveBeenLastCalledWith({
+      ast: argASt,
+      manager,
+      execObject: { interpreter: interpreterMock },
+    });
     expect(result).toStrictEqual(correct);
   });
 });
