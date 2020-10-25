@@ -31,38 +31,52 @@ exports[`if 1 1`] = `
           ],
           \\"conditionalExpression\\": [
             {
-              \\"name\\": \\"RelationExpression\\",
+              \\"name\\": \\"Pipe\\",
               \\"children\\": {
-                \\"Expression\\": [
+                \\"from\\": [
                   {
-                    \\"name\\": \\"Expression\\",
+                    \\"name\\": \\"PipeFrom\\",
                     \\"children\\": {
-                      \\"Term\\": [
+                      \\"RelationExpression\\": [
                         {
-                          \\"name\\": \\"Term\\",
+                          \\"name\\": \\"RelationExpression\\",
                           \\"children\\": {
-                            \\"Factor\\": [
+                            \\"Expression\\": [
                               {
-                                \\"name\\": \\"Factor\\",
+                                \\"name\\": \\"Expression\\",
                                 \\"children\\": {
-                                  \\"Identifier\\": [
+                                  \\"Term\\": [
                                     {
-                                      \\"image\\": \\"x\\",
-                                      \\"startOffset\\": 8,
-                                      \\"endOffset\\": 8,
-                                      \\"startLine\\": 2,
-                                      \\"endLine\\": 2,
-                                      \\"startColumn\\": 8,
-                                      \\"endColumn\\": 8,
-                                      \\"tokenTypeIdx\\": 8,
-                                      \\"tokenType\\": {
-                                        \\"name\\": \\"Identifier\\",
-                                        \\"PATTERN\\": {},
-                                        \\"tokenTypeIdx\\": 8,
-                                        \\"CATEGORIES\\": [],
-                                        \\"categoryMatches\\": [],
-                                        \\"categoryMatchesMap\\": {},
-                                        \\"isParent\\": false
+                                      \\"name\\": \\"Term\\",
+                                      \\"children\\": {
+                                        \\"Factor\\": [
+                                          {
+                                            \\"name\\": \\"Factor\\",
+                                            \\"children\\": {
+                                              \\"Identifier\\": [
+                                                {
+                                                  \\"image\\": \\"x\\",
+                                                  \\"startOffset\\": 8,
+                                                  \\"endOffset\\": 8,
+                                                  \\"startLine\\": 2,
+                                                  \\"endLine\\": 2,
+                                                  \\"startColumn\\": 8,
+                                                  \\"endColumn\\": 8,
+                                                  \\"tokenTypeIdx\\": 8,
+                                                  \\"tokenType\\": {
+                                                    \\"name\\": \\"Identifier\\",
+                                                    \\"PATTERN\\": {},
+                                                    \\"tokenTypeIdx\\": 8,
+                                                    \\"CATEGORIES\\": [],
+                                                    \\"categoryMatches\\": [],
+                                                    \\"categoryMatchesMap\\": {},
+                                                    \\"isParent\\": false
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
                                       }
                                     }
                                   ]
@@ -73,6 +87,12 @@ exports[`if 1 1`] = `
                         }
                       ]
                     }
+                  }
+                ],
+                \\"tail\\": [
+                  {
+                    \\"name\\": \\"PipeTail\\",
+                    \\"children\\": {}
                   }
                 ]
               }
@@ -320,38 +340,52 @@ exports[`if 2 1`] = `
           ],
           \\"conditionalExpression\\": [
             {
-              \\"name\\": \\"RelationExpression\\",
+              \\"name\\": \\"Pipe\\",
               \\"children\\": {
-                \\"Expression\\": [
+                \\"from\\": [
                   {
-                    \\"name\\": \\"Expression\\",
+                    \\"name\\": \\"PipeFrom\\",
                     \\"children\\": {
-                      \\"Term\\": [
+                      \\"RelationExpression\\": [
                         {
-                          \\"name\\": \\"Term\\",
+                          \\"name\\": \\"RelationExpression\\",
                           \\"children\\": {
-                            \\"Factor\\": [
+                            \\"Expression\\": [
                               {
-                                \\"name\\": \\"Factor\\",
+                                \\"name\\": \\"Expression\\",
                                 \\"children\\": {
-                                  \\"Identifier\\": [
+                                  \\"Term\\": [
                                     {
-                                      \\"image\\": \\"x\\",
-                                      \\"startOffset\\": 8,
-                                      \\"endOffset\\": 8,
-                                      \\"startLine\\": 2,
-                                      \\"endLine\\": 2,
-                                      \\"startColumn\\": 8,
-                                      \\"endColumn\\": 8,
-                                      \\"tokenTypeIdx\\": 8,
-                                      \\"tokenType\\": {
-                                        \\"name\\": \\"Identifier\\",
-                                        \\"PATTERN\\": {},
-                                        \\"tokenTypeIdx\\": 8,
-                                        \\"CATEGORIES\\": [],
-                                        \\"categoryMatches\\": [],
-                                        \\"categoryMatchesMap\\": {},
-                                        \\"isParent\\": false
+                                      \\"name\\": \\"Term\\",
+                                      \\"children\\": {
+                                        \\"Factor\\": [
+                                          {
+                                            \\"name\\": \\"Factor\\",
+                                            \\"children\\": {
+                                              \\"Identifier\\": [
+                                                {
+                                                  \\"image\\": \\"x\\",
+                                                  \\"startOffset\\": 8,
+                                                  \\"endOffset\\": 8,
+                                                  \\"startLine\\": 2,
+                                                  \\"endLine\\": 2,
+                                                  \\"startColumn\\": 8,
+                                                  \\"endColumn\\": 8,
+                                                  \\"tokenTypeIdx\\": 8,
+                                                  \\"tokenType\\": {
+                                                    \\"name\\": \\"Identifier\\",
+                                                    \\"PATTERN\\": {},
+                                                    \\"tokenTypeIdx\\": 8,
+                                                    \\"CATEGORIES\\": [],
+                                                    \\"categoryMatches\\": [],
+                                                    \\"categoryMatchesMap\\": {},
+                                                    \\"isParent\\": false
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
                                       }
                                     }
                                   ]
@@ -362,6 +396,12 @@ exports[`if 2 1`] = `
                         }
                       ]
                     }
+                  }
+                ],
+                \\"tail\\": [
+                  {
+                    \\"name\\": \\"PipeTail\\",
+                    \\"children\\": {}
                   }
                 ]
               }
@@ -828,38 +868,52 @@ exports[`if 3 1`] = `
           ],
           \\"conditionalExpression\\": [
             {
-              \\"name\\": \\"RelationExpression\\",
+              \\"name\\": \\"Pipe\\",
               \\"children\\": {
-                \\"Expression\\": [
+                \\"from\\": [
                   {
-                    \\"name\\": \\"Expression\\",
+                    \\"name\\": \\"PipeFrom\\",
                     \\"children\\": {
-                      \\"Term\\": [
+                      \\"RelationExpression\\": [
                         {
-                          \\"name\\": \\"Term\\",
+                          \\"name\\": \\"RelationExpression\\",
                           \\"children\\": {
-                            \\"Factor\\": [
+                            \\"Expression\\": [
                               {
-                                \\"name\\": \\"Factor\\",
+                                \\"name\\": \\"Expression\\",
                                 \\"children\\": {
-                                  \\"Identifier\\": [
+                                  \\"Term\\": [
                                     {
-                                      \\"image\\": \\"x\\",
-                                      \\"startOffset\\": 8,
-                                      \\"endOffset\\": 8,
-                                      \\"startLine\\": 2,
-                                      \\"endLine\\": 2,
-                                      \\"startColumn\\": 8,
-                                      \\"endColumn\\": 8,
-                                      \\"tokenTypeIdx\\": 8,
-                                      \\"tokenType\\": {
-                                        \\"name\\": \\"Identifier\\",
-                                        \\"PATTERN\\": {},
-                                        \\"tokenTypeIdx\\": 8,
-                                        \\"CATEGORIES\\": [],
-                                        \\"categoryMatches\\": [],
-                                        \\"categoryMatchesMap\\": {},
-                                        \\"isParent\\": false
+                                      \\"name\\": \\"Term\\",
+                                      \\"children\\": {
+                                        \\"Factor\\": [
+                                          {
+                                            \\"name\\": \\"Factor\\",
+                                            \\"children\\": {
+                                              \\"Identifier\\": [
+                                                {
+                                                  \\"image\\": \\"x\\",
+                                                  \\"startOffset\\": 8,
+                                                  \\"endOffset\\": 8,
+                                                  \\"startLine\\": 2,
+                                                  \\"endLine\\": 2,
+                                                  \\"startColumn\\": 8,
+                                                  \\"endColumn\\": 8,
+                                                  \\"tokenTypeIdx\\": 8,
+                                                  \\"tokenType\\": {
+                                                    \\"name\\": \\"Identifier\\",
+                                                    \\"PATTERN\\": {},
+                                                    \\"tokenTypeIdx\\": 8,
+                                                    \\"CATEGORIES\\": [],
+                                                    \\"categoryMatches\\": [],
+                                                    \\"categoryMatchesMap\\": {},
+                                                    \\"isParent\\": false
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
                                       }
                                     }
                                   ]
@@ -870,6 +924,12 @@ exports[`if 3 1`] = `
                         }
                       ]
                     }
+                  }
+                ],
+                \\"tail\\": [
+                  {
+                    \\"name\\": \\"PipeTail\\",
+                    \\"children\\": {}
                   }
                 ]
               }

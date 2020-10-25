@@ -226,38 +226,52 @@ exports[`変数 式 if 1`] = `
           ],
           \\"conditionalExpression\\": [
             {
-              \\"name\\": \\"RelationExpression\\",
+              \\"name\\": \\"Pipe\\",
               \\"children\\": {
-                \\"Expression\\": [
+                \\"from\\": [
                   {
-                    \\"name\\": \\"Expression\\",
+                    \\"name\\": \\"PipeFrom\\",
                     \\"children\\": {
-                      \\"Term\\": [
+                      \\"RelationExpression\\": [
                         {
-                          \\"name\\": \\"Term\\",
+                          \\"name\\": \\"RelationExpression\\",
                           \\"children\\": {
-                            \\"Factor\\": [
+                            \\"Expression\\": [
                               {
-                                \\"name\\": \\"Factor\\",
+                                \\"name\\": \\"Expression\\",
                                 \\"children\\": {
-                                  \\"Identifier\\": [
+                                  \\"Term\\": [
                                     {
-                                      \\"image\\": \\"value\\",
-                                      \\"startOffset\\": 32,
-                                      \\"endOffset\\": 36,
-                                      \\"startLine\\": 3,
-                                      \\"endLine\\": 3,
-                                      \\"startColumn\\": 11,
-                                      \\"endColumn\\": 15,
-                                      \\"tokenTypeIdx\\": 8,
-                                      \\"tokenType\\": {
-                                        \\"name\\": \\"Identifier\\",
-                                        \\"PATTERN\\": {},
-                                        \\"tokenTypeIdx\\": 8,
-                                        \\"CATEGORIES\\": [],
-                                        \\"categoryMatches\\": [],
-                                        \\"categoryMatchesMap\\": {},
-                                        \\"isParent\\": false
+                                      \\"name\\": \\"Term\\",
+                                      \\"children\\": {
+                                        \\"Factor\\": [
+                                          {
+                                            \\"name\\": \\"Factor\\",
+                                            \\"children\\": {
+                                              \\"Identifier\\": [
+                                                {
+                                                  \\"image\\": \\"value\\",
+                                                  \\"startOffset\\": 32,
+                                                  \\"endOffset\\": 36,
+                                                  \\"startLine\\": 3,
+                                                  \\"endLine\\": 3,
+                                                  \\"startColumn\\": 11,
+                                                  \\"endColumn\\": 15,
+                                                  \\"tokenTypeIdx\\": 8,
+                                                  \\"tokenType\\": {
+                                                    \\"name\\": \\"Identifier\\",
+                                                    \\"PATTERN\\": {},
+                                                    \\"tokenTypeIdx\\": 8,
+                                                    \\"CATEGORIES\\": [],
+                                                    \\"categoryMatches\\": [],
+                                                    \\"categoryMatchesMap\\": {},
+                                                    \\"isParent\\": false
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
                                       }
                                     }
                                   ]
@@ -268,6 +282,12 @@ exports[`変数 式 if 1`] = `
                         }
                       ]
                     }
+                  }
+                ],
+                \\"tail\\": [
+                  {
+                    \\"name\\": \\"PipeTail\\",
+                    \\"children\\": {}
                   }
                 ]
               }
