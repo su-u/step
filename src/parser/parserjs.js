@@ -334,7 +334,7 @@
 
       this.ReturnStatement = this.RULE('ReturnStatement', () => {
         this.CONSUME(ReturnToken);
-        this.SUBRULE(this.RelationExpression, { LABEL: 'return' });
+        this.SUBRULE(this.Pipe, { LABEL: 'return' });
       });
 
       this.performSelfAnalysis();

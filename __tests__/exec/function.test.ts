@@ -320,7 +320,39 @@ function func4: a {
     });
   });
 
+  test('13', () => {
+    const source = `
+function toInt: num {
+  return num |> int
+}
 
+1.5 |> toInt -> num
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('num')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 1,
+    });
+  });
+
+  test('14', () => {
+    const source = `
+function add: a, b {
+  return a + b
+}
+
+function func1: num {
+  return { num, 10 } |> add
+}
+
+10 |> func1 -> result
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('result')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 20,
+    });
+  });
 
 
 
