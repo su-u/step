@@ -95,9 +95,14 @@
     pattern: /(?!<>)=(?!>)/,
     categories: RelationalOperator,
   });
+  const LogicalOperator = createToken({
+    name: 'LogicalOperator',
+    pattern: /and|or/,
+  });
 
   const RelationalOperatorTokens = [
     RelationalOperator,
+    LogicalOperator,
     AmountMore,
     AmountLess,
     OverThan,
@@ -150,10 +155,10 @@
 
   const allTokens = [
     ...BuildInTokens,
-    ...BracketTokens,
+    ...RelationalOperatorTokens,
     ...LiteralTokens,
     ...OperatorTokens,
-    ...RelationalOperatorTokens,
+    ...BracketTokens,
   ];
   const ChiboLexer = new Lexer(allTokens);
 
@@ -296,6 +301,7 @@
             { ALT: () => this.CONSUME(LessThan) },
             { ALT: () => this.CONSUME(Equal) },
             { ALT: () => this.CONSUME(tildeToken) },
+            { ALT: () => this.CONSUME(LogicalOperator) },
           ]);
           this.SUBRULE2(this.Expression);
         });
