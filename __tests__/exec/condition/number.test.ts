@@ -12,7 +12,7 @@ describe('condition number', () => {
     };
   });
 
-  test('1', () => {
+  test('1 Number LessThan', () => {
     const source = `
 x <- 1 > 0
     `;
@@ -23,7 +23,7 @@ x <- 1 > 0
     });
   });
 
-  test('2', () => {
+  test('2 Number OverThan', () => {
     const source = `
 x <- 1 < 0
     `;
@@ -34,7 +34,7 @@ x <- 1 < 0
     });
   });
 
-  test('3', () => {
+  test('3 Number AmountMore', () => {
     const source = `
 x <- 1 <= 0
     `;
@@ -45,7 +45,7 @@ x <- 1 <= 0
     });
   });
 
-  test('4', () => {
+  test('4 Number AmountLess', () => {
     const source = `
 x <- 1 >= 0
     `;
@@ -56,7 +56,7 @@ x <- 1 >= 0
     });
   });
 
-  test('5', () => {
+  test('5 Number Equal', () => {
     const source = `
 x <- 1 = 0
     `;
@@ -67,7 +67,7 @@ x <- 1 = 0
     });
   });
 
-  test('6', () => {
+  test('6 Number Equal', () => {
     const source = `
 x <- 1 = 1
     `;
@@ -78,7 +78,7 @@ x <- 1 = 1
     });
   });
 
-  test('7', () => {
+  test('7 Number Equal', () => {
     const source = `
 x <- 1.8 = 1.8
     `;
@@ -89,7 +89,7 @@ x <- 1.8 = 1.8
     });
   });
 
-  test('8', () => {
+  test('8 Number Equal', () => {
     const source = `
 x <- 1.8 = 1.8
     `;
@@ -100,7 +100,7 @@ x <- 1.8 = 1.8
     });
   });
 
-  test('9', () => {
+  test('9 String Equal', () => {
     const source = `
 x <- "test" = "test"
     `;
@@ -111,7 +111,7 @@ x <- "test" = "test"
     });
   });
 
-  test('10', () => {
+  test('10 String Equal', () => {
     const source = `
 x <- "test1" = "test"
     `;
@@ -122,7 +122,7 @@ x <- "test1" = "test"
     });
   });
 
-  test('11', () => {
+  test('11 String Equal', () => {
     const source = `
 str <- "test"
 x <- "test" = str
@@ -134,7 +134,7 @@ x <- "test" = str
     });
   });
 
-  test('12', () => {
+  test('12 String Equal', () => {
     const source = `
 str <- "test1"
 x <- "test" = str
@@ -146,7 +146,7 @@ x <- "test" = str
     });
   });
 
-  test('13', () => {
+  test('13 Boolean Equal', () => {
     const source = `
 x <- true = true
     `;
@@ -157,7 +157,7 @@ x <- true = true
     });
   });
 
-  test('13', () => {
+  test('14 Boolean Equal', () => {
     const source = `
 x <- true = false
     `;
