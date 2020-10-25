@@ -72,7 +72,7 @@ describe('condition number abs', () => {
 "test" |> abs -> num
     `;
     expect(() => {
-      exec(source, manager).variable
+      exec(source, manager).variable;
     }).toThrowError();
   });
 });

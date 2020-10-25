@@ -325,7 +325,7 @@
 
       this.ArrayStatement = this.RULE('ArrayStatement', () => {
         this.CONSUME(LSquare);
-        this.SUBRULE(this.ArrayElement, { LABEL: 'arrayElement' })
+        this.SUBRULE(this.ArrayElement, { LABEL: 'arrayElement' });
         this.CONSUME(RSquare);
       });
 
