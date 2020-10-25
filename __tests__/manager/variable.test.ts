@@ -1,6 +1,4 @@
 import { VariableManager } from '@/manager';
-import { FunctionManager } from '@/manager';
-import { LiteralTokens } from '@/tokens';
 
 describe('VariableManager', () => {
   test('1', () => {
@@ -35,12 +33,13 @@ describe('VariableManager', () => {
     variableManager2.assignment('value3', 'test3');
     variableManager2.assignment('value2', 'test4');
 
-
     expect(variableManager.reference('value1')).toEqual('test');
     expect(variableManager.reference('value2')).toEqual('test4');
     expect(variableManager2.reference('value3')).toEqual('test3');
     expect(variableManager2.reference('value1')).toEqual('test');
     expect(variableManager2.reference('value2')).toEqual('test4');
-    expect(() => {variableManager.reference('value3') }).toThrowError();
+    expect(() => {
+      variableManager.reference('value3');
+    }).toThrowError();
   });
 });
