@@ -81,29 +81,6 @@ if (true) {
     });
   });
 
-  test('6', () => {
-    const source = `
-value <- 0
-1 ~ 10 |> each (i) {
-  value <- value + i
-}
-value2 <- value
-     `;
-    const resultManager = exec(source, manager).variable;
-    expect(resultManager.reference('value')).toStrictEqual({
-      name: LiteralTokens.NumberLiteral,
-      image: 55,
-    });
-    expect(resultManager.reference('value2')).toStrictEqual({
-      name: LiteralTokens.NumberLiteral,
-      image: 55,
-    });
-  });
-
-
-
-
-
 
 
 
