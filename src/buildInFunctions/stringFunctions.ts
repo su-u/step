@@ -7,7 +7,7 @@ export const StringBuildInFunctions: { [key: string]: IFunction } = {
     function: (obj: AllLiteralType[]) => {
       return {
         name: LiteralTokens.StringLiteral,
-        image: String(obj[0]),
+        image: String(obj[0].image),
       };
     },
     arguments: ['obj'],
