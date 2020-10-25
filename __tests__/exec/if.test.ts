@@ -14,7 +14,7 @@ describe('if', () => {
   test('1', () => {
     const source = `
 x <- 1
-if:x {
+if: x {
   x + x
 }
     `;
@@ -24,7 +24,7 @@ if:x {
   test('2', () => {
     const source = `
 x <- 1
-if:x {
+if: x {
   x + x
 } else {
   x - x
@@ -38,7 +38,7 @@ if:x {
 value <- 0
 x <- 1
 if: x {
-  1 ~ 10 |> each (i) {
+  1 ~ 10 |> each: i {
     value <- 10
   }
 } else {

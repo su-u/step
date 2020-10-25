@@ -898,8 +898,8 @@ exports[`if 3 1`] = `
             },
             {
               \\"image\\": \\"{\\",
-              \\"startOffset\\": 79,
-              \\"endOffset\\": 79,
+              \\"startOffset\\": 78,
+              \\"endOffset\\": 78,
               \\"startLine\\": 6,
               \\"endLine\\": 6,
               \\"startColumn\\": 12,
@@ -1081,13 +1081,13 @@ exports[`if 3 1`] = `
                                             \\"children\\": {
                                               \\"EachToken\\": [
                                                 {
-                                                  \\"image\\": \\"each\\",
+                                                  \\"image\\": \\"each:\\",
                                                   \\"startOffset\\": 28,
-                                                  \\"endOffset\\": 31,
+                                                  \\"endOffset\\": 32,
                                                   \\"startLine\\": 3,
                                                   \\"endLine\\": 3,
                                                   \\"startColumn\\": 17,
-                                                  \\"endColumn\\": 20,
+                                                  \\"endColumn\\": 21,
                                                   \\"tokenTypeIdx\\": 30,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"EachToken\\",
@@ -1097,28 +1097,6 @@ exports[`if 3 1`] = `
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
                                                     \\"isParent\\": false
-                                                  }
-                                                }
-                                              ],
-                                              \\"LBrackets\\": [
-                                                {
-                                                  \\"image\\": \\"(\\",
-                                                  \\"startOffset\\": 33,
-                                                  \\"endOffset\\": 33,
-                                                  \\"startLine\\": 3,
-                                                  \\"endLine\\": 3,
-                                                  \\"startColumn\\": 22,
-                                                  \\"endColumn\\": 22,
-                                                  \\"tokenTypeIdx\\": 9,
-                                                  \\"tokenType\\": {
-                                                    \\"name\\": \\"LBrackets\\",
-                                                    \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 9,
-                                                    \\"CATEGORIES\\": [],
-                                                    \\"categoryMatches\\": [],
-                                                    \\"categoryMatchesMap\\": {},
-                                                    \\"isParent\\": false,
-                                                    \\"LABEL\\": \\"(\\"
                                                   }
                                                 }
                                               ],
@@ -1143,37 +1121,15 @@ exports[`if 3 1`] = `
                                                   }
                                                 }
                                               ],
-                                              \\"RBrackets\\": [
-                                                {
-                                                  \\"image\\": \\")\\",
-                                                  \\"startOffset\\": 35,
-                                                  \\"endOffset\\": 35,
-                                                  \\"startLine\\": 3,
-                                                  \\"endLine\\": 3,
-                                                  \\"startColumn\\": 24,
-                                                  \\"endColumn\\": 24,
-                                                  \\"tokenTypeIdx\\": 10,
-                                                  \\"tokenType\\": {
-                                                    \\"name\\": \\"RBrackets\\",
-                                                    \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 10,
-                                                    \\"CATEGORIES\\": [],
-                                                    \\"categoryMatches\\": [],
-                                                    \\"categoryMatchesMap\\": {},
-                                                    \\"isParent\\": false,
-                                                    \\"LABEL\\": \\")\\"
-                                                  }
-                                                }
-                                              ],
                                               \\"LCurly\\": [
                                                 {
                                                   \\"image\\": \\"{\\",
-                                                  \\"startOffset\\": 37,
-                                                  \\"endOffset\\": 37,
+                                                  \\"startOffset\\": 36,
+                                                  \\"endOffset\\": 36,
                                                   \\"startLine\\": 3,
                                                   \\"endLine\\": 3,
-                                                  \\"startColumn\\": 26,
-                                                  \\"endColumn\\": 26,
+                                                  \\"startColumn\\": 25,
+                                                  \\"endColumn\\": 25,
                                                   \\"tokenTypeIdx\\": 11,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"LCurly\\",
@@ -1226,8 +1182,8 @@ exports[`if 3 1`] = `
                                                                                                     \\"Identifier\\": [
                                                                                                       {
                                                                                                         \\"image\\": \\"i\\",
-                                                                                                        \\"startOffset\\": 47,
-                                                                                                        \\"endOffset\\": 47,
+                                                                                                        \\"startOffset\\": 46,
+                                                                                                        \\"endOffset\\": 46,
                                                                                                         \\"startLine\\": 4,
                                                                                                         \\"endLine\\": 4,
                                                                                                         \\"startColumn\\": 9,
@@ -1266,8 +1222,8 @@ exports[`if 3 1`] = `
                                                                             \\"PipeToken\\": [
                                                                               {
                                                                                 \\"image\\": \\"|>\\",
-                                                                                \\"startOffset\\": 49,
-                                                                                \\"endOffset\\": 50,
+                                                                                \\"startOffset\\": 48,
+                                                                                \\"endOffset\\": 49,
                                                                                 \\"startLine\\": 4,
                                                                                 \\"endLine\\": 4,
                                                                                 \\"startColumn\\": 11,
@@ -1287,8 +1243,8 @@ exports[`if 3 1`] = `
                                                                             \\"toIdentifier\\": [
                                                                               {
                                                                                 \\"image\\": \\"console\\",
-                                                                                \\"startOffset\\": 52,
-                                                                                \\"endOffset\\": 58,
+                                                                                \\"startOffset\\": 51,
+                                                                                \\"endOffset\\": 57,
                                                                                 \\"startLine\\": 4,
                                                                                 \\"endLine\\": 4,
                                                                                 \\"startColumn\\": 14,
@@ -1323,8 +1279,8 @@ exports[`if 3 1`] = `
                                               \\"RCurly\\": [
                                                 {
                                                   \\"image\\": \\"}\\",
-                                                  \\"startOffset\\": 66,
-                                                  \\"endOffset\\": 66,
+                                                  \\"startOffset\\": 65,
+                                                  \\"endOffset\\": 65,
                                                   \\"startLine\\": 5,
                                                   \\"endLine\\": 5,
                                                   \\"startColumn\\": 7,
@@ -1397,8 +1353,8 @@ exports[`if 3 1`] = `
                                                                 \\"Identifier\\": [
                                                                   {
                                                                     \\"image\\": \\"x\\",
-                                                                    \\"startOffset\\": 87,
-                                                                    \\"endOffset\\": 87,
+                                                                    \\"startOffset\\": 86,
+                                                                    \\"endOffset\\": 86,
                                                                     \\"startLine\\": 7,
                                                                     \\"endLine\\": 7,
                                                                     \\"startColumn\\": 7,
@@ -1430,8 +1386,8 @@ exports[`if 3 1`] = `
                                                                 \\"Identifier\\": [
                                                                   {
                                                                     \\"image\\": \\"x\\",
-                                                                    \\"startOffset\\": 91,
-                                                                    \\"endOffset\\": 91,
+                                                                    \\"startOffset\\": 90,
+                                                                    \\"endOffset\\": 90,
                                                                     \\"startLine\\": 7,
                                                                     \\"endLine\\": 7,
                                                                     \\"startColumn\\": 11,
@@ -1457,8 +1413,8 @@ exports[`if 3 1`] = `
                                                     \\"AdditionOperator\\": [
                                                       {
                                                         \\"image\\": \\"-\\",
-                                                        \\"startOffset\\": 89,
-                                                        \\"endOffset\\": 89,
+                                                        \\"startOffset\\": 88,
+                                                        \\"endOffset\\": 88,
                                                         \\"startLine\\": 7,
                                                         \\"endLine\\": 7,
                                                         \\"startColumn\\": 9,
@@ -1521,8 +1477,8 @@ exports[`if 3 1`] = `
           \\"RCurly\\": [
             {
               \\"image\\": \\"}\\",
-              \\"startOffset\\": 72,
-              \\"endOffset\\": 72,
+              \\"startOffset\\": 71,
+              \\"endOffset\\": 71,
               \\"startLine\\": 6,
               \\"endLine\\": 6,
               \\"startColumn\\": 5,
@@ -1541,8 +1497,8 @@ exports[`if 3 1`] = `
             },
             {
               \\"image\\": \\"}\\",
-              \\"startOffset\\": 97,
-              \\"endOffset\\": 97,
+              \\"startOffset\\": 96,
+              \\"endOffset\\": 96,
               \\"startLine\\": 8,
               \\"endLine\\": 8,
               \\"startColumn\\": 5,
@@ -1563,8 +1519,8 @@ exports[`if 3 1`] = `
           \\"ElseToken\\": [
             {
               \\"image\\": \\"else\\",
-              \\"startOffset\\": 74,
-              \\"endOffset\\": 77,
+              \\"startOffset\\": 73,
+              \\"endOffset\\": 76,
               \\"startLine\\": 6,
               \\"endLine\\": 6,
               \\"startColumn\\": 7,

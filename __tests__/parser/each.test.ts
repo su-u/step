@@ -3,7 +3,7 @@ import { sourceParseJson } from '@/util/test';
 describe('each', () => {
   test('1', () => {
     const source = `
-    x |> each {
+    x |> each: {
       1 |> console
     }
     `;
@@ -11,7 +11,7 @@ describe('each', () => {
   });
   test('2', () => {
     const source = `
-    1~10 |> each (i) {
+    1~10 |> each: i {
       i |> console
     }
     `;

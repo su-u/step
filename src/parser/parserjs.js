@@ -101,7 +101,7 @@
   ];
 
   const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
-  const eachToken = createToken({ name: 'EachToken', pattern: /each/ });
+  const eachToken = createToken({ name: 'EachToken', pattern: /each:/ });
   const ifToken = createToken({ name: 'IfToken', pattern: /if:/ });
   const elseToken = createToken({ name: 'ElseToken', pattern: /else/ });
   const tildeToken = createToken({ name: 'TildeToken', pattern: /~/ });
@@ -180,9 +180,7 @@
       this.Each = this.RULE('Each', () => {
         this.CONSUME(eachToken);
         this.OPTION(() => {
-          this.CONSUME(LBracket);
           this.CONSUME(Identifier);
-          this.CONSUME(RBracket);
         });
         this.CONSUME(LCurly);
         this.SUBRULE(this.Program);

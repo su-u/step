@@ -15,7 +15,7 @@ describe('each', () => {
   test('1', () => {
     const source = `
 value <- 0
-1 ~ 10 |> each (i) {
+1 ~ 10 |> each: i {
   value <- value + i
 }
 value2 <- value
@@ -34,7 +34,7 @@ value2 <- value
   test('2', () => {
     const source = `
 value <- 0
-1 ~ 10 |> each (i) {
+1 ~ 10 |> each: i {
   value <- value + i
   value2 <- i
 }
@@ -55,8 +55,8 @@ value2 <- value
     const source = `
 value <- 0
 1 ~ 10 -> range
-range |> each (i) {
-  range |> each (j) {
+range |> each: i {
+  range |> each: j {
     value <- value + j
   }
 }

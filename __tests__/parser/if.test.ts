@@ -22,7 +22,7 @@ describe('if', () => {
   test('3', () => {
     const source = `
     if:x {
-      1 ~ 10 |> each (i) {
+      1 ~ 10 |> each: i {
         i |> console
       }
     } else {
