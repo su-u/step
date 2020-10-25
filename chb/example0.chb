@@ -1,6 +1,6 @@
 "hello,world" |> console
-value <- 0
+0 -> total
 1 ~ 10 |> each (i) {
-  value <- value + i
+  total + i -> total
 }
-value |> console
+total |> console
