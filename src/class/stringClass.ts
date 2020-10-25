@@ -24,25 +24,25 @@ export const StringClass: StringObjectMethodType = {
   '<': (obj, param) => {
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: String(obj.image < param.image),
+      image: String(obj.image.length < param.image.length),
     };
   },
   '<=': (obj, param) => {
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: String(obj.image <= param.image),
+      image: String(obj.image.length <= param.image.length),
     };
   },
   '>': (obj, param) => {
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: String(obj.image > param.image),
+      image: String(obj.image.length > param.image.length),
     };
   },
   '>=': (obj, param) => {
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: String(obj.image >= param.image),
+      image: String(obj.image.length >= param.image.length),
     };
   },
   '=': (obj, param) => {
