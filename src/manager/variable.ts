@@ -28,7 +28,15 @@ export class VariableManager {
     }
   }
 
-  public reference(name: string) {
+  public reference(name: string, index: number = null) {
+    if (index !== null) {
+      return this.getArrayElementVariable(name, index);
+    } else {
+      return this.getVariable(name);
+    }
+  }
+
+  private getVariable(name: string) {
     if (this.variables.has(name)) {
       return this.variables.get(name);
     }
@@ -38,6 +46,18 @@ export class VariableManager {
     }
     return value;
   }
+
+  private getArrayElementVariable(name: string, index: number) {
+    if (this.variables.has(name)) {
+      return this.variables.get(name).image[index];
+    }
+    const value = (this._parent !== null && this._parent.reference(name, index)) || null;
+    if (value === null) {
+      throw new Error(`配列変数が参照できませんでした。${name}, ${index}`);
+    }
+    return value;
+  }
+
 
   public set returnValue(value: any) {
     this._returnValue = value;
