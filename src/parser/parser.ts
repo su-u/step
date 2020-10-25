@@ -22,12 +22,24 @@ const BoolLiteral = createToken({
   name: 'BoolLiteral',
   pattern: /true|false/,
 });
+const IdentifierSuffix = createToken({
+  name: 'IdentifierSuffix',
+  pattern: /[a-zA-z][0-9a-zA-Z]*\[/,
+});
 const Identifier = createToken({
   name: 'Identifier',
   pattern: /[a-zA-z][0-9a-zA-Z]*/,
 });
 
-const LiteralTokens = [Separate, StringLiteral, NumberLiteral, WhiteSpace, BoolLiteral, Identifier];
+const LiteralTokens = [
+  Separate,
+  StringLiteral,
+  NumberLiteral,
+  WhiteSpace,
+  BoolLiteral,
+  IdentifierSuffix,
+  Identifier,
+];
 
 const LBracket = createToken({ name: 'LBrackets', pattern: /\(/, label: '(' });
 const RBracket = createToken({ name: 'RBrackets', pattern: /\)/, label: ')' });
@@ -311,19 +323,29 @@ export class ChiboParser extends CstParser {
     ]);
   });
 
-  private ArrayStatement = this.RULE('ArrayStatement', () => {
-    this.CONSUME(LSquare);
-    this.SUBRULE(this.ArrayElement, { LABEL: 'arrayElement' });
+  private ArrayElement = this.RULE('ArrayElement', () => {
+    this.CONSUME(IdentifierSuffix);
+    this.SUBRULE(this.ArrayIndex, { LABEL: 'index' });
     this.CONSUME(RSquare);
   });
 
-  private ArrayElement = this.RULE('ArrayElement', () => {
+  private ArrayIndex = this.RULE('ArrayIndex', () => {
+    this.OR([
+      { ALT: () => this.CONSUME(NumberLiteral) },
+      { ALT: () => this.CONSUME(Identifier) },
+      { ALT: () => this.SUBRULE(this.ArrayElement) },
+    ]);
+  });
+
+  private ArrayStatement = this.RULE('ArrayStatement', () => {
+    this.CONSUME(LSquare);
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
         this.SUBRULE(this.Factor);
       },
     });
+    this.CONSUME(RSquare);
   });
 
   private ParenthesisExpression = this.RULE('ParenthesisExpression', () => {

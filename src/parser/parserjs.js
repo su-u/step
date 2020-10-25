@@ -25,6 +25,10 @@
     name: 'BoolLiteral',
     pattern: /true|false/,
   });
+  const IdentifierSuffix = createToken({
+    name: 'IdentifierSuffix',
+    pattern: /[a-zA-z][0-9a-zA-Z]*\[/,
+  });
   const Identifier = createToken({
     name: 'Identifier',
     pattern: /[a-zA-z][0-9a-zA-Z]*/,
@@ -36,6 +40,7 @@
     NumberLiteral,
     WhiteSpace,
     BoolLiteral,
+    IdentifierSuffix,
     Identifier,
   ];
 
@@ -318,24 +323,35 @@
           { ALT: () => this.CONSUME(StringLiteral) },
           { ALT: () => this.CONSUME(BoolLiteral) },
           { ALT: () => this.SUBRULE(this.ParenthesisExpression) },
+          { ALT: () => this.SUBRULE(this.ArrayElement) },
           { ALT: () => this.CONSUME(Identifier) },
           { ALT: () => this.SUBRULE(this.ArrayStatement) },
         ]);
       });
 
-      this.ArrayStatement = this.RULE('ArrayStatement', () => {
-        this.CONSUME(LSquare);
-        this.SUBRULE(this.ArrayElement, { LABEL: 'arrayElement' });
+      this.ArrayElement = this.RULE('ArrayElement', () => {
+        this.CONSUME(IdentifierSuffix);
+        this.SUBRULE(this.ArrayIndex, { LABEL: 'index' });
         this.CONSUME(RSquare);
       });
 
-      this.ArrayElement = this.RULE('ArrayElement', () => {
+      this.ArrayIndex = this.RULE('ArrayIndex', () => {
+        this.OR([
+          { ALT: () => this.CONSUME(NumberLiteral) },
+          { ALT: () => this.CONSUME(Identifier) },
+          { ALT: () => this.SUBRULE(this.ArrayElement) },
+        ]);
+      });
+
+      this.ArrayStatement = this.RULE('ArrayStatement', () => {
+        this.CONSUME(LSquare);
         this.MANY_SEP({
           SEP: Comma,
           DEF: () => {
             this.SUBRULE(this.Factor);
           },
         });
+        this.CONSUME(RSquare);
       });
 
       this.ParenthesisExpression = this.RULE('ParenthesisExpression', () => {
