@@ -4,17 +4,16 @@ import { LiteralTokens } from '../tokens';
 type NumberLiteralType = LiteralType<number>;
 
 export type NumberObjectMethodType = {
-  '+': <T extends number>(obj: NumberLiteralType, param: any) => any;
-  '*': <T extends number>(obj: NumberLiteralType, param: any) => any;
-  '-': <T extends number>(obj: NumberLiteralType, param: any) => any;
-  '/': <T extends number>(obj: NumberLiteralType, param: any) => any;
-  '<': <T extends number>(obj: NumberLiteralType, param: any) => any;
-  '<=': <T extends number>(obj: NumberLiteralType, param: any) => any;
-  '>': <T extends number>(obj: NumberLiteralType, param: any) => any;
-  '>=': <T extends number>(obj: NumberLiteralType, param: any) => any;
-  '~': <T extends number>(obj: NumberLiteralType, param: any) => any;
-  '=': <T extends number>(obj: NumberLiteralType, param: any) => any;
-  to_s: <T extends number>(obj: NumberLiteralType, param: any) => any;
+  '+': (obj: NumberLiteralType, param: any) => any;
+  '*': (obj: NumberLiteralType, param: any) => any;
+  '-': (obj: NumberLiteralType, param: any) => any;
+  '/': (obj: NumberLiteralType, param: any) => any;
+  '<': (obj: NumberLiteralType, param: any) => any;
+  '<=': (obj: NumberLiteralType, param: any) => any;
+  '>': (obj: NumberLiteralType, param: any) => any;
+  '>=': (obj: NumberLiteralType, param: any) => any;
+  '~': (obj: NumberLiteralType, param: any) => any;
+  '=': (obj: NumberLiteralType, param: any) => any;
 };
 
 export const NumberClass: NumberObjectMethodType = {
@@ -84,12 +83,6 @@ export const NumberClass: NumberObjectMethodType = {
     return {
       name: LiteralTokens.BooleanLiteral,
       image: String(obj.image == param.image),
-    };
-  },
-  to_s: (obj, param) => {
-    return {
-      name: LiteralTokens.StringLiteral,
-      image: String(obj.image),
     };
   },
 };
