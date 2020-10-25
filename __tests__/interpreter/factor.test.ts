@@ -265,4 +265,22 @@ describe('factor', () => {
     });
     expect(result).toStrictEqual(correct);
   });
+
+  test('8', () => {
+    const ast = {
+      name: 'Factor',
+      children: {
+        TestLiteral: [
+          {
+            image: 'true',
+          },
+        ],
+      },
+    };
+    const result = factor({ ast, manager, execObject });
+    expect(result).toStrictEqual({
+      name: LiteralTokens.DebugLiteral,
+      image: null,
+    });
+  });
 });
