@@ -12,7 +12,7 @@ export const logicExpression = ({ ast, manager, execObject }: IInterpreterRules)
       return ast.children[rule].map((x) => x.image);
     }
   });
-  console.log(literals, operators);
+  // console.log(literals, operators);
   return literals.reduce((a, c, i) => {
     const name = c.name;
     return Classes[name][operators[i - 1]](c, a);

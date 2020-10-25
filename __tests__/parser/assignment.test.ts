@@ -60,4 +60,25 @@ describe('代入', () => {
       expect(sourceParseJson(source)).toMatchSnapshot();
     });
   });
+
+  test('1', () => {
+    const source = `
+      v <- 1 > 10
+      `;
+    expect(sourceParseJson(source)).toMatchSnapshot();
+  });
+
+  test('2', () => {
+    const source = `
+      v <- 1 = 1
+      `;
+    expect(sourceParseJson(source)).toMatchSnapshot();
+  });
+
+  test('3', () => {
+    const source = `
+      v <- 1 = 1 and 1 > 10
+      `;
+    expect(sourceParseJson(source)).toMatchSnapshot();
+  });
 });

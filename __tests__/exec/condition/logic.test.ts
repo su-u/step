@@ -55,4 +55,37 @@ x <- "test" = "test" and 1 = 12
       image: 'false',
     });
   });
+
+  test('5', () => {
+    const source = `
+x <- ("test" = "test" and 1 = 12) or true 
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('x')).toStrictEqual({
+      name: LiteralTokens.BooleanLiteral,
+      image: 'true',
+    });
+  });
+
+  test('6', () => {
+    const source = `
+x <- "test" = "test" or 1 = 12 or 1 > 2
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('x')).toStrictEqual({
+      name: LiteralTokens.BooleanLiteral,
+      image: 'true',
+    });
+  });
+
+  test('7', () => {
+    const source = `
+x <- ("test" = "test" or 1 = 12 or 1 > 2 or 12 < 50) and 8 > 1 
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('x')).toStrictEqual({
+      name: LiteralTokens.BooleanLiteral,
+      image: 'true',
+    });
+  });
 });
