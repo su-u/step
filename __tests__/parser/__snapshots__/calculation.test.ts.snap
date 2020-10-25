@@ -95,7 +95,7 @@ exports[`演算 乗算 1`] = `
                                                   \\"endLine\\": 2,
                                                   \\"startColumn\\": 5,
                                                   \\"endColumn\\": 5,
-                                                  \\"tokenTypeIdx\\": 21,
+                                                  \\"tokenTypeIdx\\": 22,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Multi\\",
                                                     \\"PATTERN\\": {},
@@ -103,20 +103,20 @@ exports[`演算 乗算 1`] = `
                                                       {
                                                         \\"name\\": \\"MultiplicationOperator\\",
                                                         \\"PATTERN\\": {},
-                                                        \\"tokenTypeIdx\\": 20,
+                                                        \\"tokenTypeIdx\\": 21,
                                                         \\"CATEGORIES\\": [],
                                                         \\"categoryMatches\\": [
-                                                          21,
-                                                          22
+                                                          22,
+                                                          23
                                                         ],
                                                         \\"categoryMatchesMap\\": {
-                                                          \\"21\\": true,
-                                                          \\"22\\": true
+                                                          \\"22\\": true,
+                                                          \\"23\\": true
                                                         },
                                                         \\"isParent\\": true
                                                       }
                                                     ],
-                                                    \\"tokenTypeIdx\\": 21,
+                                                    \\"tokenTypeIdx\\": 22,
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
                                                     \\"isParent\\": false
@@ -259,7 +259,7 @@ exports[`演算 加算 1`] = `
                                             \\"endLine\\": 2,
                                             \\"startColumn\\": 7,
                                             \\"endColumn\\": 7,
-                                            \\"tokenTypeIdx\\": 18,
+                                            \\"tokenTypeIdx\\": 19,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Plus\\",
                                               \\"PATTERN\\": {},
@@ -267,20 +267,20 @@ exports[`演算 加算 1`] = `
                                                 {
                                                   \\"name\\": \\"AdditionOperator\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 17,
+                                                  \\"tokenTypeIdx\\": 18,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    18,
-                                                    19
+                                                    19,
+                                                    20
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"18\\": true,
-                                                    \\"19\\": true
+                                                    \\"19\\": true,
+                                                    \\"20\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 18,
+                                              \\"tokenTypeIdx\\": 19,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -420,7 +420,7 @@ exports[`演算 減算 1`] = `
                                             \\"endLine\\": 2,
                                             \\"startColumn\\": 5,
                                             \\"endColumn\\": 5,
-                                            \\"tokenTypeIdx\\": 19,
+                                            \\"tokenTypeIdx\\": 20,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Minus\\",
                                               \\"PATTERN\\": {},
@@ -428,20 +428,20 @@ exports[`演算 減算 1`] = `
                                                 {
                                                   \\"name\\": \\"AdditionOperator\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 17,
+                                                  \\"tokenTypeIdx\\": 18,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    18,
-                                                    19
+                                                    19,
+                                                    20
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"18\\": true,
-                                                    \\"19\\": true
+                                                    \\"19\\": true,
+                                                    \\"20\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 19,
+                                              \\"tokenTypeIdx\\": 20,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -647,7 +647,7 @@ exports[`演算 複雑 1 1`] = `
                                             \\"endLine\\": 2,
                                             \\"startColumn\\": 9,
                                             \\"endColumn\\": 9,
-                                            \\"tokenTypeIdx\\": 18,
+                                            \\"tokenTypeIdx\\": 19,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Plus\\",
                                               \\"PATTERN\\": {},
@@ -655,20 +655,20 @@ exports[`演算 複雑 1 1`] = `
                                                 {
                                                   \\"name\\": \\"AdditionOperator\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 17,
+                                                  \\"tokenTypeIdx\\": 18,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    18,
-                                                    19
+                                                    19,
+                                                    20
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"18\\": true,
-                                                    \\"19\\": true
+                                                    \\"19\\": true,
+                                                    \\"20\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 18,
+                                              \\"tokenTypeIdx\\": 19,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -682,7 +682,7 @@ exports[`演算 複雑 1 1`] = `
                                             \\"endLine\\": 2,
                                             \\"startColumn\\": 13,
                                             \\"endColumn\\": 13,
-                                            \\"tokenTypeIdx\\": 18,
+                                            \\"tokenTypeIdx\\": 19,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Plus\\",
                                               \\"PATTERN\\": {},
@@ -690,20 +690,20 @@ exports[`演算 複雑 1 1`] = `
                                                 {
                                                   \\"name\\": \\"AdditionOperator\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 17,
+                                                  \\"tokenTypeIdx\\": 18,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    18,
-                                                    19
+                                                    19,
+                                                    20
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"18\\": true,
-                                                    \\"19\\": true
+                                                    \\"19\\": true,
+                                                    \\"20\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 18,
+                                              \\"tokenTypeIdx\\": 19,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -717,7 +717,7 @@ exports[`演算 複雑 1 1`] = `
                                             \\"endLine\\": 2,
                                             \\"startColumn\\": 17,
                                             \\"endColumn\\": 17,
-                                            \\"tokenTypeIdx\\": 18,
+                                            \\"tokenTypeIdx\\": 19,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Plus\\",
                                               \\"PATTERN\\": {},
@@ -725,20 +725,20 @@ exports[`演算 複雑 1 1`] = `
                                                 {
                                                   \\"name\\": \\"AdditionOperator\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 17,
+                                                  \\"tokenTypeIdx\\": 18,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    18,
-                                                    19
+                                                    19,
+                                                    20
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"18\\": true,
-                                                    \\"19\\": true
+                                                    \\"19\\": true,
+                                                    \\"20\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 18,
+                                              \\"tokenTypeIdx\\": 19,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -822,11 +822,11 @@ exports[`演算 複雑 2 1`] = `
                                                               \\"endLine\\": 2,
                                                               \\"startColumn\\": 7,
                                                               \\"endColumn\\": 7,
-                                                              \\"tokenTypeIdx\\": 9,
+                                                              \\"tokenTypeIdx\\": 10,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"LBrackets\\",
                                                                 \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 9,
+                                                                \\"tokenTypeIdx\\": 10,
                                                                 \\"CATEGORIES\\": [],
                                                                 \\"categoryMatches\\": [],
                                                                 \\"categoryMatchesMap\\": {},
@@ -920,7 +920,7 @@ exports[`演算 複雑 2 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 10,
                                                                           \\"endColumn\\": 10,
-                                                                          \\"tokenTypeIdx\\": 18,
+                                                                          \\"tokenTypeIdx\\": 19,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"Plus\\",
                                                                             \\"PATTERN\\": {},
@@ -928,20 +928,20 @@ exports[`演算 複雑 2 1`] = `
                                                                               {
                                                                                 \\"name\\": \\"AdditionOperator\\",
                                                                                 \\"PATTERN\\": {},
-                                                                                \\"tokenTypeIdx\\": 17,
+                                                                                \\"tokenTypeIdx\\": 18,
                                                                                 \\"CATEGORIES\\": [],
                                                                                 \\"categoryMatches\\": [
-                                                                                  18,
-                                                                                  19
+                                                                                  19,
+                                                                                  20
                                                                                 ],
                                                                                 \\"categoryMatchesMap\\": {
-                                                                                  \\"18\\": true,
-                                                                                  \\"19\\": true
+                                                                                  \\"19\\": true,
+                                                                                  \\"20\\": true
                                                                                 },
                                                                                 \\"isParent\\": true
                                                                               }
                                                                             ],
-                                                                            \\"tokenTypeIdx\\": 18,
+                                                                            \\"tokenTypeIdx\\": 19,
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
                                                                             \\"isParent\\": false
@@ -963,11 +963,11 @@ exports[`演算 複雑 2 1`] = `
                                                               \\"endLine\\": 2,
                                                               \\"startColumn\\": 13,
                                                               \\"endColumn\\": 13,
-                                                              \\"tokenTypeIdx\\": 10,
+                                                              \\"tokenTypeIdx\\": 11,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"RBrackets\\",
                                                                 \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 10,
+                                                                \\"tokenTypeIdx\\": 11,
                                                                 \\"CATEGORIES\\": [],
                                                                 \\"categoryMatches\\": [],
                                                                 \\"categoryMatchesMap\\": {},
@@ -1017,7 +1017,7 @@ exports[`演算 複雑 2 1`] = `
                                                   \\"endLine\\": 2,
                                                   \\"startColumn\\": 15,
                                                   \\"endColumn\\": 15,
-                                                  \\"tokenTypeIdx\\": 21,
+                                                  \\"tokenTypeIdx\\": 22,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Multi\\",
                                                     \\"PATTERN\\": {},
@@ -1025,20 +1025,20 @@ exports[`演算 複雑 2 1`] = `
                                                       {
                                                         \\"name\\": \\"MultiplicationOperator\\",
                                                         \\"PATTERN\\": {},
-                                                        \\"tokenTypeIdx\\": 20,
+                                                        \\"tokenTypeIdx\\": 21,
                                                         \\"CATEGORIES\\": [],
                                                         \\"categoryMatches\\": [
-                                                          21,
-                                                          22
+                                                          22,
+                                                          23
                                                         ],
                                                         \\"categoryMatchesMap\\": {
-                                                          \\"21\\": true,
-                                                          \\"22\\": true
+                                                          \\"22\\": true,
+                                                          \\"23\\": true
                                                         },
                                                         \\"isParent\\": true
                                                       }
                                                     ],
-                                                    \\"tokenTypeIdx\\": 21,
+                                                    \\"tokenTypeIdx\\": 22,
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
                                                     \\"isParent\\": false
@@ -1125,11 +1125,11 @@ exports[`演算 複雑 3 1`] = `
                                                               \\"endLine\\": 2,
                                                               \\"startColumn\\": 7,
                                                               \\"endColumn\\": 7,
-                                                              \\"tokenTypeIdx\\": 9,
+                                                              \\"tokenTypeIdx\\": 10,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"LBrackets\\",
                                                                 \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 9,
+                                                                \\"tokenTypeIdx\\": 10,
                                                                 \\"CATEGORIES\\": [],
                                                                 \\"categoryMatches\\": [],
                                                                 \\"categoryMatchesMap\\": {},
@@ -1223,7 +1223,7 @@ exports[`演算 複雑 3 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 10,
                                                                           \\"endColumn\\": 10,
-                                                                          \\"tokenTypeIdx\\": 18,
+                                                                          \\"tokenTypeIdx\\": 19,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"Plus\\",
                                                                             \\"PATTERN\\": {},
@@ -1231,20 +1231,20 @@ exports[`演算 複雑 3 1`] = `
                                                                               {
                                                                                 \\"name\\": \\"AdditionOperator\\",
                                                                                 \\"PATTERN\\": {},
-                                                                                \\"tokenTypeIdx\\": 17,
+                                                                                \\"tokenTypeIdx\\": 18,
                                                                                 \\"CATEGORIES\\": [],
                                                                                 \\"categoryMatches\\": [
-                                                                                  18,
-                                                                                  19
+                                                                                  19,
+                                                                                  20
                                                                                 ],
                                                                                 \\"categoryMatchesMap\\": {
-                                                                                  \\"18\\": true,
-                                                                                  \\"19\\": true
+                                                                                  \\"19\\": true,
+                                                                                  \\"20\\": true
                                                                                 },
                                                                                 \\"isParent\\": true
                                                                               }
                                                                             ],
-                                                                            \\"tokenTypeIdx\\": 18,
+                                                                            \\"tokenTypeIdx\\": 19,
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
                                                                             \\"isParent\\": false
@@ -1266,11 +1266,11 @@ exports[`演算 複雑 3 1`] = `
                                                               \\"endLine\\": 2,
                                                               \\"startColumn\\": 13,
                                                               \\"endColumn\\": 13,
-                                                              \\"tokenTypeIdx\\": 10,
+                                                              \\"tokenTypeIdx\\": 11,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"RBrackets\\",
                                                                 \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 10,
+                                                                \\"tokenTypeIdx\\": 11,
                                                                 \\"CATEGORIES\\": [],
                                                                 \\"categoryMatches\\": [],
                                                                 \\"categoryMatchesMap\\": {},
@@ -1300,11 +1300,11 @@ exports[`演算 複雑 3 1`] = `
                                                               \\"endLine\\": 2,
                                                               \\"startColumn\\": 17,
                                                               \\"endColumn\\": 17,
-                                                              \\"tokenTypeIdx\\": 9,
+                                                              \\"tokenTypeIdx\\": 10,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"LBrackets\\",
                                                                 \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 9,
+                                                                \\"tokenTypeIdx\\": 10,
                                                                 \\"CATEGORIES\\": [],
                                                                 \\"categoryMatches\\": [],
                                                                 \\"categoryMatchesMap\\": {},
@@ -1388,7 +1388,7 @@ exports[`演算 複雑 3 1`] = `
                                                                                 \\"endLine\\": 2,
                                                                                 \\"startColumn\\": 23,
                                                                                 \\"endColumn\\": 23,
-                                                                                \\"tokenTypeIdx\\": 21,
+                                                                                \\"tokenTypeIdx\\": 22,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"Multi\\",
                                                                                   \\"PATTERN\\": {},
@@ -1396,20 +1396,20 @@ exports[`演算 複雑 3 1`] = `
                                                                                     {
                                                                                       \\"name\\": \\"MultiplicationOperator\\",
                                                                                       \\"PATTERN\\": {},
-                                                                                      \\"tokenTypeIdx\\": 20,
+                                                                                      \\"tokenTypeIdx\\": 21,
                                                                                       \\"CATEGORIES\\": [],
                                                                                       \\"categoryMatches\\": [
-                                                                                        21,
-                                                                                        22
+                                                                                        22,
+                                                                                        23
                                                                                       ],
                                                                                       \\"categoryMatchesMap\\": {
-                                                                                        \\"21\\": true,
-                                                                                        \\"22\\": true
+                                                                                        \\"22\\": true,
+                                                                                        \\"23\\": true
                                                                                       },
                                                                                       \\"isParent\\": true
                                                                                     }
                                                                                   ],
-                                                                                  \\"tokenTypeIdx\\": 21,
+                                                                                  \\"tokenTypeIdx\\": 22,
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
                                                                                   \\"isParent\\": false
@@ -1434,11 +1434,11 @@ exports[`演算 複雑 3 1`] = `
                                                               \\"endLine\\": 2,
                                                               \\"startColumn\\": 27,
                                                               \\"endColumn\\": 27,
-                                                              \\"tokenTypeIdx\\": 10,
+                                                              \\"tokenTypeIdx\\": 11,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"RBrackets\\",
                                                                 \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 10,
+                                                                \\"tokenTypeIdx\\": 11,
                                                                 \\"CATEGORIES\\": [],
                                                                 \\"categoryMatches\\": [],
                                                                 \\"categoryMatchesMap\\": {},
@@ -1462,7 +1462,7 @@ exports[`演算 複雑 3 1`] = `
                                                   \\"endLine\\": 2,
                                                   \\"startColumn\\": 15,
                                                   \\"endColumn\\": 15,
-                                                  \\"tokenTypeIdx\\": 22,
+                                                  \\"tokenTypeIdx\\": 23,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Div\\",
                                                     \\"PATTERN\\": {},
@@ -1470,20 +1470,20 @@ exports[`演算 複雑 3 1`] = `
                                                       {
                                                         \\"name\\": \\"MultiplicationOperator\\",
                                                         \\"PATTERN\\": {},
-                                                        \\"tokenTypeIdx\\": 20,
+                                                        \\"tokenTypeIdx\\": 21,
                                                         \\"CATEGORIES\\": [],
                                                         \\"categoryMatches\\": [
-                                                          21,
-                                                          22
+                                                          22,
+                                                          23
                                                         ],
                                                         \\"categoryMatchesMap\\": {
-                                                          \\"21\\": true,
-                                                          \\"22\\": true
+                                                          \\"22\\": true,
+                                                          \\"23\\": true
                                                         },
                                                         \\"isParent\\": true
                                                       }
                                                     ],
-                                                    \\"tokenTypeIdx\\": 22,
+                                                    \\"tokenTypeIdx\\": 23,
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
                                                     \\"isParent\\": false
@@ -1570,11 +1570,11 @@ exports[`演算 複雑 4 1`] = `
                                                               \\"endLine\\": 2,
                                                               \\"startColumn\\": 7,
                                                               \\"endColumn\\": 7,
-                                                              \\"tokenTypeIdx\\": 9,
+                                                              \\"tokenTypeIdx\\": 10,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"LBrackets\\",
                                                                 \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 9,
+                                                                \\"tokenTypeIdx\\": 10,
                                                                 \\"CATEGORIES\\": [],
                                                                 \\"categoryMatches\\": [],
                                                                 \\"categoryMatchesMap\\": {},
@@ -1668,7 +1668,7 @@ exports[`演算 複雑 4 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 10,
                                                                           \\"endColumn\\": 10,
-                                                                          \\"tokenTypeIdx\\": 18,
+                                                                          \\"tokenTypeIdx\\": 19,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"Plus\\",
                                                                             \\"PATTERN\\": {},
@@ -1676,20 +1676,20 @@ exports[`演算 複雑 4 1`] = `
                                                                               {
                                                                                 \\"name\\": \\"AdditionOperator\\",
                                                                                 \\"PATTERN\\": {},
-                                                                                \\"tokenTypeIdx\\": 17,
+                                                                                \\"tokenTypeIdx\\": 18,
                                                                                 \\"CATEGORIES\\": [],
                                                                                 \\"categoryMatches\\": [
-                                                                                  18,
-                                                                                  19
+                                                                                  19,
+                                                                                  20
                                                                                 ],
                                                                                 \\"categoryMatchesMap\\": {
-                                                                                  \\"18\\": true,
-                                                                                  \\"19\\": true
+                                                                                  \\"19\\": true,
+                                                                                  \\"20\\": true
                                                                                 },
                                                                                 \\"isParent\\": true
                                                                               }
                                                                             ],
-                                                                            \\"tokenTypeIdx\\": 18,
+                                                                            \\"tokenTypeIdx\\": 19,
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
                                                                             \\"isParent\\": false
@@ -1711,11 +1711,11 @@ exports[`演算 複雑 4 1`] = `
                                                               \\"endLine\\": 2,
                                                               \\"startColumn\\": 13,
                                                               \\"endColumn\\": 13,
-                                                              \\"tokenTypeIdx\\": 10,
+                                                              \\"tokenTypeIdx\\": 11,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"RBrackets\\",
                                                                 \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 10,
+                                                                \\"tokenTypeIdx\\": 11,
                                                                 \\"CATEGORIES\\": [],
                                                                 \\"categoryMatches\\": [],
                                                                 \\"categoryMatchesMap\\": {},
@@ -1745,11 +1745,11 @@ exports[`演算 複雑 4 1`] = `
                                                               \\"endLine\\": 2,
                                                               \\"startColumn\\": 17,
                                                               \\"endColumn\\": 17,
-                                                              \\"tokenTypeIdx\\": 9,
+                                                              \\"tokenTypeIdx\\": 10,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"LBrackets\\",
                                                                 \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 9,
+                                                                \\"tokenTypeIdx\\": 10,
                                                                 \\"CATEGORIES\\": [],
                                                                 \\"categoryMatches\\": [],
                                                                 \\"categoryMatchesMap\\": {},
@@ -1813,11 +1813,11 @@ exports[`演算 複雑 4 1`] = `
                                                                                             \\"endLine\\": 2,
                                                                                             \\"startColumn\\": 25,
                                                                                             \\"endColumn\\": 25,
-                                                                                            \\"tokenTypeIdx\\": 9,
+                                                                                            \\"tokenTypeIdx\\": 10,
                                                                                             \\"tokenType\\": {
                                                                                               \\"name\\": \\"LBrackets\\",
                                                                                               \\"PATTERN\\": {},
-                                                                                              \\"tokenTypeIdx\\": 9,
+                                                                                              \\"tokenTypeIdx\\": 10,
                                                                                               \\"CATEGORIES\\": [],
                                                                                               \\"categoryMatches\\": [],
                                                                                               \\"categoryMatchesMap\\": {},
@@ -1911,7 +1911,7 @@ exports[`演算 複雑 4 1`] = `
                                                                                                         \\"endLine\\": 2,
                                                                                                         \\"startColumn\\": 29,
                                                                                                         \\"endColumn\\": 29,
-                                                                                                        \\"tokenTypeIdx\\": 19,
+                                                                                                        \\"tokenTypeIdx\\": 20,
                                                                                                         \\"tokenType\\": {
                                                                                                           \\"name\\": \\"Minus\\",
                                                                                                           \\"PATTERN\\": {},
@@ -1919,20 +1919,20 @@ exports[`演算 複雑 4 1`] = `
                                                                                                             {
                                                                                                               \\"name\\": \\"AdditionOperator\\",
                                                                                                               \\"PATTERN\\": {},
-                                                                                                              \\"tokenTypeIdx\\": 17,
+                                                                                                              \\"tokenTypeIdx\\": 18,
                                                                                                               \\"CATEGORIES\\": [],
                                                                                                               \\"categoryMatches\\": [
-                                                                                                                18,
-                                                                                                                19
+                                                                                                                19,
+                                                                                                                20
                                                                                                               ],
                                                                                                               \\"categoryMatchesMap\\": {
-                                                                                                                \\"18\\": true,
-                                                                                                                \\"19\\": true
+                                                                                                                \\"19\\": true,
+                                                                                                                \\"20\\": true
                                                                                                               },
                                                                                                               \\"isParent\\": true
                                                                                                             }
                                                                                                           ],
-                                                                                                          \\"tokenTypeIdx\\": 19,
+                                                                                                          \\"tokenTypeIdx\\": 20,
                                                                                                           \\"categoryMatches\\": [],
                                                                                                           \\"categoryMatchesMap\\": {},
                                                                                                           \\"isParent\\": false
@@ -1954,11 +1954,11 @@ exports[`演算 複雑 4 1`] = `
                                                                                             \\"endLine\\": 2,
                                                                                             \\"startColumn\\": 33,
                                                                                             \\"endColumn\\": 33,
-                                                                                            \\"tokenTypeIdx\\": 10,
+                                                                                            \\"tokenTypeIdx\\": 11,
                                                                                             \\"tokenType\\": {
                                                                                               \\"name\\": \\"RBrackets\\",
                                                                                               \\"PATTERN\\": {},
-                                                                                              \\"tokenTypeIdx\\": 10,
+                                                                                              \\"tokenTypeIdx\\": 11,
                                                                                               \\"CATEGORIES\\": [],
                                                                                               \\"categoryMatches\\": [],
                                                                                               \\"categoryMatchesMap\\": {},
@@ -1982,7 +1982,7 @@ exports[`演算 複雑 4 1`] = `
                                                                                 \\"endLine\\": 2,
                                                                                 \\"startColumn\\": 23,
                                                                                 \\"endColumn\\": 23,
-                                                                                \\"tokenTypeIdx\\": 21,
+                                                                                \\"tokenTypeIdx\\": 22,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"Multi\\",
                                                                                   \\"PATTERN\\": {},
@@ -1990,20 +1990,20 @@ exports[`演算 複雑 4 1`] = `
                                                                                     {
                                                                                       \\"name\\": \\"MultiplicationOperator\\",
                                                                                       \\"PATTERN\\": {},
-                                                                                      \\"tokenTypeIdx\\": 20,
+                                                                                      \\"tokenTypeIdx\\": 21,
                                                                                       \\"CATEGORIES\\": [],
                                                                                       \\"categoryMatches\\": [
-                                                                                        21,
-                                                                                        22
+                                                                                        22,
+                                                                                        23
                                                                                       ],
                                                                                       \\"categoryMatchesMap\\": {
-                                                                                        \\"21\\": true,
-                                                                                        \\"22\\": true
+                                                                                        \\"22\\": true,
+                                                                                        \\"23\\": true
                                                                                       },
                                                                                       \\"isParent\\": true
                                                                                     }
                                                                                   ],
-                                                                                  \\"tokenTypeIdx\\": 21,
+                                                                                  \\"tokenTypeIdx\\": 22,
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
                                                                                   \\"isParent\\": false
@@ -2028,11 +2028,11 @@ exports[`演算 複雑 4 1`] = `
                                                               \\"endLine\\": 2,
                                                               \\"startColumn\\": 34,
                                                               \\"endColumn\\": 34,
-                                                              \\"tokenTypeIdx\\": 10,
+                                                              \\"tokenTypeIdx\\": 11,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"RBrackets\\",
                                                                 \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 10,
+                                                                \\"tokenTypeIdx\\": 11,
                                                                 \\"CATEGORIES\\": [],
                                                                 \\"categoryMatches\\": [],
                                                                 \\"categoryMatchesMap\\": {},
@@ -2056,7 +2056,7 @@ exports[`演算 複雑 4 1`] = `
                                                   \\"endLine\\": 2,
                                                   \\"startColumn\\": 15,
                                                   \\"endColumn\\": 15,
-                                                  \\"tokenTypeIdx\\": 22,
+                                                  \\"tokenTypeIdx\\": 23,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Div\\",
                                                     \\"PATTERN\\": {},
@@ -2064,20 +2064,20 @@ exports[`演算 複雑 4 1`] = `
                                                       {
                                                         \\"name\\": \\"MultiplicationOperator\\",
                                                         \\"PATTERN\\": {},
-                                                        \\"tokenTypeIdx\\": 20,
+                                                        \\"tokenTypeIdx\\": 21,
                                                         \\"CATEGORIES\\": [],
                                                         \\"categoryMatches\\": [
-                                                          21,
-                                                          22
+                                                          22,
+                                                          23
                                                         ],
                                                         \\"categoryMatchesMap\\": {
-                                                          \\"21\\": true,
-                                                          \\"22\\": true
+                                                          \\"22\\": true,
+                                                          \\"23\\": true
                                                         },
                                                         \\"isParent\\": true
                                                       }
                                                     ],
-                                                    \\"tokenTypeIdx\\": 22,
+                                                    \\"tokenTypeIdx\\": 23,
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
                                                     \\"isParent\\": false
@@ -2210,7 +2210,7 @@ exports[`演算 除算 1`] = `
                                                   \\"endLine\\": 2,
                                                   \\"startColumn\\": 7,
                                                   \\"endColumn\\": 7,
-                                                  \\"tokenTypeIdx\\": 22,
+                                                  \\"tokenTypeIdx\\": 23,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Div\\",
                                                     \\"PATTERN\\": {},
@@ -2218,20 +2218,20 @@ exports[`演算 除算 1`] = `
                                                       {
                                                         \\"name\\": \\"MultiplicationOperator\\",
                                                         \\"PATTERN\\": {},
-                                                        \\"tokenTypeIdx\\": 20,
+                                                        \\"tokenTypeIdx\\": 21,
                                                         \\"CATEGORIES\\": [],
                                                         \\"categoryMatches\\": [
-                                                          21,
-                                                          22
+                                                          22,
+                                                          23
                                                         ],
                                                         \\"categoryMatchesMap\\": {
-                                                          \\"21\\": true,
-                                                          \\"22\\": true
+                                                          \\"22\\": true,
+                                                          \\"23\\": true
                                                         },
                                                         \\"isParent\\": true
                                                       }
                                                     ],
-                                                    \\"tokenTypeIdx\\": 22,
+                                                    \\"tokenTypeIdx\\": 23,
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
                                                     \\"isParent\\": false

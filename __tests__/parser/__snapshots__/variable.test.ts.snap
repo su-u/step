@@ -21,11 +21,11 @@ exports[`変数 式 if 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 7,
                     \\"endColumn\\": 11,
-                    \\"tokenTypeIdx\\": 8,
+                    \\"tokenTypeIdx\\": 9,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 8,
+                      \\"tokenTypeIdx\\": 9,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -42,11 +42,11 @@ exports[`変数 式 if 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 13,
                     \\"endColumn\\": 14,
-                    \\"tokenTypeIdx\\": 37,
+                    \\"tokenTypeIdx\\": 38,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 37,
+                      \\"tokenTypeIdx\\": 38,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -147,7 +147,7 @@ exports[`変数 式 if 1`] = `
                                             \\"endLine\\": 2,
                                             \\"startColumn\\": 18,
                                             \\"endColumn\\": 18,
-                                            \\"tokenTypeIdx\\": 18,
+                                            \\"tokenTypeIdx\\": 19,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Plus\\",
                                               \\"PATTERN\\": {},
@@ -155,20 +155,20 @@ exports[`変数 式 if 1`] = `
                                                 {
                                                   \\"name\\": \\"AdditionOperator\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 17,
+                                                  \\"tokenTypeIdx\\": 18,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    18,
-                                                    19
+                                                    19,
+                                                    20
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"18\\": true,
-                                                    \\"19\\": true
+                                                    \\"19\\": true,
+                                                    \\"20\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 18,
+                                              \\"tokenTypeIdx\\": 19,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -212,11 +212,11 @@ exports[`変数 式 if 1`] = `
               \\"endLine\\": 3,
               \\"startColumn\\": 7,
               \\"endColumn\\": 9,
-              \\"tokenTypeIdx\\": 31,
+              \\"tokenTypeIdx\\": 32,
               \\"tokenType\\": {
                 \\"name\\": \\"IfToken\\",
                 \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 31,
+                \\"tokenTypeIdx\\": 32,
                 \\"CATEGORIES\\": [],
                 \\"categoryMatches\\": [],
                 \\"categoryMatchesMap\\": {},
@@ -257,11 +257,11 @@ exports[`変数 式 if 1`] = `
                                                   \\"endLine\\": 3,
                                                   \\"startColumn\\": 11,
                                                   \\"endColumn\\": 15,
-                                                  \\"tokenTypeIdx\\": 8,
+                                                  \\"tokenTypeIdx\\": 9,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Identifier\\",
                                                     \\"PATTERN\\": {},
-                                                    \\"tokenTypeIdx\\": 8,
+                                                    \\"tokenTypeIdx\\": 9,
                                                     \\"CATEGORIES\\": [],
                                                     \\"categoryMatches\\": [],
                                                     \\"categoryMatchesMap\\": {},
@@ -302,11 +302,11 @@ exports[`変数 式 if 1`] = `
               \\"endLine\\": 3,
               \\"startColumn\\": 17,
               \\"endColumn\\": 17,
-              \\"tokenTypeIdx\\": 11,
+              \\"tokenTypeIdx\\": 12,
               \\"tokenType\\": {
                 \\"name\\": \\"LCurly\\",
                 \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 11,
+                \\"tokenTypeIdx\\": 12,
                 \\"CATEGORIES\\": [],
                 \\"categoryMatches\\": [],
                 \\"categoryMatchesMap\\": {},
@@ -322,11 +322,11 @@ exports[`変数 式 if 1`] = `
               \\"endLine\\": 4,
               \\"startColumn\\": 14,
               \\"endColumn\\": 14,
-              \\"tokenTypeIdx\\": 11,
+              \\"tokenTypeIdx\\": 12,
               \\"tokenType\\": {
                 \\"name\\": \\"LCurly\\",
                 \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 11,
+                \\"tokenTypeIdx\\": 12,
                 \\"CATEGORIES\\": [],
                 \\"categoryMatches\\": [],
                 \\"categoryMatchesMap\\": {},
@@ -354,11 +354,11 @@ exports[`変数 式 if 1`] = `
               \\"endLine\\": 4,
               \\"startColumn\\": 7,
               \\"endColumn\\": 7,
-              \\"tokenTypeIdx\\": 12,
+              \\"tokenTypeIdx\\": 13,
               \\"tokenType\\": {
                 \\"name\\": \\"RCurly\\",
                 \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 12,
+                \\"tokenTypeIdx\\": 13,
                 \\"CATEGORIES\\": [],
                 \\"categoryMatches\\": [],
                 \\"categoryMatchesMap\\": {},
@@ -374,11 +374,11 @@ exports[`変数 式 if 1`] = `
               \\"endLine\\": 5,
               \\"startColumn\\": 7,
               \\"endColumn\\": 7,
-              \\"tokenTypeIdx\\": 12,
+              \\"tokenTypeIdx\\": 13,
               \\"tokenType\\": {
                 \\"name\\": \\"RCurly\\",
                 \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 12,
+                \\"tokenTypeIdx\\": 13,
                 \\"CATEGORIES\\": [],
                 \\"categoryMatches\\": [],
                 \\"categoryMatchesMap\\": {},
@@ -396,11 +396,11 @@ exports[`変数 式 if 1`] = `
               \\"endLine\\": 4,
               \\"startColumn\\": 9,
               \\"endColumn\\": 12,
-              \\"tokenTypeIdx\\": 32,
+              \\"tokenTypeIdx\\": 33,
               \\"tokenType\\": {
                 \\"name\\": \\"ElseToken\\",
                 \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 32,
+                \\"tokenTypeIdx\\": 33,
                 \\"CATEGORIES\\": [],
                 \\"categoryMatches\\": [],
                 \\"categoryMatchesMap\\": {},
@@ -436,11 +436,11 @@ exports[`変数 演算 数値 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 7,
                     \\"endColumn\\": 11,
-                    \\"tokenTypeIdx\\": 8,
+                    \\"tokenTypeIdx\\": 9,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 8,
+                      \\"tokenTypeIdx\\": 9,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -457,11 +457,11 @@ exports[`変数 演算 数値 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 13,
                     \\"endColumn\\": 14,
-                    \\"tokenTypeIdx\\": 37,
+                    \\"tokenTypeIdx\\": 38,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 37,
+                      \\"tokenTypeIdx\\": 38,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -562,7 +562,7 @@ exports[`変数 演算 数値 1`] = `
                                             \\"endLine\\": 2,
                                             \\"startColumn\\": 18,
                                             \\"endColumn\\": 18,
-                                            \\"tokenTypeIdx\\": 18,
+                                            \\"tokenTypeIdx\\": 19,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Plus\\",
                                               \\"PATTERN\\": {},
@@ -570,20 +570,20 @@ exports[`変数 演算 数値 1`] = `
                                                 {
                                                   \\"name\\": \\"AdditionOperator\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 17,
+                                                  \\"tokenTypeIdx\\": 18,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    18,
-                                                    19
+                                                    19,
+                                                    20
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"18\\": true,
-                                                    \\"19\\": true
+                                                    \\"19\\": true,
+                                                    \\"20\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 18,
+                                              \\"tokenTypeIdx\\": 19,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -629,11 +629,11 @@ exports[`変数 演算 数値 1`] = `
                     \\"endLine\\": 3,
                     \\"startColumn\\": 7,
                     \\"endColumn\\": 11,
-                    \\"tokenTypeIdx\\": 8,
+                    \\"tokenTypeIdx\\": 9,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 8,
+                      \\"tokenTypeIdx\\": 9,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -650,11 +650,11 @@ exports[`変数 演算 数値 1`] = `
                     \\"endLine\\": 3,
                     \\"startColumn\\": 13,
                     \\"endColumn\\": 14,
-                    \\"tokenTypeIdx\\": 37,
+                    \\"tokenTypeIdx\\": 38,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 37,
+                      \\"tokenTypeIdx\\": 38,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -695,11 +695,11 @@ exports[`変数 演算 数値 1`] = `
                                                         \\"endLine\\": 3,
                                                         \\"startColumn\\": 16,
                                                         \\"endColumn\\": 20,
-                                                        \\"tokenTypeIdx\\": 8,
+                                                        \\"tokenTypeIdx\\": 9,
                                                         \\"tokenType\\": {
                                                           \\"name\\": \\"Identifier\\",
                                                           \\"PATTERN\\": {},
-                                                          \\"tokenTypeIdx\\": 8,
+                                                          \\"tokenTypeIdx\\": 9,
                                                           \\"CATEGORIES\\": [],
                                                           \\"categoryMatches\\": [],
                                                           \\"categoryMatchesMap\\": {},
@@ -755,7 +755,7 @@ exports[`変数 演算 数値 1`] = `
                                             \\"endLine\\": 3,
                                             \\"startColumn\\": 22,
                                             \\"endColumn\\": 22,
-                                            \\"tokenTypeIdx\\": 18,
+                                            \\"tokenTypeIdx\\": 19,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Plus\\",
                                               \\"PATTERN\\": {},
@@ -763,20 +763,20 @@ exports[`変数 演算 数値 1`] = `
                                                 {
                                                   \\"name\\": \\"AdditionOperator\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 17,
+                                                  \\"tokenTypeIdx\\": 18,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    18,
-                                                    19
+                                                    19,
+                                                    20
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"18\\": true,
-                                                    \\"19\\": true
+                                                    \\"19\\": true,
+                                                    \\"20\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 18,
+                                              \\"tokenTypeIdx\\": 19,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -832,11 +832,11 @@ exports[`変数 演算 文字列 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 7,
                     \\"endColumn\\": 11,
-                    \\"tokenTypeIdx\\": 8,
+                    \\"tokenTypeIdx\\": 9,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 8,
+                      \\"tokenTypeIdx\\": 9,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -853,11 +853,11 @@ exports[`変数 演算 文字列 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 13,
                     \\"endColumn\\": 14,
-                    \\"tokenTypeIdx\\": 37,
+                    \\"tokenTypeIdx\\": 38,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 37,
+                      \\"tokenTypeIdx\\": 38,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -955,11 +955,11 @@ exports[`変数 演算 文字列 1`] = `
                     \\"endLine\\": 3,
                     \\"startColumn\\": 7,
                     \\"endColumn\\": 11,
-                    \\"tokenTypeIdx\\": 8,
+                    \\"tokenTypeIdx\\": 9,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 8,
+                      \\"tokenTypeIdx\\": 9,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -976,11 +976,11 @@ exports[`変数 演算 文字列 1`] = `
                     \\"endLine\\": 3,
                     \\"startColumn\\": 13,
                     \\"endColumn\\": 14,
-                    \\"tokenTypeIdx\\": 37,
+                    \\"tokenTypeIdx\\": 38,
                     \\"tokenType\\": {
                       \\"name\\": \\"ToLeftToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 37,
+                      \\"tokenTypeIdx\\": 38,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -1021,11 +1021,11 @@ exports[`変数 演算 文字列 1`] = `
                                                         \\"endLine\\": 3,
                                                         \\"startColumn\\": 16,
                                                         \\"endColumn\\": 20,
-                                                        \\"tokenTypeIdx\\": 8,
+                                                        \\"tokenTypeIdx\\": 9,
                                                         \\"tokenType\\": {
                                                           \\"name\\": \\"Identifier\\",
                                                           \\"PATTERN\\": {},
-                                                          \\"tokenTypeIdx\\": 8,
+                                                          \\"tokenTypeIdx\\": 9,
                                                           \\"CATEGORIES\\": [],
                                                           \\"categoryMatches\\": [],
                                                           \\"categoryMatchesMap\\": {},
@@ -1081,7 +1081,7 @@ exports[`変数 演算 文字列 1`] = `
                                             \\"endLine\\": 3,
                                             \\"startColumn\\": 22,
                                             \\"endColumn\\": 22,
-                                            \\"tokenTypeIdx\\": 18,
+                                            \\"tokenTypeIdx\\": 19,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Plus\\",
                                               \\"PATTERN\\": {},
@@ -1089,20 +1089,20 @@ exports[`変数 演算 文字列 1`] = `
                                                 {
                                                   \\"name\\": \\"AdditionOperator\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 17,
+                                                  \\"tokenTypeIdx\\": 18,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    18,
-                                                    19
+                                                    19,
+                                                    20
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"18\\": true,
-                                                    \\"19\\": true
+                                                    \\"19\\": true,
+                                                    \\"20\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 18,
+                                              \\"tokenTypeIdx\\": 19,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
