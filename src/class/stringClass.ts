@@ -1,16 +1,17 @@
 import { LiteralType } from '../types/literal';
+import { LiteralTokens } from "@/tokens";
 
 const TYPE = 'StringLiteral';
 
 type StringLiteralType = LiteralType<string>;
 
 export type StringObjectMethodType = {
-  '+': <T extends number>(obj: StringLiteralType, param: any) => any;
-  '<': <T extends number>(obj: StringLiteralType, param: any) => any;
-  '<=': <T extends number>(obj: StringLiteralType, param: any) => any;
-  '>': <T extends number>(obj: StringLiteralType, param: any) => any;
-  '>=': <T extends number>(obj: StringLiteralType, param: any) => any;
-  '~': <T extends number>(obj: StringLiteralType, param: any) => any;
+  '+': (obj: StringLiteralType, param: any) => any;
+  '<': (obj: StringLiteralType, param: any) => any;
+  '<=': (obj: StringLiteralType, param: any) => any;
+  '>': (obj: StringLiteralType, param: any) => any;
+  '>=': (obj: StringLiteralType, param: any) => any;
+  '=': (obj: StringLiteralType, param: any) => any;
 };
 
 export const StringClass: StringObjectMethodType = {
@@ -22,33 +23,32 @@ export const StringClass: StringObjectMethodType = {
   },
   '<': (obj, param) => {
     return {
-      name: TYPE,
+      name: LiteralTokens.BooleanLiteral,
       image: String(obj.image < param.image),
     };
   },
   '<=': (obj, param) => {
     return {
-      name: TYPE,
+      name: LiteralTokens.BooleanLiteral,
       image: String(obj.image <= param.image),
     };
   },
   '>': (obj, param) => {
     return {
-      name: TYPE,
+      name: LiteralTokens.BooleanLiteral,
       image: String(obj.image > param.image),
     };
   },
   '>=': (obj, param) => {
     return {
-      name: TYPE,
+      name: LiteralTokens.BooleanLiteral,
       image: String(obj.image >= param.image),
     };
   },
-  '~': (obj, param) => {
+  '=': (obj, param) => {
     return {
-      name: 'NumberLiteralRange',
-      start: param.image,
-      end: obj.image,
+      name: LiteralTokens.BooleanLiteral,
+      image: String(obj.image === param.image),
     };
   },
 };
