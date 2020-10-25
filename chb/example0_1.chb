@@ -1,0 +1,6 @@
+"hello,world" |> console
+0 -> total
+1 ~ 10 |> each (i) {
+  total + i -> total
+}
+total |> console
