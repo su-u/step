@@ -58,7 +58,6 @@ export class VariableManager {
     return value;
   }
 
-
   public set returnValue(value: any) {
     this._returnValue = value;
   }
