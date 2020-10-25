@@ -21,6 +21,5 @@ export const assignment = ({ ast, manager, execObject }: IInterpreterRules) => {
 
       return toObject;
     }
-    return;
   }
 };
