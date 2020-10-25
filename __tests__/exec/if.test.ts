@@ -85,4 +85,46 @@ if: { 1, 1 } |> judge  {
       image: 1,
     });
   });
+
+  test('6', () => {
+    const source = `
+value <- 0
+if: false {
+  1 -> value
+}
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('value')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 0,
+    });
+  });
+
+  test('6', () => {
+    const source = `
+value <- 0
+if: 1 {
+  1 -> value
+}
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('value')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 1,
+    });
+  });
+
+  test('7', () => {
+    const source = `
+value <- 0
+if: 0 {
+  1 -> value
+}
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('value')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 0,
+    });
+  });
 });
