@@ -76,7 +76,7 @@
     categories: RelationalOperator,
   });
   const OverThan = createToken({
-    name: 'OverTha',
+    name: 'OverThan',
     pattern: /<(?!-)/,
     categories: RelationalOperator,
   });
