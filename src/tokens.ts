@@ -4,6 +4,7 @@ export const LiteralTokens = {
   NumberLiteral: 'NumberLiteral',
   DebugLiteral: 'DebugLiteral',
   NumberLiteralRange: 'NumberLiteralRange',
+  ArrayLiteral: 'ArrayLiteral',
 };
 
 export const BooleanLiteralTokens = {
