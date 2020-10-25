@@ -67,4 +67,24 @@ range |> each: i {
       image: 550,
     });
   });
+
+  test('4', () => {
+    const source = `
+value <- 0
+1 ~ 10 |> each: {
+  value <- value + 1
+}
+value2 <- value
+     `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('value')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 10,
+    });
+    expect(resultManager.reference('value2')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 10,
+    });
+  });
+
 });
