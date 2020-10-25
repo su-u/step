@@ -4087,7 +4087,7 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                       }
                                     }
                                   ],
-                                  \\"OverTha\\": [
+                                  \\"OverThan\\": [
                                     {
                                       \\"image\\": \\"<\\",
                                       \\"startOffset\\": 68,
@@ -4098,7 +4098,7 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                       \\"endColumn\\": 3,
                                       \\"tokenTypeIdx\\": 26,
                                       \\"tokenType\\": {
-                                        \\"name\\": \\"OverTha\\",
+                                        \\"name\\": \\"OverThan\\",
                                         \\"PATTERN\\": {},
                                         \\"CATEGORIES\\": [
                                           {
