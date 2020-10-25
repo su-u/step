@@ -1,9 +1,6 @@
-function add: a, b {
-  return a + b
+"hello,world" |> console
+value <- 0
+1 ~ 10 |> each (i) {
+  value <- value + i
 }
-
-function func1: num {
-  return { num, 10 } |> add
-}
-
-10 |> func1 -> result
+value |> console
