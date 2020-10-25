@@ -153,10 +153,10 @@ const BuildInTokens = [
 
 const allTokens = [
   ...BuildInTokens,
+  ...BracketTokens,
   ...RelationalOperatorTokens,
   ...LiteralTokens,
   ...OperatorTokens,
-  ...BracketTokens,
 ];
 export const ChiboLexer = new Lexer(allTokens);
 
