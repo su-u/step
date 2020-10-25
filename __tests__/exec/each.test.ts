@@ -50,4 +50,21 @@ value2 <- value
       image: 55,
     });
   });
+
+  test('3', () => {
+    const source = `
+value <- 0
+1 ~ 10 -> range
+range |> each (i) {
+  range |> each (j) {
+    value <- value + j
+  }
+}
+     `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('value')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 550,
+    });
+  });
 });
