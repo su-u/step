@@ -135,8 +135,8 @@ const BuildInTokens = [
 
 const allTokens = [
   ...BuildInTokens,
-  ...LiteralTokens,
   ...BracketTokens,
+  ...LiteralTokens,
   ...OperatorTokens,
   ...RelationalOperatorTokens,
 ];
@@ -307,7 +307,19 @@ export class ChiboParser extends CstParser {
       { ALT: () => this.CONSUME(BoolLiteral) },
       { ALT: () => this.SUBRULE(this.ParenthesisExpression) },
       { ALT: () => this.CONSUME(Identifier) },
+      { ALT: () => this.SUBRULE(this.ArrayStatement) },
     ]);
+  });
+
+  private ArrayStatement = this.RULE('ArrayStatement', () => {
+    this.CONSUME(LSquare);
+    this.MANY_SEP({
+      SEP: Comma,
+      DEF: () => {
+        this.SUBRULE(this.Factor);
+      },
+    });
+    this.CONSUME(RSquare);
   });
 
   private ParenthesisExpression = this.RULE('ParenthesisExpression', () => {
