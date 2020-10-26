@@ -14,7 +14,7 @@ describe('関数', () => {
   test('1', () => {
     const source = `
 function myFunc: {
-  value <- 1 + 1
+  1 + 1 -> value
 }
     `;
     exec(source, manager);
@@ -32,7 +32,7 @@ function add: x, y {
   test('3', () => {
     const source = `
 function func: x, y {
-  value <- 1 + 2
+  1 + 2 -> value
   return value
 }
 { 1, 2 } |> func -> result
@@ -89,7 +89,7 @@ function out: str {
   test('7', () => {
     const source = `
 function out: arg {
-  result <- 100
+  100 -> result
   if: arg = 0 {
     arg -> result
   } else {
@@ -114,7 +114,7 @@ function out: arg {
   test('8', () => {
     const source = `
 function out: arg {
-  result <- 100
+  100 -> result
   if: arg = 0 {
     arg + 1000 -> result
   } else {
@@ -144,11 +144,11 @@ function out: arg {
   test('9', () => {
     const source = `
 function func: j, str {
-  v <- ""
+  "" -> v
   if: j > 0 {
-    v <- str + "true"
+    str + "true" -> v
   } else {
-    v <- str + "false"
+    str + "false" -> v
   }
   return v
 }
@@ -247,7 +247,7 @@ function add: a, b {
 { { 1, 2 } |> add, { 3, 4 } |> add } |> add -> result1
 
 { "result: ", { 1, 2 } |> add, (1 + 1) } |> add -> result2
-number <- 1.5
+1.5 -> number
 number |> int -> result3
 2.5 |> int -> result4
     `;

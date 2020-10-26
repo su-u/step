@@ -24,7 +24,7 @@ const BoolLiteral = createToken({
 });
 const IdentifierSuffix = createToken({
   name: 'IdentifierSuffix',
-  pattern: /[a-zA-z][0-9a-zA-Z]*\[/,
+  pattern: /[a-zA-z][0-9a-zA-Z]+\[/,
 });
 const Identifier = createToken({
   name: 'Identifier',
@@ -183,7 +183,7 @@ export class ChiboParser extends CstParser {
   });
 
   private Assignment = this.RULE('Assignment', () => {
-    this.OR([{ ALT: () => this.SUBRULE(this.ToLeft) }, { ALT: () => this.SUBRULE(this.ToRight) }]);
+    this.SUBRULE(this.ToRight);
   });
 
   private Each = this.RULE('Each', () => {
@@ -243,14 +243,11 @@ export class ChiboParser extends CstParser {
     this.SUBRULE(this.Pipe, { LABEL: 'from' });
     this.MANY(() => {
       this.CONSUME(ToRightToken);
-      this.CONSUME(Identifier, { LABEL: 'to' });
+      this.OR([
+        { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'to' }) },
+        { ALT: () => this.CONSUME(Identifier, { LABEL: 'to' }) },
+      ]);
     });
-  });
-
-  private ToLeft = this.RULE('ToLeft', () => {
-    this.CONSUME(Identifier, { LABEL: 'to' });
-    this.CONSUME(ToLeftToken);
-    this.SUBRULE(this.Pipe, { LABEL: 'from' });
   });
 
   private Pipe = this.RULE('Pipe', () => {
@@ -349,8 +346,8 @@ export class ChiboParser extends CstParser {
   private ArrayIndex = this.RULE('ArrayIndex', () => {
     this.OR([
       { ALT: () => this.CONSUME(NumberLiteral) },
-      { ALT: () => this.CONSUME(Identifier) },
       { ALT: () => this.SUBRULE(this.ArrayElement) },
+      { ALT: () => this.CONSUME(Identifier) },
     ]);
   });
 

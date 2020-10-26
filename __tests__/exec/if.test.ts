@@ -13,7 +13,7 @@ describe('if', () => {
   });
   test('1', () => {
     const source = `
-x <- 1
+1 -> x
 if: x {
   x + x
 }
@@ -23,7 +23,7 @@ if: x {
 
   test('2', () => {
     const source = `
-x <- 1
+1 -> x
 if: x {
   x + x
 } else {
@@ -35,11 +35,11 @@ if: x {
 
   test('3', () => {
     const source = `
-value <- 0
-x <- 1
+0 -> value
+1 -> x
 if: x {
   1 ~ 10 |> each: i {
-    value <- 10
+    10 -> value
   }
 } else {
   x - x
@@ -54,10 +54,10 @@ if: x {
 
   test('4', () => {
     const source = `
-value1 <- 1
+1 -> value1
 if: true {
-  value1 <- 2
-  value2 <- 1
+  2 -> value1
+  1 -> value2
 }
     `;
     const resultManager = exec(source, manager).variable;
@@ -88,7 +88,7 @@ if: { 1, 1 } |> judge  {
 
   test('6', () => {
     const source = `
-value <- 0
+0 -> value
 if: false {
   1 -> value
 }
@@ -102,7 +102,7 @@ if: false {
 
   test('6', () => {
     const source = `
-value <- 0
+0 -> value
 if: 1 {
   1 -> value
 }
@@ -116,7 +116,7 @@ if: 1 {
 
   test('7', () => {
     const source = `
-value <- 0
+0 -> value
 if: 0 {
   1 -> value
 }

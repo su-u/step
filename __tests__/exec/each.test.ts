@@ -14,11 +14,11 @@ describe('each', () => {
 
   test('1', () => {
     const source = `
-value <- 0
+0 -> value
 1 ~ 10 |> each: i {
-  value <- value + i
+  value + i -> value
 }
-value2 <- value
+value -> value2
      `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('value')).toStrictEqual({
@@ -33,12 +33,12 @@ value2 <- value
 
   test('2', () => {
     const source = `
-value <- 0
+0 -> value
 1 ~ 10 |> each: i {
-  value <- value + i
-  value2 <- i
+  value + i -> value
+  i -> value2
 }
-value2 <- value
+value -> value2
      `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('value')).toStrictEqual({
@@ -53,11 +53,11 @@ value2 <- value
 
   test('3', () => {
     const source = `
-value <- 0
+0 -> value
 1 ~ 10 -> range
 range |> each: i {
   range |> each: j {
-    value <- value + j
+    value + j -> value
   }
 }
      `;
@@ -70,11 +70,11 @@ range |> each: i {
 
   test('4', () => {
     const source = `
-value <- 0
+0 -> value
 1 ~ 10 |> each: {
-  value <- value + 1
+  value + 1 -> value
 }
-value2 <- value
+value -> value2
      `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('value')).toStrictEqual({
