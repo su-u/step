@@ -27,7 +27,7 @@
   });
   const IdentifierSuffix = createToken({
     name: 'IdentifierSuffix',
-    pattern: /[a-zA-z][0-9a-zA-Z]*\[/,
+    pattern: /[a-zA-z][0-9a-zA-Z]+\[/,
   });
   const Identifier = createToken({
     name: 'Identifier',
