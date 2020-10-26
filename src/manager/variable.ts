@@ -1,4 +1,4 @@
-import { NullReferenceVariableError } from '../error';
+import { NullReferenceVariableError, OutOfRangeError  } from '../error';
 
 export class VariableManager {
   private _returnValue = undefined;
@@ -67,6 +67,8 @@ export class VariableManager {
 
   private getArrayElementVariable(name: string, index: number) {
     if (this.variables.has(name)) {
+      const value = this.variables.get(name);
+      if (index >= value.image.length) throw new OutOfRangeError(`${name}`);
       return this.variables.get(name).image[index];
     }
     const value = (this._parent !== null && this._parent.reference(name, index)) || null;

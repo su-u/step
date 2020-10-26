@@ -19,3 +19,9 @@ export class TypeError extends ChibaLangError {
     super(`処理するデータ型が異なります。${message}`, ...args);
   }
 }
+
+export class OutOfRangeError extends ChibaLangError {
+  constructor(message, ...args) {
+    super(`配列の範囲を超えています。${message}`, ...args);
+  }
+}
