@@ -13,3 +13,9 @@ export class NullReferenceFunctionError extends ChibaLangError {
     super(`関数が参照できませんでした。${message}`, ...args);
   }
 }
+
+export class TypeError extends ChibaLangError {
+  constructor(message, ...args) {
+    super(`処理するデータ型が異なります。${message}`, ...args);
+  }
+}
