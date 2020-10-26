@@ -7,17 +7,44 @@ export class VariableManager {
     this._parent = parent;
   }
 
-  private parentSetValue(name: string, value: any) {
+  private parentSetValue(name: string, value: any, index: number = null) {
     if (this.variables.has(name)) {
-      this.variables.set(name, value);
+      this.assignment(name, value, index);
       return true;
     } else if (this._parent !== null) {
-      return this._parent.parentSetValue(name, value);
+      return this._parent.parentSetValue(name, value, index);
     }
     return false;
   }
 
-  public assignment(name: any, value: any) {
+  public assignment(name: any, value: any, index: number = null) {
+    if (index !== null) {
+      return this.setArrayElementVariable(name, value, index);
+    } else {
+      return this.setVariable(name, value);
+    }
+  }
+
+  private setArrayElementVariable(name: any, value: any, index: number) {
+    if (this._parent !== null) {
+      const result = this._parent.parentSetValue(name, value, index);
+      if (!result && this.variables.has(name)) {
+        const array = this.variables.get(name);
+        array.image[index] = value;
+        this.variables.set(name, {
+          ...array,
+        });
+      }
+    } else {
+      const array = this.variables.get(name);
+      array.image[index] = value;
+      this.variables.set(name, {
+        ...array,
+      });
+    }
+  }
+
+  private setVariable(name: any, value: any) {
     if (this._parent !== null) {
       const result = this._parent.parentSetValue(name, value);
       if (!result) {
@@ -36,17 +63,6 @@ export class VariableManager {
     }
   }
 
-  private getVariable(name: string) {
-    if (this.variables.has(name)) {
-      return this.variables.get(name);
-    }
-    const value = (this._parent !== null && this._parent.reference(name)) || null;
-    if (value === null) {
-      throw new Error(`変数が参照できませんでした。${name}`);
-    }
-    return value;
-  }
-
   private getArrayElementVariable(name: string, index: number) {
     if (this.variables.has(name)) {
       return this.variables.get(name).image[index];
@@ -54,6 +70,17 @@ export class VariableManager {
     const value = (this._parent !== null && this._parent.reference(name, index)) || null;
     if (value === null) {
       throw new Error(`配列変数が参照できませんでした。${name}, ${index}`);
+    }
+    return value;
+  }
+
+  private getVariable(name: string) {
+    if (this.variables.has(name)) {
+      return this.variables.get(name);
+    }
+    const value = (this._parent !== null && this._parent.reference(name)) || null;
+    if (value === null) {
+      throw new Error(`変数が参照できませんでした。${name}`);
     }
     return value;
   }
@@ -72,7 +99,7 @@ export class VariableManager {
 
   public debug() {
     console.group('variables');
-    console.log(this.variables);
+    console.dir(this.variables, { depth: null });
     console.groupEnd();
   }
 }
