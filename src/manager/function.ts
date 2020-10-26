@@ -1,4 +1,5 @@
 import { BuildInFunctions } from '../buildInFunctions';
+import { NullReferenceFunctionError } from "../error";
 
 export class FunctionManager {
   private userFunctions = new Map();
@@ -21,6 +22,10 @@ export class FunctionManager {
         type: 'build',
       };
     } else {
+      const func = this.userFunctions.get(name);
+      if (func === undefined) {
+        throw new NullReferenceFunctionError('${name}');
+      }
       return {
         ...this.userFunctions.get(name),
         type: 'user',

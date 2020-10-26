@@ -1,4 +1,4 @@
-import { NullReferenceError } from '../error';
+import { NullReferenceVariableError } from '../error';
 
 export class VariableManager {
   private _returnValue = undefined;
@@ -71,7 +71,7 @@ export class VariableManager {
     }
     const value = (this._parent !== null && this._parent.reference(name, index)) || null;
     if (value === null) {
-      throw new NullReferenceError(`${name}`, name);
+      throw new NullReferenceVariableError(`${name}`, name);
     }
     return value;
   }
@@ -82,7 +82,7 @@ export class VariableManager {
     }
     const value = (this._parent !== null && this._parent.reference(name)) || null;
     if (value === null) {
-      throw new NullReferenceError(`${name}`, name);
+      throw new NullReferenceVariableError(`${name}`, name);
     }
     return value;
   }
