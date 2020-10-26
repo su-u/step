@@ -58,7 +58,7 @@ describe('演算', () => {
 
   test('5', () => {
     const source = `
-aaa <- 1 + 1 + 1 + 1
+1 + 1 + 1 + 1 -> aaa
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('aaa')).toStrictEqual({
@@ -69,7 +69,7 @@ aaa <- 1 + 1 + 1 + 1
 
   test('6', () => {
     const source = `
-val <- (1 + 1) * 3
+(1 + 1) * 3 -> val
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('val')).toStrictEqual({
@@ -80,7 +80,7 @@ val <- (1 + 1) * 3
 
   test('7', () => {
     const source = `
-v <- (10 * 10) / (2 * 10)
+(10 * 10) / (2 * 10) -> v
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('v')).toStrictEqual({
@@ -91,7 +91,7 @@ v <- (10 * 10) / (2 * 10)
 
   test('8', () => {
     const source = `
-v <- (10 * 10) / (2 * 10)
+(10 * 10) / (2 * 10) -> v
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('v')).toStrictEqual({
@@ -102,7 +102,7 @@ v <- (10 * 10) / (2 * 10)
 
   test('9', () => {
     const source = `
-v <- (10 * 10) / (2 * (11 - 1))
+(10 * 10) / (2 * (11 - 1)) -> v
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('v')).toStrictEqual({
@@ -113,7 +113,7 @@ v <- (10 * 10) / (2 * (11 - 1))
 
   test('10', () => {
     const source = `
-v <- 1 * 2 * 3 * 4
+1 * 2 * 3 * 4 -> v
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('v')).toStrictEqual({
@@ -124,7 +124,7 @@ v <- 1 * 2 * 3 * 4
 
   test('11', () => {
     const source = `
-v <- 1 * 2 * 3 * 4 + 6
+1 * 2 * 3 * 4 + 6 -> v
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('v')).toStrictEqual({
@@ -135,7 +135,7 @@ v <- 1 * 2 * 3 * 4 + 6
 
   test('12', () => {
     const source = `
-v1 <- 1 + 1 * 5
+1 + 1 * 5 -> v1
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('v1')).toStrictEqual({
@@ -146,8 +146,8 @@ v1 <- 1 + 1 * 5
 
   test('13', () => {
     const source = `
-v1 <- 1 + 1 * 5
-v2 <- 1 * 2 * 3 * 4 + 6
+1 + 1 * 5 -> v1
+1 * 2 * 3 * 4 + 6 -> v2
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('v1')).toStrictEqual({
@@ -162,7 +162,7 @@ v2 <- 1 * 2 * 3 * 4 + 6
 
   test('14', () => {
     const source = `
-v <- (10 * 10 * 10) / (2 * (11 - 1))
+(10 * 10 * 10) / (2 * (11 - 1)) -> v
       `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('v')).toStrictEqual({

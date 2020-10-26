@@ -22,7 +22,7 @@ describe('関数', () => {
   test('3', () => {
     const source = `
     function func: x, y {
-      value <- x - y + 1
+      x - y + 1 -> value
       return value
     }
     `;

@@ -14,7 +14,7 @@ describe('condition number', () => {
 
   test('1 Equal', () => {
     const source = `
-x <- true = true
+true = true -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -25,7 +25,7 @@ x <- true = true
 
   test('2 Equal', () => {
     const source = `
-x <- true = false
+true = false -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({

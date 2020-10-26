@@ -1,6 +1,6 @@
-a <- "foo"
+"foo" -> a
 "bar" -> b
-c <- a + b
+a + b -> c
 1 + 5 -> d
 c + d -> e
 3 > 4 -> f

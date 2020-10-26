@@ -8,52 +8,10 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
       {
         \\"name\\": \\"Assignment\\",
         \\"children\\": {
-          \\"ToLeft\\": [
+          \\"ToRight\\": [
             {
-              \\"name\\": \\"ToLeft\\",
+              \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"to\\": [
-                  {
-                    \\"image\\": \\"a\\",
-                    \\"startOffset\\": 0,
-                    \\"endOffset\\": 0,
-                    \\"startLine\\": 1,
-                    \\"endLine\\": 1,
-                    \\"startColumn\\": 1,
-                    \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 9,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"Identifier\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 9,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
-                \\"ToLeftToken\\": [
-                  {
-                    \\"image\\": \\"<-\\",
-                    \\"startOffset\\": 2,
-                    \\"endOffset\\": 3,
-                    \\"startLine\\": 1,
-                    \\"endLine\\": 1,
-                    \\"startColumn\\": 3,
-                    \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 39,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"ToLeftToken\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 39,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
                 \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
@@ -85,12 +43,12 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                                                           \\"NumberLiteral\\": [
                                                             {
                                                               \\"image\\": \\"10\\",
-                                                              \\"startOffset\\": 5,
-                                                              \\"endOffset\\": 6,
+                                                              \\"startOffset\\": 0,
+                                                              \\"endOffset\\": 1,
                                                               \\"startLine\\": 1,
                                                               \\"endLine\\": 1,
-                                                              \\"startColumn\\": 6,
-                                                              \\"endColumn\\": 7,
+                                                              \\"startColumn\\": 1,
+                                                              \\"endColumn\\": 2,
                                                               \\"tokenTypeIdx\\": 4,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"NumberLiteral\\",
@@ -127,6 +85,48 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                           \\"children\\": {}
                         }
                       ]
+                    }
+                  }
+                ],
+                \\"ToRightToken\\": [
+                  {
+                    \\"image\\": \\"->\\",
+                    \\"startOffset\\": 3,
+                    \\"endOffset\\": 4,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 4,
+                    \\"endColumn\\": 5,
+                    \\"tokenTypeIdx\\": 38,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"ToRightToken\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 38,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ],
+                \\"to\\": [
+                  {
+                    \\"image\\": \\"a\\",
+                    \\"startOffset\\": 6,
+                    \\"endOffset\\": 6,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 7,
+                    \\"endColumn\\": 7,
+                    \\"tokenTypeIdx\\": 9,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 9,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
                     }
                   }
                 ]
@@ -530,346 +530,6 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
 }"
 `;
 
-exports[`chevrotain ./chb/example1_2.chb 1`] = `
-"{
-  \\"name\\": \\"Program\\",
-  \\"children\\": {
-    \\"Assignment\\": [
-      {
-        \\"name\\": \\"Assignment\\",
-        \\"children\\": {
-          \\"ToLeft\\": [
-            {
-              \\"name\\": \\"ToLeft\\",
-              \\"children\\": {
-                \\"to\\": [
-                  {
-                    \\"image\\": \\"val\\",
-                    \\"startOffset\\": 0,
-                    \\"endOffset\\": 2,
-                    \\"startLine\\": 1,
-                    \\"endLine\\": 1,
-                    \\"startColumn\\": 1,
-                    \\"endColumn\\": 3,
-                    \\"tokenTypeIdx\\": 9,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"Identifier\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 9,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
-                \\"ToLeftToken\\": [
-                  {
-                    \\"image\\": \\"<-\\",
-                    \\"startOffset\\": 4,
-                    \\"endOffset\\": 5,
-                    \\"startLine\\": 1,
-                    \\"endLine\\": 1,
-                    \\"startColumn\\": 5,
-                    \\"endColumn\\": 6,
-                    \\"tokenTypeIdx\\": 39,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"ToLeftToken\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 39,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
-                \\"from\\": [
-                  {
-                    \\"name\\": \\"Pipe\\",
-                    \\"children\\": {
-                      \\"from\\": [
-                        {
-                          \\"name\\": \\"PipeFrom\\",
-                          \\"children\\": {
-                            \\"LogicExpression\\": [
-                              {
-                                \\"name\\": \\"LogicExpression\\",
-                                \\"children\\": {
-                                  \\"RelationExpression\\": [
-                                    {
-                                      \\"name\\": \\"RelationExpression\\",
-                                      \\"children\\": {
-                                        \\"Expression\\": [
-                                          {
-                                            \\"name\\": \\"Expression\\",
-                                            \\"children\\": {
-                                              \\"Term\\": [
-                                                {
-                                                  \\"name\\": \\"Term\\",
-                                                  \\"children\\": {
-                                                    \\"Factor\\": [
-                                                      {
-                                                        \\"name\\": \\"Factor\\",
-                                                        \\"children\\": {
-                                                          \\"StringLiteral\\": [
-                                                            {
-                                                              \\"image\\": \\"\\\\\\"Switch\\\\\\"\\",
-                                                              \\"startOffset\\": 7,
-                                                              \\"endOffset\\": 14,
-                                                              \\"startLine\\": 1,
-                                                              \\"endLine\\": 1,
-                                                              \\"startColumn\\": 8,
-                                                              \\"endColumn\\": 15,
-                                                              \\"tokenTypeIdx\\": 3,
-                                                              \\"tokenType\\": {
-                                                                \\"name\\": \\"StringLiteral\\",
-                                                                \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 3,
-                                                                \\"CATEGORIES\\": [],
-                                                                \\"categoryMatches\\": [],
-                                                                \\"categoryMatchesMap\\": {},
-                                                                \\"isParent\\": false
-                                                              }
-                                                            }
-                                                          ]
-                                                        }
-                                                      }
-                                                    ]
-                                                  }
-                                                }
-                                              ]
-                                            }
-                                          }
-                                        ]
-                                      }
-                                    }
-                                  ]
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        \\"name\\": \\"Assignment\\",
-        \\"children\\": {
-          \\"ToLeft\\": [
-            {
-              \\"name\\": \\"ToLeft\\",
-              \\"children\\": {
-                \\"to\\": [
-                  {
-                    \\"image\\": \\"aaa\\",
-                    \\"startOffset\\": 16,
-                    \\"endOffset\\": 18,
-                    \\"startLine\\": 2,
-                    \\"endLine\\": 2,
-                    \\"startColumn\\": 1,
-                    \\"endColumn\\": 3,
-                    \\"tokenTypeIdx\\": 9,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"Identifier\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 9,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
-                \\"ToLeftToken\\": [
-                  {
-                    \\"image\\": \\"<-\\",
-                    \\"startOffset\\": 20,
-                    \\"endOffset\\": 21,
-                    \\"startLine\\": 2,
-                    \\"endLine\\": 2,
-                    \\"startColumn\\": 5,
-                    \\"endColumn\\": 6,
-                    \\"tokenTypeIdx\\": 39,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"ToLeftToken\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 39,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
-                \\"from\\": [
-                  {
-                    \\"name\\": \\"Pipe\\",
-                    \\"children\\": {
-                      \\"from\\": [
-                        {
-                          \\"name\\": \\"PipeFrom\\",
-                          \\"children\\": {
-                            \\"LogicExpression\\": [
-                              {
-                                \\"name\\": \\"LogicExpression\\",
-                                \\"children\\": {
-                                  \\"RelationExpression\\": [
-                                    {
-                                      \\"name\\": \\"RelationExpression\\",
-                                      \\"children\\": {
-                                        \\"Expression\\": [
-                                          {
-                                            \\"name\\": \\"Expression\\",
-                                            \\"children\\": {
-                                              \\"Term\\": [
-                                                {
-                                                  \\"name\\": \\"Term\\",
-                                                  \\"children\\": {
-                                                    \\"Factor\\": [
-                                                      {
-                                                        \\"name\\": \\"Factor\\",
-                                                        \\"children\\": {
-                                                          \\"Identifier\\": [
-                                                            {
-                                                              \\"image\\": \\"val\\",
-                                                              \\"startOffset\\": 23,
-                                                              \\"endOffset\\": 25,
-                                                              \\"startLine\\": 2,
-                                                              \\"endLine\\": 2,
-                                                              \\"startColumn\\": 8,
-                                                              \\"endColumn\\": 10,
-                                                              \\"tokenTypeIdx\\": 9,
-                                                              \\"tokenType\\": {
-                                                                \\"name\\": \\"Identifier\\",
-                                                                \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 9,
-                                                                \\"CATEGORIES\\": [],
-                                                                \\"categoryMatches\\": [],
-                                                                \\"categoryMatchesMap\\": {},
-                                                                \\"isParent\\": false
-                                                              }
-                                                            }
-                                                          ]
-                                                        }
-                                                      }
-                                                    ]
-                                                  }
-                                                },
-                                                {
-                                                  \\"name\\": \\"Term\\",
-                                                  \\"children\\": {
-                                                    \\"Factor\\": [
-                                                      {
-                                                        \\"name\\": \\"Factor\\",
-                                                        \\"children\\": {
-                                                          \\"StringLiteral\\": [
-                                                            {
-                                                              \\"image\\": \\"\\\\\\"aaa\\\\\\"\\",
-                                                              \\"startOffset\\": 29,
-                                                              \\"endOffset\\": 33,
-                                                              \\"startLine\\": 2,
-                                                              \\"endLine\\": 2,
-                                                              \\"startColumn\\": 14,
-                                                              \\"endColumn\\": 18,
-                                                              \\"tokenTypeIdx\\": 3,
-                                                              \\"tokenType\\": {
-                                                                \\"name\\": \\"StringLiteral\\",
-                                                                \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 3,
-                                                                \\"CATEGORIES\\": [],
-                                                                \\"categoryMatches\\": [],
-                                                                \\"categoryMatchesMap\\": {},
-                                                                \\"isParent\\": false
-                                                              }
-                                                            }
-                                                          ]
-                                                        }
-                                                      }
-                                                    ]
-                                                  }
-                                                }
-                                              ],
-                                              \\"AdditionOperator\\": [
-                                                {
-                                                  \\"image\\": \\"+\\",
-                                                  \\"startOffset\\": 27,
-                                                  \\"endOffset\\": 27,
-                                                  \\"startLine\\": 2,
-                                                  \\"endLine\\": 2,
-                                                  \\"startColumn\\": 12,
-                                                  \\"endColumn\\": 12,
-                                                  \\"tokenTypeIdx\\": 19,
-                                                  \\"tokenType\\": {
-                                                    \\"name\\": \\"Plus\\",
-                                                    \\"PATTERN\\": {},
-                                                    \\"CATEGORIES\\": [
-                                                      {
-                                                        \\"name\\": \\"AdditionOperator\\",
-                                                        \\"PATTERN\\": {},
-                                                        \\"tokenTypeIdx\\": 18,
-                                                        \\"CATEGORIES\\": [],
-                                                        \\"categoryMatches\\": [
-                                                          19,
-                                                          20
-                                                        ],
-                                                        \\"categoryMatchesMap\\": {
-                                                          \\"19\\": true,
-                                                          \\"20\\": true
-                                                        },
-                                                        \\"isParent\\": true
-                                                      }
-                                                    ],
-                                                    \\"tokenTypeIdx\\": 19,
-                                                    \\"categoryMatches\\": [],
-                                                    \\"categoryMatchesMap\\": {},
-                                                    \\"isParent\\": false
-                                                  }
-                                                }
-                                              ]
-                                            }
-                                          }
-                                        ]
-                                      }
-                                    }
-                                  ]
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      }
-    ]
-  }
-}"
-`;
-
 exports[`chevrotain ./chb/example1_3.chb 1`] = `
 "{
   \\"name\\": \\"Program\\",
@@ -1088,52 +748,10 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
       {
         \\"name\\": \\"Assignment\\",
         \\"children\\": {
-          \\"ToLeft\\": [
+          \\"ToRight\\": [
             {
-              \\"name\\": \\"ToLeft\\",
+              \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"to\\": [
-                  {
-                    \\"image\\": \\"a\\",
-                    \\"startOffset\\": 0,
-                    \\"endOffset\\": 0,
-                    \\"startLine\\": 1,
-                    \\"endLine\\": 1,
-                    \\"startColumn\\": 1,
-                    \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 9,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"Identifier\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 9,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
-                \\"ToLeftToken\\": [
-                  {
-                    \\"image\\": \\"<-\\",
-                    \\"startOffset\\": 2,
-                    \\"endOffset\\": 3,
-                    \\"startLine\\": 1,
-                    \\"endLine\\": 1,
-                    \\"startColumn\\": 3,
-                    \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 39,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"ToLeftToken\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 39,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
                 \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
@@ -1165,12 +783,12 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                                           \\"NumberLiteral\\": [
                                                             {
                                                               \\"image\\": \\"1\\",
-                                                              \\"startOffset\\": 5,
-                                                              \\"endOffset\\": 5,
+                                                              \\"startOffset\\": 0,
+                                                              \\"endOffset\\": 0,
                                                               \\"startLine\\": 1,
                                                               \\"endLine\\": 1,
-                                                              \\"startColumn\\": 6,
-                                                              \\"endColumn\\": 6,
+                                                              \\"startColumn\\": 1,
+                                                              \\"endColumn\\": 1,
                                                               \\"tokenTypeIdx\\": 4,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"NumberLiteral\\",
@@ -1207,6 +825,48 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                           \\"children\\": {}
                         }
                       ]
+                    }
+                  }
+                ],
+                \\"ToRightToken\\": [
+                  {
+                    \\"image\\": \\"->\\",
+                    \\"startOffset\\": 2,
+                    \\"endOffset\\": 3,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 3,
+                    \\"endColumn\\": 4,
+                    \\"tokenTypeIdx\\": 38,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"ToRightToken\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 38,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ],
+                \\"to\\": [
+                  {
+                    \\"image\\": \\"a\\",
+                    \\"startOffset\\": 5,
+                    \\"endOffset\\": 5,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 6,
+                    \\"endColumn\\": 6,
+                    \\"tokenTypeIdx\\": 9,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 9,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
                     }
                   }
                 ]
@@ -1418,52 +1078,10 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
       {
         \\"name\\": \\"Assignment\\",
         \\"children\\": {
-          \\"ToLeft\\": [
+          \\"ToRight\\": [
             {
-              \\"name\\": \\"ToLeft\\",
+              \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"to\\": [
-                  {
-                    \\"image\\": \\"c\\",
-                    \\"startOffset\\": 19,
-                    \\"endOffset\\": 19,
-                    \\"startLine\\": 3,
-                    \\"endLine\\": 3,
-                    \\"startColumn\\": 1,
-                    \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 9,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"Identifier\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 9,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
-                \\"ToLeftToken\\": [
-                  {
-                    \\"image\\": \\"<-\\",
-                    \\"startOffset\\": 21,
-                    \\"endOffset\\": 22,
-                    \\"startLine\\": 3,
-                    \\"endLine\\": 3,
-                    \\"startColumn\\": 3,
-                    \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 39,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"ToLeftToken\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 39,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
                 \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
@@ -1495,12 +1113,12 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                                           \\"Identifier\\": [
                                                             {
                                                               \\"image\\": \\"a\\",
-                                                              \\"startOffset\\": 24,
-                                                              \\"endOffset\\": 24,
+                                                              \\"startOffset\\": 19,
+                                                              \\"endOffset\\": 19,
                                                               \\"startLine\\": 3,
                                                               \\"endLine\\": 3,
-                                                              \\"startColumn\\": 6,
-                                                              \\"endColumn\\": 6,
+                                                              \\"startColumn\\": 1,
+                                                              \\"endColumn\\": 1,
                                                               \\"tokenTypeIdx\\": 9,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"Identifier\\",
@@ -1521,12 +1139,12 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                                           \\"NumberLiteral\\": [
                                                             {
                                                               \\"image\\": \\"10\\",
-                                                              \\"startOffset\\": 28,
-                                                              \\"endOffset\\": 29,
+                                                              \\"startOffset\\": 23,
+                                                              \\"endOffset\\": 24,
                                                               \\"startLine\\": 3,
                                                               \\"endLine\\": 3,
-                                                              \\"startColumn\\": 10,
-                                                              \\"endColumn\\": 11,
+                                                              \\"startColumn\\": 5,
+                                                              \\"endColumn\\": 6,
                                                               \\"tokenTypeIdx\\": 4,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"NumberLiteral\\",
@@ -1545,12 +1163,12 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                                     \\"MultiplicationOperator\\": [
                                                       {
                                                         \\"image\\": \\"*\\",
-                                                        \\"startOffset\\": 26,
-                                                        \\"endOffset\\": 26,
+                                                        \\"startOffset\\": 21,
+                                                        \\"endOffset\\": 21,
                                                         \\"startLine\\": 3,
                                                         \\"endLine\\": 3,
-                                                        \\"startColumn\\": 8,
-                                                        \\"endColumn\\": 8,
+                                                        \\"startColumn\\": 3,
+                                                        \\"endColumn\\": 3,
                                                         \\"tokenTypeIdx\\": 22,
                                                         \\"tokenType\\": {
                                                           \\"name\\": \\"Multi\\",
@@ -1600,6 +1218,48 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                           \\"children\\": {}
                         }
                       ]
+                    }
+                  }
+                ],
+                \\"ToRightToken\\": [
+                  {
+                    \\"image\\": \\"->\\",
+                    \\"startOffset\\": 26,
+                    \\"endOffset\\": 27,
+                    \\"startLine\\": 3,
+                    \\"endLine\\": 3,
+                    \\"startColumn\\": 8,
+                    \\"endColumn\\": 9,
+                    \\"tokenTypeIdx\\": 38,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"ToRightToken\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 38,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ],
+                \\"to\\": [
+                  {
+                    \\"image\\": \\"c\\",
+                    \\"startOffset\\": 29,
+                    \\"endOffset\\": 29,
+                    \\"startLine\\": 3,
+                    \\"endLine\\": 3,
+                    \\"startColumn\\": 11,
+                    \\"endColumn\\": 11,
+                    \\"tokenTypeIdx\\": 9,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 9,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
                     }
                   }
                 ]
@@ -2004,52 +1664,10 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
       {
         \\"name\\": \\"Assignment\\",
         \\"children\\": {
-          \\"ToLeft\\": [
+          \\"ToRight\\": [
             {
-              \\"name\\": \\"ToLeft\\",
+              \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"to\\": [
-                  {
-                    \\"image\\": \\"f\\",
-                    \\"startOffset\\": 53,
-                    \\"endOffset\\": 53,
-                    \\"startLine\\": 6,
-                    \\"endLine\\": 6,
-                    \\"startColumn\\": 1,
-                    \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 9,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"Identifier\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 9,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
-                \\"ToLeftToken\\": [
-                  {
-                    \\"image\\": \\"<-\\",
-                    \\"startOffset\\": 55,
-                    \\"endOffset\\": 56,
-                    \\"startLine\\": 6,
-                    \\"endLine\\": 6,
-                    \\"startColumn\\": 3,
-                    \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 39,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"ToLeftToken\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 39,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
                 \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
@@ -2081,12 +1699,12 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                                           \\"Identifier\\": [
                                                             {
                                                               \\"image\\": \\"c\\",
-                                                              \\"startOffset\\": 58,
-                                                              \\"endOffset\\": 58,
+                                                              \\"startOffset\\": 53,
+                                                              \\"endOffset\\": 53,
                                                               \\"startLine\\": 6,
                                                               \\"endLine\\": 6,
-                                                              \\"startColumn\\": 6,
-                                                              \\"endColumn\\": 6,
+                                                              \\"startColumn\\": 1,
+                                                              \\"endColumn\\": 1,
                                                               \\"tokenTypeIdx\\": 9,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"Identifier\\",
@@ -2114,12 +1732,12 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                                           \\"Identifier\\": [
                                                             {
                                                               \\"image\\": \\"d\\",
-                                                              \\"startOffset\\": 62,
-                                                              \\"endOffset\\": 62,
+                                                              \\"startOffset\\": 57,
+                                                              \\"endOffset\\": 57,
                                                               \\"startLine\\": 6,
                                                               \\"endLine\\": 6,
-                                                              \\"startColumn\\": 10,
-                                                              \\"endColumn\\": 10,
+                                                              \\"startColumn\\": 5,
+                                                              \\"endColumn\\": 5,
                                                               \\"tokenTypeIdx\\": 9,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"Identifier\\",
@@ -2141,12 +1759,12 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                                               \\"AdditionOperator\\": [
                                                 {
                                                   \\"image\\": \\"-\\",
-                                                  \\"startOffset\\": 60,
-                                                  \\"endOffset\\": 60,
+                                                  \\"startOffset\\": 55,
+                                                  \\"endOffset\\": 55,
                                                   \\"startLine\\": 6,
                                                   \\"endLine\\": 6,
-                                                  \\"startColumn\\": 8,
-                                                  \\"endColumn\\": 8,
+                                                  \\"startColumn\\": 3,
+                                                  \\"endColumn\\": 3,
                                                   \\"tokenTypeIdx\\": 20,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Minus\\",
@@ -2195,6 +1813,48 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                       ]
                     }
                   }
+                ],
+                \\"ToRightToken\\": [
+                  {
+                    \\"image\\": \\"->\\",
+                    \\"startOffset\\": 59,
+                    \\"endOffset\\": 60,
+                    \\"startLine\\": 6,
+                    \\"endLine\\": 6,
+                    \\"startColumn\\": 7,
+                    \\"endColumn\\": 8,
+                    \\"tokenTypeIdx\\": 38,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"ToRightToken\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 38,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ],
+                \\"to\\": [
+                  {
+                    \\"image\\": \\"f\\",
+                    \\"startOffset\\": 62,
+                    \\"endOffset\\": 62,
+                    \\"startLine\\": 6,
+                    \\"endLine\\": 6,
+                    \\"startColumn\\": 10,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 9,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 9,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
                 ]
               }
             }
@@ -2214,52 +1874,10 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
       {
         \\"name\\": \\"Assignment\\",
         \\"children\\": {
-          \\"ToLeft\\": [
+          \\"ToRight\\": [
             {
-              \\"name\\": \\"ToLeft\\",
+              \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"to\\": [
-                  {
-                    \\"image\\": \\"a\\",
-                    \\"startOffset\\": 0,
-                    \\"endOffset\\": 0,
-                    \\"startLine\\": 1,
-                    \\"endLine\\": 1,
-                    \\"startColumn\\": 1,
-                    \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 9,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"Identifier\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 9,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
-                \\"ToLeftToken\\": [
-                  {
-                    \\"image\\": \\"<-\\",
-                    \\"startOffset\\": 2,
-                    \\"endOffset\\": 3,
-                    \\"startLine\\": 1,
-                    \\"endLine\\": 1,
-                    \\"startColumn\\": 3,
-                    \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 39,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"ToLeftToken\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 39,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
                 \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
@@ -2291,12 +1909,12 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                                                           \\"StringLiteral\\": [
                                                             {
                                                               \\"image\\": \\"\\\\\\"foo\\\\\\"\\",
-                                                              \\"startOffset\\": 5,
-                                                              \\"endOffset\\": 9,
+                                                              \\"startOffset\\": 0,
+                                                              \\"endOffset\\": 4,
                                                               \\"startLine\\": 1,
                                                               \\"endLine\\": 1,
-                                                              \\"startColumn\\": 6,
-                                                              \\"endColumn\\": 10,
+                                                              \\"startColumn\\": 1,
+                                                              \\"endColumn\\": 5,
                                                               \\"tokenTypeIdx\\": 3,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"StringLiteral\\",
@@ -2333,6 +1951,48 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                           \\"children\\": {}
                         }
                       ]
+                    }
+                  }
+                ],
+                \\"ToRightToken\\": [
+                  {
+                    \\"image\\": \\"->\\",
+                    \\"startOffset\\": 6,
+                    \\"endOffset\\": 7,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 7,
+                    \\"endColumn\\": 8,
+                    \\"tokenTypeIdx\\": 38,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"ToRightToken\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 38,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ],
+                \\"to\\": [
+                  {
+                    \\"image\\": \\"a\\",
+                    \\"startOffset\\": 9,
+                    \\"endOffset\\": 9,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 10,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 9,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 9,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
                     }
                   }
                 ]
@@ -2474,52 +2134,10 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
       {
         \\"name\\": \\"Assignment\\",
         \\"children\\": {
-          \\"ToLeft\\": [
+          \\"ToRight\\": [
             {
-              \\"name\\": \\"ToLeft\\",
+              \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"to\\": [
-                  {
-                    \\"image\\": \\"c\\",
-                    \\"startOffset\\": 22,
-                    \\"endOffset\\": 22,
-                    \\"startLine\\": 3,
-                    \\"endLine\\": 3,
-                    \\"startColumn\\": 1,
-                    \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 9,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"Identifier\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 9,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
-                \\"ToLeftToken\\": [
-                  {
-                    \\"image\\": \\"<-\\",
-                    \\"startOffset\\": 24,
-                    \\"endOffset\\": 25,
-                    \\"startLine\\": 3,
-                    \\"endLine\\": 3,
-                    \\"startColumn\\": 3,
-                    \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 39,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"ToLeftToken\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 39,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
                 \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
@@ -2551,12 +2169,12 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                                                           \\"Identifier\\": [
                                                             {
                                                               \\"image\\": \\"a\\",
-                                                              \\"startOffset\\": 27,
-                                                              \\"endOffset\\": 27,
+                                                              \\"startOffset\\": 22,
+                                                              \\"endOffset\\": 22,
                                                               \\"startLine\\": 3,
                                                               \\"endLine\\": 3,
-                                                              \\"startColumn\\": 6,
-                                                              \\"endColumn\\": 6,
+                                                              \\"startColumn\\": 1,
+                                                              \\"endColumn\\": 1,
                                                               \\"tokenTypeIdx\\": 9,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"Identifier\\",
@@ -2584,12 +2202,12 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                                                           \\"Identifier\\": [
                                                             {
                                                               \\"image\\": \\"b\\",
-                                                              \\"startOffset\\": 31,
-                                                              \\"endOffset\\": 31,
+                                                              \\"startOffset\\": 26,
+                                                              \\"endOffset\\": 26,
                                                               \\"startLine\\": 3,
                                                               \\"endLine\\": 3,
-                                                              \\"startColumn\\": 10,
-                                                              \\"endColumn\\": 10,
+                                                              \\"startColumn\\": 5,
+                                                              \\"endColumn\\": 5,
                                                               \\"tokenTypeIdx\\": 9,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"Identifier\\",
@@ -2611,12 +2229,12 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                                               \\"AdditionOperator\\": [
                                                 {
                                                   \\"image\\": \\"+\\",
-                                                  \\"startOffset\\": 29,
-                                                  \\"endOffset\\": 29,
+                                                  \\"startOffset\\": 24,
+                                                  \\"endOffset\\": 24,
                                                   \\"startLine\\": 3,
                                                   \\"endLine\\": 3,
-                                                  \\"startColumn\\": 8,
-                                                  \\"endColumn\\": 8,
+                                                  \\"startColumn\\": 3,
+                                                  \\"endColumn\\": 3,
                                                   \\"tokenTypeIdx\\": 19,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Plus\\",
@@ -2663,6 +2281,48 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                           \\"children\\": {}
                         }
                       ]
+                    }
+                  }
+                ],
+                \\"ToRightToken\\": [
+                  {
+                    \\"image\\": \\"->\\",
+                    \\"startOffset\\": 28,
+                    \\"endOffset\\": 29,
+                    \\"startLine\\": 3,
+                    \\"endLine\\": 3,
+                    \\"startColumn\\": 7,
+                    \\"endColumn\\": 8,
+                    \\"tokenTypeIdx\\": 38,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"ToRightToken\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 38,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ],
+                \\"to\\": [
+                  {
+                    \\"image\\": \\"c\\",
+                    \\"startOffset\\": 31,
+                    \\"endOffset\\": 31,
+                    \\"startLine\\": 3,
+                    \\"endLine\\": 3,
+                    \\"startColumn\\": 10,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 9,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 9,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
                     }
                   }
                 ]
@@ -3084,52 +2744,10 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
       {
         \\"name\\": \\"Assignment\\",
         \\"children\\": {
-          \\"ToLeft\\": [
+          \\"ToRight\\": [
             {
-              \\"name\\": \\"ToLeft\\",
+              \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"to\\": [
-                  {
-                    \\"image\\": \\"a\\",
-                    \\"startOffset\\": 0,
-                    \\"endOffset\\": 0,
-                    \\"startLine\\": 1,
-                    \\"endLine\\": 1,
-                    \\"startColumn\\": 1,
-                    \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 9,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"Identifier\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 9,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
-                \\"ToLeftToken\\": [
-                  {
-                    \\"image\\": \\"<-\\",
-                    \\"startOffset\\": 2,
-                    \\"endOffset\\": 3,
-                    \\"startLine\\": 1,
-                    \\"endLine\\": 1,
-                    \\"startColumn\\": 3,
-                    \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 39,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"ToLeftToken\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 39,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
                 \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
@@ -3161,12 +2779,12 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                                           \\"StringLiteral\\": [
                                                             {
                                                               \\"image\\": \\"\\\\\\"foo\\\\\\"\\",
-                                                              \\"startOffset\\": 5,
-                                                              \\"endOffset\\": 9,
+                                                              \\"startOffset\\": 0,
+                                                              \\"endOffset\\": 4,
                                                               \\"startLine\\": 1,
                                                               \\"endLine\\": 1,
-                                                              \\"startColumn\\": 6,
-                                                              \\"endColumn\\": 10,
+                                                              \\"startColumn\\": 1,
+                                                              \\"endColumn\\": 5,
                                                               \\"tokenTypeIdx\\": 3,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"StringLiteral\\",
@@ -3203,6 +2821,48 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                           \\"children\\": {}
                         }
                       ]
+                    }
+                  }
+                ],
+                \\"ToRightToken\\": [
+                  {
+                    \\"image\\": \\"->\\",
+                    \\"startOffset\\": 6,
+                    \\"endOffset\\": 7,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 7,
+                    \\"endColumn\\": 8,
+                    \\"tokenTypeIdx\\": 38,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"ToRightToken\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 38,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ],
+                \\"to\\": [
+                  {
+                    \\"image\\": \\"a\\",
+                    \\"startOffset\\": 9,
+                    \\"endOffset\\": 9,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 10,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 9,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 9,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
                     }
                   }
                 ]
@@ -3344,52 +3004,10 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
       {
         \\"name\\": \\"Assignment\\",
         \\"children\\": {
-          \\"ToLeft\\": [
+          \\"ToRight\\": [
             {
-              \\"name\\": \\"ToLeft\\",
+              \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"to\\": [
-                  {
-                    \\"image\\": \\"c\\",
-                    \\"startOffset\\": 22,
-                    \\"endOffset\\": 22,
-                    \\"startLine\\": 3,
-                    \\"endLine\\": 3,
-                    \\"startColumn\\": 1,
-                    \\"endColumn\\": 1,
-                    \\"tokenTypeIdx\\": 9,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"Identifier\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 9,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
-                \\"ToLeftToken\\": [
-                  {
-                    \\"image\\": \\"<-\\",
-                    \\"startOffset\\": 24,
-                    \\"endOffset\\": 25,
-                    \\"startLine\\": 3,
-                    \\"endLine\\": 3,
-                    \\"startColumn\\": 3,
-                    \\"endColumn\\": 4,
-                    \\"tokenTypeIdx\\": 39,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"ToLeftToken\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 39,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
                 \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
@@ -3421,12 +3039,12 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                                           \\"Identifier\\": [
                                                             {
                                                               \\"image\\": \\"a\\",
-                                                              \\"startOffset\\": 27,
-                                                              \\"endOffset\\": 27,
+                                                              \\"startOffset\\": 22,
+                                                              \\"endOffset\\": 22,
                                                               \\"startLine\\": 3,
                                                               \\"endLine\\": 3,
-                                                              \\"startColumn\\": 6,
-                                                              \\"endColumn\\": 6,
+                                                              \\"startColumn\\": 1,
+                                                              \\"endColumn\\": 1,
                                                               \\"tokenTypeIdx\\": 9,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"Identifier\\",
@@ -3454,12 +3072,12 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                                           \\"Identifier\\": [
                                                             {
                                                               \\"image\\": \\"b\\",
-                                                              \\"startOffset\\": 31,
-                                                              \\"endOffset\\": 31,
+                                                              \\"startOffset\\": 26,
+                                                              \\"endOffset\\": 26,
                                                               \\"startLine\\": 3,
                                                               \\"endLine\\": 3,
-                                                              \\"startColumn\\": 10,
-                                                              \\"endColumn\\": 10,
+                                                              \\"startColumn\\": 5,
+                                                              \\"endColumn\\": 5,
                                                               \\"tokenTypeIdx\\": 9,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"Identifier\\",
@@ -3481,12 +3099,12 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                                               \\"AdditionOperator\\": [
                                                 {
                                                   \\"image\\": \\"+\\",
-                                                  \\"startOffset\\": 29,
-                                                  \\"endOffset\\": 29,
+                                                  \\"startOffset\\": 24,
+                                                  \\"endOffset\\": 24,
                                                   \\"startLine\\": 3,
                                                   \\"endLine\\": 3,
-                                                  \\"startColumn\\": 8,
-                                                  \\"endColumn\\": 8,
+                                                  \\"startColumn\\": 3,
+                                                  \\"endColumn\\": 3,
                                                   \\"tokenTypeIdx\\": 19,
                                                   \\"tokenType\\": {
                                                     \\"name\\": \\"Plus\\",
@@ -3533,6 +3151,48 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                           \\"children\\": {}
                         }
                       ]
+                    }
+                  }
+                ],
+                \\"ToRightToken\\": [
+                  {
+                    \\"image\\": \\"->\\",
+                    \\"startOffset\\": 28,
+                    \\"endOffset\\": 29,
+                    \\"startLine\\": 3,
+                    \\"endLine\\": 3,
+                    \\"startColumn\\": 7,
+                    \\"endColumn\\": 8,
+                    \\"tokenTypeIdx\\": 38,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"ToRightToken\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 38,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ],
+                \\"to\\": [
+                  {
+                    \\"image\\": \\"c\\",
+                    \\"startOffset\\": 31,
+                    \\"endOffset\\": 31,
+                    \\"startLine\\": 3,
+                    \\"endLine\\": 3,
+                    \\"startColumn\\": 10,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 9,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 9,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
                     }
                   }
                 ]
@@ -5278,52 +4938,10 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
       {
         \\"name\\": \\"Assignment\\",
         \\"children\\": {
-          \\"ToLeft\\": [
+          \\"ToRight\\": [
             {
-              \\"name\\": \\"ToLeft\\",
+              \\"name\\": \\"ToRight\\",
               \\"children\\": {
-                \\"to\\": [
-                  {
-                    \\"image\\": \\"value\\",
-                    \\"startOffset\\": 0,
-                    \\"endOffset\\": 4,
-                    \\"startLine\\": 1,
-                    \\"endLine\\": 1,
-                    \\"startColumn\\": 1,
-                    \\"endColumn\\": 5,
-                    \\"tokenTypeIdx\\": 9,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"Identifier\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 9,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
-                \\"ToLeftToken\\": [
-                  {
-                    \\"image\\": \\"<-\\",
-                    \\"startOffset\\": 6,
-                    \\"endOffset\\": 7,
-                    \\"startLine\\": 1,
-                    \\"endLine\\": 1,
-                    \\"startColumn\\": 7,
-                    \\"endColumn\\": 8,
-                    \\"tokenTypeIdx\\": 39,
-                    \\"tokenType\\": {
-                      \\"name\\": \\"ToLeftToken\\",
-                      \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 39,
-                      \\"CATEGORIES\\": [],
-                      \\"categoryMatches\\": [],
-                      \\"categoryMatchesMap\\": {},
-                      \\"isParent\\": false
-                    }
-                  }
-                ],
                 \\"from\\": [
                   {
                     \\"name\\": \\"Pipe\\",
@@ -5355,12 +4973,12 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                                                           \\"NumberLiteral\\": [
                                                             {
                                                               \\"image\\": \\"1\\",
-                                                              \\"startOffset\\": 9,
-                                                              \\"endOffset\\": 9,
+                                                              \\"startOffset\\": 0,
+                                                              \\"endOffset\\": 0,
                                                               \\"startLine\\": 1,
                                                               \\"endLine\\": 1,
-                                                              \\"startColumn\\": 10,
-                                                              \\"endColumn\\": 10,
+                                                              \\"startColumn\\": 1,
+                                                              \\"endColumn\\": 1,
                                                               \\"tokenTypeIdx\\": 4,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"NumberLiteral\\",
@@ -5397,6 +5015,48 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                           \\"children\\": {}
                         }
                       ]
+                    }
+                  }
+                ],
+                \\"ToRightToken\\": [
+                  {
+                    \\"image\\": \\"->\\",
+                    \\"startOffset\\": 2,
+                    \\"endOffset\\": 3,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 3,
+                    \\"endColumn\\": 4,
+                    \\"tokenTypeIdx\\": 38,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"ToRightToken\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 38,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ],
+                \\"to\\": [
+                  {
+                    \\"image\\": \\"value\\",
+                    \\"startOffset\\": 5,
+                    \\"endOffset\\": 9,
+                    \\"startLine\\": 1,
+                    \\"endLine\\": 1,
+                    \\"startColumn\\": 6,
+                    \\"endColumn\\": 10,
+                    \\"tokenTypeIdx\\": 9,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 9,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
                     }
                   }
                 ]

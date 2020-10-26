@@ -14,7 +14,7 @@ describe('condition number', () => {
 
   test('1', () => {
     const source = `
-x <- "test" = "test"
+"test" = "test" -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -25,7 +25,7 @@ x <- "test" = "test"
 
   test('2', () => {
     const source = `
-x <- "test1" = "test"
+"test1" = "test" -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -36,8 +36,8 @@ x <- "test1" = "test"
 
   test('3', () => {
     const source = `
-str <- "test"
-x <- "test" = str
+"test" -> str
+"test" = str  -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -48,8 +48,8 @@ x <- "test" = str
 
   test('4', () => {
     const source = `
-str <- "test1"
-x <- "test" = str
+"test1" -> str
+"test" = str -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -60,8 +60,8 @@ x <- "test" = str
 
   test('5', () => {
     const source = `
-str <- "test1"
-x <- "test" > str
+"test1" -> str
+"test" > str -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -72,8 +72,8 @@ x <- "test" > str
 
   test('6', () => {
     const source = `
-str <- "test1"
-x <- "test" < str
+"test1" -> str
+"test" < str -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -84,8 +84,8 @@ x <- "test" < str
 
   test('7', () => {
     const source = `
-str <- "test1"
-x <- "test" <= str
+"test1" -> str
+"test" <= str -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -96,8 +96,8 @@ x <- "test" <= str
 
   test('7', () => {
     const source = `
-str <- "test1"
-x <- "test" >= str
+"test1" -> str
+"test" >= str -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({

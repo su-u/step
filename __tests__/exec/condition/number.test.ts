@@ -14,7 +14,7 @@ describe('condition number', () => {
 
   test('1 LessThan', () => {
     const source = `
-x <- 1 > 0
+1 > 0 -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -25,7 +25,7 @@ x <- 1 > 0
 
   test('2 OverThan', () => {
     const source = `
-x <- 1 < 0
+1 < 0 -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -36,7 +36,7 @@ x <- 1 < 0
 
   test('3 AmountMore', () => {
     const source = `
-x <- 1 <= 0
+1 <= 0 -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -47,7 +47,7 @@ x <- 1 <= 0
 
   test('4 AmountLess', () => {
     const source = `
-x <- 1 >= 0
+1 >= 0 -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -58,7 +58,7 @@ x <- 1 >= 0
 
   test('5 Equal', () => {
     const source = `
-x <- 1 = 0
+1 = 0 -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -69,7 +69,7 @@ x <- 1 = 0
 
   test('6 Equal', () => {
     const source = `
-x <- 1 = 1
+1 = 1 -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -80,7 +80,7 @@ x <- 1 = 1
 
   test('7 Equal', () => {
     const source = `
-x <- 1.8 = 1.8
+1.8 = 1.8 -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
@@ -91,7 +91,7 @@ x <- 1.8 = 1.8
 
   test('8 Equal', () => {
     const source = `
-x <- 1.8 = 1.8
+1.8 = 1.8 -> x
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('x')).toStrictEqual({
