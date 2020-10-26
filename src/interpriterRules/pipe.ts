@@ -1,6 +1,7 @@
 import { IInterpreterRules } from './types';
 import { VariableManager } from '../manager';
 import { LiteralTokens } from '../tokens';
+import { TypeError } from '../error';
 
 export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
   const childrenAst = ast.children.from[0];
@@ -8,6 +9,7 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
   const value = execObject.interpreter({ ast: childrenAst, manager, execObject });
   if (tail.children.PipeToken !== undefined) {
     if (tail.children.toEach !== undefined) {
+      if (value.start === undefined) throw new TypeError(value.name);
       const eachObj = tail.children.toEach[0];
       const range = Array.from(Array(value.end - value.start + 1).keys(), (x) => x + value.start);
       range.forEach((i) => {

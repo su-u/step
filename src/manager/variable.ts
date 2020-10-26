@@ -1,3 +1,5 @@
+import { NullReferenceVariableError, OutOfRangeError  } from '../error';
+
 export class VariableManager {
   private _returnValue = undefined;
   private _parent: VariableManager | null;
@@ -65,11 +67,13 @@ export class VariableManager {
 
   private getArrayElementVariable(name: string, index: number) {
     if (this.variables.has(name)) {
+      const value = this.variables.get(name);
+      if (index >= value.image.length) throw new OutOfRangeError(`${name}`);
       return this.variables.get(name).image[index];
     }
     const value = (this._parent !== null && this._parent.reference(name, index)) || null;
     if (value === null) {
-      throw new Error(`配列変数が参照できませんでした。${name}, ${index}`);
+      throw new NullReferenceVariableError(`${name}`, name);
     }
     return value;
   }
@@ -80,7 +84,7 @@ export class VariableManager {
     }
     const value = (this._parent !== null && this._parent.reference(name)) || null;
     if (value === null) {
-      throw new Error(`変数が参照できませんでした。${name}`);
+      throw new NullReferenceVariableError(`${name}`, name);
     }
     return value;
   }
