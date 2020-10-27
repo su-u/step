@@ -1,5 +1,0 @@
-1 ~ 8 -> range
-101 -> v
-range |> each (i) {
-  v |> console
-}

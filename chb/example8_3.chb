@@ -1,6 +1,0 @@
-value <- 1
-if (value) {
-  "test" |> console
-} else {
-  "test2" |> console
-}

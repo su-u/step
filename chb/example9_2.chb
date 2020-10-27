@@ -1,5 +1,0 @@
-function func(str) {
-  str + "e" |> console
-}
-
-func("test")

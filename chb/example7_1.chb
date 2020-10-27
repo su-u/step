@@ -1,4 +1,0 @@
-1 ~ 10 -> range
-range |> each (i) {
-  i |> console
-}
