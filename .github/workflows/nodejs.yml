@@ -1,0 +1,43 @@
+name: Node Test
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+        - 'src/**'
+        - 'chb/**'
+        - '__tests__/**'
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'chb/**'
+      - '__tests__/**'
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [10, 12, 14]
+
+    steps:
+      - name: Prepare / Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: yarn install
+        run: |
+          yarn install
+      - name: yarn test
+        run: |
+          yarn run test
+        env:
+          CI: true

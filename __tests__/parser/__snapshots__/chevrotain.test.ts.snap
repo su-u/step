@@ -524,6 +524,136 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
             }
           ]
         }
+      },
+      {
+        \\"name\\": \\"Assignment\\",
+        \\"children\\": {
+          \\"ToRight\\": [
+            {
+              \\"name\\": \\"ToRight\\",
+              \\"children\\": {
+                \\"from\\": [
+                  {
+                    \\"name\\": \\"Pipe\\",
+                    \\"children\\": {
+                      \\"from\\": [
+                        {
+                          \\"name\\": \\"PipeFrom\\",
+                          \\"children\\": {
+                            \\"LogicExpression\\": [
+                              {
+                                \\"name\\": \\"LogicExpression\\",
+                                \\"children\\": {
+                                  \\"RelationExpression\\": [
+                                    {
+                                      \\"name\\": \\"RelationExpression\\",
+                                      \\"children\\": {
+                                        \\"Expression\\": [
+                                          {
+                                            \\"name\\": \\"Expression\\",
+                                            \\"children\\": {
+                                              \\"Term\\": [
+                                                {
+                                                  \\"name\\": \\"Term\\",
+                                                  \\"children\\": {
+                                                    \\"Factor\\": [
+                                                      {
+                                                        \\"name\\": \\"Factor\\",
+                                                        \\"children\\": {
+                                                          \\"NumberLiteral\\": [
+                                                            {
+                                                              \\"image\\": \\"100\\",
+                                                              \\"startOffset\\": 44,
+                                                              \\"endOffset\\": 46,
+                                                              \\"startLine\\": 5,
+                                                              \\"endLine\\": 5,
+                                                              \\"startColumn\\": 1,
+                                                              \\"endColumn\\": 3,
+                                                              \\"tokenTypeIdx\\": 4,
+                                                              \\"tokenType\\": {
+                                                                \\"name\\": \\"NumberLiteral\\",
+                                                                \\"PATTERN\\": {},
+                                                                \\"tokenTypeIdx\\": 4,
+                                                                \\"CATEGORIES\\": [],
+                                                                \\"categoryMatches\\": [],
+                                                                \\"categoryMatchesMap\\": {},
+                                                                \\"isParent\\": false
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      \\"tail\\": [
+                        {
+                          \\"name\\": \\"PipeTail\\",
+                          \\"children\\": {}
+                        }
+                      ]
+                    }
+                  }
+                ],
+                \\"ToRightToken\\": [
+                  {
+                    \\"image\\": \\"->\\",
+                    \\"startOffset\\": 48,
+                    \\"endOffset\\": 49,
+                    \\"startLine\\": 5,
+                    \\"endLine\\": 5,
+                    \\"startColumn\\": 5,
+                    \\"endColumn\\": 6,
+                    \\"tokenTypeIdx\\": 38,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"ToRightToken\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 38,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ],
+                \\"to\\": [
+                  {
+                    \\"image\\": \\"valiue\\",
+                    \\"startOffset\\": 51,
+                    \\"endOffset\\": 56,
+                    \\"startLine\\": 5,
+                    \\"endLine\\": 5,
+                    \\"startColumn\\": 8,
+                    \\"endColumn\\": 13,
+                    \\"tokenTypeIdx\\": 9,
+                    \\"tokenType\\": {
+                      \\"name\\": \\"Identifier\\",
+                      \\"PATTERN\\": {},
+                      \\"tokenTypeIdx\\": 9,
+                      \\"CATEGORIES\\": [],
+                      \\"categoryMatches\\": [],
+                      \\"categoryMatchesMap\\": {},
+                      \\"isParent\\": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
       }
     ]
   }
