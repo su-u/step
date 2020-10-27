@@ -1,3 +1,5 @@
+![Node Test](https://github.com/sudalab/chiba-lang/workflows/Node%20Test/badge.svg)
+
 # chiba-lang（仮称）
 
 Chiba-langはプログラミング言語である．
