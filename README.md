@@ -53,7 +53,7 @@ npm install -g yarn
 yarn install
 ```
 
-## インタープリター実行
+## インタープリタ実行TS版
 ```bash
 ts-node .\src\cli.ts [chb]
 ```
