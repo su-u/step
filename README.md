@@ -47,18 +47,23 @@ $ node syntax.js example1.chb
 
 # chevrotain版
 
-## ビルド方法
-必要
-
-- nodejs
-- yarn
-
-```
+## 環境用意
+```bash
+npm install -g yarn
 yarn install
-yarn run tsc
 ```
 
-## ASTの確認方法
-- `chb/main.chb`のファイルを作成する
-- `yarn run parser-watch`
-- `chb/main.chb`にソースを記述する
+## インタープリター実行
+```bash
+ts-node .\src\cli.ts [chb]
+```
+
+例：
+```bash
+ts-node .\src\cli.ts .\chb\main.chb
+```
+
+## テスト実行
+```bash
+yarn run test
+```
