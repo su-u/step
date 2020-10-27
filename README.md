@@ -69,3 +69,7 @@ ts-node .\src\cli.ts .\chb\main.chb
 ```bash
 yarn run test
 ```
+
+# CI
+github actionsを利用したCIが動作しています。
+落ちてもmergeできますが、可能な限り通してください。
