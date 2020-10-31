@@ -152,4 +152,26 @@ array[index1] -> a1
       image: 7,
     });
   });
+
+  test('7', () => {
+    const source = `
+[6, 7, 8, 9, 10] -> array
+1 -> array[0]
+2 -> array[1]
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('array').image.length).toBe(5);
+    expect(resultManager.reference('array').image[0]).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 1,
+    });
+    expect(resultManager.reference('array').image[1]).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 2,
+    });
+    expect(resultManager.reference('array').image[2]).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 8,
+    });
+  });
 });
