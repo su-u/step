@@ -3,17 +3,31 @@ import { LiteralTokens } from '../tokens';
 import { BooleanLiteralTokens } from '../tokens';
 
 export type BooleanObjectMethodType = {
-  '=': (obj: LiteralType<string>, param: any) => any;
-  and: (obj: LiteralType<string>, param: any) => any;
-  or: (obj: LiteralType<string>, param: any) => any;
+  '=': (obj: any, param: any) => any;
+  and: (obj: any, param: any) => any;
+  or: (obj: any, param: any) => any;
 };
 
 export const BooleanClass: BooleanObjectMethodType = {
   '=': (obj, param) => {
+    if (obj.name === LiteralTokens.NumberLiteralRange && param.name === LiteralTokens.NumberLiteralRange) {
+      return {
+        name: LiteralTokens.BooleanLiteral,
+        image: String(
+          obj.start === obj.start && obj.end === param.end
+        ),
+      };
+    }
+    if (obj.name !== param.name) {
+      return {
+        name: LiteralTokens.BooleanLiteral,
+        image: 'false',
+      };
+    }
     return {
       name: LiteralTokens.BooleanLiteral,
       image: String(
-        obj.image === param.image && obj.name === param.name && obj.image !== undefined,
+        obj.image === param.image && obj.image !== undefined,
       ),
     };
   },
