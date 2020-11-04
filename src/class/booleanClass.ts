@@ -14,7 +14,7 @@ export const BooleanClass: BooleanObjectMethodType = {
       return {
         name: LiteralTokens.BooleanLiteral,
         image: String(
-          obj.start === obj.start && obj.end === param.end
+          obj.start === param.start && obj.end === param.end
         ),
       };
     }
@@ -35,7 +35,6 @@ export const BooleanClass: BooleanObjectMethodType = {
     return {
       name: LiteralTokens.BooleanLiteral,
       image: String(
-        // @ts-ignore
         obj.image === BooleanLiteralTokens.true && param.image === BooleanLiteralTokens.true,
       ),
     };
@@ -44,7 +43,6 @@ export const BooleanClass: BooleanObjectMethodType = {
     return {
       name: LiteralTokens.BooleanLiteral,
       image: String(
-        // @ts-ignore
         obj.image === BooleanLiteralTokens.true || param.image === BooleanLiteralTokens.true,
       ),
     };

@@ -168,5 +168,39 @@ describe('BooleanClass', () => {
       );
       expect(result).toStrictEqual(TRUE);
     });
+
+    test('11', () => {
+      const result = func(
+        {
+          name: LiteralTokens.NumberLiteralRange,
+          start: 1,
+          end: 10,
+        },
+        {
+          name: LiteralTokens.NumberLiteralRange,
+          start: 0,
+          end: 10,
+        },
+        '=',
+      );
+      expect(result).toStrictEqual(FALSE);
+    });
+
+
+    test('12', () => {
+      const result = func(
+        {
+          name: LiteralTokens.NumberLiteralRange,
+          start: 1,
+          end: 10,
+        },
+        {
+          name: LiteralTokens.NumberLiteral,
+          image: 10
+        },
+        '=',
+      );
+      expect(result).toStrictEqual(FALSE);
+    });
   });
 });
