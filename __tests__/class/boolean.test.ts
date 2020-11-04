@@ -186,7 +186,6 @@ describe('BooleanClass', () => {
       expect(result).toStrictEqual(FALSE);
     });
 
-
     test('12', () => {
       const result = func(
         {
@@ -196,11 +195,92 @@ describe('BooleanClass', () => {
         },
         {
           name: LiteralTokens.NumberLiteral,
-          image: 10
+          image: 10,
         },
         '=',
       );
       expect(result).toStrictEqual(FALSE);
+    });
+
+    test('13', () => {
+      const result = func(
+        {
+          name: LiteralTokens.NumberLiteral,
+          image: 10,
+        },
+        {
+          name: LiteralTokens.NumberLiteralRange,
+          start: 1,
+          end: 10,
+        },
+        '=',
+      );
+      expect(result).toStrictEqual(FALSE);
+    });
+
+    test('14', () => {
+      const result = func(
+        {
+          name: LiteralTokens.StringLiteral,
+          image: '1~10',
+        },
+        {
+          name: LiteralTokens.NumberLiteralRange,
+          start: 1,
+          end: 10,
+        },
+        '=',
+      );
+      expect(result).toStrictEqual(FALSE);
+    });
+
+    test('15', () => {
+      const result = func(
+        {
+          name: LiteralTokens.NumberLiteralRange,
+          start: 1,
+          end: 11,
+        },
+        {
+          name: LiteralTokens.StringLiteral,
+          image: '1~10',
+        },
+        '=',
+      );
+      expect(result).toStrictEqual(FALSE);
+    });
+
+    test('16', () => {
+      const result = func(
+        {
+          name: LiteralTokens.ArrayLiteral,
+          image: [
+            {
+              name: LiteralTokens.StringLiteral,
+              image: 'false',
+            },
+            {
+              name: LiteralTokens.StringLiteral,
+              image: 'false',
+            },
+          ],
+        },
+        {
+          name: LiteralTokens.ArrayLiteral,
+          image: [
+            {
+              name: LiteralTokens.StringLiteral,
+              image: 'false',
+            },
+            {
+              name: LiteralTokens.StringLiteral,
+              image: 'false',
+            },
+          ],
+        },
+        '=',
+      );
+      expect(result).toStrictEqual(TRUE);
     });
   });
 });

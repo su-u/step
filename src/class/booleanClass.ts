@@ -1,4 +1,3 @@
-import { LiteralType } from '../types/literal';
 import { LiteralTokens } from '../tokens';
 import { BooleanLiteralTokens } from '../tokens';
 
@@ -10,11 +9,26 @@ export type BooleanObjectMethodType = {
 
 export const BooleanClass: BooleanObjectMethodType = {
   '=': (obj, param) => {
-    if (obj.name === LiteralTokens.NumberLiteralRange && param.name === LiteralTokens.NumberLiteralRange) {
+    if (
+      obj.name === LiteralTokens.NumberLiteralRange &&
+      param.name === LiteralTokens.NumberLiteralRange
+    ) {
+      return {
+        name: LiteralTokens.BooleanLiteral,
+        image: String(obj.start === param.start && obj.end === param.end),
+      };
+    }
+    if (obj.name === LiteralTokens.ArrayLiteral && param.name === LiteralTokens.ArrayLiteral) {
+      if (obj.image.length !== param.image.length) {
+        return {
+          name: LiteralTokens.BooleanLiteral,
+          image: 'false',
+        };
+      }
       return {
         name: LiteralTokens.BooleanLiteral,
         image: String(
-          obj.start === param.start && obj.end === param.end
+          obj.image.every((x, i) => BooleanClass['='](x, param.image[i]).image === 'true'),
         ),
       };
     }
@@ -26,9 +40,7 @@ export const BooleanClass: BooleanObjectMethodType = {
     }
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: String(
-        obj.image === param.image && obj.image !== undefined,
-      ),
+      image: String(obj.image === param.image && obj.image !== undefined),
     };
   },
   and: (obj, param) => {
