@@ -282,5 +282,62 @@ describe('BooleanClass', () => {
       );
       expect(result).toStrictEqual(TRUE);
     });
+
+    test('17', () => {
+      const result = func(
+        {
+          name: LiteralTokens.ArrayLiteral,
+          image: [
+            {
+              name: LiteralTokens.StringLiteral,
+              image: 'false',
+            },
+            {
+              name: LiteralTokens.StringLiteral,
+              image: 'false',
+            },
+          ],
+        },
+        {
+          name: LiteralTokens.ArrayLiteral,
+          image: [
+            {
+              name: LiteralTokens.StringLiteral,
+              image: 'false',
+            },
+            {
+              name: LiteralTokens.BooleanLiteral,
+              image: 'false',
+            },
+          ],
+        },
+        '=',
+      );
+      expect(result).toStrictEqual(FALSE);
+    });
+
+    test('18', () => {
+      const result = func(
+        {
+          name: LiteralTokens.ArrayLiteral,
+          image: [
+            {
+              name: LiteralTokens.StringLiteral,
+              image: 'false',
+            },
+            {
+              name: LiteralTokens.StringLiteral,
+              image: 'false',
+            },
+          ],
+        },
+        {
+          name: LiteralTokens.StringLiteral,
+          image: 'false',
+        },
+        '=',
+      );
+      expect(result).toStrictEqual(FALSE);
+    });
   });
 });

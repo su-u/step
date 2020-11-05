@@ -28,7 +28,9 @@ export const BooleanClass: BooleanObjectMethodType = {
       return {
         name: LiteralTokens.BooleanLiteral,
         image: String(
-          obj.image.every((x, i) => BooleanClass['='](x, param.image[i]).image === 'true'),
+          obj.image.every(
+            (x, i) => BooleanClass['='](x, param.image[i]).image === BooleanLiteralTokens.true,
+          ),
         ),
       };
     }
