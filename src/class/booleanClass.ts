@@ -62,3 +62,20 @@ export const BooleanClass: BooleanObjectMethodType = {
     };
   },
 };
+
+export const toBoolean = (obj: any) => {
+  switch(obj.name) {
+    case LiteralTokens.BooleanLiteral:
+      return obj;
+    case LiteralTokens.NumberLiteral:
+      return {
+        name: LiteralTokens.BooleanLiteral,
+        image: String(obj.image > 0),
+      }
+    case LiteralTokens.StringLiteral:
+      return {
+        name: LiteralTokens.BooleanLiteral,
+        image: String(obj.image !== ''),
+      }
+  }
+}
