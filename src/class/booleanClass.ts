@@ -99,6 +99,6 @@ export const toBoolean = (obj: any) => {
       return {
         name: LiteralTokens.DebugLiteral,
         image: null,
-      }
+      };
   }
 };
