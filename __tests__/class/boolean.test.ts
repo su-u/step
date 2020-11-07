@@ -1,7 +1,6 @@
 import { LiteralTokens } from '@/tokens';
 import { BooleanClass, toBoolean } from '@/class/booleanClass';
-import { BooleanLiteralTokens } from "@/tokens";
-import { isTrue } from "@/interpriterRules/ifStatement";
+import { BooleanLiteralTokens } from '@/tokens';
 
 const func = (obj1, obj2, method) => {
   return BooleanClass[method](obj1, obj2);
@@ -389,6 +388,53 @@ describe('BooleanClass', () => {
       expect(result).toStrictEqual(TRUE);
     });
 
+    test('4', () => {
+      const result = func(
+        {
+          name: LiteralTokens.BooleanLiteral,
+          image: 'false',
+        },
+        {
+          name: LiteralTokens.BooleanLiteral,
+          image: 'false',
+        },
+        'or',
+      );
+      expect(result).toStrictEqual(FALSE);
+    });
+  });
+
+  describe('and', () => {
+    test('1', () => {
+      const result = func(
+        {
+          name: LiteralTokens.BooleanLiteral,
+          image: 'true',
+        },
+        {
+          name: LiteralTokens.BooleanLiteral,
+          image: 'true',
+        },
+        'and',
+      );
+      expect(result).toStrictEqual(TRUE);
+    });
+
+    test('2', () => {
+      const result = func(
+        {
+          name: LiteralTokens.BooleanLiteral,
+          image: 'true',
+        },
+        {
+          name: LiteralTokens.BooleanLiteral,
+          image: 'false',
+        },
+        'and',
+      );
+      expect(result).toStrictEqual(FALSE);
+    });
+
     test('3', () => {
       const result = func(
         {
@@ -399,14 +445,29 @@ describe('BooleanClass', () => {
           name: LiteralTokens.BooleanLiteral,
           image: 'true',
         },
-        'or',
+        'and',
       );
-      expect(result).toStrictEqual(TRUE);
+      expect(result).toStrictEqual(FALSE);
+    });
+
+    test('4', () => {
+      const result = func(
+        {
+          name: LiteralTokens.BooleanLiteral,
+          image: 'false',
+        },
+        {
+          name: LiteralTokens.BooleanLiteral,
+          image: 'false',
+        },
+        'and',
+      );
+      expect(result).toStrictEqual(FALSE);
     });
   });
 
   describe('toBoolean', () => {
-    test('1', () => {
+    test('Boolean', () => {
       const conditions = [
         {
           name: LiteralTokens.BooleanLiteral,
@@ -469,6 +530,64 @@ describe('BooleanClass', () => {
           name: LiteralTokens.NumberLiteral,
           image: -100,
           expect: false,
+        },
+      ];
+      conditions.forEach((condition: any) => {
+        const result = toBoolean({
+          name: condition.name,
+          image: condition.image,
+        });
+        expect(result.image).toBe(String(condition.expect));
+      });
+    });
+
+    test('String', () => {
+      const conditions = [
+        {
+          name: LiteralTokens.StringLiteral,
+          image: 'true',
+          expect: true,
+        },
+        {
+          name: LiteralTokens.StringLiteral,
+          image: '',
+          expect: false,
+        },
+        {
+          name: LiteralTokens.StringLiteral,
+          image: 'false',
+          expect: true,
+        },
+      ];
+      conditions.forEach((condition: any) => {
+        const result = toBoolean({
+          name: condition.name,
+          image: condition.image,
+        });
+        expect(result.image).toBe(String(condition.expect));
+      });
+    });
+
+    test('Array', () => {
+      const conditions = [
+        {
+          name: LiteralTokens.ArrayLiteral,
+          image: [
+            {
+              name: LiteralTokens.BooleanLiteral,
+              image: 'false',
+            },
+            {
+              name: LiteralTokens.BooleanLiteral,
+              image: 'false',
+            },
+          ],
+          expect: true,
+        },
+        {
+          name: LiteralTokens.ArrayLiteral,
+          image: [],
+          expect: true,
         },
       ];
       conditions.forEach((condition: any) => {

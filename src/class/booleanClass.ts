@@ -46,36 +46,49 @@ export const BooleanClass: BooleanObjectMethodType = {
     };
   },
   and: (obj, param) => {
+    const boolObj = toBoolean(obj);
+    const boolParam = toBoolean(param);
+
     return {
       name: LiteralTokens.BooleanLiteral,
       image: String(
-        obj.image === BooleanLiteralTokens.true && param.image === BooleanLiteralTokens.true,
+        boolObj.image === BooleanLiteralTokens.true &&
+          boolParam.image === BooleanLiteralTokens.true,
       ),
     };
   },
   or: (obj, param) => {
+    const boolObj = toBoolean(obj);
+    const boolParam = toBoolean(param);
+
     return {
       name: LiteralTokens.BooleanLiteral,
       image: String(
-        obj.image === BooleanLiteralTokens.true || param.image === BooleanLiteralTokens.true,
+        boolObj.image === BooleanLiteralTokens.true ||
+          boolParam.image === BooleanLiteralTokens.true,
       ),
     };
   },
 };
 
 export const toBoolean = (obj: any) => {
-  switch(obj.name) {
+  switch (obj.name) {
     case LiteralTokens.BooleanLiteral:
       return obj;
     case LiteralTokens.NumberLiteral:
       return {
         name: LiteralTokens.BooleanLiteral,
         image: String(obj.image > 0),
-      }
+      };
     case LiteralTokens.StringLiteral:
       return {
         name: LiteralTokens.BooleanLiteral,
         image: String(obj.image !== ''),
-      }
+      };
+    case LiteralTokens.ArrayLiteral:
+      return {
+        name: LiteralTokens.BooleanLiteral,
+        image: BooleanLiteralTokens.true,
+      };
   }
-}
+};
