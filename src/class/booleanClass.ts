@@ -90,5 +90,15 @@ export const toBoolean = (obj: any) => {
         name: LiteralTokens.BooleanLiteral,
         image: BooleanLiteralTokens.true,
       };
+    case LiteralTokens.NumberLiteralRange:
+      return {
+        name: LiteralTokens.BooleanLiteral,
+        image: BooleanLiteralTokens.true,
+      };
+    default:
+      return {
+        name: LiteralTokens.DebugLiteral,
+        image: null,
+      }
   }
 };

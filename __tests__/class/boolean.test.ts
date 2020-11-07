@@ -598,5 +598,35 @@ describe('BooleanClass', () => {
         expect(result.image).toBe(String(condition.expect));
       });
     });
+
+    test('Range', () => {
+      const conditions = [
+        {
+          name: LiteralTokens.NumberLiteralRange,
+          start: 0,
+          end: 1,
+          expect: true,
+        },
+        {
+          name: LiteralTokens.NumberLiteralRange,
+          start: 0,
+          end: 0,
+          expect: true,
+        },
+        {
+          name: LiteralTokens.NumberLiteralRange,
+          start: 0,
+          end: 10,
+          expect: true,
+        },
+      ];
+      conditions.forEach((condition: any) => {
+        const result = toBoolean({
+          name: condition.name,
+          image: condition.image,
+        });
+        expect(result.image).toBe(String(condition.expect));
+      });
+    });
   });
 });
