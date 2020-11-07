@@ -340,6 +340,35 @@ describe('BooleanClass', () => {
       );
       expect(result).toStrictEqual(FALSE);
     });
+
+    test('19', () => {
+      const result = func(
+        {
+          name: LiteralTokens.ArrayLiteral,
+          image: [
+            {
+              name: LiteralTokens.StringLiteral,
+              image: 'false',
+            },
+            {
+              name: LiteralTokens.StringLiteral,
+              image: 'false',
+            },
+          ],
+        },
+        {
+          name: LiteralTokens.ArrayLiteral,
+          image: [
+            {
+              name: LiteralTokens.StringLiteral,
+              image: 'false',
+            },
+          ],
+        },
+        '=',
+      );
+      expect(result).toStrictEqual(FALSE);
+    });
   });
 
   describe('or', () => {
@@ -626,6 +655,23 @@ describe('BooleanClass', () => {
           image: condition.image,
         });
         expect(result.image).toBe(String(condition.expect));
+      });
+    });
+
+    test('Debug', () => {
+      const conditions = [
+        {
+          name: LiteralTokens.DebugLiteral,
+          image: null,
+          expect: null,
+        },
+      ];
+      conditions.forEach((condition: any) => {
+        const result = toBoolean({
+          name: condition.name,
+          image: condition.image,
+        });
+        expect(result.image).toBe(condition.expect);
       });
     });
   });
