@@ -1,6 +1,7 @@
 import { IInterpreterRules } from './types';
 import { Classes } from '../class';
 import { Operators } from '../operators';
+import { TypeError } from "@/error";
 
 export const term = ({ ast, manager, execObject }: IInterpreterRules) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
@@ -14,6 +15,16 @@ export const term = ({ ast, manager, execObject }: IInterpreterRules) => {
   });
   return literals.reduce((a, c, i) => {
     const name = c.name;
-    return Classes[name][operators[i - 1]](c, a);
+    return calc(name, operators, i - 1, a, c);
   });
 };
+
+const calc = (name, operators, i, a, b) => {
+  let result = {};
+  try {
+    result = Classes[name][operators[i]](b, a);
+  } catch (e) {
+    throw new TypeError('演算子がありません。')
+  }
+  return result;
+}
