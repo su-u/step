@@ -14,7 +14,7 @@ describe('if', () => {
   test('1', () => {
     const source = `
 1 -> x
-if: x {
+if (x) {
   x + x
 }
     `;
@@ -24,7 +24,7 @@ if: x {
   test('2', () => {
     const source = `
 1 -> x
-if: x {
+if (x) {
   x + x
 } else {
   x - x
@@ -37,8 +37,8 @@ if: x {
     const source = `
 0 -> value
 1 -> x
-if: x {
-  1 ~ 10 |> each: i {
+if (x) {
+  1 ~ 10 |> each (i) {
     10 -> value
   }
 } else {
@@ -55,7 +55,7 @@ if: x {
   test('4', () => {
     const source = `
 1 -> value1
-if: true {
+if (true) {
   2 -> value1
   1 -> value2
 }
@@ -68,12 +68,12 @@ if: true {
 
   test('5', () => {
     const source = `
-function judge: x, y {
+function judge(x, y) {
   return x = y
 }
 
 0 -> value1
-if: { 1, 1 } |> judge  {
+if ({ 1, 1 } |> judge)  {
   1 -> value1
 } else {
   2 -> value1
@@ -89,7 +89,7 @@ if: { 1, 1 } |> judge  {
   test('6', () => {
     const source = `
 0 -> value
-if: false {
+if (false) {
   1 -> value
 }
     `;
@@ -103,7 +103,7 @@ if: false {
   test('6', () => {
     const source = `
 0 -> value
-if: 1 {
+if (1) {
   1 -> value
 }
     `;
@@ -117,7 +117,7 @@ if: 1 {
   test('7', () => {
     const source = `
 0 -> value
-if: 0 {
+if (0) {
   1 -> value
 }
     `;

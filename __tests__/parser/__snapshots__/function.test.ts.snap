@@ -31,7 +31,7 @@ exports[`関数 1 1`] = `
           ],
           \\"FunctionNameToken\\": [
             {
-              \\"image\\": \\"myFunc:\\",
+              \\"image\\": \\"myFunc(\\",
               \\"startOffset\\": 14,
               \\"endOffset\\": 20,
               \\"startLine\\": 2,
@@ -56,15 +56,37 @@ exports[`関数 1 1`] = `
               \\"children\\": {}
             }
           ],
+          \\"RBrackets\\": [
+            {
+              \\"image\\": \\")\\",
+              \\"startOffset\\": 21,
+              \\"endOffset\\": 21,
+              \\"startLine\\": 2,
+              \\"endLine\\": 2,
+              \\"startColumn\\": 21,
+              \\"endColumn\\": 21,
+              \\"tokenTypeIdx\\": 11,
+              \\"tokenType\\": {
+                \\"name\\": \\"RBrackets\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 11,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false,
+                \\"LABEL\\": \\")\\"
+              }
+            }
+          ],
           \\"LCurly\\": [
             {
               \\"image\\": \\"{\\",
-              \\"startOffset\\": 22,
-              \\"endOffset\\": 22,
+              \\"startOffset\\": 23,
+              \\"endOffset\\": 23,
               \\"startLine\\": 2,
               \\"endLine\\": 2,
-              \\"startColumn\\": 22,
-              \\"endColumn\\": 22,
+              \\"startColumn\\": 23,
+              \\"endColumn\\": 23,
               \\"tokenTypeIdx\\": 12,
               \\"tokenType\\": {
                 \\"name\\": \\"LCurly\\",
@@ -121,8 +143,8 @@ exports[`関数 1 1`] = `
                                                                       \\"NumberLiteral\\": [
                                                                         {
                                                                           \\"image\\": \\"1\\",
-                                                                          \\"startOffset\\": 30,
-                                                                          \\"endOffset\\": 30,
+                                                                          \\"startOffset\\": 31,
+                                                                          \\"endOffset\\": 31,
                                                                           \\"startLine\\": 3,
                                                                           \\"endLine\\": 3,
                                                                           \\"startColumn\\": 7,
@@ -154,8 +176,8 @@ exports[`関数 1 1`] = `
                                                                       \\"NumberLiteral\\": [
                                                                         {
                                                                           \\"image\\": \\"1\\",
-                                                                          \\"startOffset\\": 34,
-                                                                          \\"endOffset\\": 34,
+                                                                          \\"startOffset\\": 35,
+                                                                          \\"endOffset\\": 35,
                                                                           \\"startLine\\": 3,
                                                                           \\"endLine\\": 3,
                                                                           \\"startColumn\\": 11,
@@ -181,8 +203,8 @@ exports[`関数 1 1`] = `
                                                           \\"AdditionOperator\\": [
                                                             {
                                                               \\"image\\": \\"+\\",
-                                                              \\"startOffset\\": 32,
-                                                              \\"endOffset\\": 32,
+                                                              \\"startOffset\\": 33,
+                                                              \\"endOffset\\": 33,
                                                               \\"startLine\\": 3,
                                                               \\"endLine\\": 3,
                                                               \\"startColumn\\": 9,
@@ -248,8 +270,8 @@ exports[`関数 1 1`] = `
           \\"RCurly\\": [
             {
               \\"image\\": \\"}\\",
-              \\"startOffset\\": 40,
-              \\"endOffset\\": 40,
+              \\"startOffset\\": 41,
+              \\"endOffset\\": 41,
               \\"startLine\\": 4,
               \\"endLine\\": 4,
               \\"startColumn\\": 5,
@@ -305,7 +327,7 @@ exports[`関数 2 1`] = `
           ],
           \\"FunctionNameToken\\": [
             {
-              \\"image\\": \\"add:\\",
+              \\"image\\": \\"add(\\",
               \\"startOffset\\": 14,
               \\"endOffset\\": 17,
               \\"startLine\\": 2,
@@ -331,12 +353,12 @@ exports[`関数 2 1`] = `
                 \\"Identifier\\": [
                   {
                     \\"image\\": \\"x\\",
-                    \\"startOffset\\": 19,
-                    \\"endOffset\\": 19,
+                    \\"startOffset\\": 18,
+                    \\"endOffset\\": 18,
                     \\"startLine\\": 2,
                     \\"endLine\\": 2,
-                    \\"startColumn\\": 19,
-                    \\"endColumn\\": 19,
+                    \\"startColumn\\": 18,
+                    \\"endColumn\\": 18,
                     \\"tokenTypeIdx\\": 9,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
@@ -350,12 +372,12 @@ exports[`関数 2 1`] = `
                   },
                   {
                     \\"image\\": \\"y\\",
-                    \\"startOffset\\": 22,
-                    \\"endOffset\\": 22,
+                    \\"startOffset\\": 21,
+                    \\"endOffset\\": 21,
                     \\"startLine\\": 2,
                     \\"endLine\\": 2,
-                    \\"startColumn\\": 22,
-                    \\"endColumn\\": 22,
+                    \\"startColumn\\": 21,
+                    \\"endColumn\\": 21,
                     \\"tokenTypeIdx\\": 9,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
@@ -371,12 +393,12 @@ exports[`関数 2 1`] = `
                 \\"Comma\\": [
                   {
                     \\"image\\": \\",\\",
-                    \\"startOffset\\": 20,
-                    \\"endOffset\\": 20,
+                    \\"startOffset\\": 19,
+                    \\"endOffset\\": 19,
                     \\"startLine\\": 2,
                     \\"endLine\\": 2,
-                    \\"startColumn\\": 20,
-                    \\"endColumn\\": 20,
+                    \\"startColumn\\": 19,
+                    \\"endColumn\\": 19,
                     \\"tokenTypeIdx\\": 16,
                     \\"tokenType\\": {
                       \\"name\\": \\"Comma\\",
@@ -389,6 +411,28 @@ exports[`関数 2 1`] = `
                     }
                   }
                 ]
+              }
+            }
+          ],
+          \\"RBrackets\\": [
+            {
+              \\"image\\": \\")\\",
+              \\"startOffset\\": 22,
+              \\"endOffset\\": 22,
+              \\"startLine\\": 2,
+              \\"endLine\\": 2,
+              \\"startColumn\\": 22,
+              \\"endColumn\\": 22,
+              \\"tokenTypeIdx\\": 11,
+              \\"tokenType\\": {
+                \\"name\\": \\"RBrackets\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 11,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false,
+                \\"LABEL\\": \\")\\"
               }
             }
           ],
@@ -655,7 +699,7 @@ exports[`関数 3 1`] = `
           ],
           \\"FunctionNameToken\\": [
             {
-              \\"image\\": \\"func:\\",
+              \\"image\\": \\"func(\\",
               \\"startOffset\\": 14,
               \\"endOffset\\": 18,
               \\"startLine\\": 2,
@@ -681,12 +725,12 @@ exports[`関数 3 1`] = `
                 \\"Identifier\\": [
                   {
                     \\"image\\": \\"x\\",
-                    \\"startOffset\\": 20,
-                    \\"endOffset\\": 20,
+                    \\"startOffset\\": 19,
+                    \\"endOffset\\": 19,
                     \\"startLine\\": 2,
                     \\"endLine\\": 2,
-                    \\"startColumn\\": 20,
-                    \\"endColumn\\": 20,
+                    \\"startColumn\\": 19,
+                    \\"endColumn\\": 19,
                     \\"tokenTypeIdx\\": 9,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
@@ -700,12 +744,12 @@ exports[`関数 3 1`] = `
                   },
                   {
                     \\"image\\": \\"y\\",
-                    \\"startOffset\\": 23,
-                    \\"endOffset\\": 23,
+                    \\"startOffset\\": 22,
+                    \\"endOffset\\": 22,
                     \\"startLine\\": 2,
                     \\"endLine\\": 2,
-                    \\"startColumn\\": 23,
-                    \\"endColumn\\": 23,
+                    \\"startColumn\\": 22,
+                    \\"endColumn\\": 22,
                     \\"tokenTypeIdx\\": 9,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
@@ -721,12 +765,12 @@ exports[`関数 3 1`] = `
                 \\"Comma\\": [
                   {
                     \\"image\\": \\",\\",
-                    \\"startOffset\\": 21,
-                    \\"endOffset\\": 21,
+                    \\"startOffset\\": 20,
+                    \\"endOffset\\": 20,
                     \\"startLine\\": 2,
                     \\"endLine\\": 2,
-                    \\"startColumn\\": 21,
-                    \\"endColumn\\": 21,
+                    \\"startColumn\\": 20,
+                    \\"endColumn\\": 20,
                     \\"tokenTypeIdx\\": 16,
                     \\"tokenType\\": {
                       \\"name\\": \\"Comma\\",
@@ -739,6 +783,28 @@ exports[`関数 3 1`] = `
                     }
                   }
                 ]
+              }
+            }
+          ],
+          \\"RBrackets\\": [
+            {
+              \\"image\\": \\")\\",
+              \\"startOffset\\": 23,
+              \\"endOffset\\": 23,
+              \\"startLine\\": 2,
+              \\"endLine\\": 2,
+              \\"startColumn\\": 23,
+              \\"endColumn\\": 23,
+              \\"tokenTypeIdx\\": 11,
+              \\"tokenType\\": {
+                \\"name\\": \\"RBrackets\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 11,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false,
+                \\"LABEL\\": \\")\\"
               }
             }
           ],
@@ -1205,7 +1271,7 @@ exports[`関数 4 pipe 1`] = `
           ],
           \\"FunctionNameToken\\": [
             {
-              \\"image\\": \\"out:\\",
+              \\"image\\": \\"out(\\",
               \\"startOffset\\": 14,
               \\"endOffset\\": 17,
               \\"startLine\\": 2,
@@ -1231,12 +1297,12 @@ exports[`関数 4 pipe 1`] = `
                 \\"Identifier\\": [
                   {
                     \\"image\\": \\"str\\",
-                    \\"startOffset\\": 19,
-                    \\"endOffset\\": 21,
+                    \\"startOffset\\": 18,
+                    \\"endOffset\\": 20,
                     \\"startLine\\": 2,
                     \\"endLine\\": 2,
-                    \\"startColumn\\": 19,
-                    \\"endColumn\\": 21,
+                    \\"startColumn\\": 18,
+                    \\"endColumn\\": 20,
                     \\"tokenTypeIdx\\": 9,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
@@ -1249,6 +1315,28 @@ exports[`関数 4 pipe 1`] = `
                     }
                   }
                 ]
+              }
+            }
+          ],
+          \\"RBrackets\\": [
+            {
+              \\"image\\": \\")\\",
+              \\"startOffset\\": 21,
+              \\"endOffset\\": 21,
+              \\"startLine\\": 2,
+              \\"endLine\\": 2,
+              \\"startColumn\\": 21,
+              \\"endColumn\\": 21,
+              \\"tokenTypeIdx\\": 11,
+              \\"tokenType\\": {
+                \\"name\\": \\"RBrackets\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 11,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false,
+                \\"LABEL\\": \\")\\"
               }
             }
           ],
@@ -1474,7 +1562,7 @@ exports[`関数 5 pipe 1`] = `
           ],
           \\"FunctionNameToken\\": [
             {
-              \\"image\\": \\"out:\\",
+              \\"image\\": \\"out(\\",
               \\"startOffset\\": 14,
               \\"endOffset\\": 17,
               \\"startLine\\": 2,
@@ -1500,12 +1588,12 @@ exports[`関数 5 pipe 1`] = `
                 \\"Identifier\\": [
                   {
                     \\"image\\": \\"str\\",
-                    \\"startOffset\\": 19,
-                    \\"endOffset\\": 21,
+                    \\"startOffset\\": 18,
+                    \\"endOffset\\": 20,
                     \\"startLine\\": 2,
                     \\"endLine\\": 2,
-                    \\"startColumn\\": 19,
-                    \\"endColumn\\": 21,
+                    \\"startColumn\\": 18,
+                    \\"endColumn\\": 20,
                     \\"tokenTypeIdx\\": 9,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
@@ -1518,6 +1606,28 @@ exports[`関数 5 pipe 1`] = `
                     }
                   }
                 ]
+              }
+            }
+          ],
+          \\"RBrackets\\": [
+            {
+              \\"image\\": \\")\\",
+              \\"startOffset\\": 21,
+              \\"endOffset\\": 21,
+              \\"startLine\\": 2,
+              \\"endLine\\": 2,
+              \\"startColumn\\": 21,
+              \\"endColumn\\": 21,
+              \\"tokenTypeIdx\\": 11,
+              \\"tokenType\\": {
+                \\"name\\": \\"RBrackets\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 11,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false,
+                \\"LABEL\\": \\")\\"
               }
             }
           ],
@@ -1876,7 +1986,7 @@ exports[`関数 6 pipe 1`] = `
           ],
           \\"FunctionNameToken\\": [
             {
-              \\"image\\": \\"out:\\",
+              \\"image\\": \\"out(\\",
               \\"startOffset\\": 14,
               \\"endOffset\\": 17,
               \\"startLine\\": 2,
@@ -1902,12 +2012,12 @@ exports[`関数 6 pipe 1`] = `
                 \\"Identifier\\": [
                   {
                     \\"image\\": \\"str\\",
-                    \\"startOffset\\": 19,
-                    \\"endOffset\\": 21,
+                    \\"startOffset\\": 18,
+                    \\"endOffset\\": 20,
                     \\"startLine\\": 2,
                     \\"endLine\\": 2,
-                    \\"startColumn\\": 19,
-                    \\"endColumn\\": 21,
+                    \\"startColumn\\": 18,
+                    \\"endColumn\\": 20,
                     \\"tokenTypeIdx\\": 9,
                     \\"tokenType\\": {
                       \\"name\\": \\"Identifier\\",
@@ -1920,6 +2030,28 @@ exports[`関数 6 pipe 1`] = `
                     }
                   }
                 ]
+              }
+            }
+          ],
+          \\"RBrackets\\": [
+            {
+              \\"image\\": \\")\\",
+              \\"startOffset\\": 21,
+              \\"endOffset\\": 21,
+              \\"startLine\\": 2,
+              \\"endLine\\": 2,
+              \\"startColumn\\": 21,
+              \\"endColumn\\": 21,
+              \\"tokenTypeIdx\\": 11,
+              \\"tokenType\\": {
+                \\"name\\": \\"RBrackets\\",
+                \\"PATTERN\\": {},
+                \\"tokenTypeIdx\\": 11,
+                \\"CATEGORIES\\": [],
+                \\"categoryMatches\\": [],
+                \\"categoryMatchesMap\\": {},
+                \\"isParent\\": false,
+                \\"LABEL\\": \\")\\"
               }
             }
           ],

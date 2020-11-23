@@ -1,9 +1,8 @@
-import { LiteralType } from '../types/literal';
 import { LiteralTokens } from '../tokens';
 
 const TYPE = 'StringLiteral';
 
-type StringLiteralType = LiteralType<string>;
+type StringLiteralType = any;
 
 export type StringObjectMethodType = {
   '+': (obj: StringLiteralType, param: any) => any;

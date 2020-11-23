@@ -1,10 +1,9 @@
-import { AllLiteralType } from '../types/literal';
 import { LiteralTokens } from '../tokens';
 import { IFunction } from './type';
 
 export const StringBuildInFunctions: { [key: string]: IFunction } = {
   string: {
-    function: (obj: AllLiteralType[]) => {
+    function: (obj: any[]) => {
       return {
         name: LiteralTokens.StringLiteral,
         image: String(obj[0].image),

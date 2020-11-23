@@ -1,5 +1,5 @@
-import { LiteralTokens } from '../tokens';
-import { BooleanLiteralTokens } from '../tokens';
+import { LiteralTokens, BooleanLiteralTokens } from '../tokens';
+import { BooleanLiteralType, DebugLiteralType } from "../types";
 
 export type BooleanObjectMethodType = {
   '=': (obj: any, param: any) => any;
@@ -71,7 +71,7 @@ export const BooleanClass: BooleanObjectMethodType = {
   },
 };
 
-export const toBoolean = (obj: any) => {
+export const toBoolean = (obj: any): BooleanLiteralType | DebugLiteralType => {
   switch (obj.name) {
     case LiteralTokens.BooleanLiteral:
       return obj;

@@ -1,9 +1,8 @@
-import { LiteralType } from '../types/literal';
 import { LiteralTokens } from '../tokens';
 import { TypeError } from '../error';
 import { BooleanLiteralTokens } from '../tokens';
 
-type NumberLiteralType = LiteralType<number>;
+type NumberLiteralType = any;
 
 export type NumberObjectMethodType = {
   '+': (obj: NumberLiteralType, param: any) => any;

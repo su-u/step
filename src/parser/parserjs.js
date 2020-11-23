@@ -113,8 +113,8 @@
   const LogicalOperatorTokens = [LogicalJoinOperator];
 
   const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
-  const eachToken = createToken({ name: 'EachToken', pattern: /each:/ });
-  const ifToken = createToken({ name: 'IfToken', pattern: /if:/ });
+  const eachToken = createToken({ name: 'EachToken', pattern: /each/ });
+  const ifToken = createToken({ name: 'IfToken', pattern: /if/ });
   const elseToken = createToken({ name: 'ElseToken', pattern: /else/ });
   const tildeToken = createToken({ name: 'TildeToken', pattern: /~/ });
   const PipeToken = createToken({ name: 'PipeToken', pattern: /(?!-)\|>/ });
@@ -137,7 +137,7 @@
   });
   const functionNameToken = createToken({
     name: 'FunctionNameToken',
-    pattern: /[a-zA-z][0-9a-zA-Z]*:/,
+    pattern: /[a-zA-z][0-9a-zA-Z]*\(/,
   });
 
   const BuildInTokens = [
@@ -190,7 +190,9 @@
       this.Each = this.RULE('Each', () => {
         this.CONSUME(eachToken);
         this.OPTION(() => {
+          this.CONSUME(LBracket);
           this.CONSUME(Identifier);
+          this.CONSUME(RBracket);
         });
         this.CONSUME(LCurly);
         this.SUBRULE(this.Program);
@@ -199,7 +201,9 @@
 
       this.IfStatement = this.RULE('IfStatement', () => {
         this.CONSUME(ifToken);
+        this.CONSUME(LBracket);
         this.SUBRULE(this.Pipe, { LABEL: 'conditionalExpression' });
+        this.CONSUME(RBracket);
         this.CONSUME(LCurly);
         this.SUBRULE(this.BrockStatement);
         this.CONSUME(RCurly);
@@ -215,6 +219,7 @@
         this.CONSUME(functionToken);
         this.CONSUME(functionNameToken);
         this.SUBRULE(this.FunctionArgments, { LABEL: 'arguments' });
+        this.CONSUME(RBracket);
         this.CONSUME(LCurly);
         this.SUBRULE(this.Program);
         this.CONSUME(RCurly);
