@@ -1,5 +1,5 @@
 import { LiteralTokens, BooleanLiteralTokens } from '../tokens';
-import { BooleanLiteralType, DebugLiteralType } from "../types";
+import { BooleanLiteralType, DebugLiteralType } from '../types';
 
 export type BooleanObjectMethodType = {
   '=': (obj: any, param: any) => any;

@@ -50,7 +50,7 @@ const RSquare = createToken({ name: 'RSquare', pattern: /]/, label: ']' });
 const Comma = createToken({ name: 'Comma', pattern: /,/ });
 const Colon = createToken({ name: 'Colon', pattern: /:/ });
 
-const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma];
+const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma, Colon];
 
 const AdditionOperator = createToken({ name: 'AdditionOperator', pattern: Lexer.NA });
 const Plus = createToken({ name: 'Plus', pattern: /\+/, categories: AdditionOperator });
@@ -286,6 +286,10 @@ export class ChiboParser extends CstParser {
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
+        this.OPTION(() => {
+          this.CONSUME(Identifier);
+          this.CONSUME(Colon);
+        });
         this.SUBRULE(this.Pipe);
       },
     });

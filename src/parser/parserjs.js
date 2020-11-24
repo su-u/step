@@ -53,7 +53,7 @@
   const Comma = createToken({ name: 'Comma', pattern: /,/ });
   const Colon = createToken({ name: 'Colon', pattern: /:/ });
 
-  const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma];
+  const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma, Colon];
 
   const AdditionOperator = createToken({ name: 'AdditionOperator', pattern: Lexer.NA });
   const Plus = createToken({ name: 'Plus', pattern: /\+/, categories: AdditionOperator });
@@ -288,6 +288,10 @@
         this.MANY_SEP({
           SEP: Comma,
           DEF: () => {
+            this.OPTION(() => {
+              this.CONSUME(Identifier);
+              this.CONSUME(Colon);
+            });
             this.SUBRULE(this.Pipe);
           },
         });
