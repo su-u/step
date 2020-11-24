@@ -289,7 +289,7 @@
           SEP: Comma,
           DEF: () => {
             this.OPTION(() => {
-              this.CONSUME(Identifier);
+              this.CONSUME(Identifier, { LABEL: 'name' });
               this.CONSUME(Colon);
             });
             this.SUBRULE(this.Pipe);
