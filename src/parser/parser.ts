@@ -209,7 +209,6 @@ export class ChiboParser extends CstParser {
     this.SUBRULE(this.BrockStatement);
     this.CONSUME(RCurly);
     this.OPTION(() => {
-
       this.CONSUME(elseToken);
       this.CONSUME2(LCurly);
       this.SUBRULE2(this.BrockStatement);

@@ -44,7 +44,7 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
           functionData.arguments.forEach((argName: any, i: number) => {
             let argValue: null;
             if (literals.find((literal) => literal.name === argName)) {
-              argValue = literals.find((literal) => literal.name === argName).value
+              argValue = literals.find((literal) => literal.name === argName).value;
             } else {
               argValue = literals[i].value !== undefined ? literals[i].value : literals[i];
             }
@@ -63,7 +63,7 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
           const arg = functionData.arguments
             .map((_: any, i: number) => {
               const image = literals[i].value !== undefined ? literals[i].value : literals[i];
-              return image
+              return image;
             })
             .filter((x: any) => x !== undefined);
           last = functionData.function(arg);
