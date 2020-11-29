@@ -38,15 +38,18 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
       Object.values(tail.children.toIdentifier).forEach((x: any, i: number) => {
         const objName = x.image;
         const functionData = manager.function.reference(objName);
-        // console.log(functionData);
-        // console.log('l', last);
         const literals = Array.isArray(last) ? last : [last];
-        // console.log(x);
         if (functionData.type === 'user') {
           const scopeManger = new VariableManager(manager.variable);
-          functionData.arguments.forEach((x: any, i: number) => {
-            const image = literals[i].value !== undefined ? literals[i].value : literals[i];
-            scopeManger.assignment(x, image);
+          functionData.arguments.forEach((argName: any, i: number) => {
+            let argValue: null;
+            if (literals.find((literal) => literal.name === argName)) {
+              argValue = literals.find((literal) => literal.name === argName).value
+            } else {
+              argValue = literals[i].value !== undefined ? literals[i].value : literals[i];
+            }
+
+            scopeManger.assignment(argName, argValue);
           });
           last = execObject.interpreter({
             ast: functionData.function,
