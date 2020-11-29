@@ -314,13 +314,17 @@ export class ChiboParser extends CstParser {
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
-        this.OPTION(() => {
-          this.CONSUME(Identifier, { LABEL: 'name' });
-          this.CONSUME(Colon);
-        });
-        this.SUBRULE(this.Pipe);
+        this.SUBRULE(this.PipeArgument, { LABEL: 'argument' });
       },
     });
+  });
+
+  private PipeArgument = this.RULE('PipeArgument', () => {
+    this.OPTION(() => {
+      this.CONSUME(Identifier, { LABEL: 'name' });
+      this.CONSUME(Colon);
+    });
+    this.SUBRULE(this.Pipe);
   });
 
   private LogicExpression = this.RULE('LogicExpression', () => {

@@ -5,14 +5,14 @@ export const toJson = (ast: any) => {
 };
 
 export const UnnecessaryKeys: ReadonlyArray<string> = [
-  'startOffset',
-  'endOffset',
-  'startLine',
-  'endLine',
-  'startColumn',
-  'endColumn',
-  'tokenTypeIdx',
-  'tokenType',
+  // 'startOffset',
+  // 'endOffset',
+  // 'startLine',
+  // 'endLine',
+  // 'startColumn',
+  // 'endColumn',
+  // 'tokenTypeIdx',
+  // 'tokenType',
 ];
 
 export const removeObjectByKey = (object, removeKeys) => {

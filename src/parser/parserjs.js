@@ -250,6 +250,9 @@
 
       this.Match = this.RULE('Match', () => {
         this.CONSUME(matchToken);
+        this.CONSUME(LBracket);
+        this.CONSUME(Identifier);
+        this.CONSUME(RBracket);
         this.CONSUME(LCurly);
         this.MANY_SEP({
           SEP: Comma,
@@ -315,13 +318,17 @@
         this.MANY_SEP({
           SEP: Comma,
           DEF: () => {
-            this.OPTION(() => {
-              this.CONSUME(Identifier, { LABEL: 'name' });
-              this.CONSUME(Colon);
-            });
-            this.SUBRULE(this.Pipe);
+            this.SUBRULE(this.PipeArgument, { LABEL: 'argument' });
           },
         });
+      });
+
+      this.PipeArgument = this.RULE('PipeArgument', () => {
+        this.OPTION(() => {
+          this.CONSUME(Identifier, { LABEL: 'name' });
+          this.CONSUME(Colon);
+        });
+        this.SUBRULE(this.Pipe);
       });
 
       this.LogicExpression = this.RULE('LogicExpression', () => {

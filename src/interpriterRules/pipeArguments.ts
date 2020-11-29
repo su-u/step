@@ -1,12 +1,13 @@
 import { IInterpreterRules } from './types';
 
 export const pipeArguments = ({ ast, manager, execObject }: IInterpreterRules) => {
-  const args = Object.keys(ast.children)
-    .filter((rule) => rule !== 'Comma')
-    .map((rule) => {
-      return ast.children[rule].map((x) => {
-        return execObject.interpreter({ ast: x, manager, execObject });
-      });
+  if (ast.children.argument === undefined) return [];
+  const args = ast.children.argument
+    .map((x) => {
+      return {
+        name: x.children.name && x.children.name[0].image || '',
+        value: execObject.interpreter({ast: x.children.Pipe[0], manager, execObject}),
+      };
     });
   return args;
 };

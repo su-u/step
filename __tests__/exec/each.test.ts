@@ -71,7 +71,7 @@ range |> each (i) {
   test('4', () => {
     const source = `
 0 -> value
-1 ~ 10 |> each: {
+1 ~ 10 |> each {
   value + 1 -> value
 }
 value -> value2

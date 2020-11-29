@@ -6,9 +6,11 @@ import { TypeError } from '../error';
 export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
   const childrenAst = ast.children.from[0];
   const tail = ast.children.tail[0];
+  // console.log(childrenAst);
   const value = execObject.interpreter({ ast: childrenAst, manager, execObject });
   if (tail.children.PipeToken !== undefined) {
     if (tail.children.toEach !== undefined) {
+      // each
       if (value.start === undefined) throw new TypeError(value.name);
       const eachObj = tail.children.toEach[0];
       const range = Array.from(Array(value.end - value.start + 1).keys(), (x) => x + value.start);
@@ -31,15 +33,20 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
       });
       return;
     } else if (tail.children.toIdentifier !== undefined) {
+      // 関数実行
       let last = value;
       Object.values(tail.children.toIdentifier).forEach((x: any, i: number) => {
         const objName = x.image;
         const functionData = manager.function.reference(objName);
-        const literals = Array.isArray(last) ? last[0] : [last];
+        // console.log(functionData);
+        // console.log('l', last);
+        const literals = Array.isArray(last) ? last : [last];
+        // console.log(x);
         if (functionData.type === 'user') {
           const scopeManger = new VariableManager(manager.variable);
           functionData.arguments.forEach((x: any, i: number) => {
-            scopeManger.assignment(x, literals[i]);
+            const image = literals[i].value !== undefined ? literals[i].value : literals[i];
+            scopeManger.assignment(x, image);
           });
           last = execObject.interpreter({
             ast: functionData.function,
@@ -52,7 +59,8 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
         } else {
           const arg = functionData.arguments
             .map((_: any, i: number) => {
-              return literals[i];
+              const image = literals[i].value !== undefined ? literals[i].value : literals[i];
+              return image
             })
             .filter((x: any) => x !== undefined);
           last = functionData.function(arg);
