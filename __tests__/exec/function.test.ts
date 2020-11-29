@@ -372,4 +372,53 @@ function func1(num) {
       image: 40,
     });
   });
+
+  test('16', () => {
+    const source = `
+function add(a, b) {
+  return a + b
+}
+
+function func1(num) {
+  return { num, 10 } |> add
+}
+
+{ a: { a: 10, b: 10 } |> add |> func1, b: 10 } |> add -> result
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('result')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 40,
+    });
+  });
+
+  test('17', () => {
+    const source = `
+function toInt(num) {
+  return num |> int
+}
+
+{ num: 1.5 } |> toInt -> num
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('num')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 1,
+    });
+  });
+
+  test('18', () => {
+    const source = `
+function add(a, b) {
+  return a + b
+}
+
+{ 0, a: 10, 0, b: 11 } |> add -> result
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('result')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 21,
+    });
+  });
 });
