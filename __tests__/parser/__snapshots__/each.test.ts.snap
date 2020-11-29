@@ -92,11 +92,11 @@ exports[`each 1 1`] = `
                                 \\"endLine\\": 2,
                                 \\"startColumn\\": 7,
                                 \\"endColumn\\": 8,
-                                \\"tokenTypeIdx\\": 36,
+                                \\"tokenTypeIdx\\": 37,
                                 \\"tokenType\\": {
                                   \\"name\\": \\"PipeToken\\",
                                   \\"PATTERN\\": {},
-                                  \\"tokenTypeIdx\\": 36,
+                                  \\"tokenTypeIdx\\": 37,
                                   \\"CATEGORIES\\": [],
                                   \\"categoryMatches\\": [],
                                   \\"categoryMatchesMap\\": {},
@@ -110,13 +110,13 @@ exports[`each 1 1`] = `
                                 \\"children\\": {
                                   \\"EachToken\\": [
                                     {
-                                      \\"image\\": \\"each:\\",
+                                      \\"image\\": \\"each\\",
                                       \\"startOffset\\": 10,
-                                      \\"endOffset\\": 14,
+                                      \\"endOffset\\": 13,
                                       \\"startLine\\": 2,
                                       \\"endLine\\": 2,
                                       \\"startColumn\\": 10,
-                                      \\"endColumn\\": 14,
+                                      \\"endColumn\\": 13,
                                       \\"tokenTypeIdx\\": 32,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"EachToken\\",
@@ -132,12 +132,12 @@ exports[`each 1 1`] = `
                                   \\"LCurly\\": [
                                     {
                                       \\"image\\": \\"{\\",
-                                      \\"startOffset\\": 16,
-                                      \\"endOffset\\": 16,
+                                      \\"startOffset\\": 15,
+                                      \\"endOffset\\": 15,
                                       \\"startLine\\": 2,
                                       \\"endLine\\": 2,
-                                      \\"startColumn\\": 16,
-                                      \\"endColumn\\": 16,
+                                      \\"startColumn\\": 15,
+                                      \\"endColumn\\": 15,
                                       \\"tokenTypeIdx\\": 12,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"LCurly\\",
@@ -194,8 +194,8 @@ exports[`each 1 1`] = `
                                                                                               \\"NumberLiteral\\": [
                                                                                                 {
                                                                                                   \\"image\\": \\"1\\",
-                                                                                                  \\"startOffset\\": 24,
-                                                                                                  \\"endOffset\\": 24,
+                                                                                                  \\"startOffset\\": 23,
+                                                                                                  \\"endOffset\\": 23,
                                                                                                   \\"startLine\\": 3,
                                                                                                   \\"endLine\\": 3,
                                                                                                   \\"startColumn\\": 7,
@@ -237,17 +237,17 @@ exports[`each 1 1`] = `
                                                                 \\"PipeToken\\": [
                                                                   {
                                                                     \\"image\\": \\"|>\\",
-                                                                    \\"startOffset\\": 26,
-                                                                    \\"endOffset\\": 27,
+                                                                    \\"startOffset\\": 25,
+                                                                    \\"endOffset\\": 26,
                                                                     \\"startLine\\": 3,
                                                                     \\"endLine\\": 3,
                                                                     \\"startColumn\\": 9,
                                                                     \\"endColumn\\": 10,
-                                                                    \\"tokenTypeIdx\\": 36,
+                                                                    \\"tokenTypeIdx\\": 37,
                                                                     \\"tokenType\\": {
                                                                       \\"name\\": \\"PipeToken\\",
                                                                       \\"PATTERN\\": {},
-                                                                      \\"tokenTypeIdx\\": 36,
+                                                                      \\"tokenTypeIdx\\": 37,
                                                                       \\"CATEGORIES\\": [],
                                                                       \\"categoryMatches\\": [],
                                                                       \\"categoryMatchesMap\\": {},
@@ -258,8 +258,8 @@ exports[`each 1 1`] = `
                                                                 \\"toIdentifier\\": [
                                                                   {
                                                                     \\"image\\": \\"console\\",
-                                                                    \\"startOffset\\": 29,
-                                                                    \\"endOffset\\": 35,
+                                                                    \\"startOffset\\": 28,
+                                                                    \\"endOffset\\": 34,
                                                                     \\"startLine\\": 3,
                                                                     \\"endLine\\": 3,
                                                                     \\"startColumn\\": 12,
@@ -294,8 +294,8 @@ exports[`each 1 1`] = `
                                   \\"RCurly\\": [
                                     {
                                       \\"image\\": \\"}\\",
-                                      \\"startOffset\\": 41,
-                                      \\"endOffset\\": 41,
+                                      \\"startOffset\\": 40,
+                                      \\"endOffset\\": 40,
                                       \\"startLine\\": 4,
                                       \\"endLine\\": 4,
                                       \\"startColumn\\": 5,
@@ -451,11 +451,11 @@ exports[`each 2 1`] = `
                                             \\"endLine\\": 2,
                                             \\"startColumn\\": 6,
                                             \\"endColumn\\": 6,
-                                            \\"tokenTypeIdx\\": 35,
+                                            \\"tokenTypeIdx\\": 36,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"TildeToken\\",
                                               \\"PATTERN\\": {},
-                                              \\"tokenTypeIdx\\": 35,
+                                              \\"tokenTypeIdx\\": 36,
                                               \\"CATEGORIES\\": [],
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
@@ -485,11 +485,11 @@ exports[`each 2 1`] = `
                                 \\"endLine\\": 2,
                                 \\"startColumn\\": 10,
                                 \\"endColumn\\": 11,
-                                \\"tokenTypeIdx\\": 36,
+                                \\"tokenTypeIdx\\": 37,
                                 \\"tokenType\\": {
                                   \\"name\\": \\"PipeToken\\",
                                   \\"PATTERN\\": {},
-                                  \\"tokenTypeIdx\\": 36,
+                                  \\"tokenTypeIdx\\": 37,
                                   \\"CATEGORIES\\": [],
                                   \\"categoryMatches\\": [],
                                   \\"categoryMatchesMap\\": {},
@@ -503,13 +503,13 @@ exports[`each 2 1`] = `
                                 \\"children\\": {
                                   \\"EachToken\\": [
                                     {
-                                      \\"image\\": \\"each:\\",
+                                      \\"image\\": \\"each\\",
                                       \\"startOffset\\": 13,
-                                      \\"endOffset\\": 17,
+                                      \\"endOffset\\": 16,
                                       \\"startLine\\": 2,
                                       \\"endLine\\": 2,
                                       \\"startColumn\\": 13,
-                                      \\"endColumn\\": 17,
+                                      \\"endColumn\\": 16,
                                       \\"tokenTypeIdx\\": 32,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"EachToken\\",
@@ -519,6 +519,28 @@ exports[`each 2 1`] = `
                                         \\"categoryMatches\\": [],
                                         \\"categoryMatchesMap\\": {},
                                         \\"isParent\\": false
+                                      }
+                                    }
+                                  ],
+                                  \\"LBrackets\\": [
+                                    {
+                                      \\"image\\": \\"(\\",
+                                      \\"startOffset\\": 18,
+                                      \\"endOffset\\": 18,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 18,
+                                      \\"endColumn\\": 18,
+                                      \\"tokenTypeIdx\\": 10,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"LBrackets\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 10,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false,
+                                        \\"LABEL\\": \\"(\\"
                                       }
                                     }
                                   ],
@@ -543,15 +565,37 @@ exports[`each 2 1`] = `
                                       }
                                     }
                                   ],
+                                  \\"RBrackets\\": [
+                                    {
+                                      \\"image\\": \\")\\",
+                                      \\"startOffset\\": 20,
+                                      \\"endOffset\\": 20,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 20,
+                                      \\"endColumn\\": 20,
+                                      \\"tokenTypeIdx\\": 11,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"RBrackets\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 11,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false,
+                                        \\"LABEL\\": \\")\\"
+                                      }
+                                    }
+                                  ],
                                   \\"LCurly\\": [
                                     {
                                       \\"image\\": \\"{\\",
-                                      \\"startOffset\\": 21,
-                                      \\"endOffset\\": 21,
+                                      \\"startOffset\\": 22,
+                                      \\"endOffset\\": 22,
                                       \\"startLine\\": 2,
                                       \\"endLine\\": 2,
-                                      \\"startColumn\\": 21,
-                                      \\"endColumn\\": 21,
+                                      \\"startColumn\\": 22,
+                                      \\"endColumn\\": 22,
                                       \\"tokenTypeIdx\\": 12,
                                       \\"tokenType\\": {
                                         \\"name\\": \\"LCurly\\",
@@ -608,8 +652,8 @@ exports[`each 2 1`] = `
                                                                                               \\"Identifier\\": [
                                                                                                 {
                                                                                                   \\"image\\": \\"i\\",
-                                                                                                  \\"startOffset\\": 29,
-                                                                                                  \\"endOffset\\": 29,
+                                                                                                  \\"startOffset\\": 30,
+                                                                                                  \\"endOffset\\": 30,
                                                                                                   \\"startLine\\": 3,
                                                                                                   \\"endLine\\": 3,
                                                                                                   \\"startColumn\\": 7,
@@ -651,17 +695,17 @@ exports[`each 2 1`] = `
                                                                 \\"PipeToken\\": [
                                                                   {
                                                                     \\"image\\": \\"|>\\",
-                                                                    \\"startOffset\\": 31,
-                                                                    \\"endOffset\\": 32,
+                                                                    \\"startOffset\\": 32,
+                                                                    \\"endOffset\\": 33,
                                                                     \\"startLine\\": 3,
                                                                     \\"endLine\\": 3,
                                                                     \\"startColumn\\": 9,
                                                                     \\"endColumn\\": 10,
-                                                                    \\"tokenTypeIdx\\": 36,
+                                                                    \\"tokenTypeIdx\\": 37,
                                                                     \\"tokenType\\": {
                                                                       \\"name\\": \\"PipeToken\\",
                                                                       \\"PATTERN\\": {},
-                                                                      \\"tokenTypeIdx\\": 36,
+                                                                      \\"tokenTypeIdx\\": 37,
                                                                       \\"CATEGORIES\\": [],
                                                                       \\"categoryMatches\\": [],
                                                                       \\"categoryMatchesMap\\": {},
@@ -672,8 +716,8 @@ exports[`each 2 1`] = `
                                                                 \\"toIdentifier\\": [
                                                                   {
                                                                     \\"image\\": \\"console\\",
-                                                                    \\"startOffset\\": 34,
-                                                                    \\"endOffset\\": 40,
+                                                                    \\"startOffset\\": 35,
+                                                                    \\"endOffset\\": 41,
                                                                     \\"startLine\\": 3,
                                                                     \\"endLine\\": 3,
                                                                     \\"startColumn\\": 12,
@@ -708,8 +752,8 @@ exports[`each 2 1`] = `
                                   \\"RCurly\\": [
                                     {
                                       \\"image\\": \\"}\\",
-                                      \\"startOffset\\": 46,
-                                      \\"endOffset\\": 46,
+                                      \\"startOffset\\": 47,
+                                      \\"endOffset\\": 47,
                                       \\"startLine\\": 4,
                                       \\"endLine\\": 4,
                                       \\"startColumn\\": 5,

@@ -13,7 +13,7 @@ describe('関数', () => {
   });
   test('1', () => {
     const source = `
-function myFunc: {
+function myFunc() {
   1 + 1 -> value
 }
     `;
@@ -22,7 +22,7 @@ function myFunc: {
 
   test('2', () => {
     const source = `
-function add: x, y {
+function add(x, y) {
   return x + y
 }
     `;
@@ -31,7 +31,7 @@ function add: x, y {
 
   test('3', () => {
     const source = `
-function func: x, y {
+function func(x, y) {
   1 + 2 -> value
   return value
 }
@@ -46,7 +46,7 @@ function func: x, y {
 
   test('4', () => {
     const source = `
-function out: str {
+function out(str) {
   return str
 }
 "testword" |> out -> re
@@ -60,7 +60,7 @@ function out: str {
 
   test('5', () => {
     const source = `
-function out: str {
+function out(str) {
   return str + "gg"
 }
 "testword" |> out -> re
@@ -74,7 +74,7 @@ function out: str {
 
   test('6', () => {
     const source = `
-function out: str {
+function out(str) {
   return str + "ggg"
 }
 { "testword" } |> out -> re
@@ -88,9 +88,9 @@ function out: str {
 
   test('7', () => {
     const source = `
-function out: arg {
+function out(arg) {
   100 -> result
-  if: arg = 0 {
+  if (arg = 0) {
     arg -> result
   } else {
     10 -> result
@@ -113,9 +113,9 @@ function out: arg {
 
   test('8', () => {
     const source = `
-function out: arg {
+function out(arg) {
   100 -> result
-  if: arg = 0 {
+  if (arg = 0) {
     arg + 1000 -> result
   } else {
     arg * 100 -> result
@@ -143,9 +143,9 @@ function out: arg {
 
   test('9', () => {
     const source = `
-function func: j, str {
+function func(j, str) {
   "" -> v
-  if: j > 0 {
+  if (j > 0) {
     str + "true" -> v
   } else {
     str + "false" -> v
@@ -153,7 +153,7 @@ function func: j, str {
   return v
 }
 
-function func2: str {
+function func2(str) {
   return str + "x"
 }
 
@@ -173,7 +173,7 @@ function func2: str {
 
   test('10', () => {
     const source = `
-function out: {
+function out() {
   return "return"
 }
 {} |> out -> result
@@ -187,11 +187,11 @@ function out: {
 
   test('11', () => {
     const source = `
-function func3: a, b {
+function func3(a, b) {
   return a + b
 }
 
-function func4: a {
+function func4(a) {
   return a + 100
 }
 
@@ -206,11 +206,11 @@ function func4: a {
 
   test('12', () => {
     const source = `
-function func1: str {
+function func1(str) {
   return str + "1"
 }
 
-function func2: str {
+function func2(str) {
   return str + "2"
 }
 
@@ -225,7 +225,7 @@ function func2: str {
 
   test('13', () => {
     const source = `
-function func: x {
+function func(x) {
   return x + 1
 }
 
@@ -240,7 +240,7 @@ function func: x {
 
   test('14', () => {
     const source = `
-function add: a, b {
+function add(a, b) {
   return a + b
 }
 
@@ -272,7 +272,7 @@ number |> int -> result3
 
   test('15', () => {
     const source = `
-function add: a, b {
+function add(a, b) {
   return a + b + 1
 }
     `;
@@ -281,7 +281,7 @@ function add: a, b {
 
   test('11', () => {
     const source = `
-function func4: a {
+function func4(a) {
   return a + 100
 }
 
@@ -322,7 +322,7 @@ function func4: a {
 
   test('13', () => {
     const source = `
-function toInt: num {
+function toInt(num) {
   return num |> int
 }
 
@@ -337,11 +337,11 @@ function toInt: num {
 
   test('14', () => {
     const source = `
-function add: a, b {
+function add(a, b) {
   return a + b
 }
 
-function func1: num {
+function func1(num) {
   return { num, 10 } |> add
 }
 
@@ -356,11 +356,11 @@ function func1: num {
 
   test('15', () => {
     const source = `
-function add: a, b {
+function add(a, b) {
   return a + b
 }
 
-function func1: num {
+function func1(num) {
   return { num, 10 } |> add
 }
 
@@ -370,6 +370,55 @@ function func1: num {
     expect(resultManager.reference('result')).toStrictEqual({
       name: LiteralTokens.NumberLiteral,
       image: 40,
+    });
+  });
+
+  test('16', () => {
+    const source = `
+function add(a, b) {
+  return a + b
+}
+
+function func1(num) {
+  return { num, 10 } |> add
+}
+
+{ a: { a: 10, b: 10 } |> add |> func1, b: 10 } |> add -> result
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('result')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 40,
+    });
+  });
+
+  test('17', () => {
+    const source = `
+function toInt(num) {
+  return num |> int
+}
+
+{ num: 1.5 } |> toInt -> num
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('num')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 1,
+    });
+  });
+
+  test('18', () => {
+    const source = `
+function add(a, b) {
+  return a + b
+}
+
+{ 0, a: 10, 0, b: 11 } |> add -> result
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('result')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 21,
     });
   });
 });

@@ -1,7 +1,7 @@
 import { IInterpreterRules } from './types';
-import { LiteralTokens, BooleanLiteralTokens } from '../tokens';
-import { AllLiteralType } from '../types/literal';
+import { BooleanLiteralTokens } from '../tokens';
 import { VariableManager } from '../manager';
+import { toBoolean } from '../class/booleanClass';
 
 export const ifStatement = ({ ast, manager, execObject }: IInterpreterRules) => {
   const condition = execObject.interpreter({
@@ -9,7 +9,8 @@ export const ifStatement = ({ ast, manager, execObject }: IInterpreterRules) => 
     manager,
     execObject,
   });
-  if (isTrue(condition)) {
+  const bool = toBoolean(condition);
+  if (bool.image === BooleanLiteralTokens.true) {
     return execObject.interpreter({
       ast: ast.children.BlockStatement[0],
       manager: { variable: new VariableManager(manager.variable), function: manager.function },
@@ -21,13 +22,5 @@ export const ifStatement = ({ ast, manager, execObject }: IInterpreterRules) => 
       manager: { variable: new VariableManager(manager.variable), function: manager.function },
       execObject,
     });
-  }
-};
-
-export const isTrue = (condition: AllLiteralType) => {
-  if (condition.name === LiteralTokens.BooleanLiteral) {
-    return condition.image === BooleanLiteralTokens.true;
-  } else if (condition.name === LiteralTokens.NumberLiteral) {
-    return condition.image > 0;
   }
 };

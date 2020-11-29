@@ -1,4 +1,4 @@
-import { IInterpreterRules } from '@/interpriterRules/types';
+import { IInterpreterRules } from '../interpriterRules/types';
 
 export const getIndex = ({ ast, manager }: IInterpreterRules) => {
   if (ast.children.NumberLiteral !== undefined) {

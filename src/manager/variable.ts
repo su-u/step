@@ -1,4 +1,4 @@
-import { NullReferenceVariableError, OutOfRangeError  } from '../error';
+import { NullReferenceVariableError, OutOfRangeError } from '../error';
 
 export class VariableManager {
   private _returnValue = undefined;

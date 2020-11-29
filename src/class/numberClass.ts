@@ -1,7 +1,8 @@
-import { LiteralType } from '../types/literal';
 import { LiteralTokens } from '../tokens';
+import { TypeError } from '../error';
+import { BooleanLiteralTokens } from '../tokens';
 
-type NumberLiteralType = LiteralType<number>;
+type NumberLiteralType = any;
 
 export type NumberObjectMethodType = {
   '+': (obj: NumberLiteralType, param: any) => any;
@@ -17,75 +18,114 @@ export type NumberObjectMethodType = {
 };
 
 export const NumberClass: NumberObjectMethodType = {
-  '+': (obj, param) => {
-    if (obj.name === LiteralTokens.NumberLiteral && param.name === LiteralTokens.NumberLiteral) {
+  '+': (param, obj) => {
+    const availableType = [LiteralTokens.NumberLiteral, LiteralTokens.StringLiteral] as const;
+    if (!availableType.includes(param.name)) {
+      throw new TypeError(param.name);
+    }
+    if (!availableType.includes(obj.name)) {
+      throw new TypeError(obj.name);
+    }
+
+    if (param.name === LiteralTokens.NumberLiteral && obj.name === LiteralTokens.NumberLiteral) {
       return {
         name: LiteralTokens.NumberLiteral,
-        image: param.image + obj.image,
+        image: obj.image + param.image,
       };
     } else if (
-      obj.name === LiteralTokens.StringLiteral ||
-      param.name === LiteralTokens.StringLiteral
+      param.name === LiteralTokens.StringLiteral ||
+      obj.name === LiteralTokens.StringLiteral
     ) {
       return {
         name: LiteralTokens.StringLiteral,
-        image: param.image + obj.image,
+        image: String(obj.image + param.image),
       };
     }
   },
-  '-': (obj, param) => {
+  '-': (param, obj) => {
+    const availableType = [LiteralTokens.NumberLiteral] as const;
+    if (!availableType.includes(param.name)) {
+      throw new TypeError(param.name);
+    }
+    if (!availableType.includes(obj.name)) {
+      throw new TypeError(obj.name);
+    }
+
     return {
       name: LiteralTokens.NumberLiteral,
-      image: param.image - obj.image,
+      image: obj.image - param.image,
     };
   },
-  '*': (obj, param) => {
+  '*': (param, obj) => {
+    const availableType = [LiteralTokens.NumberLiteral] as const;
+    if (!availableType.includes(param.name)) {
+      throw new TypeError(param.name);
+    }
+    if (!availableType.includes(obj.name)) {
+      throw new TypeError(obj.name);
+    }
+
     return {
       name: LiteralTokens.NumberLiteral,
-      image: param.image * obj.image,
+      image: obj.image * param.image,
     };
   },
-  '/': (obj, param) => {
+  '/': (param, obj) => {
+    const availableType = [LiteralTokens.NumberLiteral] as const;
+    if (!availableType.includes(param.name)) {
+      throw new TypeError(param.name);
+    }
+    if (!availableType.includes(obj.name)) {
+      throw new TypeError(obj.name);
+    }
+
     return {
       name: LiteralTokens.NumberLiteral,
-      image: param.image / obj.image,
+      image: obj.image / param.image,
     };
   },
-  '<': (obj, param) => {
+  '<': (param, obj) => {
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: String(param.image < obj.image),
+      image: String(obj.image < param.image),
     };
   },
-  '<=': (obj, param) => {
+  '<=': (param, obj) => {
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: String(param.image <= obj.image),
+      image: String(obj.image <= param.image),
     };
   },
-  '>': (obj, param) => {
+  '>': (param, obj) => {
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: String(param.image > obj.image),
+      image: String(obj.image > param.image),
     };
   },
-  '>=': (obj, param) => {
+  '>=': (param, obj) => {
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: String(param.image >= obj.image),
+      image: String(obj.image >= param.image),
     };
   },
-  '~': (obj, param) => {
+  '~': (param, obj) => {
     return {
       name: LiteralTokens.NumberLiteralRange,
-      start: param.image,
-      end: obj.image,
+      start: obj.image,
+      end: param.image,
     };
   },
-  '=': (obj, param) => {
+  '=': (param, obj) => {
+    if (param.name !== LiteralTokens.NumberLiteral) {
+      return {
+        name: LiteralTokens.BooleanLiteral,
+        image: BooleanLiteralTokens.false,
+      };
+    }
+
     return {
       name: LiteralTokens.BooleanLiteral,
-      image: String(obj.image == param.image),
+      image: String(param.image == obj.image),
     };
   },
 };

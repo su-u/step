@@ -23,7 +23,7 @@ value + "test" -> value
     test('if', () => {
       const source = `
 1 + 1 -> value
-if: value {
+if (value) {
 } else {
 }
       `;

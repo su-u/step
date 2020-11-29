@@ -1,10 +1,9 @@
-import { AllLiteralType } from '../types/literal';
 import { LiteralTokens } from '../tokens';
 import { IFunction } from './type';
 
 export const ConsoleBuildInFunctions: { [key: string]: IFunction } = {
   console: {
-    function: (obj: AllLiteralType[] | any) => {
+    function: (obj: any[] | any) => {
       if (obj.length > 1) {
         console.log(...obj.map((x) => x.image));
       } else if (obj[0].name === LiteralTokens.NumberLiteralRange) {

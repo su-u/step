@@ -50,7 +50,7 @@ const RSquare = createToken({ name: 'RSquare', pattern: /]/, label: ']' });
 const Comma = createToken({ name: 'Comma', pattern: /,/ });
 const Colon = createToken({ name: 'Colon', pattern: /:/ });
 
-const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma];
+const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma, Colon];
 
 const AdditionOperator = createToken({ name: 'AdditionOperator', pattern: Lexer.NA });
 const Plus = createToken({ name: 'Plus', pattern: /\+/, categories: AdditionOperator });
@@ -110,12 +110,13 @@ const LogicalJoinOperator = createToken({
 const LogicalOperatorTokens = [LogicalJoinOperator];
 
 const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
-const eachToken = createToken({ name: 'EachToken', pattern: /each:/ });
-const ifToken = createToken({ name: 'IfToken', pattern: /if:/ });
+const eachToken = createToken({ name: 'EachToken', pattern: /each/ });
+const matchToken = createToken({ name: 'MatchToken', pattern: /match/ });
+const ifToken = createToken({ name: 'IfToken', pattern: /if/ });
 const elseToken = createToken({ name: 'ElseToken', pattern: /else/ });
 const tildeToken = createToken({ name: 'TildeToken', pattern: /~/ });
 const PipeToken = createToken({ name: 'PipeToken', pattern: /(?!-)\|>/ });
-const ArrowToken = createToken({ name: 'Arrow', pattern: /(?!>)=>/ });
+const ArrowToken = createToken({ name: 'Arrow', pattern: /(?!><)=>/ });
 const ToRightToken = createToken({
   name: 'ToRightToken',
   pattern: /(?!<)->/,
@@ -134,12 +135,13 @@ const BreakToken = createToken({
 });
 const functionNameToken = createToken({
   name: 'FunctionNameToken',
-  pattern: /[a-zA-z][0-9a-zA-Z]*:/,
+  pattern: /[a-zA-z][0-9a-zA-Z]*\(/,
 });
 
 const BuildInTokens = [
   functionToken,
   eachToken,
+  matchToken,
   ifToken,
   elseToken,
   tildeToken,
@@ -189,7 +191,9 @@ export class ChiboParser extends CstParser {
   private Each = this.RULE('Each', () => {
     this.CONSUME(eachToken);
     this.OPTION(() => {
+      this.CONSUME(LBracket);
       this.CONSUME(Identifier);
+      this.CONSUME(RBracket);
     });
     this.CONSUME(LCurly);
     this.SUBRULE(this.Program);
@@ -198,7 +202,9 @@ export class ChiboParser extends CstParser {
 
   private IfStatement = this.RULE('IfStatement', () => {
     this.CONSUME(ifToken);
+    this.CONSUME(LBracket);
     this.SUBRULE(this.Pipe, { LABEL: 'conditionalExpression' });
+    this.CONSUME(RBracket);
     this.CONSUME(LCurly);
     this.SUBRULE(this.BrockStatement);
     this.CONSUME(RCurly);
@@ -214,6 +220,7 @@ export class ChiboParser extends CstParser {
     this.CONSUME(functionToken);
     this.CONSUME(functionNameToken);
     this.SUBRULE(this.FunctionArgments, { LABEL: 'arguments' });
+    this.CONSUME(RBracket);
     this.CONSUME(LCurly);
     this.SUBRULE(this.Program);
     this.CONSUME(RCurly);
@@ -239,6 +246,29 @@ export class ChiboParser extends CstParser {
     });
   });
 
+  private Match = this.RULE('Match', () => {
+    this.CONSUME(matchToken);
+    this.CONSUME(LCurly);
+    this.MANY_SEP({
+      SEP: Comma,
+      DEF: () => {
+        this.SUBRULE(this.MatchExpression);
+      },
+    });
+    //this.SUBRULE(this.MatchExpression);
+    this.CONSUME(RCurly);
+  });
+
+  private MatchExpression = this.RULE('MatchExpression', () => {
+    this.CONSUME(LBracket);
+    this.SUBRULE(this.LogicExpression);
+    this.CONSUME(RBracket);
+    this.CONSUME(ArrowToken);
+    this.CONSUME(LCurly);
+    this.SUBRULE(this.BrockStatement);
+    this.CONSUME(RCurly);
+  });
+
   private ToRight = this.RULE('ToRight', () => {
     this.SUBRULE(this.Pipe, { LABEL: 'from' });
     this.MANY(() => {
@@ -259,11 +289,13 @@ export class ChiboParser extends CstParser {
     this.MANY(() => {
       this.CONSUME(PipeToken);
       this.OR([
+        { ALT: () => this.SUBRULE(this.Match, { LABEL: 'toMatch' }) },
         { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
         { ALT: () => this.CONSUME(Identifier, { LABEL: 'toIdentifier' }) },
       ]);
     });
   });
+
   private PipeFrom = this.RULE('PipeFrom', () => {
     this.OR([
       {
@@ -281,9 +313,17 @@ export class ChiboParser extends CstParser {
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
-        this.SUBRULE(this.Pipe);
+        this.SUBRULE(this.PipeArgument, { LABEL: 'argument' });
       },
     });
+  });
+
+  private PipeArgument = this.RULE('PipeArgument', () => {
+    this.OPTION(() => {
+      this.CONSUME(Identifier, { LABEL: 'name' });
+      this.CONSUME(Colon);
+    });
+    this.SUBRULE(this.Pipe);
   });
 
   private LogicExpression = this.RULE('LogicExpression', () => {

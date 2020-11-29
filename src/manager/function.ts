@@ -1,5 +1,5 @@
 import { BuildInFunctions } from '../buildInFunctions';
-import { NullReferenceFunctionError } from "../error";
+import { NullReferenceFunctionError } from '../error';
 
 export class FunctionManager {
   private userFunctions = new Map();
