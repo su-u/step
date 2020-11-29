@@ -1,7 +1,7 @@
 import { IInterpreterRules } from './types';
 import { Classes } from '../class';
 import { Operators } from '../operators';
-import { TypeError } from '@/error';
+import { TypeError } from '../error';
 
 export const term = ({ ast, manager, execObject }: IInterpreterRules) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {

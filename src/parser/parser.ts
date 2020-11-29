@@ -111,11 +111,12 @@ const LogicalOperatorTokens = [LogicalJoinOperator];
 
 const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
 const eachToken = createToken({ name: 'EachToken', pattern: /each/ });
+const matchToken = createToken({ name: 'MatchToken', pattern: /match/ });
 const ifToken = createToken({ name: 'IfToken', pattern: /if/ });
 const elseToken = createToken({ name: 'ElseToken', pattern: /else/ });
 const tildeToken = createToken({ name: 'TildeToken', pattern: /~/ });
 const PipeToken = createToken({ name: 'PipeToken', pattern: /(?!-)\|>/ });
-const ArrowToken = createToken({ name: 'Arrow', pattern: /(?!>)=>/ });
+const ArrowToken = createToken({ name: 'Arrow', pattern: /(?!><)=>/ });
 const ToRightToken = createToken({
   name: 'ToRightToken',
   pattern: /(?!<)->/,
@@ -140,6 +141,7 @@ const functionNameToken = createToken({
 const BuildInTokens = [
   functionToken,
   eachToken,
+  matchToken,
   ifToken,
   elseToken,
   tildeToken,
@@ -207,6 +209,7 @@ export class ChiboParser extends CstParser {
     this.SUBRULE(this.BrockStatement);
     this.CONSUME(RCurly);
     this.OPTION(() => {
+
       this.CONSUME(elseToken);
       this.CONSUME2(LCurly);
       this.SUBRULE2(this.BrockStatement);
@@ -244,6 +247,29 @@ export class ChiboParser extends CstParser {
     });
   });
 
+  private Match = this.RULE('Match', () => {
+    this.CONSUME(matchToken);
+    this.CONSUME(LCurly);
+    this.MANY_SEP({
+      SEP: Comma,
+      DEF: () => {
+        this.SUBRULE(this.MatchExpression);
+      },
+    });
+    //this.SUBRULE(this.MatchExpression);
+    this.CONSUME(RCurly);
+  });
+
+  private MatchExpression = this.RULE('MatchExpression', () => {
+    this.CONSUME(LBracket);
+    this.SUBRULE(this.LogicExpression);
+    this.CONSUME(RBracket);
+    this.CONSUME(ArrowToken);
+    this.CONSUME(LCurly);
+    this.SUBRULE(this.BrockStatement);
+    this.CONSUME(RCurly);
+  });
+
   private ToRight = this.RULE('ToRight', () => {
     this.SUBRULE(this.Pipe, { LABEL: 'from' });
     this.MANY(() => {
@@ -264,11 +290,13 @@ export class ChiboParser extends CstParser {
     this.MANY(() => {
       this.CONSUME(PipeToken);
       this.OR([
+        { ALT: () => this.SUBRULE(this.Match, { LABEL: 'toMatch' }) },
         { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
         { ALT: () => this.CONSUME(Identifier, { LABEL: 'toIdentifier' }) },
       ]);
     });
   });
+
   private PipeFrom = this.RULE('PipeFrom', () => {
     this.OR([
       {
