@@ -100,3 +100,34 @@ describe('condition number', () => {
     });
   });
 });
+
+describe('number complexity', () => {
+  let manager = null;
+  beforeEach(() => {
+    manager = {
+      variable: new VariableManager(null),
+      function: new FunctionManager(),
+    };
+  });
+
+  const testList = [
+    [1, 1],
+    [`"1"`, 1],
+    [false, 1],
+  ];
+
+  const operatorsList = [
+    '<', '<=', '>', '>=', '=',
+  ]
+
+  testList.forEach((testCase, i) => {
+    operatorsList.forEach((operator, j) => {
+      test(`${i} - ${j}`, () => {
+        const source = `
+${testCase[0]} ${operator} ${testCase[1]} -> x
+  `;
+        expect(() => { exec(source, manager) }).not.toThrow();
+      });
+    });
+  });
+});
