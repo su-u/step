@@ -248,24 +248,36 @@ export class ChiboParser extends CstParser {
 
   private Match = this.RULE('Match', () => {
     this.CONSUME(matchToken);
-    this.CONSUME(LCurly);
+    this.CONSUME(LBracket);
     this.MANY_SEP({
+      SEP: Comma,
+      DEF: () => {
+        this.CONSUME(Identifier);
+      },
+    });
+    this.CONSUME(RBracket);
+    this.CONSUME(LCurly);
+    this.MANY_SEP2({
       SEP: Comma,
       DEF: () => {
         this.SUBRULE(this.MatchExpression);
       },
     });
-    //this.SUBRULE(this.MatchExpression);
     this.CONSUME(RCurly);
   });
 
   private MatchExpression = this.RULE('MatchExpression', () => {
     this.CONSUME(LBracket);
-    this.SUBRULE(this.LogicExpression);
+    this.MANY_SEP({
+      SEP: Comma,
+      DEF: () => {
+        this.SUBRULE(this.LogicExpression);
+      },
+    });
     this.CONSUME(RBracket);
     this.CONSUME(ArrowToken);
     this.CONSUME(LCurly);
-    this.SUBRULE(this.BrockStatement);
+    this.SUBRULE(this.Program);
     this.CONSUME(RCurly);
   });
 
@@ -283,17 +295,6 @@ export class ChiboParser extends CstParser {
   private Pipe = this.RULE('Pipe', () => {
     this.SUBRULE(this.PipeFrom, { LABEL: 'from' });
     this.SUBRULE(this.PipeTail, { LABEL: 'tail' });
-  });
-
-  private PipeTail = this.RULE('PipeTail', () => {
-    this.MANY(() => {
-      this.CONSUME(PipeToken);
-      this.OR([
-        { ALT: () => this.SUBRULE(this.Match, { LABEL: 'toMatch' }) },
-        { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
-        { ALT: () => this.CONSUME(Identifier, { LABEL: 'toIdentifier' }) },
-      ]);
-    });
   });
 
   private PipeFrom = this.RULE('PipeFrom', () => {
@@ -324,6 +325,17 @@ export class ChiboParser extends CstParser {
       this.CONSUME(Colon);
     });
     this.SUBRULE(this.Pipe);
+  });
+
+  private PipeTail = this.RULE('PipeTail', () => {
+    this.MANY(() => {
+      this.CONSUME(PipeToken);
+      this.OR([
+        { ALT: () => this.SUBRULE(this.Match, { LABEL: 'toMatch' }) },
+        { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
+        { ALT: () => this.CONSUME(Identifier, { LABEL: 'toIdentifier' }) },
+      ]);
+    });
   });
 
   private LogicExpression = this.RULE('LogicExpression', () => {

@@ -250,26 +250,35 @@
       this.Match = this.RULE('Match', () => {
         this.CONSUME(matchToken);
         this.CONSUME(LBracket);
-        this.CONSUME(Identifier);
+        this.MANY_SEP({
+          SEP: Comma,
+          DEF: () => {
+            this.CONSUME(Identifier);
+          },
+        });
         this.CONSUME(RBracket);
         this.CONSUME(LCurly);
-        this.MANY_SEP({
+        this.MANY_SEP2({
           SEP: Comma,
           DEF: () => {
             this.SUBRULE(this.MatchExpression);
           },
         });
-        //this.SUBRULE(this.MatchExpression);
         this.CONSUME(RCurly);
       });
 
       this.MatchExpression = this.RULE('MatchExpression', () => {
         this.CONSUME(LBracket);
-        this.SUBRULE(this.LogicExpression);
+        this.MANY_SEP({
+          SEP: Comma,
+          DEF: () => {
+            this.SUBRULE(this.LogicExpression);
+          },
+        });
         this.CONSUME(RBracket);
         this.CONSUME(ArrowToken);
         this.CONSUME(LCurly);
-        this.SUBRULE(this.BrockStatement);
+        this.SUBRULE(this.Program);
         this.CONSUME(RCurly);
       });
 

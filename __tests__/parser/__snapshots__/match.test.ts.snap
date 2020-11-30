@@ -1,0 +1,1081 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match 1 1`] = `
+"{
+  \\"name\\": \\"Program\\",
+  \\"children\\": {
+    \\"Assignment\\": [
+      {
+        \\"name\\": \\"Assignment\\",
+        \\"children\\": {
+          \\"ToRight\\": [
+            {
+              \\"name\\": \\"ToRight\\",
+              \\"children\\": {
+                \\"from\\": [
+                  {
+                    \\"name\\": \\"Pipe\\",
+                    \\"children\\": {
+                      \\"from\\": [
+                        {
+                          \\"name\\": \\"PipeFrom\\",
+                          \\"children\\": {
+                            \\"LogicExpression\\": [
+                              {
+                                \\"name\\": \\"LogicExpression\\",
+                                \\"children\\": {
+                                  \\"RelationExpression\\": [
+                                    {
+                                      \\"name\\": \\"RelationExpression\\",
+                                      \\"children\\": {
+                                        \\"Expression\\": [
+                                          {
+                                            \\"name\\": \\"Expression\\",
+                                            \\"children\\": {
+                                              \\"Term\\": [
+                                                {
+                                                  \\"name\\": \\"Term\\",
+                                                  \\"children\\": {
+                                                    \\"Factor\\": [
+                                                      {
+                                                        \\"name\\": \\"Factor\\",
+                                                        \\"children\\": {
+                                                          \\"NumberLiteral\\": [
+                                                            {
+                                                              \\"image\\": \\"1\\",
+                                                              \\"startOffset\\": 1,
+                                                              \\"endOffset\\": 1,
+                                                              \\"startLine\\": 2,
+                                                              \\"endLine\\": 2,
+                                                              \\"startColumn\\": 1,
+                                                              \\"endColumn\\": 1,
+                                                              \\"tokenTypeIdx\\": 4,
+                                                              \\"tokenType\\": {
+                                                                \\"name\\": \\"NumberLiteral\\",
+                                                                \\"PATTERN\\": {},
+                                                                \\"tokenTypeIdx\\": 4,
+                                                                \\"CATEGORIES\\": [],
+                                                                \\"categoryMatches\\": [],
+                                                                \\"categoryMatchesMap\\": {},
+                                                                \\"isParent\\": false
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      \\"tail\\": [
+                        {
+                          \\"name\\": \\"PipeTail\\",
+                          \\"children\\": {
+                            \\"PipeToken\\": [
+                              {
+                                \\"image\\": \\"|>\\",
+                                \\"startOffset\\": 3,
+                                \\"endOffset\\": 4,
+                                \\"startLine\\": 2,
+                                \\"endLine\\": 2,
+                                \\"startColumn\\": 3,
+                                \\"endColumn\\": 4,
+                                \\"tokenTypeIdx\\": 37,
+                                \\"tokenType\\": {
+                                  \\"name\\": \\"PipeToken\\",
+                                  \\"PATTERN\\": {},
+                                  \\"tokenTypeIdx\\": 37,
+                                  \\"CATEGORIES\\": [],
+                                  \\"categoryMatches\\": [],
+                                  \\"categoryMatchesMap\\": {},
+                                  \\"isParent\\": false
+                                }
+                              }
+                            ],
+                            \\"toMatch\\": [
+                              {
+                                \\"name\\": \\"Match\\",
+                                \\"children\\": {
+                                  \\"MatchToken\\": [
+                                    {
+                                      \\"image\\": \\"match\\",
+                                      \\"startOffset\\": 6,
+                                      \\"endOffset\\": 10,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 6,
+                                      \\"endColumn\\": 10,
+                                      \\"tokenTypeIdx\\": 33,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"MatchToken\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 33,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ],
+                                  \\"LBrackets\\": [
+                                    {
+                                      \\"image\\": \\"(\\",
+                                      \\"startOffset\\": 12,
+                                      \\"endOffset\\": 12,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 12,
+                                      \\"endColumn\\": 12,
+                                      \\"tokenTypeIdx\\": 10,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"LBrackets\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 10,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false,
+                                        \\"LABEL\\": \\"(\\"
+                                      }
+                                    }
+                                  ],
+                                  \\"Identifier\\": [
+                                    {
+                                      \\"image\\": \\"num\\",
+                                      \\"startOffset\\": 13,
+                                      \\"endOffset\\": 15,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 13,
+                                      \\"endColumn\\": 15,
+                                      \\"tokenTypeIdx\\": 9,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"Identifier\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 9,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ],
+                                  \\"RBrackets\\": [
+                                    {
+                                      \\"image\\": \\")\\",
+                                      \\"startOffset\\": 16,
+                                      \\"endOffset\\": 16,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 16,
+                                      \\"endColumn\\": 16,
+                                      \\"tokenTypeIdx\\": 11,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"RBrackets\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 11,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false,
+                                        \\"LABEL\\": \\")\\"
+                                      }
+                                    }
+                                  ],
+                                  \\"LCurly\\": [
+                                    {
+                                      \\"image\\": \\"{\\",
+                                      \\"startOffset\\": 18,
+                                      \\"endOffset\\": 18,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 18,
+                                      \\"endColumn\\": 18,
+                                      \\"tokenTypeIdx\\": 12,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"LCurly\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 12,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false,
+                                        \\"LABEL\\": \\"{\\"
+                                      }
+                                    }
+                                  ],
+                                  \\"MatchExpression\\": [
+                                    {
+                                      \\"name\\": \\"MatchExpression\\",
+                                      \\"children\\": {
+                                        \\"LBrackets\\": [
+                                          {
+                                            \\"image\\": \\"(\\",
+                                            \\"startOffset\\": 22,
+                                            \\"endOffset\\": 22,
+                                            \\"startLine\\": 3,
+                                            \\"endLine\\": 3,
+                                            \\"startColumn\\": 3,
+                                            \\"endColumn\\": 3,
+                                            \\"tokenTypeIdx\\": 10,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"LBrackets\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 10,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false,
+                                              \\"LABEL\\": \\"(\\"
+                                            }
+                                          }
+                                        ],
+                                        \\"LogicExpression\\": [
+                                          {
+                                            \\"name\\": \\"LogicExpression\\",
+                                            \\"children\\": {
+                                              \\"RelationExpression\\": [
+                                                {
+                                                  \\"name\\": \\"RelationExpression\\",
+                                                  \\"children\\": {
+                                                    \\"Expression\\": [
+                                                      {
+                                                        \\"name\\": \\"Expression\\",
+                                                        \\"children\\": {
+                                                          \\"Term\\": [
+                                                            {
+                                                              \\"name\\": \\"Term\\",
+                                                              \\"children\\": {
+                                                                \\"Factor\\": [
+                                                                  {
+                                                                    \\"name\\": \\"Factor\\",
+                                                                    \\"children\\": {
+                                                                      \\"NumberLiteral\\": [
+                                                                        {
+                                                                          \\"image\\": \\"1\\",
+                                                                          \\"startOffset\\": 23,
+                                                                          \\"endOffset\\": 23,
+                                                                          \\"startLine\\": 3,
+                                                                          \\"endLine\\": 3,
+                                                                          \\"startColumn\\": 4,
+                                                                          \\"endColumn\\": 4,
+                                                                          \\"tokenTypeIdx\\": 4,
+                                                                          \\"tokenType\\": {
+                                                                            \\"name\\": \\"NumberLiteral\\",
+                                                                            \\"PATTERN\\": {},
+                                                                            \\"tokenTypeIdx\\": 4,
+                                                                            \\"CATEGORIES\\": [],
+                                                                            \\"categoryMatches\\": [],
+                                                                            \\"categoryMatchesMap\\": {},
+                                                                            \\"isParent\\": false
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ],
+                                        \\"RBrackets\\": [
+                                          {
+                                            \\"image\\": \\")\\",
+                                            \\"startOffset\\": 24,
+                                            \\"endOffset\\": 24,
+                                            \\"startLine\\": 3,
+                                            \\"endLine\\": 3,
+                                            \\"startColumn\\": 5,
+                                            \\"endColumn\\": 5,
+                                            \\"tokenTypeIdx\\": 11,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"RBrackets\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 11,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false,
+                                              \\"LABEL\\": \\")\\"
+                                            }
+                                          }
+                                        ],
+                                        \\"Arrow\\": [
+                                          {
+                                            \\"image\\": \\"=>\\",
+                                            \\"startOffset\\": 26,
+                                            \\"endOffset\\": 27,
+                                            \\"startLine\\": 3,
+                                            \\"endLine\\": 3,
+                                            \\"startColumn\\": 7,
+                                            \\"endColumn\\": 8,
+                                            \\"tokenTypeIdx\\": 38,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"Arrow\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 38,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ],
+                                        \\"LCurly\\": [
+                                          {
+                                            \\"image\\": \\"{\\",
+                                            \\"startOffset\\": 29,
+                                            \\"endOffset\\": 29,
+                                            \\"startLine\\": 3,
+                                            \\"endLine\\": 3,
+                                            \\"startColumn\\": 10,
+                                            \\"endColumn\\": 10,
+                                            \\"tokenTypeIdx\\": 12,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"LCurly\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 12,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false,
+                                              \\"LABEL\\": \\"{\\"
+                                            }
+                                          }
+                                        ],
+                                        \\"Program\\": [
+                                          {
+                                            \\"name\\": \\"Program\\",
+                                            \\"children\\": {
+                                              \\"ReturnStatement\\": [
+                                                {
+                                                  \\"name\\": \\"ReturnStatement\\",
+                                                  \\"children\\": {
+                                                    \\"ReturnToken\\": [
+                                                      {
+                                                        \\"image\\": \\"return\\",
+                                                        \\"startOffset\\": 31,
+                                                        \\"endOffset\\": 36,
+                                                        \\"startLine\\": 3,
+                                                        \\"endLine\\": 3,
+                                                        \\"startColumn\\": 12,
+                                                        \\"endColumn\\": 17,
+                                                        \\"tokenTypeIdx\\": 41,
+                                                        \\"tokenType\\": {
+                                                          \\"name\\": \\"ReturnToken\\",
+                                                          \\"PATTERN\\": {},
+                                                          \\"tokenTypeIdx\\": 41,
+                                                          \\"CATEGORIES\\": [],
+                                                          \\"categoryMatches\\": [],
+                                                          \\"categoryMatchesMap\\": {},
+                                                          \\"isParent\\": false
+                                                        }
+                                                      }
+                                                    ],
+                                                    \\"return\\": [
+                                                      {
+                                                        \\"name\\": \\"Pipe\\",
+                                                        \\"children\\": {
+                                                          \\"from\\": [
+                                                            {
+                                                              \\"name\\": \\"PipeFrom\\",
+                                                              \\"children\\": {
+                                                                \\"LogicExpression\\": [
+                                                                  {
+                                                                    \\"name\\": \\"LogicExpression\\",
+                                                                    \\"children\\": {
+                                                                      \\"RelationExpression\\": [
+                                                                        {
+                                                                          \\"name\\": \\"RelationExpression\\",
+                                                                          \\"children\\": {
+                                                                            \\"Expression\\": [
+                                                                              {
+                                                                                \\"name\\": \\"Expression\\",
+                                                                                \\"children\\": {
+                                                                                  \\"Term\\": [
+                                                                                    {
+                                                                                      \\"name\\": \\"Term\\",
+                                                                                      \\"children\\": {
+                                                                                        \\"Factor\\": [
+                                                                                          {
+                                                                                            \\"name\\": \\"Factor\\",
+                                                                                            \\"children\\": {
+                                                                                              \\"NumberLiteral\\": [
+                                                                                                {
+                                                                                                  \\"image\\": \\"10\\",
+                                                                                                  \\"startOffset\\": 38,
+                                                                                                  \\"endOffset\\": 39,
+                                                                                                  \\"startLine\\": 3,
+                                                                                                  \\"endLine\\": 3,
+                                                                                                  \\"startColumn\\": 19,
+                                                                                                  \\"endColumn\\": 20,
+                                                                                                  \\"tokenTypeIdx\\": 4,
+                                                                                                  \\"tokenType\\": {
+                                                                                                    \\"name\\": \\"NumberLiteral\\",
+                                                                                                    \\"PATTERN\\": {},
+                                                                                                    \\"tokenTypeIdx\\": 4,
+                                                                                                    \\"CATEGORIES\\": [],
+                                                                                                    \\"categoryMatches\\": [],
+                                                                                                    \\"categoryMatchesMap\\": {},
+                                                                                                    \\"isParent\\": false
+                                                                                                  }
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          }
+                                                                                        ]
+                                                                                      }
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              }
+                                                                            ]
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ],
+                                                          \\"tail\\": [
+                                                            {
+                                                              \\"name\\": \\"PipeTail\\",
+                                                              \\"children\\": {}
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ],
+                                        \\"RCurly\\": [
+                                          {
+                                            \\"image\\": \\"}\\",
+                                            \\"startOffset\\": 41,
+                                            \\"endOffset\\": 41,
+                                            \\"startLine\\": 3,
+                                            \\"endLine\\": 3,
+                                            \\"startColumn\\": 22,
+                                            \\"endColumn\\": 22,
+                                            \\"tokenTypeIdx\\": 13,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"RCurly\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 13,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false,
+                                              \\"LABEL\\": \\"}\\"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  \\"RCurly\\": [
+                                    {
+                                      \\"image\\": \\"}\\",
+                                      \\"startOffset\\": 43,
+                                      \\"endOffset\\": 43,
+                                      \\"startLine\\": 4,
+                                      \\"endLine\\": 4,
+                                      \\"startColumn\\": 1,
+                                      \\"endColumn\\": 1,
+                                      \\"tokenTypeIdx\\": 13,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"RCurly\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 13,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false,
+                                        \\"LABEL\\": \\"}\\"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}"
+`;
+
+exports[`match 2 1`] = `
+"{
+  \\"name\\": \\"Program\\",
+  \\"children\\": {
+    \\"Assignment\\": [
+      {
+        \\"name\\": \\"Assignment\\",
+        \\"children\\": {
+          \\"ToRight\\": [
+            {
+              \\"name\\": \\"ToRight\\",
+              \\"children\\": {
+                \\"from\\": [
+                  {
+                    \\"name\\": \\"Pipe\\",
+                    \\"children\\": {
+                      \\"from\\": [
+                        {
+                          \\"name\\": \\"PipeFrom\\",
+                          \\"children\\": {
+                            \\"LogicExpression\\": [
+                              {
+                                \\"name\\": \\"LogicExpression\\",
+                                \\"children\\": {
+                                  \\"RelationExpression\\": [
+                                    {
+                                      \\"name\\": \\"RelationExpression\\",
+                                      \\"children\\": {
+                                        \\"Expression\\": [
+                                          {
+                                            \\"name\\": \\"Expression\\",
+                                            \\"children\\": {
+                                              \\"Term\\": [
+                                                {
+                                                  \\"name\\": \\"Term\\",
+                                                  \\"children\\": {
+                                                    \\"Factor\\": [
+                                                      {
+                                                        \\"name\\": \\"Factor\\",
+                                                        \\"children\\": {
+                                                          \\"NumberLiteral\\": [
+                                                            {
+                                                              \\"image\\": \\"1\\",
+                                                              \\"startOffset\\": 1,
+                                                              \\"endOffset\\": 1,
+                                                              \\"startLine\\": 2,
+                                                              \\"endLine\\": 2,
+                                                              \\"startColumn\\": 1,
+                                                              \\"endColumn\\": 1,
+                                                              \\"tokenTypeIdx\\": 4,
+                                                              \\"tokenType\\": {
+                                                                \\"name\\": \\"NumberLiteral\\",
+                                                                \\"PATTERN\\": {},
+                                                                \\"tokenTypeIdx\\": 4,
+                                                                \\"CATEGORIES\\": [],
+                                                                \\"categoryMatches\\": [],
+                                                                \\"categoryMatchesMap\\": {},
+                                                                \\"isParent\\": false
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      \\"tail\\": [
+                        {
+                          \\"name\\": \\"PipeTail\\",
+                          \\"children\\": {
+                            \\"PipeToken\\": [
+                              {
+                                \\"image\\": \\"|>\\",
+                                \\"startOffset\\": 3,
+                                \\"endOffset\\": 4,
+                                \\"startLine\\": 2,
+                                \\"endLine\\": 2,
+                                \\"startColumn\\": 3,
+                                \\"endColumn\\": 4,
+                                \\"tokenTypeIdx\\": 37,
+                                \\"tokenType\\": {
+                                  \\"name\\": \\"PipeToken\\",
+                                  \\"PATTERN\\": {},
+                                  \\"tokenTypeIdx\\": 37,
+                                  \\"CATEGORIES\\": [],
+                                  \\"categoryMatches\\": [],
+                                  \\"categoryMatchesMap\\": {},
+                                  \\"isParent\\": false
+                                }
+                              }
+                            ],
+                            \\"toMatch\\": [
+                              {
+                                \\"name\\": \\"Match\\",
+                                \\"children\\": {
+                                  \\"MatchToken\\": [
+                                    {
+                                      \\"image\\": \\"match\\",
+                                      \\"startOffset\\": 6,
+                                      \\"endOffset\\": 10,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 6,
+                                      \\"endColumn\\": 10,
+                                      \\"tokenTypeIdx\\": 33,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"MatchToken\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 33,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ],
+                                  \\"LBrackets\\": [
+                                    {
+                                      \\"image\\": \\"(\\",
+                                      \\"startOffset\\": 12,
+                                      \\"endOffset\\": 12,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 12,
+                                      \\"endColumn\\": 12,
+                                      \\"tokenTypeIdx\\": 10,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"LBrackets\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 10,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false,
+                                        \\"LABEL\\": \\"(\\"
+                                      }
+                                    }
+                                  ],
+                                  \\"Identifier\\": [
+                                    {
+                                      \\"image\\": \\"num\\",
+                                      \\"startOffset\\": 13,
+                                      \\"endOffset\\": 15,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 13,
+                                      \\"endColumn\\": 15,
+                                      \\"tokenTypeIdx\\": 9,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"Identifier\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 9,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ],
+                                  \\"RBrackets\\": [
+                                    {
+                                      \\"image\\": \\")\\",
+                                      \\"startOffset\\": 16,
+                                      \\"endOffset\\": 16,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 16,
+                                      \\"endColumn\\": 16,
+                                      \\"tokenTypeIdx\\": 11,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"RBrackets\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 11,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false,
+                                        \\"LABEL\\": \\")\\"
+                                      }
+                                    }
+                                  ],
+                                  \\"LCurly\\": [
+                                    {
+                                      \\"image\\": \\"{\\",
+                                      \\"startOffset\\": 18,
+                                      \\"endOffset\\": 18,
+                                      \\"startLine\\": 2,
+                                      \\"endLine\\": 2,
+                                      \\"startColumn\\": 18,
+                                      \\"endColumn\\": 18,
+                                      \\"tokenTypeIdx\\": 12,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"LCurly\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 12,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false,
+                                        \\"LABEL\\": \\"{\\"
+                                      }
+                                    }
+                                  ],
+                                  \\"MatchExpression\\": [
+                                    {
+                                      \\"name\\": \\"MatchExpression\\",
+                                      \\"children\\": {
+                                        \\"LBrackets\\": [
+                                          {
+                                            \\"image\\": \\"(\\",
+                                            \\"startOffset\\": 22,
+                                            \\"endOffset\\": 22,
+                                            \\"startLine\\": 3,
+                                            \\"endLine\\": 3,
+                                            \\"startColumn\\": 3,
+                                            \\"endColumn\\": 3,
+                                            \\"tokenTypeIdx\\": 10,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"LBrackets\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 10,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false,
+                                              \\"LABEL\\": \\"(\\"
+                                            }
+                                          }
+                                        ],
+                                        \\"LogicExpression\\": [
+                                          {
+                                            \\"name\\": \\"LogicExpression\\",
+                                            \\"children\\": {
+                                              \\"RelationExpression\\": [
+                                                {
+                                                  \\"name\\": \\"RelationExpression\\",
+                                                  \\"children\\": {
+                                                    \\"Expression\\": [
+                                                      {
+                                                        \\"name\\": \\"Expression\\",
+                                                        \\"children\\": {
+                                                          \\"Term\\": [
+                                                            {
+                                                              \\"name\\": \\"Term\\",
+                                                              \\"children\\": {
+                                                                \\"Factor\\": [
+                                                                  {
+                                                                    \\"name\\": \\"Factor\\",
+                                                                    \\"children\\": {
+                                                                      \\"NumberLiteral\\": [
+                                                                        {
+                                                                          \\"image\\": \\"1\\",
+                                                                          \\"startOffset\\": 23,
+                                                                          \\"endOffset\\": 23,
+                                                                          \\"startLine\\": 3,
+                                                                          \\"endLine\\": 3,
+                                                                          \\"startColumn\\": 4,
+                                                                          \\"endColumn\\": 4,
+                                                                          \\"tokenTypeIdx\\": 4,
+                                                                          \\"tokenType\\": {
+                                                                            \\"name\\": \\"NumberLiteral\\",
+                                                                            \\"PATTERN\\": {},
+                                                                            \\"tokenTypeIdx\\": 4,
+                                                                            \\"CATEGORIES\\": [],
+                                                                            \\"categoryMatches\\": [],
+                                                                            \\"categoryMatchesMap\\": {},
+                                                                            \\"isParent\\": false
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ],
+                                        \\"RBrackets\\": [
+                                          {
+                                            \\"image\\": \\")\\",
+                                            \\"startOffset\\": 24,
+                                            \\"endOffset\\": 24,
+                                            \\"startLine\\": 3,
+                                            \\"endLine\\": 3,
+                                            \\"startColumn\\": 5,
+                                            \\"endColumn\\": 5,
+                                            \\"tokenTypeIdx\\": 11,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"RBrackets\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 11,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false,
+                                              \\"LABEL\\": \\")\\"
+                                            }
+                                          }
+                                        ],
+                                        \\"Arrow\\": [
+                                          {
+                                            \\"image\\": \\"=>\\",
+                                            \\"startOffset\\": 26,
+                                            \\"endOffset\\": 27,
+                                            \\"startLine\\": 3,
+                                            \\"endLine\\": 3,
+                                            \\"startColumn\\": 7,
+                                            \\"endColumn\\": 8,
+                                            \\"tokenTypeIdx\\": 38,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"Arrow\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 38,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false
+                                            }
+                                          }
+                                        ],
+                                        \\"LCurly\\": [
+                                          {
+                                            \\"image\\": \\"{\\",
+                                            \\"startOffset\\": 29,
+                                            \\"endOffset\\": 29,
+                                            \\"startLine\\": 3,
+                                            \\"endLine\\": 3,
+                                            \\"startColumn\\": 10,
+                                            \\"endColumn\\": 10,
+                                            \\"tokenTypeIdx\\": 12,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"LCurly\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 12,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false,
+                                              \\"LABEL\\": \\"{\\"
+                                            }
+                                          }
+                                        ],
+                                        \\"Program\\": [
+                                          {
+                                            \\"name\\": \\"Program\\",
+                                            \\"children\\": {
+                                              \\"ReturnStatement\\": [
+                                                {
+                                                  \\"name\\": \\"ReturnStatement\\",
+                                                  \\"children\\": {
+                                                    \\"ReturnToken\\": [
+                                                      {
+                                                        \\"image\\": \\"return\\",
+                                                        \\"startOffset\\": 31,
+                                                        \\"endOffset\\": 36,
+                                                        \\"startLine\\": 3,
+                                                        \\"endLine\\": 3,
+                                                        \\"startColumn\\": 12,
+                                                        \\"endColumn\\": 17,
+                                                        \\"tokenTypeIdx\\": 41,
+                                                        \\"tokenType\\": {
+                                                          \\"name\\": \\"ReturnToken\\",
+                                                          \\"PATTERN\\": {},
+                                                          \\"tokenTypeIdx\\": 41,
+                                                          \\"CATEGORIES\\": [],
+                                                          \\"categoryMatches\\": [],
+                                                          \\"categoryMatchesMap\\": {},
+                                                          \\"isParent\\": false
+                                                        }
+                                                      }
+                                                    ],
+                                                    \\"return\\": [
+                                                      {
+                                                        \\"name\\": \\"Pipe\\",
+                                                        \\"children\\": {
+                                                          \\"from\\": [
+                                                            {
+                                                              \\"name\\": \\"PipeFrom\\",
+                                                              \\"children\\": {
+                                                                \\"LogicExpression\\": [
+                                                                  {
+                                                                    \\"name\\": \\"LogicExpression\\",
+                                                                    \\"children\\": {
+                                                                      \\"RelationExpression\\": [
+                                                                        {
+                                                                          \\"name\\": \\"RelationExpression\\",
+                                                                          \\"children\\": {
+                                                                            \\"Expression\\": [
+                                                                              {
+                                                                                \\"name\\": \\"Expression\\",
+                                                                                \\"children\\": {
+                                                                                  \\"Term\\": [
+                                                                                    {
+                                                                                      \\"name\\": \\"Term\\",
+                                                                                      \\"children\\": {
+                                                                                        \\"Factor\\": [
+                                                                                          {
+                                                                                            \\"name\\": \\"Factor\\",
+                                                                                            \\"children\\": {
+                                                                                              \\"NumberLiteral\\": [
+                                                                                                {
+                                                                                                  \\"image\\": \\"10\\",
+                                                                                                  \\"startOffset\\": 38,
+                                                                                                  \\"endOffset\\": 39,
+                                                                                                  \\"startLine\\": 3,
+                                                                                                  \\"endLine\\": 3,
+                                                                                                  \\"startColumn\\": 19,
+                                                                                                  \\"endColumn\\": 20,
+                                                                                                  \\"tokenTypeIdx\\": 4,
+                                                                                                  \\"tokenType\\": {
+                                                                                                    \\"name\\": \\"NumberLiteral\\",
+                                                                                                    \\"PATTERN\\": {},
+                                                                                                    \\"tokenTypeIdx\\": 4,
+                                                                                                    \\"CATEGORIES\\": [],
+                                                                                                    \\"categoryMatches\\": [],
+                                                                                                    \\"categoryMatchesMap\\": {},
+                                                                                                    \\"isParent\\": false
+                                                                                                  }
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          }
+                                                                                        ]
+                                                                                      }
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              }
+                                                                            ]
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ],
+                                                          \\"tail\\": [
+                                                            {
+                                                              \\"name\\": \\"PipeTail\\",
+                                                              \\"children\\": {}
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ],
+                                        \\"RCurly\\": [
+                                          {
+                                            \\"image\\": \\"}\\",
+                                            \\"startOffset\\": 41,
+                                            \\"endOffset\\": 41,
+                                            \\"startLine\\": 3,
+                                            \\"endLine\\": 3,
+                                            \\"startColumn\\": 22,
+                                            \\"endColumn\\": 22,
+                                            \\"tokenTypeIdx\\": 13,
+                                            \\"tokenType\\": {
+                                              \\"name\\": \\"RCurly\\",
+                                              \\"PATTERN\\": {},
+                                              \\"tokenTypeIdx\\": 13,
+                                              \\"CATEGORIES\\": [],
+                                              \\"categoryMatches\\": [],
+                                              \\"categoryMatchesMap\\": {},
+                                              \\"isParent\\": false,
+                                              \\"LABEL\\": \\"}\\"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  \\"RCurly\\": [
+                                    {
+                                      \\"image\\": \\"}\\",
+                                      \\"startOffset\\": 43,
+                                      \\"endOffset\\": 43,
+                                      \\"startLine\\": 4,
+                                      \\"endLine\\": 4,
+                                      \\"startColumn\\": 1,
+                                      \\"endColumn\\": 1,
+                                      \\"tokenTypeIdx\\": 13,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"RCurly\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 13,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false,
+                                        \\"LABEL\\": \\"}\\"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}"
+`;
