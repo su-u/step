@@ -1,5 +1,5 @@
 import { IInterpreterRules } from '../types';
-import { VariableManager } from "@/manager";
+import { VariableManager } from "../../manager";
 
 export const execFunction = ({ ast, manager, execObject }: IInterpreterRules) => {
   const childrenAst = ast.children.from[0];
