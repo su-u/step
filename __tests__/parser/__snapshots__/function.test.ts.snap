@@ -52,7 +52,7 @@ exports[`関数 1 1`] = `
           ],
           \\"arguments\\": [
             {
-              \\"name\\": \\"FunctionArgments\\",
+              \\"name\\": \\"FunctionArguments\\",
               \\"children\\": {}
             }
           ],
@@ -348,7 +348,7 @@ exports[`関数 2 1`] = `
           ],
           \\"arguments\\": [
             {
-              \\"name\\": \\"FunctionArgments\\",
+              \\"name\\": \\"FunctionArguments\\",
               \\"children\\": {
                 \\"Identifier\\": [
                   {
@@ -720,7 +720,7 @@ exports[`関数 3 1`] = `
           ],
           \\"arguments\\": [
             {
-              \\"name\\": \\"FunctionArgments\\",
+              \\"name\\": \\"FunctionArguments\\",
               \\"children\\": {
                 \\"Identifier\\": [
                   {
@@ -1292,7 +1292,7 @@ exports[`関数 4 pipe 1`] = `
           ],
           \\"arguments\\": [
             {
-              \\"name\\": \\"FunctionArgments\\",
+              \\"name\\": \\"FunctionArguments\\",
               \\"children\\": {
                 \\"Identifier\\": [
                   {
@@ -1583,7 +1583,7 @@ exports[`関数 5 pipe 1`] = `
           ],
           \\"arguments\\": [
             {
-              \\"name\\": \\"FunctionArgments\\",
+              \\"name\\": \\"FunctionArguments\\",
               \\"children\\": {
                 \\"Identifier\\": [
                   {
@@ -2007,7 +2007,7 @@ exports[`関数 6 pipe 1`] = `
           ],
           \\"arguments\\": [
             {
-              \\"name\\": \\"FunctionArgments\\",
+              \\"name\\": \\"FunctionArguments\\",
               \\"children\\": {
                 \\"Identifier\\": [
                   {

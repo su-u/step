@@ -219,14 +219,14 @@ export class ChiboParser extends CstParser {
   private Function = this.RULE('Function', () => {
     this.CONSUME(functionToken);
     this.CONSUME(functionNameToken);
-    this.SUBRULE(this.FunctionArgments, { LABEL: 'arguments' });
+    this.SUBRULE(this.FunctionArguments, { LABEL: 'arguments' });
     this.CONSUME(RBracket);
     this.CONSUME(LCurly);
     this.SUBRULE(this.Program);
     this.CONSUME(RCurly);
   });
 
-  private FunctionArgments = this.RULE('FunctionArgments', () => {
+  private FunctionArguments = this.RULE('FunctionArguments', () => {
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
@@ -249,12 +249,7 @@ export class ChiboParser extends CstParser {
   private Match = this.RULE('Match', () => {
     this.CONSUME(matchToken);
     this.CONSUME(LBracket);
-    this.MANY_SEP({
-      SEP: Comma,
-      DEF: () => {
-        this.CONSUME(Identifier);
-      },
-    });
+    this.SUBRULE(this.MatchArguments, { LABEL: 'arguments' });
     this.CONSUME(RBracket);
     this.CONSUME(LCurly);
     this.MANY_SEP2({
@@ -264,6 +259,15 @@ export class ChiboParser extends CstParser {
       },
     });
     this.CONSUME(RCurly);
+  });
+
+  private MatchArguments = this.RULE('MatchArguments', () => {
+    this.MANY_SEP({
+      SEP: Comma,
+      DEF: () => {
+        this.CONSUME(Identifier);
+      },
+    });
   });
 
   private MatchExpression = this.RULE('MatchExpression', () => {

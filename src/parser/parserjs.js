@@ -220,14 +220,14 @@
       this.Function = this.RULE('Function', () => {
         this.CONSUME(functionToken);
         this.CONSUME(functionNameToken);
-        this.SUBRULE(this.FunctionArgments, { LABEL: 'arguments' });
+        this.SUBRULE(this.FunctionArguments, { LABEL: 'arguments' });
         this.CONSUME(RBracket);
         this.CONSUME(LCurly);
         this.SUBRULE(this.Program);
         this.CONSUME(RCurly);
       });
 
-      this.FunctionArgments = this.RULE('FunctionArgments', () => {
+      this.FunctionArguments = this.RULE('FunctionArguments', () => {
         this.MANY_SEP({
           SEP: Comma,
           DEF: () => {
@@ -250,12 +250,7 @@
       this.Match = this.RULE('Match', () => {
         this.CONSUME(matchToken);
         this.CONSUME(LBracket);
-        this.MANY_SEP({
-          SEP: Comma,
-          DEF: () => {
-            this.CONSUME(Identifier);
-          },
-        });
+        this.SUBRULE(this.MatchArgments, { LABEL: 'arguments' });
         this.CONSUME(RBracket);
         this.CONSUME(LCurly);
         this.MANY_SEP2({
@@ -265,6 +260,15 @@
           },
         });
         this.CONSUME(RCurly);
+      });
+
+      this.MatchArgments = this.RULE('MatchArguments', () => {
+        this.MANY_SEP({
+          SEP: Comma,
+          DEF: () => {
+            this.CONSUME(Identifier);
+          },
+        });
       });
 
       this.MatchExpression = this.RULE('MatchExpression', () => {
