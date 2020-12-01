@@ -1,11 +1,11 @@
 import { IInterpreterRules } from '../types';
-import { VariableManager } from "../../manager";
+import { VariableManager } from '../../manager';
 
 export const execFunction = ({ ast, manager, execObject }: IInterpreterRules) => {
   const childrenAst = ast.children.from[0];
   const tail = ast.children.tail[0];
   // 関数実行
-  let last = execObject.interpreter({ast: childrenAst, manager, execObject});
+  let last = execObject.interpreter({ ast: childrenAst, manager, execObject });
   Object.values(tail.children.toIdentifier).forEach((x: any, i: number) => {
     const objName = x.image;
     const functionData = manager.function.reference(objName);

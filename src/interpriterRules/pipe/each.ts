@@ -1,7 +1,7 @@
 import { IInterpreterRules } from '../types';
-import { TypeError } from "../../error";
-import { VariableManager } from "../../manager";
-import { LiteralTokens } from "../../tokens";
+import { TypeError } from '../../error';
+import { VariableManager } from '../../manager';
+import { LiteralTokens } from '../../tokens';
 
 export const execEach = ({ ast, manager, execObject }: IInterpreterRules) => {
   const childrenAst = ast.children.from[0];

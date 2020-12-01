@@ -64,9 +64,7 @@ describe('boolean complexity', () => {
     [false, false],
   ];
 
-  const operatorsList = [
-    '=', 'and', 'or',
-  ]
+  const operatorsList = ['=', 'and', 'or'];
 
   testList.forEach((testCase, i) => {
     operatorsList.forEach((operator, j) => {
@@ -74,7 +72,9 @@ describe('boolean complexity', () => {
         const source = `
 ${testCase[0]} ${operator} ${testCase[1]} -> x
   `;
-        expect(() => { exec(source, manager) }).not.toThrow();
+        expect(() => {
+          exec(source, manager);
+        }).not.toThrow();
       });
     });
   });

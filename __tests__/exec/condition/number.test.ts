@@ -116,9 +116,7 @@ describe('number complexity', () => {
     [false, 1],
   ];
 
-  const operatorsList = [
-    '<', '<=', '>', '>=', '=',
-  ]
+  const operatorsList = ['<', '<=', '>', '>=', '='];
 
   testList.forEach((testCase, i) => {
     operatorsList.forEach((operator, j) => {
@@ -126,7 +124,9 @@ describe('number complexity', () => {
         const source = `
 ${testCase[0]} ${operator} ${testCase[1]} -> x
   `;
-        expect(() => { exec(source, manager) }).not.toThrow();
+        expect(() => {
+          exec(source, manager);
+        }).not.toThrow();
       });
     });
   });
