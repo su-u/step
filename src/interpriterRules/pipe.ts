@@ -1,6 +1,7 @@
 import { IInterpreterRules } from './types';
 import { execEach } from './pipe/each';
 import { execFunction } from './pipe/function';
+import { execMatch } from "./pipe/match";
 
 export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
   const childrenAst = ast.children.from[0];
@@ -11,6 +12,8 @@ export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
       return execEach({ ast, manager, execObject });
     } else if (tail.children.toIdentifier !== undefined) {
       return execFunction({ ast, manager, execObject });
+    } else if (tail.children.toMatch !== undefined) {
+      return execMatch({ ast, manager, execObject });
     }
   }
   return value;
