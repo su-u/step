@@ -10,12 +10,16 @@ export const execMatch = ({ ast, manager, execObject }: IInterpreterRules) => {
   const value = execObject.interpreter({ ast: childrenAst, manager, execObject });
   const matchAst = tail.children.toMatch[0];
   const matchList = matchAst.children.MatchExpression.map((expression) => {
-    const conditions = execObject.interpreter({ ast: expression.children.LogicExpression[0], manager, execObject });
+    const conditions = execObject.interpreter({
+      ast: expression.children.LogicExpression[0],
+      manager,
+      execObject,
+    });
     const program = expression.children.Program[0];
     return {
       conditions,
       program,
-    }
+    };
   });
   const m = matchList.find((expression) => _.isEqual(expression.conditions, value)) || null;
 

@@ -1,7 +1,7 @@
 import { IInterpreterRules } from './types';
 import { execEach } from './pipe/each';
 import { execFunction } from './pipe/function';
-import { execMatch } from "./pipe/match";
+import { execMatch } from './pipe/match';
 
 export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
   const childrenAst = ast.children.from[0];
