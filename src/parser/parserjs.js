@@ -249,9 +249,9 @@
 
       this.Match = this.RULE('Match', () => {
         this.CONSUME(matchToken);
-        this.CONSUME(LBracket);
-        this.SUBRULE(this.MatchArgments, { LABEL: 'arguments' });
-        this.CONSUME(RBracket);
+        //this.CONSUME(LBracket);
+        //this.SUBRULE(this.MatchArguments, { LABEL: 'arguments' });
+        //this.CONSUME(RBracket);
         this.CONSUME(LCurly);
         this.MANY_SEP2({
           SEP: Comma,
@@ -262,7 +262,7 @@
         this.CONSUME(RCurly);
       });
 
-      this.MatchArgments = this.RULE('MatchArguments', () => {
+      this.MatchArguments = this.RULE('MatchArguments', () => {
         this.MANY_SEP({
           SEP: Comma,
           DEF: () => {

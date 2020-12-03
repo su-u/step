@@ -248,9 +248,9 @@ export class ChiboParser extends CstParser {
 
   private Match = this.RULE('Match', () => {
     this.CONSUME(matchToken);
-    this.CONSUME(LBracket);
-    this.SUBRULE(this.MatchArguments, { LABEL: 'arguments' });
-    this.CONSUME(RBracket);
+    // this.CONSUME(LBracket);
+    // this.SUBRULE(this.MatchArguments, { LABEL: 'arguments' });
+    // this.CONSUME(RBracket);
     this.CONSUME(LCurly);
     this.MANY_SEP2({
       SEP: Comma,
