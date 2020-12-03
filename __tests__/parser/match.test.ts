@@ -20,7 +20,6 @@ describe('match', () => {
     expect(sourceParseJson(source)).toMatchSnapshot();
   });
 
-
   test('3', () => {
     const source = `
 { 1, 10 } |> match {
