@@ -4,9 +4,10 @@ import { IInterpreterRules } from '../types';
 export const execMatch = ({ ast, manager, execObject }: IInterpreterRules) => {
   const childrenAst = ast.children.from[0];
   const tail = ast.children.tail[0];
-  const value = execObject
-    .interpreter({ ast: childrenAst, manager, execObject })
-    .map((v) => v.value);
+
+  const tmp = execObject.interpreter({ ast: childrenAst, manager, execObject });
+  // console.log(tmp);
+  const value = Array.isArray(tmp) ? tmp.map((v) => v.value) : [tmp];
   const matchAst = tail.children.toMatch[0];
   const matchList = matchAst.children.MatchExpression.map((expression) => {
     const conditions = getConditions({ ast: expression, manager, execObject });
