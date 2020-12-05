@@ -206,12 +206,12 @@ export class ChiboParser extends CstParser {
     this.SUBRULE(this.Pipe, { LABEL: 'conditionalExpression' });
     this.CONSUME(RBracket);
     this.CONSUME(LCurly);
-    this.SUBRULE(this.BrockStatement);
+    this.SUBRULE(this.BlockStatement);
     this.CONSUME(RCurly);
     this.OPTION(() => {
       this.CONSUME(elseToken);
       this.CONSUME2(LCurly);
-      this.SUBRULE2(this.BrockStatement);
+      this.SUBRULE2(this.BlockStatement);
       this.CONSUME2(RCurly);
     });
   });
@@ -235,7 +235,7 @@ export class ChiboParser extends CstParser {
     });
   });
 
-  private BrockStatement = this.RULE('BlockStatement', () => {
+  private BlockStatement = this.RULE('BlockStatement', () => {
     this.MANY(() => {
       this.OR([
         { ALT: () => this.SUBRULE(this.Function, { LABEL: 'statement' }) },
@@ -248,9 +248,6 @@ export class ChiboParser extends CstParser {
 
   private Match = this.RULE('Match', () => {
     this.CONSUME(matchToken);
-    // this.CONSUME(LBracket);
-    // this.SUBRULE(this.MatchArguments, { LABEL: 'arguments' });
-    // this.CONSUME(RBracket);
     this.CONSUME(LCurly);
     this.MANY_SEP2({
       SEP: Comma,
@@ -287,7 +284,7 @@ export class ChiboParser extends CstParser {
 
   private ToRight = this.RULE('ToRight', () => {
     this.SUBRULE(this.Pipe, { LABEL: 'from' });
-    this.MANY(() => {
+    this.OPTION(() => {
       this.CONSUME(ToRightToken);
       this.OR([
         { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'to' }) },
@@ -298,7 +295,10 @@ export class ChiboParser extends CstParser {
 
   private Pipe = this.RULE('Pipe', () => {
     this.SUBRULE(this.PipeFrom, { LABEL: 'from' });
-    this.SUBRULE(this.PipeTail, { LABEL: 'tail' });
+    this.MANY(() => {
+      this.CONSUME(PipeToken);
+      this.SUBRULE(this.PipeItem, { LABEL: 'tail' });
+    });
   });
 
   private PipeFrom = this.RULE('PipeFrom', () => {
@@ -311,6 +311,14 @@ export class ChiboParser extends CstParser {
         },
       },
       { ALT: () => this.SUBRULE(this.LogicExpression) },
+    ]);
+  });
+
+  private PipeItem = this.RULE('PipeItem', () => {
+    this.OR([
+      { ALT: () => this.CONSUME(Identifier, { LABEL: 'toIdentifier' }) },
+      { ALT: () => this.SUBRULE(this.Match, { LABEL: 'toMatch' }) },
+      { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
     ]);
   });
 
@@ -329,17 +337,6 @@ export class ChiboParser extends CstParser {
       this.CONSUME(Colon);
     });
     this.SUBRULE(this.Pipe);
-  });
-
-  private PipeTail = this.RULE('PipeTail', () => {
-    this.MANY(() => {
-      this.CONSUME(PipeToken);
-      this.OR([
-        { ALT: () => this.SUBRULE(this.Match, { LABEL: 'toMatch' }) },
-        { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
-        { ALT: () => this.CONSUME(Identifier, { LABEL: 'toIdentifier' }) },
-      ]);
-    });
   });
 
   private LogicExpression = this.RULE('LogicExpression', () => {

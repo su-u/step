@@ -248,12 +248,6 @@ exports[`関数 1 1`] = `
                                         ]
                                       }
                                     }
-                                  ],
-                                  \\"tail\\": [
-                                    {
-                                      \\"name\\": \\"PipeTail\\",
-                                      \\"children\\": {}
-                                    }
                                   ]
                                 }
                               }
@@ -622,12 +616,6 @@ exports[`関数 2 1`] = `
                                     }
                                   ]
                                 }
-                              }
-                            ],
-                            \\"tail\\": [
-                              {
-                                \\"name\\": \\"PipeTail\\",
-                                \\"children\\": {}
                               }
                             ]
                           }
@@ -1046,12 +1034,6 @@ exports[`関数 3 1`] = `
                                         ]
                                       }
                                     }
-                                  ],
-                                  \\"tail\\": [
-                                    {
-                                      \\"name\\": \\"PipeTail\\",
-                                      \\"children\\": {}
-                                    }
                                   ]
                                 }
                               }
@@ -1194,12 +1176,6 @@ exports[`関数 3 1`] = `
                                     }
                                   ]
                                 }
-                              }
-                            ],
-                            \\"tail\\": [
-                              {
-                                \\"name\\": \\"PipeTail\\",
-                                \\"children\\": {}
                               }
                             ]
                           }
@@ -1441,31 +1417,31 @@ exports[`関数 4 pipe 1`] = `
                                       }
                                     }
                                   ],
+                                  \\"PipeToken\\": [
+                                    {
+                                      \\"image\\": \\"|>\\",
+                                      \\"startOffset\\": 35,
+                                      \\"endOffset\\": 36,
+                                      \\"startLine\\": 3,
+                                      \\"endLine\\": 3,
+                                      \\"startColumn\\": 11,
+                                      \\"endColumn\\": 12,
+                                      \\"tokenTypeIdx\\": 37,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"PipeToken\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 37,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ],
                                   \\"tail\\": [
                                     {
-                                      \\"name\\": \\"PipeTail\\",
+                                      \\"name\\": \\"PipeItem\\",
                                       \\"children\\": {
-                                        \\"PipeToken\\": [
-                                          {
-                                            \\"image\\": \\"|>\\",
-                                            \\"startOffset\\": 35,
-                                            \\"endOffset\\": 36,
-                                            \\"startLine\\": 3,
-                                            \\"endLine\\": 3,
-                                            \\"startColumn\\": 11,
-                                            \\"endColumn\\": 12,
-                                            \\"tokenTypeIdx\\": 37,
-                                            \\"tokenType\\": {
-                                              \\"name\\": \\"PipeToken\\",
-                                              \\"PATTERN\\": {},
-                                              \\"tokenTypeIdx\\": 37,
-                                              \\"CATEGORIES\\": [],
-                                              \\"categoryMatches\\": [],
-                                              \\"categoryMatchesMap\\": {},
-                                              \\"isParent\\": false
-                                            }
-                                          }
-                                        ],
                                         \\"toIdentifier\\": [
                                           {
                                             \\"image\\": \\"console\\",
@@ -1732,31 +1708,31 @@ exports[`関数 5 pipe 1`] = `
                                       }
                                     }
                                   ],
+                                  \\"PipeToken\\": [
+                                    {
+                                      \\"image\\": \\"|>\\",
+                                      \\"startOffset\\": 35,
+                                      \\"endOffset\\": 36,
+                                      \\"startLine\\": 3,
+                                      \\"endLine\\": 3,
+                                      \\"startColumn\\": 11,
+                                      \\"endColumn\\": 12,
+                                      \\"tokenTypeIdx\\": 37,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"PipeToken\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 37,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ],
                                   \\"tail\\": [
                                     {
-                                      \\"name\\": \\"PipeTail\\",
+                                      \\"name\\": \\"PipeItem\\",
                                       \\"children\\": {
-                                        \\"PipeToken\\": [
-                                          {
-                                            \\"image\\": \\"|>\\",
-                                            \\"startOffset\\": 35,
-                                            \\"endOffset\\": 36,
-                                            \\"startLine\\": 3,
-                                            \\"endLine\\": 3,
-                                            \\"startColumn\\": 11,
-                                            \\"endColumn\\": 12,
-                                            \\"tokenTypeIdx\\": 37,
-                                            \\"tokenType\\": {
-                                              \\"name\\": \\"PipeToken\\",
-                                              \\"PATTERN\\": {},
-                                              \\"tokenTypeIdx\\": 37,
-                                              \\"CATEGORIES\\": [],
-                                              \\"categoryMatches\\": [],
-                                              \\"categoryMatchesMap\\": {},
-                                              \\"isParent\\": false
-                                            }
-                                          }
-                                        ],
                                         \\"toIdentifier\\": [
                                           {
                                             \\"image\\": \\"console\\",
@@ -1893,31 +1869,31 @@ exports[`関数 5 pipe 1`] = `
                           }
                         }
                       ],
+                      \\"PipeToken\\": [
+                        {
+                          \\"image\\": \\"|>\\",
+                          \\"startOffset\\": 62,
+                          \\"endOffset\\": 63,
+                          \\"startLine\\": 5,
+                          \\"endLine\\": 5,
+                          \\"startColumn\\": 11,
+                          \\"endColumn\\": 12,
+                          \\"tokenTypeIdx\\": 37,
+                          \\"tokenType\\": {
+                            \\"name\\": \\"PipeToken\\",
+                            \\"PATTERN\\": {},
+                            \\"tokenTypeIdx\\": 37,
+                            \\"CATEGORIES\\": [],
+                            \\"categoryMatches\\": [],
+                            \\"categoryMatchesMap\\": {},
+                            \\"isParent\\": false
+                          }
+                        }
+                      ],
                       \\"tail\\": [
                         {
-                          \\"name\\": \\"PipeTail\\",
+                          \\"name\\": \\"PipeItem\\",
                           \\"children\\": {
-                            \\"PipeToken\\": [
-                              {
-                                \\"image\\": \\"|>\\",
-                                \\"startOffset\\": 62,
-                                \\"endOffset\\": 63,
-                                \\"startLine\\": 5,
-                                \\"endLine\\": 5,
-                                \\"startColumn\\": 11,
-                                \\"endColumn\\": 12,
-                                \\"tokenTypeIdx\\": 37,
-                                \\"tokenType\\": {
-                                  \\"name\\": \\"PipeToken\\",
-                                  \\"PATTERN\\": {},
-                                  \\"tokenTypeIdx\\": 37,
-                                  \\"CATEGORIES\\": [],
-                                  \\"categoryMatches\\": [],
-                                  \\"categoryMatchesMap\\": {},
-                                  \\"isParent\\": false
-                                }
-                              }
-                            ],
                             \\"toIdentifier\\": [
                               {
                                 \\"image\\": \\"out\\",
@@ -2156,31 +2132,31 @@ exports[`関数 6 pipe 1`] = `
                                       }
                                     }
                                   ],
+                                  \\"PipeToken\\": [
+                                    {
+                                      \\"image\\": \\"|>\\",
+                                      \\"startOffset\\": 35,
+                                      \\"endOffset\\": 36,
+                                      \\"startLine\\": 3,
+                                      \\"endLine\\": 3,
+                                      \\"startColumn\\": 11,
+                                      \\"endColumn\\": 12,
+                                      \\"tokenTypeIdx\\": 37,
+                                      \\"tokenType\\": {
+                                        \\"name\\": \\"PipeToken\\",
+                                        \\"PATTERN\\": {},
+                                        \\"tokenTypeIdx\\": 37,
+                                        \\"CATEGORIES\\": [],
+                                        \\"categoryMatches\\": [],
+                                        \\"categoryMatchesMap\\": {},
+                                        \\"isParent\\": false
+                                      }
+                                    }
+                                  ],
                                   \\"tail\\": [
                                     {
-                                      \\"name\\": \\"PipeTail\\",
+                                      \\"name\\": \\"PipeItem\\",
                                       \\"children\\": {
-                                        \\"PipeToken\\": [
-                                          {
-                                            \\"image\\": \\"|>\\",
-                                            \\"startOffset\\": 35,
-                                            \\"endOffset\\": 36,
-                                            \\"startLine\\": 3,
-                                            \\"endLine\\": 3,
-                                            \\"startColumn\\": 11,
-                                            \\"endColumn\\": 12,
-                                            \\"tokenTypeIdx\\": 37,
-                                            \\"tokenType\\": {
-                                              \\"name\\": \\"PipeToken\\",
-                                              \\"PATTERN\\": {},
-                                              \\"tokenTypeIdx\\": 37,
-                                              \\"CATEGORIES\\": [],
-                                              \\"categoryMatches\\": [],
-                                              \\"categoryMatchesMap\\": {},
-                                              \\"isParent\\": false
-                                            }
-                                          }
-                                        ],
                                         \\"toIdentifier\\": [
                                           {
                                             \\"image\\": \\"console\\",
@@ -2354,12 +2330,6 @@ exports[`関数 6 pipe 1`] = `
                                                     ]
                                                   }
                                                 }
-                                              ],
-                                              \\"tail\\": [
-                                                {
-                                                  \\"name\\": \\"PipeTail\\",
-                                                  \\"children\\": {}
-                                                }
                                               ]
                                             }
                                           }
@@ -2395,31 +2365,31 @@ exports[`関数 6 pipe 1`] = `
                           }
                         }
                       ],
+                      \\"PipeToken\\": [
+                        {
+                          \\"image\\": \\"|>\\",
+                          \\"startOffset\\": 66,
+                          \\"endOffset\\": 67,
+                          \\"startLine\\": 5,
+                          \\"endLine\\": 5,
+                          \\"startColumn\\": 15,
+                          \\"endColumn\\": 16,
+                          \\"tokenTypeIdx\\": 37,
+                          \\"tokenType\\": {
+                            \\"name\\": \\"PipeToken\\",
+                            \\"PATTERN\\": {},
+                            \\"tokenTypeIdx\\": 37,
+                            \\"CATEGORIES\\": [],
+                            \\"categoryMatches\\": [],
+                            \\"categoryMatchesMap\\": {},
+                            \\"isParent\\": false
+                          }
+                        }
+                      ],
                       \\"tail\\": [
                         {
-                          \\"name\\": \\"PipeTail\\",
+                          \\"name\\": \\"PipeItem\\",
                           \\"children\\": {
-                            \\"PipeToken\\": [
-                              {
-                                \\"image\\": \\"|>\\",
-                                \\"startOffset\\": 66,
-                                \\"endOffset\\": 67,
-                                \\"startLine\\": 5,
-                                \\"endLine\\": 5,
-                                \\"startColumn\\": 15,
-                                \\"endColumn\\": 16,
-                                \\"tokenTypeIdx\\": 37,
-                                \\"tokenType\\": {
-                                  \\"name\\": \\"PipeToken\\",
-                                  \\"PATTERN\\": {},
-                                  \\"tokenTypeIdx\\": 37,
-                                  \\"CATEGORIES\\": [],
-                                  \\"categoryMatches\\": [],
-                                  \\"categoryMatchesMap\\": {},
-                                  \\"isParent\\": false
-                                }
-                              }
-                            ],
                             \\"toIdentifier\\": [
                               {
                                 \\"image\\": \\"out\\",

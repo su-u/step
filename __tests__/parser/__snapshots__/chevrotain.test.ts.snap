@@ -78,12 +78,6 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -207,12 +201,6 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -338,12 +326,6 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -468,12 +450,6 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -597,12 +573,6 @@ exports[`chevrotain ./chb/example1.chb 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -808,12 +778,6 @@ exports[`chevrotain ./chb/example1_3.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -947,12 +911,6 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -1148,12 +1106,6 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -1341,12 +1293,6 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -1533,12 +1479,6 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -1734,12 +1674,6 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -1934,12 +1868,6 @@ exports[`chevrotain ./chb/example2.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -2074,12 +2002,6 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -2203,12 +2125,6 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -2404,12 +2320,6 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -2604,12 +2514,6 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -2803,12 +2707,6 @@ exports[`chevrotain ./chb/example3.chb 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -2944,12 +2842,6 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -3073,12 +2965,6 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -3274,12 +3160,6 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -3474,12 +3354,6 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -3673,12 +3547,6 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -3887,12 +3755,6 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -4099,12 +3961,6 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -4446,12 +4302,6 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -4785,12 +4635,6 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -4998,12 +4842,6 @@ exports[`chevrotain ./chb/example4.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -5138,12 +4976,6 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -5269,31 +5101,31 @@ exports[`chevrotain ./chb/example5_1.chb 1`] = `
                           }
                         }
                       ],
+                      \\"PipeToken\\": [
+                        {
+                          \\"image\\": \\"|>\\",
+                          \\"startOffset\\": 17,
+                          \\"endOffset\\": 18,
+                          \\"startLine\\": 2,
+                          \\"endLine\\": 2,
+                          \\"startColumn\\": 7,
+                          \\"endColumn\\": 8,
+                          \\"tokenTypeIdx\\": 37,
+                          \\"tokenType\\": {
+                            \\"name\\": \\"PipeToken\\",
+                            \\"PATTERN\\": {},
+                            \\"tokenTypeIdx\\": 37,
+                            \\"CATEGORIES\\": [],
+                            \\"categoryMatches\\": [],
+                            \\"categoryMatchesMap\\": {},
+                            \\"isParent\\": false
+                          }
+                        }
+                      ],
                       \\"tail\\": [
                         {
-                          \\"name\\": \\"PipeTail\\",
+                          \\"name\\": \\"PipeItem\\",
                           \\"children\\": {
-                            \\"PipeToken\\": [
-                              {
-                                \\"image\\": \\"|>\\",
-                                \\"startOffset\\": 17,
-                                \\"endOffset\\": 18,
-                                \\"startLine\\": 2,
-                                \\"endLine\\": 2,
-                                \\"startColumn\\": 7,
-                                \\"endColumn\\": 8,
-                                \\"tokenTypeIdx\\": 37,
-                                \\"tokenType\\": {
-                                  \\"name\\": \\"PipeToken\\",
-                                  \\"PATTERN\\": {},
-                                  \\"tokenTypeIdx\\": 37,
-                                  \\"CATEGORIES\\": [],
-                                  \\"categoryMatches\\": [],
-                                  \\"categoryMatchesMap\\": {},
-                                  \\"isParent\\": false
-                                }
-                              }
-                            ],
                             \\"toIdentifier\\": [
                               {
                                 \\"image\\": \\"console\\",

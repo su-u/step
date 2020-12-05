@@ -228,12 +228,6 @@ exports[`if 1 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -367,12 +361,6 @@ exports[`if 2 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -647,12 +635,6 @@ exports[`if 2 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -1028,12 +1010,6 @@ exports[`if 3 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -1215,12 +1191,6 @@ exports[`if 3 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -1401,12 +1371,6 @@ exports[`if 3 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -1782,12 +1746,6 @@ exports[`if 4 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -1969,12 +1927,6 @@ exports[`if 4 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -2155,12 +2107,6 @@ exports[`if 4 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -2401,12 +2347,6 @@ exports[`if 5 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -2635,12 +2575,6 @@ exports[`if 5 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -2871,12 +2805,6 @@ exports[`if 5 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -3058,12 +2986,6 @@ exports[`if 5 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -3244,12 +3166,6 @@ exports[`if 5 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -3490,12 +3406,6 @@ exports[`if 6 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -3725,12 +3635,6 @@ exports[`if 6 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -3855,12 +3759,6 @@ exports[`if 6 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -3984,12 +3882,6 @@ exports[`if 6 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }
@@ -4220,12 +4112,6 @@ exports[`if 6 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -4407,12 +4293,6 @@ exports[`if 6 1`] = `
                             ]
                           }
                         }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
-                        }
                       ]
                     }
                   }
@@ -4593,12 +4473,6 @@ exports[`if 6 1`] = `
                               }
                             ]
                           }
-                        }
-                      ],
-                      \\"tail\\": [
-                        {
-                          \\"name\\": \\"PipeTail\\",
-                          \\"children\\": {}
                         }
                       ]
                     }

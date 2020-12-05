@@ -79,31 +79,31 @@ exports[`match 1 1`] = `
                           }
                         }
                       ],
+                      \\"PipeToken\\": [
+                        {
+                          \\"image\\": \\"|>\\",
+                          \\"startOffset\\": 3,
+                          \\"endOffset\\": 4,
+                          \\"startLine\\": 2,
+                          \\"endLine\\": 2,
+                          \\"startColumn\\": 3,
+                          \\"endColumn\\": 4,
+                          \\"tokenTypeIdx\\": 37,
+                          \\"tokenType\\": {
+                            \\"name\\": \\"PipeToken\\",
+                            \\"PATTERN\\": {},
+                            \\"tokenTypeIdx\\": 37,
+                            \\"CATEGORIES\\": [],
+                            \\"categoryMatches\\": [],
+                            \\"categoryMatchesMap\\": {},
+                            \\"isParent\\": false
+                          }
+                        }
+                      ],
                       \\"tail\\": [
                         {
-                          \\"name\\": \\"PipeTail\\",
+                          \\"name\\": \\"PipeItem\\",
                           \\"children\\": {
-                            \\"PipeToken\\": [
-                              {
-                                \\"image\\": \\"|>\\",
-                                \\"startOffset\\": 3,
-                                \\"endOffset\\": 4,
-                                \\"startLine\\": 2,
-                                \\"endLine\\": 2,
-                                \\"startColumn\\": 3,
-                                \\"endColumn\\": 4,
-                                \\"tokenTypeIdx\\": 37,
-                                \\"tokenType\\": {
-                                  \\"name\\": \\"PipeToken\\",
-                                  \\"PATTERN\\": {},
-                                  \\"tokenTypeIdx\\": 37,
-                                  \\"CATEGORIES\\": [],
-                                  \\"categoryMatches\\": [],
-                                  \\"categoryMatchesMap\\": {},
-                                  \\"isParent\\": false
-                                }
-                              }
-                            ],
                             \\"toMatch\\": [
                               {
                                 \\"name\\": \\"Match\\",
@@ -393,12 +393,6 @@ exports[`match 1 1`] = `
                                                                 ]
                                                               }
                                                             }
-                                                          ],
-                                                          \\"tail\\": [
-                                                            {
-                                                              \\"name\\": \\"PipeTail\\",
-                                                              \\"children\\": {}
-                                                            }
                                                           ]
                                                         }
                                                       }
@@ -591,12 +585,6 @@ exports[`match 2 1`] = `
                                                     ]
                                                   }
                                                 }
-                                              ],
-                                              \\"tail\\": [
-                                                {
-                                                  \\"name\\": \\"PipeTail\\",
-                                                  \\"children\\": {}
-                                                }
                                               ]
                                             }
                                           }
@@ -672,12 +660,6 @@ exports[`match 2 1`] = `
                                                     ]
                                                   }
                                                 }
-                                              ],
-                                              \\"tail\\": [
-                                                {
-                                                  \\"name\\": \\"PipeTail\\",
-                                                  \\"children\\": {}
-                                                }
                                               ]
                                             }
                                           }
@@ -734,31 +716,31 @@ exports[`match 2 1`] = `
                           }
                         }
                       ],
+                      \\"PipeToken\\": [
+                        {
+                          \\"image\\": \\"|>\\",
+                          \\"startOffset\\": 11,
+                          \\"endOffset\\": 12,
+                          \\"startLine\\": 2,
+                          \\"endLine\\": 2,
+                          \\"startColumn\\": 11,
+                          \\"endColumn\\": 12,
+                          \\"tokenTypeIdx\\": 37,
+                          \\"tokenType\\": {
+                            \\"name\\": \\"PipeToken\\",
+                            \\"PATTERN\\": {},
+                            \\"tokenTypeIdx\\": 37,
+                            \\"CATEGORIES\\": [],
+                            \\"categoryMatches\\": [],
+                            \\"categoryMatchesMap\\": {},
+                            \\"isParent\\": false
+                          }
+                        }
+                      ],
                       \\"tail\\": [
                         {
-                          \\"name\\": \\"PipeTail\\",
+                          \\"name\\": \\"PipeItem\\",
                           \\"children\\": {
-                            \\"PipeToken\\": [
-                              {
-                                \\"image\\": \\"|>\\",
-                                \\"startOffset\\": 11,
-                                \\"endOffset\\": 12,
-                                \\"startLine\\": 2,
-                                \\"endLine\\": 2,
-                                \\"startColumn\\": 11,
-                                \\"endColumn\\": 12,
-                                \\"tokenTypeIdx\\": 37,
-                                \\"tokenType\\": {
-                                  \\"name\\": \\"PipeToken\\",
-                                  \\"PATTERN\\": {},
-                                  \\"tokenTypeIdx\\": 37,
-                                  \\"CATEGORIES\\": [],
-                                  \\"categoryMatches\\": [],
-                                  \\"categoryMatchesMap\\": {},
-                                  \\"isParent\\": false
-                                }
-                              }
-                            ],
                             \\"toMatch\\": [
                               {
                                 \\"name\\": \\"Match\\",
@@ -1122,12 +1104,6 @@ exports[`match 2 1`] = `
                                                                   }
                                                                 ]
                                                               }
-                                                            }
-                                                          ],
-                                                          \\"tail\\": [
-                                                            {
-                                                              \\"name\\": \\"PipeTail\\",
-                                                              \\"children\\": {}
                                                             }
                                                           ]
                                                         }
@@ -1479,12 +1455,6 @@ exports[`match 2 1`] = `
                                                                 ]
                                                               }
                                                             }
-                                                          ],
-                                                          \\"tail\\": [
-                                                            {
-                                                              \\"name\\": \\"PipeTail\\",
-                                                              \\"children\\": {}
-                                                            }
                                                           ]
                                                         }
                                                       }
@@ -1698,12 +1668,6 @@ exports[`match 3 1`] = `
                                                     ]
                                                   }
                                                 }
-                                              ],
-                                              \\"tail\\": [
-                                                {
-                                                  \\"name\\": \\"PipeTail\\",
-                                                  \\"children\\": {}
-                                                }
                                               ]
                                             }
                                           }
@@ -1779,12 +1743,6 @@ exports[`match 3 1`] = `
                                                     ]
                                                   }
                                                 }
-                                              ],
-                                              \\"tail\\": [
-                                                {
-                                                  \\"name\\": \\"PipeTail\\",
-                                                  \\"children\\": {}
-                                                }
                                               ]
                                             }
                                           }
@@ -1841,31 +1799,31 @@ exports[`match 3 1`] = `
                           }
                         }
                       ],
+                      \\"PipeToken\\": [
+                        {
+                          \\"image\\": \\"|>\\",
+                          \\"startOffset\\": 11,
+                          \\"endOffset\\": 12,
+                          \\"startLine\\": 2,
+                          \\"endLine\\": 2,
+                          \\"startColumn\\": 11,
+                          \\"endColumn\\": 12,
+                          \\"tokenTypeIdx\\": 37,
+                          \\"tokenType\\": {
+                            \\"name\\": \\"PipeToken\\",
+                            \\"PATTERN\\": {},
+                            \\"tokenTypeIdx\\": 37,
+                            \\"CATEGORIES\\": [],
+                            \\"categoryMatches\\": [],
+                            \\"categoryMatchesMap\\": {},
+                            \\"isParent\\": false
+                          }
+                        }
+                      ],
                       \\"tail\\": [
                         {
-                          \\"name\\": \\"PipeTail\\",
+                          \\"name\\": \\"PipeItem\\",
                           \\"children\\": {
-                            \\"PipeToken\\": [
-                              {
-                                \\"image\\": \\"|>\\",
-                                \\"startOffset\\": 11,
-                                \\"endOffset\\": 12,
-                                \\"startLine\\": 2,
-                                \\"endLine\\": 2,
-                                \\"startColumn\\": 11,
-                                \\"endColumn\\": 12,
-                                \\"tokenTypeIdx\\": 37,
-                                \\"tokenType\\": {
-                                  \\"name\\": \\"PipeToken\\",
-                                  \\"PATTERN\\": {},
-                                  \\"tokenTypeIdx\\": 37,
-                                  \\"CATEGORIES\\": [],
-                                  \\"categoryMatches\\": [],
-                                  \\"categoryMatchesMap\\": {},
-                                  \\"isParent\\": false
-                                }
-                              }
-                            ],
                             \\"toMatch\\": [
                               {
                                 \\"name\\": \\"Match\\",
@@ -2230,12 +2188,6 @@ exports[`match 3 1`] = `
                                                                 ]
                                                               }
                                                             }
-                                                          ],
-                                                          \\"tail\\": [
-                                                            {
-                                                              \\"name\\": \\"PipeTail\\",
-                                                              \\"children\\": {}
-                                                            }
                                                           ]
                                                         }
                                                       }
@@ -2454,12 +2406,6 @@ exports[`match 3 1`] = `
                                                                   }
                                                                 ]
                                                               }
-                                                            }
-                                                          ],
-                                                          \\"tail\\": [
-                                                            {
-                                                              \\"name\\": \\"PipeTail\\",
-                                                              \\"children\\": {}
                                                             }
                                                           ]
                                                         }

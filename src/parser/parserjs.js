@@ -207,12 +207,12 @@
         this.SUBRULE(this.Pipe, { LABEL: 'conditionalExpression' });
         this.CONSUME(RBracket);
         this.CONSUME(LCurly);
-        this.SUBRULE(this.BrockStatement);
+        this.SUBRULE(this.BlockStatement);
         this.CONSUME(RCurly);
         this.OPTION(() => {
           this.CONSUME(elseToken);
           this.CONSUME2(LCurly);
-          this.SUBRULE2(this.BrockStatement);
+          this.SUBRULE2(this.BlockStatement);
           this.CONSUME2(RCurly);
         });
       });
@@ -236,7 +236,7 @@
         });
       });
 
-      this.BrockStatement = this.RULE('BlockStatement', () => {
+      this.BlockStatement = this.RULE('BlockStatement', () => {
         this.MANY(() => {
           this.OR([
             { ALT: () => this.SUBRULE(this.Function, { LABEL: 'statement' }) },
@@ -249,9 +249,6 @@
 
       this.Match = this.RULE('Match', () => {
         this.CONSUME(matchToken);
-        //this.CONSUME(LBracket);
-        //this.SUBRULE(this.MatchArguments, { LABEL: 'arguments' });
-        //this.CONSUME(RBracket);
         this.CONSUME(LCurly);
         this.MANY_SEP2({
           SEP: Comma,
@@ -288,7 +285,7 @@
 
       this.ToRight = this.RULE('ToRight', () => {
         this.SUBRULE(this.Pipe, { LABEL: 'from' });
-        this.MANY(() => {
+        this.OPTION(() => {
           this.CONSUME(ToRightToken);
           this.OR([
             { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'to' }) },
@@ -299,17 +296,9 @@
 
       this.Pipe = this.RULE('Pipe', () => {
         this.SUBRULE(this.PipeFrom, { LABEL: 'from' });
-        this.SUBRULE(this.PipeTail, { LABEL: 'tail' });
-      });
-
-      this.PipeTail = this.RULE('PipeTail', () => {
         this.MANY(() => {
           this.CONSUME(PipeToken);
-          this.OR([
-            { ALT: () => this.SUBRULE(this.Match, { LABEL: 'toMatch' }) },
-            { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
-            { ALT: () => this.CONSUME(Identifier, { LABEL: 'toIdentifier' }) },
-          ]);
+          this.SUBRULE(this.PipeItem, { LABEL: 'tail' });
         });
       });
 
@@ -323,6 +312,18 @@
             },
           },
           { ALT: () => this.SUBRULE(this.LogicExpression) },
+        ]);
+      });
+
+      this.PipeItem = this.RULE('PipeItem', () => {
+        this.OR([
+          { ALT: () => this.CONSUME(Identifier, { LABEL: 'toIdentifier' }) },
+          //{ ALT: () => {
+          //  this.CONSUME(PipeToken);
+          //  this.SUBRULE(this.PipeItem, { LABEL: 'tail' });
+          //}},
+          { ALT: () => this.SUBRULE(this.Match, { LABEL: 'Match' }) },
+          { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
         ]);
       });
 

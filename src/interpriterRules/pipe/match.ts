@@ -1,15 +1,9 @@
 import _ from 'lodash';
 import { IInterpreterRules } from '../types';
 
-export const execMatch = ({ ast, manager, execObject }: IInterpreterRules) => {
-  const childrenAst = ast.children.from[0];
-  const tail = ast.children.tail[0];
-
-  const tmp = execObject.interpreter({ ast: childrenAst, manager, execObject });
-  // console.log(tmp);
-  const value = Array.isArray(tmp) ? tmp.map((v) => v.value) : [tmp];
-  const matchAst = tail.children.toMatch[0];
-  const matchList = matchAst.children.MatchExpression.map((expression) => {
+export const execMatch = ({ ast, manager, execObject }: IInterpreterRules, last) => {
+  const value = Array.isArray(last) ? last.map((v) => v.value) : [last];
+  const matchList = ast.children.toMatch[0].children.MatchExpression.map((expression) => {
     const conditions = getConditions({ ast: expression, manager, execObject });
     const program = expression.children.Program[0];
     return {
