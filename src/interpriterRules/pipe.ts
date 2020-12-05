@@ -5,17 +5,17 @@ import { execMatch } from './pipe/match';
 
 export const pipe = ({ ast, manager, execObject }: IInterpreterRules) => {
   const childrenAst = ast.children.from[0];
-  let value = execObject.interpreter({ ast: childrenAst, manager, execObject });
+  let fromValue = execObject.interpreter({ ast: childrenAst, manager, execObject });
   if (ast.children.tail !== undefined) {
-    Object.values(ast.children.tail).forEach((pipeAst: any, i: number) => {
+    fromValue = ast.children.tail.reduce((last, pipeAst) => {
       if (pipeAst.children.toEach !== undefined) {
-        value = execEach({ ast: pipeAst, manager, execObject }, value);
+        return execEach({ ast: pipeAst, manager, execObject }, last);
       } else if (pipeAst.children.toIdentifier !== undefined) {
-        value = execFunction({ ast: pipeAst, manager, execObject }, value);
+        return execFunction({ ast: pipeAst, manager, execObject }, last);
       } else if (pipeAst.children.toMatch !== undefined) {
-        value = execMatch({ ast: pipeAst, manager, execObject }, value);
+        return execMatch({ ast: pipeAst, manager, execObject }, last);
       }
-    });
+    }, fromValue);
   }
-  return value;
+  return fromValue;
 };
