@@ -1,23 +1,39 @@
 module.exports = {
-  entry: {
-    'chiba-lang': [`./src/web.ts`],
-  },
+  entry: './webSrc/index.tsx',
   output: {
-    path: `${__dirname}/dist`,
-    filename: 'web.js',
+    path: `${__dirname}/public/dist`,
+    filename: 'index.js',
   },
   module: {
     rules: [
       {
         // 拡張子 .ts の場合
-        test: /\.ts/,
+        test: /\.(tsx|ts)$/,
         // TypeScript をコンパイルする
         use: 'ts-loader',
+      },
+      {
+        test: /\.scss/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false,
+
+              importLoaders: 2
+            },
+          },
+          {
+            loader: 'sass-loader',
+
+          }
+        ],
       },
     ],
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json'],
+    extensions: ['.ts', '.tsx', '.js', '.json', 'scss'],
     plugins: [],
   },
 }

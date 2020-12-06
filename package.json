@@ -12,10 +12,8 @@
     "test": "jest",
     "test-c": "jest --coverage",
     "test-u": "jest --updateSnapshot",
-    "web-build-dev": "node build.ts development",
-    "web-build-prod": "node build.ts production",
-    "build": "webpack",
-    "watch": "webpack -w"
+    "web-build": "webpack",
+    "web-watch": "webpack -w"
   },
   "repository": {
     "type": "git",

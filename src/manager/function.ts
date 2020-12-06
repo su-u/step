@@ -35,7 +35,7 @@ export class FunctionManager {
 
   public debug() {
     console.group('functions');
-    console.log(this.userFunctions);
+    console.info(this.userFunctions);
     console.groupEnd();
   }
 }
