@@ -1,5 +1,5 @@
 import { Rules } from './rules';
-import logger from './logger';
+// import logger from './logger';
 import { term } from './interpriterRules/term';
 import { factor } from './interpriterRules/factor';
 import { expression } from './interpriterRules/expression';
@@ -17,7 +17,7 @@ import { pipeArguments } from './interpriterRules/pipeArguments';
 import { logicExpression } from './interpriterRules/logicExpression';
 
 export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => {
-  logger.info(ast.name);
+  // logger.info(ast.name);
   let value = null;
   switch (ast.name) {
     case Rules.Program:

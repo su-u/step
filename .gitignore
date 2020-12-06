@@ -266,3 +266,5 @@ fabric.properties
 build/*
 out.json
 chb/main.chb
+public/dist
+dist/
