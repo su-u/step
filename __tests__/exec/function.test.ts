@@ -421,4 +421,22 @@ function add(a, b) {
       image: 21,
     });
   });
+
+  test('19', () => {
+    console.log = () => {};
+    const source = `
+3 |> console
+
+function add2(a, b) {
+ return a + b
+}
+
+{ 1, 2 } |> add2 -> v2
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('v2')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 3,
+    });
+  });
 });

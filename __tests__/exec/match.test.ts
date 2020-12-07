@@ -124,8 +124,8 @@ value |> match {
     });
   });
 
-    test('6', () => {
-      const source = `
+  test('6', () => {
+    const source = `
   0 -> v
   10 |> match {
     (5) => { return 1 ~ 5 },
@@ -135,10 +135,10 @@ value |> match {
     v + i -> v
   }
        `;
-      const resultManager = exec(source, manager).variable;
-      expect(resultManager.reference('v')).toStrictEqual({
-        name: LiteralTokens.NumberLiteral,
-        image: 55,
-      });
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('v')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 55,
     });
+  });
 });
