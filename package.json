@@ -11,7 +11,9 @@
     "prettier:fix": "prettier --write ./{src,__tests__}/**/*.{ts,js}",
     "test": "jest",
     "test-c": "jest --coverage",
-    "test-u": "jest --updateSnapshot"
+    "test-u": "jest --updateSnapshot",
+    "web-build": "webpack",
+    "web-watch": "webpack -w"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,11 @@
     "extensible-custom-error": "^0.0.7",
     "fs-extra": "^8.1.0",
     "lodash": "^4.17.15",
-    "pegjs": "^0.10.0"
+    "pegjs": "^0.10.0",
+    "react": "^17.0.1",
+    "react-ace": "^9.2.0",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@types/fs-extra": "^8.0.1",
@@ -37,17 +43,27 @@
     "@types/log4js": "^2.3.5",
     "@types/node": "^13.7.0",
     "@types/pegjs": "^0.10.1",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.6",
     "@zerollup/ts-transform-paths": "^1.7.17",
+    "css-loader": "^5.0.1",
+    "esbuild": "^0.8.20",
     "jest": "^25.2.2",
     "log4js": "^6.1.1",
     "log4js-extend": "^0.2.1",
+    "node-sass": "^5.0.0",
     "nodemon": "^2.0.2",
     "prettier": "^2.0.2",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
     "ts-jest": "^25.2.1",
-    "ts-loader": "^6.2.1",
+    "ts-loader": "^8.0.11",
     "ts-node": "^8.10.2",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "ttypescript": "^1.5.10",
-    "typescript": "^3.8.3"
+    "typescript": "3.8.3",
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0"
   }
 }

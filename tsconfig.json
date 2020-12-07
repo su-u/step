@@ -9,6 +9,7 @@
     "removeComments": true,
     "incremental": true,
     "baseUrl": ".",
+    "jsx": "react",
     "paths": {
       "@/*": ["src/*"]
     },

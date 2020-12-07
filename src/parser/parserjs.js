@@ -176,13 +176,17 @@
 
       this.Program = this.RULE('Program', () => {
         this.MANY(() => {
-          this.OR([
-            { ALT: () => this.SUBRULE(this.Function) },
-            { ALT: () => this.SUBRULE(this.IfStatement) },
-            { ALT: () => this.SUBRULE(this.Assignment) },
-            { ALT: () => this.SUBRULE(this.ReturnStatement) },
-          ]);
+          this.SUBRULE(this.ProgramRule);
         });
+      });
+
+      this.ProgramRule = this.RULE('ProgramRule', () => {
+        this.OR([
+          { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rule' }) },
+          { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rule' }) },
+          { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rule' }) },
+          { ALT: () => this.SUBRULE(this.ReturnStatement, { LABEL: 'rule' }) },
+        ]);
       });
 
       this.Assignment = this.RULE('Assignment', () => {
@@ -238,13 +242,17 @@
 
       this.BlockStatement = this.RULE('BlockStatement', () => {
         this.MANY(() => {
-          this.OR([
-            { ALT: () => this.SUBRULE(this.Function, { LABEL: 'statement' }) },
-            { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'statement' }) },
-            { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'statement' }) },
-            { ALT: () => this.CONSUME(BreakToken, { LABEL: 'statement' }) },
-          ]);
+          this.SUBRULE(this.BlockRule);
         });
+      });
+
+      this.BlockRule = this.RULE('BlockRule', () => {
+        this.OR([
+          { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rule' }) },
+          { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rule' }) },
+          { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rule' }) },
+          { ALT: () => this.CONSUME(BreakToken, { LABEL: 'rule' }) },
+        ]);
       });
 
       this.Match = this.RULE('Match', () => {

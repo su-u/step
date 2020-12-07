@@ -28,6 +28,7 @@ export const execFunction = ({ ast, manager, execObject }: IInterpreterRules, la
     });
   } else {
     const arg = functionData.arguments
+      .filter((_, j) => j < literals.length)
       .map((_: any, i: number) => {
         const image = literals[i].value !== undefined ? literals[i].value : literals[i];
         return image;

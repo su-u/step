@@ -175,13 +175,17 @@ export class ChiboParser extends CstParser {
 
   public Program = this.RULE('Program', () => {
     this.MANY(() => {
-      this.OR([
-        { ALT: () => this.SUBRULE(this.Function) },
-        { ALT: () => this.SUBRULE(this.IfStatement) },
-        { ALT: () => this.SUBRULE(this.Assignment) },
-        { ALT: () => this.SUBRULE(this.ReturnStatement) },
-      ]);
+      this.SUBRULE(this.ProgramRule);
     });
+  });
+
+  private ProgramRule = this.RULE('ProgramRule', () => {
+    this.OR([
+      { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rule' }) },
+      { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rule' }) },
+      { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rule' }) },
+      { ALT: () => this.SUBRULE(this.ReturnStatement, { LABEL: 'rule' }) },
+    ]);
   });
 
   private Assignment = this.RULE('Assignment', () => {
@@ -237,13 +241,17 @@ export class ChiboParser extends CstParser {
 
   private BlockStatement = this.RULE('BlockStatement', () => {
     this.MANY(() => {
-      this.OR([
-        { ALT: () => this.SUBRULE(this.Function, { LABEL: 'statement' }) },
-        { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'statement' }) },
-        { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'statement' }) },
-        { ALT: () => this.CONSUME(BreakToken, { LABEL: 'statement' }) },
-      ]);
+      this.SUBRULE(this.BlockRule);
     });
+  });
+
+  private BlockRule = this.RULE('BlockRule', () => {
+    this.OR([
+      { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rule' }) },
+      { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rule' }) },
+      { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rule' }) },
+      { ALT: () => this.CONSUME(BreakToken, { LABEL: 'rule' }) },
+    ]);
   });
 
   private Match = this.RULE('Match', () => {

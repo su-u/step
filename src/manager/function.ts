@@ -24,7 +24,7 @@ export class FunctionManager {
     } else {
       const func = this.userFunctions.get(name);
       if (func === undefined) {
-        throw new NullReferenceFunctionError('${name}');
+        throw new NullReferenceFunctionError(`${name}`);
       }
       return {
         ...this.userFunctions.get(name),
@@ -35,7 +35,7 @@ export class FunctionManager {
 
   public debug() {
     console.group('functions');
-    console.log(this.userFunctions);
+    console.info(this.userFunctions);
     console.groupEnd();
   }
 }
