@@ -8,10 +8,12 @@ import { entry } from '../../src';
 console.dir = () => {};
 console.group = () => {};
 console.groupEnd = () => {};
+console.info = () => {};
 
 export const App: React.FC = () => {
   const [code, setCode] = React.useState<string>('');
   const [output, setOutput] = React.useState<Array<string>>([]);
+  const [execError, setExecError] = React.useState<Array<string>>([]);
 
   const onChange = React.useCallback((value) => {
     setCode(value)
@@ -19,12 +21,16 @@ export const App: React.FC = () => {
 
   const chibaLangExec = React.useCallback(() => {
     setOutput([]);
+    setExecError([]);
     entry(code);
   }, [code])
 
   console.log = (obj: any) => {
-    // console.info(obj);
     setOutput((prev) => [...prev, String(obj)]);
+  }
+
+  console.error = (obj: any) => {
+    setExecError((prev) => [...prev, String(obj)]);
   }
 
   return (
@@ -48,10 +54,15 @@ export const App: React.FC = () => {
         />
         <div className="output">
           <div>
-            {output.map((line) => {
+            {execError.length === 0 && output.map((line) => {
               return (
                 <p>{line}</p>
-              )
+              );
+            })}
+            {execError.length >= 1 && execError.map((line) => {
+              return (
+                <p className="error">{line}</p>
+              );
             })}
           </div>
         </div>
