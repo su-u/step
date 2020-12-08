@@ -1,5 +1,5 @@
-import { parseInput } from './index';
 import * as fs from 'fs-extra';
+import { parseInput } from './index';
 import { writeAstToJson } from '../util/file';
 import { removeObjectByKey, UnnecessaryKeys } from '../util/json';
 

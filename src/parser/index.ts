@@ -1,7 +1,5 @@
 import { ChiboParser, ChiboLexer } from './parser';
 
-// ONLY ONCE
-
 export const parseInput = (text: string) => {
   const parser = new ChiboParser();
   const lexResult = ChiboLexer.tokenize(text);
@@ -11,8 +9,7 @@ export const parseInput = (text: string) => {
   const ast = parser.Program();
 
   if (parser.errors.length > 0) {
-    console.log(parser.errors);
-    throw new Error('sad sad panda, Parsing errors detected');
+    console.error(parser.errors);
   }
 
   return ast;
