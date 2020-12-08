@@ -266,15 +266,6 @@ export class ChiboParser extends CstParser {
     this.CONSUME(RCurly);
   });
 
-  private MatchArguments = this.RULE('MatchArguments', () => {
-    this.MANY_SEP({
-      SEP: Comma,
-      DEF: () => {
-        this.CONSUME(Identifier);
-      },
-    });
-  });
-
   private MatchExpression = this.RULE('MatchExpression', () => {
     this.CONSUME(LBracket);
     this.MANY_SEP({

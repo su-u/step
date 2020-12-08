@@ -267,15 +267,6 @@
         this.CONSUME(RCurly);
       });
 
-      this.MatchArguments = this.RULE('MatchArguments', () => {
-        this.MANY_SEP({
-          SEP: Comma,
-          DEF: () => {
-            this.CONSUME(Identifier);
-          },
-        });
-      });
-
       this.MatchExpression = this.RULE('MatchExpression', () => {
         this.CONSUME(LBracket);
         this.MANY_SEP({
@@ -326,10 +317,6 @@
       this.PipeItem = this.RULE('PipeItem', () => {
         this.OR([
           { ALT: () => this.CONSUME(Identifier, { LABEL: 'toIdentifier' }) },
-          //{ ALT: () => {
-          //  this.CONSUME(PipeToken);
-          //  this.SUBRULE(this.PipeItem, { LABEL: 'tail' });
-          //}},
           { ALT: () => this.SUBRULE(this.Match, { LABEL: 'Match' }) },
           { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
         ]);
