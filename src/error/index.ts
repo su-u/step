@@ -1,6 +1,10 @@
 import ExtensibleCustomError from 'extensible-custom-error';
 
-export class ChibaLangError extends ExtensibleCustomError {}
+export class ChibaLangError extends ExtensibleCustomError {
+  constructor(message, ...args) {
+    super(message, ...args);
+  }
+}
 
 export class NullReferenceVariableError extends ChibaLangError {
   constructor(message, ...args) {
