@@ -66,8 +66,9 @@
   const MultiplicationOperator = createToken({ name: 'MultiplicationOperator', pattern: Lexer.NA });
   const Multi = createToken({ name: 'Multi', pattern: /\*/, categories: MultiplicationOperator });
   const Div = createToken({ name: 'Div', pattern: /\//, categories: MultiplicationOperator });
+  const Mod = createToken({ name: 'Mod', pattern: /%/, categories: MultiplicationOperator });
 
-  const OperatorTokens = [AdditionOperator, Plus, Minus, MultiplicationOperator, Multi, Div];
+  const OperatorTokens = [AdditionOperator, Plus, Minus, MultiplicationOperator, Multi, Div, Mod];
 
   const RelationalOperator = createToken({ name: 'RelationalOperator', pattern: Lexer.NA });
   const AmountMore = createToken({
@@ -267,15 +268,6 @@
         this.CONSUME(RCurly);
       });
 
-      this.MatchArguments = this.RULE('MatchArguments', () => {
-        this.MANY_SEP({
-          SEP: Comma,
-          DEF: () => {
-            this.CONSUME(Identifier);
-          },
-        });
-      });
-
       this.MatchExpression = this.RULE('MatchExpression', () => {
         this.CONSUME(LBracket);
         this.MANY_SEP({
@@ -326,10 +318,6 @@
       this.PipeItem = this.RULE('PipeItem', () => {
         this.OR([
           { ALT: () => this.CONSUME(Identifier, { LABEL: 'toIdentifier' }) },
-          //{ ALT: () => {
-          //  this.CONSUME(PipeToken);
-          //  this.SUBRULE(this.PipeItem, { LABEL: 'tail' });
-          //}},
           { ALT: () => this.SUBRULE(this.Match, { LABEL: 'Match' }) },
           { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
         ]);

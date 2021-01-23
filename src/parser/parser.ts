@@ -63,8 +63,9 @@ const Minus = createToken({
 const MultiplicationOperator = createToken({ name: 'MultiplicationOperator', pattern: Lexer.NA });
 const Multi = createToken({ name: 'Multi', pattern: /\*/, categories: MultiplicationOperator });
 const Div = createToken({ name: 'Div', pattern: /\//, categories: MultiplicationOperator });
+const Mod = createToken({ name: 'Mod', pattern: /%/, categories: MultiplicationOperator });
 
-const OperatorTokens = [AdditionOperator, Plus, Minus, MultiplicationOperator, Multi, Div];
+const OperatorTokens = [AdditionOperator, Plus, Minus, MultiplicationOperator, Multi, Div, Mod];
 
 const RelationalOperator = createToken({ name: 'RelationalOperator', pattern: Lexer.NA });
 const AmountMore = createToken({
@@ -264,15 +265,6 @@ export class ChiboParser extends CstParser {
       },
     });
     this.CONSUME(RCurly);
-  });
-
-  private MatchArguments = this.RULE('MatchArguments', () => {
-    this.MANY_SEP({
-      SEP: Comma,
-      DEF: () => {
-        this.CONSUME(Identifier);
-      },
-    });
   });
 
   private MatchExpression = this.RULE('MatchExpression', () => {

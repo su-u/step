@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
   entry: './webSrc/index.tsx',
   output: {
@@ -36,4 +37,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.json', 'scss'],
     plugins: [],
   },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'public'),
+  }
 }

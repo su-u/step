@@ -9,6 +9,7 @@ export type NumberObjectMethodType = {
   '*': (obj: NumberLiteralType, param: any) => any;
   '-': (obj: NumberLiteralType, param: any) => any;
   '/': (obj: NumberLiteralType, param: any) => any;
+  '%': (obj: NumberLiteralType, param: any) => any;
   '<': (obj: NumberLiteralType, param: any) => any;
   '<=': (obj: NumberLiteralType, param: any) => any;
   '>': (obj: NumberLiteralType, param: any) => any;
@@ -82,6 +83,20 @@ export const NumberClass: NumberObjectMethodType = {
     return {
       name: LiteralTokens.NumberLiteral,
       image: obj.image / param.image,
+    };
+  },
+  '%': (param, obj) => {
+    const availableType = [LiteralTokens.NumberLiteral] as const;
+    if (!availableType.includes(param.name)) {
+      throw new TypeError(param.name);
+    }
+    if (!availableType.includes(obj.name)) {
+      throw new TypeError(obj.name);
+    }
+
+    return {
+      name: LiteralTokens.NumberLiteral,
+      image: obj.image % param.image,
     };
   },
   '<': (param, obj) => {
