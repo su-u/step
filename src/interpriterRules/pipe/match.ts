@@ -3,7 +3,7 @@ import { IInterpreterRules } from '../types';
 
 export const execMatch = ({ ast, manager, execObject }: IInterpreterRules, last) => {
   const value = Array.isArray(last) ? last.map((v) => v.value) : [last];
-  const matchList = ast.children.toMatch[0].children.MatchExpression.map((expression) => {
+  const matchList = ast.toMatch[0].children.MatchExpression.map((expression) => {
     const conditions = getConditions({ ast: expression, manager, execObject });
     const program = expression.children.Program[0];
     return {

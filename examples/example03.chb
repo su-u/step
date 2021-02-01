@@ -1,0 +1,5 @@
+# 長方形の面積
+5 -> tate
+3 -> yoko
+tate * yoko -> area
+"縦" + tate + ", 横" + yoko + "の長方形の面積 = " + area |> console

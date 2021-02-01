@@ -1,15 +1,11 @@
 import { sourceParseJson } from '@/util/test';
 
-describe('if', () => {
+describe('コメント', () => {
   test('1', () => {
     const source = `
-    if (x and y) {
-      1 ~ 10 |> each (i) {
-        i |> console
-      }
-    } else {
-      x - x
-    }
+# コメント
+## コメント
+### コメント #
     `;
     expect(sourceParseJson(source)).toMatchSnapshot();
   });

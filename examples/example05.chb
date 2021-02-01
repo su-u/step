@@ -1,0 +1,38 @@
+# 2分法による方程式の解法
+
+# 求めたい関数
+function f(x) {
+  return x * x * x + x - 1
+}
+
+# 絶対値
+function abs(x) {
+  x -> ret
+  if( x < 0 ) {
+    -1 * ret -> ret
+  }
+  return ret
+}
+
+# 2分法本体
+function nibun(a,b) {
+  0.0000001 -> eps
+  (a+b) / 2.0 -> c
+  {c} |> f -> fc
+  {a} |> f -> fa
+  if( (fc * fa) < 0 ) {
+    c -> b
+  } else {
+    c -> a
+  }
+  {a-b} |> abs -> absab
+  if( absab > eps ) {
+    {a,b} |> nibun
+  }
+  return c
+}
+
+# 初期条件を設定して計算
+0.0 -> a
+1.0 -> b
+{a,b} |> nibun |> console

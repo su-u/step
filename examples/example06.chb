@@ -1,0 +1,13 @@
+# 関数定義の例
+
+function abs(x) {
+  x -> ret
+  if( x < 0 ) {
+    -1 * ret -> ret
+  }
+  return ret
+}
+
+{-1} |> abs |> console
+{-10} |> abs |> console
+{1} |> abs |> console

@@ -3,7 +3,7 @@ export const Rules = {
   Assignment: 'Assignment',
   Each: 'Each',
   IfStatement: 'IfStatement',
-  Pipe: 'Pipe',
+  PipeExpression: 'PipeExpression',
   RelationExpression: 'RelationExpression',
   Expression: 'Expression',
   Term: 'Term',
@@ -18,4 +18,5 @@ export const Rules = {
   PipeFrom: 'PipeFrom',
   PipeArguments: 'PipeArguments',
   LogicExpression: 'LogicExpression',
+  RangeExpression: 'RangeExpression',
 };

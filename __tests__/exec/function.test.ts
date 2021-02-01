@@ -11,7 +11,7 @@ describe('関数', () => {
       function: new FunctionManager(),
     };
   });
-  test('1', () => {
+  test('1 引数なしの関数', () => {
     const source = `
 function myFunc() {
   1 + 1 -> value
@@ -20,7 +20,7 @@ function myFunc() {
     exec(source, manager);
   });
 
-  test('2', () => {
+  test('2 引数ありの関数', () => {
     const source = `
 function add(x, y) {
   return x + y
@@ -41,73 +41,6 @@ function func(x, y) {
     expect(resultManager.reference('result')).toStrictEqual({
       name: LiteralTokens.NumberLiteral,
       image: 3,
-    });
-  });
-
-  test('4', () => {
-    const source = `
-function out(str) {
-  return str
-}
-"testword" |> out -> re
-    `;
-    const resultManager = exec(source, manager).variable;
-    expect(resultManager.reference('re')).toStrictEqual({
-      name: LiteralTokens.StringLiteral,
-      image: 'testword',
-    });
-  });
-
-  test('5', () => {
-    const source = `
-function out(str) {
-  return str + "gg"
-}
-"testword" |> out -> re
-    `;
-    const resultManager = exec(source, manager).variable;
-    expect(resultManager.reference('re')).toStrictEqual({
-      name: LiteralTokens.StringLiteral,
-      image: 'testwordgg',
-    });
-  });
-
-  test('6', () => {
-    const source = `
-function out(str) {
-  return str + "ggg"
-}
-{ "testword" } |> out -> re
-    `;
-    const resultManager = exec(source, manager).variable;
-    expect(resultManager.reference('re')).toStrictEqual({
-      name: LiteralTokens.StringLiteral,
-      image: 'testwordggg',
-    });
-  });
-
-  test('7', () => {
-    const source = `
-function out(arg) {
-  100 -> result
-  if (arg = 0) {
-    arg -> result
-  } else {
-    10 -> result
-  }
-  return result
-}
-{ 1 } |> out -> re1
-{ 0 } |> out -> re2
-    `;
-    const resultManager = exec(source, manager).variable;
-    expect(resultManager.reference('re1')).toStrictEqual({
-      name: LiteralTokens.NumberLiteral,
-      image: 10,
-    });
-    expect(resultManager.reference('re2')).toStrictEqual({
-      name: LiteralTokens.NumberLiteral,
-      image: 0,
     });
   });
 
@@ -435,6 +368,56 @@ function add2(a, b) {
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('v2')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 3,
+    });
+  });
+
+  test('20 return文で演算子', () => {
+    const source = `
+function func() {
+ return 2.2 |> int + 3
+}
+
+{} |> func -> v2
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('v2')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 5,
+    });
+  });
+
+  test('21 return文でオブジェクトを返す', () => {
+    const source = `
+function func1(x) {
+  return { x, 2 }
+}
+
+function func2(x, y) {
+  return x + y
+}
+
+1 |> func1 |> func2 -> v
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('v')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 3,
+    });
+  });
+
+  test('22 Objectで関数実行', () => {
+    const source = `
+function f(x, y) {
+  return x + y
+}
+
+{ 1, 2 } -> a
+a |> f -> result
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('result')).toStrictEqual({
       name: LiteralTokens.NumberLiteral,
       image: 3,
     });

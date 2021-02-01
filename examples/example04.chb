@@ -1,0 +1,5 @@
+# 三角形の面積
+5 -> bottom
+3 -> height
+bottom * height / 2 -> area
+"底辺" + bottom + ", 高さ" + height + "の三角形の面積 = " + area |> console

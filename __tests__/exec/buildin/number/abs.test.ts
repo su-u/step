@@ -58,7 +58,7 @@ describe('condition number abs', () => {
 
   test('4', () => {
     const source = `
-100 - 1500 |> abs -> num
+(100 - 1500) |> abs -> num
     `;
     const resultManager = exec(source, manager).variable;
     expect(resultManager.reference('num')).toStrictEqual({

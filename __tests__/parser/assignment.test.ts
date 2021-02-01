@@ -31,20 +31,6 @@ describe('代入', () => {
     });
   });
 
-  test('1', () => {
-    const source = `
-1 > 10 -> v
-      `;
-    expect(sourceParseJson(source)).toMatchSnapshot();
-  });
-
-  test('2', () => {
-    const source = `
-1 = 1 -> v
-      `;
-    expect(sourceParseJson(source)).toMatchSnapshot();
-  });
-
   test('3', () => {
     const source = `
 1 = 1 and 1 > 10 -> v

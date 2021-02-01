@@ -5,7 +5,7 @@ export const pipeArguments = ({ ast, manager, execObject }: IInterpreterRules) =
   const args = ast.children.argument.map((x) => {
     return {
       name: (x.children.name && x.children.name[0].image) || '',
-      value: execObject.interpreter({ ast: x.children.Pipe[0], manager, execObject }),
+      value: execObject.interpreter({ ast: x.children.LogicExpression[0], manager, execObject }),
     };
   });
   return args;

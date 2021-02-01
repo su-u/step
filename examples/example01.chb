@@ -1,0 +1,11 @@
+# 合計値や平均値，割合を計算する
+30 -> data1
+50 -> data2
+15 -> data3
+data1 + data2 + data3 -> all
+all / 3.0 -> heikin
+"データ数:" + all |> console
+"平均：" + heikin |> console
+"データ1の割合：" + data1 / all * 100 + "%" |> console
+"データ2の割合：" + data2 / all * 100 + "%" |> console
+"データ3の割合：" + data3 / all * 100 + "%" |> console

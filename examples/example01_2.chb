@@ -1,0 +1,16 @@
+# 合計値や平均値，割合を計算する（ループ版）
+# 配列に対するeachが未実装のため動きません
+[ 30, 50, 15 ] -> data
+data |> console
+0 -> all
+data |> each (i) {
+  all + i -> all
+}
+all / data.size -> heikin
+"データ数:" + all |> console
+"平均：" + heikin |> console
+0 -> i
+data |> each (x) {
+  ("データ" + i + "の割合：" + x /all * 100 + "%") |> console
+  i + 1 -> i
+}

@@ -4,7 +4,7 @@ import { term } from './interpriterRules/term';
 import { factor } from './interpriterRules/factor';
 import { expression } from './interpriterRules/expression';
 import { relationExpression } from './interpriterRules/relationExpression';
-import { pipe } from './interpriterRules/pipe';
+import { pipeExpression } from './interpriterRules/pipeExpression';
 import { assignment } from './interpriterRules/assignment';
 import { program } from './interpriterRules/program';
 import { blockStatement } from './interpriterRules/blockStatement';
@@ -15,6 +15,7 @@ import { IInterpreterRules } from './interpriterRules/types';
 import { pipeFrom } from './interpriterRules/pipeFrom';
 import { pipeArguments } from './interpriterRules/pipeArguments';
 import { logicExpression } from './interpriterRules/logicExpression';
+import { rangeExpression } from './interpriterRules/rangeExpression';
 
 export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => {
   // logger.info(ast.name);
@@ -29,8 +30,8 @@ export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => 
     case Rules.IfStatement:
       value = ifStatement({ ast, manager, execObject });
       break;
-    case Rules.Pipe:
-      value = pipe({ ast, manager, execObject });
+    case Rules.PipeExpression:
+      value = pipeExpression({ ast, manager, execObject });
       break;
     case Rules.PipeFrom:
       value = pipeFrom({ ast, manager, execObject });
@@ -49,6 +50,9 @@ export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => 
       break;
     case Rules.Term:
       value = term({ ast, manager, execObject });
+      break;
+    case Rules.RangeExpression:
+      value = rangeExpression({ ast, manager, execObject });
       break;
     case Rules.Factor:
       value = factor({ ast, manager, execObject });

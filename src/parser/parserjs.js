@@ -3,6 +3,10 @@
   const createToken = chevrotain.createToken;
   const Lexer = chevrotain.Lexer;
 
+  const Comment = createToken({
+    name: 'Comment',
+    pattern: /#.*[\r\n]/,
+  });
   const StringLiteral = createToken({
     name: 'StringLiteral',
     pattern: /"(:?[^\\"\n\r]+|\\(:?[bfnrtv"\\/]|u[0-9a-fA-F]{4}))*"/,
@@ -35,6 +39,7 @@
   });
 
   const LiteralTokens = [
+    Comment,
     Separate,
     StringLiteral,
     NumberLiteral,
@@ -183,6 +188,7 @@
 
       this.ProgramRule = this.RULE('ProgramRule', () => {
         this.OR([
+          { ALT: () => this.CONSUME(Comment, { LABEL: 'rule' }) },
           { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rule' }) },
           { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rule' }) },
           { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rule' }) },
@@ -209,7 +215,7 @@
       this.IfStatement = this.RULE('IfStatement', () => {
         this.CONSUME(ifToken);
         this.CONSUME(LBracket);
-        this.SUBRULE(this.Pipe, { LABEL: 'conditionalExpression' });
+        this.SUBRULE(this.LogicExpression, { LABEL: 'conditionalExpression' });
         this.CONSUME(RBracket);
         this.CONSUME(LCurly);
         this.SUBRULE(this.BlockStatement);
@@ -284,7 +290,7 @@
       });
 
       this.ToRight = this.RULE('ToRight', () => {
-        this.SUBRULE(this.Pipe, { LABEL: 'from' });
+        this.SUBRULE(this.LogicExpression, { LABEL: 'from' });
         this.OPTION(() => {
           this.CONSUME(ToRightToken);
           this.OR([
@@ -294,33 +300,18 @@
         });
       });
 
-      this.Pipe = this.RULE('Pipe', () => {
-        this.SUBRULE(this.PipeFrom, { LABEL: 'from' });
+      this.PipeExpression = this.RULE('PipeExpression', () => {
+        this.SUBRULE(this.RangeExpression, { LABEL: 'from' });
         this.MANY(() => {
           this.CONSUME(PipeToken);
-          this.SUBRULE(this.PipeItem, { LABEL: 'tail' });
+          this.SUBRULE2(this.RangeExpression, { LABEL: 'tail' });
         });
       });
 
-      this.PipeFrom = this.RULE('PipeFrom', () => {
-        this.OR([
-          {
-            ALT: () => {
-              this.CONSUME(LCurly);
-              this.SUBRULE(this.PipeArguments, { LABEL: 'arguments' });
-              this.CONSUME(RCurly);
-            },
-          },
-          { ALT: () => this.SUBRULE(this.LogicExpression) },
-        ]);
-      });
-
-      this.PipeItem = this.RULE('PipeItem', () => {
-        this.OR([
-          { ALT: () => this.CONSUME(Identifier, { LABEL: 'toIdentifier' }) },
-          { ALT: () => this.SUBRULE(this.Match, { LABEL: 'Match' }) },
-          { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
-        ]);
+      this.Object = this.RULE('Object', () => {
+        this.CONSUME(LCurly);
+        this.SUBRULE(this.PipeArguments, { LABEL: 'arguments' });
+        this.CONSUME(RCurly);
       });
 
       this.PipeArguments = this.RULE('PipeArguments', () => {
@@ -337,7 +328,7 @@
           this.CONSUME(Identifier, { LABEL: 'name' });
           this.CONSUME(Colon);
         });
-        this.SUBRULE(this.Pipe);
+        this.SUBRULE(this.LogicExpression);
       });
 
       this.LogicExpression = this.RULE('LogicExpression', () => {
@@ -357,7 +348,6 @@
             { ALT: () => this.CONSUME(OverThan) },
             { ALT: () => this.CONSUME(LessThan) },
             { ALT: () => this.CONSUME(Equal) },
-            { ALT: () => this.CONSUME(tildeToken) },
           ]);
           this.SUBRULE2(this.Expression);
         });
@@ -372,9 +362,17 @@
       });
 
       this.Term = this.RULE('Term', () => {
-        this.SUBRULE(this.Factor);
+        this.SUBRULE(this.PipeExpression);
         this.MANY(() => {
           this.CONSUME(MultiplicationOperator);
+          this.SUBRULE2(this.PipeExpression);
+        });
+      });
+
+      this.RangeExpression = this.RULE('RangeExpression', () => {
+        this.SUBRULE(this.Factor);
+        this.MANY(() => {
+          this.CONSUME(tildeToken);
           this.SUBRULE2(this.Factor);
         });
       });
@@ -388,6 +386,9 @@
           { ALT: () => this.SUBRULE(this.ArrayElement) },
           { ALT: () => this.CONSUME(Identifier) },
           { ALT: () => this.SUBRULE(this.ArrayStatement) },
+          { ALT: () => this.SUBRULE(this.Object) },
+          { ALT: () => this.SUBRULE(this.Match, { LABEL: 'toMatch' }) },
+          { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
         ]);
       });
 
@@ -424,7 +425,7 @@
 
       this.ReturnStatement = this.RULE('ReturnStatement', () => {
         this.CONSUME(ReturnToken);
-        this.SUBRULE(this.Pipe, { LABEL: 'return' });
+        this.SUBRULE(this.LogicExpression, { LABEL: 'return' });
       });
 
       this.performSelfAnalysis();

@@ -7,6 +7,7 @@ import { stringLiteral } from './factor/stringLiteral';
 import { parenthesisExpression } from './factor/parenthesisExpression';
 import { arrayStatement } from './factor/arrayStatement';
 import { arrayElement } from './factor/arrayElement';
+import { objectLiteral } from './factor/objectLiteral';
 
 export const factor = ({ ast, manager, execObject }: IInterpreterRules) => {
   if (ast.children.NumberLiteral !== undefined) {
@@ -23,7 +24,10 @@ export const factor = ({ ast, manager, execObject }: IInterpreterRules) => {
     return arrayStatement({ ast, manager, execObject });
   } else if (ast.children.ArrayElement !== undefined) {
     return arrayElement({ ast, manager, execObject });
+  } else if (ast.children.Object !== undefined) {
+    return objectLiteral({ ast, manager, execObject });
   }
+
   return {
     name: LiteralTokens.DebugLiteral,
     image: null,

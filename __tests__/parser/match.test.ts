@@ -14,16 +14,6 @@ describe('match', () => {
     const source = `
 { 1, 10 } |> match {
   (1, 10) => { return 10 },
-  (2, 20) => { return 20 }
-}
-    `;
-    expect(sourceParseJson(source)).toMatchSnapshot();
-  });
-
-  test('3', () => {
-    const source = `
-{ 1, 10 } |> match {
-  (1, 10) => { return 10 },
   () => { return 20 }
 }
     `;
