@@ -29,7 +29,7 @@
   "include": [
     "./src/*.ts",
     "./src/**/*.ts",
-    "./__tests__/*.ts",
-    "./__tests__/**/*.ts"
+    "./src/__tests__/*.ts",
+    "./src/__tests__/**/*.ts"
   ]
 }
