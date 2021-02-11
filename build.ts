@@ -1,24 +1,24 @@
-const { argv } = require('process')
-const { build } = require('esbuild')
-const path = require('path')
+const { argv } = require('process');
+const { build } = require('esbuild');
+const path = require('path');
 const sass = require('sass');
 
-const sassPlugin = options => ({
+const sassPlugin = (options) => ({
   name: 'esbuild-plugin-sass',
   setup(build) {
     build.onLoad({ filter: /\.s[ac]ss$/ }, ({ path }) => {
-      return new Promise(resolve => {
+      return new Promise((resolve) => {
         sass.render({ ...options, file: path }, (err, result) => {
           resolve({
             contents: result?.css,
             loader: 'css',
             errors: err ? [{ text: err.message }] : undefined,
-          })
-        })
-      })
-    })
+          });
+        });
+      });
+    });
   },
-})
+});
 
 const options = {
   // 以下のdefineプロパティを設定しない場合Reactのプロジェクトの実行時にエラーが出ます
@@ -28,12 +28,12 @@ const options = {
   bundle: true,
   target: 'es2016',
   platform: 'browser',
-  outdir: path.resolve(__dirname, 'dist'),
+  outdir: path.resolve(__dirname, 'public/dist'),
   tsconfig: path.resolve(__dirname, 'tsconfig.json'),
   plugins: [sassPlugin({})],
-}
+};
 
-build(options).catch(err => {
-  process.stderr.write(err.stderr)
-  process.exit(1)
-})
+build(options).catch((err) => {
+  process.stderr.write(err.stderr);
+  process.exit(1);
+});
