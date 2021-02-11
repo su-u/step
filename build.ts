@@ -20,7 +20,6 @@ const sassPlugin = options => ({
   },
 })
 
-// optionsの定義
 const options = {
   // 以下のdefineプロパティを設定しない場合Reactのプロジェクトの実行時にエラーが出ます
   define: { 'process.env.NODE_ENV': process.env.NODE_ENV },
@@ -33,7 +32,7 @@ const options = {
   tsconfig: path.resolve(__dirname, 'tsconfig.json'),
   plugins: [sassPlugin({})],
 }
-// Buildの実行
+
 build(options).catch(err => {
   process.stderr.write(err.stderr)
   process.exit(1)
