@@ -16,27 +16,29 @@ export const App: React.FC = () => {
   const [execError, setExecError] = React.useState<Array<string>>([]);
 
   const onChange = React.useCallback((value) => {
-    setCode(value)
+    setCode(value);
   }, []);
 
   const chibaLangExec = React.useCallback(() => {
     setOutput([]);
     setExecError([]);
     entry(code);
-  }, [code])
+  }, [code]);
 
   console.log = (obj: any) => {
     setOutput((prev) => [...prev, String(obj)]);
-  }
+  };
 
   console.error = (obj: any) => {
     setExecError((prev) => [...prev, String(obj)]);
-  }
+  };
 
   return (
     <>
       <div className="header">
-        <div role="button" onClick={chibaLangExec}>Run</div>
+        <div role="button" onClick={chibaLangExec}>
+          Run
+        </div>
       </div>
       <div className="container">
         <AceEditor
@@ -47,23 +49,20 @@ export const App: React.FC = () => {
           name="editor"
           fontSize="20px"
           tabSize={2}
-          setOptions={{
-          }}
+          setOptions={{}}
           onChange={onChange}
           width="50%"
         />
         <div className="output">
           <div>
-            {execError.length === 0 && output.map((line) => {
-              return (
-                <p>{line}</p>
-              );
-            })}
-            {execError.length >= 1 && execError.map((line) => {
-              return (
-                <p className="error">{line}</p>
-              );
-            })}
+            {execError.length === 0 &&
+              output.map((line) => {
+                return <p>{line}</p>;
+              })}
+            {execError.length >= 1 &&
+              execError.map((line) => {
+                return <p className="error">{line}</p>;
+              })}
           </div>
         </div>
       </div>

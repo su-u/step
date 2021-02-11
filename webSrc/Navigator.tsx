@@ -11,7 +11,7 @@ const Router = ({ path = '' }) => {
 };
 
 export const Navigator: React.FC = () => (
-    <HashRouter>
-        <Router />
-    </HashRouter>
+  <HashRouter>
+    <Router />
+  </HashRouter>
 );

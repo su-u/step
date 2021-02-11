@@ -6,7 +6,7 @@
   "scripts": {
     "build": "ts-node ./build.ts",
     "tsc": "ttsc",
-    "prettier:fix": "prettier --write ./{src,__tests__}/**/*.{ts,js}",
+    "prettier:fix": "prettier --write ./{src,__tests__,webSrc}/**/*.{ts,js,tsx,jsx}",
     "test": "jest",
     "test-c": "jest --coverage",
     "test-u": "jest --updateSnapshot",
