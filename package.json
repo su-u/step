@@ -12,16 +12,9 @@
     "test-u": "jest --updateSnapshot",
     "server": "http-server ./public -p 8080"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sudalab/chiba-lang.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sudalab/chiba-lang/issues"
-  },
-  "homepage": "https://github.com/sudalab/chiba-lang#readme",
+  "homepage": "https://github.com/su-u/step",
   "dependencies": {
     "chevrotain": "^7.0.1",
     "extensible-custom-error": "^0.0.7",
