@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2016",
     "module": "commonjs",
     "outDir": "./build",
     "strict": true,
@@ -10,15 +10,7 @@
     "incremental": true,
     "baseUrl": ".",
     "jsx": "react",
-    "paths": {
-      "@/*": ["src/*"]
-    },
     "typeRoots": ["src/types", "node_modules/@types"],
-    "plugins": [
-      {
-        "transform": "@zerollup/ts-transform-paths"
-      }
-    ],
     "noImplicitAny": false,
     "strictNullChecks": false,
     "strictFunctionTypes": false,
@@ -29,7 +21,7 @@
   "include": [
     "./src/*.ts",
     "./src/**/*.ts",
-    "./__tests__/*.ts",
-    "./__tests__/**/*.ts"
+    "./src/__tests__/*.ts",
+    "./src/__tests__/**/*.ts"
   ]
 }
