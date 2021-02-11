@@ -5,7 +5,7 @@
   "main": "build/src/index.js",
   "scripts": {
     "build": "ts-node ./build.ts",
-    "tsc": "ttsc",
+    "tsc": "tsc",
     "prettier:fix": "prettier --write ./{src,__tests__,webSrc}/**/*.{ts,js,tsx,jsx}",
     "test": "jest",
     "test-c": "jest --coverage",
