@@ -1,5 +1,5 @@
 import * as fs from 'fs-extra';
-import { parseInput } from '@/parser';
+import { parseInput } from '../../parser';
 
 const parse = (sourceName: string) => {
   const inputText = fs.readFileSync(sourceName, 'utf-8');
