@@ -1,7 +1,5 @@
 import { LiteralTokens } from '../tokens';
 
-const TYPE = 'StringLiteral';
-
 type StringLiteralType = any;
 
 export type StringObjectMethodType = {
@@ -16,7 +14,7 @@ export type StringObjectMethodType = {
 export const StringClass: StringObjectMethodType = {
   '+': (obj, param) => {
     return {
-      name: TYPE,
+      name: LiteralTokens.StringLiteral,
       image: String(param.image + obj.image),
     };
   },

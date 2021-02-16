@@ -2,7 +2,7 @@ import { NullReferenceVariableError, OutOfRangeError } from '../error';
 
 export class VariableManager {
   private _returnValue = undefined;
-  private _parent: VariableManager | null;
+  private readonly _parent: VariableManager | null;
   private variables = new Map();
 
   constructor(parent: any) {
