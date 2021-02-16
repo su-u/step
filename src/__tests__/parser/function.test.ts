@@ -1,4 +1,4 @@
-import { sourceParseJson } from '@/util/test';
+import { sourceParseJson } from '../../util/test';
 
 describe('関数', () => {
   test('1', () => {

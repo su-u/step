@@ -1,4 +1,4 @@
-import { term } from '@/interpriterRules/term';
+import { term } from '../../interpriterRules/term';
 
 describe('Term', (): void => {
   test('ast', (): void => {

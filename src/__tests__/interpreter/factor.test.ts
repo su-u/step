@@ -1,7 +1,6 @@
-import { factor } from '@/interpriterRules/factor';
-import { VariableManager } from '@/manager';
-import { FunctionManager } from '@/manager';
-import { LiteralTokens } from '@/tokens';
+import { factor } from '../../interpriterRules/factor';
+import { FunctionManager, VariableManager } from '../../manager';
+import { LiteralTokens } from '../../tokens';
 
 describe('factor', () => {
   let manager = null;

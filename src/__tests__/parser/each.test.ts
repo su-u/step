@@ -1,4 +1,4 @@
-import { sourceParseJson } from '@/util/test';
+import { sourceParseJson } from '../../util/test';
 
 describe('each', () => {
   test('1', () => {

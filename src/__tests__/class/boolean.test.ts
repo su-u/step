@@ -1,6 +1,6 @@
-import { LiteralTokens } from '@/tokens';
-import { BooleanClass, toBoolean } from '@/class/booleanClass';
-import { BooleanLiteralTokens } from '@/tokens';
+import { LiteralTokens } from '../../tokens';
+import { BooleanClass, toBoolean } from '../../class/booleanClass';
+import { BooleanLiteralTokens } from '../../tokens';
 
 const func = (obj1, obj2, method) => {
   return BooleanClass[method](obj1, obj2);

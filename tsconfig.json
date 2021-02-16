@@ -16,7 +16,8 @@
     "strictFunctionTypes": false,
     "strictBindCallApply": false,
     "strictPropertyInitialization": false,
-    "noImplicitThis": false
+    "noImplicitThis": false,
+    "lib": ["ESNext", "DOM"]
   },
   "include": [
     "./src/*.ts",

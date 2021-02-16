@@ -1,4 +1,4 @@
-import { VariableManager } from '@/manager';
+import { VariableManager } from '../../manager';
 
 describe('VariableManager', () => {
   test('1', () => {

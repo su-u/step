@@ -1,12 +1,11 @@
 import * as fs from 'fs-extra';
-import logger from '../logger';
 
 export const writeAstToJson = (ast: any): void => {
   fs.writeFile('out.json', JSON.stringify(ast, undefined, 2), (err) => {
     if (err) {
-      logger.error(err);
+      console.error(err);
     } else {
-      logger.info('write end');
+      console.info('write end');
     }
   });
 };

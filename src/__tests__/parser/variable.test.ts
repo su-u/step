@@ -1,5 +1,4 @@
-import { sourceParseJson } from '@/util/test';
-
+import { sourceParseJson } from '../../util/test';
 describe('変数', () => {
   test('数値', () => {
     const source = `

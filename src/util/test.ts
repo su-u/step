@@ -1,6 +1,6 @@
-import { parseInput } from '@/parser';
-import { Manager } from '@/manager';
-import { interpreter } from '@/interpreter';
+import { parseInput } from '../parser';
+import { Manager } from '../manager';
+import { interpreter } from '../interpreter';
 
 export const sourceParseJson = (source: string) => {
   return JSON.stringify(parseInput(source), undefined, 2);
