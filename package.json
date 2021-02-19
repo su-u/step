@@ -1,7 +1,6 @@
 {
   "name": "step",
   "version": "1.0.0",
-  "description": "Chiba-langはプログラミング言語である．",
   "main": "build/src/index.js",
   "scripts": {
     "build": "ts-node ./build.ts",
