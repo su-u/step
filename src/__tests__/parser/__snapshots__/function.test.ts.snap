@@ -126,7 +126,7 @@ exports[`関数 1 1`] = `
                     }
                   }
                 ],
-                \\"Program\\": [
+                \\"rules\\": [
                   {
                     \\"name\\": \\"Program\\",
                     \\"children\\": {
@@ -583,7 +583,7 @@ exports[`関数 2 1`] = `
                     }
                   }
                 ],
-                \\"Program\\": [
+                \\"rules\\": [
                   {
                     \\"name\\": \\"Program\\",
                     \\"children\\": {

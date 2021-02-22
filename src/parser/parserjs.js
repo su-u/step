@@ -234,7 +234,7 @@
         this.SUBRULE(this.FunctionArguments, { LABEL: 'arguments' });
         this.CONSUME(RBracket);
         this.CONSUME(LCurly);
-        this.SUBRULE(this.Program);
+        this.SUBRULE(this.Program, { LABEL: 'rules' });
         this.CONSUME(RCurly);
       });
 

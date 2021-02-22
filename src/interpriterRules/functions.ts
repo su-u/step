@@ -9,6 +9,6 @@ export const functionStatement = ({ ast, manager }: IInterpreterRules) => {
           return x.image;
         })
       : [];
-  manager.function.assignment(functionName, funcArguments, ast.children.Program[0]);
+  manager.function.assignment(functionName, funcArguments, ast.children.rules[0]);
   return;
 };
