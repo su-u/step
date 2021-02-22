@@ -287,7 +287,7 @@ exports[`if 1 1`] = `
                     }
                   }
                 ],
-                \\"BlockStatement\\": [
+                \\"rules\\": [
                   {
                     \\"name\\": \\"BlockStatement\\",
                     \\"children\\": {

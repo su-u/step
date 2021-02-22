@@ -225,12 +225,12 @@
         this.SUBRULE(this.LogicExpression, { LABEL: 'conditionalExpression' });
         this.CONSUME(RBracket);
         this.CONSUME(LCurly);
-        this.SUBRULE(this.BlockStatement);
+        this.SUBRULE(this.BlockStatement, { LABEL: 'rules' });
         this.CONSUME(RCurly);
         this.OPTION(() => {
           this.CONSUME(elseToken);
           this.CONSUME2(LCurly);
-          this.SUBRULE2(this.BlockStatement);
+          this.SUBRULE2(this.BlockStatement, { LABEL: 'rules' });
           this.CONSUME2(RCurly);
         });
       });
