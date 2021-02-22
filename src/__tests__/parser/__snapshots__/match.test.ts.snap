@@ -341,7 +341,7 @@ exports[`match 1 1`] = `
                                                                                                   }
                                                                                                 }
                                                                                               ],
-                                                                                              \\"return\\": [
+                                                                                              \\"rules\\": [
                                                                                                 {
                                                                                                   \\"name\\": \\"LogicExpression\\",
                                                                                                   \\"children\\": {
@@ -1144,7 +1144,7 @@ exports[`match 2 1`] = `
                                                                                                   }
                                                                                                 }
                                                                                               ],
-                                                                                              \\"return\\": [
+                                                                                              \\"rules\\": [
                                                                                                 {
                                                                                                   \\"name\\": \\"LogicExpression\\",
                                                                                                   \\"children\\": {
@@ -1370,7 +1370,7 @@ exports[`match 2 1`] = `
                                                                                                   }
                                                                                                 }
                                                                                               ],
-                                                                                              \\"return\\": [
+                                                                                              \\"rules\\": [
                                                                                                 {
                                                                                                   \\"name\\": \\"LogicExpression\\",
                                                                                                   \\"children\\": {

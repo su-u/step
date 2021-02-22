@@ -432,7 +432,7 @@
 
       this.ReturnStatement = this.RULE('ReturnStatement', () => {
         this.CONSUME(ReturnToken);
-        this.SUBRULE(this.LogicExpression, { LABEL: 'return' });
+        this.SUBRULE(this.LogicExpression, { LABEL: 'rules' });
       });
 
       this.performSelfAnalysis();

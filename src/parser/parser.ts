@@ -432,6 +432,6 @@ export class ChiboParser extends CstParser {
 
   private ReturnStatement = this.RULE('ReturnStatement', () => {
     this.CONSUME(ReturnToken);
-    this.SUBRULE(this.LogicExpression, { LABEL: 'return' });
+    this.SUBRULE(this.LogicExpression, { LABEL: 'rules' });
   });
 }
