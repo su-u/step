@@ -254,10 +254,10 @@ export class ChiboParser extends CstParser {
 
   private BlockRule = this.RULE('BlockRule', () => {
     this.OR([
-      { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rule' }) },
-      { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rule' }) },
-      { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rule' }) },
-      { ALT: () => this.CONSUME(BreakToken, { LABEL: 'rule' }) },
+      { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rules' }) },
+      { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rules' }) },
+      { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rules' }) },
+      { ALT: () => this.CONSUME(BreakToken, { LABEL: 'rules' }) },
     ]);
   });
 
