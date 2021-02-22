@@ -2,8 +2,6 @@
 
 # Step（仮称）
 
-# chevrotain版
-
 ## 環境用意
 ```bash
 npm install -g yarn
@@ -31,6 +29,10 @@ yarn run build
 yarn run server
 ```
 
-# CI
+## CI
 github actionsを利用したCIが動作しています。
 落ちてもmergeできますが、可能な限り通してください。
+
+## Chevrotain
+- [GitHub - SAP/chevrotain: Parser Building Toolkit for JavaScript](https://github.com/SAP/chevrotain)
+- [Playground](https://sap.github.io/chevrotain/playground/)
