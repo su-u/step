@@ -191,7 +191,7 @@ exports[`変数 数値 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"value\\",
                           \\"startOffset\\": 10,
@@ -406,7 +406,7 @@ exports[`変数 数値 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"value\\",
                           \\"startOffset\\": 29,
@@ -547,7 +547,7 @@ exports[`変数 文字列 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"value\\",
                           \\"startOffset\\": 11,
@@ -762,7 +762,7 @@ exports[`変数 文字列 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"value\\",
                           \\"startOffset\\": 35,

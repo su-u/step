@@ -212,7 +212,7 @@ exports[`if 1 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"array1\\",
                           \\"startOffset\\": 11,
@@ -448,7 +448,7 @@ exports[`if 1 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"array2\\",
                           \\"startOffset\\": 28,
@@ -579,7 +579,7 @@ exports[`if 1 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"index0\\",
                           \\"startOffset\\": 41,
@@ -710,7 +710,7 @@ exports[`if 1 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"index1\\",
                           \\"startOffset\\": 53,
@@ -946,7 +946,7 @@ exports[`if 1 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"array3\\",
                           \\"startOffset\\": 80,
@@ -1134,7 +1134,7 @@ exports[`if 1 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"a0\\",
                           \\"startOffset\\": 104,
@@ -1322,7 +1322,7 @@ exports[`if 1 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"a1\\",
                           \\"startOffset\\": 124,

@@ -301,8 +301,8 @@
         this.OPTION(() => {
           this.CONSUME(ToRightToken);
           this.OR([
-            { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'to' }) },
-            { ALT: () => this.CONSUME(Identifier, { LABEL: 'to' }) },
+            { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'tail' }) },
+            { ALT: () => this.CONSUME(Identifier, { LABEL: 'tail' }) },
           ]);
         });
       });
