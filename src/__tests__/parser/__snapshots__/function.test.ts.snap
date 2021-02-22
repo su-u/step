@@ -154,7 +154,7 @@ exports[`関数 1 1`] = `
                                                       {
                                                         \\"name\\": \\"Expression\\",
                                                         \\"children\\": {
-                                                          \\"Term\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Term\\",
                                                               \\"children\\": {
@@ -330,7 +330,7 @@ exports[`関数 1 1`] = `
                                     {
                                       \\"name\\": \\"Expression\\",
                                       \\"children\\": {
-                                        \\"Term\\": [
+                                        \\"rules\\": [
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
@@ -611,7 +611,7 @@ exports[`関数 2 1`] = `
                                                       {
                                                         \\"name\\": \\"Expression\\",
                                                         \\"children\\": {
-                                                          \\"Term\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Term\\",
                                                               \\"children\\": {
@@ -787,7 +787,7 @@ exports[`関数 2 1`] = `
                                     {
                                       \\"name\\": \\"Expression\\",
                                       \\"children\\": {
-                                        \\"Term\\": [
+                                        \\"rules\\": [
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
@@ -849,7 +849,7 @@ exports[`関数 2 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"Expression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"Term\\": [
+                                                                                                    \\"rules\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"Term\\",
                                                                                                         \\"children\\": {

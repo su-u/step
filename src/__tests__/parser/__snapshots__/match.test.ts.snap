@@ -28,7 +28,7 @@ exports[`match 1 1`] = `
                                     {
                                       \\"name\\": \\"Expression\\",
                                       \\"children\\": {
-                                        \\"Term\\": [
+                                        \\"rules\\": [
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
@@ -185,7 +185,7 @@ exports[`match 1 1`] = `
                                                                                           {
                                                                                             \\"name\\": \\"Expression\\",
                                                                                             \\"children\\": {
-                                                                                              \\"Term\\": [
+                                                                                              \\"rules\\": [
                                                                                                 {
                                                                                                   \\"name\\": \\"Term\\",
                                                                                                   \\"children\\": {
@@ -353,7 +353,7 @@ exports[`match 1 1`] = `
                                                                                                             {
                                                                                                               \\"name\\": \\"Expression\\",
                                                                                                               \\"children\\": {
-                                                                                                                \\"Term\\": [
+                                                                                                                \\"rules\\": [
                                                                                                                   {
                                                                                                                     \\"name\\": \\"Term\\",
                                                                                                                     \\"children\\": {
@@ -532,7 +532,7 @@ exports[`match 2 1`] = `
                                     {
                                       \\"name\\": \\"Expression\\",
                                       \\"children\\": {
-                                        \\"Term\\": [
+                                        \\"rules\\": [
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
@@ -594,7 +594,7 @@ exports[`match 2 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"Expression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"Term\\": [
+                                                                                                    \\"rules\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"Term\\",
                                                                                                         \\"children\\": {
@@ -669,7 +669,7 @@ exports[`match 2 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"Expression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"Term\\": [
+                                                                                                    \\"rules\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"Term\\",
                                                                                                         \\"children\\": {
@@ -899,7 +899,7 @@ exports[`match 2 1`] = `
                                                                                           {
                                                                                             \\"name\\": \\"Expression\\",
                                                                                             \\"children\\": {
-                                                                                              \\"Term\\": [
+                                                                                              \\"rules\\": [
                                                                                                 {
                                                                                                   \\"name\\": \\"Term\\",
                                                                                                   \\"children\\": {
@@ -967,7 +967,7 @@ exports[`match 2 1`] = `
                                                                                           {
                                                                                             \\"name\\": \\"Expression\\",
                                                                                             \\"children\\": {
-                                                                                              \\"Term\\": [
+                                                                                              \\"rules\\": [
                                                                                                 {
                                                                                                   \\"name\\": \\"Term\\",
                                                                                                   \\"children\\": {
@@ -1156,7 +1156,7 @@ exports[`match 2 1`] = `
                                                                                                             {
                                                                                                               \\"name\\": \\"Expression\\",
                                                                                                               \\"children\\": {
-                                                                                                                \\"Term\\": [
+                                                                                                                \\"rules\\": [
                                                                                                                   {
                                                                                                                     \\"name\\": \\"Term\\",
                                                                                                                     \\"children\\": {
@@ -1382,7 +1382,7 @@ exports[`match 2 1`] = `
                                                                                                             {
                                                                                                               \\"name\\": \\"Expression\\",
                                                                                                               \\"children\\": {
-                                                                                                                \\"Term\\": [
+                                                                                                                \\"rules\\": [
                                                                                                                   {
                                                                                                                     \\"name\\": \\"Term\\",
                                                                                                                     \\"children\\": {

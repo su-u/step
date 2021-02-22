@@ -28,7 +28,7 @@ exports[`演算 1 1`] = `
                                     {
                                       \\"name\\": \\"Expression\\",
                                       \\"children\\": {
-                                        \\"Term\\": [
+                                        \\"rules\\": [
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
@@ -82,7 +82,7 @@ exports[`演算 1 1`] = `
                                                                                     {
                                                                                       \\"name\\": \\"Expression\\",
                                                                                       \\"children\\": {
-                                                                                        \\"Term\\": [
+                                                                                        \\"rules\\": [
                                                                                           {
                                                                                             \\"name\\": \\"Term\\",
                                                                                             \\"children\\": {
@@ -306,7 +306,7 @@ exports[`演算 1 1`] = `
                                                                                     {
                                                                                       \\"name\\": \\"Expression\\",
                                                                                       \\"children\\": {
-                                                                                        \\"Term\\": [
+                                                                                        \\"rules\\": [
                                                                                           {
                                                                                             \\"name\\": \\"Term\\",
                                                                                             \\"children\\": {
@@ -400,7 +400,7 @@ exports[`演算 1 1`] = `
                                                                                                                                     {
                                                                                                                                       \\"name\\": \\"Expression\\",
                                                                                                                                       \\"children\\": {
-                                                                                                                                        \\"Term\\": [
+                                                                                                                                        \\"rules\\": [
                                                                                                                                           {
                                                                                                                                             \\"name\\": \\"Term\\",
                                                                                                                                             \\"children\\": {

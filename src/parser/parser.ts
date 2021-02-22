@@ -353,10 +353,10 @@ export class ChiboParser extends CstParser {
   });
 
   private Expression = this.RULE('Expression', () => {
-    this.SUBRULE(this.Term);
+    this.SUBRULE(this.Term, { LABEL: 'rules' });
     this.MANY(() => {
       this.CONSUME(AdditionOperator);
-      this.SUBRULE2(this.Term);
+      this.SUBRULE2(this.Term, { LABEL: 'rules' });
     });
   });
 
