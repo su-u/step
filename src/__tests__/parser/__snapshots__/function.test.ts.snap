@@ -158,7 +158,7 @@ exports[`関数 1 1`] = `
                                                             {
                                                               \\"name\\": \\"Term\\",
                                                               \\"children\\": {
-                                                                \\"PipeExpression\\": [
+                                                                \\"rules\\": [
                                                                   {
                                                                     \\"name\\": \\"PipeExpression\\",
                                                                     \\"children\\": {
@@ -334,7 +334,7 @@ exports[`関数 1 1`] = `
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
-                                              \\"PipeExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
@@ -615,7 +615,7 @@ exports[`関数 2 1`] = `
                                                             {
                                                               \\"name\\": \\"Term\\",
                                                               \\"children\\": {
-                                                                \\"PipeExpression\\": [
+                                                                \\"rules\\": [
                                                                   {
                                                                     \\"name\\": \\"PipeExpression\\",
                                                                     \\"children\\": {
@@ -791,7 +791,7 @@ exports[`関数 2 1`] = `
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
-                                              \\"PipeExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
@@ -853,7 +853,7 @@ exports[`関数 2 1`] = `
                                                                                                       {
                                                                                                         \\"name\\": \\"Term\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"PipeExpression\\": [
+                                                                                                          \\"rules\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"PipeExpression\\",
                                                                                                               \\"children\\": {

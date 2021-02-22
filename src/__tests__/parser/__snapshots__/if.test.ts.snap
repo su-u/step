@@ -71,7 +71,7 @@ exports[`if 1 1`] = `
                                     {
                                       \\"name\\": \\"Term\\",
                                       \\"children\\": {
-                                        \\"PipeExpression\\": [
+                                        \\"rules\\": [
                                           {
                                             \\"name\\": \\"PipeExpression\\",
                                             \\"children\\": {
@@ -132,7 +132,7 @@ exports[`if 1 1`] = `
                                     {
                                       \\"name\\": \\"Term\\",
                                       \\"children\\": {
-                                        \\"PipeExpression\\": [
+                                        \\"rules\\": [
                                           {
                                             \\"name\\": \\"PipeExpression\\",
                                             \\"children\\": {
@@ -303,7 +303,7 @@ exports[`if 1 1`] = `
                                                             {
                                                               \\"name\\": \\"Term\\",
                                                               \\"children\\": {
-                                                                \\"PipeExpression\\": [
+                                                                \\"rules\\": [
                                                                   {
                                                                     \\"name\\": \\"PipeExpression\\",
                                                                     \\"children\\": {
@@ -562,7 +562,7 @@ exports[`if 1 1`] = `
                                                                                                                                     {
                                                                                                                                       \\"name\\": \\"Term\\",
                                                                                                                                       \\"children\\": {
-                                                                                                                                        \\"PipeExpression\\": [
+                                                                                                                                        \\"rules\\": [
                                                                                                                                           {
                                                                                                                                             \\"name\\": \\"PipeExpression\\",
                                                                                                                                             \\"children\\": {
@@ -772,7 +772,7 @@ exports[`if 1 1`] = `
                                                             {
                                                               \\"name\\": \\"Term\\",
                                                               \\"children\\": {
-                                                                \\"PipeExpression\\": [
+                                                                \\"rules\\": [
                                                                   {
                                                                     \\"name\\": \\"PipeExpression\\",
                                                                     \\"children\\": {
@@ -819,7 +819,7 @@ exports[`if 1 1`] = `
                                                             {
                                                               \\"name\\": \\"Term\\",
                                                               \\"children\\": {
-                                                                \\"PipeExpression\\": [
+                                                                \\"rules\\": [
                                                                   {
                                                                     \\"name\\": \\"PipeExpression\\",
                                                                     \\"children\\": {

@@ -32,7 +32,7 @@ exports[`match 1 1`] = `
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
-                                              \\"PipeExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
@@ -189,7 +189,7 @@ exports[`match 1 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"Term\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"PipeExpression\\": [
+                                                                                                    \\"rules\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"PipeExpression\\",
                                                                                                         \\"children\\": {
@@ -357,7 +357,7 @@ exports[`match 1 1`] = `
                                                                                                                   {
                                                                                                                     \\"name\\": \\"Term\\",
                                                                                                                     \\"children\\": {
-                                                                                                                      \\"PipeExpression\\": [
+                                                                                                                      \\"rules\\": [
                                                                                                                         {
                                                                                                                           \\"name\\": \\"PipeExpression\\",
                                                                                                                           \\"children\\": {
@@ -536,7 +536,7 @@ exports[`match 2 1`] = `
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
-                                              \\"PipeExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
@@ -598,7 +598,7 @@ exports[`match 2 1`] = `
                                                                                                       {
                                                                                                         \\"name\\": \\"Term\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"PipeExpression\\": [
+                                                                                                          \\"rules\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"PipeExpression\\",
                                                                                                               \\"children\\": {
@@ -673,7 +673,7 @@ exports[`match 2 1`] = `
                                                                                                       {
                                                                                                         \\"name\\": \\"Term\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"PipeExpression\\": [
+                                                                                                          \\"rules\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"PipeExpression\\",
                                                                                                               \\"children\\": {
@@ -903,7 +903,7 @@ exports[`match 2 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"Term\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"PipeExpression\\": [
+                                                                                                    \\"rules\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"PipeExpression\\",
                                                                                                         \\"children\\": {
@@ -971,7 +971,7 @@ exports[`match 2 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"Term\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"PipeExpression\\": [
+                                                                                                    \\"rules\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"PipeExpression\\",
                                                                                                         \\"children\\": {
@@ -1160,7 +1160,7 @@ exports[`match 2 1`] = `
                                                                                                                   {
                                                                                                                     \\"name\\": \\"Term\\",
                                                                                                                     \\"children\\": {
-                                                                                                                      \\"PipeExpression\\": [
+                                                                                                                      \\"rules\\": [
                                                                                                                         {
                                                                                                                           \\"name\\": \\"PipeExpression\\",
                                                                                                                           \\"children\\": {
@@ -1386,7 +1386,7 @@ exports[`match 2 1`] = `
                                                                                                                   {
                                                                                                                     \\"name\\": \\"Term\\",
                                                                                                                     \\"children\\": {
-                                                                                                                      \\"PipeExpression\\": [
+                                                                                                                      \\"rules\\": [
                                                                                                                         {
                                                                                                                           \\"name\\": \\"PipeExpression\\",
                                                                                                                           \\"children\\": {
