@@ -4,6 +4,8 @@
   "main": "build/src/index.js",
   "scripts": {
     "build": "ts-node ./build.ts",
+    "cli": "ts-node ./src/cli.ts",
+    "parser-cli": "ts-node ./src/parser/cli.ts",
     "tsc": "tsc",
     "prettier:fix": "prettier --write ./{src,__tests__,webSrc}/**/*.{ts,js,tsx,jsx} ./*.{ts,js,tsx,jsx}",
     "test": "jest",
