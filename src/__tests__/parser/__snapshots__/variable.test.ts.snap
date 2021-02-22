@@ -40,7 +40,7 @@ exports[`変数 数値 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -87,7 +87,7 @@ exports[`変数 数値 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -255,7 +255,7 @@ exports[`変数 数値 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -302,7 +302,7 @@ exports[`変数 数値 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -480,7 +480,7 @@ exports[`変数 文字列 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -611,7 +611,7 @@ exports[`変数 文字列 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -658,7 +658,7 @@ exports[`変数 文字列 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {

@@ -79,7 +79,7 @@ exports[`if 1 1`] = `
                                                 {
                                                   \\"name\\": \\"RangeExpression\\",
                                                   \\"children\\": {
-                                                    \\"Factor\\": [
+                                                    \\"rules\\": [
                                                       {
                                                         \\"name\\": \\"Factor\\",
                                                         \\"children\\": {
@@ -140,7 +140,7 @@ exports[`if 1 1`] = `
                                                 {
                                                   \\"name\\": \\"RangeExpression\\",
                                                   \\"children\\": {
-                                                    \\"Factor\\": [
+                                                    \\"rules\\": [
                                                       {
                                                         \\"name\\": \\"Factor\\",
                                                         \\"children\\": {
@@ -311,7 +311,7 @@ exports[`if 1 1`] = `
                                                                         {
                                                                           \\"name\\": \\"RangeExpression\\",
                                                                           \\"children\\": {
-                                                                            \\"Factor\\": [
+                                                                            \\"rules\\": [
                                                                               {
                                                                                 \\"name\\": \\"Factor\\",
                                                                                 \\"children\\": {
@@ -414,7 +414,7 @@ exports[`if 1 1`] = `
                                                                         {
                                                                           \\"name\\": \\"RangeExpression\\",
                                                                           \\"children\\": {
-                                                                            \\"Factor\\": [
+                                                                            \\"rules\\": [
                                                                               {
                                                                                 \\"name\\": \\"Factor\\",
                                                                                 \\"children\\": {
@@ -570,7 +570,7 @@ exports[`if 1 1`] = `
                                                                                                                                                 {
                                                                                                                                                   \\"name\\": \\"RangeExpression\\",
                                                                                                                                                   \\"children\\": {
-                                                                                                                                                    \\"Factor\\": [
+                                                                                                                                                    \\"rules\\": [
                                                                                                                                                       {
                                                                                                                                                         \\"name\\": \\"Factor\\",
                                                                                                                                                         \\"children\\": {
@@ -626,7 +626,7 @@ exports[`if 1 1`] = `
                                                                                                                                                 {
                                                                                                                                                   \\"name\\": \\"RangeExpression\\",
                                                                                                                                                   \\"children\\": {
-                                                                                                                                                    \\"Factor\\": [
+                                                                                                                                                    \\"rules\\": [
                                                                                                                                                       {
                                                                                                                                                         \\"name\\": \\"Factor\\",
                                                                                                                                                         \\"children\\": {
@@ -780,7 +780,7 @@ exports[`if 1 1`] = `
                                                                         {
                                                                           \\"name\\": \\"RangeExpression\\",
                                                                           \\"children\\": {
-                                                                            \\"Factor\\": [
+                                                                            \\"rules\\": [
                                                                               {
                                                                                 \\"name\\": \\"Factor\\",
                                                                                 \\"children\\": {
@@ -827,7 +827,7 @@ exports[`if 1 1`] = `
                                                                         {
                                                                           \\"name\\": \\"RangeExpression\\",
                                                                           \\"children\\": {
-                                                                            \\"Factor\\": [
+                                                                            \\"rules\\": [
                                                                               {
                                                                                 \\"name\\": \\"Factor\\",
                                                                                 \\"children\\": {

@@ -369,10 +369,10 @@ export class ChiboParser extends CstParser {
   });
 
   private RangeExpression = this.RULE('RangeExpression', () => {
-    this.SUBRULE(this.Factor);
+    this.SUBRULE(this.Factor, { LABEL: 'rules' });
     this.MANY(() => {
       this.CONSUME(tildeToken);
-      this.SUBRULE2(this.Factor);
+      this.SUBRULE2(this.Factor, { LABEL: 'rules' });
     });
   });
 

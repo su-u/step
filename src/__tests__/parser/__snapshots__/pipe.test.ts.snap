@@ -40,7 +40,7 @@ exports[`パイプ 1 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -171,7 +171,7 @@ exports[`パイプ 1 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -227,7 +227,7 @@ exports[`パイプ 1 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -326,7 +326,7 @@ exports[`パイプ 2 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -457,7 +457,7 @@ exports[`パイプ 2 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -532,7 +532,7 @@ exports[`パイプ 2 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -565,7 +565,7 @@ exports[`パイプ 2 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {

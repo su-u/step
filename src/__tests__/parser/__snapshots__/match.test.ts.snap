@@ -40,7 +40,7 @@ exports[`match 1 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -96,7 +96,7 @@ exports[`match 1 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -197,7 +197,7 @@ exports[`match 1 1`] = `
                                                                                                             {
                                                                                                               \\"name\\": \\"RangeExpression\\",
                                                                                                               \\"children\\": {
-                                                                                                                \\"Factor\\": [
+                                                                                                                \\"rules\\": [
                                                                                                                   {
                                                                                                                     \\"name\\": \\"Factor\\",
                                                                                                                     \\"children\\": {
@@ -365,7 +365,7 @@ exports[`match 1 1`] = `
                                                                                                                               {
                                                                                                                                 \\"name\\": \\"RangeExpression\\",
                                                                                                                                 \\"children\\": {
-                                                                                                                                  \\"Factor\\": [
+                                                                                                                                  \\"rules\\": [
                                                                                                                                     {
                                                                                                                                       \\"name\\": \\"Factor\\",
                                                                                                                                       \\"children\\": {
@@ -544,7 +544,7 @@ exports[`match 2 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -606,7 +606,7 @@ exports[`match 2 1`] = `
                                                                                                                   {
                                                                                                                     \\"name\\": \\"RangeExpression\\",
                                                                                                                     \\"children\\": {
-                                                                                                                      \\"Factor\\": [
+                                                                                                                      \\"rules\\": [
                                                                                                                         {
                                                                                                                           \\"name\\": \\"Factor\\",
                                                                                                                           \\"children\\": {
@@ -681,7 +681,7 @@ exports[`match 2 1`] = `
                                                                                                                   {
                                                                                                                     \\"name\\": \\"RangeExpression\\",
                                                                                                                     \\"children\\": {
-                                                                                                                      \\"Factor\\": [
+                                                                                                                      \\"rules\\": [
                                                                                                                         {
                                                                                                                           \\"name\\": \\"Factor\\",
                                                                                                                           \\"children\\": {
@@ -810,7 +810,7 @@ exports[`match 2 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -911,7 +911,7 @@ exports[`match 2 1`] = `
                                                                                                             {
                                                                                                               \\"name\\": \\"RangeExpression\\",
                                                                                                               \\"children\\": {
-                                                                                                                \\"Factor\\": [
+                                                                                                                \\"rules\\": [
                                                                                                                   {
                                                                                                                     \\"name\\": \\"Factor\\",
                                                                                                                     \\"children\\": {
@@ -979,7 +979,7 @@ exports[`match 2 1`] = `
                                                                                                             {
                                                                                                               \\"name\\": \\"RangeExpression\\",
                                                                                                               \\"children\\": {
-                                                                                                                \\"Factor\\": [
+                                                                                                                \\"rules\\": [
                                                                                                                   {
                                                                                                                     \\"name\\": \\"Factor\\",
                                                                                                                     \\"children\\": {
@@ -1168,7 +1168,7 @@ exports[`match 2 1`] = `
                                                                                                                               {
                                                                                                                                 \\"name\\": \\"RangeExpression\\",
                                                                                                                                 \\"children\\": {
-                                                                                                                                  \\"Factor\\": [
+                                                                                                                                  \\"rules\\": [
                                                                                                                                     {
                                                                                                                                       \\"name\\": \\"Factor\\",
                                                                                                                                       \\"children\\": {
@@ -1394,7 +1394,7 @@ exports[`match 2 1`] = `
                                                                                                                               {
                                                                                                                                 \\"name\\": \\"RangeExpression\\",
                                                                                                                                 \\"children\\": {
-                                                                                                                                  \\"Factor\\": [
+                                                                                                                                  \\"rules\\": [
                                                                                                                                     {
                                                                                                                                       \\"name\\": \\"Factor\\",
                                                                                                                                       \\"children\\": {

@@ -166,7 +166,7 @@ exports[`関数 1 1`] = `
                                                                         {
                                                                           \\"name\\": \\"RangeExpression\\",
                                                                           \\"children\\": {
-                                                                            \\"Factor\\": [
+                                                                            \\"rules\\": [
                                                                               {
                                                                                 \\"name\\": \\"Factor\\",
                                                                                 \\"children\\": {
@@ -222,7 +222,7 @@ exports[`関数 1 1`] = `
                                                                         {
                                                                           \\"name\\": \\"RangeExpression\\",
                                                                           \\"children\\": {
-                                                                            \\"Factor\\": [
+                                                                            \\"rules\\": [
                                                                               {
                                                                                 \\"name\\": \\"Factor\\",
                                                                                 \\"children\\": {
@@ -342,7 +342,7 @@ exports[`関数 1 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -398,7 +398,7 @@ exports[`関数 1 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -623,7 +623,7 @@ exports[`関数 2 1`] = `
                                                                         {
                                                                           \\"name\\": \\"RangeExpression\\",
                                                                           \\"children\\": {
-                                                                            \\"Factor\\": [
+                                                                            \\"rules\\": [
                                                                               {
                                                                                 \\"name\\": \\"Factor\\",
                                                                                 \\"children\\": {
@@ -679,7 +679,7 @@ exports[`関数 2 1`] = `
                                                                         {
                                                                           \\"name\\": \\"RangeExpression\\",
                                                                           \\"children\\": {
-                                                                            \\"Factor\\": [
+                                                                            \\"rules\\": [
                                                                               {
                                                                                 \\"name\\": \\"Factor\\",
                                                                                 \\"children\\": {
@@ -799,7 +799,7 @@ exports[`関数 2 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -861,7 +861,7 @@ exports[`関数 2 1`] = `
                                                                                                                   {
                                                                                                                     \\"name\\": \\"RangeExpression\\",
                                                                                                                     \\"children\\": {
-                                                                                                                      \\"Factor\\": [
+                                                                                                                      \\"rules\\": [
                                                                                                                         {
                                                                                                                           \\"name\\": \\"Factor\\",
                                                                                                                           \\"children\\": {
@@ -969,7 +969,7 @@ exports[`関数 2 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {

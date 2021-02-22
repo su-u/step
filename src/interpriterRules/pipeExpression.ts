@@ -8,7 +8,7 @@ export const pipeExpression = ({ ast, manager, execObject }: IInterpreterRules) 
   let fromValue = execObject.interpreter({ ast: fromAst, manager, execObject });
   if (ast.children.tail !== undefined) {
     fromValue = ast.children.tail.reduce((last, pipeAst) => {
-      const pipeExpressionAst = pipeAst.children.Factor[0].children;
+      const pipeExpressionAst = pipeAst.children.rules[0].children;
       // console.log(pipeExpressionAst);
       // console.log(fromValue);
       if (pipeExpressionAst.toEach !== undefined) {

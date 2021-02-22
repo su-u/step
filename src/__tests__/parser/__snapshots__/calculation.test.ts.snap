@@ -40,7 +40,7 @@ exports[`演算 1 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -94,7 +94,7 @@ exports[`演算 1 1`] = `
                                                                                                       {
                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"Factor\\": [
+                                                                                                          \\"rules\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"Factor\\",
                                                                                                               \\"children\\": {
@@ -141,7 +141,7 @@ exports[`演算 1 1`] = `
                                                                                                       {
                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"Factor\\": [
+                                                                                                          \\"rules\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"Factor\\",
                                                                                                               \\"children\\": {
@@ -264,7 +264,7 @@ exports[`演算 1 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -318,7 +318,7 @@ exports[`演算 1 1`] = `
                                                                                                       {
                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"Factor\\": [
+                                                                                                          \\"rules\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"Factor\\",
                                                                                                               \\"children\\": {
@@ -358,7 +358,7 @@ exports[`演算 1 1`] = `
                                                                                                       {
                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"Factor\\": [
+                                                                                                          \\"rules\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"Factor\\",
                                                                                                               \\"children\\": {
@@ -412,7 +412,7 @@ exports[`演算 1 1`] = `
                                                                                                                                                       {
                                                                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                                                                         \\"children\\": {
-                                                                                                                                                          \\"Factor\\": [
+                                                                                                                                                          \\"rules\\": [
                                                                                                                                                             {
                                                                                                                                                               \\"name\\": \\"Factor\\",
                                                                                                                                                               \\"children\\": {
@@ -459,7 +459,7 @@ exports[`演算 1 1`] = `
                                                                                                                                                       {
                                                                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                                                                         \\"children\\": {
-                                                                                                                                                          \\"Factor\\": [
+                                                                                                                                                          \\"rules\\": [
                                                                                                                                                             {
                                                                                                                                                               \\"name\\": \\"Factor\\",
                                                                                                                                                               \\"children\\": {

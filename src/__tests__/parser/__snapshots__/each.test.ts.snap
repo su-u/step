@@ -40,7 +40,7 @@ exports[`each 1 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -143,7 +143,7 @@ exports[`each 1 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -299,7 +299,7 @@ exports[`each 1 1`] = `
                                                                                                                               {
                                                                                                                                 \\"name\\": \\"RangeExpression\\",
                                                                                                                                 \\"children\\": {
-                                                                                                                                  \\"Factor\\": [
+                                                                                                                                  \\"rules\\": [
                                                                                                                                     {
                                                                                                                                       \\"name\\": \\"Factor\\",
                                                                                                                                       \\"children\\": {
@@ -355,7 +355,7 @@ exports[`each 1 1`] = `
                                                                                                                               {
                                                                                                                                 \\"name\\": \\"RangeExpression\\",
                                                                                                                                 \\"children\\": {
-                                                                                                                                  \\"Factor\\": [
+                                                                                                                                  \\"rules\\": [
                                                                                                                                     {
                                                                                                                                       \\"name\\": \\"Factor\\",
                                                                                                                                       \\"children\\": {
