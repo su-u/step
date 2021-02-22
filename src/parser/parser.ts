@@ -248,7 +248,7 @@ export class ChiboParser extends CstParser {
 
   private BlockStatement = this.RULE('BlockStatement', () => {
     this.MANY(() => {
-      this.SUBRULE(this.BlockRule);
+      this.SUBRULE(this.BlockRule, { LABEL: 'rules' });
     });
   });
 
