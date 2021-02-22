@@ -150,7 +150,7 @@ exports[`関数 1 1`] = `
                                                 {
                                                   \\"name\\": \\"RelationExpression\\",
                                                   \\"children\\": {
-                                                    \\"Expression\\": [
+                                                    \\"rules\\": [
                                                       {
                                                         \\"name\\": \\"Expression\\",
                                                         \\"children\\": {
@@ -326,7 +326,7 @@ exports[`関数 1 1`] = `
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
-                                  \\"Expression\\": [
+                                  \\"rules\\": [
                                     {
                                       \\"name\\": \\"Expression\\",
                                       \\"children\\": {
@@ -607,7 +607,7 @@ exports[`関数 2 1`] = `
                                                 {
                                                   \\"name\\": \\"RelationExpression\\",
                                                   \\"children\\": {
-                                                    \\"Expression\\": [
+                                                    \\"rules\\": [
                                                       {
                                                         \\"name\\": \\"Expression\\",
                                                         \\"children\\": {
@@ -783,7 +783,7 @@ exports[`関数 2 1`] = `
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
-                                  \\"Expression\\": [
+                                  \\"rules\\": [
                                     {
                                       \\"name\\": \\"Expression\\",
                                       \\"children\\": {
@@ -845,7 +845,7 @@ exports[`関数 2 1`] = `
                                                                                           {
                                                                                             \\"name\\": \\"RelationExpression\\",
                                                                                             \\"children\\": {
-                                                                                              \\"Expression\\": [
+                                                                                              \\"rules\\": [
                                                                                                 {
                                                                                                   \\"name\\": \\"Expression\\",
                                                                                                   \\"children\\": {

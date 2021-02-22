@@ -63,7 +63,7 @@ exports[`if 1 1`] = `
                         {
                           \\"name\\": \\"RelationExpression\\",
                           \\"children\\": {
-                            \\"Expression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"Expression\\",
                                 \\"children\\": {
@@ -124,7 +124,7 @@ exports[`if 1 1`] = `
                         {
                           \\"name\\": \\"RelationExpression\\",
                           \\"children\\": {
-                            \\"Expression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"Expression\\",
                                 \\"children\\": {
@@ -311,7 +311,7 @@ exports[`if 1 1`] = `
                                                 {
                                                   \\"name\\": \\"RelationExpression\\",
                                                   \\"children\\": {
-                                                    \\"Expression\\": [
+                                                    \\"rules\\": [
                                                       {
                                                         \\"name\\": \\"Expression\\",
                                                         \\"children\\": {
@@ -570,7 +570,7 @@ exports[`if 1 1`] = `
                                                                                                                         {
                                                                                                                           \\"name\\": \\"RelationExpression\\",
                                                                                                                           \\"children\\": {
-                                                                                                                            \\"Expression\\": [
+                                                                                                                            \\"rules\\": [
                                                                                                                               {
                                                                                                                                 \\"name\\": \\"Expression\\",
                                                                                                                                 \\"children\\": {
@@ -780,7 +780,7 @@ exports[`if 1 1`] = `
                                                 {
                                                   \\"name\\": \\"RelationExpression\\",
                                                   \\"children\\": {
-                                                    \\"Expression\\": [
+                                                    \\"rules\\": [
                                                       {
                                                         \\"name\\": \\"Expression\\",
                                                         \\"children\\": {

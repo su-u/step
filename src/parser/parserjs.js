@@ -347,7 +347,7 @@
       });
 
       this.RelationExpression = this.RULE('RelationExpression', () => {
-        this.SUBRULE(this.Expression);
+        this.SUBRULE(this.Expression, { LABEL: 'rules' });
         this.MANY(() => {
           this.OR([
             { ALT: () => this.CONSUME(AmountMore) },
@@ -356,7 +356,7 @@
             { ALT: () => this.CONSUME(LessThan) },
             { ALT: () => this.CONSUME(Equal) },
           ]);
-          this.SUBRULE2(this.Expression);
+          this.SUBRULE2(this.Expression, { LABEL: 'rules' });
         });
       });
 
