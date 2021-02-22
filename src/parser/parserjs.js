@@ -341,7 +341,7 @@
       this.LogicExpression = this.RULE('LogicExpression', () => {
         this.SUBRULE(this.RelationExpression);
         this.MANY(() => {
-          this.OR([{ ALT: () => this.CONSUME(LogicalJoinOperator) }]);
+          this.CONSUME(LogicalJoinOperator);
           this.SUBRULE2(this.RelationExpression);
         });
       });
