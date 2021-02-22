@@ -426,7 +426,7 @@ export class ChiboParser extends CstParser {
 
   private ParenthesisExpression = this.RULE('ParenthesisExpression', () => {
     this.CONSUME(LBracket);
-    this.SUBRULE(this.LogicExpression, { LABEL: 'expression' });
+    this.SUBRULE(this.LogicExpression, { LABEL: 'rules' });
     this.CONSUME(RBracket);
   });
 

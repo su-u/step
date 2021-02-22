@@ -149,7 +149,7 @@ describe('factor', () => {
                   image: '(',
                 },
               ],
-              expression: [
+              rules: [
                 {
                   name: 'RelationExpression',
                   children: {
