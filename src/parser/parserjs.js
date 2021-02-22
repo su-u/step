@@ -408,7 +408,7 @@
       this.ArrayIndex = this.RULE('ArrayIndex', () => {
         this.OR([
           { ALT: () => this.CONSUME(NumberLiteral) },
-          { ALT: () => this.SUBRULE(this.ArrayElement) },
+          { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'rules' }) },
           { ALT: () => this.CONSUME(Identifier) },
         ]);
       });
