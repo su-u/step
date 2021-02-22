@@ -4,7 +4,7 @@ import { execFunction } from './pipe/function';
 import { execMatch } from './pipe/match';
 
 export const pipeExpression = ({ ast, manager, execObject }: IInterpreterRules) => {
-  const fromAst = ast.children.from[0];
+  const fromAst = ast.children.head[0];
   let fromValue = execObject.interpreter({ ast: fromAst, manager, execObject });
   if (ast.children.tail !== undefined) {
     fromValue = ast.children.tail.reduce((last, pipeAst) => {

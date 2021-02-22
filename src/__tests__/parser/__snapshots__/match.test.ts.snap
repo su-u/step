@@ -36,7 +36,7 @@ exports[`match 1 1`] = `
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
@@ -193,7 +193,7 @@ exports[`match 1 1`] = `
                                                                                                       {
                                                                                                         \\"name\\": \\"PipeExpression\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"from\\": [
+                                                                                                          \\"head\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"RangeExpression\\",
                                                                                                               \\"children\\": {
@@ -361,7 +361,7 @@ exports[`match 1 1`] = `
                                                                                                                         {
                                                                                                                           \\"name\\": \\"PipeExpression\\",
                                                                                                                           \\"children\\": {
-                                                                                                                            \\"from\\": [
+                                                                                                                            \\"head\\": [
                                                                                                                               {
                                                                                                                                 \\"name\\": \\"RangeExpression\\",
                                                                                                                                 \\"children\\": {
@@ -540,7 +540,7 @@ exports[`match 2 1`] = `
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
@@ -602,7 +602,7 @@ exports[`match 2 1`] = `
                                                                                                             {
                                                                                                               \\"name\\": \\"PipeExpression\\",
                                                                                                               \\"children\\": {
-                                                                                                                \\"from\\": [
+                                                                                                                \\"head\\": [
                                                                                                                   {
                                                                                                                     \\"name\\": \\"RangeExpression\\",
                                                                                                                     \\"children\\": {
@@ -677,7 +677,7 @@ exports[`match 2 1`] = `
                                                                                                             {
                                                                                                               \\"name\\": \\"PipeExpression\\",
                                                                                                               \\"children\\": {
-                                                                                                                \\"from\\": [
+                                                                                                                \\"head\\": [
                                                                                                                   {
                                                                                                                     \\"name\\": \\"RangeExpression\\",
                                                                                                                     \\"children\\": {
@@ -907,7 +907,7 @@ exports[`match 2 1`] = `
                                                                                                       {
                                                                                                         \\"name\\": \\"PipeExpression\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"from\\": [
+                                                                                                          \\"head\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"RangeExpression\\",
                                                                                                               \\"children\\": {
@@ -975,7 +975,7 @@ exports[`match 2 1`] = `
                                                                                                       {
                                                                                                         \\"name\\": \\"PipeExpression\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"from\\": [
+                                                                                                          \\"head\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"RangeExpression\\",
                                                                                                               \\"children\\": {
@@ -1164,7 +1164,7 @@ exports[`match 2 1`] = `
                                                                                                                         {
                                                                                                                           \\"name\\": \\"PipeExpression\\",
                                                                                                                           \\"children\\": {
-                                                                                                                            \\"from\\": [
+                                                                                                                            \\"head\\": [
                                                                                                                               {
                                                                                                                                 \\"name\\": \\"RangeExpression\\",
                                                                                                                                 \\"children\\": {
@@ -1390,7 +1390,7 @@ exports[`match 2 1`] = `
                                                                                                                         {
                                                                                                                           \\"name\\": \\"PipeExpression\\",
                                                                                                                           \\"children\\": {
-                                                                                                                            \\"from\\": [
+                                                                                                                            \\"head\\": [
                                                                                                                               {
                                                                                                                                 \\"name\\": \\"RangeExpression\\",
                                                                                                                                 \\"children\\": {

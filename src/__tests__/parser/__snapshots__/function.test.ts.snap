@@ -162,7 +162,7 @@ exports[`関数 1 1`] = `
                                                                   {
                                                                     \\"name\\": \\"PipeExpression\\",
                                                                     \\"children\\": {
-                                                                      \\"from\\": [
+                                                                      \\"head\\": [
                                                                         {
                                                                           \\"name\\": \\"RangeExpression\\",
                                                                           \\"children\\": {
@@ -338,7 +338,7 @@ exports[`関数 1 1`] = `
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
@@ -619,7 +619,7 @@ exports[`関数 2 1`] = `
                                                                   {
                                                                     \\"name\\": \\"PipeExpression\\",
                                                                     \\"children\\": {
-                                                                      \\"from\\": [
+                                                                      \\"head\\": [
                                                                         {
                                                                           \\"name\\": \\"RangeExpression\\",
                                                                           \\"children\\": {
@@ -795,7 +795,7 @@ exports[`関数 2 1`] = `
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
@@ -857,7 +857,7 @@ exports[`関数 2 1`] = `
                                                                                                             {
                                                                                                               \\"name\\": \\"PipeExpression\\",
                                                                                                               \\"children\\": {
-                                                                                                                \\"from\\": [
+                                                                                                                \\"head\\": [
                                                                                                                   {
                                                                                                                     \\"name\\": \\"RangeExpression\\",
                                                                                                                     \\"children\\": {

@@ -36,7 +36,7 @@ exports[`演算 1 1`] = `
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
@@ -90,7 +90,7 @@ exports[`演算 1 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"PipeExpression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"from\\": [
+                                                                                                    \\"head\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                         \\"children\\": {
@@ -137,7 +137,7 @@ exports[`演算 1 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"PipeExpression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"from\\": [
+                                                                                                    \\"head\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                         \\"children\\": {
@@ -260,7 +260,7 @@ exports[`演算 1 1`] = `
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
@@ -314,7 +314,7 @@ exports[`演算 1 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"PipeExpression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"from\\": [
+                                                                                                    \\"head\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                         \\"children\\": {
@@ -354,7 +354,7 @@ exports[`演算 1 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"PipeExpression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"from\\": [
+                                                                                                    \\"head\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                         \\"children\\": {
@@ -408,7 +408,7 @@ exports[`演算 1 1`] = `
                                                                                                                                                 {
                                                                                                                                                   \\"name\\": \\"PipeExpression\\",
                                                                                                                                                   \\"children\\": {
-                                                                                                                                                    \\"from\\": [
+                                                                                                                                                    \\"head\\": [
                                                                                                                                                       {
                                                                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                                                                         \\"children\\": {
@@ -455,7 +455,7 @@ exports[`演算 1 1`] = `
                                                                                                                                                 {
                                                                                                                                                   \\"name\\": \\"PipeExpression\\",
                                                                                                                                                   \\"children\\": {
-                                                                                                                                                    \\"from\\": [
+                                                                                                                                                    \\"head\\": [
                                                                                                                                                       {
                                                                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                                                                         \\"children\\": {

@@ -75,7 +75,7 @@ exports[`if 1 1`] = `
                                           {
                                             \\"name\\": \\"PipeExpression\\",
                                             \\"children\\": {
-                                              \\"from\\": [
+                                              \\"head\\": [
                                                 {
                                                   \\"name\\": \\"RangeExpression\\",
                                                   \\"children\\": {
@@ -136,7 +136,7 @@ exports[`if 1 1`] = `
                                           {
                                             \\"name\\": \\"PipeExpression\\",
                                             \\"children\\": {
-                                              \\"from\\": [
+                                              \\"head\\": [
                                                 {
                                                   \\"name\\": \\"RangeExpression\\",
                                                   \\"children\\": {
@@ -323,7 +323,7 @@ exports[`if 1 1`] = `
                                                                   {
                                                                     \\"name\\": \\"PipeExpression\\",
                                                                     \\"children\\": {
-                                                                      \\"from\\": [
+                                                                      \\"head\\": [
                                                                         {
                                                                           \\"name\\": \\"RangeExpression\\",
                                                                           \\"children\\": {
@@ -582,7 +582,7 @@ exports[`if 1 1`] = `
                                                                                                                                           {
                                                                                                                                             \\"name\\": \\"PipeExpression\\",
                                                                                                                                             \\"children\\": {
-                                                                                                                                              \\"from\\": [
+                                                                                                                                              \\"head\\": [
                                                                                                                                                 {
                                                                                                                                                   \\"name\\": \\"RangeExpression\\",
                                                                                                                                                   \\"children\\": {
@@ -792,7 +792,7 @@ exports[`if 1 1`] = `
                                                                   {
                                                                     \\"name\\": \\"PipeExpression\\",
                                                                     \\"children\\": {
-                                                                      \\"from\\": [
+                                                                      \\"head\\": [
                                                                         {
                                                                           \\"name\\": \\"RangeExpression\\",
                                                                           \\"children\\": {
@@ -839,7 +839,7 @@ exports[`if 1 1`] = `
                                                                   {
                                                                     \\"name\\": \\"PipeExpression\\",
                                                                     \\"children\\": {
-                                                                      \\"from\\": [
+                                                                      \\"head\\": [
                                                                         {
                                                                           \\"name\\": \\"RangeExpression\\",
                                                                           \\"children\\": {

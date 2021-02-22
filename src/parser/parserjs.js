@@ -308,7 +308,7 @@
       });
 
       this.PipeExpression = this.RULE('PipeExpression', () => {
-        this.SUBRULE(this.RangeExpression, { LABEL: 'from' });
+        this.SUBRULE(this.RangeExpression, { LABEL: 'head' });
         this.MANY(() => {
           this.CONSUME(PipeToken);
           this.SUBRULE2(this.RangeExpression, { LABEL: 'tail' });
