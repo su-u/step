@@ -24,7 +24,7 @@ export const factor = ({ ast, manager, execObject }: IInterpreterRules) => {
     return arrayExpression({ ast, manager, execObject });
   } else if (ast.children.arrayElement !== undefined) {
     return arrayElement({ ast, manager, execObject });
-  } else if (ast.children.Object !== undefined) {
+  } else if (ast.children.object !== undefined) {
     return objectLiteral({ ast, manager, execObject });
   }
 

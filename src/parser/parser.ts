@@ -393,7 +393,7 @@ export class ChiboParser extends CstParser {
       { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'arrayElement' }) },
       { ALT: () => this.CONSUME(Identifier) },
       { ALT: () => this.SUBRULE(this.ArrayExpression, { LABEL: 'arrayExpression' }) },
-      { ALT: () => this.SUBRULE(this.Object) },
+      { ALT: () => this.SUBRULE(this.Object, { LABEL: 'object' }) },
       { ALT: () => this.SUBRULE(this.Match, { LABEL: 'toMatch' }) },
       { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
     ]);

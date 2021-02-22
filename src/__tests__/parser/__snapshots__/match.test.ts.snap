@@ -548,7 +548,7 @@ exports[`match 2 1`] = `
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
-                                                                \\"Object\\": [
+                                                                \\"object\\": [
                                                                   {
                                                                     \\"name\\": \\"Object\\",
                                                                     \\"children\\": {
