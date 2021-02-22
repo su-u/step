@@ -1,8 +1,0 @@
-(a,b,c) => {test;} -> a;
-test.test |> test |> test;
-test.test: 123, abc foo: 123 bar: 456 |> baz;
-test[123].foo -> foo[test[456]];
-foo.test[1];
-[ 1,2,3] -> x;
-{ x:1, y:1 } -> y;
-a.test: { a -> b; };

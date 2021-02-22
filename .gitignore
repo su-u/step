@@ -265,6 +265,6 @@ fabric.properties
 .idea/*
 build/*
 out.json
-chb/main.chb
+step/main.chb
 public/dist
 dist/

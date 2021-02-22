@@ -12,12 +12,12 @@ yarn install
 
 ## インタープリタ実行TS版
 ```bash
-ts-node .\src\cli.ts [chb]
+ts-node .\src\cli.ts [step]
 ```
 
 例：
 ```bash
-ts-node .\src\cli.ts .\chb\main.chb
+ts-node .\src\cli.ts .\step\main.step
 ```
 
 ## テスト実行

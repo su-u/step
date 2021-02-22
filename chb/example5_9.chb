@@ -1,9 +1,0 @@
-function func1: str {
-  return str + "1"
-}
-
-function func2: str {
-  return str + "2"
-}
-
-"1" |> func1 |> func2 -> value1

@@ -1,9 +1,0 @@
-function func3: a, b {
-  return a + b
-}
-
-function func4: a {
-  return a + 100
-}
-
-{ 1, 10 } |> func3 |> func4 |> value2

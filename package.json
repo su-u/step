@@ -16,6 +16,7 @@
   "homepage": "https://github.com/su-u/step",
   "dependencies": {
     "chevrotain": "^7.0.1",
+    "decimal.js": "^10.2.1",
     "extensible-custom-error": "^0.0.7",
     "fs-extra": "^8.1.0",
     "lodash": "^4.17.15",
