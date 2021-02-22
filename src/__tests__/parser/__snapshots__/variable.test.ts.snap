@@ -20,7 +20,7 @@ exports[`変数 数値 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -235,7 +235,7 @@ exports[`変数 数値 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -460,7 +460,7 @@ exports[`変数 文字列 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -591,7 +591,7 @@ exports[`変数 文字列 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {

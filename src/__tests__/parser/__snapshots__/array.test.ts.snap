@@ -20,7 +20,7 @@ exports[`if 1 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -256,7 +256,7 @@ exports[`if 1 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -492,7 +492,7 @@ exports[`if 1 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -623,7 +623,7 @@ exports[`if 1 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -754,7 +754,7 @@ exports[`if 1 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -990,7 +990,7 @@ exports[`if 1 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -1178,7 +1178,7 @@ exports[`if 1 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {

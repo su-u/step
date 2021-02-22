@@ -20,7 +20,7 @@ exports[`演算 1 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -74,7 +74,7 @@ exports[`演算 1 1`] = `
                                                                         {
                                                                           \\"name\\": \\"LogicExpression\\",
                                                                           \\"children\\": {
-                                                                            \\"RelationExpression\\": [
+                                                                            \\"rules\\": [
                                                                               {
                                                                                 \\"name\\": \\"RelationExpression\\",
                                                                                 \\"children\\": {
@@ -298,7 +298,7 @@ exports[`演算 1 1`] = `
                                                                         {
                                                                           \\"name\\": \\"LogicExpression\\",
                                                                           \\"children\\": {
-                                                                            \\"RelationExpression\\": [
+                                                                            \\"rules\\": [
                                                                               {
                                                                                 \\"name\\": \\"RelationExpression\\",
                                                                                 \\"children\\": {
@@ -392,7 +392,7 @@ exports[`演算 1 1`] = `
                                                                                                                         {
                                                                                                                           \\"name\\": \\"LogicExpression\\",
                                                                                                                           \\"children\\": {
-                                                                                                                            \\"RelationExpression\\": [
+                                                                                                                            \\"rules\\": [
                                                                                                                               {
                                                                                                                                 \\"name\\": \\"RelationExpression\\",
                                                                                                                                 \\"children\\": {

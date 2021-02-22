@@ -339,10 +339,10 @@
       });
 
       this.LogicExpression = this.RULE('LogicExpression', () => {
-        this.SUBRULE(this.RelationExpression);
+        this.SUBRULE(this.RelationExpression, { LABEL: 'rules' });
         this.MANY(() => {
           this.CONSUME(LogicalJoinOperator);
-          this.SUBRULE2(this.RelationExpression);
+          this.SUBRULE2(this.RelationExpression, { LABEL: 'rules' });
         });
       });
 

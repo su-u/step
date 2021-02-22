@@ -146,7 +146,7 @@ exports[`関数 1 1`] = `
                                           {
                                             \\"name\\": \\"LogicExpression\\",
                                             \\"children\\": {
-                                              \\"RelationExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"RelationExpression\\",
                                                   \\"children\\": {
@@ -322,7 +322,7 @@ exports[`関数 1 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -603,7 +603,7 @@ exports[`関数 2 1`] = `
                                           {
                                             \\"name\\": \\"LogicExpression\\",
                                             \\"children\\": {
-                                              \\"RelationExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"RelationExpression\\",
                                                   \\"children\\": {
@@ -779,7 +779,7 @@ exports[`関数 2 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -841,7 +841,7 @@ exports[`関数 2 1`] = `
                                                                                     {
                                                                                       \\"name\\": \\"LogicExpression\\",
                                                                                       \\"children\\": {
-                                                                                        \\"RelationExpression\\": [
+                                                                                        \\"rules\\": [
                                                                                           {
                                                                                             \\"name\\": \\"RelationExpression\\",
                                                                                             \\"children\\": {

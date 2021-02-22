@@ -20,7 +20,7 @@ exports[`each 1 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -279,7 +279,7 @@ exports[`each 1 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"LogicExpression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"RelationExpression\\": [
+                                                                                                    \\"rules\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"RelationExpression\\",
                                                                                                         \\"children\\": {

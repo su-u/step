@@ -20,7 +20,7 @@ exports[`match 1 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -177,7 +177,7 @@ exports[`match 1 1`] = `
                                                                               {
                                                                                 \\"name\\": \\"LogicExpression\\",
                                                                                 \\"children\\": {
-                                                                                  \\"RelationExpression\\": [
+                                                                                  \\"rules\\": [
                                                                                     {
                                                                                       \\"name\\": \\"RelationExpression\\",
                                                                                       \\"children\\": {
@@ -345,7 +345,7 @@ exports[`match 1 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"LogicExpression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"RelationExpression\\": [
+                                                                                                    \\"rules\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"RelationExpression\\",
                                                                                                         \\"children\\": {
@@ -524,7 +524,7 @@ exports[`match 2 1`] = `
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
@@ -586,7 +586,7 @@ exports[`match 2 1`] = `
                                                                                     {
                                                                                       \\"name\\": \\"LogicExpression\\",
                                                                                       \\"children\\": {
-                                                                                        \\"RelationExpression\\": [
+                                                                                        \\"rules\\": [
                                                                                           {
                                                                                             \\"name\\": \\"RelationExpression\\",
                                                                                             \\"children\\": {
@@ -661,7 +661,7 @@ exports[`match 2 1`] = `
                                                                                     {
                                                                                       \\"name\\": \\"LogicExpression\\",
                                                                                       \\"children\\": {
-                                                                                        \\"RelationExpression\\": [
+                                                                                        \\"rules\\": [
                                                                                           {
                                                                                             \\"name\\": \\"RelationExpression\\",
                                                                                             \\"children\\": {
@@ -891,7 +891,7 @@ exports[`match 2 1`] = `
                                                                               {
                                                                                 \\"name\\": \\"LogicExpression\\",
                                                                                 \\"children\\": {
-                                                                                  \\"RelationExpression\\": [
+                                                                                  \\"rules\\": [
                                                                                     {
                                                                                       \\"name\\": \\"RelationExpression\\",
                                                                                       \\"children\\": {
@@ -959,7 +959,7 @@ exports[`match 2 1`] = `
                                                                               {
                                                                                 \\"name\\": \\"LogicExpression\\",
                                                                                 \\"children\\": {
-                                                                                  \\"RelationExpression\\": [
+                                                                                  \\"rules\\": [
                                                                                     {
                                                                                       \\"name\\": \\"RelationExpression\\",
                                                                                       \\"children\\": {
@@ -1148,7 +1148,7 @@ exports[`match 2 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"LogicExpression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"RelationExpression\\": [
+                                                                                                    \\"rules\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"RelationExpression\\",
                                                                                                         \\"children\\": {
@@ -1374,7 +1374,7 @@ exports[`match 2 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"LogicExpression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"RelationExpression\\": [
+                                                                                                    \\"rules\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"RelationExpression\\",
                                                                                                         \\"children\\": {
