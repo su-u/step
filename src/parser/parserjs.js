@@ -390,7 +390,7 @@
           { ALT: () => this.CONSUME(StringLiteral) },
           { ALT: () => this.CONSUME(BoolLiteral) },
           { ALT: () => this.SUBRULE(this.ParenthesisExpression, { LABEL: 'parentheses' }) },
-          { ALT: () => this.SUBRULE(this.ArrayElement) },
+          { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'arrayElement' }) },
           { ALT: () => this.CONSUME(Identifier) },
           { ALT: () => this.SUBRULE(this.ArrayStatement) },
           { ALT: () => this.SUBRULE(this.Object) },
