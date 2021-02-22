@@ -80,11 +80,11 @@ exports[`match 1 1`] = `
                                                         \\"endLine\\": 2,
                                                         \\"startColumn\\": 3,
                                                         \\"endColumn\\": 4,
-                                                        \\"tokenTypeIdx\\": 39,
+                                                        \\"tokenTypeIdx\\": 41,
                                                         \\"tokenType\\": {
                                                           \\"name\\": \\"PipeToken\\",
                                                           \\"PATTERN\\": {},
-                                                          \\"tokenTypeIdx\\": 39,
+                                                          \\"tokenTypeIdx\\": 41,
                                                           \\"CATEGORIES\\": [],
                                                           \\"categoryMatches\\": [],
                                                           \\"categoryMatchesMap\\": {},
@@ -113,11 +113,11 @@ exports[`match 1 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 6,
                                                                           \\"endColumn\\": 10,
-                                                                          \\"tokenTypeIdx\\": 35,
+                                                                          \\"tokenTypeIdx\\": 37,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"MatchToken\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 35,
+                                                                            \\"tokenTypeIdx\\": 37,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -274,11 +274,11 @@ exports[`match 1 1`] = `
                                                                                 \\"endLine\\": 3,
                                                                                 \\"startColumn\\": 7,
                                                                                 \\"endColumn\\": 8,
-                                                                                \\"tokenTypeIdx\\": 40,
+                                                                                \\"tokenTypeIdx\\": 42,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"Arrow\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 40,
+                                                                                  \\"tokenTypeIdx\\": 42,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -329,11 +329,11 @@ exports[`match 1 1`] = `
                                                                                                   \\"endLine\\": 3,
                                                                                                   \\"startColumn\\": 12,
                                                                                                   \\"endColumn\\": 17,
-                                                                                                  \\"tokenTypeIdx\\": 43,
+                                                                                                  \\"tokenTypeIdx\\": 45,
                                                                                                   \\"tokenType\\": {
                                                                                                     \\"name\\": \\"ReturnToken\\",
                                                                                                     \\"PATTERN\\": {},
-                                                                                                    \\"tokenTypeIdx\\": 43,
+                                                                                                    \\"tokenTypeIdx\\": 45,
                                                                                                     \\"CATEGORIES\\": [],
                                                                                                     \\"categoryMatches\\": [],
                                                                                                     \\"categoryMatchesMap\\": {},
@@ -582,7 +582,7 @@ exports[`match 2 1`] = `
                                                                               {
                                                                                 \\"name\\": \\"PipeArgument\\",
                                                                                 \\"children\\": {
-                                                                                  \\"LogicExpression\\": [
+                                                                                  \\"rules\\": [
                                                                                     {
                                                                                       \\"name\\": \\"LogicExpression\\",
                                                                                       \\"children\\": {
@@ -657,7 +657,7 @@ exports[`match 2 1`] = `
                                                                               {
                                                                                 \\"name\\": \\"PipeArgument\\",
                                                                                 \\"children\\": {
-                                                                                  \\"LogicExpression\\": [
+                                                                                  \\"rules\\": [
                                                                                     {
                                                                                       \\"name\\": \\"LogicExpression\\",
                                                                                       \\"children\\": {
@@ -794,11 +794,11 @@ exports[`match 2 1`] = `
                                                         \\"endLine\\": 2,
                                                         \\"startColumn\\": 11,
                                                         \\"endColumn\\": 12,
-                                                        \\"tokenTypeIdx\\": 39,
+                                                        \\"tokenTypeIdx\\": 41,
                                                         \\"tokenType\\": {
                                                           \\"name\\": \\"PipeToken\\",
                                                           \\"PATTERN\\": {},
-                                                          \\"tokenTypeIdx\\": 39,
+                                                          \\"tokenTypeIdx\\": 41,
                                                           \\"CATEGORIES\\": [],
                                                           \\"categoryMatches\\": [],
                                                           \\"categoryMatchesMap\\": {},
@@ -827,11 +827,11 @@ exports[`match 2 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 14,
                                                                           \\"endColumn\\": 18,
-                                                                          \\"tokenTypeIdx\\": 35,
+                                                                          \\"tokenTypeIdx\\": 37,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"MatchToken\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 35,
+                                                                            \\"tokenTypeIdx\\": 37,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -1077,11 +1077,11 @@ exports[`match 2 1`] = `
                                                                                 \\"endLine\\": 3,
                                                                                 \\"startColumn\\": 11,
                                                                                 \\"endColumn\\": 12,
-                                                                                \\"tokenTypeIdx\\": 40,
+                                                                                \\"tokenTypeIdx\\": 42,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"Arrow\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 40,
+                                                                                  \\"tokenTypeIdx\\": 42,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -1132,11 +1132,11 @@ exports[`match 2 1`] = `
                                                                                                   \\"endLine\\": 3,
                                                                                                   \\"startColumn\\": 16,
                                                                                                   \\"endColumn\\": 21,
-                                                                                                  \\"tokenTypeIdx\\": 43,
+                                                                                                  \\"tokenTypeIdx\\": 45,
                                                                                                   \\"tokenType\\": {
                                                                                                     \\"name\\": \\"ReturnToken\\",
                                                                                                     \\"PATTERN\\": {},
-                                                                                                    \\"tokenTypeIdx\\": 43,
+                                                                                                    \\"tokenTypeIdx\\": 45,
                                                                                                     \\"CATEGORIES\\": [],
                                                                                                     \\"categoryMatches\\": [],
                                                                                                     \\"categoryMatchesMap\\": {},
@@ -1303,11 +1303,11 @@ exports[`match 2 1`] = `
                                                                                 \\"endLine\\": 4,
                                                                                 \\"startColumn\\": 6,
                                                                                 \\"endColumn\\": 7,
-                                                                                \\"tokenTypeIdx\\": 40,
+                                                                                \\"tokenTypeIdx\\": 42,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"Arrow\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 40,
+                                                                                  \\"tokenTypeIdx\\": 42,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -1358,11 +1358,11 @@ exports[`match 2 1`] = `
                                                                                                   \\"endLine\\": 4,
                                                                                                   \\"startColumn\\": 11,
                                                                                                   \\"endColumn\\": 16,
-                                                                                                  \\"tokenTypeIdx\\": 43,
+                                                                                                  \\"tokenTypeIdx\\": 45,
                                                                                                   \\"tokenType\\": {
                                                                                                     \\"name\\": \\"ReturnToken\\",
                                                                                                     \\"PATTERN\\": {},
-                                                                                                    \\"tokenTypeIdx\\": 43,
+                                                                                                    \\"tokenTypeIdx\\": 45,
                                                                                                     \\"CATEGORIES\\": [],
                                                                                                     \\"categoryMatches\\": [],
                                                                                                     \\"categoryMatchesMap\\": {},

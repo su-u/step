@@ -108,12 +108,20 @@ const RelationalOperatorTokens = [
   Equal,
 ];
 
-const LogicalJoinOperator = createToken({
-  name: 'LogicalJoinOperator',
-  pattern: /and|or/,
+const LogicalJoinOperator = createToken({ name: 'LogicalJoinOperator', pattern: Lexer.NA });
+const AndOperator = createToken({
+  name: 'AndOperator',
+  pattern: /and/,
+  categories: LogicalJoinOperator,
 });
 
-const LogicalOperatorTokens = [LogicalJoinOperator];
+const OrOperator = createToken({
+  name: 'OrOperator',
+  pattern: /or/,
+  categories: LogicalJoinOperator,
+});
+
+const LogicalOperatorTokens = [AndOperator, OrOperator];
 
 const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
 const eachToken = createToken({ name: 'EachToken', pattern: /each/ });
