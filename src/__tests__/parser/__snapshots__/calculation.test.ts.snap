@@ -8,7 +8,7 @@ exports[`演算 1 1`] = `
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
-          \\"rule\\": [
+          \\"rules\\": [
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {

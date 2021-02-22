@@ -8,7 +8,7 @@ exports[`変数 数値 1`] = `
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
-          \\"rule\\": [
+          \\"rules\\": [
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
@@ -223,7 +223,7 @@ exports[`変数 数値 1`] = `
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
-          \\"rule\\": [
+          \\"rules\\": [
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
@@ -448,7 +448,7 @@ exports[`変数 文字列 1`] = `
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
-          \\"rule\\": [
+          \\"rules\\": [
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
@@ -579,7 +579,7 @@ exports[`変数 文字列 1`] = `
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
-          \\"rule\\": [
+          \\"rules\\": [
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
