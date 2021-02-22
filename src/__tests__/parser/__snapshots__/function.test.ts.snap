@@ -142,7 +142,7 @@ exports[`関数 1 1`] = `
                                     {
                                       \\"name\\": \\"ToRight\\",
                                       \\"children\\": {
-                                        \\"from\\": [
+                                        \\"head\\": [
                                           {
                                             \\"name\\": \\"LogicExpression\\",
                                             \\"children\\": {
@@ -318,7 +318,7 @@ exports[`関数 1 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
@@ -599,7 +599,7 @@ exports[`関数 2 1`] = `
                                     {
                                       \\"name\\": \\"ToRight\\",
                                       \\"children\\": {
-                                        \\"from\\": [
+                                        \\"head\\": [
                                           {
                                             \\"name\\": \\"LogicExpression\\",
                                             \\"children\\": {
@@ -775,7 +775,7 @@ exports[`関数 2 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {

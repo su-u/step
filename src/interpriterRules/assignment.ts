@@ -3,7 +3,7 @@ import { getIndex } from '../util/ast';
 
 export const assignment = ({ ast, manager, execObject }: IInterpreterRules) => {
   const obj = ast.children.rules[0];
-  const from = execObject.interpreter({ ast: obj.children.from[0], manager, execObject });
+  const from = execObject.interpreter({ ast: obj.children.head[0], manager, execObject });
   if (obj.children.tail !== undefined) {
     const toObject = obj.children.tail[0];
 

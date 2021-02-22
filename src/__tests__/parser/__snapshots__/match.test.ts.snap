@@ -16,7 +16,7 @@ exports[`match 1 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
@@ -520,7 +520,7 @@ exports[`match 2 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {

@@ -16,7 +16,7 @@ exports[`if 1 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
@@ -252,7 +252,7 @@ exports[`if 1 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
@@ -488,7 +488,7 @@ exports[`if 1 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
@@ -619,7 +619,7 @@ exports[`if 1 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
@@ -750,7 +750,7 @@ exports[`if 1 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
@@ -986,7 +986,7 @@ exports[`if 1 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
@@ -1174,7 +1174,7 @@ exports[`if 1 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {

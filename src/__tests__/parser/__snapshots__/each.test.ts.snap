@@ -16,7 +16,7 @@ exports[`each 1 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
@@ -275,7 +275,7 @@ exports[`each 1 1`] = `
                                                                                           {
                                                                                             \\"name\\": \\"ToRight\\",
                                                                                             \\"children\\": {
-                                                                                              \\"from\\": [
+                                                                                              \\"head\\": [
                                                                                                 {
                                                                                                   \\"name\\": \\"LogicExpression\\",
                                                                                                   \\"children\\": {

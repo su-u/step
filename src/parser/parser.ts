@@ -297,7 +297,7 @@ export class ChiboParser extends CstParser {
   });
 
   private ToRight = this.RULE('ToRight', () => {
-    this.SUBRULE(this.LogicExpression, { LABEL: 'from' });
+    this.SUBRULE(this.LogicExpression, { LABEL: 'head' });
     this.OPTION(() => {
       this.CONSUME(ToRightToken);
       this.OR([

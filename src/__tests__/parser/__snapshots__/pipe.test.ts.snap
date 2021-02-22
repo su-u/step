@@ -16,7 +16,7 @@ exports[`パイプ 1 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
@@ -147,7 +147,7 @@ exports[`パイプ 1 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
@@ -302,7 +302,7 @@ exports[`パイプ 2 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
@@ -433,7 +433,7 @@ exports[`パイプ 2 1`] = `
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
