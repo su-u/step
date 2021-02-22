@@ -70,7 +70,7 @@ exports[`if 1 1`] = `
                                                                           }
                                                                         }
                                                                       ],
-                                                                      \\"Factor\\": [
+                                                                      \\"rules\\": [
                                                                         {
                                                                           \\"name\\": \\"Factor\\",
                                                                           \\"children\\": {
@@ -306,7 +306,7 @@ exports[`if 1 1`] = `
                                                                           }
                                                                         }
                                                                       ],
-                                                                      \\"Factor\\": [
+                                                                      \\"rules\\": [
                                                                         {
                                                                           \\"name\\": \\"Factor\\",
                                                                           \\"children\\": {
@@ -804,7 +804,7 @@ exports[`if 1 1`] = `
                                                                           }
                                                                         }
                                                                       ],
-                                                                      \\"Factor\\": [
+                                                                      \\"rules\\": [
                                                                         {
                                                                           \\"name\\": \\"Factor\\",
                                                                           \\"children\\": {

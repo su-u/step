@@ -418,7 +418,7 @@ export class ChiboParser extends CstParser {
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
-        this.SUBRULE(this.Factor);
+        this.SUBRULE(this.Factor, { LABEL: 'rules' });
       },
     });
     this.CONSUME(RSquare);
