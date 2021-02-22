@@ -4,7 +4,7 @@ exports[`演算 1 1`] = `
 "{
   \\"name\\": \\"Program\\",
   \\"children\\": {
-    \\"rule\\": [
+    \\"rules\\": [
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {

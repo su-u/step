@@ -182,7 +182,7 @@
 
       this.Program = this.RULE('Program', () => {
         this.MANY(() => {
-          this.SUBRULE(this.ProgramRule, { LABEL: 'rule' });
+          this.SUBRULE(this.ProgramRule, { LABEL: 'rules' });
         });
       });
 
