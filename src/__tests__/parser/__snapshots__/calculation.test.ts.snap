@@ -44,7 +44,7 @@ exports[`演算 1 1`] = `
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
-                                                                \\"ParenthesisExpression\\": [
+                                                                \\"parentheses\\": [
                                                                   {
                                                                     \\"name\\": \\"ParenthesisExpression\\",
                                                                     \\"children\\": {
@@ -268,7 +268,7 @@ exports[`演算 1 1`] = `
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
-                                                                \\"ParenthesisExpression\\": [
+                                                                \\"parentheses\\": [
                                                                   {
                                                                     \\"name\\": \\"ParenthesisExpression\\",
                                                                     \\"children\\": {
@@ -362,7 +362,7 @@ exports[`演算 1 1`] = `
                                                                                                             {
                                                                                                               \\"name\\": \\"Factor\\",
                                                                                                               \\"children\\": {
-                                                                                                                \\"ParenthesisExpression\\": [
+                                                                                                                \\"parentheses\\": [
                                                                                                                   {
                                                                                                                     \\"name\\": \\"ParenthesisExpression\\",
                                                                                                                     \\"children\\": {

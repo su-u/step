@@ -140,7 +140,7 @@ describe('factor', () => {
     const ast = {
       name: 'Factor',
       children: {
-        ParenthesisExpression: [
+        parentheses: [
           {
             name: 'ParenthesisExpression',
             children: {

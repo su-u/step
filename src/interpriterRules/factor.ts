@@ -18,7 +18,7 @@ export const factor = ({ ast, manager, execObject }: IInterpreterRules) => {
     return booleanLiteral({ ast, manager, execObject });
   } else if (ast.children.StringLiteral !== undefined) {
     return stringLiteral({ ast, manager, execObject });
-  } else if (ast.children.ParenthesisExpression !== undefined) {
+  } else if (ast.children.parentheses !== undefined) {
     return parenthesisExpression({ ast, manager, execObject });
   } else if (ast.children.ArrayStatement !== undefined) {
     return arrayStatement({ ast, manager, execObject });

@@ -389,7 +389,7 @@ export class ChiboParser extends CstParser {
       { ALT: () => this.CONSUME(NumberLiteral) },
       { ALT: () => this.CONSUME(StringLiteral) },
       { ALT: () => this.CONSUME(BoolLiteral) },
-      { ALT: () => this.SUBRULE(this.ParenthesisExpression) },
+      { ALT: () => this.SUBRULE(this.ParenthesisExpression, { LABEL: 'parentheses' }) },
       { ALT: () => this.SUBRULE(this.ArrayElement) },
       { ALT: () => this.CONSUME(Identifier) },
       { ALT: () => this.SUBRULE(this.ArrayStatement) },
