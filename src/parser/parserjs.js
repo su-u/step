@@ -197,7 +197,7 @@
       });
 
       this.Assignment = this.RULE('Assignment', () => {
-        this.SUBRULE(this.ToRight);
+        this.SUBRULE(this.ToRight, { LABEL: 'rule' });
       });
 
       this.Each = this.RULE('Each', () => {

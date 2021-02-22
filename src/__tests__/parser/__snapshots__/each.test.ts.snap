@@ -12,7 +12,7 @@ exports[`each 1 1`] = `
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
-                \\"ToRight\\": [
+                \\"rule\\": [
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
@@ -271,7 +271,7 @@ exports[`each 1 1`] = `
                                                                                     {
                                                                                       \\"name\\": \\"Assignment\\",
                                                                                       \\"children\\": {
-                                                                                        \\"ToRight\\": [
+                                                                                        \\"rule\\": [
                                                                                           {
                                                                                             \\"name\\": \\"ToRight\\",
                                                                                             \\"children\\": {

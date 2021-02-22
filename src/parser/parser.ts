@@ -196,7 +196,7 @@ export class ChiboParser extends CstParser {
   });
 
   private Assignment = this.RULE('Assignment', () => {
-    this.SUBRULE(this.ToRight);
+    this.SUBRULE(this.ToRight, { LABEL: 'rule' });
   });
 
   private Each = this.RULE('Each', () => {

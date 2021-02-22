@@ -9,8 +9,8 @@
     "tsc": "tsc",
     "prettier-fix": "prettier --write ./{src,__tests__,webSrc}/**/*.{ts,js,tsx,jsx} ./*.{ts,js,tsx,jsx}",
     "test": "jest --runInBand",
-    "test-c": "jest --coverage",
-    "test-u": "jest --updateSnapshot",
+    "test-c": "jest --coverage --runInBand",
+    "test-u": "jest --updateSnapshot --runInBand",
     "server": "http-server ./public -p 8080"
   },
   "author": "",
