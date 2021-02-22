@@ -259,7 +259,7 @@ exports[`each 1 1`] = `
                                                                           }
                                                                         }
                                                                       ],
-                                                                      \\"Program\\": [
+                                                                      \\"rules\\": [
                                                                         {
                                                                           \\"name\\": \\"Program\\",
                                                                           \\"children\\": {

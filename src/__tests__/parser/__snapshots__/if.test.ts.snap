@@ -530,7 +530,7 @@ exports[`if 1 1`] = `
                                                                                             }
                                                                                           }
                                                                                         ],
-                                                                                        \\"Program\\": [
+                                                                                        \\"rules\\": [
                                                                                           {
                                                                                             \\"name\\": \\"Program\\",
                                                                                             \\"children\\": {
