@@ -46,7 +46,7 @@ exports[`if 1 1`] = `
                                                               \\"children\\": {
                                                                 \\"arrayExpression\\": [
                                                                   {
-                                                                    \\"name\\": \\"ArrayStatement\\",
+                                                                    \\"name\\": \\"ArrayExpression\\",
                                                                     \\"children\\": {
                                                                       \\"LSquare\\": [
                                                                         {
@@ -282,7 +282,7 @@ exports[`if 1 1`] = `
                                                               \\"children\\": {
                                                                 \\"arrayExpression\\": [
                                                                   {
-                                                                    \\"name\\": \\"ArrayStatement\\",
+                                                                    \\"name\\": \\"ArrayExpression\\",
                                                                     \\"children\\": {
                                                                       \\"LSquare\\": [
                                                                         {
@@ -780,7 +780,7 @@ exports[`if 1 1`] = `
                                                               \\"children\\": {
                                                                 \\"arrayExpression\\": [
                                                                   {
-                                                                    \\"name\\": \\"ArrayStatement\\",
+                                                                    \\"name\\": \\"ArrayExpression\\",
                                                                     \\"children\\": {
                                                                       \\"LSquare\\": [
                                                                         {

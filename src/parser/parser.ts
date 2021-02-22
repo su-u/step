@@ -392,7 +392,7 @@ export class ChiboParser extends CstParser {
       { ALT: () => this.SUBRULE(this.ParenthesisExpression, { LABEL: 'parentheses' }) },
       { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'arrayElement' }) },
       { ALT: () => this.CONSUME(Identifier) },
-      { ALT: () => this.SUBRULE(this.ArrayStatement, { LABEL: 'arrayExpression' }) },
+      { ALT: () => this.SUBRULE(this.ArrayExpression, { LABEL: 'arrayExpression' }) },
       { ALT: () => this.SUBRULE(this.Object) },
       { ALT: () => this.SUBRULE(this.Match, { LABEL: 'toMatch' }) },
       { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
@@ -413,7 +413,7 @@ export class ChiboParser extends CstParser {
     ]);
   });
 
-  private ArrayStatement = this.RULE('ArrayStatement', () => {
+  private ArrayExpression = this.RULE('ArrayExpression', () => {
     this.CONSUME(LSquare);
     this.MANY_SEP({
       SEP: Comma,

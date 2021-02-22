@@ -392,7 +392,7 @@
           { ALT: () => this.SUBRULE(this.ParenthesisExpression, { LABEL: 'parentheses' }) },
           { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'arrayElement' }) },
           { ALT: () => this.CONSUME(Identifier) },
-          { ALT: () => this.SUBRULE(this.ArrayStatement, { LABEL: 'arrayExpression' }) },
+          { ALT: () => this.SUBRULE(this.ArrayExpression, { LABEL: 'arrayExpression' }) },
           { ALT: () => this.SUBRULE(this.Object) },
           { ALT: () => this.SUBRULE(this.Match, { LABEL: 'toMatch' }) },
           { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
@@ -413,7 +413,7 @@
         ]);
       });
 
-      this.ArrayStatement = this.RULE('ArrayStatement', () => {
+      this.ArrayExpression = this.RULE('ArrayStatement', () => {
         this.CONSUME(LSquare);
         this.MANY_SEP({
           SEP: Comma,
