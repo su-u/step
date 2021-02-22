@@ -7,8 +7,8 @@
     "cli": "ts-node ./src/cli.ts",
     "parser-cli": "ts-node ./src/parser/cli.ts",
     "tsc": "tsc",
-    "prettier:fix": "prettier --write ./{src,__tests__,webSrc}/**/*.{ts,js,tsx,jsx} ./*.{ts,js,tsx,jsx}",
-    "test": "jest",
+    "prettier-fix": "prettier --write ./{src,__tests__,webSrc}/**/*.{ts,js,tsx,jsx} ./*.{ts,js,tsx,jsx}",
+    "test": "jest --runInBand",
     "test-c": "jest --coverage",
     "test-u": "jest --updateSnapshot",
     "server": "http-server ./public -p 8080"

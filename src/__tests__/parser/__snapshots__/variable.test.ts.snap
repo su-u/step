@@ -4,7 +4,7 @@ exports[`変数 数値 1`] = `
 "{
   \\"name\\": \\"Program\\",
   \\"children\\": {
-    \\"ProgramRule\\": [
+    \\"rule\\": [
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
@@ -444,7 +444,7 @@ exports[`変数 文字列 1`] = `
 "{
   \\"name\\": \\"Program\\",
   \\"children\\": {
-    \\"ProgramRule\\": [
+    \\"rule\\": [
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
