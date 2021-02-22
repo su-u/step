@@ -328,7 +328,7 @@
           this.CONSUME(Identifier, { LABEL: 'name' });
           this.CONSUME(Colon);
         });
-        this.SUBRULE(this.LogicExpression);
+        this.SUBRULE(this.LogicExpression, { LABEL: 'rules' });
       });
 
       this.LogicExpression = this.RULE('LogicExpression', () => {

@@ -327,7 +327,7 @@ export class ChiboParser extends CstParser {
       this.CONSUME(Identifier, { LABEL: 'name' });
       this.CONSUME(Colon);
     });
-    this.SUBRULE(this.LogicExpression);
+    this.SUBRULE(this.LogicExpression, { LABEL: 'rules' });
   });
 
   private LogicExpression = this.RULE('LogicExpression', () => {
