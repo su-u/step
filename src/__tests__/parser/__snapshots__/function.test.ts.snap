@@ -138,7 +138,7 @@ exports[`関数 1 1`] = `
                               {
                                 \\"name\\": \\"Assignment\\",
                                 \\"children\\": {
-                                  \\"rule\\": [
+                                  \\"rules\\": [
                                     {
                                       \\"name\\": \\"ToRight\\",
                                       \\"children\\": {
@@ -314,7 +314,7 @@ exports[`関数 1 1`] = `
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
-                \\"rule\\": [
+                \\"rules\\": [
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
@@ -595,7 +595,7 @@ exports[`関数 2 1`] = `
                               {
                                 \\"name\\": \\"Assignment\\",
                                 \\"children\\": {
-                                  \\"rule\\": [
+                                  \\"rules\\": [
                                     {
                                       \\"name\\": \\"ToRight\\",
                                       \\"children\\": {
@@ -771,7 +771,7 @@ exports[`関数 2 1`] = `
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
-                \\"rule\\": [
+                \\"rules\\": [
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {

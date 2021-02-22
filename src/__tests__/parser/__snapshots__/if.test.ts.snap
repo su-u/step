@@ -283,7 +283,7 @@ exports[`if 1 1`] = `
                               {
                                 \\"name\\": \\"Assignment\\",
                                 \\"children\\": {
-                                  \\"rule\\": [
+                                  \\"rules\\": [
                                     {
                                       \\"name\\": \\"ToRight\\",
                                       \\"children\\": {
@@ -542,7 +542,7 @@ exports[`if 1 1`] = `
                                                                                                       {
                                                                                                         \\"name\\": \\"Assignment\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"rule\\": [
+                                                                                                          \\"rules\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"ToRight\\",
                                                                                                               \\"children\\": {
@@ -752,7 +752,7 @@ exports[`if 1 1`] = `
                               {
                                 \\"name\\": \\"Assignment\\",
                                 \\"children\\": {
-                                  \\"rule\\": [
+                                  \\"rules\\": [
                                     {
                                       \\"name\\": \\"ToRight\\",
                                       \\"children\\": {

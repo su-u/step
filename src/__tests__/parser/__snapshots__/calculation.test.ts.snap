@@ -12,7 +12,7 @@ exports[`演算 1 1`] = `
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
-                \\"rule\\": [
+                \\"rules\\": [
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {

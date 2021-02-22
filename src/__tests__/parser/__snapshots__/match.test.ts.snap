@@ -12,7 +12,7 @@ exports[`match 1 1`] = `
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
-                \\"rule\\": [
+                \\"rules\\": [
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
@@ -516,7 +516,7 @@ exports[`match 2 1`] = `
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
-                \\"rule\\": [
+                \\"rules\\": [
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
