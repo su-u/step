@@ -279,7 +279,7 @@
         this.MANY_SEP({
           SEP: Comma,
           DEF: () => {
-            this.SUBRULE(this.LogicExpression);
+            this.SUBRULE(this.LogicExpression, { LABEL: 'arguments' });
           },
         });
         this.CONSUME(RBracket);

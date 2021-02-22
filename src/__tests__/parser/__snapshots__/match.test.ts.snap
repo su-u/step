@@ -173,7 +173,7 @@ exports[`match 1 1`] = `
                                                                                 }
                                                                               }
                                                                             ],
-                                                                            \\"LogicExpression\\": [
+                                                                            \\"arguments\\": [
                                                                               {
                                                                                 \\"name\\": \\"LogicExpression\\",
                                                                                 \\"children\\": {
@@ -887,7 +887,7 @@ exports[`match 2 1`] = `
                                                                                 }
                                                                               }
                                                                             ],
-                                                                            \\"LogicExpression\\": [
+                                                                            \\"arguments\\": [
                                                                               {
                                                                                 \\"name\\": \\"LogicExpression\\",
                                                                                 \\"children\\": {

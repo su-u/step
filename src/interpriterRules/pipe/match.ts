@@ -20,8 +20,8 @@ export const execMatch = ({ ast, manager, execObject }: IInterpreterRules, last)
 };
 
 const getConditions = ({ ast, manager, execObject }: IInterpreterRules) => {
-  if (ast.children.LogicExpression !== undefined) {
-    return ast.children.LogicExpression.map((expression) => {
+  if (ast.children.arguments !== undefined) {
+    return ast.children.arguments.map((expression) => {
       return execObject.interpreter({
         ast: expression,
         manager,
