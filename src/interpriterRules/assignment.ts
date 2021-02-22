@@ -9,7 +9,7 @@ export const assignment = ({ ast, manager, execObject }: IInterpreterRules) => {
 
     if (toObject.name === 'ArrayElement') {
       const name = toObject.children.IdentifierSuffix[0].image.slice(0, -1);
-      const index = getIndex({ ast: toObject.children.index[0], manager, execObject });
+      const index = getIndex({ ast: toObject.children.rules[0], manager, execObject });
       manager.variable.assignment(name, from, index);
     } else {
       manager.variable.assignment(toObject.image, from);

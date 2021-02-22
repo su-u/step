@@ -401,7 +401,7 @@
 
       this.ArrayElement = this.RULE('ArrayElement', () => {
         this.CONSUME(IdentifierSuffix);
-        this.SUBRULE(this.ArrayIndex, { LABEL: 'index' });
+        this.SUBRULE(this.ArrayIndex, { LABEL: 'rules' });
         this.CONSUME(RSquare);
       });
 
