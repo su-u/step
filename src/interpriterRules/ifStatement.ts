@@ -12,13 +12,13 @@ export const ifStatement = ({ ast, manager, execObject }: IInterpreterRules) => 
   const bool = toBoolean(condition);
   if (bool.image === BooleanLiteralTokens.true) {
     return execObject.interpreter({
-      ast: ast.children.BlockStatement[0],
+      ast: ast.children.rules[0],
       manager: { variable: new VariableManager(manager.variable), function: manager.function },
       execObject,
     });
-  } else if (ast.children.BlockStatement.length >= 2) {
+  } else if (ast.children.rules.length >= 2) {
     return execObject.interpreter({
-      ast: ast.children.BlockStatement[1],
+      ast: ast.children.rules[1],
       manager: { variable: new VariableManager(manager.variable), function: manager.function },
       execObject,
     });

@@ -4,43 +4,43 @@ exports[`変数 数値 1`] = `
 "{
   \\"name\\": \\"Program\\",
   \\"children\\": {
-    \\"rule\\": [
+    \\"rules\\": [
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
-          \\"rule\\": [
+          \\"rules\\": [
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
-                \\"ToRight\\": [
+                \\"rules\\": [
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
-                                  \\"Expression\\": [
+                                  \\"rules\\": [
                                     {
                                       \\"name\\": \\"Expression\\",
                                       \\"children\\": {
-                                        \\"Term\\": [
+                                        \\"rules\\": [
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
-                                              \\"PipeExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -79,15 +79,15 @@ exports[`変数 数値 1`] = `
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
-                                              \\"PipeExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -179,11 +179,11 @@ exports[`変数 数値 1`] = `
                           \\"endLine\\": 2,
                           \\"startColumn\\": 7,
                           \\"endColumn\\": 8,
-                          \\"tokenTypeIdx\\": 41,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 41,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -191,7 +191,7 @@ exports[`変数 数値 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"value\\",
                           \\"startOffset\\": 10,
@@ -223,39 +223,39 @@ exports[`変数 数値 1`] = `
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
-          \\"rule\\": [
+          \\"rules\\": [
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
-                \\"ToRight\\": [
+                \\"rules\\": [
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
-                                  \\"Expression\\": [
+                                  \\"rules\\": [
                                     {
                                       \\"name\\": \\"Expression\\",
                                       \\"children\\": {
-                                        \\"Term\\": [
+                                        \\"rules\\": [
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
-                                              \\"PipeExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -294,15 +294,15 @@ exports[`変数 数値 1`] = `
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
-                                              \\"PipeExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -394,11 +394,11 @@ exports[`変数 数値 1`] = `
                           \\"endLine\\": 3,
                           \\"startColumn\\": 11,
                           \\"endColumn\\": 12,
-                          \\"tokenTypeIdx\\": 41,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 41,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -406,7 +406,7 @@ exports[`変数 数値 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"value\\",
                           \\"startOffset\\": 29,
@@ -444,43 +444,43 @@ exports[`変数 文字列 1`] = `
 "{
   \\"name\\": \\"Program\\",
   \\"children\\": {
-    \\"rule\\": [
+    \\"rules\\": [
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
-          \\"rule\\": [
+          \\"rules\\": [
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
-                \\"ToRight\\": [
+                \\"rules\\": [
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
-                                  \\"Expression\\": [
+                                  \\"rules\\": [
                                     {
                                       \\"name\\": \\"Expression\\",
                                       \\"children\\": {
-                                        \\"Term\\": [
+                                        \\"rules\\": [
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
-                                              \\"PipeExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -535,11 +535,11 @@ exports[`変数 文字列 1`] = `
                           \\"endLine\\": 2,
                           \\"startColumn\\": 8,
                           \\"endColumn\\": 9,
-                          \\"tokenTypeIdx\\": 41,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 41,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -547,7 +547,7 @@ exports[`変数 文字列 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"value\\",
                           \\"startOffset\\": 11,
@@ -579,39 +579,39 @@ exports[`変数 文字列 1`] = `
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
-          \\"rule\\": [
+          \\"rules\\": [
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
-                \\"ToRight\\": [
+                \\"rules\\": [
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
-                                  \\"Expression\\": [
+                                  \\"rules\\": [
                                     {
                                       \\"name\\": \\"Expression\\",
                                       \\"children\\": {
-                                        \\"Term\\": [
+                                        \\"rules\\": [
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
-                                              \\"PipeExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -650,15 +650,15 @@ exports[`変数 文字列 1`] = `
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
-                                              \\"PipeExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -750,11 +750,11 @@ exports[`変数 文字列 1`] = `
                           \\"endLine\\": 3,
                           \\"startColumn\\": 16,
                           \\"endColumn\\": 17,
-                          \\"tokenTypeIdx\\": 41,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 41,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -762,7 +762,7 @@ exports[`変数 文字列 1`] = `
                           }
                         }
                       ],
-                      \\"to\\": [
+                      \\"tail\\": [
                         {
                           \\"image\\": \\"value\\",
                           \\"startOffset\\": 35,

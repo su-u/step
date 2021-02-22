@@ -140,7 +140,7 @@ describe('factor', () => {
     const ast = {
       name: 'Factor',
       children: {
-        ParenthesisExpression: [
+        parentheses: [
           {
             name: 'ParenthesisExpression',
             children: {
@@ -149,7 +149,7 @@ describe('factor', () => {
                   image: '(',
                 },
               ],
-              expression: [
+              rules: [
                 {
                   name: 'RelationExpression',
                   children: {

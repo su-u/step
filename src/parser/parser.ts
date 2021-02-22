@@ -108,12 +108,20 @@ const RelationalOperatorTokens = [
   Equal,
 ];
 
-const LogicalJoinOperator = createToken({
-  name: 'LogicalJoinOperator',
-  pattern: /and|or/,
+const LogicalJoinOperator = createToken({ name: 'LogicalJoinOperator', pattern: Lexer.NA });
+const AndOperator = createToken({
+  name: 'AndOperator',
+  pattern: /and/,
+  categories: LogicalJoinOperator,
 });
 
-const LogicalOperatorTokens = [LogicalJoinOperator];
+const OrOperator = createToken({
+  name: 'OrOperator',
+  pattern: /or/,
+  categories: LogicalJoinOperator,
+});
+
+const LogicalOperatorTokens = [AndOperator, OrOperator];
 
 const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
 const eachToken = createToken({ name: 'EachToken', pattern: /each/ });
@@ -181,22 +189,22 @@ export class ChiboParser extends CstParser {
 
   public Program = this.RULE('Program', () => {
     this.MANY(() => {
-      this.SUBRULE(this.ProgramRule, { LABEL: 'rule' });
+      this.SUBRULE(this.ProgramRule, { LABEL: 'rules' });
     });
   });
 
   private ProgramRule = this.RULE('ProgramRule', () => {
     this.OR([
-      { ALT: () => this.CONSUME(Comment, { LABEL: 'rule' }) },
-      { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rule' }) },
-      { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rule' }) },
-      { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rule' }) },
-      { ALT: () => this.SUBRULE(this.ReturnStatement, { LABEL: 'rule' }) },
+      { ALT: () => this.CONSUME(Comment, { LABEL: 'rules' }) },
+      { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rules' }) },
+      { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rules' }) },
+      { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rules' }) },
+      { ALT: () => this.SUBRULE(this.ReturnStatement, { LABEL: 'rules' }) },
     ]);
   });
 
   private Assignment = this.RULE('Assignment', () => {
-    this.SUBRULE(this.ToRight);
+    this.SUBRULE(this.ToRight, { LABEL: 'rules' });
   });
 
   private Each = this.RULE('Each', () => {
@@ -207,7 +215,7 @@ export class ChiboParser extends CstParser {
       this.CONSUME(RBracket);
     });
     this.CONSUME(LCurly);
-    this.SUBRULE(this.Program);
+    this.SUBRULE(this.Program, { LABEL: 'rules' });
     this.CONSUME(RCurly);
   });
 
@@ -217,12 +225,12 @@ export class ChiboParser extends CstParser {
     this.SUBRULE(this.LogicExpression, { LABEL: 'conditionalExpression' });
     this.CONSUME(RBracket);
     this.CONSUME(LCurly);
-    this.SUBRULE(this.BlockStatement);
+    this.SUBRULE(this.BlockStatement, { LABEL: 'rules' });
     this.CONSUME(RCurly);
     this.OPTION(() => {
       this.CONSUME(elseToken);
       this.CONSUME2(LCurly);
-      this.SUBRULE2(this.BlockStatement);
+      this.SUBRULE2(this.BlockStatement, { LABEL: 'rules' });
       this.CONSUME2(RCurly);
     });
   });
@@ -233,7 +241,7 @@ export class ChiboParser extends CstParser {
     this.SUBRULE(this.FunctionArguments, { LABEL: 'arguments' });
     this.CONSUME(RBracket);
     this.CONSUME(LCurly);
-    this.SUBRULE(this.Program);
+    this.SUBRULE(this.Program, { LABEL: 'rules' });
     this.CONSUME(RCurly);
   });
 
@@ -248,16 +256,16 @@ export class ChiboParser extends CstParser {
 
   private BlockStatement = this.RULE('BlockStatement', () => {
     this.MANY(() => {
-      this.SUBRULE(this.BlockRule);
+      this.SUBRULE(this.BlockRule, { LABEL: 'rules' });
     });
   });
 
   private BlockRule = this.RULE('BlockRule', () => {
     this.OR([
-      { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rule' }) },
-      { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rule' }) },
-      { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rule' }) },
-      { ALT: () => this.CONSUME(BreakToken, { LABEL: 'rule' }) },
+      { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rules' }) },
+      { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rules' }) },
+      { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rules' }) },
+      { ALT: () => this.CONSUME(BreakToken, { LABEL: 'rules' }) },
     ]);
   });
 
@@ -267,7 +275,7 @@ export class ChiboParser extends CstParser {
     this.MANY_SEP2({
       SEP: Comma,
       DEF: () => {
-        this.SUBRULE(this.MatchExpression);
+        this.SUBRULE(this.MatchExpression, { LABEL: 'rules' });
       },
     });
     this.CONSUME(RCurly);
@@ -278,29 +286,29 @@ export class ChiboParser extends CstParser {
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
-        this.SUBRULE(this.LogicExpression);
+        this.SUBRULE(this.LogicExpression, { LABEL: 'arguments' });
       },
     });
     this.CONSUME(RBracket);
     this.CONSUME(ArrowToken);
     this.CONSUME(LCurly);
-    this.SUBRULE(this.Program);
+    this.SUBRULE(this.Program, { LABEL: 'rules' });
     this.CONSUME(RCurly);
   });
 
   private ToRight = this.RULE('ToRight', () => {
-    this.SUBRULE(this.LogicExpression, { LABEL: 'from' });
+    this.SUBRULE(this.LogicExpression, { LABEL: 'head' });
     this.OPTION(() => {
       this.CONSUME(ToRightToken);
       this.OR([
-        { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'to' }) },
-        { ALT: () => this.CONSUME(Identifier, { LABEL: 'to' }) },
+        { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'tail' }) },
+        { ALT: () => this.CONSUME(Identifier, { LABEL: 'tail' }) },
       ]);
     });
   });
 
   private PipeExpression = this.RULE('PipeExpression', () => {
-    this.SUBRULE(this.RangeExpression, { LABEL: 'from' });
+    this.SUBRULE(this.RangeExpression, { LABEL: 'head' });
     this.MANY(() => {
       this.CONSUME(PipeToken);
       this.SUBRULE2(this.RangeExpression, { LABEL: 'tail' });
@@ -327,19 +335,19 @@ export class ChiboParser extends CstParser {
       this.CONSUME(Identifier, { LABEL: 'name' });
       this.CONSUME(Colon);
     });
-    this.SUBRULE(this.LogicExpression);
+    this.SUBRULE(this.LogicExpression, { LABEL: 'rules' });
   });
 
   private LogicExpression = this.RULE('LogicExpression', () => {
-    this.SUBRULE(this.RelationExpression);
+    this.SUBRULE(this.RelationExpression, { LABEL: 'rules' });
     this.MANY(() => {
-      this.OR([{ ALT: () => this.CONSUME(LogicalJoinOperator) }]);
-      this.SUBRULE2(this.RelationExpression);
+      this.CONSUME(LogicalJoinOperator);
+      this.SUBRULE2(this.RelationExpression, { LABEL: 'rules' });
     });
   });
 
   private RelationExpression = this.RULE('RelationExpression', () => {
-    this.SUBRULE(this.Expression);
+    this.SUBRULE(this.Expression, { LABEL: 'rules' });
     this.MANY(() => {
       this.OR([
         { ALT: () => this.CONSUME(AmountMore) },
@@ -348,31 +356,31 @@ export class ChiboParser extends CstParser {
         { ALT: () => this.CONSUME(LessThan) },
         { ALT: () => this.CONSUME(Equal) },
       ]);
-      this.SUBRULE2(this.Expression);
+      this.SUBRULE2(this.Expression, { LABEL: 'rules' });
     });
   });
 
   private Expression = this.RULE('Expression', () => {
-    this.SUBRULE(this.Term);
+    this.SUBRULE(this.Term, { LABEL: 'rules' });
     this.MANY(() => {
       this.CONSUME(AdditionOperator);
-      this.SUBRULE2(this.Term);
+      this.SUBRULE2(this.Term, { LABEL: 'rules' });
     });
   });
 
   private Term = this.RULE('Term', () => {
-    this.SUBRULE(this.PipeExpression);
+    this.SUBRULE(this.PipeExpression, { LABEL: 'rules' });
     this.MANY(() => {
       this.CONSUME(MultiplicationOperator);
-      this.SUBRULE2(this.PipeExpression);
+      this.SUBRULE2(this.PipeExpression, { LABEL: 'rules' });
     });
   });
 
   private RangeExpression = this.RULE('RangeExpression', () => {
-    this.SUBRULE(this.Factor);
+    this.SUBRULE(this.Factor, { LABEL: 'rules' });
     this.MANY(() => {
       this.CONSUME(tildeToken);
-      this.SUBRULE2(this.Factor);
+      this.SUBRULE2(this.Factor, { LABEL: 'rules' });
     });
   });
 
@@ -381,11 +389,11 @@ export class ChiboParser extends CstParser {
       { ALT: () => this.CONSUME(NumberLiteral) },
       { ALT: () => this.CONSUME(StringLiteral) },
       { ALT: () => this.CONSUME(BoolLiteral) },
-      { ALT: () => this.SUBRULE(this.ParenthesisExpression) },
-      { ALT: () => this.SUBRULE(this.ArrayElement) },
+      { ALT: () => this.SUBRULE(this.ParenthesisExpression, { LABEL: 'parentheses' }) },
+      { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'arrayElement' }) },
       { ALT: () => this.CONSUME(Identifier) },
-      { ALT: () => this.SUBRULE(this.ArrayStatement) },
-      { ALT: () => this.SUBRULE(this.Object) },
+      { ALT: () => this.SUBRULE(this.ArrayExpression, { LABEL: 'arrayExpression' }) },
+      { ALT: () => this.SUBRULE(this.Object, { LABEL: 'object' }) },
       { ALT: () => this.SUBRULE(this.Match, { LABEL: 'toMatch' }) },
       { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
     ]);
@@ -393,24 +401,24 @@ export class ChiboParser extends CstParser {
 
   private ArrayElement = this.RULE('ArrayElement', () => {
     this.CONSUME(IdentifierSuffix);
-    this.SUBRULE(this.ArrayIndex, { LABEL: 'index' });
+    this.SUBRULE(this.ArrayIndex, { LABEL: 'rules' });
     this.CONSUME(RSquare);
   });
 
   private ArrayIndex = this.RULE('ArrayIndex', () => {
     this.OR([
       { ALT: () => this.CONSUME(NumberLiteral) },
-      { ALT: () => this.SUBRULE(this.ArrayElement) },
+      { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'rules' }) },
       { ALT: () => this.CONSUME(Identifier) },
     ]);
   });
 
-  private ArrayStatement = this.RULE('ArrayStatement', () => {
+  private ArrayExpression = this.RULE('ArrayExpression', () => {
     this.CONSUME(LSquare);
     this.MANY_SEP({
       SEP: Comma,
       DEF: () => {
-        this.SUBRULE(this.Factor);
+        this.SUBRULE(this.Factor, { LABEL: 'rules' });
       },
     });
     this.CONSUME(RSquare);
@@ -418,12 +426,12 @@ export class ChiboParser extends CstParser {
 
   private ParenthesisExpression = this.RULE('ParenthesisExpression', () => {
     this.CONSUME(LBracket);
-    this.SUBRULE(this.LogicExpression, { LABEL: 'expression' });
+    this.SUBRULE(this.LogicExpression, { LABEL: 'rules' });
     this.CONSUME(RBracket);
   });
 
   private ReturnStatement = this.RULE('ReturnStatement', () => {
     this.CONSUME(ReturnToken);
-    this.SUBRULE(this.LogicExpression, { LABEL: 'return' });
+    this.SUBRULE(this.LogicExpression, { LABEL: 'rules' });
   });
 }

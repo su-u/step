@@ -19,7 +19,7 @@ export const execEach = ({ ast, manager, execObject }: IInterpreterRules, last) 
         });
       }
       return execObject.interpreter({
-        ast: eachObj.children.Program[0],
+        ast: eachObj.children.rules[0],
         manager: inManger,
         execObject,
       });
@@ -39,7 +39,7 @@ export const execEach = ({ ast, manager, execObject }: IInterpreterRules, last) 
         inManger.variable.assignment(eachObj.children.Identifier[0].image, element);
       }
       return execObject.interpreter({
-        ast: eachObj.children.Program[0],
+        ast: eachObj.children.rules[0],
         manager: inManger,
         execObject,
       });

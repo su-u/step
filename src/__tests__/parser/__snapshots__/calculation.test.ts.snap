@@ -4,47 +4,47 @@ exports[`演算 1 1`] = `
 "{
   \\"name\\": \\"Program\\",
   \\"children\\": {
-    \\"rule\\": [
+    \\"rules\\": [
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
-          \\"rule\\": [
+          \\"rules\\": [
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
-                \\"ToRight\\": [
+                \\"rules\\": [
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
-                                  \\"Expression\\": [
+                                  \\"rules\\": [
                                     {
                                       \\"name\\": \\"Expression\\",
                                       \\"children\\": {
-                                        \\"Term\\": [
+                                        \\"rules\\": [
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
-                                              \\"PipeExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
-                                                                \\"ParenthesisExpression\\": [
+                                                                \\"parentheses\\": [
                                                                   {
                                                                     \\"name\\": \\"ParenthesisExpression\\",
                                                                     \\"children\\": {
@@ -70,31 +70,31 @@ exports[`演算 1 1`] = `
                                                                           }
                                                                         }
                                                                       ],
-                                                                      \\"expression\\": [
+                                                                      \\"rules\\": [
                                                                         {
                                                                           \\"name\\": \\"LogicExpression\\",
                                                                           \\"children\\": {
-                                                                            \\"RelationExpression\\": [
+                                                                            \\"rules\\": [
                                                                               {
                                                                                 \\"name\\": \\"RelationExpression\\",
                                                                                 \\"children\\": {
-                                                                                  \\"Expression\\": [
+                                                                                  \\"rules\\": [
                                                                                     {
                                                                                       \\"name\\": \\"Expression\\",
                                                                                       \\"children\\": {
-                                                                                        \\"Term\\": [
+                                                                                        \\"rules\\": [
                                                                                           {
                                                                                             \\"name\\": \\"Term\\",
                                                                                             \\"children\\": {
-                                                                                              \\"PipeExpression\\": [
+                                                                                              \\"rules\\": [
                                                                                                 {
                                                                                                   \\"name\\": \\"PipeExpression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"from\\": [
+                                                                                                    \\"head\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"Factor\\": [
+                                                                                                          \\"rules\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"Factor\\",
                                                                                                               \\"children\\": {
@@ -133,15 +133,15 @@ exports[`演算 1 1`] = `
                                                                                           {
                                                                                             \\"name\\": \\"Term\\",
                                                                                             \\"children\\": {
-                                                                                              \\"PipeExpression\\": [
+                                                                                              \\"rules\\": [
                                                                                                 {
                                                                                                   \\"name\\": \\"PipeExpression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"from\\": [
+                                                                                                    \\"head\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"Factor\\": [
+                                                                                                          \\"rules\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"Factor\\",
                                                                                                               \\"children\\": {
@@ -260,15 +260,15 @@ exports[`演算 1 1`] = `
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
-                                                                \\"ParenthesisExpression\\": [
+                                                                \\"parentheses\\": [
                                                                   {
                                                                     \\"name\\": \\"ParenthesisExpression\\",
                                                                     \\"children\\": {
@@ -294,31 +294,31 @@ exports[`演算 1 1`] = `
                                                                           }
                                                                         }
                                                                       ],
-                                                                      \\"expression\\": [
+                                                                      \\"rules\\": [
                                                                         {
                                                                           \\"name\\": \\"LogicExpression\\",
                                                                           \\"children\\": {
-                                                                            \\"RelationExpression\\": [
+                                                                            \\"rules\\": [
                                                                               {
                                                                                 \\"name\\": \\"RelationExpression\\",
                                                                                 \\"children\\": {
-                                                                                  \\"Expression\\": [
+                                                                                  \\"rules\\": [
                                                                                     {
                                                                                       \\"name\\": \\"Expression\\",
                                                                                       \\"children\\": {
-                                                                                        \\"Term\\": [
+                                                                                        \\"rules\\": [
                                                                                           {
                                                                                             \\"name\\": \\"Term\\",
                                                                                             \\"children\\": {
-                                                                                              \\"PipeExpression\\": [
+                                                                                              \\"rules\\": [
                                                                                                 {
                                                                                                   \\"name\\": \\"PipeExpression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"from\\": [
+                                                                                                    \\"head\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"Factor\\": [
+                                                                                                          \\"rules\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"Factor\\",
                                                                                                               \\"children\\": {
@@ -354,15 +354,15 @@ exports[`演算 1 1`] = `
                                                                                                 {
                                                                                                   \\"name\\": \\"PipeExpression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"from\\": [
+                                                                                                    \\"head\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"Factor\\": [
+                                                                                                          \\"rules\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"Factor\\",
                                                                                                               \\"children\\": {
-                                                                                                                \\"ParenthesisExpression\\": [
+                                                                                                                \\"parentheses\\": [
                                                                                                                   {
                                                                                                                     \\"name\\": \\"ParenthesisExpression\\",
                                                                                                                     \\"children\\": {
@@ -388,31 +388,31 @@ exports[`演算 1 1`] = `
                                                                                                                           }
                                                                                                                         }
                                                                                                                       ],
-                                                                                                                      \\"expression\\": [
+                                                                                                                      \\"rules\\": [
                                                                                                                         {
                                                                                                                           \\"name\\": \\"LogicExpression\\",
                                                                                                                           \\"children\\": {
-                                                                                                                            \\"RelationExpression\\": [
+                                                                                                                            \\"rules\\": [
                                                                                                                               {
                                                                                                                                 \\"name\\": \\"RelationExpression\\",
                                                                                                                                 \\"children\\": {
-                                                                                                                                  \\"Expression\\": [
+                                                                                                                                  \\"rules\\": [
                                                                                                                                     {
                                                                                                                                       \\"name\\": \\"Expression\\",
                                                                                                                                       \\"children\\": {
-                                                                                                                                        \\"Term\\": [
+                                                                                                                                        \\"rules\\": [
                                                                                                                                           {
                                                                                                                                             \\"name\\": \\"Term\\",
                                                                                                                                             \\"children\\": {
-                                                                                                                                              \\"PipeExpression\\": [
+                                                                                                                                              \\"rules\\": [
                                                                                                                                                 {
                                                                                                                                                   \\"name\\": \\"PipeExpression\\",
                                                                                                                                                   \\"children\\": {
-                                                                                                                                                    \\"from\\": [
+                                                                                                                                                    \\"head\\": [
                                                                                                                                                       {
                                                                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                                                                         \\"children\\": {
-                                                                                                                                                          \\"Factor\\": [
+                                                                                                                                                          \\"rules\\": [
                                                                                                                                                             {
                                                                                                                                                               \\"name\\": \\"Factor\\",
                                                                                                                                                               \\"children\\": {
@@ -451,15 +451,15 @@ exports[`演算 1 1`] = `
                                                                                                                                           {
                                                                                                                                             \\"name\\": \\"Term\\",
                                                                                                                                             \\"children\\": {
-                                                                                                                                              \\"PipeExpression\\": [
+                                                                                                                                              \\"rules\\": [
                                                                                                                                                 {
                                                                                                                                                   \\"name\\": \\"PipeExpression\\",
                                                                                                                                                   \\"children\\": {
-                                                                                                                                                    \\"from\\": [
+                                                                                                                                                    \\"head\\": [
                                                                                                                                                       {
                                                                                                                                                         \\"name\\": \\"RangeExpression\\",
                                                                                                                                                         \\"children\\": {
-                                                                                                                                                          \\"Factor\\": [
+                                                                                                                                                          \\"rules\\": [
                                                                                                                                                             {
                                                                                                                                                               \\"name\\": \\"Factor\\",
                                                                                                                                                               \\"children\\": {

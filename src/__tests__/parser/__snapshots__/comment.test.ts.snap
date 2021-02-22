@@ -4,11 +4,11 @@ exports[`コメント 1 1`] = `
 "{
   \\"name\\": \\"Program\\",
   \\"children\\": {
-    \\"rule\\": [
+    \\"rules\\": [
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
-          \\"rule\\": [
+          \\"rules\\": [
             {
               \\"image\\": \\"# コメント\\\\n\\",
               \\"startOffset\\": 1,
@@ -34,7 +34,7 @@ exports[`コメント 1 1`] = `
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
-          \\"rule\\": [
+          \\"rules\\": [
             {
               \\"image\\": \\"## コメント\\\\n\\",
               \\"startOffset\\": 8,
@@ -60,7 +60,7 @@ exports[`コメント 1 1`] = `
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
-          \\"rule\\": [
+          \\"rules\\": [
             {
               \\"image\\": \\"### コメント #\\\\n\\",
               \\"startOffset\\": 16,

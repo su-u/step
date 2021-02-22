@@ -173,4 +173,34 @@ array[index1] -> a1
       image: 8,
     });
   });
+
+  test('8', () => {
+    const source = `
+[0, 1, 2, 3, 4, 5] -> array
+1 -> array[0]
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('array').image.length).toBe(6);
+    expect(resultManager.reference('array').image[0]).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 1,
+    });
+  });
+
+//   test('9', () => {
+//     const source = `
+// [0, 2, 10] -> array
+// 1 -> array[array[1]]
+//     `;
+//     const resultManager = exec(source, manager).variable;
+//     expect(resultManager.reference('array').image.length).toBe(3);
+//     expect(resultManager.reference('array').image[1]).toStrictEqual({
+//       name: LiteralTokens.NumberLiteral,
+//       image: 2,
+//     });
+//     expect(resultManager.reference('array').image[2]).toStrictEqual({
+//       name: LiteralTokens.NumberLiteral,
+//       image: 1,
+//     });
+//   });
 });

@@ -5,7 +5,7 @@ import { booleanLiteral } from './factor/boolLiteral';
 import { numberLiteral } from './factor/numberLiteral';
 import { stringLiteral } from './factor/stringLiteral';
 import { parenthesisExpression } from './factor/parenthesisExpression';
-import { arrayStatement } from './factor/arrayStatement';
+import { arrayExpression } from './factor/ArrayExpression';
 import { arrayElement } from './factor/arrayElement';
 import { objectLiteral } from './factor/objectLiteral';
 
@@ -18,13 +18,13 @@ export const factor = ({ ast, manager, execObject }: IInterpreterRules) => {
     return booleanLiteral({ ast, manager, execObject });
   } else if (ast.children.StringLiteral !== undefined) {
     return stringLiteral({ ast, manager, execObject });
-  } else if (ast.children.ParenthesisExpression !== undefined) {
+  } else if (ast.children.parentheses !== undefined) {
     return parenthesisExpression({ ast, manager, execObject });
-  } else if (ast.children.ArrayStatement !== undefined) {
-    return arrayStatement({ ast, manager, execObject });
-  } else if (ast.children.ArrayElement !== undefined) {
+  } else if (ast.children.arrayExpression !== undefined) {
+    return arrayExpression({ ast, manager, execObject });
+  } else if (ast.children.arrayElement !== undefined) {
     return arrayElement({ ast, manager, execObject });
-  } else if (ast.children.Object !== undefined) {
+  } else if (ast.children.object !== undefined) {
     return objectLiteral({ ast, manager, execObject });
   }
 

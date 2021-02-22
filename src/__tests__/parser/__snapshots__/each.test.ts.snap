@@ -4,43 +4,43 @@ exports[`each 1 1`] = `
 "{
   \\"name\\": \\"Program\\",
   \\"children\\": {
-    \\"rule\\": [
+    \\"rules\\": [
       {
         \\"name\\": \\"ProgramRule\\",
         \\"children\\": {
-          \\"rule\\": [
+          \\"rules\\": [
             {
               \\"name\\": \\"Assignment\\",
               \\"children\\": {
-                \\"ToRight\\": [
+                \\"rules\\": [
                   {
                     \\"name\\": \\"ToRight\\",
                     \\"children\\": {
-                      \\"from\\": [
+                      \\"head\\": [
                         {
                           \\"name\\": \\"LogicExpression\\",
                           \\"children\\": {
-                            \\"RelationExpression\\": [
+                            \\"rules\\": [
                               {
                                 \\"name\\": \\"RelationExpression\\",
                                 \\"children\\": {
-                                  \\"Expression\\": [
+                                  \\"rules\\": [
                                     {
                                       \\"name\\": \\"Expression\\",
                                       \\"children\\": {
-                                        \\"Term\\": [
+                                        \\"rules\\": [
                                           {
                                             \\"name\\": \\"Term\\",
                                             \\"children\\": {
-                                              \\"PipeExpression\\": [
+                                              \\"rules\\": [
                                                 {
                                                   \\"name\\": \\"PipeExpression\\",
                                                   \\"children\\": {
-                                                    \\"from\\": [
+                                                    \\"head\\": [
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -103,11 +103,11 @@ exports[`each 1 1`] = `
                                                               \\"endLine\\": 2,
                                                               \\"startColumn\\": 6,
                                                               \\"endColumn\\": 6,
-                                                              \\"tokenTypeIdx\\": 38,
+                                                              \\"tokenTypeIdx\\": 40,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"TildeToken\\",
                                                                 \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 38,
+                                                                \\"tokenTypeIdx\\": 40,
                                                                 \\"CATEGORIES\\": [],
                                                                 \\"categoryMatches\\": [],
                                                                 \\"categoryMatchesMap\\": {},
@@ -127,11 +127,11 @@ exports[`each 1 1`] = `
                                                         \\"endLine\\": 2,
                                                         \\"startColumn\\": 10,
                                                         \\"endColumn\\": 11,
-                                                        \\"tokenTypeIdx\\": 39,
+                                                        \\"tokenTypeIdx\\": 41,
                                                         \\"tokenType\\": {
                                                           \\"name\\": \\"PipeToken\\",
                                                           \\"PATTERN\\": {},
-                                                          \\"tokenTypeIdx\\": 39,
+                                                          \\"tokenTypeIdx\\": 41,
                                                           \\"CATEGORIES\\": [],
                                                           \\"categoryMatches\\": [],
                                                           \\"categoryMatchesMap\\": {},
@@ -143,7 +143,7 @@ exports[`each 1 1`] = `
                                                       {
                                                         \\"name\\": \\"RangeExpression\\",
                                                         \\"children\\": {
-                                                          \\"Factor\\": [
+                                                          \\"rules\\": [
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
@@ -160,11 +160,11 @@ exports[`each 1 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 13,
                                                                           \\"endColumn\\": 16,
-                                                                          \\"tokenTypeIdx\\": 34,
+                                                                          \\"tokenTypeIdx\\": 36,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"EachToken\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 34,
+                                                                            \\"tokenTypeIdx\\": 36,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -259,47 +259,47 @@ exports[`each 1 1`] = `
                                                                           }
                                                                         }
                                                                       ],
-                                                                      \\"Program\\": [
+                                                                      \\"rules\\": [
                                                                         {
                                                                           \\"name\\": \\"Program\\",
                                                                           \\"children\\": {
-                                                                            \\"rule\\": [
+                                                                            \\"rules\\": [
                                                                               {
                                                                                 \\"name\\": \\"ProgramRule\\",
                                                                                 \\"children\\": {
-                                                                                  \\"rule\\": [
+                                                                                  \\"rules\\": [
                                                                                     {
                                                                                       \\"name\\": \\"Assignment\\",
                                                                                       \\"children\\": {
-                                                                                        \\"ToRight\\": [
+                                                                                        \\"rules\\": [
                                                                                           {
                                                                                             \\"name\\": \\"ToRight\\",
                                                                                             \\"children\\": {
-                                                                                              \\"from\\": [
+                                                                                              \\"head\\": [
                                                                                                 {
                                                                                                   \\"name\\": \\"LogicExpression\\",
                                                                                                   \\"children\\": {
-                                                                                                    \\"RelationExpression\\": [
+                                                                                                    \\"rules\\": [
                                                                                                       {
                                                                                                         \\"name\\": \\"RelationExpression\\",
                                                                                                         \\"children\\": {
-                                                                                                          \\"Expression\\": [
+                                                                                                          \\"rules\\": [
                                                                                                             {
                                                                                                               \\"name\\": \\"Expression\\",
                                                                                                               \\"children\\": {
-                                                                                                                \\"Term\\": [
+                                                                                                                \\"rules\\": [
                                                                                                                   {
                                                                                                                     \\"name\\": \\"Term\\",
                                                                                                                     \\"children\\": {
-                                                                                                                      \\"PipeExpression\\": [
+                                                                                                                      \\"rules\\": [
                                                                                                                         {
                                                                                                                           \\"name\\": \\"PipeExpression\\",
                                                                                                                           \\"children\\": {
-                                                                                                                            \\"from\\": [
+                                                                                                                            \\"head\\": [
                                                                                                                               {
                                                                                                                                 \\"name\\": \\"RangeExpression\\",
                                                                                                                                 \\"children\\": {
-                                                                                                                                  \\"Factor\\": [
+                                                                                                                                  \\"rules\\": [
                                                                                                                                     {
                                                                                                                                       \\"name\\": \\"Factor\\",
                                                                                                                                       \\"children\\": {
@@ -339,11 +339,11 @@ exports[`each 1 1`] = `
                                                                                                                                 \\"endLine\\": 3,
                                                                                                                                 \\"startColumn\\": 9,
                                                                                                                                 \\"endColumn\\": 10,
-                                                                                                                                \\"tokenTypeIdx\\": 39,
+                                                                                                                                \\"tokenTypeIdx\\": 41,
                                                                                                                                 \\"tokenType\\": {
                                                                                                                                   \\"name\\": \\"PipeToken\\",
                                                                                                                                   \\"PATTERN\\": {},
-                                                                                                                                  \\"tokenTypeIdx\\": 39,
+                                                                                                                                  \\"tokenTypeIdx\\": 41,
                                                                                                                                   \\"CATEGORIES\\": [],
                                                                                                                                   \\"categoryMatches\\": [],
                                                                                                                                   \\"categoryMatchesMap\\": {},
@@ -355,7 +355,7 @@ exports[`each 1 1`] = `
                                                                                                                               {
                                                                                                                                 \\"name\\": \\"RangeExpression\\",
                                                                                                                                 \\"children\\": {
-                                                                                                                                  \\"Factor\\": [
+                                                                                                                                  \\"rules\\": [
                                                                                                                                     {
                                                                                                                                       \\"name\\": \\"Factor\\",
                                                                                                                                       \\"children\\": {
