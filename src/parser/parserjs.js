@@ -188,7 +188,7 @@
 
       this.ProgramRule = this.RULE('ProgramRule', () => {
         this.OR([
-          { ALT: () => this.CONSUME(Comment, { LABEL: 'rule' }) },
+          { ALT: () => this.CONSUME(Comment, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rule' }) },
           { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rule' }) },
           { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rule' }) },
