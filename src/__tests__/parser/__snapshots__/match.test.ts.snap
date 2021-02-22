@@ -147,7 +147,7 @@ exports[`match 1 1`] = `
                                                                           }
                                                                         }
                                                                       ],
-                                                                      \\"MatchExpression\\": [
+                                                                      \\"rules\\": [
                                                                         {
                                                                           \\"name\\": \\"MatchExpression\\",
                                                                           \\"children\\": {
@@ -861,7 +861,7 @@ exports[`match 2 1`] = `
                                                                           }
                                                                         }
                                                                       ],
-                                                                      \\"MatchExpression\\": [
+                                                                      \\"rules\\": [
                                                                         {
                                                                           \\"name\\": \\"MatchExpression\\",
                                                                           \\"children\\": {

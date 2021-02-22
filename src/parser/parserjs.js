@@ -268,7 +268,7 @@
         this.MANY_SEP2({
           SEP: Comma,
           DEF: () => {
-            this.SUBRULE(this.MatchExpression);
+            this.SUBRULE(this.MatchExpression, { LABEL: 'rules' });
           },
         });
         this.CONSUME(RCurly);
