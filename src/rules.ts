@@ -12,7 +12,6 @@ export const Rules = {
   FunctionStatement: 'FunctionStatement',
   BlockStatement: 'BlockStatement',
   ToRight: 'ToRight',
-  ToLeft: 'ToLeft',
   ParenthesisExpression: 'ParenthesisExpression',
   ReturnStatement: 'ReturnStatement',
   PipeFrom: 'PipeFrom',

@@ -138,10 +138,6 @@
     name: 'ToRightToken',
     pattern: /(?!<)->/,
   });
-  const ToLeftToken = createToken({
-    name: 'ToLeftToken',
-    pattern: /<-(?!>)/,
-  });
   const ReturnToken = createToken({
     name: 'ReturnToken',
     pattern: /return/,
@@ -165,7 +161,6 @@
     PipeToken,
     ArrowToken,
     ToRightToken,
-    ToLeftToken,
     ReturnToken,
     BreakToken,
     FunctionNameToken,
