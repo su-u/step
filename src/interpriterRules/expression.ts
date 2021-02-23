@@ -5,7 +5,7 @@ import { TypeError } from '../error';
 
 export const expression = ({ ast, manager, execObject }: IInterpreterRules) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
-    if (rule !== Operators.AdditionOperator) {
+    if (rule !== Operators.AdditionOperators) {
       return ast.children[rule].map((x) => {
         return execObject.interpreter({ ast: x, manager, execObject });
       });

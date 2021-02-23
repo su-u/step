@@ -124,7 +124,7 @@ exports[`変数 数値 1`] = `
                                             }
                                           }
                                         ],
-                                        \\"AdditionOperator\\": [
+                                        \\"AdditionOperators\\": [
                                           {
                                             \\"image\\": \\"+\\",
                                             \\"startOffset\\": 3,
@@ -139,7 +139,7 @@ exports[`変数 数値 1`] = `
                                               \\"PATTERN\\": {},
                                               \\"CATEGORIES\\": [
                                                 {
-                                                  \\"name\\": \\"AdditionOperator\\",
+                                                  \\"name\\": \\"AdditionOperators\\",
                                                   \\"PATTERN\\": {},
                                                   \\"tokenTypeIdx\\": 19,
                                                   \\"CATEGORIES\\": [],
@@ -339,7 +339,7 @@ exports[`変数 数値 1`] = `
                                             }
                                           }
                                         ],
-                                        \\"AdditionOperator\\": [
+                                        \\"AdditionOperators\\": [
                                           {
                                             \\"image\\": \\"+\\",
                                             \\"startOffset\\": 22,
@@ -354,7 +354,7 @@ exports[`変数 数値 1`] = `
                                               \\"PATTERN\\": {},
                                               \\"CATEGORIES\\": [
                                                 {
-                                                  \\"name\\": \\"AdditionOperator\\",
+                                                  \\"name\\": \\"AdditionOperators\\",
                                                   \\"PATTERN\\": {},
                                                   \\"tokenTypeIdx\\": 19,
                                                   \\"CATEGORIES\\": [],
@@ -695,7 +695,7 @@ exports[`変数 文字列 1`] = `
                                             }
                                           }
                                         ],
-                                        \\"AdditionOperator\\": [
+                                        \\"AdditionOperators\\": [
                                           {
                                             \\"image\\": \\"+\\",
                                             \\"startOffset\\": 23,
@@ -710,7 +710,7 @@ exports[`変数 文字列 1`] = `
                                               \\"PATTERN\\": {},
                                               \\"CATEGORIES\\": [
                                                 {
-                                                  \\"name\\": \\"AdditionOperator\\",
+                                                  \\"name\\": \\"AdditionOperators\\",
                                                   \\"PATTERN\\": {},
                                                   \\"tokenTypeIdx\\": 19,
                                                   \\"CATEGORIES\\": [],
