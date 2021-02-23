@@ -149,7 +149,7 @@ exports[`代入 3 1`] = `
                                         \\"PATTERN\\": {},
                                         \\"CATEGORIES\\": [
                                           {
-                                            \\"name\\": \\"RelationalOperator\\",
+                                            \\"name\\": \\"RelationalOperators\\",
                                             \\"PATTERN\\": {},
                                             \\"tokenTypeIdx\\": 26,
                                             \\"CATEGORIES\\": [],
@@ -307,7 +307,7 @@ exports[`代入 3 1`] = `
                                         \\"PATTERN\\": {},
                                         \\"CATEGORIES\\": [
                                           {
-                                            \\"name\\": \\"RelationalOperator\\",
+                                            \\"name\\": \\"RelationalOperators\\",
                                             \\"PATTERN\\": {},
                                             \\"tokenTypeIdx\\": 26,
                                             \\"CATEGORIES\\": [],
@@ -338,7 +338,7 @@ exports[`代入 3 1`] = `
                                 }
                               }
                             ],
-                            \\"LogicalJoinOperator\\": [
+                            \\"LogicalJoinOperators\\": [
                               {
                                 \\"image\\": \\"and\\",
                                 \\"startOffset\\": 7,
@@ -353,7 +353,7 @@ exports[`代入 3 1`] = `
                                   \\"PATTERN\\": {},
                                   \\"CATEGORIES\\": [
                                     {
-                                      \\"name\\": \\"LogicalJoinOperator\\",
+                                      \\"name\\": \\"LogicalJoinOperators\\",
                                       \\"PATTERN\\": {},
                                       \\"tokenTypeIdx\\": 32,
                                       \\"CATEGORIES\\": [],
@@ -698,7 +698,7 @@ exports[`代入 右辺 数値演算、代入 1`] = `
                                             }
                                           }
                                         ],
-                                        \\"AdditionOperator\\": [
+                                        \\"AdditionOperators\\": [
                                           {
                                             \\"image\\": \\"+\\",
                                             \\"startOffset\\": 3,
@@ -713,7 +713,7 @@ exports[`代入 右辺 数値演算、代入 1`] = `
                                               \\"PATTERN\\": {},
                                               \\"CATEGORIES\\": [
                                                 {
-                                                  \\"name\\": \\"AdditionOperator\\",
+                                                  \\"name\\": \\"AdditionOperators\\",
                                                   \\"PATTERN\\": {},
                                                   \\"tokenTypeIdx\\": 19,
                                                   \\"CATEGORIES\\": [],

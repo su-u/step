@@ -3,7 +3,7 @@ import { TypeError } from '../../error';
 import { VariableManager } from '../../manager';
 import { LiteralTokens } from '../../tokens';
 
-export const execEach = ({ ast, manager, execObject }: IInterpreterRules, last) => {
+export const execEach = ({ ast, manager, execObject }: IInterpreterRules<any>, last) => {
   if (last.name === LiteralTokens.NumberLiteralRange) {
     const eachObj = ast.toEach[0];
     const range = Array.from(Array(last.end - last.start + 1).keys(), (x) => x + last.start);

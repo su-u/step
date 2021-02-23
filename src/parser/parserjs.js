@@ -60,7 +60,7 @@
 
   const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma, Colon];
 
-  const AdditionOperators = createToken({ name: 'AdditionOperator', pattern: Lexer.NA });
+  const AdditionOperators = createToken({ name: 'AdditionOperators', pattern: Lexer.NA });
   const Plus = createToken({ name: 'Plus', pattern: /\+/, categories: AdditionOperators });
   const Minus = createToken({
     name: 'Minus',
@@ -68,14 +68,17 @@
     categories: AdditionOperators,
   });
 
-  const MultiplicationOperators = createToken({ name: 'MultiplicationOperator', pattern: Lexer.NA });
+  const MultiplicationOperators = createToken({
+    name: 'MultiplicationOperators',
+    pattern: Lexer.NA,
+  });
   const Multi = createToken({ name: 'Multi', pattern: /\*/, categories: MultiplicationOperators });
   const Div = createToken({ name: 'Div', pattern: /\//, categories: MultiplicationOperators });
   const Mod = createToken({ name: 'Mod', pattern: /%/, categories: MultiplicationOperators });
 
   const OperatorTokens = [AdditionOperators, Plus, Minus, MultiplicationOperators, Multi, Div, Mod];
 
-  const RelationalOperators = createToken({ name: 'RelationalOperator', pattern: Lexer.NA });
+  const RelationalOperators = createToken({ name: 'RelationalOperators', pattern: Lexer.NA });
   const AmountMore = createToken({
     name: 'AmountMore',
     pattern: /<=/,
@@ -111,7 +114,7 @@
     Equal,
   ];
 
-  const LogicalJoinOperators = createToken({ name: 'LogicalJoinOperator', pattern: Lexer.NA });
+  const LogicalJoinOperators = createToken({ name: 'LogicalJoinOperators', pattern: Lexer.NA });
   const AndOperator = createToken({
     name: 'AndOperator',
     pattern: /and/,

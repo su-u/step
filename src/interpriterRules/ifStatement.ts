@@ -3,7 +3,7 @@ import { BooleanLiteralTokens } from '../tokens';
 import { VariableManager } from '../manager';
 import { toBoolean } from '../class/booleanClass';
 
-export const ifStatement = ({ ast, manager, execObject }: IInterpreterRules) => {
+export const ifStatement = ({ ast, manager, execObject }: IInterpreterRules<IfStatement>) => {
   const condition = execObject.interpreter({
     ast: ast.children.conditionalExpression[0],
     manager,

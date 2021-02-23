@@ -16,7 +16,11 @@ import { pipeArguments } from './interpriterRules/pipeArguments';
 import { logicExpression } from './interpriterRules/logicExpression';
 import { rangeExpression } from './interpriterRules/rangeExpression';
 
-export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => {
+export const interpreter = <T extends { name: string }>({
+  ast,
+  manager,
+  execObject,
+}: IInterpreterRules<any>) => {
   let value = null;
   switch (ast.name) {
     case Rules.ProgramRoot:

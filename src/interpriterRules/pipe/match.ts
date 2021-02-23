@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { IInterpreterRules } from '../types';
 
-export const execMatch = ({ ast, manager, execObject }: IInterpreterRules, last) => {
+export const execMatch = ({ ast, manager, execObject }: IInterpreterRules<any>, last) => {
   const value = Array.isArray(last) ? last.map((v) => v.value) : [last];
   const matchList = ast.toMatch[0].children.rules.map((expression) => {
     const conditions = getConditions({ ast: expression, manager, execObject });
@@ -19,7 +19,7 @@ export const execMatch = ({ ast, manager, execObject }: IInterpreterRules, last)
   return m === null ? value : execObject.interpreter({ ast: m.program, manager, execObject });
 };
 
-const getConditions = ({ ast, manager, execObject }: IInterpreterRules) => {
+const getConditions = ({ ast, manager, execObject }: IInterpreterRules<any>) => {
   if (ast.children.arguments !== undefined) {
     return ast.children.arguments.map((expression) => {
       return execObject.interpreter({

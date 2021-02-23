@@ -183,7 +183,7 @@ exports[`if 1 1`] = `
                           }
                         }
                       ],
-                      \\"LogicalJoinOperator\\": [
+                      \\"LogicalJoinOperators\\": [
                         {
                           \\"image\\": \\"and\\",
                           \\"startOffset\\": 11,
@@ -198,7 +198,7 @@ exports[`if 1 1`] = `
                             \\"PATTERN\\": {},
                             \\"CATEGORIES\\": [
                               {
-                                \\"name\\": \\"LogicalJoinOperator\\",
+                                \\"name\\": \\"LogicalJoinOperators\\",
                                 \\"PATTERN\\": {},
                                 \\"tokenTypeIdx\\": 32,
                                 \\"CATEGORIES\\": [],
@@ -880,7 +880,7 @@ exports[`if 1 1`] = `
                                                               }
                                                             }
                                                           ],
-                                                          \\"AdditionOperator\\": [
+                                                          \\"AdditionOperators\\": [
                                                             {
                                                               \\"image\\": \\"-\\",
                                                               \\"startOffset\\": 97,
@@ -895,7 +895,7 @@ exports[`if 1 1`] = `
                                                                 \\"PATTERN\\": {},
                                                                 \\"CATEGORIES\\": [
                                                                   {
-                                                                    \\"name\\": \\"AdditionOperator\\",
+                                                                    \\"name\\": \\"AdditionOperators\\",
                                                                     \\"PATTERN\\": {},
                                                                     \\"tokenTypeIdx\\": 19,
                                                                     \\"CATEGORIES\\": [],

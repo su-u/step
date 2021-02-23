@@ -1,7 +1,7 @@
 import { IInterpreterRules } from '../types';
 import { VariableManager } from '../../manager';
 
-export const execFunction = ({ ast, manager, execObject }: IInterpreterRules, last) => {
+export const execFunction = ({ ast, manager, execObject }: IInterpreterRules<any>, last) => {
   // 関数実行
   const functionName = ast.Identifier[0].image;
   const functionData = manager.function.reference(functionName);

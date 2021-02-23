@@ -1,7 +1,7 @@
 import { IInterpreterRules } from './types';
 import { getIndex } from '../util/ast';
 
-export const assignment = ({ ast, manager, execObject }: IInterpreterRules) => {
+export const assignment = ({ ast, manager, execObject }: IInterpreterRules<Assignment>) => {
   const obj = ast.children.rules[0];
   const from = execObject.interpreter({ ast: obj.children.head[0], manager, execObject });
   if (obj.children.tail !== undefined) {

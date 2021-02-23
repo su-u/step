@@ -3,7 +3,7 @@ import { execEach } from './pipe/each';
 import { execFunction } from './pipe/function';
 import { execMatch } from './pipe/match';
 
-export const pipeExpression = ({ ast, manager, execObject }: IInterpreterRules) => {
+export const pipeExpression = ({ ast, manager, execObject }: IInterpreterRules<any>) => {
   const fromAst = ast.children.head[0];
   let fromValue = execObject.interpreter({ ast: fromAst, manager, execObject });
   if (ast.children.tail !== undefined) {

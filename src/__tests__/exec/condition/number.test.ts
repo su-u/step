@@ -2,7 +2,6 @@ import { exec } from '../../../util/test';
 import { FunctionManager, VariableManager } from '../../../manager';
 import { LiteralTokens } from '../../../tokens';
 
-
 describe('condition number', () => {
   let manager = null;
   beforeEach(() => {

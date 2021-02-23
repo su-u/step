@@ -178,7 +178,7 @@ exports[`演算 1 1`] = `
                                                                                             }
                                                                                           }
                                                                                         ],
-                                                                                        \\"AdditionOperator\\": [
+                                                                                        \\"AdditionOperators\\": [
                                                                                           {
                                                                                             \\"image\\": \\"+\\",
                                                                                             \\"startOffset\\": 8,
@@ -193,7 +193,7 @@ exports[`演算 1 1`] = `
                                                                                               \\"PATTERN\\": {},
                                                                                               \\"CATEGORIES\\": [
                                                                                                 {
-                                                                                                  \\"name\\": \\"AdditionOperator\\",
+                                                                                                  \\"name\\": \\"AdditionOperators\\",
                                                                                                   \\"PATTERN\\": {},
                                                                                                   \\"tokenTypeIdx\\": 19,
                                                                                                   \\"CATEGORIES\\": [],
@@ -496,7 +496,7 @@ exports[`演算 1 1`] = `
                                                                                                                                             }
                                                                                                                                           }
                                                                                                                                         ],
-                                                                                                                                        \\"AdditionOperator\\": [
+                                                                                                                                        \\"AdditionOperators\\": [
                                                                                                                                           {
                                                                                                                                             \\"image\\": \\"-\\",
                                                                                                                                             \\"startOffset\\": 27,
@@ -511,7 +511,7 @@ exports[`演算 1 1`] = `
                                                                                                                                               \\"PATTERN\\": {},
                                                                                                                                               \\"CATEGORIES\\": [
                                                                                                                                                 {
-                                                                                                                                                  \\"name\\": \\"AdditionOperator\\",
+                                                                                                                                                  \\"name\\": \\"AdditionOperators\\",
                                                                                                                                                   \\"PATTERN\\": {},
                                                                                                                                                   \\"tokenTypeIdx\\": 19,
                                                                                                                                                   \\"CATEGORIES\\": [],
@@ -576,7 +576,7 @@ exports[`演算 1 1`] = `
                                                                                                   }
                                                                                                 }
                                                                                               ],
-                                                                                              \\"MultiplicationOperator\\": [
+                                                                                              \\"MultiplicationOperators\\": [
                                                                                                 {
                                                                                                   \\"image\\": \\"*\\",
                                                                                                   \\"startOffset\\": 21,
@@ -591,7 +591,7 @@ exports[`演算 1 1`] = `
                                                                                                     \\"PATTERN\\": {},
                                                                                                     \\"CATEGORIES\\": [
                                                                                                       {
-                                                                                                        \\"name\\": \\"MultiplicationOperator\\",
+                                                                                                        \\"name\\": \\"MultiplicationOperators\\",
                                                                                                         \\"PATTERN\\": {},
                                                                                                         \\"tokenTypeIdx\\": 22,
                                                                                                         \\"CATEGORIES\\": [],
@@ -661,7 +661,7 @@ exports[`演算 1 1`] = `
                                                   }
                                                 }
                                               ],
-                                              \\"MultiplicationOperator\\": [
+                                              \\"MultiplicationOperators\\": [
                                                 {
                                                   \\"image\\": \\"/\\",
                                                   \\"startOffset\\": 13,
@@ -676,7 +676,7 @@ exports[`演算 1 1`] = `
                                                     \\"PATTERN\\": {},
                                                     \\"CATEGORIES\\": [
                                                       {
-                                                        \\"name\\": \\"MultiplicationOperator\\",
+                                                        \\"name\\": \\"MultiplicationOperators\\",
                                                         \\"PATTERN\\": {},
                                                         \\"tokenTypeIdx\\": 22,
                                                         \\"CATEGORIES\\": [],

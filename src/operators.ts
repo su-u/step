@@ -1,17 +1,23 @@
 export const Operators = {
-  MultiplicationOperator: 'MultiplicationOperator',
-  AdditionOperator: 'AdditionOperator',
+  MultiplicationOperators: 'MultiplicationOperators',
+  AdditionOperators: 'AdditionOperators',
   TildeToken: 'TildeToken',
   LessThan: 'LessThan',
   Equal: 'Equal',
   AmountMore: 'AmountMore',
   AmountLess: 'AmountLess',
   OverThan: 'OverThan',
-  LogicalJoinOperator: 'LogicalJoinOperator',
-};
+  LogicalJoinOperators: 'LogicalJoinOperators',
+} as const;
+export type OperatorsType = typeof Operators[keyof typeof Operators];
 
-export const RelationalOperatorTokens: ReadonlyArray<any> = [
-  Operators.TildeToken,
+export const RelationalOperatorTokens: ReadonlyArray<
+  | typeof Operators.LessThan
+  | typeof Operators.Equal
+  | typeof Operators.AmountMore
+  | typeof Operators.AmountLess
+  | typeof Operators.OverThan
+> = [
   Operators.LessThan,
   Operators.Equal,
   Operators.AmountMore,
@@ -19,6 +25,10 @@ export const RelationalOperatorTokens: ReadonlyArray<any> = [
   Operators.OverThan,
 ];
 
-export const RangeOperatorTokens: ReadonlyArray<any> = [Operators.TildeToken];
+export const RangeOperatorTokens: ReadonlyArray<typeof Operators.TildeToken> = [
+  Operators.TildeToken,
+];
 
-export const LogicalOperatorTokens: ReadonlyArray<any> = [Operators.LogicalJoinOperator];
+export const LogicalOperatorTokens: ReadonlyArray<typeof Operators.LogicalJoinOperators> = [
+  Operators.LogicalJoinOperators,
+];

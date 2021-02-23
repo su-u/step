@@ -1,6 +1,6 @@
 import { IInterpreterRules } from './types';
 
-export const pipeArguments = ({ ast, manager, execObject }: IInterpreterRules) => {
+export const pipeArguments = ({ ast, manager, execObject }: IInterpreterRules<any>) => {
   if (ast.children.argument === undefined) return [];
   const args = ast.children.argument.map((x) => {
     return {
