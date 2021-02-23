@@ -57,50 +57,50 @@ const Colon = createToken({ name: 'Colon', pattern: /:/ });
 
 const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma, Colon];
 
-const AdditionOperator = createToken({ name: 'AdditionOperator', pattern: Lexer.NA });
-const Plus = createToken({ name: 'Plus', pattern: /\+/, categories: AdditionOperator });
+const AdditionOperators = createToken({ name: 'AdditionOperator', pattern: Lexer.NA });
+const Plus = createToken({ name: 'Plus', pattern: /\+/, categories: AdditionOperators });
 const Minus = createToken({
   name: 'Minus',
   pattern: /(?!<)-(?!>)/,
-  categories: AdditionOperator,
+  categories: AdditionOperators,
 });
 
-const MultiplicationOperator = createToken({ name: 'MultiplicationOperator', pattern: Lexer.NA });
-const Multi = createToken({ name: 'Multi', pattern: /\*/, categories: MultiplicationOperator });
-const Div = createToken({ name: 'Div', pattern: /\//, categories: MultiplicationOperator });
-const Mod = createToken({ name: 'Mod', pattern: /%/, categories: MultiplicationOperator });
+const MultiplicationOperators = createToken({ name: 'MultiplicationOperator', pattern: Lexer.NA });
+const Multi = createToken({ name: 'Multi', pattern: /\*/, categories: MultiplicationOperators });
+const Div = createToken({ name: 'Div', pattern: /\//, categories: MultiplicationOperators });
+const Mod = createToken({ name: 'Mod', pattern: /%/, categories: MultiplicationOperators });
 
-const OperatorTokens = [AdditionOperator, Plus, Minus, MultiplicationOperator, Multi, Div, Mod];
+const OperatorTokens = [AdditionOperators, Plus, Minus, MultiplicationOperators, Multi, Div, Mod];
 
-const RelationalOperator = createToken({ name: 'RelationalOperator', pattern: Lexer.NA });
+const RelationalOperators = createToken({ name: 'RelationalOperator', pattern: Lexer.NA });
 const AmountMore = createToken({
   name: 'AmountMore',
   pattern: /<=/,
-  categories: RelationalOperator,
+  categories: RelationalOperators,
 });
 const AmountLess = createToken({
   name: 'AmountLess',
   pattern: />=/,
-  categories: RelationalOperator,
+  categories: RelationalOperators,
 });
 const OverThan = createToken({
   name: 'OverThan',
   pattern: /<(?!-)/,
-  categories: RelationalOperator,
+  categories: RelationalOperators,
 });
 const LessThan = createToken({
   name: 'LessThan',
   pattern: /(?![-=])>/,
-  categories: RelationalOperator,
+  categories: RelationalOperators,
 });
 const Equal = createToken({
   name: 'Equal',
   pattern: /(?!<>)=(?!>)/,
-  categories: RelationalOperator,
+  categories: RelationalOperators,
 });
 
 const RelationalOperatorTokens = [
-  RelationalOperator,
+  RelationalOperators,
   AmountMore,
   AmountLess,
   OverThan,
@@ -108,17 +108,17 @@ const RelationalOperatorTokens = [
   Equal,
 ];
 
-const LogicalJoinOperator = createToken({ name: 'LogicalJoinOperator', pattern: Lexer.NA });
+const LogicalJoinOperators = createToken({ name: 'LogicalJoinOperator', pattern: Lexer.NA });
 const AndOperator = createToken({
   name: 'AndOperator',
   pattern: /and/,
-  categories: LogicalJoinOperator,
+  categories: LogicalJoinOperators,
 });
 
 const OrOperator = createToken({
   name: 'OrOperator',
   pattern: /or/,
-  categories: LogicalJoinOperator,
+  categories: LogicalJoinOperators,
 });
 
 const LogicalOperatorTokens = [AndOperator, OrOperator];
@@ -341,7 +341,7 @@ export class ChiboParser extends CstParser {
   private LogicExpression = this.RULE('LogicExpression', () => {
     this.SUBRULE(this.RelationExpression, { LABEL: 'rules' });
     this.MANY(() => {
-      this.CONSUME(LogicalJoinOperator);
+      this.CONSUME(LogicalJoinOperators);
       this.SUBRULE2(this.RelationExpression, { LABEL: 'rules' });
     });
   });
@@ -363,7 +363,7 @@ export class ChiboParser extends CstParser {
   private Expression = this.RULE('Expression', () => {
     this.SUBRULE(this.Term, { LABEL: 'rules' });
     this.MANY(() => {
-      this.CONSUME(AdditionOperator);
+      this.CONSUME(AdditionOperators);
       this.SUBRULE2(this.Term, { LABEL: 'rules' });
     });
   });
@@ -371,7 +371,7 @@ export class ChiboParser extends CstParser {
   private Term = this.RULE('Term', () => {
     this.SUBRULE(this.PipeExpression, { LABEL: 'rules' });
     this.MANY(() => {
-      this.CONSUME(MultiplicationOperator);
+      this.CONSUME(MultiplicationOperators);
       this.SUBRULE2(this.PipeExpression, { LABEL: 'rules' });
     });
   });
