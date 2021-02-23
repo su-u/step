@@ -6,7 +6,7 @@ exports[`match 1 1`] = `
   \\"children\\": {
     \\"rules\\": [
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {
@@ -314,7 +314,7 @@ exports[`match 1 1`] = `
                                                                                 \\"children\\": {
                                                                                   \\"rules\\": [
                                                                                     {
-                                                                                      \\"name\\": \\"ProgramRule\\",
+                                                                                      \\"name\\": \\"ProgramRules\\",
                                                                                       \\"children\\": {
                                                                                         \\"rules\\": [
                                                                                           {
@@ -510,7 +510,7 @@ exports[`match 2 1`] = `
   \\"children\\": {
     \\"rules\\": [
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {
@@ -1117,7 +1117,7 @@ exports[`match 2 1`] = `
                                                                                 \\"children\\": {
                                                                                   \\"rules\\": [
                                                                                     {
-                                                                                      \\"name\\": \\"ProgramRule\\",
+                                                                                      \\"name\\": \\"ProgramRules\\",
                                                                                       \\"children\\": {
                                                                                         \\"rules\\": [
                                                                                           {
@@ -1343,7 +1343,7 @@ exports[`match 2 1`] = `
                                                                                 \\"children\\": {
                                                                                   \\"rules\\": [
                                                                                     {
-                                                                                      \\"name\\": \\"ProgramRule\\",
+                                                                                      \\"name\\": \\"ProgramRules\\",
                                                                                       \\"children\\": {
                                                                                         \\"rules\\": [
                                                                                           {

@@ -190,11 +190,11 @@
 
       this.Program = this.RULE('Program', () => {
         this.MANY(() => {
-          this.SUBRULE(this.ProgramRule, { LABEL: 'rules' });
+          this.SUBRULE(this.ProgramRules, { LABEL: 'rules' });
         });
       });
 
-      this.ProgramRule = this.RULE('ProgramRule', () => {
+      this.ProgramRules = this.RULE('ProgramRule', () => {
         this.OR([
           { ALT: () => this.CONSUME(Comment, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rules' }) },

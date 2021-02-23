@@ -189,11 +189,11 @@ export class ChiboParser extends CstParser {
 
   public Program = this.RULE('Program', () => {
     this.MANY(() => {
-      this.SUBRULE(this.ProgramRule, { LABEL: 'rules' });
+      this.SUBRULE(this.ProgramRules, { LABEL: 'rules' });
     });
   });
 
-  private ProgramRule = this.RULE('ProgramRule', () => {
+  private ProgramRules = this.RULE('ProgramRules', () => {
     this.OR([
       { ALT: () => this.CONSUME(Comment, { LABEL: 'rules' }) },
       { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rules' }) },

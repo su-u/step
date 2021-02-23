@@ -6,7 +6,7 @@ exports[`each 1 1`] = `
   \\"children\\": {
     \\"rules\\": [
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {
@@ -265,7 +265,7 @@ exports[`each 1 1`] = `
                                                                           \\"children\\": {
                                                                             \\"rules\\": [
                                                                               {
-                                                                                \\"name\\": \\"ProgramRule\\",
+                                                                                \\"name\\": \\"ProgramRules\\",
                                                                                 \\"children\\": {
                                                                                   \\"rules\\": [
                                                                                     {
