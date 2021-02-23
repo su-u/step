@@ -183,7 +183,7 @@
     constructor() {
       super(allTokens);
 
-      this.Program = this.RULE('Program', () => {
+      this.ProgramRoot = this.RULE('ProgramRoot', () => {
         this.MANY(() => {
           this.SUBRULE(this.ProgramRules, { LABEL: 'rules' });
         });
@@ -203,7 +203,7 @@
         this.SUBRULE(this.ToRight, { LABEL: 'rules' });
       });
 
-      this.Each = this.RULE('Each', () => {
+      this.EachExpression = this.RULE('EachExpression', () => {
         this.CONSUME(EachToken);
         this.OPTION(() => {
           this.CONSUME(LBracket);
@@ -211,7 +211,7 @@
           this.CONSUME(RBracket);
         });
         this.CONSUME(LCurly);
-        this.SUBRULE(this.Program, { LABEL: 'rules' });
+        this.SUBRULE(this.ProgramRoot, { LABEL: 'rules' });
         this.CONSUME(RCurly);
       });
 
@@ -237,7 +237,7 @@
         this.SUBRULE(this.FunctionArguments, { LABEL: 'arguments' });
         this.CONSUME(RBracket);
         this.CONSUME(LCurly);
-        this.SUBRULE(this.Program, { LABEL: 'rules' });
+        this.SUBRULE(this.ProgramRoot, { LABEL: 'rules' });
         this.CONSUME(RCurly);
       });
 
@@ -288,7 +288,7 @@
         this.CONSUME(RBracket);
         this.CONSUME(ArrowToken);
         this.CONSUME(LCurly);
-        this.SUBRULE(this.Program, { LABEL: 'rules' });
+        this.SUBRULE(this.ProgramRoot, { LABEL: 'rules' });
         this.CONSUME(RCurly);
       });
 
@@ -391,7 +391,7 @@
           { ALT: () => this.SUBRULE(this.ArrayExpression, { LABEL: 'arrayExpression' }) },
           { ALT: () => this.SUBRULE(this.Object, { LABEL: 'object' }) },
           { ALT: () => this.SUBRULE(this.MatchExpression, { LABEL: 'toMatch' }) },
-          { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
+          { ALT: () => this.SUBRULE(this.EachExpression, { LABEL: 'toEach' }) },
         ]);
       });
 

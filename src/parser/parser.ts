@@ -182,7 +182,7 @@ export class ChiboParser extends CstParser {
     this.performSelfAnalysis();
   }
 
-  public Program = this.RULE('Program', () => {
+  public ProgramRoot = this.RULE('ProgramRoot', () => {
     this.MANY(() => {
       this.SUBRULE(this.ProgramRules, { LABEL: 'rules' });
     });
@@ -202,7 +202,7 @@ export class ChiboParser extends CstParser {
     this.SUBRULE(this.ToRight, { LABEL: 'rules' });
   });
 
-  private Each = this.RULE('Each', () => {
+  private EachExpression = this.RULE('EachExpression', () => {
     this.CONSUME(EachToken);
     this.OPTION(() => {
       this.CONSUME(LBracket);
@@ -210,7 +210,7 @@ export class ChiboParser extends CstParser {
       this.CONSUME(RBracket);
     });
     this.CONSUME(LCurly);
-    this.SUBRULE(this.Program, { LABEL: 'rules' });
+    this.SUBRULE(this.ProgramRoot, { LABEL: 'rules' });
     this.CONSUME(RCurly);
   });
 
@@ -236,7 +236,7 @@ export class ChiboParser extends CstParser {
     this.SUBRULE(this.FunctionArguments, { LABEL: 'arguments' });
     this.CONSUME(RBracket);
     this.CONSUME(LCurly);
-    this.SUBRULE(this.Program, { LABEL: 'rules' });
+    this.SUBRULE(this.ProgramRoot, { LABEL: 'rules' });
     this.CONSUME(RCurly);
   });
 
@@ -287,7 +287,7 @@ export class ChiboParser extends CstParser {
     this.CONSUME(RBracket);
     this.CONSUME(ArrowToken);
     this.CONSUME(LCurly);
-    this.SUBRULE(this.Program, { LABEL: 'rules' });
+    this.SUBRULE(this.ProgramRoot, { LABEL: 'rules' });
     this.CONSUME(RCurly);
   });
 
@@ -390,7 +390,7 @@ export class ChiboParser extends CstParser {
       { ALT: () => this.SUBRULE(this.ArrayExpression, { LABEL: 'arrayExpression' }) },
       { ALT: () => this.SUBRULE(this.Object, { LABEL: 'object' }) },
       { ALT: () => this.SUBRULE(this.MatchExpression, { LABEL: 'toMatch' }) },
-      { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
+      { ALT: () => this.SUBRULE(this.EachExpression, { LABEL: 'toEach' }) },
     ]);
   });
 

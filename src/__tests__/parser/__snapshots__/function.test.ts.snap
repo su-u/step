@@ -2,7 +2,7 @@
 
 exports[`関数 1 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
@@ -128,7 +128,7 @@ exports[`関数 1 1`] = `
                 ],
                 \\"rules\\": [
                   {
-                    \\"name\\": \\"Program\\",
+                    \\"name\\": \\"ProgramRoot\\",
                     \\"children\\": {
                       \\"rules\\": [
                         {
@@ -459,7 +459,7 @@ exports[`関数 1 1`] = `
 
 exports[`関数 2 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
@@ -585,7 +585,7 @@ exports[`関数 2 1`] = `
                 ],
                 \\"rules\\": [
                   {
-                    \\"name\\": \\"Program\\",
+                    \\"name\\": \\"ProgramRoot\\",
                     \\"children\\": {
                       \\"rules\\": [
                         {

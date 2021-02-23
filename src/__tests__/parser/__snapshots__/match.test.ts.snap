@@ -2,7 +2,7 @@
 
 exports[`match 1 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
@@ -310,7 +310,7 @@ exports[`match 1 1`] = `
                                                                             ],
                                                                             \\"rules\\": [
                                                                               {
-                                                                                \\"name\\": \\"Program\\",
+                                                                                \\"name\\": \\"ProgramRoot\\",
                                                                                 \\"children\\": {
                                                                                   \\"rules\\": [
                                                                                     {
@@ -506,7 +506,7 @@ exports[`match 1 1`] = `
 
 exports[`match 2 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
@@ -1113,7 +1113,7 @@ exports[`match 2 1`] = `
                                                                             ],
                                                                             \\"rules\\": [
                                                                               {
-                                                                                \\"name\\": \\"Program\\",
+                                                                                \\"name\\": \\"ProgramRoot\\",
                                                                                 \\"children\\": {
                                                                                   \\"rules\\": [
                                                                                     {
@@ -1339,7 +1339,7 @@ exports[`match 2 1`] = `
                                                                             ],
                                                                             \\"rules\\": [
                                                                               {
-                                                                                \\"name\\": \\"Program\\",
+                                                                                \\"name\\": \\"ProgramRoot\\",
                                                                                 \\"children\\": {
                                                                                   \\"rules\\": [
                                                                                     {

@@ -19,7 +19,7 @@ import { rangeExpression } from './interpriterRules/rangeExpression';
 export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => {
   let value = null;
   switch (ast.name) {
-    case Rules.Program:
+    case Rules.ProgramRoot:
       value = program({ ast, manager, execObject });
       break;
     case Rules.Assignment:

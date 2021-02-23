@@ -2,7 +2,7 @@
 
 exports[`each 1 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
@@ -149,7 +149,7 @@ exports[`each 1 1`] = `
                                                               \\"children\\": {
                                                                 \\"toEach\\": [
                                                                   {
-                                                                    \\"name\\": \\"Each\\",
+                                                                    \\"name\\": \\"EachExpression\\",
                                                                     \\"children\\": {
                                                                       \\"EachToken\\": [
                                                                         {
@@ -261,7 +261,7 @@ exports[`each 1 1`] = `
                                                                       ],
                                                                       \\"rules\\": [
                                                                         {
-                                                                          \\"name\\": \\"Program\\",
+                                                                          \\"name\\": \\"ProgramRoot\\",
                                                                           \\"children\\": {
                                                                             \\"rules\\": [
                                                                               {

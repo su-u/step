@@ -2,7 +2,7 @@
 
 exports[`コメント 1 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {

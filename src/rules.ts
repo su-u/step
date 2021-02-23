@@ -1,5 +1,5 @@
 export const Rules = {
-  Program: 'Program',
+  ProgramRoot: 'ProgramRoot',
   Assignment: 'Assignment',
   Each: 'Each',
   IfStatement: 'IfStatement',
