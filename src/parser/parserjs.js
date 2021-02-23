@@ -276,13 +276,13 @@
         this.MANY_SEP2({
           SEP: Comma,
           DEF: () => {
-            this.SUBRULE(this.MatchExpression, { LABEL: 'rules' });
+            this.SUBRULE(this.MatchPattern, { LABEL: 'rules' });
           },
         });
         this.CONSUME(RCurly);
       });
 
-      this.MatchExpression = this.RULE('MatchExpression', () => {
+      this.MatchPattern = this.RULE('MatchPattern', () => {
         this.CONSUME(LBracket);
         this.MANY_SEP({
           SEP: Comma,

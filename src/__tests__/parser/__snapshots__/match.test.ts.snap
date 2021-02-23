@@ -149,7 +149,7 @@ exports[`match 1 1`] = `
                                                                       ],
                                                                       \\"rules\\": [
                                                                         {
-                                                                          \\"name\\": \\"MatchExpression\\",
+                                                                          \\"name\\": \\"MatchPattern\\",
                                                                           \\"children\\": {
                                                                             \\"LBrackets\\": [
                                                                               {
@@ -863,7 +863,7 @@ exports[`match 2 1`] = `
                                                                       ],
                                                                       \\"rules\\": [
                                                                         {
-                                                                          \\"name\\": \\"MatchExpression\\",
+                                                                          \\"name\\": \\"MatchPattern\\",
                                                                           \\"children\\": {
                                                                             \\"LBrackets\\": [
                                                                               {
@@ -1248,7 +1248,7 @@ exports[`match 2 1`] = `
                                                                           }
                                                                         },
                                                                         {
-                                                                          \\"name\\": \\"MatchExpression\\",
+                                                                          \\"name\\": \\"MatchPattern\\",
                                                                           \\"children\\": {
                                                                             \\"LBrackets\\": [
                                                                               {
