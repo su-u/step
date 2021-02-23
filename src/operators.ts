@@ -8,7 +8,7 @@ export const Operators = {
   AmountLess: 'AmountLess',
   OverThan: 'OverThan',
   LogicalJoinOperator: 'LogicalJoinOperator',
-};
+} as const;
 
 export const RelationalOperatorTokens: ReadonlyArray<any> = [
   Operators.TildeToken,
