@@ -2,11 +2,11 @@
 
 exports[`match 1 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {
@@ -102,7 +102,7 @@ exports[`match 1 1`] = `
                                                               \\"children\\": {
                                                                 \\"toMatch\\": [
                                                                   {
-                                                                    \\"name\\": \\"Match\\",
+                                                                    \\"name\\": \\"MatchExpression\\",
                                                                     \\"children\\": {
                                                                       \\"MatchToken\\": [
                                                                         {
@@ -149,7 +149,7 @@ exports[`match 1 1`] = `
                                                                       ],
                                                                       \\"rules\\": [
                                                                         {
-                                                                          \\"name\\": \\"MatchExpression\\",
+                                                                          \\"name\\": \\"MatchPatterns\\",
                                                                           \\"children\\": {
                                                                             \\"LBrackets\\": [
                                                                               {
@@ -310,11 +310,11 @@ exports[`match 1 1`] = `
                                                                             ],
                                                                             \\"rules\\": [
                                                                               {
-                                                                                \\"name\\": \\"Program\\",
+                                                                                \\"name\\": \\"ProgramRoot\\",
                                                                                 \\"children\\": {
                                                                                   \\"rules\\": [
                                                                                     {
-                                                                                      \\"name\\": \\"ProgramRule\\",
+                                                                                      \\"name\\": \\"ProgramRules\\",
                                                                                       \\"children\\": {
                                                                                         \\"rules\\": [
                                                                                           {
@@ -329,11 +329,11 @@ exports[`match 1 1`] = `
                                                                                                   \\"endLine\\": 3,
                                                                                                   \\"startColumn\\": 12,
                                                                                                   \\"endColumn\\": 17,
-                                                                                                  \\"tokenTypeIdx\\": 45,
+                                                                                                  \\"tokenTypeIdx\\": 44,
                                                                                                   \\"tokenType\\": {
                                                                                                     \\"name\\": \\"ReturnToken\\",
                                                                                                     \\"PATTERN\\": {},
-                                                                                                    \\"tokenTypeIdx\\": 45,
+                                                                                                    \\"tokenTypeIdx\\": 44,
                                                                                                     \\"CATEGORIES\\": [],
                                                                                                     \\"categoryMatches\\": [],
                                                                                                     \\"categoryMatchesMap\\": {},
@@ -506,11 +506,11 @@ exports[`match 1 1`] = `
 
 exports[`match 2 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {
@@ -816,7 +816,7 @@ exports[`match 2 1`] = `
                                                               \\"children\\": {
                                                                 \\"toMatch\\": [
                                                                   {
-                                                                    \\"name\\": \\"Match\\",
+                                                                    \\"name\\": \\"MatchExpression\\",
                                                                     \\"children\\": {
                                                                       \\"MatchToken\\": [
                                                                         {
@@ -863,7 +863,7 @@ exports[`match 2 1`] = `
                                                                       ],
                                                                       \\"rules\\": [
                                                                         {
-                                                                          \\"name\\": \\"MatchExpression\\",
+                                                                          \\"name\\": \\"MatchPatterns\\",
                                                                           \\"children\\": {
                                                                             \\"LBrackets\\": [
                                                                               {
@@ -1113,11 +1113,11 @@ exports[`match 2 1`] = `
                                                                             ],
                                                                             \\"rules\\": [
                                                                               {
-                                                                                \\"name\\": \\"Program\\",
+                                                                                \\"name\\": \\"ProgramRoot\\",
                                                                                 \\"children\\": {
                                                                                   \\"rules\\": [
                                                                                     {
-                                                                                      \\"name\\": \\"ProgramRule\\",
+                                                                                      \\"name\\": \\"ProgramRules\\",
                                                                                       \\"children\\": {
                                                                                         \\"rules\\": [
                                                                                           {
@@ -1132,11 +1132,11 @@ exports[`match 2 1`] = `
                                                                                                   \\"endLine\\": 3,
                                                                                                   \\"startColumn\\": 16,
                                                                                                   \\"endColumn\\": 21,
-                                                                                                  \\"tokenTypeIdx\\": 45,
+                                                                                                  \\"tokenTypeIdx\\": 44,
                                                                                                   \\"tokenType\\": {
                                                                                                     \\"name\\": \\"ReturnToken\\",
                                                                                                     \\"PATTERN\\": {},
-                                                                                                    \\"tokenTypeIdx\\": 45,
+                                                                                                    \\"tokenTypeIdx\\": 44,
                                                                                                     \\"CATEGORIES\\": [],
                                                                                                     \\"categoryMatches\\": [],
                                                                                                     \\"categoryMatchesMap\\": {},
@@ -1248,7 +1248,7 @@ exports[`match 2 1`] = `
                                                                           }
                                                                         },
                                                                         {
-                                                                          \\"name\\": \\"MatchExpression\\",
+                                                                          \\"name\\": \\"MatchPatterns\\",
                                                                           \\"children\\": {
                                                                             \\"LBrackets\\": [
                                                                               {
@@ -1339,11 +1339,11 @@ exports[`match 2 1`] = `
                                                                             ],
                                                                             \\"rules\\": [
                                                                               {
-                                                                                \\"name\\": \\"Program\\",
+                                                                                \\"name\\": \\"ProgramRoot\\",
                                                                                 \\"children\\": {
                                                                                   \\"rules\\": [
                                                                                     {
-                                                                                      \\"name\\": \\"ProgramRule\\",
+                                                                                      \\"name\\": \\"ProgramRules\\",
                                                                                       \\"children\\": {
                                                                                         \\"rules\\": [
                                                                                           {
@@ -1358,11 +1358,11 @@ exports[`match 2 1`] = `
                                                                                                   \\"endLine\\": 4,
                                                                                                   \\"startColumn\\": 11,
                                                                                                   \\"endColumn\\": 16,
-                                                                                                  \\"tokenTypeIdx\\": 45,
+                                                                                                  \\"tokenTypeIdx\\": 44,
                                                                                                   \\"tokenType\\": {
                                                                                                     \\"name\\": \\"ReturnToken\\",
                                                                                                     \\"PATTERN\\": {},
-                                                                                                    \\"tokenTypeIdx\\": 45,
+                                                                                                    \\"tokenTypeIdx\\": 44,
                                                                                                     \\"CATEGORIES\\": [],
                                                                                                     \\"categoryMatches\\": [],
                                                                                                     \\"categoryMatchesMap\\": {},

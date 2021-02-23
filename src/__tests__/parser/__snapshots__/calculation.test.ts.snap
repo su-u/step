@@ -2,11 +2,11 @@
 
 exports[`演算 1 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {

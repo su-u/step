@@ -2,11 +2,11 @@
 
 exports[`代入 3 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {
@@ -435,11 +435,11 @@ exports[`代入 3 1`] = `
 
 exports[`代入 右辺 数値代入 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {
@@ -576,11 +576,11 @@ exports[`代入 右辺 数値代入 1`] = `
 
 exports[`代入 右辺 数値演算、代入 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {
@@ -801,11 +801,11 @@ exports[`代入 右辺 数値演算、代入 1`] = `
 
 exports[`代入 右辺 文字列代入 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {
@@ -942,11 +942,11 @@ exports[`代入 右辺 文字列代入 1`] = `
 
 exports[`代入 右辺 演算子代入 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {

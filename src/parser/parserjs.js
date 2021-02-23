@@ -60,50 +60,50 @@
 
   const BracketTokens = [LBracket, RBracket, LCurly, RCurly, LSquare, RSquare, Comma, Colon];
 
-  const AdditionOperator = createToken({ name: 'AdditionOperator', pattern: Lexer.NA });
-  const Plus = createToken({ name: 'Plus', pattern: /\+/, categories: AdditionOperator });
+  const AdditionOperators = createToken({ name: 'AdditionOperator', pattern: Lexer.NA });
+  const Plus = createToken({ name: 'Plus', pattern: /\+/, categories: AdditionOperators });
   const Minus = createToken({
     name: 'Minus',
     pattern: /(?!<)-(?!>)/,
-    categories: AdditionOperator,
+    categories: AdditionOperators,
   });
 
-  const MultiplicationOperator = createToken({ name: 'MultiplicationOperator', pattern: Lexer.NA });
-  const Multi = createToken({ name: 'Multi', pattern: /\*/, categories: MultiplicationOperator });
-  const Div = createToken({ name: 'Div', pattern: /\//, categories: MultiplicationOperator });
-  const Mod = createToken({ name: 'Mod', pattern: /%/, categories: MultiplicationOperator });
+  const MultiplicationOperators = createToken({ name: 'MultiplicationOperator', pattern: Lexer.NA });
+  const Multi = createToken({ name: 'Multi', pattern: /\*/, categories: MultiplicationOperators });
+  const Div = createToken({ name: 'Div', pattern: /\//, categories: MultiplicationOperators });
+  const Mod = createToken({ name: 'Mod', pattern: /%/, categories: MultiplicationOperators });
 
-  const OperatorTokens = [AdditionOperator, Plus, Minus, MultiplicationOperator, Multi, Div, Mod];
+  const OperatorTokens = [AdditionOperators, Plus, Minus, MultiplicationOperators, Multi, Div, Mod];
 
-  const RelationalOperator = createToken({ name: 'RelationalOperator', pattern: Lexer.NA });
+  const RelationalOperators = createToken({ name: 'RelationalOperator', pattern: Lexer.NA });
   const AmountMore = createToken({
     name: 'AmountMore',
     pattern: /<=/,
-    categories: RelationalOperator,
+    categories: RelationalOperators,
   });
   const AmountLess = createToken({
     name: 'AmountLess',
     pattern: />=/,
-    categories: RelationalOperator,
+    categories: RelationalOperators,
   });
   const OverThan = createToken({
     name: 'OverThan',
     pattern: /<(?!-)/,
-    categories: RelationalOperator,
+    categories: RelationalOperators,
   });
   const LessThan = createToken({
     name: 'LessThan',
     pattern: /(?![-=])>/,
-    categories: RelationalOperator,
+    categories: RelationalOperators,
   });
   const Equal = createToken({
     name: 'Equal',
     pattern: /(?!<>)=(?!>)/,
-    categories: RelationalOperator,
+    categories: RelationalOperators,
   });
 
   const RelationalOperatorTokens = [
-    RelationalOperator,
+    RelationalOperators,
     AmountMore,
     AmountLess,
     OverThan,
@@ -111,35 +111,32 @@
     Equal,
   ];
 
-  const LogicalJoinOperator = createToken({ name: 'LogicalJoinOperator', pattern: Lexer.NA });
+  const LogicalJoinOperators = createToken({ name: 'LogicalJoinOperator', pattern: Lexer.NA });
   const AndOperator = createToken({
     name: 'AndOperator',
     pattern: /and/,
-    categories: LogicalJoinOperator,
+    categories: LogicalJoinOperators,
   });
 
   const OrOperator = createToken({
     name: 'OrOperator',
     pattern: /or/,
-    categories: LogicalJoinOperator,
+    categories: LogicalJoinOperators,
   });
 
   const LogicalOperatorTokens = [AndOperator, OrOperator];
-  const functionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
-  const eachToken = createToken({ name: 'EachToken', pattern: /each/ });
-  const matchToken = createToken({ name: 'MatchToken', pattern: /match/ });
-  const ifToken = createToken({ name: 'IfToken', pattern: /if/ });
-  const elseToken = createToken({ name: 'ElseToken', pattern: /else/ });
-  const tildeToken = createToken({ name: 'TildeToken', pattern: /~/ });
+
+  const FunctionToken = createToken({ name: 'FunctionToken', pattern: /function/ });
+  const EachToken = createToken({ name: 'EachToken', pattern: /each/ });
+  const MatchToken = createToken({ name: 'MatchToken', pattern: /match/ });
+  const IfToken = createToken({ name: 'IfToken', pattern: /if/ });
+  const ElseToken = createToken({ name: 'ElseToken', pattern: /else/ });
+  const TildeToken = createToken({ name: 'TildeToken', pattern: /~/ });
   const PipeToken = createToken({ name: 'PipeToken', pattern: /(?!-)\|>/ });
   const ArrowToken = createToken({ name: 'Arrow', pattern: /(?!><)=>/ });
   const ToRightToken = createToken({
     name: 'ToRightToken',
     pattern: /(?!<)->/,
-  });
-  const ToLeftToken = createToken({
-    name: 'ToLeftToken',
-    pattern: /<-(?!>)/,
   });
   const ReturnToken = createToken({
     name: 'ReturnToken',
@@ -149,25 +146,24 @@
     name: 'BreakToken',
     pattern: /break/,
   });
-  const functionNameToken = createToken({
+  const FunctionNameToken = createToken({
     name: 'FunctionNameToken',
     pattern: /[a-zA-z][0-9a-zA-Z]*\(/,
   });
 
   const BuildInTokens = [
-    functionToken,
-    eachToken,
-    matchToken,
-    ifToken,
-    elseToken,
-    tildeToken,
+    FunctionToken,
+    EachToken,
+    MatchToken,
+    IfToken,
+    ElseToken,
+    TildeToken,
     PipeToken,
     ArrowToken,
     ToRightToken,
-    ToLeftToken,
     ReturnToken,
     BreakToken,
-    functionNameToken,
+    FunctionNameToken,
   ];
 
   const allTokens = [
@@ -187,16 +183,16 @@
     constructor() {
       super(allTokens);
 
-      this.Program = this.RULE('Program', () => {
+      this.ProgramRoot = this.RULE('ProgramRoot', () => {
         this.MANY(() => {
-          this.SUBRULE(this.ProgramRule, { LABEL: 'rules' });
+          this.SUBRULE(this.ProgramRules, { LABEL: 'rules' });
         });
       });
 
-      this.ProgramRule = this.RULE('ProgramRule', () => {
+      this.ProgramRules = this.RULE('ProgramRule', () => {
         this.OR([
           { ALT: () => this.CONSUME(Comment, { LABEL: 'rules' }) },
-          { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rules' }) },
+          { ALT: () => this.SUBRULE(this.FunctionStatement, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.ReturnStatement, { LABEL: 'rules' }) },
@@ -207,20 +203,20 @@
         this.SUBRULE(this.ToRight, { LABEL: 'rules' });
       });
 
-      this.Each = this.RULE('Each', () => {
-        this.CONSUME(eachToken);
+      this.EachExpression = this.RULE('EachExpression', () => {
+        this.CONSUME(EachToken);
         this.OPTION(() => {
           this.CONSUME(LBracket);
           this.CONSUME(Identifier);
           this.CONSUME(RBracket);
         });
         this.CONSUME(LCurly);
-        this.SUBRULE(this.Program, { LABEL: 'rules' });
+        this.SUBRULE(this.ProgramRoot, { LABEL: 'rules' });
         this.CONSUME(RCurly);
       });
 
       this.IfStatement = this.RULE('IfStatement', () => {
-        this.CONSUME(ifToken);
+        this.CONSUME(IfToken);
         this.CONSUME(LBracket);
         this.SUBRULE(this.LogicExpression, { LABEL: 'conditionalExpression' });
         this.CONSUME(RBracket);
@@ -228,20 +224,20 @@
         this.SUBRULE(this.BlockStatement, { LABEL: 'rules' });
         this.CONSUME(RCurly);
         this.OPTION(() => {
-          this.CONSUME(elseToken);
+          this.CONSUME(ElseToken);
           this.CONSUME2(LCurly);
           this.SUBRULE2(this.BlockStatement, { LABEL: 'rules' });
           this.CONSUME2(RCurly);
         });
       });
 
-      this.Function = this.RULE('Function', () => {
-        this.CONSUME(functionToken);
-        this.CONSUME(functionNameToken);
+      this.FunctionStatement = this.RULE('FunctionStatement', () => {
+        this.CONSUME(FunctionToken);
+        this.CONSUME(FunctionNameToken);
         this.SUBRULE(this.FunctionArguments, { LABEL: 'arguments' });
         this.CONSUME(RBracket);
         this.CONSUME(LCurly);
-        this.SUBRULE(this.Program, { LABEL: 'rules' });
+        this.SUBRULE(this.ProgramRoot, { LABEL: 'rules' });
         this.CONSUME(RCurly);
       });
 
@@ -256,32 +252,32 @@
 
       this.BlockStatement = this.RULE('BlockStatement', () => {
         this.MANY(() => {
-          this.SUBRULE(this.BlockRule, { LABEL: 'rules' });
+          this.SUBRULE(this.BlockRules, { LABEL: 'rules' });
         });
       });
 
-      this.BlockRule = this.RULE('BlockRule', () => {
+      this.BlockRules = this.RULE('BlockRules', () => {
         this.OR([
-          { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rules' }) },
+          { ALT: () => this.SUBRULE(this.FunctionStatement, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rules' }) },
           { ALT: () => this.CONSUME(BreakToken, { LABEL: 'rules' }) },
         ]);
       });
 
-      this.Match = this.RULE('Match', () => {
-        this.CONSUME(matchToken);
+      this.MatchExpression = this.RULE('MatchExpression', () => {
+        this.CONSUME(MatchToken);
         this.CONSUME(LCurly);
         this.MANY_SEP2({
           SEP: Comma,
           DEF: () => {
-            this.SUBRULE(this.MatchExpression, { LABEL: 'rules' });
+            this.SUBRULE(this.MatchPatterns, { LABEL: 'rules' });
           },
         });
         this.CONSUME(RCurly);
       });
 
-      this.MatchExpression = this.RULE('MatchExpression', () => {
+      this.MatchPatterns = this.RULE('MatchPatterns', () => {
         this.CONSUME(LBracket);
         this.MANY_SEP({
           SEP: Comma,
@@ -292,7 +288,7 @@
         this.CONSUME(RBracket);
         this.CONSUME(ArrowToken);
         this.CONSUME(LCurly);
-        this.SUBRULE(this.Program, { LABEL: 'rules' });
+        this.SUBRULE(this.ProgramRoot, { LABEL: 'rules' });
         this.CONSUME(RCurly);
       });
 
@@ -341,7 +337,7 @@
       this.LogicExpression = this.RULE('LogicExpression', () => {
         this.SUBRULE(this.RelationExpression, { LABEL: 'rules' });
         this.MANY(() => {
-          this.CONSUME(LogicalJoinOperator);
+          this.CONSUME(LogicalJoinOperators);
           this.SUBRULE2(this.RelationExpression, { LABEL: 'rules' });
         });
       });
@@ -363,7 +359,7 @@
       this.Expression = this.RULE('Expression', () => {
         this.SUBRULE(this.Term, { LABEL: 'rules' });
         this.MANY(() => {
-          this.CONSUME(AdditionOperator);
+          this.CONSUME(AdditionOperators);
           this.SUBRULE2(this.Term, { LABEL: 'rules' });
         });
       });
@@ -371,7 +367,7 @@
       this.Term = this.RULE('Term', () => {
         this.SUBRULE(this.PipeExpression, { LABEL: 'rules' });
         this.MANY(() => {
-          this.CONSUME(MultiplicationOperator);
+          this.CONSUME(MultiplicationOperators);
           this.SUBRULE2(this.PipeExpression, { LABEL: 'rules' });
         });
       });
@@ -379,7 +375,7 @@
       this.RangeExpression = this.RULE('RangeExpression', () => {
         this.SUBRULE(this.Factor, { LABEL: 'rules' });
         this.MANY(() => {
-          this.CONSUME(tildeToken);
+          this.CONSUME(TildeToken);
           this.SUBRULE2(this.Factor, { LABEL: 'rules' });
         });
       });
@@ -394,8 +390,8 @@
           { ALT: () => this.CONSUME(Identifier) },
           { ALT: () => this.SUBRULE(this.ArrayExpression, { LABEL: 'arrayExpression' }) },
           { ALT: () => this.SUBRULE(this.Object, { LABEL: 'object' }) },
-          { ALT: () => this.SUBRULE(this.Match, { LABEL: 'toMatch' }) },
-          { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
+          { ALT: () => this.SUBRULE(this.MatchExpression, { LABEL: 'toMatch' }) },
+          { ALT: () => this.SUBRULE(this.EachExpression, { LABEL: 'toEach' }) },
         ]);
       });
 

@@ -2,11 +2,11 @@
 
 exports[`if 1 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {
@@ -293,7 +293,7 @@ exports[`if 1 1`] = `
                     \\"children\\": {
                       \\"rules\\": [
                         {
-                          \\"name\\": \\"BlockRule\\",
+                          \\"name\\": \\"BlockRules\\",
                           \\"children\\": {
                             \\"rules\\": [
                               {
@@ -436,7 +436,7 @@ exports[`if 1 1`] = `
                                                                                 \\"children\\": {
                                                                                   \\"toEach\\": [
                                                                                     {
-                                                                                      \\"name\\": \\"Each\\",
+                                                                                      \\"name\\": \\"EachExpression\\",
                                                                                       \\"children\\": {
                                                                                         \\"EachToken\\": [
                                                                                           {
@@ -548,11 +548,11 @@ exports[`if 1 1`] = `
                                                                                         ],
                                                                                         \\"rules\\": [
                                                                                           {
-                                                                                            \\"name\\": \\"Program\\",
+                                                                                            \\"name\\": \\"ProgramRoot\\",
                                                                                             \\"children\\": {
                                                                                               \\"rules\\": [
                                                                                                 {
-                                                                                                  \\"name\\": \\"ProgramRule\\",
+                                                                                                  \\"name\\": \\"ProgramRules\\",
                                                                                                   \\"children\\": {
                                                                                                     \\"rules\\": [
                                                                                                       {
@@ -762,7 +762,7 @@ exports[`if 1 1`] = `
                     \\"children\\": {
                       \\"rules\\": [
                         {
-                          \\"name\\": \\"BlockRule\\",
+                          \\"name\\": \\"BlockRules\\",
                           \\"children\\": {
                             \\"rules\\": [
                               {

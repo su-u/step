@@ -2,15 +2,15 @@
 
 exports[`関数 1 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {
-              \\"name\\": \\"Function\\",
+              \\"name\\": \\"FunctionStatement\\",
               \\"children\\": {
                 \\"FunctionToken\\": [
                   {
@@ -42,11 +42,11 @@ exports[`関数 1 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 14,
                     \\"endColumn\\": 17,
-                    \\"tokenTypeIdx\\": 47,
+                    \\"tokenTypeIdx\\": 46,
                     \\"tokenType\\": {
                       \\"name\\": \\"FunctionNameToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 47,
+                      \\"tokenTypeIdx\\": 46,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -128,11 +128,11 @@ exports[`関数 1 1`] = `
                 ],
                 \\"rules\\": [
                   {
-                    \\"name\\": \\"Program\\",
+                    \\"name\\": \\"ProgramRoot\\",
                     \\"children\\": {
                       \\"rules\\": [
                         {
-                          \\"name\\": \\"ProgramRule\\",
+                          \\"name\\": \\"ProgramRules\\",
                           \\"children\\": {
                             \\"rules\\": [
                               {
@@ -308,7 +308,7 @@ exports[`関数 1 1`] = `
         }
       },
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {
@@ -459,15 +459,15 @@ exports[`関数 1 1`] = `
 
 exports[`関数 2 1`] = `
 "{
-  \\"name\\": \\"Program\\",
+  \\"name\\": \\"ProgramRoot\\",
   \\"children\\": {
     \\"rules\\": [
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {
-              \\"name\\": \\"Function\\",
+              \\"name\\": \\"FunctionStatement\\",
               \\"children\\": {
                 \\"FunctionToken\\": [
                   {
@@ -499,11 +499,11 @@ exports[`関数 2 1`] = `
                     \\"endLine\\": 2,
                     \\"startColumn\\": 14,
                     \\"endColumn\\": 17,
-                    \\"tokenTypeIdx\\": 47,
+                    \\"tokenTypeIdx\\": 46,
                     \\"tokenType\\": {
                       \\"name\\": \\"FunctionNameToken\\",
                       \\"PATTERN\\": {},
-                      \\"tokenTypeIdx\\": 47,
+                      \\"tokenTypeIdx\\": 46,
                       \\"CATEGORIES\\": [],
                       \\"categoryMatches\\": [],
                       \\"categoryMatchesMap\\": {},
@@ -585,11 +585,11 @@ exports[`関数 2 1`] = `
                 ],
                 \\"rules\\": [
                   {
-                    \\"name\\": \\"Program\\",
+                    \\"name\\": \\"ProgramRoot\\",
                     \\"children\\": {
                       \\"rules\\": [
                         {
-                          \\"name\\": \\"ProgramRule\\",
+                          \\"name\\": \\"ProgramRules\\",
                           \\"children\\": {
                             \\"rules\\": [
                               {
@@ -765,7 +765,7 @@ exports[`関数 2 1`] = `
         }
       },
       {
-        \\"name\\": \\"ProgramRule\\",
+        \\"name\\": \\"ProgramRules\\",
         \\"children\\": {
           \\"rules\\": [
             {
