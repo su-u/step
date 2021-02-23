@@ -55,7 +55,7 @@ export const interpreter = ({ ast, manager, execObject }: IInterpreterRules) => 
     case Rules.Factor:
       value = factor({ ast, manager, execObject });
       break;
-    case Rules.Function:
+    case Rules.FunctionStatement:
       value = functionStatement({ ast, manager, execObject });
       break;
     case Rules.BlockStatement:

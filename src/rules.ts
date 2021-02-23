@@ -9,7 +9,7 @@ export const Rules = {
   Term: 'Term',
   Factor: 'Factor',
   To: 'To',
-  Function: 'Function',
+  FunctionStatement: 'FunctionStatement',
   BlockStatement: 'BlockStatement',
   ToRight: 'ToRight',
   ToLeft: 'ToLeft',

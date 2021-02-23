@@ -10,7 +10,7 @@ exports[`関数 1 1`] = `
         \\"children\\": {
           \\"rules\\": [
             {
-              \\"name\\": \\"Function\\",
+              \\"name\\": \\"FunctionStatement\\",
               \\"children\\": {
                 \\"FunctionToken\\": [
                   {
@@ -467,7 +467,7 @@ exports[`関数 2 1`] = `
         \\"children\\": {
           \\"rules\\": [
             {
-              \\"name\\": \\"Function\\",
+              \\"name\\": \\"FunctionStatement\\",
               \\"children\\": {
                 \\"FunctionToken\\": [
                   {

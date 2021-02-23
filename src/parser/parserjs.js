@@ -197,7 +197,7 @@
       this.ProgramRules = this.RULE('ProgramRule', () => {
         this.OR([
           { ALT: () => this.CONSUME(Comment, { LABEL: 'rules' }) },
-          { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rules' }) },
+          { ALT: () => this.SUBRULE(this.FunctionStatement, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.ReturnStatement, { LABEL: 'rules' }) },
@@ -236,7 +236,7 @@
         });
       });
 
-      this.Function = this.RULE('Function', () => {
+      this.FunctionStatement = this.RULE('FunctionStatement', () => {
         this.CONSUME(FunctionToken);
         this.CONSUME(FunctionNameToken);
         this.SUBRULE(this.FunctionArguments, { LABEL: 'arguments' });
@@ -263,7 +263,7 @@
 
       this.BlockRule = this.RULE('BlockRule', () => {
         this.OR([
-          { ALT: () => this.SUBRULE(this.Function, { LABEL: 'rules' }) },
+          { ALT: () => this.SUBRULE(this.FunctionStatement, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rules' }) },
           { ALT: () => this.CONSUME(BreakToken, { LABEL: 'rules' }) },
