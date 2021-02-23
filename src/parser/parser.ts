@@ -269,7 +269,7 @@ export class ChiboParser extends CstParser {
     ]);
   });
 
-  private Match = this.RULE('Match', () => {
+  private MatchExpression = this.RULE('MatchExpression', () => {
     this.CONSUME(MatchToken);
     this.CONSUME(LCurly);
     this.MANY_SEP2({
@@ -394,7 +394,7 @@ export class ChiboParser extends CstParser {
       { ALT: () => this.CONSUME(Identifier) },
       { ALT: () => this.SUBRULE(this.ArrayExpression, { LABEL: 'arrayExpression' }) },
       { ALT: () => this.SUBRULE(this.Object, { LABEL: 'object' }) },
-      { ALT: () => this.SUBRULE(this.Match, { LABEL: 'toMatch' }) },
+      { ALT: () => this.SUBRULE(this.MatchExpression, { LABEL: 'toMatch' }) },
       { ALT: () => this.SUBRULE(this.Each, { LABEL: 'toEach' }) },
     ]);
   });

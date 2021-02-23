@@ -102,7 +102,7 @@ exports[`match 1 1`] = `
                                                               \\"children\\": {
                                                                 \\"toMatch\\": [
                                                                   {
-                                                                    \\"name\\": \\"Match\\",
+                                                                    \\"name\\": \\"MatchExpression\\",
                                                                     \\"children\\": {
                                                                       \\"MatchToken\\": [
                                                                         {
@@ -816,7 +816,7 @@ exports[`match 2 1`] = `
                                                               \\"children\\": {
                                                                 \\"toMatch\\": [
                                                                   {
-                                                                    \\"name\\": \\"Match\\",
+                                                                    \\"name\\": \\"MatchExpression\\",
                                                                     \\"children\\": {
                                                                       \\"MatchToken\\": [
                                                                         {
