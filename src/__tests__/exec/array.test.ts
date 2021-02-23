@@ -187,20 +187,20 @@ array[index1] -> a1
     });
   });
 
-//   test('9', () => {
-//     const source = `
-// [0, 2, 10] -> array
-// 1 -> array[array[1]]
-//     `;
-//     const resultManager = exec(source, manager).variable;
-//     expect(resultManager.reference('array').image.length).toBe(3);
-//     expect(resultManager.reference('array').image[1]).toStrictEqual({
-//       name: LiteralTokens.NumberLiteral,
-//       image: 2,
-//     });
-//     expect(resultManager.reference('array').image[2]).toStrictEqual({
-//       name: LiteralTokens.NumberLiteral,
-//       image: 1,
-//     });
-//   });
+  //   test('9', () => {
+  //     const source = `
+  // [0, 2, 10] -> array
+  // 1 -> array[array[1]]
+  //     `;
+  //     const resultManager = exec(source, manager).variable;
+  //     expect(resultManager.reference('array').image.length).toBe(3);
+  //     expect(resultManager.reference('array').image[1]).toStrictEqual({
+  //       name: LiteralTokens.NumberLiteral,
+  //       image: 2,
+  //     });
+  //     expect(resultManager.reference('array').image[2]).toStrictEqual({
+  //       name: LiteralTokens.NumberLiteral,
+  //       image: 1,
+  //     });
+  //   });
 });

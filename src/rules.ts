@@ -1,10 +1,10 @@
 export const Rules = {
   ProgramRoot: 'ProgramRoot',
-  Assignment: 'Assignment' ,
+  Assignment: 'Assignment',
   Each: 'Each',
   IfStatement: 'IfStatement',
   PipeExpression: 'PipeExpression',
-  RelationExpression: 'RelationExpression' ,
+  RelationExpression: 'RelationExpression',
   Expression: 'Expression',
   Term: 'Term',
   Factor: 'Factor',

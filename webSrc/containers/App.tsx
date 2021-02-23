@@ -61,7 +61,11 @@ export const App: React.FC = () => {
               })}
             {execError.length >= 1 &&
               execError.map((line, i) => {
-                return <p className="error" key={i}>{line}</p>;
+                return (
+                  <p className="error" key={i}>
+                    {line}
+                  </p>
+                );
               })}
           </div>
         </div>

@@ -9,9 +9,15 @@ export const Operators = {
   OverThan: 'OverThan',
   LogicalJoinOperator: 'LogicalJoinOperator',
 } as const;
+export type OperatorsType = typeof Operators[keyof typeof Operators];
 
-export const RelationalOperatorTokens: ReadonlyArray<any> = [
-  Operators.TildeToken,
+export const RelationalOperatorTokens: ReadonlyArray<
+  | typeof Operators.LessThan
+  | typeof Operators.Equal
+  | typeof Operators.AmountMore
+  | typeof Operators.AmountLess
+  | typeof Operators.OverThan
+> = [
   Operators.LessThan,
   Operators.Equal,
   Operators.AmountMore,

@@ -68,7 +68,10 @@
     categories: AdditionOperators,
   });
 
-  const MultiplicationOperators = createToken({ name: 'MultiplicationOperator', pattern: Lexer.NA });
+  const MultiplicationOperators = createToken({
+    name: 'MultiplicationOperator',
+    pattern: Lexer.NA,
+  });
   const Multi = createToken({ name: 'Multi', pattern: /\*/, categories: MultiplicationOperators });
   const Div = createToken({ name: 'Div', pattern: /\//, categories: MultiplicationOperators });
   const Mod = createToken({ name: 'Mod', pattern: /%/, categories: MultiplicationOperators });
