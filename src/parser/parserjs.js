@@ -257,11 +257,11 @@
 
       this.BlockStatement = this.RULE('BlockStatement', () => {
         this.MANY(() => {
-          this.SUBRULE(this.BlockRule, { LABEL: 'rules' });
+          this.SUBRULE(this.BlockRules, { LABEL: 'rules' });
         });
       });
 
-      this.BlockRule = this.RULE('BlockRule', () => {
+      this.BlockRules = this.RULE('BlockRules', () => {
         this.OR([
           { ALT: () => this.SUBRULE(this.FunctionStatement, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rules' }) },
