@@ -1,23 +1,13 @@
-declare type NumberLiteral = {
-  NumberLiteral: {
-    image: string;
-  }[];
+declare type LiteralType = {
+  image: string;
 };
 
-declare type StringLiteral = {
-  StringLiteral: {
-    image: string;
-  }[];
-};
+declare type NumberLiteral = LiteralType;
 
-declare type BoolLiteral = {
-  BoolLiteral: {
-    image: string;
-  }[];
-};
+declare type StringLiteral = LiteralType;
 
-declare type Identifier = {
-  Identifier: {
-    image: string;
-  }[];
-};
+declare type BoolLiteral = LiteralType;
+
+declare type Identifier = LiteralType;
+
+declare type StepObject = any;

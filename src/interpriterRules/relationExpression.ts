@@ -3,8 +3,13 @@ import { RelationalOperatorTokens } from '../operators';
 import { Classes } from '../class';
 import { TypeError } from '../error';
 
-export const relationExpression = ({ ast, manager, execObject }: IInterpreterRules) => {
+export const relationExpression = ({
+  ast,
+  manager,
+  execObject,
+}: IInterpreterRules<RelationExpression>) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
+    // @ts-ignore
     if (!RelationalOperatorTokens.includes(rule)) {
       return ast.children[rule].map((x) => {
         return execObject.interpreter({ ast: x, manager, execObject });

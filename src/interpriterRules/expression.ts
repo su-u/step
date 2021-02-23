@@ -3,7 +3,7 @@ import { Operators } from '../operators';
 import { Classes } from '../class';
 import { TypeError } from '../error';
 
-export const expression = ({ ast, manager, execObject }: IInterpreterRules) => {
+export const expression = ({ ast, manager, execObject }: IInterpreterRules<Expression>) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
     if (rule !== Operators.AdditionOperators) {
       return ast.children[rule].map((x) => {

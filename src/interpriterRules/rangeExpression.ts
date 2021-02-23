@@ -3,7 +3,11 @@ import { RangeOperatorTokens } from '../operators';
 import { Classes } from '../class';
 import { TypeError } from '../error';
 
-export const rangeExpression = ({ ast, manager, execObject }: IInterpreterRules) => {
+export const rangeExpression = ({
+  ast,
+  manager,
+  execObject,
+}: IInterpreterRules<RangeExpression>) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
     if (!RangeOperatorTokens.includes(rule as any)) {
       return ast.children[rule].map((x) => {

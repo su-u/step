@@ -1,13 +1,13 @@
 export const LiteralTokens = {
-  BooleanLiteral: 'BooleanLiteral' as 'BooleanLiteral',
-  StringLiteral: 'StringLiteral' as 'StringLiteral',
-  NumberLiteral: 'NumberLiteral' as 'NumberLiteral',
-  DebugLiteral: 'DebugLiteral' as 'DebugLiteral',
-  NumberLiteralRange: 'NumberLiteralRange' as 'NumberLiteralRange',
-  ArrayLiteral: 'ArrayLiteral' as 'ArrayLiteral',
-};
+  BooleanLiteral: 'BooleanLiteral',
+  StringLiteral: 'StringLiteral',
+  NumberLiteral: 'NumberLiteral',
+  DebugLiteral: 'DebugLiteral',
+  NumberLiteralRange: 'NumberLiteralRange',
+  ArrayLiteral: 'ArrayLiteral',
+} as const;
 
 export const BooleanLiteralTokens = {
   true: 'true',
   false: 'false',
-};
+} as const;

@@ -1,6 +1,6 @@
 import { IInterpreterRules } from './types';
 
-export const functionStatement = ({ ast, manager }: IInterpreterRules) => {
+export const functionStatement = ({ ast, manager }: IInterpreterRules<FunctionStatement>) => {
   const functionName = ast.children.FunctionNameToken[0].image.slice(0, -1);
   const argAst = ast.children.arguments[0];
   const funcArguments =

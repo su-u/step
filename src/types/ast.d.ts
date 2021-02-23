@@ -29,7 +29,7 @@ declare type BlockRules = {
 declare type IfStatement = {
   name: 'IfStatement';
   children: {
-    conditionExpression: LogicExpression[];
+    conditionalExpression: LogicExpression[];
     rules: BlockStatement[];
   };
 };
@@ -112,10 +112,13 @@ declare type RangeExpression = {
 };
 
 declare type Factor = {
+  name: 'Factor';
   children: {
     NumberLiteral?: NumberLiteral[];
     StringLiteral?: StringLiteral[];
     BoolLiteral?: BoolLiteral[];
     Identifier?: Identifier[];
+    object?: StepObject[];
+    parentheses?: any[];
   };
 };

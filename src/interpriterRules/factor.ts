@@ -9,7 +9,7 @@ import { arrayExpression } from './factor/ArrayExpression';
 import { arrayElement } from './factor/arrayElement';
 import { objectLiteral } from './factor/objectLiteral';
 
-export const factor = ({ ast, manager, execObject }: IInterpreterRules) => {
+export const factor = ({ ast, manager, execObject }: IInterpreterRules<any>) => {
   if (ast.children.NumberLiteral !== undefined) {
     return numberLiteral({ ast, manager, execObject });
   } else if (ast.children.Identifier !== undefined) {
