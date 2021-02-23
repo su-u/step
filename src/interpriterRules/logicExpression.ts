@@ -4,7 +4,7 @@ import { Classes } from '../class';
 
 export const logicExpression = ({ ast, manager, execObject }: IInterpreterRules) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
-    if (!LogicalOperatorTokens.includes(rule)) {
+    if (!LogicalOperatorTokens.includes(rule as any)) {
       return ast.children[rule].map((x) => {
         return execObject.interpreter({ ast: x, manager, execObject });
       });

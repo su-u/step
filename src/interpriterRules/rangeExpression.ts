@@ -5,7 +5,7 @@ import { TypeError } from '../error';
 
 export const rangeExpression = ({ ast, manager, execObject }: IInterpreterRules) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
-    if (!RangeOperatorTokens.includes(rule)) {
+    if (!RangeOperatorTokens.includes(rule as any)) {
       return ast.children[rule].map((x) => {
         return execObject.interpreter({ ast: x, manager, execObject });
       });
