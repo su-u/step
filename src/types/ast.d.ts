@@ -8,9 +8,47 @@ declare type ProgramRoot = {
 declare type ProgramRules = {
   name: 'ProgramRules';
   children: {
-    rules: {
-      Assignment;
+    rules: (Assignment | FunctionStatement | IfStatement)[];
+  };
+};
+
+declare type BlockStatement = {
+  name: 'BlockStatement';
+  children: {
+    rules: BlockRules[];
+  };
+};
+
+declare type BlockRules = {
+  name: 'BlockRules';
+  children: {
+    rules: (Assignment | FunctionStatement)[];
+  };
+};
+
+declare type IfStatement = {
+  name: 'IfStatement';
+  children: {
+    conditionExpression: LogicExpression[];
+    rules: BlockStatement[];
+  };
+};
+
+declare type FunctionStatement = {
+  name: 'FunctionStatement';
+  children: {
+    FunctionNameToken: {
+      image: string;
     }[];
+    arguments: FunctionArguments[];
+    rules: ProgramRoot[];
+  };
+};
+
+declare type FunctionArguments = {
+  name: 'FunctionArguments';
+  children: {
+    Identifier: Identifier[];
   };
 };
 
@@ -25,6 +63,9 @@ declare type ToRight = {
   name: 'ToRight';
   children: {
     head: LogicExpression[];
+    tail: {
+      image: string;
+    };
   };
 };
 
@@ -72,6 +113,9 @@ declare type RangeExpression = {
 
 declare type Factor = {
   children: {
-    NumberLiteral: NumberLiteral[];
+    NumberLiteral?: NumberLiteral[];
+    StringLiteral?: StringLiteral[];
+    BoolLiteral?: BoolLiteral[];
+    Identifier?: Identifier[];
   };
 };
