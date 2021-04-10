@@ -13,7 +13,7 @@ export const pipeExpression = ({ ast, manager, execObject }: IInterpreterRules<a
       // console.log(fromValue);
       if (pipeExpressionAst.toEach !== undefined) {
         return execEach({ ast: pipeExpressionAst, manager, execObject }, last);
-      } else if (pipeExpressionAst.Identifier !== undefined) {
+      } else if (pipeExpressionAst.DotsIdentifier !== undefined) {
         return execFunction({ ast: pipeExpressionAst, manager, execObject }, last);
       } else if (pipeExpressionAst.toMatch !== undefined) {
         return execMatch({ ast: pipeExpressionAst, manager, execObject }, last);

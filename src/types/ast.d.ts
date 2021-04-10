@@ -114,6 +114,7 @@ export type RangeExpression = {
 };
 
 export type DotsIdentifier = {
+  name: 'DotsIdentifier';
   children: {
     identifier: LiteralType[];
   }

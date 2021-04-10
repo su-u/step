@@ -3,7 +3,7 @@ import { VariableManager } from '../../manager';
 
 export const execFunction = ({ ast, manager, execObject }: IInterpreterRules<any>, last) => {
   // 関数実行
-  const functionName = ast.Identifier[0].image;
+  const functionName = ast.DotsIdentifier[0].children.identifier[0].image;
   const functionData = manager.function.reference(functionName);
   const literals = Array.isArray(last) ? last : [last];
   if (functionData.type === 'user') {

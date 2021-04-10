@@ -2,7 +2,9 @@ import { IInterpreterRules } from '../types';
 import { Factor } from '../../types/ast';
 
 export const dotsIdentifier = ({ ast, manager }: IInterpreterRules<Factor>) => {
-  const identifier = ast.children.DotsIdentifier.children.identifier;
+  // console.log(ast.children.DotsIdentifier[0].children);
+  const identifier = ast.children.DotsIdentifier[0].children.identifier;
+  // console.log(identifier);
 
   if (identifier.length === 1) {
     return manager.variable.reference(identifier[0].image);

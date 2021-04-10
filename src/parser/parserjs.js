@@ -399,16 +399,15 @@
           { ALT: () => this.SUBRULE(this.Object, { LABEL: 'object' }) },
           { ALT: () => this.SUBRULE(this.MatchExpression, { LABEL: 'toMatch' }) },
           { ALT: () => this.SUBRULE(this.EachExpression, { LABEL: 'toEach' }) },
-          { ALT: () => this.SUBRULE(this.DotsIdentifier, { LABEL: 'rules' })},
+          { ALT: () => this.SUBRULE(this.DotsIdentifier, { LABEL: 'DotsIdentifier' })},
         ]);
       });
 
       this.DotsIdentifier = this.RULE('DotsIdentifier', () => {
-        this.MANY_SEP({
-          SEP: Dot,
-          DEF: () => {
-            this.CONSUME(Identifier, { LABEL: 'identifier' });
-          },
+        this.CONSUME(Identifier, { LABEL: 'identifier' });
+        this.MANY(() => {
+          this.CONSUME2(Dot);
+          this.CONSUME3(Identifier, { LABEL: 'identifier' });
         });
       });
 

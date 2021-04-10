@@ -259,7 +259,7 @@ exports[`変数 数値 1`] = `
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
-                                                                \\"rules\\": [
+                                                                \\"DotsIdentifier\\": [
                                                                   {
                                                                     \\"name\\": \\"DotsIdentifier\\",
                                                                     \\"children\\": {
@@ -431,80 +431,6 @@ exports[`変数 数値 1`] = `
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
                             \\"isParent\\": false
-                          }
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        \\"name\\": \\"ProgramRules\\",
-        \\"children\\": {
-          \\"rules\\": [
-            {
-              \\"name\\": \\"Assignment\\",
-              \\"children\\": {
-                \\"rules\\": [
-                  {
-                    \\"name\\": \\"ToRight\\",
-                    \\"children\\": {
-                      \\"head\\": [
-                        {
-                          \\"name\\": \\"LogicExpression\\",
-                          \\"children\\": {
-                            \\"rules\\": [
-                              {
-                                \\"name\\": \\"RelationExpression\\",
-                                \\"children\\": {
-                                  \\"rules\\": [
-                                    {
-                                      \\"name\\": \\"Expression\\",
-                                      \\"children\\": {
-                                        \\"rules\\": [
-                                          {
-                                            \\"name\\": \\"Term\\",
-                                            \\"children\\": {
-                                              \\"rules\\": [
-                                                {
-                                                  \\"name\\": \\"PipeExpression\\",
-                                                  \\"children\\": {
-                                                    \\"head\\": [
-                                                      {
-                                                        \\"name\\": \\"RangeExpression\\",
-                                                        \\"children\\": {
-                                                          \\"rules\\": [
-                                                            {
-                                                              \\"name\\": \\"Factor\\",
-                                                              \\"children\\": {
-                                                                \\"rules\\": [
-                                                                  {
-                                                                    \\"name\\": \\"DotsIdentifier\\",
-                                                                    \\"children\\": {}
-                                                                  }
-                                                                ]
-                                                              }
-                                                            }
-                                                          ]
-                                                        }
-                                                      }
-                                                    ]
-                                                  }
-                                                }
-                                              ]
-                                            }
-                                          }
-                                        ]
-                                      }
-                                    }
-                                  ]
-                                }
-                              }
-                            ]
                           }
                         }
                       ]
@@ -696,7 +622,7 @@ exports[`変数 文字列 1`] = `
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
-                                                                \\"rules\\": [
+                                                                \\"DotsIdentifier\\": [
                                                                   {
                                                                     \\"name\\": \\"DotsIdentifier\\",
                                                                     \\"children\\": {
@@ -868,80 +794,6 @@ exports[`変数 文字列 1`] = `
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
                             \\"isParent\\": false
-                          }
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        \\"name\\": \\"ProgramRules\\",
-        \\"children\\": {
-          \\"rules\\": [
-            {
-              \\"name\\": \\"Assignment\\",
-              \\"children\\": {
-                \\"rules\\": [
-                  {
-                    \\"name\\": \\"ToRight\\",
-                    \\"children\\": {
-                      \\"head\\": [
-                        {
-                          \\"name\\": \\"LogicExpression\\",
-                          \\"children\\": {
-                            \\"rules\\": [
-                              {
-                                \\"name\\": \\"RelationExpression\\",
-                                \\"children\\": {
-                                  \\"rules\\": [
-                                    {
-                                      \\"name\\": \\"Expression\\",
-                                      \\"children\\": {
-                                        \\"rules\\": [
-                                          {
-                                            \\"name\\": \\"Term\\",
-                                            \\"children\\": {
-                                              \\"rules\\": [
-                                                {
-                                                  \\"name\\": \\"PipeExpression\\",
-                                                  \\"children\\": {
-                                                    \\"head\\": [
-                                                      {
-                                                        \\"name\\": \\"RangeExpression\\",
-                                                        \\"children\\": {
-                                                          \\"rules\\": [
-                                                            {
-                                                              \\"name\\": \\"Factor\\",
-                                                              \\"children\\": {
-                                                                \\"rules\\": [
-                                                                  {
-                                                                    \\"name\\": \\"DotsIdentifier\\",
-                                                                    \\"children\\": {}
-                                                                  }
-                                                                ]
-                                                              }
-                                                            }
-                                                          ]
-                                                        }
-                                                      }
-                                                    ]
-                                                  }
-                                                }
-                                              ]
-                                            }
-                                          }
-                                        ]
-                                      }
-                                    }
-                                  ]
-                                }
-                              }
-                            ]
                           }
                         }
                       ]
