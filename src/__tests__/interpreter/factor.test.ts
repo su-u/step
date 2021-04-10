@@ -44,8 +44,15 @@ describe('factor', () => {
       children: {
         DotsIdentifier: [
           {
-            image: 'value1',
-          },
+            "name": "DotsIdentifier",
+            "children": {
+              "identifier": [
+                {
+                  "image": "value1"
+                }
+              ]
+            }
+          }
         ],
       },
     };
