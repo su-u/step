@@ -13,7 +13,7 @@ export const entry = (text: string) => {
       variable: new VariableManager(null),
       function: new FunctionManager(),
     };
-    interpreter<ProgramRoot>({ ast, manager, execObject: { interpreter } });
+    interpreter<ProgramRoot>({ ast, execObject: { manager, interpreter } });
     manager.variable.debug();
     manager.function.debug();
     // const rAst = removeObjectByKey(ast, UnnecessaryKeys);

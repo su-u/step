@@ -8,6 +8,6 @@ export const sourceParseJson = (source: string) => {
 
 export const exec = (text: string, manager: Manager) => {
   const ast = parseInput(text);
-  interpreter({ ast, manager, execObject: { interpreter } });
+  interpreter({ ast, execObject: { manager, interpreter } });
   return manager;
 };

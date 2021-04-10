@@ -6,14 +6,13 @@ import { RelationExpression } from '../types/ast';
 
 export const relationExpression = ({
   ast,
-  manager,
   execObject,
 }: IInterpreterRules<RelationExpression>) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
     // @ts-ignore
     if (!RelationalOperatorTokens.includes(rule)) {
       return ast.children[rule].map((x) => {
-        return execObject.interpreter({ ast: x, manager, execObject });
+        return execObject.interpreter({ ast: x, execObject });
       });
     } else {
       return ast.children[rule].map((x) => x.image);

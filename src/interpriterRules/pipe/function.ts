@@ -1,8 +1,9 @@
 import { IInterpreterRules } from '../types';
 import { VariableManager } from '../../manager';
 
-export const execFunction = ({ ast, manager, execObject }: IInterpreterRules<any>, last) => {
+export const execFunction = ({ ast, execObject }: IInterpreterRules<any>, last) => {
   // 関数実行
+  const { manager } = execObject;
   const functionName = ast.DotsIdentifier[0].children.identifier[0].image;
   const functionData = manager.function.reference(functionName);
   const literals = Array.isArray(last) ? last : [last];
@@ -20,11 +21,13 @@ export const execFunction = ({ ast, manager, execObject }: IInterpreterRules<any
     });
     last = execObject.interpreter({
       ast: functionData.function,
-      manager: {
-        variable: scopeManger,
-        function: manager.function,
+      execObject: {
+        manager: {
+          variable: scopeManger,
+          function: manager.function,
+        },
+        interpreter: execObject.interpreter,
       },
-      execObject,
     });
   } else {
     const arg = functionData.arguments

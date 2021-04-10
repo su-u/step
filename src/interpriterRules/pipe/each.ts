@@ -3,7 +3,8 @@ import { TypeError } from '../../error';
 import { VariableManager } from '../../manager';
 import { LiteralTokens } from '../../tokens';
 
-export const execEach = ({ ast, manager, execObject }: IInterpreterRules<any>, last) => {
+export const execEach = ({ ast, execObject }: IInterpreterRules<any>, last) => {
+  const { manager } = execObject;
   if (last.name === LiteralTokens.NumberLiteralRange) {
     const eachObj = ast.toEach[0];
     const range = Array.from(Array(last.end - last.start + 1).keys(), (x) => x + last.start);
@@ -20,8 +21,10 @@ export const execEach = ({ ast, manager, execObject }: IInterpreterRules<any>, l
       }
       return execObject.interpreter({
         ast: eachObj.children.rules[0],
-        manager: inManger,
-        execObject,
+        execObject: {
+          manager: inManger,
+          interpreter: execObject.interpreter,
+        },
       });
     });
     return {
@@ -40,8 +43,10 @@ export const execEach = ({ ast, manager, execObject }: IInterpreterRules<any>, l
       }
       return execObject.interpreter({
         ast: eachObj.children.rules[0],
-        manager: inManger,
-        execObject,
+        execObject: {
+          manager: inManger,
+          interpreter: execObject.interpreter,
+        },
       });
     });
   } else {
