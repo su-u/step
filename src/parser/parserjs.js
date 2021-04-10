@@ -15,7 +15,6 @@
     name: 'NumberLiteral',
     pattern: /-?(0|[1-9]\d*)(\.\d+)?([eE][+-]?\d+)?/,
   });
-  const Dot = createToken({ name: 'Dot', pattern: /\./ });
   const WhiteSpace = createToken({
     name: 'WhiteSpace',
     pattern: /\s+/,
@@ -38,16 +37,20 @@
     name: 'Identifier',
     pattern: /[a-zA-z][0-9a-zA-Z]*/,
   });
+  const DotsIdentifier = createToken({
+    name: 'DotsIdentifier',
+    pattern: /[a-zA-z][0-9a-zA-Z]*(\.[a-zA-z][0-9a-zA-Z]*)+/,
+  });
 
   const LiteralTokens = [
     Comment,
     Separate,
-    Dot,
     StringLiteral,
     NumberLiteral,
     WhiteSpace,
     BoolLiteral,
     IdentifierSuffix,
+    DotsIdentifier,
     Identifier,
   ];
 
@@ -387,7 +390,7 @@
 
       this.Factor = this.RULE('Factor', () => {
         this.OR([
-          { ALT: () => this.CONSUME(Dot)},
+          { ALT: () => this.CONSUME(DotsIdentifier)},
           { ALT: () => this.CONSUME(NumberLiteral) },
           { ALT: () => this.CONSUME(StringLiteral) },
           { ALT: () => this.CONSUME(BoolLiteral) },
