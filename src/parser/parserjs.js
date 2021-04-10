@@ -37,6 +37,10 @@
     name: 'Identifier',
     pattern: /[a-zA-z][0-9a-zA-Z]*/,
   });
+  const DotsIdentifier = createToken({
+    name: 'DotsIdentifier',
+    pattern: /[a-zA-z][0-9a-zA-Z]*(\.[a-zA-z][0-9a-zA-Z]*)+/,
+  });
 
   const LiteralTokens = [
     Comment,
@@ -46,6 +50,7 @@
     WhiteSpace,
     BoolLiteral,
     IdentifierSuffix,
+    DotsIdentifier,
     Identifier,
   ];
 
@@ -385,6 +390,7 @@
 
       this.Factor = this.RULE('Factor', () => {
         this.OR([
+          { ALT: () => this.CONSUME(DotsIdentifier)},
           { ALT: () => this.CONSUME(NumberLiteral) },
           { ALT: () => this.CONSUME(StringLiteral) },
           { ALT: () => this.CONSUME(BoolLiteral) },
@@ -441,6 +447,6 @@
   return {
     lexer: ChiboLexer,
     parser: ChiboParser,
-    defaultRule: 'Program',
+    defaultRule: 'ProgramRoot',
   };
 })();

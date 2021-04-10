@@ -34,6 +34,11 @@ const Identifier = createToken({
   name: 'Identifier',
   pattern: /[a-zA-z][0-9a-zA-Z]*/,
 });
+const DotsIdentifier = createToken({
+  name: 'DotsIdentifier',
+  pattern: /[a-zA-z][0-9a-zA-Z]*(\.[a-zA-z][0-9a-zA-Z]*)+/,
+});
+
 
 const LiteralTokens = [
   Comment,
@@ -43,6 +48,7 @@ const LiteralTokens = [
   WhiteSpace,
   BoolLiteral,
   IdentifierSuffix,
+  DotsIdentifier,
   Identifier,
 ];
 
@@ -381,6 +387,7 @@ export class ChiboParser extends CstParser {
 
   private Factor = this.RULE('Factor', () => {
     this.OR([
+      { ALT: () => this.CONSUME(DotsIdentifier)},
       { ALT: () => this.CONSUME(NumberLiteral) },
       { ALT: () => this.CONSUME(StringLiteral) },
       { ALT: () => this.CONSUME(BoolLiteral) },
