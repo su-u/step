@@ -441,6 +441,6 @@
   return {
     lexer: ChiboLexer,
     parser: ChiboParser,
-    defaultRule: 'Program',
+    defaultRule: 'ProgramRoot',
   };
 })();
