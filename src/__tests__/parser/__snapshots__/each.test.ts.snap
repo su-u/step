@@ -103,11 +103,11 @@ exports[`each 1 1`] = `
                                                               \\"endLine\\": 2,
                                                               \\"startColumn\\": 6,
                                                               \\"endColumn\\": 6,
-                                                              \\"tokenTypeIdx\\": 41,
+                                                              \\"tokenTypeIdx\\": 40,
                                                               \\"tokenType\\": {
                                                                 \\"name\\": \\"TildeToken\\",
                                                                 \\"PATTERN\\": {},
-                                                                \\"tokenTypeIdx\\": 41,
+                                                                \\"tokenTypeIdx\\": 40,
                                                                 \\"CATEGORIES\\": [],
                                                                 \\"categoryMatches\\": [],
                                                                 \\"categoryMatchesMap\\": {},
@@ -127,11 +127,11 @@ exports[`each 1 1`] = `
                                                         \\"endLine\\": 2,
                                                         \\"startColumn\\": 10,
                                                         \\"endColumn\\": 11,
-                                                        \\"tokenTypeIdx\\": 42,
+                                                        \\"tokenTypeIdx\\": 41,
                                                         \\"tokenType\\": {
                                                           \\"name\\": \\"PipeToken\\",
                                                           \\"PATTERN\\": {},
-                                                          \\"tokenTypeIdx\\": 42,
+                                                          \\"tokenTypeIdx\\": 41,
                                                           \\"CATEGORIES\\": [],
                                                           \\"categoryMatches\\": [],
                                                           \\"categoryMatchesMap\\": {},
@@ -160,11 +160,11 @@ exports[`each 1 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 13,
                                                                           \\"endColumn\\": 16,
-                                                                          \\"tokenTypeIdx\\": 37,
+                                                                          \\"tokenTypeIdx\\": 36,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"EachToken\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 37,
+                                                                            \\"tokenTypeIdx\\": 36,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -181,11 +181,11 @@ exports[`each 1 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 18,
                                                                           \\"endColumn\\": 18,
-                                                                          \\"tokenTypeIdx\\": 12,
+                                                                          \\"tokenTypeIdx\\": 11,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"LBrackets\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 12,
+                                                                            \\"tokenTypeIdx\\": 11,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -224,11 +224,11 @@ exports[`each 1 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 20,
                                                                           \\"endColumn\\": 20,
-                                                                          \\"tokenTypeIdx\\": 13,
+                                                                          \\"tokenTypeIdx\\": 12,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"RBrackets\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 13,
+                                                                            \\"tokenTypeIdx\\": 12,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -246,11 +246,11 @@ exports[`each 1 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 22,
                                                                           \\"endColumn\\": 22,
-                                                                          \\"tokenTypeIdx\\": 14,
+                                                                          \\"tokenTypeIdx\\": 13,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"LCurly\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 14,
+                                                                            \\"tokenTypeIdx\\": 13,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -303,24 +303,31 @@ exports[`each 1 1`] = `
                                                                                                                                     {
                                                                                                                                       \\"name\\": \\"Factor\\",
                                                                                                                                       \\"children\\": {
-                                                                                                                                        \\"Identifier\\": [
+                                                                                                                                        \\"DotsIdentifier\\": [
                                                                                                                                           {
-                                                                                                                                            \\"image\\": \\"i\\",
-                                                                                                                                            \\"startOffset\\": 30,
-                                                                                                                                            \\"endOffset\\": 30,
-                                                                                                                                            \\"startLine\\": 3,
-                                                                                                                                            \\"endLine\\": 3,
-                                                                                                                                            \\"startColumn\\": 7,
-                                                                                                                                            \\"endColumn\\": 7,
-                                                                                                                                            \\"tokenTypeIdx\\": 10,
-                                                                                                                                            \\"tokenType\\": {
-                                                                                                                                              \\"name\\": \\"Identifier\\",
-                                                                                                                                              \\"PATTERN\\": {},
-                                                                                                                                              \\"tokenTypeIdx\\": 10,
-                                                                                                                                              \\"CATEGORIES\\": [],
-                                                                                                                                              \\"categoryMatches\\": [],
-                                                                                                                                              \\"categoryMatchesMap\\": {},
-                                                                                                                                              \\"isParent\\": false
+                                                                                                                                            \\"name\\": \\"DotsIdentifier\\",
+                                                                                                                                            \\"children\\": {
+                                                                                                                                              \\"identifier\\": [
+                                                                                                                                                {
+                                                                                                                                                  \\"image\\": \\"i\\",
+                                                                                                                                                  \\"startOffset\\": 30,
+                                                                                                                                                  \\"endOffset\\": 30,
+                                                                                                                                                  \\"startLine\\": 3,
+                                                                                                                                                  \\"endLine\\": 3,
+                                                                                                                                                  \\"startColumn\\": 7,
+                                                                                                                                                  \\"endColumn\\": 7,
+                                                                                                                                                  \\"tokenTypeIdx\\": 10,
+                                                                                                                                                  \\"tokenType\\": {
+                                                                                                                                                    \\"name\\": \\"Identifier\\",
+                                                                                                                                                    \\"PATTERN\\": {},
+                                                                                                                                                    \\"tokenTypeIdx\\": 10,
+                                                                                                                                                    \\"CATEGORIES\\": [],
+                                                                                                                                                    \\"categoryMatches\\": [],
+                                                                                                                                                    \\"categoryMatchesMap\\": {},
+                                                                                                                                                    \\"isParent\\": false
+                                                                                                                                                  }
+                                                                                                                                                }
+                                                                                                                                              ]
                                                                                                                                             }
                                                                                                                                           }
                                                                                                                                         ]
@@ -339,11 +346,11 @@ exports[`each 1 1`] = `
                                                                                                                                 \\"endLine\\": 3,
                                                                                                                                 \\"startColumn\\": 9,
                                                                                                                                 \\"endColumn\\": 10,
-                                                                                                                                \\"tokenTypeIdx\\": 42,
+                                                                                                                                \\"tokenTypeIdx\\": 41,
                                                                                                                                 \\"tokenType\\": {
                                                                                                                                   \\"name\\": \\"PipeToken\\",
                                                                                                                                   \\"PATTERN\\": {},
-                                                                                                                                  \\"tokenTypeIdx\\": 42,
+                                                                                                                                  \\"tokenTypeIdx\\": 41,
                                                                                                                                   \\"CATEGORIES\\": [],
                                                                                                                                   \\"categoryMatches\\": [],
                                                                                                                                   \\"categoryMatchesMap\\": {},
@@ -359,24 +366,31 @@ exports[`each 1 1`] = `
                                                                                                                                     {
                                                                                                                                       \\"name\\": \\"Factor\\",
                                                                                                                                       \\"children\\": {
-                                                                                                                                        \\"Identifier\\": [
+                                                                                                                                        \\"DotsIdentifier\\": [
                                                                                                                                           {
-                                                                                                                                            \\"image\\": \\"console\\",
-                                                                                                                                            \\"startOffset\\": 35,
-                                                                                                                                            \\"endOffset\\": 41,
-                                                                                                                                            \\"startLine\\": 3,
-                                                                                                                                            \\"endLine\\": 3,
-                                                                                                                                            \\"startColumn\\": 12,
-                                                                                                                                            \\"endColumn\\": 18,
-                                                                                                                                            \\"tokenTypeIdx\\": 10,
-                                                                                                                                            \\"tokenType\\": {
-                                                                                                                                              \\"name\\": \\"Identifier\\",
-                                                                                                                                              \\"PATTERN\\": {},
-                                                                                                                                              \\"tokenTypeIdx\\": 10,
-                                                                                                                                              \\"CATEGORIES\\": [],
-                                                                                                                                              \\"categoryMatches\\": [],
-                                                                                                                                              \\"categoryMatchesMap\\": {},
-                                                                                                                                              \\"isParent\\": false
+                                                                                                                                            \\"name\\": \\"DotsIdentifier\\",
+                                                                                                                                            \\"children\\": {
+                                                                                                                                              \\"identifier\\": [
+                                                                                                                                                {
+                                                                                                                                                  \\"image\\": \\"console\\",
+                                                                                                                                                  \\"startOffset\\": 35,
+                                                                                                                                                  \\"endOffset\\": 41,
+                                                                                                                                                  \\"startLine\\": 3,
+                                                                                                                                                  \\"endLine\\": 3,
+                                                                                                                                                  \\"startColumn\\": 12,
+                                                                                                                                                  \\"endColumn\\": 18,
+                                                                                                                                                  \\"tokenTypeIdx\\": 10,
+                                                                                                                                                  \\"tokenType\\": {
+                                                                                                                                                    \\"name\\": \\"Identifier\\",
+                                                                                                                                                    \\"PATTERN\\": {},
+                                                                                                                                                    \\"tokenTypeIdx\\": 10,
+                                                                                                                                                    \\"CATEGORIES\\": [],
+                                                                                                                                                    \\"categoryMatches\\": [],
+                                                                                                                                                    \\"categoryMatchesMap\\": {},
+                                                                                                                                                    \\"isParent\\": false
+                                                                                                                                                  }
+                                                                                                                                                }
+                                                                                                                                              ]
                                                                                                                                             }
                                                                                                                                           }
                                                                                                                                         ]
@@ -422,11 +436,11 @@ exports[`each 1 1`] = `
                                                                           \\"endLine\\": 4,
                                                                           \\"startColumn\\": 5,
                                                                           \\"endColumn\\": 5,
-                                                                          \\"tokenTypeIdx\\": 15,
+                                                                          \\"tokenTypeIdx\\": 14,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"RCurly\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 15,
+                                                                            \\"tokenTypeIdx\\": 14,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},

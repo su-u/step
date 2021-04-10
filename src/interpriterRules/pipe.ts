@@ -4,13 +4,13 @@ import { execFunction } from './pipe/function';
 import { execMatch } from './pipe/match';
 
 export const pipe = ({ ast, manager, execObject }: IInterpreterRules<any>) => {
-  const childrenAst = ast.children.from[0];
+  const childrenAst = ast.children.head[0];
   let fromValue = execObject.interpreter({ ast: childrenAst, manager, execObject });
   if (ast.children.tail !== undefined) {
     fromValue = ast.children.tail.reduce((last, pipeAst) => {
       if (pipeAst.children.toEach !== undefined) {
         return execEach({ ast: pipeAst, manager, execObject }, last);
-      } else if (pipeAst.children.toIdentifier !== undefined) {
+      } else if (pipeAst.children.DotsIdentifier !== undefined) {
         return execFunction({ ast: pipeAst, manager, execObject }, last);
       } else if (pipeAst.children.toMatch !== undefined) {
         return execMatch({ ast: pipeAst, manager, execObject }, last);

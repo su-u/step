@@ -21,6 +21,7 @@ export const interpreter = <T extends { name: string }>({
   manager,
   execObject,
 }: IInterpreterRules<any>) => {
+  // console.log(ast.name);
   let value = null;
   switch (ast.name) {
     case Rules.ProgramRoot:

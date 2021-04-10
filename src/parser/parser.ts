@@ -34,11 +34,6 @@ const Identifier = createToken({
   name: 'Identifier',
   pattern: /[a-zA-z][0-9a-zA-Z]*/,
 });
-const DotsIdentifier = createToken({
-  name: 'DotsIdentifier',
-  pattern: /[a-zA-z][0-9a-zA-Z]*(\.[a-zA-z][0-9a-zA-Z]*)+/,
-});
-
 
 const LiteralTokens = [
   Comment,
@@ -48,7 +43,6 @@ const LiteralTokens = [
   WhiteSpace,
   BoolLiteral,
   IdentifierSuffix,
-  DotsIdentifier,
   Identifier,
 ];
 
@@ -153,6 +147,10 @@ const FunctionNameToken = createToken({
   name: 'FunctionNameToken',
   pattern: /[a-zA-z][0-9a-zA-Z]*\(/,
 });
+const Dot = createToken({
+  name: 'Dot',
+  pattern: /\./,
+});
 
 const BuildInTokens = [
   FunctionToken,
@@ -167,6 +165,7 @@ const BuildInTokens = [
   ReturnToken,
   BreakToken,
   FunctionNameToken,
+  Dot,
 ];
 
 const allTokens = [
@@ -196,11 +195,11 @@ export class ChiboParser extends CstParser {
 
   private ProgramRules = this.RULE('ProgramRules', () => {
     this.OR([
+      { ALT: () => this.SUBRULE(this.ReturnStatement, { LABEL: 'rules' }) },
       { ALT: () => this.CONSUME(Comment, { LABEL: 'rules' }) },
       { ALT: () => this.SUBRULE(this.FunctionStatement, { LABEL: 'rules' }) },
       { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rules' }) },
       { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rules' }) },
-      { ALT: () => this.SUBRULE(this.ReturnStatement, { LABEL: 'rules' }) },
     ]);
   });
 
@@ -263,10 +262,10 @@ export class ChiboParser extends CstParser {
 
   private BlockRules = this.RULE('BlockRules', () => {
     this.OR([
+      { ALT: () => this.CONSUME(BreakToken, { LABEL: 'rules' }) },
       { ALT: () => this.SUBRULE(this.FunctionStatement, { LABEL: 'rules' }) },
       { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rules' }) },
       { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rules' }) },
-      { ALT: () => this.CONSUME(BreakToken, { LABEL: 'rules' }) },
     ]);
   });
 
@@ -387,18 +386,25 @@ export class ChiboParser extends CstParser {
 
   private Factor = this.RULE('Factor', () => {
     this.OR([
-      { ALT: () => this.CONSUME(DotsIdentifier)},
+      { ALT: () => this.SUBRULE(this.DotsIdentifier, { LABEL: 'DotsIdentifier' })},
       { ALT: () => this.CONSUME(NumberLiteral) },
       { ALT: () => this.CONSUME(StringLiteral) },
       { ALT: () => this.CONSUME(BoolLiteral) },
       { ALT: () => this.SUBRULE(this.ParenthesisExpression, { LABEL: 'parentheses' }) },
       { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'arrayElement' }) },
-      { ALT: () => this.CONSUME(Identifier) },
       { ALT: () => this.SUBRULE(this.ArrayExpression, { LABEL: 'arrayExpression' }) },
       { ALT: () => this.SUBRULE(this.Object, { LABEL: 'object' }) },
       { ALT: () => this.SUBRULE(this.MatchExpression, { LABEL: 'toMatch' }) },
       { ALT: () => this.SUBRULE(this.EachExpression, { LABEL: 'toEach' }) },
     ]);
+  });
+
+  private DotsIdentifier = this.RULE('DotsIdentifier', () => {
+    this.CONSUME(Identifier, { LABEL: 'identifier' });
+    this.MANY(() => {
+      this.CONSUME2(Dot);
+      this.CONSUME3(Identifier, { LABEL: 'identifier' });
+    });
   });
 
   private ArrayElement = this.RULE('ArrayElement', () => {

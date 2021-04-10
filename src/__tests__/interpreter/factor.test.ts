@@ -42,10 +42,17 @@ describe('factor', () => {
     const ast = {
       name: 'Factor',
       children: {
-        Identifier: [
+        DotsIdentifier: [
           {
-            image: 'value1',
-          },
+            "name": "DotsIdentifier",
+            "children": {
+              "identifier": [
+                {
+                  "image": "value1"
+                }
+              ]
+            }
+          }
         ],
       },
     };

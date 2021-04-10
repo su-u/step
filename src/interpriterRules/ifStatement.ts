@@ -2,6 +2,7 @@ import { IInterpreterRules } from './types';
 import { BooleanLiteralTokens } from '../tokens';
 import { VariableManager } from '../manager';
 import { toBoolean } from '../class/booleanClass';
+import { IfStatement } from '../types/ast';
 
 export const ifStatement = ({ ast, manager, execObject }: IInterpreterRules<IfStatement>) => {
   const condition = execObject.interpreter({

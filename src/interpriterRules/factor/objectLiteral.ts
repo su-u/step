@@ -1,4 +1,5 @@
 import { IInterpreterRules } from '../types';
+import { Factor } from '../../types/ast';
 
 export const objectLiteral = ({ ast, manager, execObject }: IInterpreterRules<Factor>) => {
   return execObject.interpreter({

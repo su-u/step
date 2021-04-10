@@ -2,6 +2,7 @@ import { IInterpreterRules } from './types';
 import { RangeOperatorTokens } from '../operators';
 import { Classes } from '../class';
 import { TypeError } from '../error';
+import { RangeExpression } from '../types/ast';
 
 export const rangeExpression = ({
   ast,

@@ -3,6 +3,7 @@ import { interpreter } from './interpreter';
 import { VariableManager, FunctionManager, Manager } from './manager';
 import { writeAstToJson } from './util/file';
 import { removeObjectByKey, UnnecessaryKeys } from './util/json';
+import { ProgramRoot } from './types/ast';
 
 export const entry = (text: string) => {
   const ast = parseInput(text) as ProgramRoot;
@@ -12,7 +13,7 @@ export const entry = (text: string) => {
       variable: new VariableManager(null),
       function: new FunctionManager(),
     };
-    interpreter<ProgramRoot, any>({ ast, manager, execObject: { interpreter } });
+    interpreter<ProgramRoot>({ ast, manager, execObject: { interpreter } });
     manager.variable.debug();
     manager.function.debug();
     // const rAst = removeObjectByKey(ast, UnnecessaryKeys);
