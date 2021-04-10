@@ -2,6 +2,7 @@ import { IInterpreterRules } from './types';
 import { RelationalOperatorTokens } from '../operators';
 import { Classes } from '../class';
 import { TypeError } from '../error';
+import { RelationExpression } from '../types/ast';
 
 export const relationExpression = ({
   ast,

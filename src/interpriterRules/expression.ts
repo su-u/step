@@ -2,6 +2,7 @@ import { IInterpreterRules } from './types';
 import { Operators } from '../operators';
 import { Classes } from '../class';
 import { TypeError } from '../error';
+import { Expression } from '../types/ast';
 
 export const expression = ({ ast, manager, execObject }: IInterpreterRules<Expression>) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {

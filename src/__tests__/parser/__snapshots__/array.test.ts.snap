@@ -57,11 +57,11 @@ exports[`if 1 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 1,
                                                                           \\"endColumn\\": 1,
-                                                                          \\"tokenTypeIdx\\": 16,
+                                                                          \\"tokenTypeIdx\\": 15,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"LSquare\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 16,
+                                                                            \\"tokenTypeIdx\\": 15,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -133,11 +133,11 @@ exports[`if 1 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 3,
                                                                           \\"endColumn\\": 3,
-                                                                          \\"tokenTypeIdx\\": 18,
+                                                                          \\"tokenTypeIdx\\": 17,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"Comma\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 18,
+                                                                            \\"tokenTypeIdx\\": 17,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -154,11 +154,11 @@ exports[`if 1 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 6,
                                                                           \\"endColumn\\": 6,
-                                                                          \\"tokenTypeIdx\\": 17,
+                                                                          \\"tokenTypeIdx\\": 16,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"RSquare\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 17,
+                                                                            \\"tokenTypeIdx\\": 16,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -200,11 +200,11 @@ exports[`if 1 1`] = `
                           \\"endLine\\": 2,
                           \\"startColumn\\": 8,
                           \\"endColumn\\": 9,
-                          \\"tokenTypeIdx\\": 44,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 44,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -293,11 +293,11 @@ exports[`if 1 1`] = `
                                                                           \\"endLine\\": 3,
                                                                           \\"startColumn\\": 1,
                                                                           \\"endColumn\\": 1,
-                                                                          \\"tokenTypeIdx\\": 16,
+                                                                          \\"tokenTypeIdx\\": 15,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"LSquare\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 16,
+                                                                            \\"tokenTypeIdx\\": 15,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -369,11 +369,11 @@ exports[`if 1 1`] = `
                                                                           \\"endLine\\": 3,
                                                                           \\"startColumn\\": 3,
                                                                           \\"endColumn\\": 3,
-                                                                          \\"tokenTypeIdx\\": 18,
+                                                                          \\"tokenTypeIdx\\": 17,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"Comma\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 18,
+                                                                            \\"tokenTypeIdx\\": 17,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -390,11 +390,11 @@ exports[`if 1 1`] = `
                                                                           \\"endLine\\": 3,
                                                                           \\"startColumn\\": 6,
                                                                           \\"endColumn\\": 6,
-                                                                          \\"tokenTypeIdx\\": 17,
+                                                                          \\"tokenTypeIdx\\": 16,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"RSquare\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 17,
+                                                                            \\"tokenTypeIdx\\": 16,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -436,11 +436,11 @@ exports[`if 1 1`] = `
                           \\"endLine\\": 3,
                           \\"startColumn\\": 8,
                           \\"endColumn\\": 9,
-                          \\"tokenTypeIdx\\": 44,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 44,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -567,11 +567,11 @@ exports[`if 1 1`] = `
                           \\"endLine\\": 5,
                           \\"startColumn\\": 3,
                           \\"endColumn\\": 4,
-                          \\"tokenTypeIdx\\": 44,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 44,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -698,11 +698,11 @@ exports[`if 1 1`] = `
                           \\"endLine\\": 6,
                           \\"startColumn\\": 3,
                           \\"endColumn\\": 4,
-                          \\"tokenTypeIdx\\": 44,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 44,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -791,11 +791,11 @@ exports[`if 1 1`] = `
                                                                           \\"endLine\\": 7,
                                                                           \\"startColumn\\": 1,
                                                                           \\"endColumn\\": 1,
-                                                                          \\"tokenTypeIdx\\": 16,
+                                                                          \\"tokenTypeIdx\\": 15,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"LSquare\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 16,
+                                                                            \\"tokenTypeIdx\\": 15,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -808,24 +808,31 @@ exports[`if 1 1`] = `
                                                                         {
                                                                           \\"name\\": \\"Factor\\",
                                                                           \\"children\\": {
-                                                                            \\"Identifier\\": [
+                                                                            \\"rules\\": [
                                                                               {
-                                                                                \\"image\\": \\"array1\\",
-                                                                                \\"startOffset\\": 61,
-                                                                                \\"endOffset\\": 66,
-                                                                                \\"startLine\\": 7,
-                                                                                \\"endLine\\": 7,
-                                                                                \\"startColumn\\": 2,
-                                                                                \\"endColumn\\": 7,
-                                                                                \\"tokenTypeIdx\\": 10,
-                                                                                \\"tokenType\\": {
-                                                                                  \\"name\\": \\"Identifier\\",
-                                                                                  \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 10,
-                                                                                  \\"CATEGORIES\\": [],
-                                                                                  \\"categoryMatches\\": [],
-                                                                                  \\"categoryMatchesMap\\": {},
-                                                                                  \\"isParent\\": false
+                                                                                \\"name\\": \\"DotsIdentifier\\",
+                                                                                \\"children\\": {
+                                                                                  \\"identifier\\": [
+                                                                                    {
+                                                                                      \\"image\\": \\"array1\\",
+                                                                                      \\"startOffset\\": 61,
+                                                                                      \\"endOffset\\": 66,
+                                                                                      \\"startLine\\": 7,
+                                                                                      \\"endLine\\": 7,
+                                                                                      \\"startColumn\\": 2,
+                                                                                      \\"endColumn\\": 7,
+                                                                                      \\"tokenTypeIdx\\": 10,
+                                                                                      \\"tokenType\\": {
+                                                                                        \\"name\\": \\"Identifier\\",
+                                                                                        \\"PATTERN\\": {},
+                                                                                        \\"tokenTypeIdx\\": 10,
+                                                                                        \\"CATEGORIES\\": [],
+                                                                                        \\"categoryMatches\\": [],
+                                                                                        \\"categoryMatchesMap\\": {},
+                                                                                        \\"isParent\\": false
+                                                                                      }
+                                                                                    }
+                                                                                  ]
                                                                                 }
                                                                               }
                                                                             ]
@@ -834,24 +841,31 @@ exports[`if 1 1`] = `
                                                                         {
                                                                           \\"name\\": \\"Factor\\",
                                                                           \\"children\\": {
-                                                                            \\"Identifier\\": [
+                                                                            \\"rules\\": [
                                                                               {
-                                                                                \\"image\\": \\"array2\\",
-                                                                                \\"startOffset\\": 69,
-                                                                                \\"endOffset\\": 74,
-                                                                                \\"startLine\\": 7,
-                                                                                \\"endLine\\": 7,
-                                                                                \\"startColumn\\": 10,
-                                                                                \\"endColumn\\": 15,
-                                                                                \\"tokenTypeIdx\\": 10,
-                                                                                \\"tokenType\\": {
-                                                                                  \\"name\\": \\"Identifier\\",
-                                                                                  \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 10,
-                                                                                  \\"CATEGORIES\\": [],
-                                                                                  \\"categoryMatches\\": [],
-                                                                                  \\"categoryMatchesMap\\": {},
-                                                                                  \\"isParent\\": false
+                                                                                \\"name\\": \\"DotsIdentifier\\",
+                                                                                \\"children\\": {
+                                                                                  \\"identifier\\": [
+                                                                                    {
+                                                                                      \\"image\\": \\"array2\\",
+                                                                                      \\"startOffset\\": 69,
+                                                                                      \\"endOffset\\": 74,
+                                                                                      \\"startLine\\": 7,
+                                                                                      \\"endLine\\": 7,
+                                                                                      \\"startColumn\\": 10,
+                                                                                      \\"endColumn\\": 15,
+                                                                                      \\"tokenTypeIdx\\": 10,
+                                                                                      \\"tokenType\\": {
+                                                                                        \\"name\\": \\"Identifier\\",
+                                                                                        \\"PATTERN\\": {},
+                                                                                        \\"tokenTypeIdx\\": 10,
+                                                                                        \\"CATEGORIES\\": [],
+                                                                                        \\"categoryMatches\\": [],
+                                                                                        \\"categoryMatchesMap\\": {},
+                                                                                        \\"isParent\\": false
+                                                                                      }
+                                                                                    }
+                                                                                  ]
                                                                                 }
                                                                               }
                                                                             ]
@@ -867,11 +881,11 @@ exports[`if 1 1`] = `
                                                                           \\"endLine\\": 7,
                                                                           \\"startColumn\\": 8,
                                                                           \\"endColumn\\": 8,
-                                                                          \\"tokenTypeIdx\\": 18,
+                                                                          \\"tokenTypeIdx\\": 17,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"Comma\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 18,
+                                                                            \\"tokenTypeIdx\\": 17,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -888,11 +902,11 @@ exports[`if 1 1`] = `
                                                                           \\"endLine\\": 7,
                                                                           \\"startColumn\\": 16,
                                                                           \\"endColumn\\": 16,
-                                                                          \\"tokenTypeIdx\\": 17,
+                                                                          \\"tokenTypeIdx\\": 16,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"RSquare\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 17,
+                                                                            \\"tokenTypeIdx\\": 16,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -934,11 +948,11 @@ exports[`if 1 1`] = `
                           \\"endLine\\": 7,
                           \\"startColumn\\": 18,
                           \\"endColumn\\": 19,
-                          \\"tokenTypeIdx\\": 44,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 44,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -1076,11 +1090,11 @@ exports[`if 1 1`] = `
                                                                           \\"endLine\\": 8,
                                                                           \\"startColumn\\": 13,
                                                                           \\"endColumn\\": 13,
-                                                                          \\"tokenTypeIdx\\": 17,
+                                                                          \\"tokenTypeIdx\\": 16,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"RSquare\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 17,
+                                                                            \\"tokenTypeIdx\\": 16,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -1122,11 +1136,11 @@ exports[`if 1 1`] = `
                           \\"endLine\\": 8,
                           \\"startColumn\\": 15,
                           \\"endColumn\\": 16,
-                          \\"tokenTypeIdx\\": 44,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 44,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -1264,11 +1278,11 @@ exports[`if 1 1`] = `
                                                                           \\"endLine\\": 9,
                                                                           \\"startColumn\\": 13,
                                                                           \\"endColumn\\": 13,
-                                                                          \\"tokenTypeIdx\\": 17,
+                                                                          \\"tokenTypeIdx\\": 16,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"RSquare\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 17,
+                                                                            \\"tokenTypeIdx\\": 16,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -1310,11 +1324,11 @@ exports[`if 1 1`] = `
                           \\"endLine\\": 9,
                           \\"startColumn\\": 15,
                           \\"endColumn\\": 16,
-                          \\"tokenTypeIdx\\": 44,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 44,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -1340,6 +1354,80 @@ exports[`if 1 1`] = `
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
                             \\"isParent\\": false
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"ProgramRules\\",
+        \\"children\\": {
+          \\"rules\\": [
+            {
+              \\"name\\": \\"Assignment\\",
+              \\"children\\": {
+                \\"rules\\": [
+                  {
+                    \\"name\\": \\"ToRight\\",
+                    \\"children\\": {
+                      \\"head\\": [
+                        {
+                          \\"name\\": \\"LogicExpression\\",
+                          \\"children\\": {
+                            \\"rules\\": [
+                              {
+                                \\"name\\": \\"RelationExpression\\",
+                                \\"children\\": {
+                                  \\"rules\\": [
+                                    {
+                                      \\"name\\": \\"Expression\\",
+                                      \\"children\\": {
+                                        \\"rules\\": [
+                                          {
+                                            \\"name\\": \\"Term\\",
+                                            \\"children\\": {
+                                              \\"rules\\": [
+                                                {
+                                                  \\"name\\": \\"PipeExpression\\",
+                                                  \\"children\\": {
+                                                    \\"head\\": [
+                                                      {
+                                                        \\"name\\": \\"RangeExpression\\",
+                                                        \\"children\\": {
+                                                          \\"rules\\": [
+                                                            {
+                                                              \\"name\\": \\"Factor\\",
+                                                              \\"children\\": {
+                                                                \\"rules\\": [
+                                                                  {
+                                                                    \\"name\\": \\"DotsIdentifier\\",
+                                                                    \\"children\\": {}
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
                           }
                         }
                       ]

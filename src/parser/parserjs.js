@@ -37,10 +37,6 @@
     name: 'Identifier',
     pattern: /[a-zA-z][0-9a-zA-Z]*/,
   });
-  const DotsIdentifier = createToken({
-    name: 'DotsIdentifier',
-    pattern: /[a-zA-z][0-9a-zA-Z]*(\.[a-zA-z][0-9a-zA-Z]*)+/,
-  });
 
   const LiteralTokens = [
     Comment,
@@ -50,7 +46,6 @@
     WhiteSpace,
     BoolLiteral,
     IdentifierSuffix,
-    DotsIdentifier,
     Identifier,
   ];
 
@@ -158,6 +153,10 @@
     name: 'FunctionNameToken',
     pattern: /[a-zA-z][0-9a-zA-Z]*\(/,
   });
+  const Dot = createToken({
+    name: 'Dot',
+    pattern: /\./,
+  });
 
   const BuildInTokens = [
     FunctionToken,
@@ -172,6 +171,7 @@
     ReturnToken,
     BreakToken,
     FunctionNameToken,
+    Dot,
   ];
 
   const allTokens = [
@@ -199,11 +199,11 @@
 
       this.ProgramRules = this.RULE('ProgramRule', () => {
         this.OR([
+          { ALT: () => this.SUBRULE(this.ReturnStatement, { LABEL: 'rules' }) },
           { ALT: () => this.CONSUME(Comment, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.FunctionStatement, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rules' }) },
-          { ALT: () => this.SUBRULE(this.ReturnStatement, { LABEL: 'rules' }) },
         ]);
       });
 
@@ -266,10 +266,10 @@
 
       this.BlockRules = this.RULE('BlockRules', () => {
         this.OR([
+          { ALT: () => this.CONSUME(BreakToken, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.FunctionStatement, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.IfStatement, { LABEL: 'rules' }) },
           { ALT: () => this.SUBRULE(this.Assignment, { LABEL: 'rules' }) },
-          { ALT: () => this.CONSUME(BreakToken, { LABEL: 'rules' }) },
         ]);
       });
 
@@ -390,18 +390,26 @@
 
       this.Factor = this.RULE('Factor', () => {
         this.OR([
-          { ALT: () => this.CONSUME(DotsIdentifier)},
           { ALT: () => this.CONSUME(NumberLiteral) },
           { ALT: () => this.CONSUME(StringLiteral) },
           { ALT: () => this.CONSUME(BoolLiteral) },
           { ALT: () => this.SUBRULE(this.ParenthesisExpression, { LABEL: 'parentheses' }) },
           { ALT: () => this.SUBRULE(this.ArrayElement, { LABEL: 'arrayElement' }) },
-          { ALT: () => this.CONSUME(Identifier) },
           { ALT: () => this.SUBRULE(this.ArrayExpression, { LABEL: 'arrayExpression' }) },
           { ALT: () => this.SUBRULE(this.Object, { LABEL: 'object' }) },
           { ALT: () => this.SUBRULE(this.MatchExpression, { LABEL: 'toMatch' }) },
           { ALT: () => this.SUBRULE(this.EachExpression, { LABEL: 'toEach' }) },
+          { ALT: () => this.SUBRULE(this.DotsIdentifier, { LABEL: 'rules' })},
         ]);
+      });
+
+      this.DotsIdentifier = this.RULE('DotsIdentifier', () => {
+        this.MANY_SEP({
+          SEP: Dot,
+          DEF: () => {
+            this.CONSUME(Identifier, { LABEL: 'identifier' });
+          },
+        });
       });
 
       this.ArrayElement = this.RULE('ArrayElement', () => {

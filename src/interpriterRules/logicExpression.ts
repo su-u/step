@@ -1,6 +1,7 @@
 import { IInterpreterRules } from './types';
 import { LogicalOperatorTokens } from '../operators';
 import { Classes } from '../class';
+import { LogicExpression } from '../types/ast';
 
 export const logicExpression = ({
   ast,

@@ -1,4 +1,5 @@
 import { IInterpreterRules } from './types';
+import { FunctionStatement } from '../types/ast';
 
 export const functionStatement = ({ ast, manager }: IInterpreterRules<FunctionStatement>) => {
   const functionName = ast.children.FunctionNameToken[0].image.slice(0, -1);

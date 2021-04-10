@@ -133,7 +133,7 @@ exports[`変数 数値 1`] = `
                                             \\"endLine\\": 2,
                                             \\"startColumn\\": 3,
                                             \\"endColumn\\": 3,
-                                            \\"tokenTypeIdx\\": 21,
+                                            \\"tokenTypeIdx\\": 20,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Plus\\",
                                               \\"PATTERN\\": {},
@@ -141,20 +141,20 @@ exports[`変数 数値 1`] = `
                                                 {
                                                   \\"name\\": \\"AdditionOperators\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 20,
+                                                  \\"tokenTypeIdx\\": 19,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    21,
-                                                    22
+                                                    20,
+                                                    21
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"21\\": true,
-                                                    \\"22\\": true
+                                                    \\"20\\": true,
+                                                    \\"21\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 21,
+                                              \\"tokenTypeIdx\\": 20,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -179,11 +179,11 @@ exports[`変数 数値 1`] = `
                           \\"endLine\\": 2,
                           \\"startColumn\\": 7,
                           \\"endColumn\\": 8,
-                          \\"tokenTypeIdx\\": 44,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 44,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -259,24 +259,31 @@ exports[`変数 数値 1`] = `
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
-                                                                \\"Identifier\\": [
+                                                                \\"rules\\": [
                                                                   {
-                                                                    \\"image\\": \\"value\\",
-                                                                    \\"startOffset\\": 16,
-                                                                    \\"endOffset\\": 20,
-                                                                    \\"startLine\\": 3,
-                                                                    \\"endLine\\": 3,
-                                                                    \\"startColumn\\": 1,
-                                                                    \\"endColumn\\": 5,
-                                                                    \\"tokenTypeIdx\\": 10,
-                                                                    \\"tokenType\\": {
-                                                                      \\"name\\": \\"Identifier\\",
-                                                                      \\"PATTERN\\": {},
-                                                                      \\"tokenTypeIdx\\": 10,
-                                                                      \\"CATEGORIES\\": [],
-                                                                      \\"categoryMatches\\": [],
-                                                                      \\"categoryMatchesMap\\": {},
-                                                                      \\"isParent\\": false
+                                                                    \\"name\\": \\"DotsIdentifier\\",
+                                                                    \\"children\\": {
+                                                                      \\"identifier\\": [
+                                                                        {
+                                                                          \\"image\\": \\"value\\",
+                                                                          \\"startOffset\\": 16,
+                                                                          \\"endOffset\\": 20,
+                                                                          \\"startLine\\": 3,
+                                                                          \\"endLine\\": 3,
+                                                                          \\"startColumn\\": 1,
+                                                                          \\"endColumn\\": 5,
+                                                                          \\"tokenTypeIdx\\": 10,
+                                                                          \\"tokenType\\": {
+                                                                            \\"name\\": \\"Identifier\\",
+                                                                            \\"PATTERN\\": {},
+                                                                            \\"tokenTypeIdx\\": 10,
+                                                                            \\"CATEGORIES\\": [],
+                                                                            \\"categoryMatches\\": [],
+                                                                            \\"categoryMatchesMap\\": {},
+                                                                            \\"isParent\\": false
+                                                                          }
+                                                                        }
+                                                                      ]
                                                                     }
                                                                   }
                                                                 ]
@@ -348,7 +355,7 @@ exports[`変数 数値 1`] = `
                                             \\"endLine\\": 3,
                                             \\"startColumn\\": 7,
                                             \\"endColumn\\": 7,
-                                            \\"tokenTypeIdx\\": 21,
+                                            \\"tokenTypeIdx\\": 20,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Plus\\",
                                               \\"PATTERN\\": {},
@@ -356,20 +363,20 @@ exports[`変数 数値 1`] = `
                                                 {
                                                   \\"name\\": \\"AdditionOperators\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 20,
+                                                  \\"tokenTypeIdx\\": 19,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    21,
-                                                    22
+                                                    20,
+                                                    21
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"21\\": true,
-                                                    \\"22\\": true
+                                                    \\"20\\": true,
+                                                    \\"21\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 21,
+                                              \\"tokenTypeIdx\\": 20,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -394,11 +401,11 @@ exports[`変数 数値 1`] = `
                           \\"endLine\\": 3,
                           \\"startColumn\\": 11,
                           \\"endColumn\\": 12,
-                          \\"tokenTypeIdx\\": 44,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 44,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -424,6 +431,80 @@ exports[`変数 数値 1`] = `
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
                             \\"isParent\\": false
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"ProgramRules\\",
+        \\"children\\": {
+          \\"rules\\": [
+            {
+              \\"name\\": \\"Assignment\\",
+              \\"children\\": {
+                \\"rules\\": [
+                  {
+                    \\"name\\": \\"ToRight\\",
+                    \\"children\\": {
+                      \\"head\\": [
+                        {
+                          \\"name\\": \\"LogicExpression\\",
+                          \\"children\\": {
+                            \\"rules\\": [
+                              {
+                                \\"name\\": \\"RelationExpression\\",
+                                \\"children\\": {
+                                  \\"rules\\": [
+                                    {
+                                      \\"name\\": \\"Expression\\",
+                                      \\"children\\": {
+                                        \\"rules\\": [
+                                          {
+                                            \\"name\\": \\"Term\\",
+                                            \\"children\\": {
+                                              \\"rules\\": [
+                                                {
+                                                  \\"name\\": \\"PipeExpression\\",
+                                                  \\"children\\": {
+                                                    \\"head\\": [
+                                                      {
+                                                        \\"name\\": \\"RangeExpression\\",
+                                                        \\"children\\": {
+                                                          \\"rules\\": [
+                                                            {
+                                                              \\"name\\": \\"Factor\\",
+                                                              \\"children\\": {
+                                                                \\"rules\\": [
+                                                                  {
+                                                                    \\"name\\": \\"DotsIdentifier\\",
+                                                                    \\"children\\": {}
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
                           }
                         }
                       ]
@@ -535,11 +616,11 @@ exports[`変数 文字列 1`] = `
                           \\"endLine\\": 2,
                           \\"startColumn\\": 8,
                           \\"endColumn\\": 9,
-                          \\"tokenTypeIdx\\": 44,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 44,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -615,24 +696,31 @@ exports[`変数 文字列 1`] = `
                                                             {
                                                               \\"name\\": \\"Factor\\",
                                                               \\"children\\": {
-                                                                \\"Identifier\\": [
+                                                                \\"rules\\": [
                                                                   {
-                                                                    \\"image\\": \\"value\\",
-                                                                    \\"startOffset\\": 17,
-                                                                    \\"endOffset\\": 21,
-                                                                    \\"startLine\\": 3,
-                                                                    \\"endLine\\": 3,
-                                                                    \\"startColumn\\": 1,
-                                                                    \\"endColumn\\": 5,
-                                                                    \\"tokenTypeIdx\\": 10,
-                                                                    \\"tokenType\\": {
-                                                                      \\"name\\": \\"Identifier\\",
-                                                                      \\"PATTERN\\": {},
-                                                                      \\"tokenTypeIdx\\": 10,
-                                                                      \\"CATEGORIES\\": [],
-                                                                      \\"categoryMatches\\": [],
-                                                                      \\"categoryMatchesMap\\": {},
-                                                                      \\"isParent\\": false
+                                                                    \\"name\\": \\"DotsIdentifier\\",
+                                                                    \\"children\\": {
+                                                                      \\"identifier\\": [
+                                                                        {
+                                                                          \\"image\\": \\"value\\",
+                                                                          \\"startOffset\\": 17,
+                                                                          \\"endOffset\\": 21,
+                                                                          \\"startLine\\": 3,
+                                                                          \\"endLine\\": 3,
+                                                                          \\"startColumn\\": 1,
+                                                                          \\"endColumn\\": 5,
+                                                                          \\"tokenTypeIdx\\": 10,
+                                                                          \\"tokenType\\": {
+                                                                            \\"name\\": \\"Identifier\\",
+                                                                            \\"PATTERN\\": {},
+                                                                            \\"tokenTypeIdx\\": 10,
+                                                                            \\"CATEGORIES\\": [],
+                                                                            \\"categoryMatches\\": [],
+                                                                            \\"categoryMatchesMap\\": {},
+                                                                            \\"isParent\\": false
+                                                                          }
+                                                                        }
+                                                                      ]
                                                                     }
                                                                   }
                                                                 ]
@@ -704,7 +792,7 @@ exports[`変数 文字列 1`] = `
                                             \\"endLine\\": 3,
                                             \\"startColumn\\": 7,
                                             \\"endColumn\\": 7,
-                                            \\"tokenTypeIdx\\": 21,
+                                            \\"tokenTypeIdx\\": 20,
                                             \\"tokenType\\": {
                                               \\"name\\": \\"Plus\\",
                                               \\"PATTERN\\": {},
@@ -712,20 +800,20 @@ exports[`変数 文字列 1`] = `
                                                 {
                                                   \\"name\\": \\"AdditionOperators\\",
                                                   \\"PATTERN\\": {},
-                                                  \\"tokenTypeIdx\\": 20,
+                                                  \\"tokenTypeIdx\\": 19,
                                                   \\"CATEGORIES\\": [],
                                                   \\"categoryMatches\\": [
-                                                    21,
-                                                    22
+                                                    20,
+                                                    21
                                                   ],
                                                   \\"categoryMatchesMap\\": {
-                                                    \\"21\\": true,
-                                                    \\"22\\": true
+                                                    \\"20\\": true,
+                                                    \\"21\\": true
                                                   },
                                                   \\"isParent\\": true
                                                 }
                                               ],
-                                              \\"tokenTypeIdx\\": 21,
+                                              \\"tokenTypeIdx\\": 20,
                                               \\"categoryMatches\\": [],
                                               \\"categoryMatchesMap\\": {},
                                               \\"isParent\\": false
@@ -750,11 +838,11 @@ exports[`変数 文字列 1`] = `
                           \\"endLine\\": 3,
                           \\"startColumn\\": 16,
                           \\"endColumn\\": 17,
-                          \\"tokenTypeIdx\\": 44,
+                          \\"tokenTypeIdx\\": 43,
                           \\"tokenType\\": {
                             \\"name\\": \\"ToRightToken\\",
                             \\"PATTERN\\": {},
-                            \\"tokenTypeIdx\\": 44,
+                            \\"tokenTypeIdx\\": 43,
                             \\"CATEGORIES\\": [],
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
@@ -780,6 +868,80 @@ exports[`変数 文字列 1`] = `
                             \\"categoryMatches\\": [],
                             \\"categoryMatchesMap\\": {},
                             \\"isParent\\": false
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"ProgramRules\\",
+        \\"children\\": {
+          \\"rules\\": [
+            {
+              \\"name\\": \\"Assignment\\",
+              \\"children\\": {
+                \\"rules\\": [
+                  {
+                    \\"name\\": \\"ToRight\\",
+                    \\"children\\": {
+                      \\"head\\": [
+                        {
+                          \\"name\\": \\"LogicExpression\\",
+                          \\"children\\": {
+                            \\"rules\\": [
+                              {
+                                \\"name\\": \\"RelationExpression\\",
+                                \\"children\\": {
+                                  \\"rules\\": [
+                                    {
+                                      \\"name\\": \\"Expression\\",
+                                      \\"children\\": {
+                                        \\"rules\\": [
+                                          {
+                                            \\"name\\": \\"Term\\",
+                                            \\"children\\": {
+                                              \\"rules\\": [
+                                                {
+                                                  \\"name\\": \\"PipeExpression\\",
+                                                  \\"children\\": {
+                                                    \\"head\\": [
+                                                      {
+                                                        \\"name\\": \\"RangeExpression\\",
+                                                        \\"children\\": {
+                                                          \\"rules\\": [
+                                                            {
+                                                              \\"name\\": \\"Factor\\",
+                                                              \\"children\\": {
+                                                                \\"rules\\": [
+                                                                  {
+                                                                    \\"name\\": \\"DotsIdentifier\\",
+                                                                    \\"children\\": {}
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
                           }
                         }
                       ]

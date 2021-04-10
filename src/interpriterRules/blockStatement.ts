@@ -1,4 +1,5 @@
 import { IInterpreterRules } from './types';
+import { BlockStatement } from '../types/ast';
 
 export const blockStatement = ({ ast, manager, execObject }: IInterpreterRules<BlockStatement>) => {
   return ast.children.rules.reduce((ac, line) => {

@@ -1,40 +1,40 @@
-export declare type BooleanLiteralType = {
+export type BooleanLiteralType = {
   readonly name: 'BooleanLiteral';
   image: string;
 };
 
-export declare type NumberLiteralType = {
+export type NumberLiteralType = {
   readonly name: 'NumberLiteral';
   image: number;
 };
 
-export declare type StringLiteralType = {
+export type StringLiteralType = {
   readonly name: 'StringLiteral';
   image: string;
 };
 
-export declare type IdentifierType = {
+export type IdentifierType = {
   readonly name: 'Identifier';
   image: string;
 };
 
-export declare type DebugLiteralType = {
+export type DebugLiteralType = {
   readonly name: 'DebugLiteral';
   image: null;
 };
 
-export declare type NumberLiteralRangeType = {
+export type NumberLiteralRangeType = {
   readonly name: 'NumberLiteralRange';
   start: number;
   end: number;
 };
 
-export declare type ArrayLiteralType = {
+export type ArrayLiteralType = {
   readonly name: 'ArrayLiteral';
   image: Array<AllLiteralType>;
 };
 
-export declare type AllLiteralType =
+export type AllLiteralType =
   | BooleanLiteralType
   | NumberLiteralType
   | StringLiteralType

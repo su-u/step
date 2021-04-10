@@ -1,15 +1,13 @@
-declare type LiteralType = {
+export type LiteralType = {
   image: string;
 };
 
-declare type NumberLiteral = LiteralType;
+export type NumberLiteral = LiteralType;
 
-declare type StringLiteral = LiteralType;
+export type StringLiteral = LiteralType;
 
-declare type BoolLiteral = LiteralType;
+export type BoolLiteral = LiteralType;
 
-declare type Identifier = LiteralType;
+export type Identifier = LiteralType;
 
-declare type StepObject = any;
-
-declare type DotsIdentifier = LiteralType;
+export type StepObject = any;

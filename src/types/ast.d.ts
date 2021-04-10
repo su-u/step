@@ -1,32 +1,34 @@
-declare type ProgramRoot = {
+import { BoolLiteral, Identifier, LiteralType, NumberLiteral, StepObject, StringLiteral } from './literal';
+
+export type ProgramRoot = {
   name: 'ProgramRoot';
   children: {
     rules: ProgramRules[];
   };
 };
 
-declare type ProgramRules = {
+export type ProgramRules = {
   name: 'ProgramRules';
   children: {
     rules: (Assignment | FunctionStatement | IfStatement)[];
   };
 };
 
-declare type BlockStatement = {
+export type BlockStatement = {
   name: 'BlockStatement';
   children: {
     rules: BlockRules[];
   };
 };
 
-declare type BlockRules = {
+export type BlockRules = {
   name: 'BlockRules';
   children: {
     rules: (Assignment | FunctionStatement)[];
   };
 };
 
-declare type IfStatement = {
+export type IfStatement = {
   name: 'IfStatement';
   children: {
     conditionalExpression: LogicExpression[];
@@ -34,7 +36,7 @@ declare type IfStatement = {
   };
 };
 
-declare type FunctionStatement = {
+export type FunctionStatement = {
   name: 'FunctionStatement';
   children: {
     FunctionNameToken: {
@@ -45,21 +47,21 @@ declare type FunctionStatement = {
   };
 };
 
-declare type FunctionArguments = {
+export type FunctionArguments = {
   name: 'FunctionArguments';
   children: {
     Identifier: Identifier[];
   };
 };
 
-declare type Assignment = {
+export type Assignment = {
   name: 'Assignment';
   children: {
     rules: ToRight[];
   };
 };
 
-declare type ToRight = {
+export type ToRight = {
   name: 'ToRight';
   children: {
     head: LogicExpression[];
@@ -69,52 +71,58 @@ declare type ToRight = {
   };
 };
 
-declare type LogicExpression = {
+export type LogicExpression = {
   name: 'LogicalExpression';
   children: {
     rules: RelationExpression[];
   };
 };
 
-declare type RelationExpression = {
+export type RelationExpression = {
   name: 'RelationExpression';
   children: {
     rules: Expression[];
   };
 };
 
-declare type Expression = {
+export type Expression = {
   name: 'Expression';
   children: {
     rules: Term[];
   };
 };
 
-declare type Term = {
+export type Term = {
   name: 'Term';
   children: {
     rules: PipeExpression[];
   };
 };
 
-declare type PipeExpression = {
+export type PipeExpression = {
   name: 'PipeExpression';
   children: {
     head: RangeExpression[];
   };
 };
 
-declare type RangeExpression = {
+export type RangeExpression = {
   name: 'RangeExpression';
   children: {
     rules: Factor[];
   };
 };
 
-declare type Factor = {
+export type DotsIdentifier = {
+  children: {
+    identifier: LiteralType[];
+  }
+}
+
+export type Factor = {
   name: 'Factor';
   children: {
-    DotsIdentifier: DotsIdentifier[];
+    DotsIdentifier: DotsIdentifier;
     NumberLiteral?: NumberLiteral[];
     StringLiteral?: StringLiteral[];
     BoolLiteral?: BoolLiteral[];

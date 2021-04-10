@@ -80,11 +80,11 @@ exports[`match 1 1`] = `
                                                         \\"endLine\\": 2,
                                                         \\"startColumn\\": 3,
                                                         \\"endColumn\\": 4,
-                                                        \\"tokenTypeIdx\\": 42,
+                                                        \\"tokenTypeIdx\\": 41,
                                                         \\"tokenType\\": {
                                                           \\"name\\": \\"PipeToken\\",
                                                           \\"PATTERN\\": {},
-                                                          \\"tokenTypeIdx\\": 42,
+                                                          \\"tokenTypeIdx\\": 41,
                                                           \\"CATEGORIES\\": [],
                                                           \\"categoryMatches\\": [],
                                                           \\"categoryMatchesMap\\": {},
@@ -113,11 +113,11 @@ exports[`match 1 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 6,
                                                                           \\"endColumn\\": 10,
-                                                                          \\"tokenTypeIdx\\": 38,
+                                                                          \\"tokenTypeIdx\\": 37,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"MatchToken\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 38,
+                                                                            \\"tokenTypeIdx\\": 37,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -134,11 +134,11 @@ exports[`match 1 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 12,
                                                                           \\"endColumn\\": 12,
-                                                                          \\"tokenTypeIdx\\": 14,
+                                                                          \\"tokenTypeIdx\\": 13,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"LCurly\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 14,
+                                                                            \\"tokenTypeIdx\\": 13,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -160,11 +160,11 @@ exports[`match 1 1`] = `
                                                                                 \\"endLine\\": 3,
                                                                                 \\"startColumn\\": 3,
                                                                                 \\"endColumn\\": 3,
-                                                                                \\"tokenTypeIdx\\": 12,
+                                                                                \\"tokenTypeIdx\\": 11,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"LBrackets\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 12,
+                                                                                  \\"tokenTypeIdx\\": 11,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -252,11 +252,11 @@ exports[`match 1 1`] = `
                                                                                 \\"endLine\\": 3,
                                                                                 \\"startColumn\\": 5,
                                                                                 \\"endColumn\\": 5,
-                                                                                \\"tokenTypeIdx\\": 13,
+                                                                                \\"tokenTypeIdx\\": 12,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"RBrackets\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 13,
+                                                                                  \\"tokenTypeIdx\\": 12,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -274,11 +274,11 @@ exports[`match 1 1`] = `
                                                                                 \\"endLine\\": 3,
                                                                                 \\"startColumn\\": 7,
                                                                                 \\"endColumn\\": 8,
-                                                                                \\"tokenTypeIdx\\": 43,
+                                                                                \\"tokenTypeIdx\\": 42,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"Arrow\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 43,
+                                                                                  \\"tokenTypeIdx\\": 42,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -295,11 +295,11 @@ exports[`match 1 1`] = `
                                                                                 \\"endLine\\": 3,
                                                                                 \\"startColumn\\": 10,
                                                                                 \\"endColumn\\": 10,
-                                                                                \\"tokenTypeIdx\\": 14,
+                                                                                \\"tokenTypeIdx\\": 13,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"LCurly\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 14,
+                                                                                  \\"tokenTypeIdx\\": 13,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -329,11 +329,11 @@ exports[`match 1 1`] = `
                                                                                                   \\"endLine\\": 3,
                                                                                                   \\"startColumn\\": 12,
                                                                                                   \\"endColumn\\": 17,
-                                                                                                  \\"tokenTypeIdx\\": 45,
+                                                                                                  \\"tokenTypeIdx\\": 44,
                                                                                                   \\"tokenType\\": {
                                                                                                     \\"name\\": \\"ReturnToken\\",
                                                                                                     \\"PATTERN\\": {},
-                                                                                                    \\"tokenTypeIdx\\": 45,
+                                                                                                    \\"tokenTypeIdx\\": 44,
                                                                                                     \\"CATEGORIES\\": [],
                                                                                                     \\"categoryMatches\\": [],
                                                                                                     \\"categoryMatchesMap\\": {},
@@ -415,6 +415,80 @@ exports[`match 1 1`] = `
                                                                                           }
                                                                                         ]
                                                                                       }
+                                                                                    },
+                                                                                    {
+                                                                                      \\"name\\": \\"ProgramRules\\",
+                                                                                      \\"children\\": {
+                                                                                        \\"rules\\": [
+                                                                                          {
+                                                                                            \\"name\\": \\"Assignment\\",
+                                                                                            \\"children\\": {
+                                                                                              \\"rules\\": [
+                                                                                                {
+                                                                                                  \\"name\\": \\"ToRight\\",
+                                                                                                  \\"children\\": {
+                                                                                                    \\"head\\": [
+                                                                                                      {
+                                                                                                        \\"name\\": \\"LogicExpression\\",
+                                                                                                        \\"children\\": {
+                                                                                                          \\"rules\\": [
+                                                                                                            {
+                                                                                                              \\"name\\": \\"RelationExpression\\",
+                                                                                                              \\"children\\": {
+                                                                                                                \\"rules\\": [
+                                                                                                                  {
+                                                                                                                    \\"name\\": \\"Expression\\",
+                                                                                                                    \\"children\\": {
+                                                                                                                      \\"rules\\": [
+                                                                                                                        {
+                                                                                                                          \\"name\\": \\"Term\\",
+                                                                                                                          \\"children\\": {
+                                                                                                                            \\"rules\\": [
+                                                                                                                              {
+                                                                                                                                \\"name\\": \\"PipeExpression\\",
+                                                                                                                                \\"children\\": {
+                                                                                                                                  \\"head\\": [
+                                                                                                                                    {
+                                                                                                                                      \\"name\\": \\"RangeExpression\\",
+                                                                                                                                      \\"children\\": {
+                                                                                                                                        \\"rules\\": [
+                                                                                                                                          {
+                                                                                                                                            \\"name\\": \\"Factor\\",
+                                                                                                                                            \\"children\\": {
+                                                                                                                                              \\"rules\\": [
+                                                                                                                                                {
+                                                                                                                                                  \\"name\\": \\"DotsIdentifier\\",
+                                                                                                                                                  \\"children\\": {}
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                        ]
+                                                                                                                                      }
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            ]
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                ]
+                                                                                                              }
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      }
+                                                                                                    ]
+                                                                                                  }
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          }
+                                                                                        ]
+                                                                                      }
                                                                                     }
                                                                                   ]
                                                                                 }
@@ -429,11 +503,11 @@ exports[`match 1 1`] = `
                                                                                 \\"endLine\\": 3,
                                                                                 \\"startColumn\\": 22,
                                                                                 \\"endColumn\\": 22,
-                                                                                \\"tokenTypeIdx\\": 15,
+                                                                                \\"tokenTypeIdx\\": 14,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"RCurly\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 15,
+                                                                                  \\"tokenTypeIdx\\": 14,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -454,11 +528,11 @@ exports[`match 1 1`] = `
                                                                           \\"endLine\\": 4,
                                                                           \\"startColumn\\": 1,
                                                                           \\"endColumn\\": 1,
-                                                                          \\"tokenTypeIdx\\": 15,
+                                                                          \\"tokenTypeIdx\\": 14,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"RCurly\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 15,
+                                                                            \\"tokenTypeIdx\\": 14,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -468,6 +542,80 @@ exports[`match 1 1`] = `
                                                                         }
                                                                       ]
                                                                     }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"ProgramRules\\",
+        \\"children\\": {
+          \\"rules\\": [
+            {
+              \\"name\\": \\"Assignment\\",
+              \\"children\\": {
+                \\"rules\\": [
+                  {
+                    \\"name\\": \\"ToRight\\",
+                    \\"children\\": {
+                      \\"head\\": [
+                        {
+                          \\"name\\": \\"LogicExpression\\",
+                          \\"children\\": {
+                            \\"rules\\": [
+                              {
+                                \\"name\\": \\"RelationExpression\\",
+                                \\"children\\": {
+                                  \\"rules\\": [
+                                    {
+                                      \\"name\\": \\"Expression\\",
+                                      \\"children\\": {
+                                        \\"rules\\": [
+                                          {
+                                            \\"name\\": \\"Term\\",
+                                            \\"children\\": {
+                                              \\"rules\\": [
+                                                {
+                                                  \\"name\\": \\"PipeExpression\\",
+                                                  \\"children\\": {
+                                                    \\"head\\": [
+                                                      {
+                                                        \\"name\\": \\"RangeExpression\\",
+                                                        \\"children\\": {
+                                                          \\"rules\\": [
+                                                            {
+                                                              \\"name\\": \\"Factor\\",
+                                                              \\"children\\": {
+                                                                \\"rules\\": [
+                                                                  {
+                                                                    \\"name\\": \\"DotsIdentifier\\",
+                                                                    \\"children\\": {}
                                                                   }
                                                                 ]
                                                               }
@@ -561,11 +709,11 @@ exports[`match 2 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 1,
                                                                           \\"endColumn\\": 1,
-                                                                          \\"tokenTypeIdx\\": 14,
+                                                                          \\"tokenTypeIdx\\": 13,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"LCurly\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 14,
+                                                                            \\"tokenTypeIdx\\": 13,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -739,11 +887,11 @@ exports[`match 2 1`] = `
                                                                                 \\"endLine\\": 2,
                                                                                 \\"startColumn\\": 4,
                                                                                 \\"endColumn\\": 4,
-                                                                                \\"tokenTypeIdx\\": 18,
+                                                                                \\"tokenTypeIdx\\": 17,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"Comma\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 18,
+                                                                                  \\"tokenTypeIdx\\": 17,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -763,11 +911,11 @@ exports[`match 2 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 9,
                                                                           \\"endColumn\\": 9,
-                                                                          \\"tokenTypeIdx\\": 15,
+                                                                          \\"tokenTypeIdx\\": 14,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"RCurly\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 15,
+                                                                            \\"tokenTypeIdx\\": 14,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -794,11 +942,11 @@ exports[`match 2 1`] = `
                                                         \\"endLine\\": 2,
                                                         \\"startColumn\\": 11,
                                                         \\"endColumn\\": 12,
-                                                        \\"tokenTypeIdx\\": 42,
+                                                        \\"tokenTypeIdx\\": 41,
                                                         \\"tokenType\\": {
                                                           \\"name\\": \\"PipeToken\\",
                                                           \\"PATTERN\\": {},
-                                                          \\"tokenTypeIdx\\": 42,
+                                                          \\"tokenTypeIdx\\": 41,
                                                           \\"CATEGORIES\\": [],
                                                           \\"categoryMatches\\": [],
                                                           \\"categoryMatchesMap\\": {},
@@ -827,11 +975,11 @@ exports[`match 2 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 14,
                                                                           \\"endColumn\\": 18,
-                                                                          \\"tokenTypeIdx\\": 38,
+                                                                          \\"tokenTypeIdx\\": 37,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"MatchToken\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 38,
+                                                                            \\"tokenTypeIdx\\": 37,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -848,11 +996,11 @@ exports[`match 2 1`] = `
                                                                           \\"endLine\\": 2,
                                                                           \\"startColumn\\": 20,
                                                                           \\"endColumn\\": 20,
-                                                                          \\"tokenTypeIdx\\": 14,
+                                                                          \\"tokenTypeIdx\\": 13,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"LCurly\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 14,
+                                                                            \\"tokenTypeIdx\\": 13,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -874,11 +1022,11 @@ exports[`match 2 1`] = `
                                                                                 \\"endLine\\": 3,
                                                                                 \\"startColumn\\": 3,
                                                                                 \\"endColumn\\": 3,
-                                                                                \\"tokenTypeIdx\\": 12,
+                                                                                \\"tokenTypeIdx\\": 11,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"LBrackets\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 12,
+                                                                                  \\"tokenTypeIdx\\": 11,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -1034,11 +1182,11 @@ exports[`match 2 1`] = `
                                                                                 \\"endLine\\": 3,
                                                                                 \\"startColumn\\": 5,
                                                                                 \\"endColumn\\": 5,
-                                                                                \\"tokenTypeIdx\\": 18,
+                                                                                \\"tokenTypeIdx\\": 17,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"Comma\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 18,
+                                                                                  \\"tokenTypeIdx\\": 17,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -1055,11 +1203,11 @@ exports[`match 2 1`] = `
                                                                                 \\"endLine\\": 3,
                                                                                 \\"startColumn\\": 9,
                                                                                 \\"endColumn\\": 9,
-                                                                                \\"tokenTypeIdx\\": 13,
+                                                                                \\"tokenTypeIdx\\": 12,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"RBrackets\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 13,
+                                                                                  \\"tokenTypeIdx\\": 12,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -1077,11 +1225,11 @@ exports[`match 2 1`] = `
                                                                                 \\"endLine\\": 3,
                                                                                 \\"startColumn\\": 11,
                                                                                 \\"endColumn\\": 12,
-                                                                                \\"tokenTypeIdx\\": 43,
+                                                                                \\"tokenTypeIdx\\": 42,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"Arrow\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 43,
+                                                                                  \\"tokenTypeIdx\\": 42,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -1098,11 +1246,11 @@ exports[`match 2 1`] = `
                                                                                 \\"endLine\\": 3,
                                                                                 \\"startColumn\\": 14,
                                                                                 \\"endColumn\\": 14,
-                                                                                \\"tokenTypeIdx\\": 14,
+                                                                                \\"tokenTypeIdx\\": 13,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"LCurly\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 14,
+                                                                                  \\"tokenTypeIdx\\": 13,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -1132,11 +1280,11 @@ exports[`match 2 1`] = `
                                                                                                   \\"endLine\\": 3,
                                                                                                   \\"startColumn\\": 16,
                                                                                                   \\"endColumn\\": 21,
-                                                                                                  \\"tokenTypeIdx\\": 45,
+                                                                                                  \\"tokenTypeIdx\\": 44,
                                                                                                   \\"tokenType\\": {
                                                                                                     \\"name\\": \\"ReturnToken\\",
                                                                                                     \\"PATTERN\\": {},
-                                                                                                    \\"tokenTypeIdx\\": 45,
+                                                                                                    \\"tokenTypeIdx\\": 44,
                                                                                                     \\"CATEGORIES\\": [],
                                                                                                     \\"categoryMatches\\": [],
                                                                                                     \\"categoryMatchesMap\\": {},
@@ -1218,6 +1366,80 @@ exports[`match 2 1`] = `
                                                                                           }
                                                                                         ]
                                                                                       }
+                                                                                    },
+                                                                                    {
+                                                                                      \\"name\\": \\"ProgramRules\\",
+                                                                                      \\"children\\": {
+                                                                                        \\"rules\\": [
+                                                                                          {
+                                                                                            \\"name\\": \\"Assignment\\",
+                                                                                            \\"children\\": {
+                                                                                              \\"rules\\": [
+                                                                                                {
+                                                                                                  \\"name\\": \\"ToRight\\",
+                                                                                                  \\"children\\": {
+                                                                                                    \\"head\\": [
+                                                                                                      {
+                                                                                                        \\"name\\": \\"LogicExpression\\",
+                                                                                                        \\"children\\": {
+                                                                                                          \\"rules\\": [
+                                                                                                            {
+                                                                                                              \\"name\\": \\"RelationExpression\\",
+                                                                                                              \\"children\\": {
+                                                                                                                \\"rules\\": [
+                                                                                                                  {
+                                                                                                                    \\"name\\": \\"Expression\\",
+                                                                                                                    \\"children\\": {
+                                                                                                                      \\"rules\\": [
+                                                                                                                        {
+                                                                                                                          \\"name\\": \\"Term\\",
+                                                                                                                          \\"children\\": {
+                                                                                                                            \\"rules\\": [
+                                                                                                                              {
+                                                                                                                                \\"name\\": \\"PipeExpression\\",
+                                                                                                                                \\"children\\": {
+                                                                                                                                  \\"head\\": [
+                                                                                                                                    {
+                                                                                                                                      \\"name\\": \\"RangeExpression\\",
+                                                                                                                                      \\"children\\": {
+                                                                                                                                        \\"rules\\": [
+                                                                                                                                          {
+                                                                                                                                            \\"name\\": \\"Factor\\",
+                                                                                                                                            \\"children\\": {
+                                                                                                                                              \\"rules\\": [
+                                                                                                                                                {
+                                                                                                                                                  \\"name\\": \\"DotsIdentifier\\",
+                                                                                                                                                  \\"children\\": {}
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                        ]
+                                                                                                                                      }
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            ]
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                ]
+                                                                                                              }
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      }
+                                                                                                    ]
+                                                                                                  }
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          }
+                                                                                        ]
+                                                                                      }
                                                                                     }
                                                                                   ]
                                                                                 }
@@ -1232,11 +1454,11 @@ exports[`match 2 1`] = `
                                                                                 \\"endLine\\": 3,
                                                                                 \\"startColumn\\": 26,
                                                                                 \\"endColumn\\": 26,
-                                                                                \\"tokenTypeIdx\\": 15,
+                                                                                \\"tokenTypeIdx\\": 14,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"RCurly\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 15,
+                                                                                  \\"tokenTypeIdx\\": 14,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -1259,16 +1481,71 @@ exports[`match 2 1`] = `
                                                                                 \\"endLine\\": 4,
                                                                                 \\"startColumn\\": 3,
                                                                                 \\"endColumn\\": 3,
-                                                                                \\"tokenTypeIdx\\": 12,
+                                                                                \\"tokenTypeIdx\\": 11,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"LBrackets\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 12,
+                                                                                  \\"tokenTypeIdx\\": 11,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
                                                                                   \\"isParent\\": false,
                                                                                   \\"LABEL\\": \\"(\\"
+                                                                                }
+                                                                              }
+                                                                            ],
+                                                                            \\"arguments\\": [
+                                                                              {
+                                                                                \\"name\\": \\"LogicExpression\\",
+                                                                                \\"children\\": {
+                                                                                  \\"rules\\": [
+                                                                                    {
+                                                                                      \\"name\\": \\"RelationExpression\\",
+                                                                                      \\"children\\": {
+                                                                                        \\"rules\\": [
+                                                                                          {
+                                                                                            \\"name\\": \\"Expression\\",
+                                                                                            \\"children\\": {
+                                                                                              \\"rules\\": [
+                                                                                                {
+                                                                                                  \\"name\\": \\"Term\\",
+                                                                                                  \\"children\\": {
+                                                                                                    \\"rules\\": [
+                                                                                                      {
+                                                                                                        \\"name\\": \\"PipeExpression\\",
+                                                                                                        \\"children\\": {
+                                                                                                          \\"head\\": [
+                                                                                                            {
+                                                                                                              \\"name\\": \\"RangeExpression\\",
+                                                                                                              \\"children\\": {
+                                                                                                                \\"rules\\": [
+                                                                                                                  {
+                                                                                                                    \\"name\\": \\"Factor\\",
+                                                                                                                    \\"children\\": {
+                                                                                                                      \\"rules\\": [
+                                                                                                                        {
+                                                                                                                          \\"name\\": \\"DotsIdentifier\\",
+                                                                                                                          \\"children\\": {}
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                ]
+                                                                                                              }
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      }
+                                                                                                    ]
+                                                                                                  }
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          }
+                                                                                        ]
+                                                                                      }
+                                                                                    }
+                                                                                  ]
                                                                                 }
                                                                               }
                                                                             ],
@@ -1281,11 +1558,11 @@ exports[`match 2 1`] = `
                                                                                 \\"endLine\\": 4,
                                                                                 \\"startColumn\\": 4,
                                                                                 \\"endColumn\\": 4,
-                                                                                \\"tokenTypeIdx\\": 13,
+                                                                                \\"tokenTypeIdx\\": 12,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"RBrackets\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 13,
+                                                                                  \\"tokenTypeIdx\\": 12,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -1303,11 +1580,11 @@ exports[`match 2 1`] = `
                                                                                 \\"endLine\\": 4,
                                                                                 \\"startColumn\\": 6,
                                                                                 \\"endColumn\\": 7,
-                                                                                \\"tokenTypeIdx\\": 43,
+                                                                                \\"tokenTypeIdx\\": 42,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"Arrow\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 43,
+                                                                                  \\"tokenTypeIdx\\": 42,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -1324,11 +1601,11 @@ exports[`match 2 1`] = `
                                                                                 \\"endLine\\": 4,
                                                                                 \\"startColumn\\": 9,
                                                                                 \\"endColumn\\": 9,
-                                                                                \\"tokenTypeIdx\\": 14,
+                                                                                \\"tokenTypeIdx\\": 13,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"LCurly\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 14,
+                                                                                  \\"tokenTypeIdx\\": 13,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -1358,11 +1635,11 @@ exports[`match 2 1`] = `
                                                                                                   \\"endLine\\": 4,
                                                                                                   \\"startColumn\\": 11,
                                                                                                   \\"endColumn\\": 16,
-                                                                                                  \\"tokenTypeIdx\\": 45,
+                                                                                                  \\"tokenTypeIdx\\": 44,
                                                                                                   \\"tokenType\\": {
                                                                                                     \\"name\\": \\"ReturnToken\\",
                                                                                                     \\"PATTERN\\": {},
-                                                                                                    \\"tokenTypeIdx\\": 45,
+                                                                                                    \\"tokenTypeIdx\\": 44,
                                                                                                     \\"CATEGORIES\\": [],
                                                                                                     \\"categoryMatches\\": [],
                                                                                                     \\"categoryMatchesMap\\": {},
@@ -1444,6 +1721,80 @@ exports[`match 2 1`] = `
                                                                                           }
                                                                                         ]
                                                                                       }
+                                                                                    },
+                                                                                    {
+                                                                                      \\"name\\": \\"ProgramRules\\",
+                                                                                      \\"children\\": {
+                                                                                        \\"rules\\": [
+                                                                                          {
+                                                                                            \\"name\\": \\"Assignment\\",
+                                                                                            \\"children\\": {
+                                                                                              \\"rules\\": [
+                                                                                                {
+                                                                                                  \\"name\\": \\"ToRight\\",
+                                                                                                  \\"children\\": {
+                                                                                                    \\"head\\": [
+                                                                                                      {
+                                                                                                        \\"name\\": \\"LogicExpression\\",
+                                                                                                        \\"children\\": {
+                                                                                                          \\"rules\\": [
+                                                                                                            {
+                                                                                                              \\"name\\": \\"RelationExpression\\",
+                                                                                                              \\"children\\": {
+                                                                                                                \\"rules\\": [
+                                                                                                                  {
+                                                                                                                    \\"name\\": \\"Expression\\",
+                                                                                                                    \\"children\\": {
+                                                                                                                      \\"rules\\": [
+                                                                                                                        {
+                                                                                                                          \\"name\\": \\"Term\\",
+                                                                                                                          \\"children\\": {
+                                                                                                                            \\"rules\\": [
+                                                                                                                              {
+                                                                                                                                \\"name\\": \\"PipeExpression\\",
+                                                                                                                                \\"children\\": {
+                                                                                                                                  \\"head\\": [
+                                                                                                                                    {
+                                                                                                                                      \\"name\\": \\"RangeExpression\\",
+                                                                                                                                      \\"children\\": {
+                                                                                                                                        \\"rules\\": [
+                                                                                                                                          {
+                                                                                                                                            \\"name\\": \\"Factor\\",
+                                                                                                                                            \\"children\\": {
+                                                                                                                                              \\"rules\\": [
+                                                                                                                                                {
+                                                                                                                                                  \\"name\\": \\"DotsIdentifier\\",
+                                                                                                                                                  \\"children\\": {}
+                                                                                                                                                }
+                                                                                                                                              ]
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                        ]
+                                                                                                                                      }
+                                                                                                                                    }
+                                                                                                                                  ]
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            ]
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      ]
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                ]
+                                                                                                              }
+                                                                                                            }
+                                                                                                          ]
+                                                                                                        }
+                                                                                                      }
+                                                                                                    ]
+                                                                                                  }
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          }
+                                                                                        ]
+                                                                                      }
                                                                                     }
                                                                                   ]
                                                                                 }
@@ -1458,11 +1809,11 @@ exports[`match 2 1`] = `
                                                                                 \\"endLine\\": 4,
                                                                                 \\"startColumn\\": 21,
                                                                                 \\"endColumn\\": 21,
-                                                                                \\"tokenTypeIdx\\": 15,
+                                                                                \\"tokenTypeIdx\\": 14,
                                                                                 \\"tokenType\\": {
                                                                                   \\"name\\": \\"RCurly\\",
                                                                                   \\"PATTERN\\": {},
-                                                                                  \\"tokenTypeIdx\\": 15,
+                                                                                  \\"tokenTypeIdx\\": 14,
                                                                                   \\"CATEGORIES\\": [],
                                                                                   \\"categoryMatches\\": [],
                                                                                   \\"categoryMatchesMap\\": {},
@@ -1483,11 +1834,11 @@ exports[`match 2 1`] = `
                                                                           \\"endLine\\": 3,
                                                                           \\"startColumn\\": 27,
                                                                           \\"endColumn\\": 27,
-                                                                          \\"tokenTypeIdx\\": 18,
+                                                                          \\"tokenTypeIdx\\": 17,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"Comma\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 18,
+                                                                            \\"tokenTypeIdx\\": 17,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -1504,11 +1855,11 @@ exports[`match 2 1`] = `
                                                                           \\"endLine\\": 5,
                                                                           \\"startColumn\\": 1,
                                                                           \\"endColumn\\": 1,
-                                                                          \\"tokenTypeIdx\\": 15,
+                                                                          \\"tokenTypeIdx\\": 14,
                                                                           \\"tokenType\\": {
                                                                             \\"name\\": \\"RCurly\\",
                                                                             \\"PATTERN\\": {},
-                                                                            \\"tokenTypeIdx\\": 15,
+                                                                            \\"tokenTypeIdx\\": 14,
                                                                             \\"CATEGORIES\\": [],
                                                                             \\"categoryMatches\\": [],
                                                                             \\"categoryMatchesMap\\": {},
@@ -1518,6 +1869,80 @@ exports[`match 2 1`] = `
                                                                         }
                                                                       ]
                                                                     }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        \\"name\\": \\"ProgramRules\\",
+        \\"children\\": {
+          \\"rules\\": [
+            {
+              \\"name\\": \\"Assignment\\",
+              \\"children\\": {
+                \\"rules\\": [
+                  {
+                    \\"name\\": \\"ToRight\\",
+                    \\"children\\": {
+                      \\"head\\": [
+                        {
+                          \\"name\\": \\"LogicExpression\\",
+                          \\"children\\": {
+                            \\"rules\\": [
+                              {
+                                \\"name\\": \\"RelationExpression\\",
+                                \\"children\\": {
+                                  \\"rules\\": [
+                                    {
+                                      \\"name\\": \\"Expression\\",
+                                      \\"children\\": {
+                                        \\"rules\\": [
+                                          {
+                                            \\"name\\": \\"Term\\",
+                                            \\"children\\": {
+                                              \\"rules\\": [
+                                                {
+                                                  \\"name\\": \\"PipeExpression\\",
+                                                  \\"children\\": {
+                                                    \\"head\\": [
+                                                      {
+                                                        \\"name\\": \\"RangeExpression\\",
+                                                        \\"children\\": {
+                                                          \\"rules\\": [
+                                                            {
+                                                              \\"name\\": \\"Factor\\",
+                                                              \\"children\\": {
+                                                                \\"rules\\": [
+                                                                  {
+                                                                    \\"name\\": \\"DotsIdentifier\\",
+                                                                    \\"children\\": {}
                                                                   }
                                                                 ]
                                                               }

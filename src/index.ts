@@ -3,6 +3,7 @@ import { interpreter } from './interpreter';
 import { VariableManager, FunctionManager, Manager } from './manager';
 import { writeAstToJson } from './util/file';
 import { removeObjectByKey, UnnecessaryKeys } from './util/json';
+import { ProgramRoot } from './types/ast';
 
 export const entry = (text: string) => {
   const ast = parseInput(text) as ProgramRoot;
