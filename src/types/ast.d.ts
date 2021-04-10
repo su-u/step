@@ -114,6 +114,7 @@ declare type RangeExpression = {
 declare type Factor = {
   name: 'Factor';
   children: {
+    DotsIdentifier: DotsIdentifier[];
     NumberLiteral?: NumberLiteral[];
     StringLiteral?: StringLiteral[];
     BoolLiteral?: BoolLiteral[];

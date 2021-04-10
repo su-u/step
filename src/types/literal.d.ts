@@ -11,3 +11,5 @@ declare type BoolLiteral = LiteralType;
 declare type Identifier = LiteralType;
 
 declare type StepObject = any;
+
+declare type DotsIdentifier = LiteralType;
