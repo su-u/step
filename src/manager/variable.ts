@@ -19,7 +19,7 @@ export class VariableManager {
     return false;
   }
 
-  public assignment(name: any, value: any, index: number = null) {
+  public assignment(name: string, value: any, index: number = null) {
     if (index !== null) {
       return this.setArrayElementVariable(name, value, index);
     } else {
@@ -27,7 +27,7 @@ export class VariableManager {
     }
   }
 
-  private setArrayElementVariable(name: any, value: any, index: number) {
+  private setArrayElementVariable(name: string, value: any, index: number) {
     if (this._parent !== null) {
       const result = this._parent.parentSetValue(name, value, index);
       if (!result && this.variables.has(name)) {
@@ -46,7 +46,7 @@ export class VariableManager {
     }
   }
 
-  private setVariable(name: any, value: any) {
+  private setVariable(name: string, value: any) {
     if (this._parent !== null) {
       const result = this._parent.parentSetValue(name, value);
       if (!result) {
