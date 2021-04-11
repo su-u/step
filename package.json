@@ -14,7 +14,7 @@
     "server": "http-server ./public -p 8080"
   },
   "author": "",
-  "license": "ISC",
+
   "homepage": "https://github.com/su-u/step",
   "dependencies": {
     "chevrotain": "^7.0.1",
