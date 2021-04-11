@@ -4,11 +4,11 @@ import { Operators } from '../operators';
 import { TypeError } from '../error';
 import { Term } from '../types/ast';
 
-export const term = ({ ast, manager, execObject }: IInterpreterRules<Term>) => {
+export const term = ({ ast, execObject }: IInterpreterRules<Term>) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
     if (rule !== Operators.MultiplicationOperators) {
       return ast.children[rule].map((x) => {
-        return execObject.interpreter({ ast: x, manager, execObject });
+        return execObject.interpreter({ ast: x, execObject });
       });
     } else {
       return ast.children[rule].map((x) => x.image);

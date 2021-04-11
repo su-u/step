@@ -6,13 +6,12 @@ import { RangeExpression } from '../types/ast';
 
 export const rangeExpression = ({
   ast,
-  manager,
   execObject,
 }: IInterpreterRules<RangeExpression>) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
     if (!RangeOperatorTokens.includes(rule as any)) {
       return ast.children[rule].map((x) => {
-        return execObject.interpreter({ ast: x, manager, execObject });
+        return execObject.interpreter({ ast: x, execObject });
       });
     } else {
       return ast.children[rule].map((x) => x.image);

@@ -3,17 +3,19 @@ import { FunctionManager, VariableManager } from '../../manager';
 import { LiteralTokens } from '../../tokens';
 
 describe('factor', () => {
-  let manager = null;
   let execObject = {
+    manager: null,
     interpreter: () => {},
   };
 
   beforeEach(() => {
-    manager = {
-      variable: new VariableManager(null),
-      function: new FunctionManager(),
-    };
-    execObject.interpreter = jest.fn();
+    execObject = {
+      manager : {
+        variable: new VariableManager(null),
+        function: new FunctionManager(),
+      },
+      interpreter: jest.fn(),
+    }
   });
 
   test('1', () => {
@@ -27,7 +29,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, manager, execObject });
+    const result = factor({ ast, execObject });
     expect(result).toStrictEqual({
       name: LiteralTokens.NumberLiteral,
       image: 1,
@@ -35,7 +37,7 @@ describe('factor', () => {
   });
 
   test('2', () => {
-    manager.variable.assignment('value1', {
+    execObject.manager.variable.assignment('value1', {
       name: LiteralTokens.StringLiteral,
       image: 'test1',
     });
@@ -56,7 +58,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, manager, execObject });
+    const result = factor({ ast, execObject });
     expect(result).toStrictEqual({
       name: LiteralTokens.StringLiteral,
       image: 'test1',
@@ -74,7 +76,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, manager, execObject });
+    const result = factor({ ast, execObject });
     expect(result).toStrictEqual({
       name: LiteralTokens.BooleanLiteral,
       image: 'true',
@@ -92,7 +94,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, manager, execObject });
+    const result = factor({ ast, execObject });
     expect(result).toStrictEqual({
       name: LiteralTokens.BooleanLiteral,
       image: 'false',
@@ -110,7 +112,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, manager, execObject });
+    const result = factor({ ast, execObject });
     expect(result).toStrictEqual({
       name: LiteralTokens.BooleanLiteral,
       image: 'false',
@@ -128,7 +130,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, manager, execObject });
+    const result = factor({ ast, execObject });
     expect(result).toStrictEqual({
       name: LiteralTokens.StringLiteral,
       image: 'test',
@@ -262,12 +264,11 @@ describe('factor', () => {
       },
     };
 
-    const result = factor({ ast, manager, execObject: { interpreter: interpreterMock } });
+    const result = factor({ ast, execObject: { manager: execObject.manager, interpreter: interpreterMock } });
     expect(interpreterMock).toBeCalled();
     expect(interpreterMock).toHaveBeenLastCalledWith({
       ast: argASt,
-      manager,
-      execObject: { interpreter: interpreterMock },
+      execObject: { manager: execObject.manager, interpreter: interpreterMock },
     });
     expect(result).toStrictEqual(correct);
   });
@@ -283,7 +284,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, manager, execObject });
+    const result = factor({ ast, execObject });
     expect(result).toStrictEqual({
       name: LiteralTokens.DebugLiteral,
       image: null,

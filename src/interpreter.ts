@@ -18,61 +18,59 @@ import { rangeExpression } from './interpriterRules/rangeExpression';
 
 export const interpreter = <T extends { name: string }>({
   ast,
-  manager,
   execObject,
 }: IInterpreterRules<any>) => {
-  // console.log(ast.name);
   let value = null;
   switch (ast.name) {
     case Rules.ProgramRoot:
-      value = program({ ast, manager, execObject });
+      value = program({ ast, execObject });
       break;
     case Rules.Assignment:
-      value = assignment({ ast, manager, execObject });
+      value = assignment({ ast, execObject });
       break;
     case Rules.IfStatement:
-      value = ifStatement({ ast, manager, execObject });
+      value = ifStatement({ ast, execObject });
       break;
     case Rules.PipeExpression:
-      value = pipeExpression({ ast, manager, execObject });
+      value = pipeExpression({ ast, execObject });
       break;
     case Rules.PipeFrom:
-      value = pipeFrom({ ast, manager, execObject });
+      value = pipeFrom({ ast, execObject });
       break;
     case Rules.PipeArguments:
-      value = pipeArguments({ ast, manager, execObject });
+      value = pipeArguments({ ast, execObject });
       break;
     case Rules.LogicExpression:
-      value = logicExpression({ ast, manager, execObject });
+      value = logicExpression({ ast, execObject });
       break;
     case Rules.RelationExpression:
-      value = relationExpression({ ast, manager, execObject });
+      value = relationExpression({ ast, execObject });
       break;
     case Rules.Expression:
-      value = expression({ ast, manager, execObject });
+      value = expression({ ast, execObject });
       break;
     case Rules.Term:
-      value = term({ ast, manager, execObject });
+      value = term({ ast, execObject });
       break;
     case Rules.RangeExpression:
-      value = rangeExpression({ ast, manager, execObject });
+      value = rangeExpression({ ast, execObject });
       break;
     case Rules.Factor:
-      value = factor({ ast, manager, execObject });
+      value = factor({ ast, execObject });
       break;
     case Rules.FunctionStatement:
-      value = functionStatement({ ast, manager, execObject });
+      value = functionStatement({ ast, execObject });
       break;
     case Rules.BlockStatement:
-      value = blockStatement({ ast, manager, execObject });
+      value = blockStatement({ ast, execObject });
       break;
     case Rules.ReturnStatement:
-      value = returnStatement({ ast, manager, execObject });
+      value = returnStatement({ ast, execObject });
       break;
   }
 
-  if (manager.variable.returnExist) {
-    return manager.variable.returnValue;
+  if (execObject.manager.variable.returnExist) {
+    return execObject.manager.variable.returnValue;
   } else {
     return value;
   }
