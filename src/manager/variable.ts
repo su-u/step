@@ -13,7 +13,7 @@ export class VariableManager {
     if (this.variables.has(name)) {
       this.assignment(name, value, index);
       return true;
-    } else if (this._parent !== null) {
+    } else if (this._parent) {
       return this._parent.parentSetValue(name, value, index);
     }
     return false;
