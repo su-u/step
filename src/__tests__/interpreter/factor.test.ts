@@ -1,6 +1,7 @@
 import { factor } from '../../interpriterRules/factor';
-import { FunctionManager, VariableManager } from '../../manager';
+import { FunctionManager, Manager, VariableManager } from '../../manager';
 import { LiteralTokens } from '../../tokens';
+import { DotsIdentifier, Factor, RangeExpression, RelationExpression } from '../../types/ast';
 
 describe('factor', () => {
   let execObject = {
@@ -13,13 +14,13 @@ describe('factor', () => {
       manager : {
         variable: new VariableManager(null),
         function: new FunctionManager(),
-      },
+      } as Manager,
       interpreter: jest.fn(),
     }
   });
 
   test('1', () => {
-    const ast = {
+    const ast: Factor = {
       name: 'Factor',
       children: {
         NumberLiteral: [
@@ -29,7 +30,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, execObject });
+    const result = factor({ ast, execObject } as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.NumberLiteral,
       image: 1,
@@ -41,24 +42,24 @@ describe('factor', () => {
       name: LiteralTokens.StringLiteral,
       image: 'test1',
     });
-    const ast = {
+    const ast: any = {
       name: 'Factor',
       children: {
         DotsIdentifier: [
           {
-            "name": "DotsIdentifier",
-            "children": {
-              "identifier": [
+            name: "DotsIdentifier",
+            children: {
+              identifier: [
                 {
-                  "image": "value1"
+                  image: "value1"
                 }
               ]
             }
-          }
+          } as DotsIdentifier
         ],
       },
     };
-    const result = factor({ ast, execObject });
+    const result = factor({ ast, execObject }  as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.StringLiteral,
       image: 'test1',
@@ -66,7 +67,7 @@ describe('factor', () => {
   });
 
   test('3', () => {
-    const ast = {
+    const ast: Factor = {
       name: 'Factor',
       children: {
         BoolLiteral: [
@@ -76,7 +77,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, execObject });
+    const result = factor({ ast, execObject } as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.BooleanLiteral,
       image: 'true',
@@ -84,7 +85,7 @@ describe('factor', () => {
   });
 
   test('4', () => {
-    const ast = {
+    const ast: Factor = {
       name: 'Factor',
       children: {
         BoolLiteral: [
@@ -94,7 +95,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, execObject });
+    const result = factor({ ast, execObject }  as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.BooleanLiteral,
       image: 'false',
@@ -102,7 +103,7 @@ describe('factor', () => {
   });
 
   test('5', () => {
-    const ast = {
+    const ast: Factor = {
       name: 'Factor',
       children: {
         BoolLiteral: [
@@ -112,7 +113,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, execObject });
+    const result = factor({ ast, execObject } as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.BooleanLiteral,
       image: 'false',
@@ -120,7 +121,7 @@ describe('factor', () => {
   });
 
   test('6', () => {
-    const ast = {
+    const ast: Factor= {
       name: 'Factor',
       children: {
         StringLiteral: [
@@ -130,7 +131,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, execObject });
+    const result = factor({ ast, execObject } as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.StringLiteral,
       image: 'test',
@@ -146,7 +147,7 @@ describe('factor', () => {
 
     interpreterMock.mockReturnValue(correct);
 
-    const ast = {
+    const ast: Factor = {
       name: 'Factor',
       children: {
         parentheses: [
@@ -217,7 +218,7 @@ describe('factor', () => {
       },
     };
 
-    const argASt = {
+    const argASt: any = {
       name: 'RelationExpression',
       children: {
         Expression: [
@@ -284,7 +285,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, execObject });
+    const result = factor({ ast, execObject } as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.DebugLiteral,
       image: null,

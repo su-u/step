@@ -8,7 +8,7 @@ export class FunctionManager {
     this.buildFunctions = BuildInFunctions;
   }
 
-  public assignment(name: any, functionArguments: any[], programAst: any) {
+  public assignment(name: string, functionArguments: any[], programAst: any) {
     this.userFunctions.set(name, {
       arguments: functionArguments,
       function: programAst,

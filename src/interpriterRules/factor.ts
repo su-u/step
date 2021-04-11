@@ -8,23 +8,24 @@ import { parenthesisExpression } from './factor/parenthesisExpression';
 import { arrayExpression } from './factor/ArrayExpression';
 import { arrayElement } from './factor/arrayElement';
 import { objectLiteral } from './factor/objectLiteral';
+import { Factor } from '../types/ast';
 
-export const factor = ({ ast, execObject }: IInterpreterRules<any>) => {
-  if (ast.children.NumberLiteral !== undefined) {
+export const factor = ({ ast, execObject }: IInterpreterRules<Factor>) => {
+  if (ast.children.NumberLiteral) {
     return numberLiteral({ ast, execObject });
-  } else if (ast.children.DotsIdentifier !== undefined) {
+  } else if (ast.children.DotsIdentifier) {
     return dotsIdentifier({ ast, execObject });
-  } else if (ast.children.BoolLiteral !== undefined) {
+  } else if (ast.children.BoolLiteral) {
     return booleanLiteral({ ast, execObject });
-  } else if (ast.children.StringLiteral !== undefined) {
+  } else if (ast.children.StringLiteral) {
     return stringLiteral({ ast, execObject });
-  } else if (ast.children.parentheses !== undefined) {
+  } else if (ast.children.parentheses) {
     return parenthesisExpression({ ast, execObject });
-  } else if (ast.children.arrayExpression !== undefined) {
+  } else if (ast.children.arrayExpression) {
     return arrayExpression({ ast, execObject });
-  } else if (ast.children.arrayElement !== undefined) {
+  } else if (ast.children.arrayElement) {
     return arrayElement({ ast, execObject });
-  } else if (ast.children.object !== undefined) {
+  } else if (ast.children.object) {
     return objectLiteral({ ast, execObject });
   }
 

@@ -28,6 +28,13 @@ export type BlockRules = {
   };
 };
 
+export type ReturnStatement = {
+  name: 'returnStatement';
+  children: {
+    rules: unknown[];
+  }
+}
+
 export type IfStatement = {
   name: 'IfStatement';
   children: {
@@ -120,15 +127,32 @@ export type DotsIdentifier = {
   }
 }
 
+export type arrayExpression = {
+  name: 'arrayExpression';
+  children: {
+    rules: LiteralType[];
+  }
+}
+
+export type arrayElement = {
+  name: 'arrayElement';
+  children: {
+    IdentifierSuffix: LiteralType[];
+    rules: unknown[];
+  }
+}
+
 export type Factor = {
   name: 'Factor';
   children: {
-    DotsIdentifier: DotsIdentifier;
+    DotsIdentifier?: DotsIdentifier;
     NumberLiteral?: NumberLiteral[];
     StringLiteral?: StringLiteral[];
     BoolLiteral?: BoolLiteral[];
     Identifier?: Identifier[];
     object?: StepObject[];
     parentheses?: any[];
+    arrayExpression?: arrayExpression[];
+    arrayElement?: arrayElement[];
   };
 };

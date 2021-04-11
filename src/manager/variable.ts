@@ -3,9 +3,9 @@ import { NullReferenceVariableError, OutOfRangeError } from '../error';
 export class VariableManager {
   private _returnValue = undefined;
   private readonly _parent: VariableManager | null;
-  private variables = new Map();
+  private variables = new Map<string, any>();
 
-  constructor(parent: any) {
+  constructor(parent: VariableManager = null) {
     this._parent = parent;
   }
 
