@@ -18,4 +18,5 @@ export const Rules = {
   PipeArguments: 'PipeArguments',
   LogicExpression: 'LogicExpression',
   RangeExpression: 'RangeExpression',
+  ArrayElement: 'ArrayElement',
 } as const;

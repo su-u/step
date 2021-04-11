@@ -3,7 +3,7 @@ import { NullReferenceFunctionError } from '../error';
 
 export class FunctionManager {
   private userFunctions = new Map();
-  private readonly buildFunctions: any;
+  private readonly buildFunctions: typeof BuildInFunctions;
   constructor() {
     this.buildFunctions = BuildInFunctions;
   }
@@ -16,7 +16,7 @@ export class FunctionManager {
   }
 
   public reference(name: string) {
-    if (this.buildFunctions[name] !== undefined) {
+    if (this.buildFunctions[name]) {
       return {
         ...this.buildFunctions[name],
         type: 'build',
