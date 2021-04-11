@@ -28,7 +28,7 @@ export class VariableManager {
   }
 
   private setArrayElementVariable(name: string, value: any, index: number) {
-    if (this._parent !== null) {
+    if (this._parent) {
       const result = this._parent.parentSetValue(name, value, index);
       if (!result && this.variables.has(name)) {
         const array = this.variables.get(name);
@@ -47,7 +47,7 @@ export class VariableManager {
   }
 
   private setVariable(name: string, value: any) {
-    if (this._parent !== null) {
+    if (this._parent) {
       const result = this._parent.parentSetValue(name, value);
       if (!result) {
         this.variables.set(name, value);
