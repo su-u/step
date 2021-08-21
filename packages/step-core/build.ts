@@ -11,7 +11,7 @@ const options = {
   target: 'es2016',
   platform: 'browser',
   outdir: path.resolve(__dirname, 'dist'),
-  tsconfig: path.resolve(__dirname, '../../tsconfig.json'),
+  tsconfig: path.resolve(__dirname, './tsconfig.build.json'),
 };
 
 build(options).catch((err) => {
