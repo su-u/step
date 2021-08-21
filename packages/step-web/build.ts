@@ -32,6 +32,7 @@ const options = {
   tsconfig: path.resolve(__dirname, './tsconfig.json'),
   plugins: [sassPlugin({})],
   sourcemap: true,
+  'chunk-names': 'chunks/[name]-[hash]',
 };
 
 build(options).catch((err) => {
