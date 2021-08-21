@@ -1,5 +1,5 @@
+import { build } from 'esbuild';
 const { argv } = require('process');
-const { build } = require('esbuild');
 const path = require('path');
 const sass = require('sass');
 
@@ -32,7 +32,7 @@ const options = {
   tsconfig: path.resolve(__dirname, './tsconfig.json'),
   plugins: [sassPlugin({})],
   sourcemap: true,
-  'chunk-names': 'chunks/[name]-[hash]',
+  chunkNames: 'chunks/[name]-[hash]',
 };
 
 build(options).catch((err) => {
