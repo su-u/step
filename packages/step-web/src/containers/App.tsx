@@ -3,7 +3,7 @@ import AceEditor from 'react-ace';
 import 'ace-builds/src-noconflict/mode-javascript';
 import 'ace-builds/src-noconflict/theme-monokai';
 import '../css/App.scss';
-import { entry } from '../../package/step-core/src';
+import { entry } from '@step-lang/step-core';
 
 console.dir = () => {};
 console.group = () => {};

@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "jsx": "react",
     "target": "es2016",
     "module": "commonjs",
     "moduleResolution": "node",
@@ -16,7 +14,8 @@
     ],
     "declaration": true,
     "emitDeclarationOnly": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "jsx": "react"
   },
   "exclude": [
     "./**/*.test.ts",
