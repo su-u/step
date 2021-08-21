@@ -1,22 +1,18 @@
 {
   "name": "@step-lang/step-core",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "main": "./src/index.js",
+  "license": "MIT",
   "scripts": {
-    "build": "ts-node ./build.ts",
-    "cli": "ts-node package/step-core/src/cli.ts",
-    "parser-cli": "ts-node package/step-core/src/parser/cli.ts",
-    "tsc": "tsc",
+    "build:src": "ts-node ./build.ts",
+    "build:types": "tsc",
     "prettier-fix": "prettier --write ./{src,__tests__,webSrc}/**/*.{ts,js,tsx,jsx} ./*.{ts,js,tsx,jsx}",
     "test": "jest --runInBand",
     "test-c": "jest --coverage --runInBand",
     "test-u": "jest --updateSnapshot --runInBand",
-    "server": "http-server ./public -p 8080",
-    "prepublishOnly": "npm run build",
-    "pat": "yarn version patch",
-    "min": "yarn version minor",
-    "maj": "yarn version major",
-    "pub": "yarn publish --access public"
+    "prepublishOnly": "yarn run clean && yarn run build:types && yarn run build:src",
+    "pub": "yarn publish",
+    "clean": "rimraf ./dist"
   },
   "author": "",
   "files": [
@@ -37,6 +33,7 @@
     "@types/node": "^13.7.0",
     "esbuild": "^0.12.22",
     "jest": "^25.2.2",
+    "rimraf": "^3.0.2",
     "ts-jest": "^25.2.1",
     "ts-node": "^8.10.2",
     "typescript": "3.8.3"
