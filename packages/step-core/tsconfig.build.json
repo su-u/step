@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2016",
     "module": "umd",
-    "outFile": "./dist/index.d.ts",
+    "outDir": "./dist",
     "moduleResolution": "node",
     "incremental": false,
     "baseUrl": ".",
@@ -14,8 +14,7 @@
       "DOM",
       "es7"
     ],
-    "declaration": true,
-    "emitDeclarationOnly": true,
+    "declaration": false,
     "esModuleInterop": true
   },
   "include": [
