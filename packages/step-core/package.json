@@ -1,11 +1,11 @@
 {
   "name": "@step-lang/step-core",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "./src/index.js",
   "license": "MIT",
   "scripts": {
-    "build:src": "ts-node ./build.ts",
-    "build:types": "tsc",
+    "build:src": "tsc -p ./tsconfig.build.json",
+    "build:types": "tsc -p ./tsconfig.types.json",
     "prettier-fix": "prettier --write ./{src,__tests__,webSrc}/**/*.{ts,js,tsx,jsx} ./*.{ts,js,tsx,jsx}",
     "test": "jest --runInBand",
     "test-c": "jest --coverage --runInBand",
