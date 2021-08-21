@@ -19,10 +19,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@step-lang/step-core@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@step-lang/step-core/-/step-core-0.1.7.tgz#5219c37f920e5edeefe1883a3d50cb06dc8269a7"
-  integrity sha512-l4o3IgV5FTqI8JYcC8ounZdKOWq+WnZSN2IkHK2W9I8+LwuoaU3+xRNXh/QkYM4y5WOOmgyK0p2zOU43GmY3JA==
+"@step-lang/step-core@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@step-lang/step-core/-/step-core-0.1.8.tgz#30b2512fea3bf9e34b211762c0f758b95ece8008"
+  integrity sha512-mVyBb/KEmb/fyv+Y65vZPXPKcHTxUVIJ8/LAtphH8fsBxHiBahX7RAwZeQO8WOnhCwsEAGnN2mEWcercT9B+XQ==
   dependencies:
     chevrotain "^7.0.1"
     decimal.js "^10.2.1"
