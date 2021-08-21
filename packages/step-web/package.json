@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "public/index.html",
   "scripts": {
-    "build": "ts-node ./build.ts",
+    "build": "ts-node ./build.ts --trace-warnings",
     "tsc": "tsc",
     "prettier-fix": "prettier --write ./{src,__tests__,webSrc}/**/*.{ts,js,tsx,jsx} ./*.{ts,js,tsx,jsx}",
     "test": "jest --runInBand",
