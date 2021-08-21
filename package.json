@@ -11,7 +11,7 @@
     "test": "jest --runInBand",
     "test-c": "jest --coverage --runInBand",
     "test-u": "jest --updateSnapshot --runInBand",
-    "server": "http-server ./public -p 8080"
+    "server": "http-server packages/step-web/public -p 8080"
   },
   "author": "",
   "private": true,
