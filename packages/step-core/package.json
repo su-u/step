@@ -1,7 +1,7 @@
 {
   "name": "@step-lang/step-core",
-  "version": "0.1.8",
-  "main": "./src/index.js",
+  "version": "0.1.10",
+  "main": "./dist/index.js",
   "license": "MIT",
   "scripts": {
     "build:src": "tsc -p ./tsconfig.build.json",
