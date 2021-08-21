@@ -15,10 +15,20 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "esModuleInterop": true,
-    "jsx": "react"
+    "jsx": "react",
+    "baseUrl": ".",
+    "outDir": "./public/dist",
+    "strict": true,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "strictFunctionTypes": false,
+    "strictBindCallApply": false,
+    "strictPropertyInitialization": false,
+    "noImplicitThis": false,
   },
   "exclude": [
     "./**/*.test.ts",
-    "./**/build.ts"
+    "./build.ts"
   ]
 }

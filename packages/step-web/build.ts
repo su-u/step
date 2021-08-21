@@ -22,15 +22,16 @@ const sassPlugin = (options) => ({
 
 const options = {
   // 以下のdefineプロパティを設定しない場合Reactのプロジェクトの実行時にエラーが出ます
-  define: { 'process.env.NODE_ENV': process.env.NODE_ENV ?? 'production' },
-  entryPoints: [path.resolve(__dirname, 'src/index.ts')],
+  define: { 'process.env.NODE_ENV': process.env.NODE_ENV },
+  entryPoints: [path.resolve(__dirname, 'src/index.tsx')],
   minify: argv[2] === 'production',
   bundle: true,
   target: 'es2016',
   platform: 'browser',
   outdir: path.resolve(__dirname, 'public/dist'),
-  tsconfig: path.resolve(__dirname, '../../tsconfig.json'),
+  tsconfig: path.resolve(__dirname, './tsconfig.json'),
   plugins: [sassPlugin({})],
+  sourcemap: true,
 };
 
 build(options).catch((err) => {

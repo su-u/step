@@ -14,12 +14,6 @@
     "server": "http-server packages/step-web/public -p 8080"
   },
   "author": "",
-  "private": true,
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
   "homepage": "https://github.com/su-u/step",
   "devDependencies": {
     "prettier": "^2.0.2",
