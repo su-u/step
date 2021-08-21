@@ -1,0 +1,21 @@
+{
+  "name": "step",
+  "version": "1.0.0",
+  "main": "build/src/index.js",
+  "scripts": {
+    "build": "ts-node ./build.ts",
+    "cli": "ts-node package/step-core/src/cli.ts",
+    "parser-cli": "ts-node package/step-core/src/parser/cli.ts",
+    "tsc": "tsc",
+    "prettier-fix": "prettier --write ./{src,__tests__,webSrc}/**/*.{ts,js,tsx,jsx} ./*.{ts,js,tsx,jsx}",
+    "test": "jest --runInBand",
+    "test-c": "jest --coverage --runInBand",
+    "test-u": "jest --updateSnapshot --runInBand",
+    "server": "http-server ./public -p 8080"
+  },
+  "author": "",
+  "homepage": "https://github.com/su-u/step",
+  "dependencies": {
+    "step": "link:..\\step-core"
+  }
+}
