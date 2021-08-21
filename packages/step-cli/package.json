@@ -16,6 +16,9 @@
   "author": "",
   "homepage": "https://github.com/su-u/step",
   "dependencies": {
-    "step": "link:..\\step-core"
+    "@step-lang/step-core": "^0.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.1"
   }
 }

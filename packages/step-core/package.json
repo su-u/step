@@ -1,7 +1,7 @@
 {
   "name": "@step-lang/step-core",
   "version": "0.1.2",
-  "main": "./src/index.ts",
+  "main": "./src/index.js",
   "scripts": {
     "build": "ts-node ./build.ts",
     "cli": "ts-node package/step-core/src/cli.ts",
@@ -40,5 +40,8 @@
     "ts-jest": "^25.2.1",
     "ts-node": "^8.10.2",
     "typescript": "3.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
