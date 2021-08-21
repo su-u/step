@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`operators 1 1`] = `
+"{
+  \\"name\\": \\"ProgramRoot\\",
+  \\"children\\": {
+    \\"rules\\": [
+      {
+        \\"name\\": \\"ProgramRules\\",
+        \\"children\\": {
+          \\"rules\\": [
+            {
+              \\"name\\": \\"Assignment\\",
+              \\"children\\": {
+                \\"rules\\": [
+                  {
+                    \\"name\\": \\"ToRight\\",
+                    \\"children\\": {
+                      \\"head\\": [
+                        {
+                          \\"name\\": \\"LogicExpression\\",
+                          \\"children\\": {
+                            \\"rules\\": [
+                              {
+                                \\"name\\": \\"RelationExpression\\",
+                                \\"children\\": {
+                                  \\"rules\\": [
+                                    {
+                                      \\"name\\": \\"Expression\\",
+                                      \\"children\\": {
+                                        \\"rules\\": [
+                                          {
+                                            \\"name\\": \\"Term\\",
+                                            \\"children\\": {
+                                              \\"rules\\": [
+                                                {
+                                                  \\"name\\": \\"PipeExpression\\",
+                                                  \\"children\\": {
+                                                    \\"head\\": [
+                                                      {
+                                                        \\"name\\": \\"RangeExpression\\",
+                                                        \\"children\\": {
+                                                          \\"rules\\": [
+                                                            {
+                                                              \\"name\\": \\"Factor\\",
+                                                              \\"children\\": {
+                                                                \\"DotsIdentifier\\": [
+                                                                  {
+                                                                    \\"name\\": \\"DotsIdentifier\\",
+                                                                    \\"children\\": {
+                                                                      \\"identifier\\": [
+                                                                        {
+                                                                          \\"image\\": \\"window\\",
+                                                                          \\"startOffset\\": 1,
+                                                                          \\"endOffset\\": 6,
+                                                                          \\"startLine\\": 2,
+                                                                          \\"endLine\\": 2,
+                                                                          \\"startColumn\\": 1,
+                                                                          \\"endColumn\\": 6,
+                                                                          \\"tokenTypeIdx\\": 10,
+                                                                          \\"tokenType\\": {
+                                                                            \\"name\\": \\"Identifier\\",
+                                                                            \\"PATTERN\\": {},
+                                                                            \\"tokenTypeIdx\\": 10,
+                                                                            \\"CATEGORIES\\": [],
+                                                                            \\"categoryMatches\\": [],
+                                                                            \\"categoryMatchesMap\\": {},
+                                                                            \\"isParent\\": false
+                                                                          }
+                                                                        },
+                                                                        {
+                                                                          \\"image\\": \\"test\\",
+                                                                          \\"startOffset\\": 8,
+                                                                          \\"endOffset\\": 11,
+                                                                          \\"startLine\\": 2,
+                                                                          \\"endLine\\": 2,
+                                                                          \\"startColumn\\": 8,
+                                                                          \\"endColumn\\": 11,
+                                                                          \\"tokenTypeIdx\\": 10,
+                                                                          \\"tokenType\\": {
+                                                                            \\"name\\": \\"Identifier\\",
+                                                                            \\"PATTERN\\": {},
+                                                                            \\"tokenTypeIdx\\": 10,
+                                                                            \\"CATEGORIES\\": [],
+                                                                            \\"categoryMatches\\": [],
+                                                                            \\"categoryMatchesMap\\": {},
+                                                                            \\"isParent\\": false
+                                                                          }
+                                                                        }
+                                                                      ],
+                                                                      \\"Dot\\": [
+                                                                        {
+                                                                          \\"image\\": \\".\\",
+                                                                          \\"startOffset\\": 7,
+                                                                          \\"endOffset\\": 7,
+                                                                          \\"startLine\\": 2,
+                                                                          \\"endLine\\": 2,
+                                                                          \\"startColumn\\": 7,
+                                                                          \\"endColumn\\": 7,
+                                                                          \\"tokenTypeIdx\\": 47,
+                                                                          \\"tokenType\\": {
+                                                                            \\"name\\": \\"Dot\\",
+                                                                            \\"PATTERN\\": {},
+                                                                            \\"tokenTypeIdx\\": 47,
+                                                                            \\"CATEGORIES\\": [],
+                                                                            \\"categoryMatches\\": [],
+                                                                            \\"categoryMatchesMap\\": {},
+                                                                            \\"isParent\\": false
+                                                                          }
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  }
+                                                                ]
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}"
+`;
