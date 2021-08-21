@@ -2,25 +2,22 @@
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
-    "outDir": "./build",
-    "strict": true,
-    "esModuleInterop": true,
     "moduleResolution": "node",
-    "removeComments": true,
-    "incremental": true,
-    "baseUrl": ".",
-    "jsx": "react",
+    "incremental": false,
     "typeRoots": [
-      "node_modules/@types", "packages/**/node_modules/@types"],
-    "noImplicitAny": false,
-    "strictNullChecks": false,
-    "strictFunctionTypes": false,
-    "strictBindCallApply": false,
-    "strictPropertyInitialization": false,
-    "noImplicitThis": false,
-    "lib": ["ESNext", "DOM", "es7"]
+      "node_modules/@types"
+    ],
+    "lib": [
+      "ESNext",
+      "DOM",
+      "es7"
+    ],
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true
   },
-  "include": [
-    "./packages/**/*.ts",
+  "exclude": [
+    "./**/*.test.ts",
+    "./**/build.ts"
   ]
 }
