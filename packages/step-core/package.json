@@ -1,0 +1,44 @@
+{
+  "name": "@step-lang/step-core",
+  "version": "0.1.10",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:src": "tsc -p ./tsconfig.build.json",
+    "build:types": "tsc -p ./tsconfig.types.json",
+    "prettier-fix": "prettier --write ./{src,__tests__,webSrc}/**/*.{ts,js,tsx,jsx} ./*.{ts,js,tsx,jsx}",
+    "test": "jest --runInBand",
+    "test-c": "jest --coverage --runInBand",
+    "test-u": "jest --updateSnapshot --runInBand",
+    "prepublishOnly": "yarn run clean && yarn run build:types && yarn run build:src",
+    "pub": "yarn publish",
+    "clean": "rimraf ./dist"
+  },
+  "author": "",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/su-u/step",
+  "dependencies": {
+    "chevrotain": "^7.0.1",
+    "decimal.js": "^10.2.1",
+    "extensible-custom-error": "^0.0.7",
+    "fs-extra": "^8.1.0",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^8.0.1",
+    "@types/jest": "^25.1.4",
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^13.7.0",
+    "esbuild": "^0.12.22",
+    "jest": "^25.2.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.10.2",
+    "typescript": "3.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

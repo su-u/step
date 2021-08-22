@@ -11,13 +11,14 @@
     "test": "jest --runInBand",
     "test-c": "jest --coverage --runInBand",
     "test-u": "jest --updateSnapshot --runInBand",
-    "server": "http-server packages/step-web/public -p 8080"
+    "server": "http-server ./public -p 8080"
   },
   "author": "",
   "homepage": "https://github.com/su-u/step",
+  "dependencies": {
+    "@step-lang/step-core": "^0.1.4"
+  },
   "devDependencies": {
-    "prettier": "^2.0.2",
-    "ts-node": "^8.10.2",
-    "typescript": "3.8.3"
+    "@types/node": "^16.7.1"
   }
 }

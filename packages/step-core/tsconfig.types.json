@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "jsx": "react",
     "target": "es2016",
-    "module": "commonjs",
+    "module": "umd",
+    "outFile": "./dist/index.d.ts",
     "moduleResolution": "node",
     "incremental": false,
+    "baseUrl": ".",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -17,8 +18,11 @@
     "emitDeclarationOnly": true,
     "esModuleInterop": true
   },
+  "include": [
+    "./**/*.ts"
+  ],
   "exclude": [
-    "./**/*.test.ts",
-    "./**/build.ts"
-  ]
+    "./test/**/*.ts",
+    "build.ts"
+  ],
 }

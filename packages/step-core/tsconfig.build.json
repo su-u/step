@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "jsx": "react",
     "target": "es2016",
     "module": "commonjs",
+    "outDir": "./dist",
     "moduleResolution": "node",
     "incremental": false,
+    "baseUrl": ".",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -13,12 +14,14 @@
       "DOM",
       "es7"
     ],
-    "declaration": true,
-    "emitDeclarationOnly": true,
+    "declaration": false,
     "esModuleInterop": true
   },
+  "include": [
+    "./**/*.ts"
+  ],
   "exclude": [
-    "./**/*.test.ts",
-    "./**/build.ts"
-  ]
+    "./test/**/*.ts",
+    "build.ts"
+  ],
 }

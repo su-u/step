@@ -266,5 +266,5 @@ fabric.properties
 build/*
 out.json
 step/main.step
-public/dist
+packages/step-web/public/dist
 dist/
