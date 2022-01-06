@@ -24,7 +24,8 @@
     "decimal.js": "^10.2.1",
     "extensible-custom-error": "^0.0.7",
     "fs-extra": "^8.1.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "prettier": "^2.5.1"
   },
   "devDependencies": {
     "@types/fs-extra": "^8.0.1",

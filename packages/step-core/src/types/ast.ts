@@ -1,4 +1,11 @@
-import { BoolLiteral, Identifier, LiteralType, NumberLiteral, StepObject, StringLiteral } from './literal';
+import {
+  BoolLiteral,
+  Identifier,
+  LiteralType,
+  NumberLiteral,
+  StepObject,
+  StringLiteral,
+} from './literal';
 
 export type ProgramRoot = {
   name: 'ProgramRoot';
@@ -32,8 +39,8 @@ export type ReturnStatement = {
   name: 'returnStatement';
   children: {
     rules: unknown[];
-  }
-}
+  };
+};
 
 export type IfStatement = {
   name: 'IfStatement';
@@ -124,23 +131,23 @@ export type DotsIdentifier = {
   name: 'DotsIdentifier';
   children: {
     identifier: LiteralType[];
-  }
-}
+  };
+};
 
 export type arrayExpression = {
   name: 'arrayExpression';
   children: {
     rules: LiteralType[];
-  }
-}
+  };
+};
 
 export type arrayElement = {
   name: 'arrayElement';
   children: {
     IdentifierSuffix: LiteralType[];
     rules: unknown[];
-  }
-}
+  };
+};
 
 export type Factor = {
   name: 'Factor';

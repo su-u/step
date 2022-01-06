@@ -386,7 +386,7 @@ export class ChiboParser extends CstParser {
 
   private Factor = this.RULE('Factor', () => {
     this.OR([
-      { ALT: () => this.SUBRULE(this.DotsIdentifier, { LABEL: 'DotsIdentifier' })},
+      { ALT: () => this.SUBRULE(this.DotsIdentifier, { LABEL: 'DotsIdentifier' }) },
       { ALT: () => this.CONSUME(NumberLiteral) },
       { ALT: () => this.CONSUME(StringLiteral) },
       { ALT: () => this.CONSUME(BoolLiteral) },

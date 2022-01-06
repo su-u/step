@@ -11,12 +11,12 @@ describe('factor', () => {
 
   beforeEach(() => {
     execObject = {
-      manager : {
+      manager: {
         variable: new VariableManager(null),
         function: new FunctionManager(),
       } as Manager,
       interpreter: jest.fn(),
-    }
+    };
   });
 
   test('1', () => {
@@ -47,19 +47,19 @@ describe('factor', () => {
       children: {
         DotsIdentifier: [
           {
-            name: "DotsIdentifier",
+            name: 'DotsIdentifier',
             children: {
               identifier: [
                 {
-                  image: "value1"
-                }
-              ]
-            }
-          } as DotsIdentifier
+                  image: 'value1',
+                },
+              ],
+            },
+          } as DotsIdentifier,
         ],
       },
     };
-    const result = factor({ ast, execObject }  as any);
+    const result = factor({ ast, execObject } as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.StringLiteral,
       image: 'test1',
@@ -95,7 +95,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, execObject }  as any);
+    const result = factor({ ast, execObject } as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.BooleanLiteral,
       image: 'false',
@@ -121,7 +121,7 @@ describe('factor', () => {
   });
 
   test('6', () => {
-    const ast: Factor= {
+    const ast: Factor = {
       name: 'Factor',
       children: {
         StringLiteral: [
@@ -265,7 +265,10 @@ describe('factor', () => {
       },
     };
 
-    const result = factor({ ast, execObject: { manager: execObject.manager, interpreter: interpreterMock } });
+    const result = factor({
+      ast,
+      execObject: { manager: execObject.manager, interpreter: interpreterMock },
+    });
     expect(interpreterMock).toBeCalled();
     expect(interpreterMock).toHaveBeenLastCalledWith({
       ast: argASt,

@@ -399,7 +399,7 @@
           { ALT: () => this.SUBRULE(this.Object, { LABEL: 'object' }) },
           { ALT: () => this.SUBRULE(this.MatchExpression, { LABEL: 'toMatch' }) },
           { ALT: () => this.SUBRULE(this.EachExpression, { LABEL: 'toEach' }) },
-          { ALT: () => this.SUBRULE(this.DotsIdentifier, { LABEL: 'DotsIdentifier' })},
+          { ALT: () => this.SUBRULE(this.DotsIdentifier, { LABEL: 'DotsIdentifier' }) },
         ]);
       });
 

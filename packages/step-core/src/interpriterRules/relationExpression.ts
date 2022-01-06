@@ -4,10 +4,7 @@ import { Classes } from '../class';
 import { TypeError } from '../error';
 import { RelationExpression } from '../types/ast';
 
-export const relationExpression = ({
-  ast,
-  execObject,
-}: IInterpreterRules<RelationExpression>) => {
+export const relationExpression = ({ ast, execObject }: IInterpreterRules<RelationExpression>) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
     // @ts-ignore
     if (!RelationalOperatorTokens.includes(rule)) {

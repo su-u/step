@@ -14,7 +14,10 @@ export const ifStatement = ({ ast, execObject }: IInterpreterRules<IfStatement>)
     return execObject.interpreter({
       ast: ast.children.rules[0],
       execObject: {
-        manager: { variable: new VariableManager(execObject.manager.variable), function: execObject.manager.function },
+        manager: {
+          variable: new VariableManager(execObject.manager.variable),
+          function: execObject.manager.function,
+        },
         interpreter: execObject.interpreter,
       },
     });
@@ -22,7 +25,10 @@ export const ifStatement = ({ ast, execObject }: IInterpreterRules<IfStatement>)
     return execObject.interpreter({
       ast: ast.children.rules[1],
       execObject: {
-        manager: { variable: new VariableManager(execObject.manager.variable), function: execObject.manager.function },
+        manager: {
+          variable: new VariableManager(execObject.manager.variable),
+          function: execObject.manager.function,
+        },
         interpreter: execObject.interpreter,
       },
     });

@@ -7,7 +7,7 @@
     "cli": "ts-node package/step-core/src/cli.ts",
     "parser-cli": "ts-node package/step-core/src/parser/cli.ts",
     "tsc": "tsc",
-    "prettier-fix": "prettier --write ./{src,__tests__,webSrc}/**/*.{ts,js,tsx,jsx} ./*.{ts,js,tsx,jsx}",
+    "prettier-fix": "prettier --write ./**/*.{ts,js,tsx,jsx} ./*.{ts,js,tsx,jsx}",
     "test": "jest --runInBand",
     "test-c": "jest --coverage --runInBand",
     "test-u": "jest --updateSnapshot --runInBand",
