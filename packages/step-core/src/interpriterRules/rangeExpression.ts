@@ -4,11 +4,11 @@ import { Classes } from '../class';
 import { TypeError } from '../error';
 import { RangeExpression } from '../types/ast';
 
-export const rangeExpression = ({ ast, execObject }: IInterpreterRules<RangeExpression>) => {
+export const rangeExpression = ({ ast, context }: IInterpreterRules<RangeExpression>) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
     if (!RangeOperatorTokens.includes(rule as any)) {
       return ast.children[rule].map((x) => {
-        return execObject.interpreter({ ast: x, execObject });
+        return context.interpreter({ ast: x, context });
       });
     } else {
       return ast.children[rule].map((x) => x.image);

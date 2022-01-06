@@ -4,32 +4,32 @@ import { VariableManager } from '../manager';
 import { toBoolean } from '../class/booleanClass';
 import { IfStatement } from '../types/ast';
 
-export const ifStatement = ({ ast, execObject }: IInterpreterRules<IfStatement>) => {
-  const condition = execObject.interpreter({
+export const ifStatement = ({ ast, context }: IInterpreterRules<IfStatement>) => {
+  const condition = context.interpreter({
     ast: ast.children.conditionalExpression[0],
-    execObject,
+    context,
   });
   const bool = toBoolean(condition);
   if (bool.image === BooleanLiteralTokens.true) {
-    return execObject.interpreter({
+    return context.interpreter({
       ast: ast.children.rules[0],
-      execObject: {
+      context: {
         manager: {
-          variable: new VariableManager(execObject.manager.variable),
-          function: execObject.manager.function,
+          variable: new VariableManager(context.manager.variable),
+          function: context.manager.function,
         },
-        interpreter: execObject.interpreter,
+        interpreter: context.interpreter,
       },
     });
   } else if (ast.children.rules.length >= 2) {
-    return execObject.interpreter({
+    return context.interpreter({
       ast: ast.children.rules[1],
-      execObject: {
+      context: {
         manager: {
-          variable: new VariableManager(execObject.manager.variable),
-          function: execObject.manager.function,
+          variable: new VariableManager(context.manager.variable),
+          function: context.manager.function,
         },
-        interpreter: execObject.interpreter,
+        interpreter: context.interpreter,
       },
     });
   }

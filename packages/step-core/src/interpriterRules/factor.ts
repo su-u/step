@@ -10,23 +10,23 @@ import { arrayElement } from './factor/arrayElement';
 import { objectLiteral } from './factor/objectLiteral';
 import { Factor } from '../types/ast';
 
-export const factor = ({ ast, execObject }: IInterpreterRules<Factor>) => {
+export const factor = ({ ast, context }: IInterpreterRules<Factor>) => {
   if (ast.children.NumberLiteral) {
-    return numberLiteral({ ast, execObject });
+    return numberLiteral({ ast, context });
   } else if (ast.children.DotsIdentifier) {
-    return dotsIdentifier({ ast, execObject });
+    return dotsIdentifier({ ast, context });
   } else if (ast.children.BoolLiteral) {
-    return booleanLiteral({ ast, execObject });
+    return booleanLiteral({ ast, context });
   } else if (ast.children.StringLiteral) {
-    return stringLiteral({ ast, execObject });
+    return stringLiteral({ ast, context });
   } else if (ast.children.parentheses) {
-    return parenthesisExpression({ ast, execObject });
+    return parenthesisExpression({ ast, context });
   } else if (ast.children.arrayExpression) {
-    return arrayExpression({ ast, execObject });
+    return arrayExpression({ ast, context });
   } else if (ast.children.arrayElement) {
-    return arrayElement({ ast, execObject });
+    return arrayElement({ ast, context });
   } else if (ast.children.object) {
-    return objectLiteral({ ast, execObject });
+    return objectLiteral({ ast, context });
   }
 
   return {

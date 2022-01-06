@@ -1,5 +1,5 @@
 import { LiteralTokens } from '../../src/tokens';
-import { BooleanClass, toBoolean } from '../../../../src/class/booleanClass';
+import { BooleanClass, toBoolean } from '../../src/class/booleanClass';
 import { BooleanLiteralTokens } from '../../src/tokens';
 
 const func = (obj1, obj2, method) => {

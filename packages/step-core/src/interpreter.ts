@@ -18,59 +18,59 @@ import { rangeExpression } from './interpriterRules/rangeExpression';
 
 export const interpreter = <T extends { name: string }>({
   ast,
-  execObject,
+  context,
 }: IInterpreterRules<any>) => {
   let value = null;
   switch (ast.name) {
     case Rules.ProgramRoot:
-      value = program({ ast, execObject });
+      value = program({ ast, context: context });
       break;
     case Rules.Assignment:
-      value = assignment({ ast, execObject });
+      value = assignment({ ast, context: context });
       break;
     case Rules.IfStatement:
-      value = ifStatement({ ast, execObject });
+      value = ifStatement({ ast, context: context });
       break;
     case Rules.PipeExpression:
-      value = pipeExpression({ ast, execObject });
+      value = pipeExpression({ ast, context: context });
       break;
     case Rules.PipeFrom:
-      value = pipeFrom({ ast, execObject });
+      value = pipeFrom({ ast, context: context });
       break;
     case Rules.PipeArguments:
-      value = pipeArguments({ ast, execObject });
+      value = pipeArguments({ ast, context: context });
       break;
     case Rules.LogicExpression:
-      value = logicExpression({ ast, execObject });
+      value = logicExpression({ ast, context: context });
       break;
     case Rules.RelationExpression:
-      value = relationExpression({ ast, execObject });
+      value = relationExpression({ ast, context: context });
       break;
     case Rules.Expression:
-      value = expression({ ast, execObject });
+      value = expression({ ast, context: context });
       break;
     case Rules.Term:
-      value = term({ ast, execObject });
+      value = term({ ast, context: context });
       break;
     case Rules.RangeExpression:
-      value = rangeExpression({ ast, execObject });
+      value = rangeExpression({ ast, context: context });
       break;
     case Rules.Factor:
-      value = factor({ ast, execObject });
+      value = factor({ ast, context: context });
       break;
     case Rules.FunctionStatement:
-      value = functionStatement({ ast, execObject });
+      value = functionStatement({ ast, context: context });
       break;
     case Rules.BlockStatement:
-      value = blockStatement({ ast, execObject });
+      value = blockStatement({ ast, context: context });
       break;
     case Rules.ReturnStatement:
-      value = returnStatement({ ast, execObject });
+      value = returnStatement({ ast, context: context });
       break;
   }
 
-  if (execObject.manager.variable.returnExist) {
-    return execObject.manager.variable.returnValue;
+  if (context.manager.variable.returnExist) {
+    return context.manager.variable.returnValue;
   } else {
     return value;
   }

@@ -4,13 +4,13 @@ import { LiteralTokens } from '../../src/tokens';
 import { DotsIdentifier, Factor, RangeExpression, RelationExpression } from '../../src/types/ast';
 
 describe('factor', () => {
-  let execObject = {
+  let context = {
     manager: null,
     interpreter: () => {},
   };
 
   beforeEach(() => {
-    execObject = {
+    context = {
       manager: {
         variable: new VariableManager(null),
         function: new FunctionManager(),
@@ -30,7 +30,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, execObject } as any);
+    const result = factor({ ast, context } as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.NumberLiteral,
       image: 1,
@@ -38,7 +38,7 @@ describe('factor', () => {
   });
 
   test('2', () => {
-    execObject.manager.variable.assignment('value1', {
+    context.manager.variable.assignment('value1', {
       name: LiteralTokens.StringLiteral,
       image: 'test1',
     });
@@ -59,7 +59,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, execObject } as any);
+    const result = factor({ ast, context } as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.StringLiteral,
       image: 'test1',
@@ -77,7 +77,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, execObject } as any);
+    const result = factor({ ast, context } as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.BooleanLiteral,
       image: 'true',
@@ -95,7 +95,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, execObject } as any);
+    const result = factor({ ast, context } as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.BooleanLiteral,
       image: 'false',
@@ -113,7 +113,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, execObject } as any);
+    const result = factor({ ast, context } as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.BooleanLiteral,
       image: 'false',
@@ -131,7 +131,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, execObject } as any);
+    const result = factor({ ast, context } as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.StringLiteral,
       image: 'test',
@@ -267,12 +267,12 @@ describe('factor', () => {
 
     const result = factor({
       ast,
-      execObject: { manager: execObject.manager, interpreter: interpreterMock },
+      context: { manager: context.manager, interpreter: interpreterMock },
     });
     expect(interpreterMock).toBeCalled();
     expect(interpreterMock).toHaveBeenLastCalledWith({
       ast: argASt,
-      execObject: { manager: execObject.manager, interpreter: interpreterMock },
+      context: { manager: context.manager, interpreter: interpreterMock },
     });
     expect(result).toStrictEqual(correct);
   });
@@ -288,7 +288,7 @@ describe('factor', () => {
         ],
       },
     };
-    const result = factor({ ast, execObject } as any);
+    const result = factor({ ast, context } as any);
     expect(result).toStrictEqual({
       name: LiteralTokens.DebugLiteral,
       image: null,

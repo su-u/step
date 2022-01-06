@@ -4,12 +4,12 @@ import { Classes } from '../class';
 import { TypeError } from '../error';
 import { RelationExpression } from '../types/ast';
 
-export const relationExpression = ({ ast, execObject }: IInterpreterRules<RelationExpression>) => {
+export const relationExpression = ({ ast, context }: IInterpreterRules<RelationExpression>) => {
   const [literals, operators] = Object.keys(ast.children).map((rule) => {
     // @ts-ignore
     if (!RelationalOperatorTokens.includes(rule)) {
       return ast.children[rule].map((x) => {
-        return execObject.interpreter({ ast: x, execObject });
+        return context.interpreter({ ast: x, context });
       });
     } else {
       return ast.children[rule].map((x) => x.image);

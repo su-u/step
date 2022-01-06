@@ -1,5 +1,5 @@
 import { LiteralTokens } from '../../src/tokens';
-import { NumberClass } from '../../../../src/class/numberClass';
+import { NumberClass } from '../../src/class/numberClass';
 
 const func = (obj1, obj2, method) => {
   return NumberClass[method](obj1, obj2);

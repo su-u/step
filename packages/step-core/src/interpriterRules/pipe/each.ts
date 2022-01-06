@@ -3,8 +3,8 @@ import { TypeError } from '../../error';
 import { VariableManager } from '../../manager';
 import { LiteralTokens } from '../../tokens';
 
-export const execEach = ({ ast, execObject }: IInterpreterRules<any>, last) => {
-  const { manager } = execObject;
+export const execEach = ({ ast, context }: IInterpreterRules<any>, last) => {
+  const { manager } = context;
   if (last.name === LiteralTokens.NumberLiteralRange) {
     const eachObj = ast.toEach[0];
     const range = Array.from(Array(last.end - last.start + 1).keys(), (x) => x + last.start);
@@ -19,11 +19,11 @@ export const execEach = ({ ast, execObject }: IInterpreterRules<any>, last) => {
           image: i,
         });
       }
-      return execObject.interpreter({
+      return context.interpreter({
         ast: eachObj.children.rules[0],
-        execObject: {
+        context: {
           manager: inManger,
-          interpreter: execObject.interpreter,
+          interpreter: context.interpreter,
         },
       });
     });
@@ -41,11 +41,11 @@ export const execEach = ({ ast, execObject }: IInterpreterRules<any>, last) => {
       if (eachObj.children.Identifier !== undefined) {
         inManger.variable.assignment(eachObj.children.Identifier[0].image, element);
       }
-      return execObject.interpreter({
+      return context.interpreter({
         ast: eachObj.children.rules[0],
-        execObject: {
+        context: {
           manager: inManger,
-          interpreter: execObject.interpreter,
+          interpreter: context.interpreter,
         },
       });
     });

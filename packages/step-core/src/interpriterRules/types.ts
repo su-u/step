@@ -2,8 +2,8 @@ import { Manager } from '../manager';
 
 export type IInterpreterRules<T extends { name: string }> = {
   ast: T;
-  execObject: {
+  context: {
     manager: Manager;
-    interpreter: ({ ast, execObject: { interpreter, manager } }) => T;
+    interpreter: ({ ast, context: { interpreter, manager } }) => T;
   };
 };
