@@ -6,7 +6,6 @@
   "scripts": {
     "build:src": "tsc -p ./tsconfig.build.json",
     "build:types": "tsc -p ./tsconfig.types.json",
-    "prettier-fix": "prettier --write ./{src,__tests__,webSrc}/**/*.{ts,js,tsx,jsx} ./*.{ts,js,tsx,jsx}",
     "test": "jest --runInBand",
     "test-c": "jest --coverage --runInBand",
     "test-u": "jest --updateSnapshot --runInBand",
@@ -24,8 +23,7 @@
     "decimal.js": "^10.2.1",
     "extensible-custom-error": "^0.0.7",
     "fs-extra": "^8.1.0",
-    "lodash": "^4.17.15",
-    "prettier": "^2.5.1"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@types/fs-extra": "^8.0.1",
