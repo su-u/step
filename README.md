@@ -1,6 +1,6 @@
 [![Node Test](https://github.com/su-u/step/actions/workflows/nodejs.yml/badge.svg)](https://github.com/su-u/step/actions/workflows/nodejs.yml)
 
-# Step（仮称）
+# Step（仮称、旧chiba-lang）
 
 ## 環境用意
 ```bash
