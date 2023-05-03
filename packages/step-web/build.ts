@@ -1,4 +1,4 @@
-import { build, BuildOptions } from 'esbuild';
+import { build, BuildOptions, context } from 'esbuild';
 const { argv } = require('process');
 const path = require('path');
 const sass = require('sass');
@@ -21,8 +21,6 @@ const sassPlugin = (options) => ({
 });
 
 const options: BuildOptions = {
-  // 以下のdefineプロパティを設定しない場合Reactのプロジェクトの実行時にエラーが出ます
-  define: { 'process.env.NODE_ENV': process.env.NODE_ENV },
   entryPoints: [path.resolve(__dirname, 'src/index.tsx')],
   minify: argv[2] === 'production',
   bundle: true,
@@ -35,7 +33,11 @@ const options: BuildOptions = {
   chunkNames: 'chunks/[name]-[hash]',
 };
 
-build(options).catch((err) => {
-  process.stderr.write(err.stderr);
-  process.exit(1);
-});
+
+(async () => {
+  const ctx = await context(options);
+  await ctx.watch().then(() => console.log('Done')).catch((err) => {
+    process.stderr.write(err.stderr);
+    process.exit(1);
+  });
+})();
