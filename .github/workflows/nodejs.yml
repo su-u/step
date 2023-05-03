@@ -6,9 +6,11 @@ on:
       - master
     paths:
         - 'packages/**'
+        - '.github/**'
   pull_request:
     paths:
       - 'packages/**'
+      - '.github/**'
 
 jobs:
   build:
