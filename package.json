@@ -11,8 +11,8 @@
   "author": "",
   "homepage": "https://github.com/su-u/step",
   "devDependencies": {
-    "prettier": "^2.0.2",
-    "ts-node": "^8.10.2",
-    "typescript": "3.8.3"
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "5.0.4"
   }
 }
