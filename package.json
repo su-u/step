@@ -6,7 +6,7 @@
     "build": "ts-node ./build.ts",
     "cli": "ts-node package/step-core/src/cli.ts",
     "parser-cli": "ts-node package/step-core/src/parser/cli.ts",
-    "prettier-fix": "prettier --write ./**/*.{ts,js,tsx,jsx} ./*.{ts,js,tsx,jsx}"
+    "prettier-fix": "prettier --write ./**/*.{ts,js,tsx} ./*.{ts,js}"
   },
   "author": "",
   "homepage": "https://github.com/su-u/step",
