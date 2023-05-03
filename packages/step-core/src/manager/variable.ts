@@ -27,6 +27,14 @@ export class VariableManager {
     }
   }
 
+  public scopeAssignment(name: string, value: any, index: number = null) {
+    if (index !== null) {
+      return this.setScopeArrayElementVariable(name, value, index);
+    } else {
+      return this.setScopeVariable(name, value);
+    }
+  }
+
   private setArrayElementVariable(name: string, value: any, index: number) {
     if (this._parent) {
       const result = this._parent.parentSetValue(name, value, index);
@@ -46,6 +54,14 @@ export class VariableManager {
     }
   }
 
+  private setScopeArrayElementVariable(name: string, value: any, index: number) {
+    const array = this.variables.get(name);
+    array.image[index] = value;
+    this.variables.set(name, {
+      ...array,
+    });
+  }
+
   private setVariable(name: string, value: any) {
     if (this._parent) {
       const result = this._parent.parentSetValue(name, value);
@@ -55,6 +71,10 @@ export class VariableManager {
     } else {
       this.variables.set(name, value);
     }
+  }
+
+  private setScopeVariable(name: string, value: any) {
+    this.variables.set(name, value);
   }
 
   public reference(name: string, index: number = null) {

@@ -2,6 +2,17 @@
 # yarn lockfile v1
 
 
+"@step-lang/step-core@^0.1.4":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@step-lang/step-core/-/step-core-0.1.10.tgz#0015c041087afea0564e4342d82e98376912778c"
+  integrity sha512-zMXJcRydlXRKnGx/lb5D7RI6lU7MhWQjX3rPPYp6nvS2AcImkCXxA5PGowounbmKRF48Rx1RZ2u7+GE6jR9WwA==
+  dependencies:
+    chevrotain "^7.0.1"
+    decimal.js "^10.2.1"
+    extensible-custom-error "^0.0.7"
+    fs-extra "^8.1.0"
+    lodash "^4.17.15"
+
 "@types/node@^16.7.1":
   version "16.7.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.7.1.tgz#c6b9198178da504dfca1fd0be9b2e1002f1586f0"
@@ -54,10 +65,6 @@ regexp-to-ast@0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/regexp-to-ast/-/regexp-to-ast-0.5.0.tgz#56c73856bee5e1fef7f73a00f1473452ab712a24"
   integrity sha512-tlbJqcMHnPKI9zSrystikWKwHkBqu2a/Sgw01h3zFjvYrMxEDYHzzoMZnUrbIfpTFEsoRnnviOXNCzFiSc54Qw==
-
-"step@link:../step-core":
-  version "0.0.0"
-  uid ""
 
 universalify@^0.1.0:
   version "0.1.2"
