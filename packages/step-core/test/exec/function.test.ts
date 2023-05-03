@@ -421,4 +421,25 @@ a |> f -> result
       image: 3,
     });
   });
+
+  test('23 同名引数', () => {
+    const source = `
+function test2(a, b) {
+  return a + b
+}
+  
+function test1(a, b) {
+  { 3, 4 } |> test2
+
+  return a + b
+}
+
+{ 1, 2 } |> test1 -> result
+    `;
+    const resultManager = exec(source, manager).variable;
+    expect(resultManager.reference('result')).toStrictEqual({
+      name: LiteralTokens.NumberLiteral,
+      image: 3,
+    });
+  });
 });

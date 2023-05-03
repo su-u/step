@@ -17,7 +17,7 @@ export const execFunction = ({ ast, context }: IInterpreterRules<any>, last) => 
         argValue = literals[i].value !== undefined ? literals[i].value : literals[i];
       }
 
-      scopeManger.assignment(argName, argValue);
+      scopeManger.scopeAssignment(argName, argValue);
     });
     last = context.interpreter({
       ast: functionData.function,
