@@ -2,82 +2,82 @@
 
 exports[`コメント 1 1`] = `
 "{
-  \\"name\\": \\"ProgramRoot\\",
-  \\"children\\": {
-    \\"rules\\": [
+  "name": "ProgramRoot",
+  "children": {
+    "rules": [
       {
-        \\"name\\": \\"ProgramRules\\",
-        \\"children\\": {
-          \\"rules\\": [
+        "name": "ProgramRules",
+        "children": {
+          "rules": [
             {
-              \\"image\\": \\"# コメント\\\\n\\",
-              \\"startOffset\\": 1,
-              \\"endOffset\\": 7,
-              \\"startLine\\": 2,
-              \\"endLine\\": 2,
-              \\"startColumn\\": 1,
-              \\"endColumn\\": 7,
-              \\"tokenTypeIdx\\": 3,
-              \\"tokenType\\": {
-                \\"name\\": \\"Comment\\",
-                \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 3,
-                \\"CATEGORIES\\": [],
-                \\"categoryMatches\\": [],
-                \\"categoryMatchesMap\\": {},
-                \\"isParent\\": false
+              "image": "# コメント\\n",
+              "startOffset": 1,
+              "endOffset": 7,
+              "startLine": 2,
+              "endLine": 2,
+              "startColumn": 1,
+              "endColumn": 7,
+              "tokenTypeIdx": 3,
+              "tokenType": {
+                "name": "Comment",
+                "PATTERN": {},
+                "tokenTypeIdx": 3,
+                "CATEGORIES": [],
+                "categoryMatches": [],
+                "categoryMatchesMap": {},
+                "isParent": false
               }
             }
           ]
         }
       },
       {
-        \\"name\\": \\"ProgramRules\\",
-        \\"children\\": {
-          \\"rules\\": [
+        "name": "ProgramRules",
+        "children": {
+          "rules": [
             {
-              \\"image\\": \\"## コメント\\\\n\\",
-              \\"startOffset\\": 8,
-              \\"endOffset\\": 15,
-              \\"startLine\\": 3,
-              \\"endLine\\": 3,
-              \\"startColumn\\": 1,
-              \\"endColumn\\": 8,
-              \\"tokenTypeIdx\\": 3,
-              \\"tokenType\\": {
-                \\"name\\": \\"Comment\\",
-                \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 3,
-                \\"CATEGORIES\\": [],
-                \\"categoryMatches\\": [],
-                \\"categoryMatchesMap\\": {},
-                \\"isParent\\": false
+              "image": "## コメント\\n",
+              "startOffset": 8,
+              "endOffset": 15,
+              "startLine": 3,
+              "endLine": 3,
+              "startColumn": 1,
+              "endColumn": 8,
+              "tokenTypeIdx": 3,
+              "tokenType": {
+                "name": "Comment",
+                "PATTERN": {},
+                "tokenTypeIdx": 3,
+                "CATEGORIES": [],
+                "categoryMatches": [],
+                "categoryMatchesMap": {},
+                "isParent": false
               }
             }
           ]
         }
       },
       {
-        \\"name\\": \\"ProgramRules\\",
-        \\"children\\": {
-          \\"rules\\": [
+        "name": "ProgramRules",
+        "children": {
+          "rules": [
             {
-              \\"image\\": \\"### コメント #\\\\n\\",
-              \\"startOffset\\": 16,
-              \\"endOffset\\": 26,
-              \\"startLine\\": 4,
-              \\"endLine\\": 4,
-              \\"startColumn\\": 1,
-              \\"endColumn\\": 11,
-              \\"tokenTypeIdx\\": 3,
-              \\"tokenType\\": {
-                \\"name\\": \\"Comment\\",
-                \\"PATTERN\\": {},
-                \\"tokenTypeIdx\\": 3,
-                \\"CATEGORIES\\": [],
-                \\"categoryMatches\\": [],
-                \\"categoryMatchesMap\\": {},
-                \\"isParent\\": false
+              "image": "### コメント #\\n",
+              "startOffset": 16,
+              "endOffset": 26,
+              "startLine": 4,
+              "endLine": 4,
+              "startColumn": 1,
+              "endColumn": 11,
+              "tokenTypeIdx": 3,
+              "tokenType": {
+                "name": "Comment",
+                "PATTERN": {},
+                "tokenTypeIdx": 3,
+                "CATEGORIES": [],
+                "categoryMatches": [],
+                "categoryMatchesMap": {},
+                "isParent": false
               }
             }
           ]
