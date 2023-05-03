@@ -1,4 +1,4 @@
-![Node Test](https://github.com/su-u/step/actions/workflows/nodejs.yml/badge.svg)
+[![Node Test](https://github.com/su-u/step/actions/workflows/nodejs.yml/badge.svg)](https://github.com/su-u/step/actions/workflows/nodejs.yml)
 
 # Step（仮称）
 
