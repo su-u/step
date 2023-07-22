@@ -3,8 +3,8 @@ import AceEditor from 'react-ace';
 import 'ace-builds/src-noconflict/mode-javascript';
 import 'ace-builds/src-noconflict/theme-monokai';
 import '../css/App.scss';
-// import { entry } from '@step-lang/step-core';
-import { entry } from '../../../step-core/dist';
+import { entry } from '@step-lang/step-core';
+import { entry as devEntry } from '../../../step-core/dist';
 
 console.dir = () => {};
 console.group = () => {};
@@ -23,7 +23,12 @@ export const App: React.FC = () => {
   const chibaLangExec = React.useCallback(() => {
     setOutput([]);
     setExecError([]);
-    entry(code);
+    if (process.env.DEV) {
+      console.info('Dev mode');
+      devEntry(code);
+    } else {
+      entry(code);
+    }
   }, [code]);
 
   console.log = (obj: any) => {
